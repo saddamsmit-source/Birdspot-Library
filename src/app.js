@@ -151,6 +151,11 @@ document.getElementById('fab').addEventListener('click', () => {
   openQuickAdd({
     onChoose: openObservationForm,
     onSoundSaved: sightings => {
+      if (!sightings.length) {
+        navigate('species', { force: true });
+        showToast('Eigen opname bij Mijn soortgeluiden bewaard');
+        return;
+      }
       navigate('map', { force: true, target: { sightingId: sightings[0].id } });
       const count = sightings.length;
       showToast(count === 1 ? 'Waarneming gepind' : `${count} waarnemingen gepind`);

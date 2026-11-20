@@ -12,6 +12,7 @@ on:
       - 'docs/audio/**'
       - 'tests/test_audio_140_contract.mjs'
       - 'tests/test_quick_add_merlin.py'
+      - 'tests/test_owner_sound_choices.py'
       - '.github/workflows/quick-add-audio-140-qa.yml'
   workflow_dispatch:
 permissions:
@@ -32,3 +33,5 @@ jobs:
       - run: python -m playwright install --with-deps chromium
       - name: Mobile recording, species selection and private group pins
         run: python tests/test_quick_add_merlin.py
+      - name: Owner audio intent, species collection and cross-profile ZIP
+        run: python tests/test_owner_sound_choices.py

@@ -29,6 +29,9 @@ export function isPersonalGuidePhoto(photo) {
  * Record: { id, kind: 'sighting-audio', blob (originele bytes), type, filename, size, sightingId, addedAt }.
  * Bewust zonder speciesId/placeId: nooit in soortkaarten, mediabibliotheek, zoekindex, plekmedia,
  * gidsaudio of BirdNET. Gekoppeld via sighting.audioIds (los van photoIds).
+ * Een door gebruiker geverifieerde persoonlijke soortopname heeft bovendien
+ * personalSpecies:true en speciesId. Eén mediarecord mag beide privérelaties dragen;
+ * een soortenopname zonder waarneming heeft sightingId:null.
  */
 export const SIGHTING_AUDIO_KIND = 'sighting-audio';
 export function isSightingAudio(record) {

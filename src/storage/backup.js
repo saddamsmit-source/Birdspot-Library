@@ -15,11 +15,13 @@
  *   - Format: ZIP met datum in de naam (birdspot-YYYY-MM-DD.zip)
  *   - Ronde 2B (backupVersion 2): plekken + privé-omgevingsfoto's (kind 'place-env', placeId,
  *     toelichting) gaan mee. Oude ZIP's (zonder backupVersion/kind) blijven werken.
+ *   - Eigenaarreview (backupVersion 3): persoonlijke soortopnamen kunnen via
+ *     één Blob optioneel ook aan een waarneming gekoppeld zijn. Oude ZIP's blijven leesbaar.
  *     Alles wordt gevalideerd vóór er iets wordt geschreven; een ongeldige ZIP wijzigt niets.
  */
 
 import { STORAGE_KEY, SCHEMA_VERSION, migrateSighting } from '../data/sightings.js';
-import { SEEN_KEY } from '../data/species.js';
+import { SEEN_KEY, SPECIES } from '../data/species.js';
 import { getDB, PLACE_ENV_KIND, SIGHTING_AUDIO_KIND, SIGHTING_AUDIO_TYPES, isSightingAudio } from '../data/db.js';
 import { audioBytesProblem, audioRefsFromSightingsRaw, audioRefsFromSafetyRaw } from '../data/sightingAudio.js';
 import { withDataLock, assertRestoreSupported, listTombstones, assertImportSafe } from '../data/dataLock.js';
@@ -272,7 +274,7 @@ export async function exportBackup() {
   // Correctie R08 (P1): alleen opnamen die een actuele waarneming noemt. Een verdrongen of via
   // Bewerken losgekoppelde opname blijft lokaal bewaard voor Terugzetten, maar hoort niet in de ZIP.
   const linkedAudio = new Set(sightings.flatMap(s => (Array.isArray(s.audioIds) ? s.audioIds : [])));
-  const photos = (await getAllPhotos()).filter(photo => !isSightingAudio(photo) || linkedAudio.has(photo.id));
+  const photos = (await getAllPhotos()).filter(photo => !isSightingAudio(photo) || linkedAudio.has(photo.id) || photo.personalSpecies === true);
   const photoIds = new Set(photos.filter(photo => photo.blob).map(photo => photo.id));
   if (photos.length !== photoIds.size || sightings.some(s => s.photoIds.some(id => !photoIds.has(id)))) {
     throw new Error('Een of meer mediabestanden ontbreken. Er is geen onvolledige back-up gemaakt.');
@@ -296,12 +298,15 @@ export async function exportBackup() {
     photoIds: photos.map(p => p.id),
     // Metadata per bestand: plek-media (K4) houdt zo zijn plek en exacte type
     mediaMeta: photos.map(p => ({ id: p.id, type: p.type || p.blob?.type || null, filename: p.filename || null,
-      speciesId: p.speciesId || null, sightingId: p.sightingId || null, placeId: p.placeId || null,
+      speciesId: p.speciesId || null,
+      sightingId: p.personalSpecies && !linkedAudio.has(p.id) ? null : p.sightingId || null,
+      placeId: p.placeId || null,
       // Ronde 2B: omgevingsfoto's houden soort, plek, toelichting en datum (thumb wordt opnieuw gemaakt)
       ...(p.kind === PLACE_ENV_KIND ? { kind: PLACE_ENV_KIND, caption: String(p.caption || ''),
         addedAt: p.addedAt || null, updatedAt: p.updatedAt || null } : {}),
       // Ronde 3: eigen geluidsopname bij een waarneming (originele bytes in photos/<id>.<ext>)
-      ...(p.kind === SIGHTING_AUDIO_KIND ? { kind: SIGHTING_AUDIO_KIND, addedAt: p.addedAt || null } : {}) })),
+      ...(p.kind === SIGHTING_AUDIO_KIND ? { kind: SIGHTING_AUDIO_KIND, addedAt: p.addedAt || null,
+        ...(p.personalSpecies === true ? { personalSpecies: true } : {}) } : {}) })),
     collections: Object.fromEntries(Object.entries(COLLECTION_KEYS).map(([kind, key]) =>
       [kind, normalizeIds(readList(storage[key]))])),
     seenSpecies: normalizeIds(readList(storage[SEEN_KEY])),
@@ -369,7 +374,7 @@ export async function validateBackupFile(file) {
   }
 }
 
-const BACKUP_VERSION = 2;
+const BACKUP_VERSION = 3;
 const ENV_CAPTION_LIMIT = 500;
 const validCoordPair = (lat, lon) => lat != null && lon != null && lat !== '' && lon !== '' &&
   Number.isFinite(Number(lat)) && Math.abs(Number(lat)) <= 90 && Number.isFinite(Number(lon)) && Math.abs(Number(lon)) <= 180;
@@ -442,6 +447,7 @@ function assertSightingAudio(data, files, validId) {
   const fail = reason => { throw new Error('De back-up bevat een ongeldige geluidsopname (' + reason + '). Er is niets hersteld.'); };
   const photoUse = new Set(data.sightings.flatMap(s => s.photoIds || []));
   const owner = new Map();
+  const sightingById = new Map(data.sightings.map(s => [s.id, s]));
   for (const sighting of data.sightings) {
     if (sighting.audioIds == null) continue;
     if (!Array.isArray(sighting.audioIds)) fail('koppeling is geen lijst');
@@ -453,21 +459,32 @@ function assertSightingAudio(data, files, validId) {
     }
   }
   const metaById = new Map((data.mediaMeta || []).filter(Boolean).map(meta => [meta.id, meta]));
-  for (const meta of metaById.values()) {
-    if (meta.kind === SIGHTING_AUDIO_KIND && owner.get(meta.id) !== meta.sightingId) fail(meta.id + ' heeft geen geldige waarneming');
-  }
   const allowed = new Set(Object.values(SIGHTING_AUDIO_TYPES));
-  for (const [id, sightingId] of owner) {
-    const meta = metaById.get(id);
-    if (!meta || meta.kind !== SIGHTING_AUDIO_KIND) fail(id + ' mist geluidsgegevens');
-    if (meta.sightingId !== sightingId || meta.placeId || meta.speciesId) fail(id + ' heeft een tegenstrijdige koppeling');
-    if (!allowed.has(meta.type)) fail(id + ' heeft een niet-ondersteund formaat');
-    const file = files.get(id);
-    if (!file) fail(id + ' ontbreekt');
-    const extType = MEDIA_EXT_MIME[file.ext] === 'audio/ogg' || file.ext === 'ogg' ? 'audio/ogg' : MEDIA_EXT_MIME[file.ext];
-    if (extType !== meta.type) fail(id + ' heeft een extensie die niet bij het formaat past');
+  for (const meta of metaById.values()) {
+    if (meta.kind !== SIGHTING_AUDIO_KIND) continue;
+    const sightingId = owner.get(meta.id);
+    const personal = meta.personalSpecies === true;
+    if (meta.personalSpecies != null && typeof meta.personalSpecies !== 'boolean') fail(meta.id + ' heeft ongeldige soortmarkering');
+    if (meta.placeId || (meta.speciesId && !personal)) fail(meta.id + ' heeft tegenstrijdige plek/soortkoppeling');
+    if (personal && (!validId(meta.speciesId) || !SPECIES.some(s => s.id === meta.speciesId))) {
+      fail(meta.id + ' heeft geen bestaande vogelsoort');
+    }
+    if (sightingId) {
+      if (meta.sightingId !== sightingId) fail(meta.id + ' verwijst naar een andere waarneming');
+      if (personal && sightingById.get(sightingId)?.speciesId !== meta.speciesId) fail(meta.id + ' verkeerde soort bij waarneming');
+    } else if (!personal || meta.sightingId) {
+      fail(meta.id + ' heeft geen geldige waarneming of persoonlijke soortkoppeling');
+    }
+    if (!allowed.has(meta.type)) fail(meta.id + ' heeft een niet-ondersteund formaat');
+    const file = files.get(meta.id);
+    if (!file) fail(meta.id + ' ontbreekt');
+    const extType = MEDIA_EXT_MIME[file.ext];
+    if (extType !== meta.type) fail(meta.id + ' heeft een extensie die niet bij het formaat past');
     const problem = audioBytesProblem(file.bytes, meta.type);
-    if (problem) fail(id + ': ' + problem);
+    if (problem) fail(meta.id + ': ' + problem);
+  }
+  for (const [id] of owner) if (metaById.get(id)?.kind !== SIGHTING_AUDIO_KIND) {
+    fail(id + ' mist geluidsgegevens');
   }
 }
 
@@ -581,7 +598,9 @@ export function importBackup(file) {
         newPhotos.push({
           id, kind: SIGHTING_AUDIO_KIND, blob: new Blob([file.bytes], { type }), type,
           filename: meta?.filename || id + '.' + file.ext, size: file.bytes.byteLength,
-          sightingId: audioOwner?.id ?? meta?.sightingId ?? null, speciesId: null, placeId: null,
+          sightingId: audioOwner?.id ?? meta?.sightingId ?? null,
+          speciesId: meta?.personalSpecies ? meta.speciesId : null, placeId: null,
+          personalSpecies: meta?.personalSpecies === true,
           addedAt: meta?.addedAt || new Date().toISOString(),
         });
         continue;

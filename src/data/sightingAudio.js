@@ -120,8 +120,13 @@ export function releaseSightingAudio(ids) {
       request.onsuccess = () => resolve(request.result || null);
       request.onerror = () => resolve(null);
     })));
-    const remove = records.filter(rec => rec && isSightingAudio(rec) && !needed.has(rec.id)).map(rec => rec.id);
-    await changePhotos({ remove });
+    const removable = records.filter(rec => rec && isSightingAudio(rec) && !needed.has(rec.id));
+    const remove = removable.filter(rec => !rec.personalSpecies).map(rec => rec.id);
+    // Heeft de eigenaar dit ook bij Mijn soortgeluiden gezet? Dan blijft dezelfde
+    // blob bestaan, alleen de verwijzing naar de verwijderde waarneming vervalt.
+    const keepSpecies = removable.filter(rec => rec.personalSpecies && rec.sightingId)
+      .map(rec => ({ ...rec, sightingId: null }));
+    await changePhotos({ put: keepSpecies, remove });
     return remove;
   });
 }
