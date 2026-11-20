@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-20",
+  "items": [
+    {
+      "speciesId": "sp082",
+      "kind": "audio",
+      "author": "Corentin Rivière / Sonothèque ADVL",
+      "license": "CC0",
+      "audio": "/assets/species/audio/sp082-flight-call.mp3",
+      "source": "https://xeno-canto.org/705915",
+      "rightsStatus": "BLOCKED for fresh source check: Anubis/access denied; existing register retained, no new rights PASS",
+      "evidenceCeiling": "historical source label only, no independent auditory verification"
+    },
+    {
+      "speciesId": "sp083",
+      "kind": "audio",
+      "author": "Corentin Rivière / Sonothèque ADVL",
+      "license": "CC0",
+      "audio": "/assets/species/audio/sp083-flight-call.mp3",
+      "source": "https://xeno-canto.org/705918",
+      "rightsStatus": "BLOCKED for fresh source check: Anubis/access denied; existing register retained, no new rights PASS",
+      "evidenceCeiling": "historical source label only, no independent auditory verification"
+    },
+    {
+      "speciesId": "sp083",
+      "kind": "audio",
+      "author": "Lionel Triboulin",
+      "license": "CC0",
+      "audio": "/assets/species/audio/sp083-alarm-call.mp3",
+      "source": "https://xeno-canto.org/1180934",
+      "rightsStatus": "BLOCKED for fresh source check: Anubis/access denied; existing register retained, no new rights PASS",
+      "evidenceCeiling": "historical source label only, no independent auditory verification"
+    }
+  ]
+}

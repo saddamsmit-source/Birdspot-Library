@@ -47,7 +47,10 @@
     "sp077",
     "sp078",
     "sp079",
-    "sp081"
+    "sp081",
+    "sp082",
+    "sp083",
+    "sp084"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -2191,7 +2194,8 @@
     {
       "id": "LK-049",
       "focus": [
-        "sp081"
+        "sp081",
+        "sp084"
       ],
       "birds": [
         "sp081",
@@ -2269,6 +2273,253 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kwak"
       ],
       "caution": "Een ingetrokken hals kan een Blauwe Reiger compact doen lijken. Gebruik verenkleed en poten samen."
+    },
+    {
+      "id": "LK-051",
+      "focus": [
+        "sp082",
+        "sp083"
+      ],
+      "birds": [
+        "sp082",
+        "sp083"
+      ],
+      "risk": "adult and juvenile as applicable; missing media remain open",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Source/local images checked in R23 or unchanged R22 partner evidence; independent second review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Tenen",
+          "values": [
+            "Meestal gele tenen aan donkere poten",
+            "Doorgaans donkere tenen, soms verborgen onder water"
+          ]
+        },
+        {
+          "label": "Bouw",
+          "values": [
+            "Kleiner met een relatief korte hals",
+            "Groter met een lange en slanke hals"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger"
+      ],
+      "caution": "Een donkere snavel kan in broedkleed bij beide voorkomen; fotoschaal is geen maatvergelijking."
+    },
+    {
+      "id": "LK-052",
+      "focus": [
+        "sp082"
+      ],
+      "birds": [
+        "sp082",
+        "sp245"
+      ],
+      "risk": "adult and juvenile as applicable; missing media remain open",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Verified photo pair missing; reciprocal text only."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Bouw",
+          "values": [
+            "Slanker met langere hals en poten",
+            "Gedrongen met kortere hals en poten"
+          ]
+        },
+        {
+          "label": "Snavel",
+          "values": [
+            "Volwassen vogel doorgaans fijn en donker",
+            "Volwassen vogel korter, steviger en doorgaans geel"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger"
+      ],
+      "caution": "Vergelijk volwassen vogels; bij jonge vogels kan de snavel ook donker zijn. Geverifieerd fotopaar ontbreekt."
+    },
+    {
+      "id": "LK-053",
+      "focus": [
+        "sp083"
+      ],
+      "birds": [
+        "sp083",
+        "sp245"
+      ],
+      "risk": "adult and juvenile as applicable; missing media remain open",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Verified photo pair missing; reciprocal text only."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Hals",
+          "values": [
+            "Lange en dunne hals aan een grote vogel",
+            "Kortere hals aan een veel compactere vogel"
+          ]
+        },
+        {
+          "label": "Snavel",
+          "values": [
+            "Lange relatief slanke dolkvormige snavel",
+            "Korte en relatief stevige snavel"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger"
+      ],
+      "caution": "Snavelkleur alleen helpt niet bij twee witte reigers met een gele snavel. Geverifieerd fotopaar ontbreekt."
+    },
+    {
+      "id": "LK-054",
+      "focus": [
+        "sp083"
+      ],
+      "birds": [
+        "sp083",
+        "sp081"
+      ],
+      "risk": "adult and juvenile as applicable; missing media remain open",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Source/local images checked in R23 or unchanged R22 partner evidence; independent second review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Rug en vleugel",
+          "values": [
+            "Witte rug en witte vleugels in rust",
+            "Grijze rug en vleugels met donkere delen"
+          ]
+        },
+        {
+          "label": "Hals",
+          "values": [
+            "Witte lange en dunne hals bij goed zicht",
+            "Lichte hals met donkere streping op de voorhals"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger"
+      ],
+      "caution": "Een gele snavel komt bij beide voor; gebruik het verenkleed en de bouw samen."
+    },
+    {
+      "id": "LK-055",
+      "focus": [
+        "sp084"
+      ],
+      "birds": [
+        "sp084",
+        "sp085"
+      ],
+      "risk": "adult and juvenile as applicable; missing media remain open",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Source/local images checked in R23 or unchanged R22 partner evidence; independent second review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Jonge vleugel",
+          "values": [
+            "Lichte randen rond de bruine dekveren",
+            "Losse lichte druppelvlekken op de bruine vleugel"
+          ]
+        },
+        {
+          "label": "Jonge bouw",
+          "values": [
+            "Slankere bouw met lange dunne hals",
+            "Gedrongener silhouet met een kortere hals"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kwak"
+      ],
+      "caution": "Gebruik bij jonge vogels vleugelpatroon en bouw samen; rusthouding kan de hals kort laten lijken."
+    },
+    {
+      "id": "LK-056",
+      "focus": [
+        "sp084"
+      ],
+      "birds": [
+        "sp084",
+        "sp243"
+      ],
+      "risk": "adult and juvenile as applicable; missing media remain open",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Verified photo pair missing; reciprocal text only."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Hals en bouw",
+          "values": [
+            "Slanke vogel met een lange dunne hals",
+            "Compactere reiger met een dikke hals"
+          ]
+        },
+        {
+          "label": "Jong vleugelpatroon",
+          "values": [
+            "Jonge vogel met lichte randen aan bruine dekveren",
+            "Geelbruin met donkere patronen op de vleugels"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/roerdomp"
+      ],
+      "caution": "Bruine kleur en lange tenen alleen zijn onvoldoende; goed zicht nodig. Geverifieerd fotopaar ontbreekt."
     }
   ],
   "withinSpeciesVariation": [

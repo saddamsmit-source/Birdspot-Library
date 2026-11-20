@@ -2752,27 +2752,6 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "observation": "https://www.inaturalist.org/observations/141931939"
     },
-    "juv": {
-      "file": "iNaturalist photo 388019872",
-      "author": "Annette Herz",
-      "license": "CC BY 4.0",
-      "source": "https://www.inaturalist.org/photos/388019872",
-      "image": "/assets/species/plumage/sp083-juv.webp",
-      "width": 1024,
-      "height": 683,
-      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
-      "nl": "Grote Zilverreiger",
-      "latin": "Ardea alba",
-      "batch": "herons-13",
-      "reviewed": "2026-11-06",
-      "verification": "Research-grade waarneming met geannoteerde leeftijd, visueel getoetst aan de soortkaart.",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
-      "visualCheck": "Jonge Grote Zilverreigers bij hun nest in Californië. Hun witte verenkleed heeft nog geen lange sierveren.",
-      "alt": "Grote Zilverreiger — Jonge Grote Zilverreigers bij hun nest in Californië. Hun witte verenkleed heeft nog geen lange sierveren.",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "observation": "https://www.inaturalist.org/observations/219231388",
-      "label": "Juvenielen op het nest"
-    },
     "winter": {
       "reuseGuidePhoto": true
     }

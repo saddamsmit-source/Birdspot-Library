@@ -1,0 +1,138 @@
+{
+  "date": "2026-11-20",
+  "purpose": "F3-R23: existing images and audio source metadata; no independent auditory verification",
+  "items": [
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/plumage/sp082-portrait.webp",
+      "title": "File:Little egret (Egretta garzetta) Cyprus.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "Hoofdfoto (Volwassen)"
+    },
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/plumage/sp082-juv.webp",
+      "author": "Paulo Martins",
+      "license": "CC BY-SA 4.0",
+      "role": "Verenkleed (Juveniel)",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/92502660/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/92502660/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/92502660/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/plumage/sp082-breeding.webp",
+      "author": "Donald Davesne",
+      "license": "CC BY 4.0",
+      "role": "Verenkleed (Broedkleed)",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/364893145/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/364893145/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/364893145/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/plumage/sp082-winter.webp",
+      "author": "Florin Feneru",
+      "license": "CC BY 4.0",
+      "role": "Verenkleed (Winterkleed)",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/172413835/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/172413835/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/172413835/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp082",
+      "image": "/assets/species/sp082.webp",
+      "title": "File:Little egret (Egretta garzetta) in flight.jpg",
+      "author": "Hobbyfotowiki",
+      "license": "CC0",
+      "role": "In vlucht"
+    },
+    {
+      "speciesId": "sp083",
+      "image": "/assets/species/sp083.webp",
+      "title": "File:Great Egret (Ardea alba) (25562005404).jpg",
+      "author": "Bernard DUPONT from FRANCE",
+      "license": "CC BY-SA 2.0",
+      "role": "Hoofdfoto (Volwassen)"
+    },
+    {
+      "speciesId": "sp083",
+      "image": "/assets/species/plumage/sp083-juv.webp",
+      "author": "Annette Herz",
+      "license": "CC BY 4.0",
+      "role": "Verenkleed (Juveniel)",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/388019872/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/388019872/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/388019872/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp083",
+      "image": "/assets/species/plumage/sp083-breeding.webp",
+      "author": "Olivier Morel",
+      "license": "CC BY 4.0",
+      "role": "Verenkleed (Broedkleed)",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/243252269/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/243252269/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/243252269/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp083",
+      "image": "/assets/species/plumage/sp083-flight.webp",
+      "title": "File:Great egret (Ardea alba) in flight Danube delta.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "In vlucht"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/showcase/sp084.webp",
+      "title": "File:Purple heron in Zimbabwe.jpg",
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 4.0",
+      "role": "Hoofdfoto (Volwassen)"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/species/plumage/sp084-juv-europa.webp",
+      "title": "File:Garça-vermelha, juvenil, Purple Heron, juvenile (50904679921).jpg",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "role": "Verenkleed (Juveniel)"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/species/plumage/sp084-flight.webp",
+      "title": "File:Purple heron in flight 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "In vlucht"
+    },
+    {
+      "speciesId": "sp084",
+      "kind": "audio",
+      "title": "File:Ardea purpurea - Purple Heron XC432223.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0",
+      "audio": "/assets/species/audio/sp084-a1.mp3"
+    },
+    {
+      "speciesId": "sp084",
+      "kind": "audio",
+      "title": "File:Ardea purpurea - Purple Heron XC135429.ogg",
+      "author": "Sudipto Roy",
+      "license": "CC BY-SA 3.0",
+      "audio": "/assets/species/audio/sp084-a2.mp3"
+    }
+  ]
+}

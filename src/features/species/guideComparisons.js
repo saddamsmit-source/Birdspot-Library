@@ -182,25 +182,28 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Kleine Zilverreiger en Koereiger · buiten broedkleed',
+    reciprocalText: true,
     birds: [
-      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'winter', marks: 'Langere, dunnere donkere snavel en langere poten. De tenen zijn meestal geel.'},
-      {id: 'sp245', source: 'koereiger', plumage: 'winter', marks: 'Compact, met kortere poten en een korte, stevige gele snavel.'},
+      {id: 'sp082', source: 'kleine-zilverreiger', photoMissing: true, plumage: 'winter', marks: 'Langere, dunnere donkere snavel en langere poten. De tenen zijn meestal geel.'},
+      {id: 'sp245', source: 'koereiger', photoMissing: true, plumage: 'winter', marks: 'Compact, met kortere poten en een korte, stevige gele snavel.'},
     ],
     tip: 'Vergelijk de bouw en snavelvorm. Vee in de buurt kan een extra aanwijzing zijn voor Koereiger.',
   },
   {
     label: 'Kleine Zilverreiger en Koereiger · jonge vogels',
+    reciprocalText: true,
     birds: [
-      {id: 'sp082', source: 'kleine-zilverreiger', plumage: 'juv', marks: 'Slanker en langer gepoot, met een langere, dunnere snavel. Tenen kunnen dof geelgroen zijn.'},
-      {id: 'sp245', source: 'koereiger', plumage: 'juv', marks: 'Compact, met korte poten en een kortere, dikkere snavel. De snavel is bij jonge vogels vaak donker.'},
+      {id: 'sp082', source: 'kleine-zilverreiger', photoMissing: true, plumage: 'juv', marks: 'Slanker en langer gepoot, met een langere, dunnere snavel. Tenen kunnen dof geelgroen zijn.'},
+      {id: 'sp245', source: 'koereiger', photoMissing: true, plumage: 'juv', marks: 'Compact, met korte poten en een kortere, dikkere snavel. De snavel is bij jonge vogels vaak donker.'},
     ],
     tip: 'Vergelijk de verhoudingen van de hele vogel. De snavel van jonge vogels kan bij beide donker zijn.',
   },
   {
     label: 'Grote Zilverreiger en Koereiger · buiten broedkleed',
+    reciprocalText: true,
     birds: [
-      {id: 'sp083', source: 'grote-zilverreiger', plumage: 'winter', marks: 'Groot met een lange, dunne hals, een lange dolkvormige snavel en lange poten.'},
-      {id: 'sp245', source: 'koereiger', plumage: 'winter', marks: 'Veel kleiner, met een korte hals, korte poten en een korte, stevige snavel.'},
+      {id: 'sp083', source: 'grote-zilverreiger', photoMissing: true, plumage: 'winter', marks: 'Groot met een lange, dunne hals, een lange dolkvormige snavel en lange poten.'},
+      {id: 'sp245', source: 'koereiger', photoMissing: true, plumage: 'winter', marks: 'Veel kleiner, met een korte hals, korte poten en een korte, stevige snavel.'},
     ],
     tip: 'Bij beide kan de snavel geel zijn. Vergelijk vooral de lengte van hals, snavel en poten.',
   },
@@ -2002,6 +2005,32 @@ export const GUIDE_COMPARISONS = [
       {label: 'Houding', values: ['Hals vaak gebogen', 'Hals doorgaans rechter']},
     ],
     tip: 'Bekijk bij een volwassen vogel de hele snavel van opzij. Gebruik halshouding als extra aanwijzing.',
+  },
+  {
+    label: 'Grote Zilverreiger en Blauwe Reiger · in rust',
+    birds: [
+      {id: 'sp083', source: 'grote-zilverreiger', photo: '/assets/species/sp083.webp', marks: 'Witte vleugels en rug, lange dunne hals en een gele snavel buiten broedkleed.'},
+      {id: 'sp081', source: 'blauwe-reiger', photo: '/assets/species/plumage/sp081-portrait.webp', marks: 'Grijze vleugels en rug, lichte hals met donkere streping en een stevige snavel.'},
+    ],
+    rows: [
+      {label: 'Vleugel en rug', values: ['Wit.', 'Grijs met donkere delen.']},
+      {label: 'Hals', values: ['Wit, lang en dun.', 'Licht met donkere streping op de voorhals.']},
+      {label: 'Snavel', values: ['Lang, relatief slank en op deze foto geel.', 'Op deze foto steviger en geeloranje.']},
+    ],
+    tip: 'Begin bij het verenkleed. Een gele snavel komt bij beide voor; de foto’s zijn niet op dezelfde schaal.',
+  },
+  {
+    label: 'Purperreiger en Roerdomp · bruine rietreigers',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp084', source: 'purperreiger', photoMissing: true, marks: 'Slanke reiger met een lange, dunne hals. Jonge vogels zijn warm geelbruin met lichte randen aan de vleugeldekveren.'},
+      {id: 'sp243', source: 'roerdomp', photoMissing: true, marks: 'Compacte geelbruine reiger met donkere patronen, een dikke hals en brede vleugels.'},
+    ],
+    rows: [
+      {label: 'Bouw', values: ['Slank met een lange, dunne hals.', 'Compacter met een dikkere hals.']},
+      {label: 'Vleugel', values: ['Jonge vogels hebben lichte randen aan bruine dekveren.', 'Geelbruine vleugels met donkere patronen.']},
+    ],
+    tip: 'Een bruine kleur of lange tenen alleen beslist dit niet. Bekijk bij goed zicht de bouw, halsdikte en het vleugelpatroon samen.',
   },
 ];
 
