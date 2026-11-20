@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-20",
+  "purpose": "F3-R22: 10 existing images, 6 audio metadata/rights checks; no independent auditory species verification",
+  "items": [
+    {
+      "speciesId": "sp078",
+      "image": "/assets/species/sp078.webp",
+      "title": "File:Eurasian Coot 2025 11 30 03.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "Hoofdfoto"
+    },
+    {
+      "speciesId": "sp078",
+      "image": "/assets/species/plumage/sp078-juv-grown.webp",
+      "title": "File:Eurasian coot 2025 06 18.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "Verenkleed (Juveniel)"
+    },
+    {
+      "speciesId": "sp078",
+      "image": "/assets/species/plumage/sp078-flight.webp",
+      "title": "File:Galeirão, Coot (50501136202).jpg",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "role": "In vlucht"
+    },
+    {
+      "speciesId": "sp078",
+      "image": "/assets/species/plumage/sp078-juv.webp",
+      "title": "File:Eurasian coot (Fulica atra) juvenile.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "Overige herkenningsfoto's (Donsjong)"
+    },
+    {
+      "speciesId": "sp078",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp078-a1.mp3",
+      "title": "File:Fulica atra - Eurasian Coot XC432890.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "speciesId": "sp078",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp078-a2.mp3",
+      "title": "File:Fulica atra - Eurasian Coot XC467829.mp3",
+      "author": "Mikko Heikkinen",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "speciesId": "sp079",
+      "image": "/assets/species/sp079.webp",
+      "title": "File:Common moorhen (Gallinula chloropus) France.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "Hoofdfoto"
+    },
+    {
+      "speciesId": "sp079",
+      "image": "/assets/species/plumage/sp079-juv.webp",
+      "title": "File:Common Moorhen (Gallinula chloropus) juvenile.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "role": "Verenkleed (Juveniel)"
+    },
+    {
+      "speciesId": "sp079",
+      "image": "/assets/species/plumage/sp079-flight.webp",
+      "title": "File:Common Moorhen (Gallinula chloropus) (49249725853).jpg",
+      "author": "Imran Shah",
+      "license": "CC BY-SA 2.0",
+      "role": "In vlucht"
+    },
+    {
+      "speciesId": "sp079",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp079-a1.mp3",
+      "title": "File:Gallinula chloropus - Common Moorhen XC424197.mp3",
+      "author": "Borja",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "speciesId": "sp079",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp079-a2.mp3",
+      "title": "File:Gallinula chloropus - Common Moorhen XC432930.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "speciesId": "sp081",
+      "image": "/assets/species/plumage/sp081-portrait.webp",
+      "title": "File:Grey heron (Ardea cinerea).jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 3.0",
+      "role": "Hoofdfoto"
+    },
+    {
+      "speciesId": "sp081",
+      "image": "/assets/species/plumage/sp081-juv.webp",
+      "title": "File:Ardea cinerea juvenile v2.jpg",
+      "author": "Ralf Hüsges",
+      "license": "CC BY 2.0",
+      "role": "Verenkleed (Juveniel)"
+    },
+    {
+      "speciesId": "sp081",
+      "image": "/assets/species/sp081.webp",
+      "title": "File:Ardea cinerea in flight.jpg",
+      "author": "Dinkum",
+      "license": "CC0",
+      "role": "In vlucht"
+    },
+    {
+      "speciesId": "sp081",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp081-a1.mp3",
+      "title": "File:Ardea cinerea - Grey Heron XC432231.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "speciesId": "sp081",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp081-a2.mp3",
+      "title": "File:Ardea cinerea - Grey Heron XC436360.mp3",
+      "author": "Joost van Bruggen",
+      "license": "CC BY-SA 4.0"
+    }
+  ]
+}

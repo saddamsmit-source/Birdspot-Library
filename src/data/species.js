@@ -575,7 +575,7 @@ export const SPECIES = [
   // ── RALLEN ───────────────────────────────────────────────────
   { id:'sp078', nameNL:'Meerkoet',            nameEN:'Common Coot',               nameSci:'Fulica atra',                family:'Rallen',          category:'standvogel', icon:'🐦', regions:['moeras','polder','stedelijk'],
     fieldmarks:"Roetgrijze watervogel met zwarte kop, witte snavel en wit voorhoofdsschild. Een rode iris bij volwassen vogels.",
-    size:{ length:'36–42 cm', wingspan:'70–80 cm', weight:'600–900 g' },
+    size:{ length:'ca. 35–45 cm', wingspan:'70–80 cm', weight:'600–900 g' },
     plumage:{ adult_m:'Witte snavel en bles contrasteren met het donkere lichaam. Het kleed geeft geen zekere geslachtsbepaling.', adult_f:null, juv:'Oudere jongen hebben een grijsbruin kleed, lichte wangen en keel en een klein voorhoofdsschild. Het rood-oranje donsjong staat bij Overige herkenningsfoto’s.', jaarling:null, breeding:null, winter:null, eclipse:null },
     photoTip:"Kies zacht licht voor detail in het donkere kleed. Controleer of de witte snavel nog tekening houdt; wacht op een rustig zijaanzicht.",
     guideReview:{"date": "2026-11-07", "similarSexes": true, "dimensions": ["length", "wingspan"], "sources": [{"label": "Vogelbescherming · herkenning en leefwijze", "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet"}]},

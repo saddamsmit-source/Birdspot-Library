@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-20",
+  "reviewer": "ChatGPT Work / Codex; own visual inspection, no independent second reviewer",
+  "automaticRuleUnchanged": 0.9,
+  "photos": [
+    {
+      "path": "/assets/species/sp078.webp",
+      "localSha256": "11d4d984deabaa4416c95a561eadb419d92a64b5602e4891d51cdf67ede3db35",
+      "sourceSHA1": "0653faac61fd1fd2689e5fd7991a3f11a44437d9",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp078_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/plumage/sp078-juv-grown.webp",
+      "localSha256": "0600f701a8884bc6b83fba2abc2b0f3138bf649e4ab90005ffad9b1872824677",
+      "sourceSHA1": "f5522453133053691b4b821a106fe80c0bde1e10",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp078-juv-grown_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/plumage/sp078-flight.webp",
+      "localSha256": "544868f94f0b42f1e31cbad88539b97b2ff08860126ebc0661774bd6ac4660d3",
+      "sourceSHA1": "e1d463f8b282365dce521c81878d21f064e5f637",
+      "automatedSameShot": false,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp078-flight_vs_source.jpg",
+      "scope": "focus species",
+      "note": "Automatic crop comparison r=0.848 stays false. Source/local show same wing, feet and water reflections; local is a closer crop. Separate visual support, no lowered machine threshold."
+    },
+    {
+      "path": "/assets/species/plumage/sp078-juv.webp",
+      "localSha256": "3b6bfa849261fb215a813152c56cd15cb9a569d486c556bf4504f29eeba66c62",
+      "sourceSHA1": "8d3e29317bd6f86570a72b2284e036f9bc9c0b4d",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp078-juv_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/sp079.webp",
+      "localSha256": "c783c39f3b19b5fa88b0ed97c0c1b2aac4ffd0580a60fe87bd871460afa75f7f",
+      "sourceSHA1": "02a76fd33b5e1414a0504f0b3f0aeb03a569b6f4",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp079_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/plumage/sp079-juv.webp",
+      "localSha256": "6bd1c600f08d8b67e7f1f20b6b75ff8f26a6d396afe56810abdddd6338b57a50",
+      "sourceSHA1": "1a8bf9f45ff3a1a1005c43f2a5655a2700730ceb",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp079-juv_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/plumage/sp079-flight.webp",
+      "localSha256": "0440ca50510bcd3b00ccb4dc7409f4f560536e5ef565a262537cda3928a30d3f",
+      "sourceSHA1": "4eeabc4dc2a888c1520bf057960b2b261e25c6bf",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp079-flight_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/plumage/sp081-portrait.webp",
+      "localSha256": "1db62fa0e51831767d503373e473f80e509b12dd17ca8963b6fd62008d4782e8",
+      "sourceSHA1": "7aa807f1ec92b0b2ef1418b254274ec17dffccae",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp081-portrait_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/plumage/sp081-juv.webp",
+      "localSha256": "a534fadb84a7ce0a2c1798754370500e48aecf67523e6ff7ca92b806e31d6177",
+      "sourceSHA1": "b6bed02788376bda7cff49997f3ee7b211578618",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp081-juv_vs_source.jpg",
+      "scope": "focus species"
+    },
+    {
+      "path": "/assets/species/sp081.webp",
+      "localSha256": "37b731dfa5a617633c32d12314f665a1d2cde53442990dc8bcd2557af0ae679d",
+      "sourceSHA1": "145a7e542f20e8e66e197a2c826c9f4575d4387c",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22/sp081_vs_source.jpg",
+      "scope": "focus species",
+      "note": "True free flight. This particular image shows a relatively extended neck; comparison text corrected. Typical species flight posture remains usually retracted."
+    },
+    {
+      "path": "/assets/showcase/sp084.webp",
+      "localSha256": "26ab813016d3f8da78398c189b3c78d6e24cce64c78e7f8e235bbdad18769d01",
+      "sourceSHA1": "f3dfbfb45846ead5567f28bac37c1de4ef58167e",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22-partners/sp084_vs_source.jpg",
+      "scope": "comparison partner only; no full F3 audit"
+    },
+    {
+      "path": "/assets/species/plumage/sp084-juv-europa.webp",
+      "localSha256": "5963f706d48d33e247be93c2243d79989ab63b8a8a82ee09eebd5ee7ca4adb54",
+      "sourceSHA1": "03b76e82484672e02dcad1923682aee54c30468f",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22-partners/sp084-juv-europa_vs_source.jpg",
+      "scope": "comparison partner only; no full F3 audit"
+    },
+    {
+      "path": "/assets/species/plumage/sp084-flight.webp",
+      "localSha256": "21f40d9e6f2da308af556897ab744ff79eb3ac872660f068ee5a524df3ad7240",
+      "sourceSHA1": "e786ffe7d315791560a4c9280d71716a59dd0756",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22-partners/sp084-flight_vs_source.jpg",
+      "scope": "comparison partner only; no full F3 audit"
+    },
+    {
+      "path": "/assets/species/plumage/sp085-juv.webp",
+      "localSha256": "bc66f27c73378394dc26aafe81d0a2c0f7d03d6985b27fcf0df58735e7d0ad20",
+      "sourceSHA1": "b762043b6e05f7f8b4278dcec5345b5e19e84647",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22-partners/sp085-juv_vs_source.jpg",
+      "scope": "comparison partner only; no full F3 audit"
+    },
+    {
+      "path": "/assets/species/plumage/sp085-flight.webp",
+      "localSha256": "b82b7cb156ce355e8594a945fa6d1eb01aced27042372616c85be6877b7f6cf3",
+      "sourceSHA1": "ab583fe83f5e0d451ee135836c086a2c66b4f7af",
+      "automatedSameShot": true,
+      "visuallySameShot": true,
+      "rightsMetadataMatch": true,
+      "sideBySide": "origcheck-r22-partners/sp085-flight_vs_source.jpg",
+      "scope": "comparison partner only; no full F3 audit"
+    }
+  ],
+  "audioEvidenceCeiling": "Source metadata and rights only; no independent auditory species/type determination"
+}

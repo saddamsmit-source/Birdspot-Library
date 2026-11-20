@@ -1,0 +1,171 @@
+{
+  "generated": "2026-11-20T06:30:52Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp084",
+      "image": "/assets/showcase/sp084.webp",
+      "title": "File:Purple heron in Zimbabwe.jpg",
+      "author": "Bernard Gagnon",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg",
+        "sha1": "f3dfbfb45846ead5567f28bac37c1de4ef58167e",
+        "license": "CC BY-SA 4.0",
+        "author": "Bernard Gagnon",
+        "width": 3914,
+        "height": 2609,
+        "creditFields": {
+          "author": "Bernard Gagnon"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp084_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/species/plumage/sp084-juv-europa.webp",
+      "title": "File:Garça-vermelha, juvenil, Purple Heron, juvenile (50904679921).jpg",
+      "author": "Luiz Lapa",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1029
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Gar%C3%A7a-vermelha,_juvenil,_Purple_Heron,_juvenile_(50904679921).jpg",
+        "sha1": "03b76e82484672e02dcad1923682aee54c30468f",
+        "license": "CC BY 2.0",
+        "author": "Luiz Lapa from Oeiras, Portugal",
+        "width": 2455,
+        "height": 1804,
+        "creditFields": {
+          "author": "Luiz Lapa from Oeiras, Portugal"
+        }
+      },
+      "authorRule": "flickr-location-suffix",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        705
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp084-juv-europa_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp084",
+      "image": "/assets/species/plumage/sp084-flight.webp",
+      "title": "File:Purple heron in flight 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_flight_01.jpg",
+        "sha1": "e786ffe7d315791560a4c9280d71716a59dd0756",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 3483,
+        "height": 2322,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp084-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp085",
+      "image": "/assets/species/plumage/sp085-juv.webp",
+      "title": "File:Nycticorax nycticorax young.jpg",
+      "author": "Matteo Sorrentino",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        482,
+        720
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_young.jpg",
+        "sha1": "b762043b6e05f7f8b4278dcec5345b5e19e84647",
+        "license": "CC BY-SA 3.0",
+        "author": "Matteo Sorrentino",
+        "width": 482,
+        "height": 720,
+        "creditFields": {
+          "author": "Matteo Sorrentino"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        482,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp085-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp085",
+      "image": "/assets/species/plumage/sp085-flight.webp",
+      "title": "File:Black-crowned night heron (Nycticorax nycticorax) in flight.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        1267
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Black-crowned_night_heron_(Nycticorax_nycticorax)_in_flight.jpg",
+        "sha1": "ab583fe83f5e0d451ee135836c086a2c66b4f7af",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 3682,
+        "height": 2455,
+        "creditFields": {}
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "crop",
+      "r": 0.96,
+      "scale": 0.9,
+      "offset": [
+        0.26,
+        0.062
+      ],
+      "sameShot": true,
+      "sideBySide": "sp085-flight_vs_source.jpg"
+    }
+  ]
+}

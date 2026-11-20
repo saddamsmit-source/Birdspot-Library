@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.1",
   "documentVersion": "0.1 DRAFT",
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "status": "INCREMENTAL / PARTIALLY TESTED, NOT A COMPLETE LOOKALIKE CENSUS",
   "ownerRule": "docs/BIRDSPOT_KWALITEITSNORM.md §3.4 (owner decision 16-11-2026)",
   "scope": "Critical lookalike sample from F3-R09 and F3-R10 with earlier cases retained as reference; expand as each F3 batch is inspected, do not claim all 597 species assessed",
@@ -44,7 +44,10 @@
     "sp070",
     "sp072",
     "sp075",
-    "sp077"
+    "sp077",
+    "sp078",
+    "sp079",
+    "sp081"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -2102,6 +2105,170 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fuut",
         "https://www.rspb.org.uk/birds-and-wildlife/red-necked-grebe"
       ]
+    },
+    {
+      "id": "LK-047",
+      "focus": [
+        "sp078"
+      ],
+      "birds": [
+        "sp078",
+        "sp079"
+      ],
+      "risk": "adult and juvenile",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "7 focus photos rechecked; independent biological second review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Volwassen snavel",
+          "values": [
+            "Witte snavel en wit voorhoofdsschild",
+            "Rode snavel met gele punt en rood schild"
+          ]
+        },
+        {
+          "label": "Flank",
+          "values": [
+            "Geen witte lengtestreep op de flank",
+            "Duidelijke witte lengtestreep op de flank"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/meerkoet",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterhoen"
+      ],
+      "caution": "Snavel- en schildkleuren verschillen bij juvenielen; combineer flank, kop en snavel."
+    },
+    {
+      "id": "LK-048",
+      "focus": [
+        "sp079"
+      ],
+      "birds": [
+        "sp079",
+        "sp080"
+      ],
+      "risk": "adult and juvenile",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "No verified comparable Waterral photo; reciprocal recognition text only."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Korter, rood met gele punt bij volwassen vogel",
+            "Langer en slanker met roodachtige kleur"
+          ]
+        },
+        {
+          "label": "Flank",
+          "values": [
+            "Witte lengtestreep op donkere flank",
+            "Lichte en donkere dwarsbanden op de flank"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterhoen",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/waterral"
+      ],
+      "caution": "Gebruik bij jonge vogels ook snavelvorm en flanktekening; de volwassen kleuren kunnen ontbreken."
+    },
+    {
+      "id": "LK-049",
+      "focus": [
+        "sp081"
+      ],
+      "birds": [
+        "sp081",
+        "sp084"
+      ],
+      "risk": "adult and juvenile",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both sides source-matched; adult/juvenile/flight views partial role review; independent second review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Volwassen hals",
+          "values": [
+            "Lichte hals met donkere streping aan de voorzijde",
+            "Warm bruinoranje hals met donkere lengtestrepen"
+          ]
+        },
+        {
+          "label": "Jong kleed",
+          "values": [
+            "Overwegend grijs met donkere kruin",
+            "Warmbruin kleed en licht gerande vleugeldekveren"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/purperreiger"
+      ],
+      "caution": "De huidige Blauwe Reiger-vluchtfoto toont een relatief gestrekte hals; baseer onderscheid niet alleen op halsstand."
+    },
+    {
+      "id": "LK-050",
+      "focus": [
+        "sp081"
+      ],
+      "birds": [
+        "sp081",
+        "sp085"
+      ],
+      "risk": "adult and juvenile",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Both sides source-matched; juvenile/flight roles viewed; independent second review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Jonge vleugel",
+          "values": [
+            "Grijs zonder losse lichte druppelvlekken",
+            "Bruin met opvallende losse lichte druppelvlekken"
+          ]
+        },
+        {
+          "label": "Vluchtpoten",
+          "values": [
+            "Lange poten steken duidelijk achter het lichaam uit",
+            "Compacter silhouet met korter uitstekende poten"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-reiger",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kwak"
+      ],
+      "caution": "Een ingetrokken hals kan een Blauwe Reiger compact doen lijken. Gebruik verenkleed en poten samen."
     }
   ],
   "withinSpeciesVariation": [

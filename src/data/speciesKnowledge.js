@@ -1453,7 +1453,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "kleed, geluid, afmetingen, leefgebied en voedsel",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -1464,7 +1464,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "snavel, voorhoofdsschild en witte flanktekening",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -1475,7 +1475,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Europa",
    "confirms": "juveniel en volwassen kleed, voorhoofdsschild en geslacht",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
   },
@@ -1486,7 +1486,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "broedvogel en wintergast, verspreiding bij zoet water",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -1497,7 +1497,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "snavelvorm, verenkleed en leefgebied",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -1508,7 +1508,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "herkenning, vlucht, lengte en leefwijze",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -1519,7 +1519,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "bouw en verenkleed",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
@@ -1541,7 +1541,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Europa",
    "confirms": "lengte, juveniel, geslacht en onderstaart",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
   },
@@ -1552,7 +1552,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Europa",
    "confirms": "leeftijd, geslacht en vergelijking met Purperreiger",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze"
   },
@@ -1607,7 +1607,7 @@ const DATA = {
    "edition": "Online geraadpleegd 11-11-2026",
    "scope": "Nederland",
    "confirms": "broedvogel en wintergast",
-   "checked": "2026-11-11",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   },
@@ -4853,6 +4853,17 @@ const DATA = {
    "scope": "Nederland",
    "confirms": "Broedvogel- en watervogeltrend, verspreiding en aantallen met afzonderlijke meetperioden",
    "checked": "2026-11-19",
+   "certainty": "hoog",
+   "publisher": "Sovon Vogelonderzoek Nederland"
+  },
+  "SOV_WATERHOEN": {
+   "register": "F3-R22",
+   "label": "Sovon — Waterhoen",
+   "url": "https://stats.sovon.nl/stats/soort/4240",
+   "edition": "Online geraadpleegd 20-11-2026",
+   "scope": "Nederland",
+   "confirms": "Broed- en watervogeltrend met afzonderlijke meetperioden, seizoensvoorkomen",
+   "checked": "2026-11-20",
    "certainty": "hoog",
    "publisher": "Sovon Vogelonderzoek Nederland"
   }
@@ -13463,12 +13474,31 @@ const DATA = {
    ],
    "basis": {
     "size": {
-     "text": "Vogelbescherming geeft 36–42 cm lichaamslengte en 70–80 cm spanwijdte. Blasco-Zumeta en Heinze geven 38–45 cm lengte.",
+     "text": "Vogelbescherming vermeldt 70–80 cm spanwijdte.",
      "sources": [
-      "VB_MEERKOET",
-      "BZH_MEERKOET"
+      "VB_MEERKOET"
      ]
-    }
+    },
+    "biometrics": [
+     {
+      "field": "length",
+      "unit": "cm",
+      "display": "ca. 35–45 cm",
+      "values": [
+       {
+        "source": "VB_MEERKOET",
+        "min": 36,
+        "max": 42
+       },
+       {
+        "source": "BZH_MEERKOET",
+        "min": 38,
+        "max": 45
+       }
+      ],
+      "note": "Gemiddelde ondergrens 37 cm en bovengrens 43,5 cm; afgerond in stappen van 5 cm conform kwaliteitsnorm §1.1."
+     }
+    ]
    },
    "habitat": [
     {
@@ -13488,6 +13518,13 @@ const DATA = {
       "SOV_MEERKOET"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De Nederlandse broedpopulatie nam in de laatste twaalf jaar toe; vanaf 1990 is geen significante verandering vastgesteld. Bij getelde watervogels is over de laatste twaalf jaar geen significante verandering vastgesteld.",
+     "kind": "trend",
+     "sources": [
+      "SOV_MEERKOET"
+     ]
     }
    ],
    "life": [
@@ -13502,12 +13539,13 @@ const DATA = {
    "discrepancies": [
     {
      "field": "Lichaamslengte",
-     "app": "36–42 cm, overeenkomstig de Nederlandse soortgids.",
+     "app": "Historisch 36–42 cm; vanaf F3-R22 ca. 35–45 cm volgens de afgesproken gemiddelde-grenzenmethode.",
      "source": "Blasco-Zumeta en Heinze geven 38–45 cm.",
      "sources": [
       "VB_MEERKOET",
       "BZH_MEERKOET"
-     ]
+     ],
+     "resolution": "Beide bronbereiken en de oorspronkelijke appwaarde behouden; de circa-band is geen biologisch minimum en maximum."
     }
    ],
    "open": []
@@ -13659,9 +13697,17 @@ const DATA = {
     {
      "text": "Algemene broedvogel van zoete wateren in Nederland.",
      "sources": [
-      "VB_WATERHOEN"
+      "VB_WATERHOEN",
+      "SOV_WATERHOEN"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De Nederlandse broedpopulatie nam vanaf 1990 af, maar groeide over de laatste twaalf jaar. De getelde watervogels laten eveneens een toename over de laatste twaalf jaar zien.",
+     "kind": "trend",
+     "sources": [
+      "SOV_WATERHOEN"
+     ]
     }
    ],
    "life": [
@@ -13837,6 +13883,13 @@ const DATA = {
       "SOV_BLAUWREIG"
      ],
      "kind": "voorkomen"
+    },
+    {
+     "text": "De Nederlandse broedpopulatie nam vanaf 1985 af, maar groeide over de laatste twaalf jaar. Ook de getelde watervogels namen over die laatste periode toe.",
+     "kind": "trend",
+     "sources": [
+      "SOV_BLAUWREIG"
+     ]
     }
    ],
    "life": [
