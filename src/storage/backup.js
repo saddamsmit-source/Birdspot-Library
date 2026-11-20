@@ -275,6 +275,7 @@ export async function exportBackup() {
   // Bewerken losgekoppelde opname blijft lokaal bewaard voor Terugzetten, maar hoort niet in de ZIP.
   const linkedAudio = new Set(sightings.flatMap(s => (Array.isArray(s.audioIds) ? s.audioIds : [])));
   const photos = (await getAllPhotos()).filter(photo => !isSightingAudio(photo) || linkedAudio.has(photo.id) || photo.personalSpecies === true);
+  const hasPersonalSpeciesAudio = photos.some(photo => isSightingAudio(photo) && photo.personalSpecies === true);
   const photoIds = new Set(photos.filter(photo => photo.blob).map(photo => photo.id));
   if (photos.length !== photoIds.size || sightings.some(s => s.photoIds.some(id => !photoIds.has(id)))) {
     throw new Error('Een of meer mediabestanden ontbreken. Er is geen onvolledige back-up gemaakt.');
@@ -290,7 +291,8 @@ export async function exportBackup() {
   // gegevens.json
   const gegevens = {
     format:        'birdspot-backup',
-    backupVersion: BACKUP_VERSION,
+    // Use v3 only when the ZIP contains the new relation. Ordinary ZIPs remain readable by v2 clients.
+    backupVersion: hasPersonalSpeciesAudio ? BACKUP_VERSION : 2,
     schemaVersion: SCHEMA_VERSION,
     exportedAt:    new Date().toISOString(),
     sightings,

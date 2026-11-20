@@ -2,9 +2,9 @@ name: Birdspot ronde 4 — Merlin-dubbelcheck in Geluid herkennen
 on:
   push:
     branches: ['feat/birdspot-r4-*', 'fix/birdspot-r4-*']
-    paths: ['.github/workflows/r4-merlin-qa.yml', 'src/**', 'sw.js', 'index.html', 'styles/**', 'tests/test_r4_*', 'tests/test_r3_*', 'tests/test_quick_add_merlin.py']
+    paths: ['.github/workflows/r4-merlin-qa.yml', 'src/**', 'sw.js', 'index.html', 'styles/**', 'tests/test_r4_*', 'tests/test_r3_*', 'tests/test_quick_add_merlin.py', 'tests/test_owner_sound_choices.py']
   pull_request:
-    paths: ['.github/workflows/r4-merlin-qa.yml', 'src/**', 'sw.js', 'index.html', 'styles/**', 'tests/test_r4_*', 'tests/test_r3_*', 'tests/test_quick_add_merlin.py']
+    paths: ['.github/workflows/r4-merlin-qa.yml', 'src/**', 'sw.js', 'index.html', 'styles/**', 'tests/test_r4_*', 'tests/test_r3_*', 'tests/test_quick_add_merlin.py', 'tests/test_owner_sound_choices.py']
 permissions:
   contents: read
 jobs:
@@ -23,6 +23,10 @@ jobs:
           set -o pipefail
           git log -1 --format='Uitgecheckt: %H' | tee r4-merlin.log
           python -u tests/test_r4_merlin.py 2>&1 | tee -a r4-merlin.log
+      - name: Expliciete geluidsopslag en ZIP v3 (S01–S04)
+        run: |
+          set -o pipefail
+          python -u tests/test_owner_sound_choices.py 2>&1 | tee owner-sound-choices.log
       - name: Regressies geluid, BirdNET-route, Merlin-velden, pins, opslag, ZIP en R08
         run: |
           set -o pipefail
@@ -39,3 +43,4 @@ jobs:
           path: |
             r4-merlin.log
             r4-regressies.log
+            owner-sound-choices.log
