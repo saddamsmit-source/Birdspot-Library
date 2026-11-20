@@ -60,7 +60,15 @@ def check(page, width):
     sheet.get_by_role('button', name='Start opname').click()
     expect(sheet.get_by_role('button', name='Stop opname')).to_be_enabled()
     expect(sheet.locator('#soundElapsed')).to_have_text('00:01')
+    # Nieuwe eigenaarregel: een opname kan niet stil verdwijnen of automatisch blijvend worden opgeslagen.
     sheet.get_by_role('button', name='Sluiten').click()
+    expect(sheet).to_be_visible()
+    expect(sheet.locator('#soundCaptureState')).to_contain_text('Stop eerst de opname')
+    sheet.get_by_role('button', name='Stop opname').click()
+    expect(sheet.locator('#soundPlayback')).to_be_visible()
+    sheet.get_by_role('button', name='Sluiten').click()
+    expect(sheet.locator('#soundExitPrompt')).to_be_visible()
+    sheet.locator('[data-sound-exit="keep"]').click()
     expect(sheet).to_have_count(0)
     page.wait_for_function("window.testStream.getAudioTracks().every(track => track.readyState === 'ended')")
     assert not rows(page)
@@ -93,7 +101,7 @@ def check(page, width):
     use = BIRDS if width == 390 else BIRDS[:3]
     for name in BIRDS[len(use):]:
         sheet.get_by_role('checkbox', name=name, exact=True).uncheck()
-    expect(sheet.locator('#soundDraftState')).to_have_text('Sessie bewaard op dit toestel.')
+    expect(sheet.locator('#soundDraftState')).to_have_text('Concept bewust bewaard op dit toestel.')
     page.reload(wait_until='domcontentloaded')
     page.locator('#birdspotSplash').wait_for(state='detached', timeout=15000)
     sheet = open_sound(page)
