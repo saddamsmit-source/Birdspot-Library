@@ -17,8 +17,9 @@ export function openQuickAdd({onChoose,onSoundSaved}={}) {
  let closed=false,disposeSound;
  const title=()=>overlay.querySelector('#quickAddTitle');
  const options=overlay.querySelector('#quickAddOptions');
- const close=(restoreFocus=true)=>{
+ const close=(restoreFocus=true,confirmed=false)=>{
   if(closed)return;
+  if(!confirmed&&disposeSound?.requestExit?.(()=>close(restoreFocus,true)))return;
   closed=true;disposeSound?.();document.removeEventListener('keydown',onKey);overlay.remove();
   if(restoreFocus&&trigger?.isConnected)trigger.focus({preventScroll:true});
  };
@@ -48,7 +49,11 @@ export function openQuickAdd({onChoose,onSoundSaved}={}) {
   switch(button.dataset.quickAction){
    case 'seen':go({observationMethod:'seen',identificationSource:'self'});break;
    case 'sound':soundPage();break;
-   case 'back':disposeSound?.();disposeSound=undefined;title().textContent='Wat wil je vastleggen?';options.innerHTML=start();title().focus({preventScroll:true});break;
+   case 'back':{
+    const back=()=>{disposeSound?.();disposeSound=undefined;title().textContent='Wat wil je vastleggen?';options.innerHTML=start();title().focus({preventScroll:true});};
+    if(!disposeSound?.requestExit?.(back))back();
+    break;
+   }
   }
  });
  document.body.appendChild(overlay);document.addEventListener('keydown',onKey);title().focus({preventScroll:true});

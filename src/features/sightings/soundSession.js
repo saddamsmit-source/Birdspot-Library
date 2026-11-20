@@ -1,6 +1,7 @@
 import { SPECIES } from '../../data/species.js';
 import { addSightings } from '../../data/sightings.js';
 import { changePhotos, SIGHTING_AUDIO_KIND } from '../../data/db.js';
+import { withDataLock } from '../../data/dataLock.js';
 import { audioBytesProblem } from '../../data/sightingAudio.js';
 import { ensurePlaces, loadPlaces, matchSoundPlace, reuseRadiusM, resolvePlaceForSave, removeCreatedPlace } from '../../data/places.js';
 import { escHtml } from '../../utils/html.js';
@@ -23,7 +24,7 @@ let pendingFinalization = Promise.resolve();
 export function mountSoundSession(root, onSaved) {
   root.innerHTML = `
     <div class="sound-capture">
-      <p id="soundCaptureState" role="status">Je opname blijft op dit toestel.</p>
+      <p id="soundCaptureState" role="status">Je kiest zelf of je de opname bewaart.</p>
       <div id="soundTimeline" hidden>
         <canvas id="soundWaveform" width="640" height="84" role="img" aria-label="Geluidsniveau vanaf het begin van de opname"></canvas>
         <div class="sound-ruler" aria-hidden="true"><span>00:00</span><span id="soundRulerEnd">00:00</span></div>
@@ -32,6 +33,7 @@ export function mountSoundSession(root, onSaved) {
       <p id="soundLatestMatch" role="status"></p>
       <audio id="soundPlayback" aria-label="Opname terugluisteren" controls hidden></audio>
       <button type="button" id="soundDiscard" hidden>Verwijder sessie</button>
+      <button type="button" id="soundSaveDraft" hidden>Bewaar concept voor later of Merlin</button>
       <p id="soundDraftState" role="status"></p>
     </div>
     <section class="sound-species" aria-labelledby="soundSpeciesTitle">
@@ -47,12 +49,12 @@ export function mountSoundSession(root, onSaved) {
         <summary><span id="soundMerlinTitle">Controleer met Merlin</span> <small>optioneel</small></summary>
         <p>BirdNET hierboven doet alleen suggesties. Merlin Bird ID is een aparte, gratis app van Cornell Lab.
           Birdspot krijgt geen uitslag van Merlin terug: jij kiest en bevestigt de soort zelf.</p>
-        <button type="button" id="soundMerlinShare" hidden>Deel opname met Merlin</button>
+        <button type="button" id="soundMerlinShare" hidden>Deel met Merlin (bewaar tijdelijk concept)</button>
         <p id="soundMerlinShareNote" role="status"></p>
         <details class="sound-merlin__manual">
           <summary>Merlin zelf openen</summary>
           <ol>
-            <li>Deze sessie blijft op dit toestel bewaard, met datum, tijd en plek.</li>
+            <li>Kies eerst 'Bewaar concept voor later of Merlin' om je sessie op dit toestel te bewaren.</li>
             <li>Open Merlin Bird ID → Sound ID. Neem daar op, of importeer de gedeelde opname.</li>
             <li>Kom terug naar Birdspot. Is dit scherm dicht? Kies + → Geluid herkennen: de sessie opent weer.</li>
             <li>Vink hieronder aan wat Merlin gaf en kies zelf de soort.</li>
@@ -74,7 +76,9 @@ export function mountSoundSession(root, onSaved) {
         <p id="soundMoment"></p>
         <p id="soundPosition" role="status" tabindex="-1">Plek bepalen…</p>
         <ul id="soundPlaceOptions" aria-label="Beschikbare kaartpinnen" hidden></ul>
-        <label id="soundAttachField" class="sound-merlin__used" hidden><input type="checkbox" id="soundAttach"> Bewaar de opname bij de waarneming</label>
+        <label id="soundAttachField" class="sound-merlin__used" hidden><input type="checkbox" id="soundAttach"> Bewaar de opname bij mijn waarneming</label>
+        <label id="soundAttachSpeciesField" class="sound-merlin__used" hidden><input type="checkbox" id="soundAttachSpecies"> Bewaar de opname bij mijn soortgeluiden</label>
+        <label id="soundVerifyField" class="sound-merlin__used" hidden><input type="checkbox" id="soundVerify"> Ik heb zelf gecontroleerd dat het geluid bij deze soort hoort</label>
         <p id="soundAttachNote" class="sound-merlin__hint" hidden></p>
         <details class="sound-details">
           <summary>Details aanpassen</summary>
@@ -93,6 +97,16 @@ export function mountSoundSession(root, onSaved) {
       <p id="soundSaveState" role="status"></p>
       <button class="btn-primary" id="soundSave" type="submit">Pin je waarneming</button>
     </form>
+    <div id="soundExitPrompt" class="sound-exit-prompt" role="alertdialog" aria-label="Opname verlaten" hidden>
+      <strong>Wat wil je met deze opname doen?</strong>
+      <p>De opname is nog niet definitief opgeslagen.</p>
+      <div class="sound-exit-actions">
+        <button type="button" data-sound-exit="continue">Verder bewerken</button>
+        <button type="button" data-sound-exit="keep">Bewaar concept</button>
+        <button type="button" data-sound-exit="discard">Verwijder opname</button>
+      </div>
+      <p id="soundExitState" role="status"></p>
+    </div>
     <div class="sound-record-dock" role="group" aria-label="Opnamebediening">
       <button type="button" id="soundRecord" class="btn-primary">Start opname</button>
       <span id="soundElapsed" aria-label="Opnameduur">00:00</span>
@@ -109,7 +123,8 @@ export function mountSoundSession(root, onSaved) {
   const timeline = find('soundTimeline'), waveform = find('soundWaveform'), discarder = find('soundDiscard');
   const recognitionStatus = find('soundRecognitionState'), latestMatch = find('soundLatestMatch');
   const draftStatus = find('soundDraftState');
-  let sessionId = crypto.randomUUID(), draftStored = false, seconds = 0, clip = null;
+  let sessionId = crypto.randomUUID(), draftStored = false, draftConsent = false, sessionCommitted = false, seconds = 0, clip = null;
+  let exitContinuation = null;
   let coordinates, gpsRequest = 0, closePicker, closed = false;
   let positionOrigin, placeChoice, matchedPlace, locationPending = false, needsPlaceChoice = false;
   let stream, recorder, starting = false, finishing = false, timer, started = 0, playbackUrl;
@@ -121,7 +136,8 @@ export function mountSoundSession(root, onSaved) {
   const merlinShare = find('soundMerlinShare'), merlinNote = find('soundMerlinShareNote');
   const merlinUsedBox = find('soundMerlinUsed');
   const merlinStatus = find('soundMerlinState'), attachBox = find('soundAttach');
-  let merlinUsed = false, merlinShared = false, attachClip = false;
+  const speciesBox = find('soundAttachSpecies'), verifyBox = find('soundVerify'), saveDraftButton = find('soundSaveDraft');
+  let merlinUsed = false, merlinShared = false, attachClip = false, attachSpecies = false;
   let wavFile = null, wavState = 'none', wavRequest = 0;
 
   function setMoment(now = new Date()) {
@@ -221,10 +237,18 @@ export function mountSoundSession(root, onSaved) {
     find('soundSelectionCount').textContent = selected
       ? `${selected} ${selected === 1 ? 'soort geselecteerd' : 'soorten geselecteerd'}`
       : 'Geen soorten geselecteerd';
-    save.disabled = !selected || !date.value || !time.value || !coordinates || locationPending ||
-      needsPlaceChoice || starting || finishing || recorder?.state === 'recording';
-    save.textContent = selected > 1 ? `Pin ${selected} waarnemingen` : 'Pin je waarneming';
     updateMerlin();
+    const speciesOnly = attachSpecies && !attachClip && selected === 1;
+    const requiresPosition = !speciesOnly;
+    const invalidAudio = (attachClip || attachSpecies) &&
+      (!wavFile || selected !== 1 || (attachSpecies && !verifyBox.checked));
+    save.disabled = !selected || !date.value || !time.value || invalidAudio ||
+      (requiresPosition && (!coordinates || locationPending || needsPlaceChoice)) ||
+      starting || finishing || recorder?.state === 'recording';
+    save.textContent = speciesOnly ? 'Bewaar bij mijn soortgeluiden'
+      : attachClip && attachSpecies ? 'Bewaar bij waarneming én soort'
+      : attachClip ? 'Bewaar opname bij waarneming'
+      : selected > 1 ? `Pin ${selected} waarnemingen` : 'Pin je waarneming';
   }
 
   const names = ids => ids.map(id => speciesById.get(id).nameNL).join(', ');
@@ -259,10 +283,17 @@ export function mountSoundSession(root, onSaved) {
     }
     find('soundMerlinCompare').textContent = compare;
     const attachField = find('soundAttachField'), attachNote = find('soundAttachNote');
-    attachField.hidden = !wavFile;
-    attachBox.disabled = chosen.length > 1;
-    attachNote.hidden = !wavFile || chosen.length <= 1;
-    attachNote.textContent = 'Bij meerdere soorten bewaar je de opname per waarneming via Bewerken, zodat er geen kopieën ontstaan.';
+    const speciesField = find('soundAttachSpeciesField'), verifyField = find('soundVerifyField');
+    attachField.hidden = speciesField.hidden = !wavFile;
+    attachBox.disabled = speciesBox.disabled = chosen.length !== 1;
+    if (chosen.length !== 1) {
+      attachBox.checked = speciesBox.checked = verifyBox.checked = false;
+      attachClip = attachSpecies = false;
+    }
+    verifyField.hidden = !wavFile || !attachSpecies;
+    if (!attachSpecies) verifyBox.checked = false;
+    attachNote.hidden = !wavFile || chosen.length === 1;
+    attachNote.textContent = 'Selecteer één soort om deze opname gericht op te slaan. Meerdere waarnemingen zonder geluidsbijlage blijven mogelijk.';
   }
 
   function prepareWav() {
@@ -282,17 +313,18 @@ export function mountSoundSession(root, onSaved) {
   }
 
   function persistDraft() {
-    if (recorder?.state === 'recording' || finishing || (!clip && !candidates.size)) return Promise.resolve(false);
+    // Eigenaarbesluit: stoppen en terugluisteren maken NOOIT vanzelf een duurzaam concept.
+    if (!draftConsent || recorder?.state === 'recording' || finishing || (!clip && !candidates.size)) return Promise.resolve(false);
     const revision = ++draftRevision;
     draftStatus.textContent = 'Sessie wordt bewaard…';
     persistWork = saveSoundDraft({
       id: sessionId, clip, seconds, levels: [...levels], candidates: [...candidates].map(([id, entry]) => [id, { ...entry }]),
       coordinates, positionOrigin, placeChoice,
       date: date.value, time: time.value, name: locationName.value, notes: find('soundNotes').value,
-      merlin: { used: merlinUsed, shared: merlinShared, attach: attachClip },
+      merlin: { used: merlinUsed, shared: merlinShared, attach: attachClip, species: attachSpecies, confirmed: verifyBox.checked },
     }).then(() => {
       draftStored = true;
-      if (revision === draftRevision) draftStatus.textContent = 'Sessie bewaard op dit toestel.';
+      if (revision === draftRevision) draftStatus.textContent = 'Concept bewust bewaard op dit toestel.';
       return true;
     }, () => {
       if (revision === draftRevision) {
@@ -409,7 +441,7 @@ export function mountSoundSession(root, onSaved) {
         if (audio.size) {
           clip = audio;
           if (!closed) setPlayback(audio);
-          captureStatus.textContent = 'Opname klaar om terug te luisteren.';
+          captureStatus.textContent = 'Opname klaar. Luister terug en kies zelf waar je haar bewaart.';
         } else captureStatus.textContent = 'Er is geen geluid opgenomen. Je kunt opnieuw proberen.';
         finishing = false;
         record.disabled = Boolean(clip);
@@ -418,6 +450,7 @@ export function mountSoundSession(root, onSaved) {
         recognitionStatus.textContent = '';
         updateSelection();
         prepareWav();
+        saveDraftButton.hidden = false;
         persistDraft().finally(completeCapture);
       });
       active.start();
@@ -515,7 +548,23 @@ export function mountSoundSession(root, onSaved) {
     updateSelection();
     persistDraft();
   });
-  attachBox.addEventListener('change', () => { attachClip = attachBox.checked; persistDraft(); });
+  attachBox.addEventListener('change', () => {
+    attachClip = attachBox.checked; updateSelection(); persistDraft();
+  });
+  speciesBox.addEventListener('change', () => {
+    attachSpecies = speciesBox.checked;
+    if (!attachSpecies) verifyBox.checked = false;
+    updateSelection(); persistDraft();
+  });
+  verifyBox.addEventListener('change', () => { updateSelection(); persistDraft(); });
+  saveDraftButton.addEventListener('click', async () => {
+    if (!clip || recorder?.state === 'recording') return;
+    draftConsent = true;
+    saveDraftButton.disabled = true;
+    const ok = await persistDraft();
+    saveDraftButton.disabled = false;
+    if (ok) saveDraftButton.hidden = true;
+  });
   merlinShare.addEventListener('click', async () => {
     if (!wavFile || merlinShare.disabled) return;
     const file = wavFile;
@@ -523,6 +572,7 @@ export function mountSoundSession(root, onSaved) {
     try {
       // Eerst het concept (opname, datum, tijd, plek) lokaal vastleggen; pas daarna de appwisseling.
       merlinStatus.textContent = 'Sessie wordt bewaard…';
+      draftConsent = true; // expliciete actie: delen via Merlin vereist terugvindbaar concept
       const saving = persistDraft(), revision = draftRevision;
       const saved = await saving;
       if (closed || root.inert || wavFile !== file) return;
@@ -581,7 +631,7 @@ export function mountSoundSession(root, onSaved) {
     const ids = [...candidates].filter(([, entry]) => entry.checked).map(([id]) => id);
     const now = new Date().toISOString();
     const shared = {
-      lat: coordinates.lat, lon: coordinates.lon, pinAccuracyM: coordinates.pinAccuracyM,
+      lat: coordinates?.lat ?? null, lon: coordinates?.lon ?? null, pinAccuracyM: coordinates?.pinAccuracyM ?? null,
       placeId: matchedPlace?.id ?? null,
       date: date.value, time: time.value,
       locationName: matchedPlace?.name || locationName.value.trim() || null,
@@ -590,9 +640,11 @@ export function mountSoundSession(root, onSaved) {
       certainty: 'certain', count: 1, photoIds: [], soundSessionId: sessionId,
       createdAt: now, updatedAt: now,
     };
+    const personalSpecies = attachSpecies && ids.length === 1;
+    const speciesOnly = personalSpecies && !attachClip;
     let sightings, newPlace;
     try {
-      if (matchedPlace || placeChoice?.newPin) {
+      if (!speciesOnly && (matchedPlace || placeChoice?.newPin)) {
         // IndexedDB leidend: gekozen plek alleen als die nog bestaat, anders een nieuwe (één transactie).
         const resolved = await resolvePlaceForSave({ placeId: matchedPlace?.id ?? null, name: shared.locationName, lat: shared.lat, lon: shared.lon });
         shared.placeId = resolved.place.id;
@@ -613,19 +665,27 @@ export function mountSoundSession(root, onSaved) {
           ...(entry.match ? { soundSuggestion: { model: 'BirdNET+ V3.0', ...entry.match } } : {}),
         };
       });
-      const attachment = attachClip && sightings.length === 1 ? wavFile : null;
-      await addSightings(sightings, {
-        prepareMedia: attachment && (async ([sighting]) => {
-          // Een al opgeslagen waarneming wordt overgeslagen onder het herstelslot.
-          const audioRecord = {
-            id: `au_${crypto.randomUUID()}`, kind: SIGHTING_AUDIO_KIND, blob: attachment, type: 'audio/wav',
-            filename: MERLIN_WAV_NAME, size: attachment.size, sightingId: sighting.id, addedAt: now,
-          };
-          await changePhotos({ put: [audioRecord] });
-          sighting.audioIds = [audioRecord.id];
-          return () => changePhotos({ remove: [audioRecord.id] });
-        }),
-      });
+      const attachment = (attachClip || personalSpecies) && sightings.length === 1 ? wavFile : null;
+      const mediaRecord = attachment && {
+        id: `au_${crypto.randomUUID()}`, kind: SIGHTING_AUDIO_KIND, blob: attachment, type: 'audio/wav',
+        filename: MERLIN_WAV_NAME, size: attachment.size,
+        sightingId: speciesOnly ? null : sightings[0].id,
+        speciesId: personalSpecies ? ids[0] : null,
+        personalSpecies, addedAt: now,
+      };
+      if (speciesOnly) {
+        // Soort-only is een bewust bewaard privébestand, geen fictieve waarneming.
+        if (!mediaRecord) throw new Error('Er is geen opname gekozen');
+        await withDataLock(() => changePhotos({ put: [mediaRecord] }));
+      } else {
+        await addSightings(sightings, {
+          prepareMedia: mediaRecord && (async ([sighting]) => {
+            await changePhotos({ put: [mediaRecord] });
+            sighting.audioIds = [mediaRecord.id];  // één blob; tweede relatie via speciesId
+            return () => changePhotos({ remove: [mediaRecord.id] });
+          }),
+        });
+      }
     } catch (_) {
       if (newPlace) {
         try { await removeCreatedPlace(newPlace.id); }
@@ -647,7 +707,8 @@ export function mountSoundSession(root, onSaved) {
         return;
       }
     }
-    onSaved(sightings);
+    sessionCommitted = true;
+    onSaved(speciesOnly ? [] : sightings);
   });
 
   discarder.addEventListener('click', async () => {
@@ -664,12 +725,13 @@ export function mountSoundSession(root, onSaved) {
       find('soundPlaceNameField').hidden = false;
       root.querySelector('#soundReview').reset();
       sessionId = crypto.randomUUID();
-      draftStored = false;
+      draftStored = draftConsent = sessionCommitted = false;
       clip = coordinates = null;
       seconds = levels.length = 0;
       candidates.clear();
-      merlinUsed = merlinShared = attachClip = false;
-      merlinUsedBox.checked = attachBox.checked = false;
+      merlinUsed = merlinShared = attachClip = attachSpecies = false;
+      merlinUsedBox.checked = attachBox.checked = speciesBox.checked = verifyBox.checked = false;
+      saveDraftButton.hidden = true;
       merlinStatus.textContent = '';
       prepareWav();
       dateEdited = timeEdited = false;
@@ -681,7 +743,7 @@ export function mountSoundSession(root, onSaved) {
       selection.hidden = matches.hidden = timeline.hidden = discarder.hidden = true;
       record.disabled = false;
       record.textContent = 'Start opname';
-      captureStatus.textContent = 'Je opname blijft op dit toestel.';
+      captureStatus.textContent = 'Je kiest zelf of je de opname bewaart.';
       pinStatus.textContent = 'Plek bepalen…';
       find('soundSaveState').textContent = latestMatch.textContent = '';
       draftStatus.textContent = 'Sessie verwijderd.';
@@ -704,7 +766,8 @@ export function mountSoundSession(root, onSaved) {
     if (closed) return;
     if (!draft) { locate(); return; }
     sessionId = draft.id;
-    draftStored = true;
+    draftStored = draftConsent = true; // oude automatisch bewaarde concepten blijven veilig terugvindbaar
+    saveDraftButton.hidden = true;
     [date.value, time.value, locationName.value, find('soundNotes').value] = [draft.date, draft.time, draft.name, draft.notes];
     dateEdited = timeEdited = true;
     showMoment();
@@ -712,9 +775,12 @@ export function mountSoundSession(root, onSaved) {
     seconds = draft.seconds;
     levels.push(...draft.levels);
     for (const [id, entry] of draft.candidates) addCandidate(id, entry.match, entry.checked, entry);
-    ({ used: merlinUsed = false, shared: merlinShared = false, attach: attachClip = false } = draft.merlin || {});
+    ({ used: merlinUsed = false, shared: merlinShared = false, attach: attachClip = false,
+      species: attachSpecies = false } = draft.merlin || {});
     merlinUsedBox.checked = merlinUsed;
     attachBox.checked = attachClip;
+    speciesBox.checked = attachSpecies;
+    verifyBox.checked = Boolean(draft.merlin?.confirmed);
     if (merlinUsed || merlinShared) find('soundMerlin').open = true;
     placeChoice = draft.placeChoice;
     if (draft.coordinates) setPosition(draft.coordinates.lat, draft.coordinates.lon, draft.coordinates.accuracyExactM ?? draft.coordinates.pinAccuracyM, draft.positionOrigin ?? 'Bewaarde plek', false);
@@ -726,7 +792,7 @@ export function mountSoundSession(root, onSaved) {
       paintTimeline();
       record.disabled = true;
       record.textContent = 'Opname gestopt';
-      captureStatus.textContent = 'Opname klaar om terug te luisteren.';
+      captureStatus.textContent = 'Opname klaar om terug te luisteren. Kies zelf waar je haar bewaart.';
     }
     discarder.hidden = false;
     draftStatus.textContent = 'Bewaarde sessie geopend.';
@@ -736,7 +802,52 @@ export function mountSoundSession(root, onSaved) {
   }).finally(() => { if (!closed) { root.inert = false; updateSelection(); } });
 
   updateSelection();
-  return () => {
+  const exitPrompt = find('soundExitPrompt');
+  function requestExit(next) {
+    if (sessionCommitted) return false;
+    if (recorder?.state === 'recording' || starting || finishing) {
+      captureStatus.textContent = 'Stop eerst de opname met de knop onderin.';
+      record.focus();
+      return true;
+    }
+    if (!clip) return false;
+    exitContinuation = next;
+    exitPrompt.hidden = false;
+    exitPrompt.querySelector('[data-sound-exit="continue"]').focus();
+    return true;
+  }
+  exitPrompt.addEventListener('click', async event => {
+    const action = event.target.closest('[data-sound-exit]')?.dataset.soundExit;
+    if (!action) return;
+    if (action === 'continue') {
+      exitContinuation = null;
+      exitPrompt.hidden = true;
+      record.focus();
+      return;
+    }
+    exitPrompt.querySelectorAll('button').forEach(button => { button.disabled = true; });
+    try {
+      if (action === 'keep') {
+        draftConsent = true;
+        const ok = await persistDraft();
+        if (!ok) throw new Error('conceptopslag mislukt');
+      } else if (draftStored) {
+        await persistWork;
+        await deleteSoundDraft(sessionId);
+        draftStored = false;
+      }
+      exitPrompt.hidden = true;
+      const done = exitContinuation;
+      exitContinuation = null;
+      done?.();
+    } catch (_) {
+      find('soundExitState').textContent = 'Je opname is behouden. Kies Bewaar concept opnieuw of ga verder met bewerken.';
+    } finally {
+      exitPrompt.querySelectorAll('button').forEach(button => { button.disabled = false; });
+    }
+  });
+
+  const dispose = () => {
     closed = true;
     document.removeEventListener('visibilitychange', handleVisibility);
     window.removeEventListener('pagehide', stopRecording);
@@ -747,4 +858,6 @@ export function mountSoundSession(root, onSaved) {
     stopTracks();
     clearPlayback();
   };
+  dispose.requestExit = requestExit;
+  return dispose;
 }
