@@ -2330,9 +2330,9 @@
         null,
         null
       ],
-      "photoState": "MISSING_VERIFIED_PAIR",
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Verified photo pair missing; reciprocal text only."
+        "Existing complete Koereiger photo pairs restored after R23 QA regression; partner original/rights check in origcheck-r23-cattle; independent age/species review open."
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -2355,7 +2355,7 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zilverreiger",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger"
       ],
-      "caution": "Vergelijk volwassen vogels; bij jonge vogels kan de snavel ook donker zijn. Geverifieerd fotopaar ontbreekt."
+      "caution": "Vergelijk volwassen vogels; bij jonge vogels kan de snavel ook donker zijn. Foto’s zijn niet op dezelfde schaal; vergelijk snavelvorm en bouw samen."
     },
     {
       "id": "LK-053",
@@ -2371,9 +2371,9 @@
         null,
         null
       ],
-      "photoState": "MISSING_VERIFIED_PAIR",
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Verified photo pair missing; reciprocal text only."
+        "Existing complete Koereiger photo pairs restored after R23 QA regression; partner original/rights check in origcheck-r23-cattle; independent age/species review open."
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -2396,7 +2396,7 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-zilverreiger",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koereiger"
       ],
-      "caution": "Snavelkleur alleen helpt niet bij twee witte reigers met een gele snavel. Geverifieerd fotopaar ontbreekt."
+      "caution": "Snavelkleur alleen helpt niet bij twee witte reigers met een gele snavel. Foto’s zijn niet op dezelfde schaal; vergelijk snavelvorm en bouw samen."
     },
     {
       "id": "LK-054",

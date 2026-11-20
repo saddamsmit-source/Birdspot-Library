@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-20",
+  "source": "https://api.inaturalist.org/v1/observations/{id}",
+  "scope": "Only two comparison partner images; no full sp245 audit or coordinates",
+  "items": [
+    {
+      "id": 71350962,
+      "taxon": "Ardea ibis",
+      "date": "2021-01-08",
+      "place": "22070 Binago CO, Italia",
+      "quality": "research",
+      "annotations": [
+        {
+          "attribute": 1,
+          "value": 2,
+          "label": "Adult"
+        },
+        {
+          "attribute": 17,
+          "value": 18,
+          "label": "Alive"
+        }
+      ],
+      "photos": [
+        {
+          "id": 116157768,
+          "license_code": "cc-by-sa",
+          "attribution": "(c) Andrea Mologni, some rights reserved (CC BY-SA)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/116157768/square.jpeg"
+        }
+      ]
+    },
+    {
+      "id": 69701226,
+      "taxon": "Ardea ibis",
+      "date": "2017-01-10",
+      "place": "Dominica (broad region from existing register; precise coordinates omitted)",
+      "quality": "research",
+      "annotations": [
+        {
+          "attribute": 1,
+          "value": 8,
+          "label": "Juvenile"
+        },
+        {
+          "attribute": 17,
+          "value": 18,
+          "label": "Alive"
+        }
+      ],
+      "photos": [
+        {
+          "id": 113155242,
+          "license_code": "cc-by",
+          "attribution": "(c) Zac Peterson, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/113155242/square.jpeg"
+        },
+        {
+          "id": 113155706,
+          "license_code": "cc-by",
+          "attribution": "(c) Zac Peterson, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/113155706/square.jpeg"
+        },
+        {
+          "id": 113155710,
+          "license_code": "cc-by",
+          "attribution": "(c) Zac Peterson, some rights reserved (CC BY)",
+          "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/113155710/square.jpeg"
+        }
+      ]
+    }
+  ]
+}

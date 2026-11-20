@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-20",
+  "scope": "Two existing comparison partner photos, not full sp245 F3 audit",
+  "photos": [
+    {
+      "path": "/assets/species/plumage/sp245-winter.webp",
+      "automatedSameShot": true,
+      "r": 1.0,
+      "localSha256": "36f7384471bfe53f125c637bc25c50283886b114c277b7cdbaf21ad10c0df46c",
+      "source": "https://inaturalist-open-data.s3.amazonaws.com/photos/116157768/original.jpeg",
+      "rightsMatch": true,
+      "rightsNote": "Live API author and license family; version 4.0 retained from original registry. Independent age/species review open.",
+      "ownVisualSameShot": true,
+      "observation": "Compacte witte reiger met korte gele snavel, donkere winterpoten; bron annotatie Adult, januari Italië."
+    },
+    {
+      "path": "/assets/species/plumage/sp245-juv.webp",
+      "automatedSameShot": true,
+      "r": 1.0,
+      "localSha256": "d4d1dae63eb65b303d7df7a468061bf7434fda6ae99439784471de903172fd68",
+      "source": "https://inaturalist-open-data.s3.amazonaws.com/photos/113155242/original.jpeg",
+      "rightsMatch": true,
+      "rightsNote": "Live API author and license family; version 4.0 retained from original registry. Independent age/species review open.",
+      "ownVisualSameShot": true,
+      "observation": "Compacte witte reiger met korte donkere snavel en donkere poten; bron annotatie Juvenile op Dominica. Leeftijd blijft onafhankelijk ongecontroleerd."
+    }
+  ]
+}

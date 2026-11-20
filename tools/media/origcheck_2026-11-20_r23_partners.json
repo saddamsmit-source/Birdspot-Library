@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-20",
+  "purpose": "Two existing Koereiger comparison partners; no full F3 species review",
+  "items": [
+    {
+      "speciesId": "sp245",
+      "image": "/assets/species/plumage/sp245-winter.webp",
+      "author": "Andrea Mologni",
+      "license": "CC BY-SA 4.0",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/116157768/original.jpeg"
+      ],
+      "observation": "https://www.inaturalist.org/observations/71350962"
+    },
+    {
+      "speciesId": "sp245",
+      "image": "/assets/species/plumage/sp245-juv.webp",
+      "author": "Zac Peterson",
+      "license": "CC BY 4.0",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/113155242/original.jpeg"
+      ],
+      "observation": "https://www.inaturalist.org/observations/69701226"
+    }
+  ]
+}
