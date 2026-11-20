@@ -92,6 +92,10 @@ def check(page, width):
     clip.evaluate('audio => audio.play()')
     expect(clip).to_have_js_property('paused', False)
     page.wait_for_function("window.testStream.getAudioTracks().every(track => track.readyState === 'ended')")
+    # Voor deze vervolgronde kiest de gebruiker bewust voor Bewaar concept.
+    # Zonder die actie mag de opname na herladen niet automatisch terugkomen.
+    sheet.locator('#soundSaveDraft').click()
+    expect(sheet.locator('#soundDraftState')).to_have_text('Concept bewust bewaard op dit toestel.')
     add_species(sheet, BIRDS)
     if width == 390:
         sheet.screenshot(path=str(OUT / 'sound_session_390.png'))
