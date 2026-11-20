@@ -58,3 +58,15 @@ Samsung/PWA-installatie, offline opslag/herstel, Merlin-deelmenu en de brede pra
 De [voorbereidende QA van 17 november](F3_R21_GRASPIEPER_IJSVOGEL_FUUT_2026-11-17_DRAFT.md) blijft als historisch bewijs behouden. De toenmalige 60/140-teller beschrijft dat eerdere checkpoint; de canonieke actuele teller staat in `F3_140_HERCONTROLE_V0.1_DRAFT.json`.
 
 Volgende batch: **sp078 Meerkoet, sp079 Waterhoen, sp081 Blauwe Reiger**. Start vanaf de vrijgegeven head/claim in PR #313. Volg actuele FINAL-bronnen: Index v3.13, Projectinstructies v2.14, Handbook v2.18 en Veldhandboek v0.8; kwaliteitsnorm v1.7. De projectbijlagen van 16 november en eventuele hostvelden zijn niet automatisch gesynchroniseerd door deze codewijziging.
+
+## Toepassing Visdief-onderzoek op 20 november 2026
+
+De aanvulling op dit dossier staat in [concept-PR #315](https://github.com/saddamsmit-source/Birdspot-Library/pull/315), met de vrijgegeven R21-head 620e493fd40ea3fe65bae7861d812a3fc0674973 als basis. De [bronnotitie](../bronnen/VISDIEF_VOGELGIDSEN_BRONNOTITIE_2026-11-19.md) verwijst naar de normwijziging en controlevoorbeelden.
+
+| Soort | Toepassing in de gids | Open bewijs |
+|---|---|---|
+| Graspieper sp072 | Veldadvies over zijaanzicht en flankstreping. Vogelbescherming en BirdGuides dragen het onderscheid met Boompieper. De bestaande vergelijking met Veldleeuwerik toont de langdurige zangvlucht in beide richtingen. | De automatische cropcontrole van de vluchtfoto blijft onder de drempel. Bewijs voor de individuele juvenielenrol blijft apart. |
+| IJsvogel sp075 | De herkenningstekst stuurt naar de borstveren en poten voor leeftijd. Een donkere ondersnavel is ook bij jonge vogels mogelijk. | De leeftijdsrol van het teruggetrokken juvenielenbeeld blijft open. |
+| Fuut sp077 | De snelle herkenning beschrijft het wit boven de donkere lijn tussen oog en snavel in winterkleed. | Een vrije-vluchtfoto en onafhankelijke beoordeling van de bestaande geluidsopname blijven open. |
+
+Dit is een aanvulling op reeds beoordeelde soorten. De R21-teller op de basis is 63/140 inhoudelijk bekeken en 0 volledig afgetekend. Resultaten van het parallelle F3-spoor staan in het eigen dossier.

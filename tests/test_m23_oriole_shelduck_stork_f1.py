@@ -74,7 +74,9 @@ def check_progress_and_policy():
         assert item["fullKnowledgeReview"] == "NOT TESTED"
         assert (ROOT / item["reviewDocument"]).is_file()
     assert REPORT.is_file()
-    assert "| Versie | 1.7 · 16-11-2026 |" in norm, "Latest lookalike rule must remain current"
+    assert "| 1.7 | 16-11-2026 |" in norm, "Historical v1.7 owner decision must be preserved"
+    assert "**symmetrische, brongedragen determinatievergelijking**" in norm, (
+        "The v1.7 lookalike rule must remain in force")
     assert "| 1.6 | 15-11-2026 |" in norm, "Historical v1.6 must be preserved"
     assert "### 3.4 Kritieke dubbelgangers" in norm, "Photo-and-text rule must remain present"
     assert "| 1.5 | 14-11-2026 |" in norm, "The previous 1.5 decision must remain in history"

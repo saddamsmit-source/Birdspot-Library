@@ -1435,6 +1435,17 @@ const DATA = {
    "publisher": "Javier Blasco-Zumeta & Gerd-Michael Heinze",
    "previousURL": "https://blascozumeta.wimbitek.com/specie_files/10110_ENG_Anthus_pratensis_aranzadi.pdf"
   },
+  "BG_GRAS_BOOMPIEP": {
+   "register": "EXTERNE REDACTIONELE BRON",
+   "label": "BirdGuides — Meadow and Tree Pipits",
+   "url": "https://www.birdguides.com/articles/identification/meadow-and-tree-pipits/",
+   "edition": "Online artikel, onderdelen Habitat and behaviour en Plumage",
+   "scope": "Britse veldherkenning, uiterlijke vergelijking toepasbaar in Noordwest-Europa",
+   "confirms": "breedte van de flankstrepen bij Graspieper en Boompieper en habitat als beperkte aanwijzing",
+   "checked": "2026-11-20",
+   "certainty": "hoog",
+   "publisher": "BirdGuides"
+  },
   "SOV_GRAS": {
    "register": "nieuwe soortreferentie",
    "label": "Sovon — Graspieper",
@@ -11371,7 +11382,7 @@ const DATA = {
      "reliability": "ondersteunend"
     },
     {
-     "text": "In winterkleed een lichte zone boven de donkere teugel.",
+     "text": "Bekijk in winterkleed van opzij het wit boven de donkere lijn tussen oog en snavel.",
      "sources": [
       "VB_FUUT",
       "NAT_FUUT"
@@ -13456,11 +13467,12 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "Voor de achternagel is een goed zijaanzicht nodig. Gebruik bij twijfel ook flankstreping en geluid.",
+    "text": "Bekijk de flank van opzij. Luister bij twijfel ook naar de roep. Open terrein alleen geeft weinig houvast.",
     "sources": [
      "VB_GRAS",
      "VB_BOOMPIEP",
-     "BZH_GRAS"
+     "BZH_GRAS",
+     "BG_GRAS_BOOMPIEP"
     ]
    },
    "critical": [
@@ -13479,7 +13491,8 @@ const DATA = {
      "sources": [
       "VB_GRAS",
       "VB_BOOMPIEP",
-      "BZH_GRAS"
+      "BZH_GRAS",
+      "BG_GRAS_BOOMPIEP"
      ]
     }
    ],
@@ -17047,7 +17060,7 @@ const DATA = {
     }
    ],
    "caution": {
-    "text": "Een jonge IJsvogel kan een donkere ondersnavel hebben. Bekijk de borstveren en bepaal eerst de leeftijd voordat je een geslacht aan het dier toekent.",
+    "text": "Een donkere ondersnavel komt ook bij jonge IJsvogels voor. Bekijk bij goed licht de borstveren en poten om de leeftijd in te schatten.",
     "sources": [
      "VB_IJSVOGEL",
      "BZH_IJSVOGEL"
