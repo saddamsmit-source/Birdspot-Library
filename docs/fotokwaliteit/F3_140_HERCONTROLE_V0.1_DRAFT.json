@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 62,
+    "nextNotStarted": 59,
     "secondBatchStarted": 3,
-    "contentInspected": 78,
+    "contentInspected": 81,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -80,7 +80,8 @@
     "twentyThirdBatchStarted": 3,
     "twentyFourthBatchStarted": 3,
     "twentyFifthBatchStarted": 3,
-    "twentySixthBatchStarted": 3
+    "twentySixthBatchStarted": 3,
+    "twentySeventhBatchStarted": 3
   },
   "records": [
     {
@@ -8569,43 +8570,77 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (broedkleed, geslacht neutraal)",
+            "path": "/assets/species/sp097.webp",
+            "oldRights": "PARTIALLY TESTED (F2-31 author/license/page; historical nine-point inventory was zero)"
+          },
+          {
+            "role": "Verenkleed (Volwassen winter)",
+            "path": "/assets/species/plumage/sp097-winter.webp",
+            "oldRights": "PARTIALLY TESTED (F2-31 historical rights, current recheck open)"
+          },
+          {
+            "role": "In vlucht (Broedkleed, geslacht neutraal)",
+            "path": "/assets/species/plumage/sp097-flight.webp",
+            "oldRights": "PARTIALLY TESTED (F2-31 historical rights, current recheck open)"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R27",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (local app-WebP images viewed, repository blob hashes recorded; no current original-to-WebP pixel match)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical F2/soortaudit author-license evidence; no fresh original page or current reproduction-rights certification)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Brown breeding cap vs white winter head/dark ear spot separated; unambiguous airborne breeding gull, no sex inferred.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Zwartkopmeeuw broedkleed existing pair only with valid partner; Stormmeeuw winter comparison remains text-only (partner winter photo absent). F2 partner original source unresolved.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R27 browser/zoom on exact candidate SHA pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R27 source credits and audio UI not reverified on device)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no registered audio for any R27 focus species)",
+          "audioLicenseAndAttribution": "NOT TESTED (no original audio registered; no invented source)",
+          "soundRolesSongCall": "NOT TESTED (source describes sound but no local sound file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R27, no species audio registered)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (relevant Vogelbescherming species passage read; ANWB book edition/page NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (No knowledge.json profile for Kokmeeuw at checkpoint; existing species.js field text and VBN source usable, no invented profile.)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new numeric/trend statements promoted)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird content used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R27; earlier app evidence on other SHA)",
+          "endToEndGuideUI": "NOT TESTED (R27, browser suite pending)",
+          "independentSecondReview": "NOT TESTED (own image/source audit; independent specialist, original files and audio remain open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Zwartkopmeeuw broedkleed existing pair only with valid partner; Stormmeeuw winter comparison remains text-only (partner winter photo absent). F2 partner original source unresolved.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "3 current local WebPs individually opened. F2-31 registered all three; historic F3 zero was a snapshot of old unaudited record, preserved under historic.oldAssetCount=0.",
+          "Brown breeding cap vs white winter head/dark ear spot separated; unambiguous airborne breeding gull, no sex inferred.",
+          "Zwartkopmeeuw broedkleed existing pair only with valid partner; Stormmeeuw winter comparison remains text-only (partner winter photo absent). F2 partner original source unresolved.",
+          "No knowledge.json profile for Kokmeeuw at checkpoint; existing species.js field text and VBN source usable, no invented profile.",
+          "F2-31 lists Alexis Lours CC BY4, Bartosz Morąg CC BY-SA3 and Charles J. Sharp CC BY-SA3. Original pages historical, new pixel/rights check not done.",
+          "No locally registered audio; missing audio cannot receive a full PASS."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F2_31_BRON_EN_LIMIETEN.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kokmeeuw",
+          "docs/fotokwaliteit/F3_R27_KOKMEEUW_SCHOLEKSTER_KIEVIT_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R27 SHA; private owner preview on different SHA",
+        "independence": "PARTIAL / own visual and source review; independent biological, source-rights and acoustic confirmation OPEN",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "67da99af07679d106b3d5b1efad55c0ea09d938f",
+          "2ec4627d62969e0563ae7ec785dff3c3410824d5",
+          "443d53de5f189fa57f0ef7baee4a45aa3faa3582"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI per exact R27 SHA to follow"
       }
     },
     {
@@ -8642,38 +8677,56 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R27",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (local app-WebP images viewed, repository blob hashes recorded; no current original-to-WebP pixel match)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical F2/soortaudit author-license evidence; no fresh original page or current reproduction-rights certification)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Juvenile age supported by earlier source description, original page not reopened in F2; no independent age/sex certification. Free flight role visually plausible.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Scholekster vs Kluut uses long straight orange-red vs thin upcurved dark bill; partner photo and UI not freshly tested here.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R27 browser/zoom on exact candidate SHA pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R27 source credits and audio UI not reverified on device)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no registered audio for any R27 focus species)",
+          "audioLicenseAndAttribution": "NOT TESTED (no original audio registered; no invented source)",
+          "soundRolesSongCall": "NOT TESTED (source describes sound but no local sound file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R27, no species audio registered)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (relevant Vogelbescherming species passage read; ANWB book edition/page NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Current 80–86 cm span retained while Vogelbescherming lists 72–83 cm; historical discrepancy explicitly registered, no unsupported new band.)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new numeric/trend statements promoted)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird content used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R27; earlier app evidence on other SHA)",
+          "endToEndGuideUI": "NOT TESTED (R27, browser suite pending)",
+          "independentSecondReview": "NOT TESTED (own image/source audit; independent specialist, original files and audio remain open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Scholekster vs Kluut uses long straight orange-red vs thin upcurved dark bill; partner photo and UI not freshly tested here.)"
         },
         "findings": [
           "Spanwijdte verschilt tussen de eerdere gidswaarde en de Nederlandse soortgids. Zie kennisprofiel.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "3 existing local app-WebPs opened: neutral adult, historical juvenile with dark bill tip, and genuinely airborne bird over water.",
+          "Juvenile age supported by earlier source description, original page not reopened in F2; no independent age/sex certification. Free flight role visually plausible.",
+          "Scholekster vs Kluut uses long straight orange-red vs thin upcurved dark bill; partner photo and UI not freshly tested here.",
+          "Current 80–86 cm span retained while Vogelbescherming lists 72–83 cm; historical discrepancy explicitly registered, no unsupported new band.",
+          "F2-31: Hobbyfotowiki CC0, Andrey Gulivanov CC BY2, Charles J. Sharp CC BY-SA4; last two source pages unavailable in F2 recheck.",
+          "No locally registered audio; missing audio cannot receive a full PASS."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F2_31_BRON_EN_LIMIETEN.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/scholekster",
+          "docs/fotokwaliteit/F3_R27_KOKMEEUW_SCHOLEKSTER_KIEVIT_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R27 SHA; private owner preview on different SHA",
+        "independence": "PARTIAL / own visual and source review; independent biological, source-rights and acoustic confirmation OPEN",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "8fd14cf43ff9d73c2d38e41c300df8b6587cdebf",
+          "88165163ee4ee1be9cf450a7b6ce061c879559de",
+          "2bb38a6f38254fc0a6d746986411cc1a0b36b156"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI per exact R27 SHA to follow"
       }
     },
     {
@@ -8720,37 +8773,58 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R27",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (local app-WebP images viewed, repository blob hashes recorded; no current original-to-WebP pixel match)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical F2/soortaudit author-license evidence; no fresh original page or current reproduction-rights certification)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Male role rests on historical Audubon/Commons identity; female photographer label and juvenile Commons annotation retained, no new independent sex/age proof.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Kievit vs Zilverplevier: crest and metallic back versus no crest and grey upperparts; existing partner not reapproved.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R27 browser/zoom on exact candidate SHA pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R27 source credits and audio UI not reverified on device)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no registered audio for any R27 focus species)",
+          "audioLicenseAndAttribution": "NOT TESTED (no original audio registered; no invented source)",
+          "soundRolesSongCall": "NOT TESTED (source describes sound but no local sound file)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R27, no species audio registered)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (relevant Vogelbescherming species passage read; ANWB book edition/page NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Historical ca. 28–30 cm length and ca. 80–85 cm wingspan under documented two-source rounded method retained.)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new numeric/trend statements promoted)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird content used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R27; earlier app evidence on other SHA)",
+          "endToEndGuideUI": "NOT TESTED (R27, browser suite pending)",
+          "independentSecondReview": "NOT TESTED (own image/source audit; independent specialist, original files and audio remain open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Kievit vs Zilverplevier: crest and metallic back versus no crest and grey upperparts; existing partner not reapproved.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "5 directly viewed local images: adult male, annotated female in display, juvenile, two airborne lapwings and an extra neutral rest portrait.",
+          "Male role rests on historical Audubon/Commons identity; female photographer label and juvenile Commons annotation retained, no new independent sex/age proof.",
+          "Kievit vs Zilverplevier: crest and metallic back versus no crest and grey upperparts; existing partner not reapproved.",
+          "Historical ca. 28–30 cm length and ca. 80–85 cm wingspan under documented two-source rounded method retained.",
+          "Earlier species audit VERIFIED on past scope, cannot be treated as F3 FULL PASS. Per-file Commons credits remain; no new original-file rights audit.",
+          "No locally registered audio; missing audio cannot receive a full PASS."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/soortaudit-status.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kievit",
+          "docs/fotokwaliteit/F3_R27_KOKMEEUW_SCHOLEKSTER_KIEVIT_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R27 SHA; private owner preview on different SHA",
+        "independence": "PARTIAL / own visual and source review; independent biological, source-rights and acoustic confirmation OPEN",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "493e08dfdaae93826d99785e0b4eb8e14a2d0939",
+          "f5e9efdbf8e98995854d6d4cfed08eee63a4a679",
+          "0ca3b9a2c35976021bd37b015712620ae6798ac4",
+          "deaf83822ceff4aa5cb3943c09ca775d83c902bb",
+          "ebb9a8faeba9259e1e5e0dae91abc06839897538"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI per exact R27 SHA to follow"
       }
     },
     {
