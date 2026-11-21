@@ -1466,7 +1466,7 @@ export const GUIDE_PHOTOS = Object.freeze({
   },
   "sp130": {
     "file": "Eurasian Wigeon - male.jpg",
-    "author": "Andreas Trepte",
+    "author": "Andreas Trepte, www.avi-fauna.info",
     "license": "CC BY-SA 2.5",
     "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_-_male.jpg",
     "width": 1600,

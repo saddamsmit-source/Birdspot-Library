@@ -4077,7 +4077,7 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "file": "Aythya fuligula (female).jpg",
       "nl": "Kuifeend",
       "latin": "Aythya fuligula",
-      "author": "Hans Hillewaert",
+      "author": "© Hans Hillewaert",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Aythya_fuligula_%28female%29.jpg",
@@ -4350,27 +4350,6 @@ export const GUIDE_PLUMAGE = Object.freeze({
     }
   },
   "sp141": {
-    "adult_m": {
-      "file": "Common swift 2024 04 21.jpg",
-      "nl": "Gierzwaluw",
-      "latin": "Apus apus",
-      "author": "Alexis Lours",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Common_swift_2024_04_21.jpg",
-      "showSourceLink": true,
-      "alt": "Gierzwaluw in vlucht met donkere onderzijde, lange sikkelvleugels, lichte keel en korte gevorkte staart.",
-      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gierzwaluw",
-      "visualCheck": "Gierzwaluw in vlucht met donkere onderzijde, lange sikkelvleugels, lichte keel en korte gevorkte staart.",
-      "verification": "Bronbeschrijving en zichtbare veldkenmerken vergeleken.",
-      "width": 1250,
-      "height": 833,
-      "image": "/assets/species/plumage/sp141-adult.webp",
-      "flight": true,
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
-    },
     "juv": {
       "file": "Apus apus juvenile rescue Paris 20260627.jpg",
       "nl": "Gierzwaluw",
@@ -10460,6 +10439,29 @@ export const GUIDE_POSES = Object.freeze({
       "label": "In vlucht",
       "flight": true,
       "flightReview": "goedgekeurd 2026-11-11: Vrij in de lucht, herkenbaar silhouet en beide vleugels in beeld."
+    },
+    {
+      "file": "Common swift 2024 04 21.jpg",
+      "nl": "Gierzwaluw",
+      "latin": "Apus apus",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_swift_2024_04_21.jpg",
+      "showSourceLink": true,
+      "alt": "Gierzwaluw in vlucht met donkere onderzijde, lange sikkelvleugels, lichte keel en korte gevorkte staart.",
+      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+      "reviewed": "2026-11-07",
+      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gierzwaluw",
+      "visualCheck": "Gierzwaluw in vlucht met donkere onderzijde, lange sikkelvleugels, lichte keel en korte gevorkte staart.",
+      "verification": "Bron bevestigt Apus apus in vrije vlucht. Geslacht en exacte leeftijd zijn niet vastgesteld.",
+      "width": 1250,
+      "height": 833,
+      "image": "/assets/species/plumage/sp141-adult.webp",
+      "flight": true,
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "label": "In vlucht",
+      "note": "Lange sikkelvleugels, een lichte keelvlek en een korte, gevorkte staart."
     }
   ],
   "sp081": [

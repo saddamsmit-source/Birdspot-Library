@@ -1967,7 +1967,7 @@
   },
   "/assets/species/plumage/sp141-adult.webp": {
    "refs": [
-    "sp141 GUIDE_PLUMAGE.adult_m"
+    "sp141 GUIDE_POSES[1]"
    ],
    "sha1": "921531546b772a9fd542ce7f2a4f28a29f6d9ba2",
    "class": "vlucht",
