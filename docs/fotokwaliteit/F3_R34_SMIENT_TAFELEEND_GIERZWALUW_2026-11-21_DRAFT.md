@@ -26,7 +26,7 @@ Elf actieve gidsfoto’s en zes vergelijkingspartners zijn visueel bekeken. Bij 
 
 | Lokaal beeld | Maker en bronlicentie | Match |
 |---|---|---:|
-| `sp130.webp` | Andreas Trepte · CC BY-SA 2.5 · [bron](<https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_-_male.jpg>) | 0,9993 |
+| `sp130.webp` | Andreas Trepte, www.avi-fauna.info · CC BY-SA 2.5 · [bron](<https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_-_male.jpg>) | 0,9993 |
 | `sp130-adult-f.webp` | Daniel106 · CC BY 4.0 · [bron](<https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg>) | 0,9996 |
 | `sp130-juv.webp` | Наталья Усова · CC BY 4.0 · [bron](<https://www.inaturalist.org/photos/322366665>) | 0,9999 |
 | `sp130-flight.webp` | Imran Shah · CC BY-SA 2.0 · [bron](<https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_(Anas_penelope)_(51171016336).jpg>) | 0,9991 |
@@ -38,13 +38,17 @@ Elf actieve gidsfoto’s en zes vergelijkingspartners zijn visueel bekeken. Bij 
 | `sp141-juv.webp` | Marie-Lan Taÿ Pamart · CC BY 4.0 · [bron](<https://commons.wikimedia.org/wiki/File:Apus_apus_juvenile_rescue_Paris_20260627.jpg>) | 0,9999 |
 | `sp141-flight.webp` | Alexis Lours · CC BY 4.0 · [bron](<https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg>) | 0,9999 |
 | `sp092.webp` (partner) | Dr. Raju Kasambe · CC BY-SA 4.0 · [bron](<https://commons.wikimedia.org/wiki/File:Tufted_Duck_Aythya_fuligula_Male_by_Dr._Raju_Kasambe_DSCN9795_(17).jpg>) | 0,9998 |
-| `sp092-adult_f.webp` (partner) | Hans Hillewaert · CC BY-SA 3.0 · [bron](<https://commons.wikimedia.org/wiki/File:Aythya_fuligula_(female).jpg>) | 0,9994 |
+| `sp092-adult_f.webp` (partner) | © Hans Hillewaert · CC BY-SA 3.0 · [bron](<https://commons.wikimedia.org/wiki/File:Aythya_fuligula_(female).jpg>) | 0,9994 |
 | `sp092-flight.webp` (partner) | Imran Shah / Birds of Gilgit-Baltistan · CC BY-SA 2.0 · [bron](<https://commons.wikimedia.org/wiki/File:Tufted_Duck_(Aythya_fuligula)_-_Flickr_-_gilgit2.jpg>) | 0,9997 |
 | `sp129-adult_f.webp` (partner) | Andrey Gulivanov · CC BY 2.0 · [bron](<https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg>) | 0,9996 |
 | `sp114-flight.webp` (partner) | Rudolphous · CC BY-SA 4.0 · [bron](<https://commons.wikimedia.org/wiki/File:Schiermonnikoog_-_Boerenzwaluw_(Hirundo_rustica)_v2.jpg>) | 0,9945 · uitsnede |
 | `sp115-flight.webp` (partner) | Billy Lindblom · CC BY 2.0 · [bron](<https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg>) | 0,9973 · uitsnede |
 
 De app behoudt de maker, licentie, bronlink en bewerkingsmelding. De naam van de fotograaf in het vluchtbeeld van Smient en Kuifeend is zichtbaar. De bron van de Gierzwaluw-hoofdfoto benoemt de soort en de vlucht, zonder geslacht of exacte leeftijd. De overeenkomstige vluchtregistratie is daarom neutraal. [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+Bij de onafhankelijke controle viel op dat de Smient-hoofdfoto alleen de naam van de fotograaf vermeldde. De credit bevat nu ook de door de maker opgegeven website. De bronpagina vermeldt daarnaast een verzoek om hergebruik te melden. De volledige publicatieaftekening blijft open. [Smient-bestandspagina](https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_-_male.jpg#Summary)
+
+Bij het Kuifeend-vrouwtje gebruikt de credit de copyrightnotatie uit de individuele Commons-registratie. [Kuifeend-bestandspagina](https://commons.wikimedia.org/wiki/File:Aythya_fuligula_(female).jpg)
 
 ## Audio en regressies
 

@@ -48,6 +48,8 @@ for (const clip of pochard.F3.localAudioDecodes) {
 }
 assert.match(render('sp132'), /nog niet onafhankelijk bevestigd/);
 assert.doesNotMatch(render('sp132'), /Status: Bevestigd/);
+assert.equal(guideHeroPhoto('sp130').author, 'Andreas Trepte, www.avi-fauna.info');
+assert.equal(GUIDE_PLUMAGE.sp092.adult_f.author, '© Hans Hillewaert');
 
 const swift = guideHeroPhoto('sp141');
 assert.equal(swift.image, '/assets/species/plumage/sp141-adult.webp');

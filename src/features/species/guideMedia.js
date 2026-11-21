@@ -4077,7 +4077,7 @@ export const GUIDE_PLUMAGE = Object.freeze({
       "file": "Aythya fuligula (female).jpg",
       "nl": "Kuifeend",
       "latin": "Aythya fuligula",
-      "author": "Hans Hillewaert",
+      "author": "© Hans Hillewaert",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Aythya_fuligula_%28female%29.jpg",

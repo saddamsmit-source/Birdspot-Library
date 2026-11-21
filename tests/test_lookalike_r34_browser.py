@@ -80,8 +80,11 @@ def check_pochard_tabs(page, own, other):
     for tab, pattern in (("Mannetje", "{sid}.webp"), ("Vrouwtje", "plumage/{sid}-adult_f.webp"),
                          ("In vlucht · Mannetje", "plumage/{sid}-flight.webp")):
         card.get_by_role("button", name=tab, exact=True).click()
-        check_pictures(card.locator(".sd-cmp-panel:visible"),
-                       [pattern.format(sid=sid) for sid in (own, other)])
+        active = card.locator(".sd-cmp-panel:visible")
+        check_pictures(active, [pattern.format(sid=sid) for sid in (own, other)])
+        if tab == "Vrouwtje":
+            tufted_credit = active.locator(".photo-info-frame").nth((own, other).index("sp092"))
+            check_credit(tufted_credit, "© Hans Hillewaert", "CC BY-SA 3.0")
     card.locator(".sd-cmp-panel:visible [data-compare-species]").click()
     expect(page.locator(f"#detailThumb-{other}")).to_be_visible()
     close_sheet(page)
@@ -111,6 +114,8 @@ def check_local_media(page, offline):
         decoded_width = hero.evaluate("img => img.decode().then(() => img.naturalWidth)")
         assert decoded_width > 0 and hero.get_attribute("src") not in image_urls
         assert len(image_urls) == len(set(image_urls))
+        if sid == "sp130":
+            check_credit(page.locator("#detailThumb-sp130"), "Andreas Trepte, www.avi-fauna.info", "CC BY-SA 2.5")
         if sid == "sp141":
             expect(panel.locator('[data-plumage="adult"] .sd-hero-ref')).to_be_visible()
             expect(panel.locator('[data-plumage="adult_m"]')).to_have_count(0)
