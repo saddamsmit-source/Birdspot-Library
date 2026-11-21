@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 65,
+    "nextNotStarted": 62,
     "secondBatchStarted": 3,
-    "contentInspected": 75,
+    "contentInspected": 78,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -79,7 +79,8 @@
     "twentySecondBatchStarted": 3,
     "twentyThirdBatchStarted": 3,
     "twentyFourthBatchStarted": 3,
-    "twentyFifthBatchStarted": 3
+    "twentyFifthBatchStarted": 3,
+    "twentySixthBatchStarted": 3
   },
   "records": [
     {
@@ -8361,39 +8362,50 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R26",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (2 local app-WebPs directly opened; F2 source originals historically read, no new byte/pixel match)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical F2 creator/license records inspected; no fresh original rights or special credit request approval)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (2 directly viewed local app-WebPs: adult Herring Gull in rest on snow with pink legs and light gray mantle; adult airborne with gray wing and black/white tips.; independent ornithological review OPEN)",
+          "photoPairComparisons": "PARTIALLY TESTED (First-winter comparison with Lesser Black-backed Gull has no verified photo pair; adult photos cannot fill that role. Flight image reuse notification request remains open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R26 SHA)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R26 browser and author attribution UI)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no registered audio for species)",
+          "audioLicenseAndAttribution": "NOT TESTED (no registered source audio)",
+          "soundRolesSongCall": "NOT TESTED (no audio source to distinguish song/call)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R26; no audio registered)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species descriptions checked; ANWB edition/page not read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (historical source/method reviewed; no new values, discrepancy kept)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new quantitative Sovon data published from R26)",
+          "ebirdDistributionAndBias": "NOT TESTED (no new eBird data)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R26; previous app evidence separate)",
+          "endToEndGuideUI": "NOT TESTED (R26; no browser acceptance of guide UI)",
+          "independentSecondReview": "NOT TESTED (own visual/source review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (First-winter comparison with Lesser Black-backed Gull has no verified photo pair; adult photos cannot fill that role. Flight image reuse notification request remains open.)"
         },
         "findings": [
           "Juveniel / eerste kalenderjaar",
           "Onvolwassen kleden (leeftijdsreeks)",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "2 directly viewed local app-WebPs: adult Herring Gull in rest on snow with pink legs and light gray mantle; adult airborne with gray wing and black/white tips.",
+          "First-winter comparison with Lesser Black-backed Gull has no verified photo pair; adult photos cannot fill that role. Flight image reuse notification request remains open.",
+          "No sound file is registered; cannot award an audio completeness PASS. No new image or audio bytes imported."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F2_30_BRON_EN_LIMIETEN.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilvermeeuw",
+          "assets/species/field-guide-media.json",
+          "docs/fotokwaliteit/F3_R26_MEEUWEN_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (R26 content branch, separate owner preview)",
+        "independence": "PARTIAL / own direct visual review, expert, original rights and audio OPEN",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI on exact R26 head pending"
       }
     },
     {
@@ -8425,38 +8437,49 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R26",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (2 local app-WebPs directly opened; F2 source originals historically read, no new byte/pixel match)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical F2 creator/license records inspected; no fresh original rights or special credit request approval)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (2 directly viewed local app-WebPs: adult Lesser Black-backed Gull with dark mantle and yellow legs; airborne adult has dark wing and white underside but legs not reliably visible.; independent ornithological review OPEN)",
+          "photoPairComparisons": "PARTIALLY TESTED (First-winter Herring Gull vs Lesser Black-backed Gull lacks verified photo pair. Keep historical ca. length/span bands; not full biological extrema.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R26 SHA)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R26 browser and author attribution UI)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no registered audio for species)",
+          "audioLicenseAndAttribution": "NOT TESTED (no registered source audio)",
+          "soundRolesSongCall": "NOT TESTED (no audio source to distinguish song/call)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R26; no audio registered)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species descriptions checked; ANWB edition/page not read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (historical source/method reviewed; no new values, discrepancy kept)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new quantitative Sovon data published from R26)",
+          "ebirdDistributionAndBias": "NOT TESTED (no new eBird data)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R26; previous app evidence separate)",
+          "endToEndGuideUI": "NOT TESTED (R26; no browser acceptance of guide UI)",
+          "independentSecondReview": "NOT TESTED (own visual/source review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (First-winter Herring Gull vs Lesser Black-backed Gull lacks verified photo pair. Keep historical ca. length/span bands; not full biological extrema.)"
         },
         "findings": [
           "Juveniel / onvolwassen kleden",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "2 directly viewed local app-WebPs: adult Lesser Black-backed Gull with dark mantle and yellow legs; airborne adult has dark wing and white underside but legs not reliably visible.",
+          "First-winter Herring Gull vs Lesser Black-backed Gull lacks verified photo pair. Keep historical ca. length/span bands; not full biological extrema.",
+          "No sound file is registered; cannot award an audio completeness PASS. No new image or audio bytes imported."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F2_30_BRON_EN_LIMIETEN.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-mantelmeeuw",
+          "assets/species/field-guide-media.json",
+          "docs/fotokwaliteit/F3_R26_MEEUWEN_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (R26 content branch, separate owner preview)",
+        "independence": "PARTIAL / own direct visual review, expert, original rights and audio OPEN",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI on exact R26 head pending"
       }
     },
     {
@@ -8488,38 +8511,49 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R26",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (2 local app-WebPs directly opened; F2 source originals historically read, no new byte/pixel match)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical F2 creator/license records inspected; no fresh original rights or special credit request approval)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (2 directly viewed local app-WebPs: adult Common Gull with dark eye, slender yellow bill and green-yellow legs; flight image shows black/white wing tips from below.; independent ornithological review OPEN)",
+          "photoPairComparisons": "PARTIALLY TESTED (No verified winter plumage photo pair Common Gull/Black-headed Gull. Historic length discrepancy: VB 40-60 cm vs two-publisher 40-45 cm rounded band, excluded outlier documented, not silently changed.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R26 SHA)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R26 browser and author attribution UI)",
+          "audioRecordingsAuthenticity": "NOT TESTED (no registered audio for species)",
+          "audioLicenseAndAttribution": "NOT TESTED (no registered source audio)",
+          "soundRolesSongCall": "NOT TESTED (no audio source to distinguish song/call)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R26; no audio registered)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species descriptions checked; ANWB edition/page not read)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (historical source/method reviewed; no new values, discrepancy kept)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new quantitative Sovon data published from R26)",
+          "ebirdDistributionAndBias": "NOT TESTED (no new eBird data)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R26; previous app evidence separate)",
+          "endToEndGuideUI": "NOT TESTED (R26; no browser acceptance of guide UI)",
+          "independentSecondReview": "NOT TESTED (own visual/source review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (No verified winter plumage photo pair Common Gull/Black-headed Gull. Historic length discrepancy: VB 40-60 cm vs two-publisher 40-45 cm rounded band, excluded outlier documented, not silently changed.)"
         },
         "findings": [
           "Juveniel / onvolwassen kleden",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "2 directly viewed local app-WebPs: adult Common Gull with dark eye, slender yellow bill and green-yellow legs; flight image shows black/white wing tips from below.",
+          "No verified winter plumage photo pair Common Gull/Black-headed Gull. Historic length discrepancy: VB 40-60 cm vs two-publisher 40-45 cm rounded band, excluded outlier documented, not silently changed.",
+          "No sound file is registered; cannot award an audio completeness PASS. No new image or audio bytes imported."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F2_31_BRON_EN_LIMIETEN.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/stormmeeuw",
+          "assets/species/field-guide-media.json",
+          "docs/fotokwaliteit/F3_R26_MEEUWEN_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (R26 content branch, separate owner preview)",
+        "independence": "PARTIAL / own direct visual review, expert, original rights and audio OPEN",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI on exact R26 head pending"
       }
     },
     {
