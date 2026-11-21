@@ -47,7 +47,7 @@ for(const row of rows){
  images[id].forEach((path,i)=>{
   const bytes=read('..'+path);
   assert.ok(bytes.length>1000, id+' missing or empty photo '+path);
-  const sha=createHash('sha1').update('blob '+bytes.length+'\\0'.replace('\\0','\0')).update(bytes).digest('hex');
+  const sha=createHash('sha1').update('blob '+bytes.length+String.fromCharCode(0)).update(bytes).digest('hex');
   assert.equal(sha,F3.photoBlobSHAs[i],id+' visually reviewed photo changed');
  });
  const clips=GUIDE_AUDIO[id]||[];
