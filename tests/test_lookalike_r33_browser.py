@@ -1,11 +1,13 @@
 """Focused comparison, wildlife media and audio regressions for F3-R33."""
+import json
 import re
 import threading
 
 from playwright.sync_api import expect, sync_playwright
+from test_cinematic_wetland import ROOT, Quiet, Server
 from test_lookalike_r20_browser import open_pair
 from test_lookalike_r32_browser import check_geometry, close_sheet
-from test_pilot_offline_new_sighting import ROOT, Quiet, Server, boot
+from test_pilot_offline_new_sighting import boot
 from test_plumage_compare_layout import open_species
 
 SHOTS = ROOT / "tests/screenshots/lookalike_r33"
@@ -27,6 +29,26 @@ SOUNDS = [
     f"/assets/species/audio/{sid}-a{i}.mp3"
     for sid, count in SOUND_COUNTS.items() for i in range(1, count + 1)
 ]
+
+
+def check_precache(page):
+    register = ROOT / "docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json"
+    rows = json.loads(register.read_text(encoding="utf-8"))["records"]
+    media = set(SOUNDS)
+    media.update("/assets/species/" + path for path in PAIR_PHOTOS.values())
+    media.update(slot["path"] for row in rows if row["id"] in SOUND_COUNTS
+                 for slot in row["currentAssets"]["imageSlots"])
+
+    # The active worker has finished its install handler. Verify the actual
+    # cache before opening any guide card on this profile or taking it offline.
+    page.wait_for_function("() => !!navigator.serviceWorker.controller", timeout=90000)
+    missing = page.evaluate("""async paths => {
+      const cache = await caches.open('birdspot-media');
+      const responses = await Promise.all(paths.map(path => cache.match(path)));
+      return paths.filter((path, i) => !responses[i]?.ok);
+    }""", sorted(media))
+    assert not missing, f"Fresh install did not precache R33 guide media: {missing}"
+    print(f"R33 fresh install: {len(media)} required photos and audio files precached.", flush=True)
 
 
 def open_bird(page, sid):
@@ -166,11 +188,7 @@ def main():
                                               has_touch=True, reduced_motion="reduce", service_workers="allow")
                 page = context.new_page()
                 boot(page, url)
-                page.wait_for_function("""async paths => {
-                  const cache = await caches.open('birdspot-media');
-                  return !!navigator.serviceWorker.controller &&
-                    (await Promise.all(paths.map(path => cache.match(path)))).every(Boolean);
-                }""", arg=SOUNDS, timeout=90000)
+                check_precache(page)
                 page.close()
                 context.set_offline(True)
                 page = context.new_page()
