@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 59,
+    "nextNotStarted": 56,
     "secondBatchStarted": 3,
-    "contentInspected": 81,
+    "contentInspected": 84,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -81,7 +81,8 @@
     "twentyFourthBatchStarted": 3,
     "twentyFifthBatchStarted": 3,
     "twentySixthBatchStarted": 3,
-    "twentySeventhBatchStarted": 3
+    "twentySeventhBatchStarted": 3,
+    "twentyEighthBatchStarted": 3
   },
   "records": [
     {
@@ -8861,38 +8862,49 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R28",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (existing local WebPs directly examined, source original/pixel match not rechecked)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing maker/license metadata inspected, fresh individual source rights NOT TESTED)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (3 existing local WebPs directly viewed: adult-like curved-bill rest, a fluffy short-billed young Wulp (historical iNaturalist age), and airborne Wulp with visible underwing.; independent sex/age/pose adjudication open)",
+          "photoPairComparisons": "PARTIALLY TESTED (Regenwulp sp148: crown pattern and bill curvature with age exceptions; young Wulp shorter bill, no single-trait certainty; no new photo pair approved)",
+          "responsiveLayoutAndZoom": "NOT TESTED on R28 code SHA",
+          "creditsAndCleanAudioUI": "NOT TESTED on R28 code SHA",
+          "audioRecordingsAuthenticity": "NOT TESTED (no independent original audio species verification)",
+          "audioLicenseAndAttribution": "NOT TESTED (no registered audio)",
+          "soundRolesSongCall": "NOT TESTED (no registered audio)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED on R28 SHA",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing knowledge source references; no newly read ANWB book passage)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced knowledge and discrepancies retained, no new quantitative claims)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new statistical status or trend validated)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird source used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED on R28 SHA",
+          "endToEndGuideUI": "NOT TESTED on R28 SHA",
+          "independentSecondReview": "NOT TESTED (own direct local image review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Regenwulp sp148: crown pattern and bill curvature with age exceptions; young Wulp shorter bill, no single-trait certainty; original comparison images not independently reverified)"
         },
         "findings": [
           "Lengtebereiken van Vogelbescherming en Naturalis verschillen. Het eerdere Nederlandse bereik is behouden.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "3 existing local WebPs directly viewed: adult-like curved-bill rest, a fluffy short-billed young Wulp (historical iNaturalist age), and airborne Wulp with visible underwing.",
+          "Regenwulp sp148: crown pattern and bill curvature with age exceptions; young Wulp shorter bill, no single-trait certainty",
+          "Historical source and age labels not promoted to new independent verification; no app asset changes."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wulp",
+          "assets/species/field-guide-media.json",
+          "tools/kennisbaseline/knowledge.json",
+          "docs/fotokwaliteit/F3_R28_WULP_GRUTTO_TURELUUR_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R28 SHA (owner preview independent)",
+        "independence": "PARTIAL / local visible image review, independent expert/original media rights/audio pending",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI separate"
       }
     },
     {
@@ -8934,40 +8946,51 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R28",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (existing local WebPs directly examined, source original/pixel match not rechecked)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing maker/license metadata inspected, fresh individual source rights NOT TESTED)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (4 existing local WebPs directly viewed: source-designated adult male breeding hero looks brown/gray, separate bird on grass, historical juvenile, and real flight with white wingbands/black tail band.; independent sex/age/pose adjudication open)",
+          "photoPairComparisons": "PARTIALLY TESTED (Rosse Grutto sp149: white wingband / tail pattern requires correct view; sex and exact breeding plumage of hero not independently validated; no new photo pair approved)",
+          "responsiveLayoutAndZoom": "NOT TESTED on R28 code SHA",
+          "creditsAndCleanAudioUI": "NOT TESTED on R28 code SHA",
+          "audioRecordingsAuthenticity": "NOT TESTED (no independent original audio species verification)",
+          "audioLicenseAndAttribution": "NOT TESTED (no registered audio)",
+          "soundRolesSongCall": "NOT TESTED (no registered audio)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED on R28 SHA",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing knowledge source references; no newly read ANWB book passage)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced knowledge and discrepancies retained, no new quantitative claims)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new statistical status or trend validated)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird source used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED on R28 SHA",
+          "endToEndGuideUI": "NOT TESTED on R28 SHA",
+          "independentSecondReview": "NOT TESTED (own direct local image review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Rosse Grutto sp149: white wingband / tail pattern requires correct view; sex and exact breeding plumage of hero not independently validated; original comparison images not independently reverified)"
         },
         "findings": [
           "Foto van een met bronbewijs bevestigd volwassen vrouwtje.",
           "Voor de lengte is één vergelijkbare bronband opgenomen. Het eerdere bereik is behouden en het verschil staat in het profiel.",
           "Bekeken vrouwtjeskandidaten hebben onvoldoende bewijs voor het geslacht van het afgebeelde individu.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "4 existing local WebPs directly viewed: source-designated adult male breeding hero looks brown/gray, separate bird on grass, historical juvenile, and real flight with white wingbands/black tail band.",
+          "Rosse Grutto sp149: white wingband / tail pattern requires correct view; sex and exact breeding plumage of hero not independently validated",
+          "Historical source and age labels not promoted to new independent verification; no app asset changes."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grutto",
+          "assets/species/field-guide-media.json",
+          "tools/kennisbaseline/knowledge.json",
+          "docs/fotokwaliteit/F3_R28_WULP_GRUTTO_TURELUUR_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R28 SHA (owner preview independent)",
+        "independence": "PARTIAL / local visible image review, independent expert/original media rights/audio pending",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI separate"
       }
     },
     {
@@ -9014,35 +9037,47 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R28",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (existing local WebPs directly examined, source original/pixel match not rechecked)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing maker/license metadata inspected, fresh individual source rights NOT TESTED)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (4 existing local WebPs directly viewed: rest, source-labeled breeding, historical juvenile (558x480), and free flight of Icelandic Tringa totanus robusta; four audio labels registered but not independently heard.; independent sex/age/pose adjudication open)",
+          "photoPairComparisons": "PARTIALLY TESTED (Zwarte Ruiter sp157: white trailing edge and bill differences only with relevant age/season; robusta is not automatically Netherlands representative; no new photo pair approved)",
+          "responsiveLayoutAndZoom": "NOT TESTED on R28 code SHA",
+          "creditsAndCleanAudioUI": "NOT TESTED on R28 code SHA",
+          "audioRecordingsAuthenticity": "NOT TESTED (no independent original audio species verification)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (four source audio records, no independent current rights verification)",
+          "soundRolesSongCall": "PARTIALLY TESTED (four historical song/call/flight labels, not independently heard)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED on R28 SHA",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (existing knowledge source references; no newly read ANWB book passage)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced knowledge and discrepancies retained, no new quantitative claims)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new statistical status or trend validated)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird source used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED on R28 SHA",
+          "endToEndGuideUI": "NOT TESTED on R28 SHA",
+          "independentSecondReview": "NOT TESTED (own direct local image review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Zwarte Ruiter sp157: white trailing edge and bill differences only with relevant age/season; robusta is not automatically Netherlands representative; original comparison images not independently reverified)"
         },
-        "findings": [],
-        "sourceReferences": [],
+        "findings": [
+          "4 existing local WebPs directly viewed: rest, source-labeled breeding, historical juvenile (558x480), and free flight of Icelandic Tringa totanus robusta; four audio labels registered but not independently heard.",
+          "Zwarte Ruiter sp157: white trailing edge and bill differences only with relevant age/season; robusta is not automatically Netherlands representative",
+          "Historical source and age labels not promoted to new independent verification; no app asset changes."
+        ],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tureluur",
+          "assets/species/field-guide-media.json",
+          "tools/kennisbaseline/knowledge.json",
+          "docs/fotokwaliteit/F3_R28_WULP_GRUTTO_TURELUUR_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R28 SHA (owner preview independent)",
+        "independence": "PARTIAL / local visible image review, independent expert/original media rights/audio pending",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; CI separate"
       }
     },
     {
