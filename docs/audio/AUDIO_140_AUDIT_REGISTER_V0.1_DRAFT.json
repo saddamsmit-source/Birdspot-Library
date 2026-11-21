@@ -3265,20 +3265,22 @@
       "f2PhotoVisited": false,
       "mediaCount": 1,
       "pilot": false,
-      "status": "REGISTERED_UNVERIFIED",
+      "status": "PARTIALLY TESTED",
       "clips": [
         {
           "file": "/assets/species/audio/sp126-a1.mp3",
           "label": "Vleugelslagen en vluchtgeluid",
-          "reference": "https://xeno-canto.org/307509",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "reference": "https://commons.wikimedia.org/wiki/File:Cygnus_olor_-_Mute_Swan_XC307509.mp3",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         }
       ],
-      "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md"
+      ],
+      "next": "Beoordeel de opnamen onafhankelijk op auditieve soortidentiteit en functie. Controleer bronrechten en toestelbewijs voor volledige aftekening.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
@@ -3301,29 +3303,31 @@
       "f2PhotoVisited": false,
       "mediaCount": 2,
       "pilot": false,
-      "status": "REGISTERED_UNVERIFIED",
+      "status": "PARTIALLY TESTED",
       "clips": [
         {
           "file": "/assets/species/audio/sp128-a1.mp3",
           "label": "Zang · bronlabel",
-          "reference": "https://xeno-canto.org/466466",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "reference": "https://commons.wikimedia.org/wiki/File:Tadorna_tadorna_-_Common_Shelduck_XC466466.mp3",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         },
         {
           "file": "/assets/species/audio/sp128-a2.mp3",
           "label": "Roepende groep",
-          "reference": "https://commons.wikimedia.org/wiki/File:Common_Shelduck_%28Tadorna_tadorna%29_%28W1CDR0001430_BD7%29.ogg",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "reference": "https://commons.wikimedia.org/wiki/File:Common_Shelduck_(Tadorna_tadorna)_(W1CDR0001430_BD7).ogg",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         }
       ],
-      "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md"
+      ],
+      "next": "Beoordeel de opnamen onafhankelijk op auditieve soortidentiteit en functie. Controleer bronrechten en toestelbewijs voor volledige aftekening.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
@@ -3346,20 +3350,22 @@
       "f2PhotoVisited": false,
       "mediaCount": 1,
       "pilot": false,
-      "status": "REGISTERED_UNVERIFIED",
+      "status": "PARTIALLY TESTED",
       "clips": [
         {
           "file": "/assets/species/audio/sp129-a1.mp3",
           "label": "Vluchtroep",
-          "reference": "https://xeno-canto.org/436359",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "reference": "https://commons.wikimedia.org/wiki/File:Mareca_strepera_-_Gadwall_XC436359.mp3",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         }
       ],
-      "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md"
+      ],
+      "next": "Beoordeel de opnamen onafhankelijk op auditieve soortidentiteit en functie. Controleer bronrechten en toestelbewijs voor volledige aftekening.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",

@@ -59,7 +59,10 @@
     "sp115",
     "sp116",
     "sp117",
-    "sp118"
+    "sp118",
+    "sp126",
+    "sp128",
+    "sp129"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -2576,7 +2579,8 @@
     {
       "id": "LK-058",
       "focus": [
-        "sp089"
+        "sp089",
+        "sp129"
       ],
       "birds": [
         "sp089",
@@ -2589,7 +2593,7 @@
       ],
       "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Source matching complete; independent role/age review open."
+        "Beide bronfoto’s opnieuw gematcht in R33. Een gelijkwaardig juvenielenpaar en foto’s met geopende vleugel voor beide vrouwtjes blijven open."
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -2610,9 +2614,11 @@
       ],
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
-        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend"
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+        "https://commons.wikimedia.org/wiki/File:Female_Mallard_Swimming.jpg",
+        "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg"
       ],
-      "caution": "De spiegel is op de gesloten vleugel niet volledig te zien; controleer bij vleugelstrekken. Geen foto-PASS uit alleen snavelkleur."
+      "caution": "Snavelpatronen kunnen overlappen. Bekijk de spiegel bij vleugelstrekken. De spiegel is op de gesloten vleugels op de foto’s onvoldoende zichtbaar."
     },
     {
       "id": "LK-059",
@@ -2845,6 +2851,175 @@
         "https://commons.wikimedia.org/wiki/File:Common_reed_bunting_(emberiza_schoeniclus)_male.jpg"
       ],
       "caution": "Geel, streping en licht variëren. Gebruik de combinatie van kop en stuit bij goed zicht. De Geelgors-vrouwtjesfoto betreft volgens de bron caliginosa."
+    },
+    {
+      "id": "LK-064",
+      "focus": [
+        "sp126"
+      ],
+      "birds": [
+        "sp126",
+        "sp187"
+      ],
+      "risk": "Witte volwassen zwanen op afstand. De volwassen snavelkleuren gelden niet voor juvenielen.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide zwemmende volwassen vogels en beide Commons-originelen gecontroleerd. Een juvenielenpaar en volledige onafhankelijke aftekening staan open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel van opzij",
+          "values": [
+            "Oranjerood met een zwarte knobbel aan de basis",
+            "Grote gele driehoek tot voorbij het neusgat met zwarte punt"
+          ]
+        },
+        {
+          "label": "Hals",
+          "values": [
+            "Bij rustig zwemmen dikwijls gebogen",
+            "Doorgaans rechter en slanker terwijl de vogel zwemt"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/knobbelzwaan",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Wilde-zwaan",
+        "https://www.itfryskegea.nl/nieuws-publicaties/soorten-zwanen/",
+        "https://commons.wikimedia.org/wiki/File:Mute_Swan_Emsworth2.JPG",
+        "https://commons.wikimedia.org/wiki/File:WhooperSwan1.jpg"
+      ],
+      "caution": "Begin bij de snavel. Halshouding wisselt. Grijsbruine jonge vogels vragen beoordeling van de snavelbasis en andere kenmerken."
+    },
+    {
+      "id": "LK-065",
+      "focus": [
+        "sp126"
+      ],
+      "birds": [
+        "sp126",
+        "sp127"
+      ],
+      "risk": "Volwassen witte zwanen op afstand en juvenielen zonder volwassen snavelpatroon.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "De Kleine Zwaan heeft geen geregistreerde gidsfoto. Passend rust- en juvenielenfotopaar staan open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel bij volwassen vogels",
+          "values": [
+            "Oranjerood met een zwarte knobbel aan de basis",
+            "Zwart met een kleinere, afgeronde gele vlek aan de snavelbasis"
+          ]
+        },
+        {
+          "label": "Hals",
+          "values": [
+            "Relatief lang en in rust vaak gebogen",
+            "Relatief korte hals, meestal rechter bij rustig zwemmen"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/knobbelzwaan",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zwaan"
+      ],
+      "caution": "Gebruik grootte alleen als beide vogels op dezelfde afstand zwemmen. Jonge vogels tonen de volwassen snavelkleur nog niet."
+    },
+    {
+      "id": "LK-066",
+      "focus": [
+        "sp128"
+      ],
+      "birds": [
+        "sp128",
+        "sp327"
+      ],
+      "risk": "Vogelbescherming noemt Muskuseend als gelijkende soort. Beide kunnen bont zijn en rood aan de snavel tonen.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "De Muskuseend heeft geen geregistreerde gidsfoto. Een vergelijkbaar rustfotopaar staat open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop en rood aan de snavel",
+          "values": [
+            "Donkere kop. Een mannetje kan een gladde rode snavelknobbel hebben",
+            "Bij de tamme vorm vaak rode wratten rond het oog en de snavelbasis"
+          ]
+        },
+        {
+          "label": "Romppatroon bij volwassen vogels",
+          "values": [
+            "Witte romp met een brede kastanjebruine borstband",
+            "Kleed varieert van overwegend donker tot overwegend wit"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bergeend",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/muskuseend"
+      ],
+      "caution": "Let op de plaats en vorm van het rood bij de kop én het romppatroon. Tamme Muskuseenden verschillen sterk in kleur."
+    },
+    {
+      "id": "LK-067",
+      "focus": [
+        "sp129"
+      ],
+      "birds": [
+        "sp130",
+        "sp129"
+      ],
+      "risk": "Bruine vrouwtjes met donkere snavelpunt. Houding en licht beïnvloeden de indruk van lichaamsvorm en kleur.",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide bronfoto’s gematcht. Kopsilhouet en snavel zijn zichtbaar. De beelden tonen rust met verschillende ondergrond. Een gelijkwaardig zwempaar blijft open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Kort, blauwgrijs met een donkere punt",
+            "Langer, donker van boven met oranje zijkanten"
+          ]
+        },
+        {
+          "label": "Kop",
+          "values": [
+            "Doorgaans ronder, vaak met warmbruine tint",
+            "Doorgaans langer, vaak met grijzer getinte kop"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+        "https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg",
+        "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg"
+      ],
+      "caution": "Kijk eerst naar de snavel. De Smient zit op een steen en de Krakeend zwemt. Bouw is in dit fotopaar geen schaalvergelijking."
     }
   ],
   "withinSpeciesVariation": [
@@ -2872,7 +3047,8 @@
     "visualReviewR13": "docs/fotokwaliteit/F3_R13_ZANGLIJSTER_KRAMSVOGEL_KOPERWIEK_2026-11-16_DRAFT.md",
     "visualReviewR14": "docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md",
     "visualReviewR31": "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md",
-    "visualReviewR32": "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md"
+    "visualReviewR32": "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md",
+    "visualReviewR33": "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }
