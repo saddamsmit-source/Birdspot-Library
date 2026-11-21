@@ -2768,7 +2768,7 @@
         {
           "label": "Borst",
           "values": [
-            "Lichte keel en witte buik",
+            "Lichte keel en buik, bij jonge vogels soms vaag grijs getekende borst",
             "Bruine borstband over de lichte onderzijde"
           ]
         },
@@ -2782,9 +2782,11 @@
       ],
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
-        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw"
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw",
+        "https://www.natuurstudiegroepdijleland.be/trektelmodule-soortenfiches/",
+        "https://birds-in-flight.net/?p=2575"
       ],
-      "caution": "Bij een korte glimp van alleen de staart blijft determinatie onzeker. Kijk naar borst en stuit in een volgende bocht."
+      "caution": "Een jonge Huiszwaluw kan in het najaar een vage grijze borsttekening hebben. Geef de witte stuit bij twijfel voorrang als die zichtbaar is."
     }
   ],
   "withinSpeciesVariation": [

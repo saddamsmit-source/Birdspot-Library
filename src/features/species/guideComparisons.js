@@ -1254,7 +1254,7 @@ export const GUIDE_COMPARISONS = [
     reciprocalText: true,
     birds: [
       {id: 'sp116', source: 'oeverzwaluw', photoMissing: true, marks: 'Bruine bovenzijde en een duidelijke bruine borstband boven de witte buik.'},
-      {id: 'sp115', source: 'huiszwaluw', photoMissing: true, marks: 'Witte keel en buik zonder borstband. In vlucht valt de witte stuit op.'},
+      {id: 'sp115', source: 'huiszwaluw', photoMissing: true, marks: 'Lichte keel en buik. Bij jonge vogels kan de borst vaag grijs getekend zijn. In vlucht valt de witte stuit op.'},
     ],
     tip: 'Begin bij de borstband en de stuit. Een snelle glimp van alleen de staart is vaak onvoldoende.',
   },

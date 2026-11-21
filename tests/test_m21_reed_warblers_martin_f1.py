@@ -225,11 +225,15 @@ def browser_test():
                                        (img.currentSrc||img.getAttribute('src')||'').endsWith(path)).length""",
                                     bird["hero"])
                                 assert repeated == 0, (sid,"hero reused in gallery",repeated)
-                                # UX v1.6: Oeverzwaluw/Huiszwaluw was intentionally
-                                # text-only in the source register. Do not present
-                                # a two-empty-photo panel as an actual comparison.
-                                assert bird["similar"] not in panel.inner_text(), (
-                                    sid, "incomplete source comparison should stay out of UI")
+                                # Norm v1.7 keeps recognition guidance visible and
+                                # excludes the incomplete photo comparison panel.
+                                partner = '[data-compare-species="sp115"]'
+                                expect(panel.locator(f".sd-cmp-panel {partner}")).to_have_count(0)
+                                guidance = panel.locator("[data-text-similar]")
+                                expect(guidance.locator(partner)).to_be_visible()
+                                expect(guidance).to_contain_text(bird["similar"])
+                                expect(guidance).to_contain_text("borst vaag grijs")
+                                expect(guidance).to_contain_text("witte stuit")
                                 assert "Nog geen passende foto" not in panel.inner_text()
                                 print(f"M21 UX-OBSERVED sp116 {width}px: real flight is hero, no duplicate flight card")
                             if sid=="sp108":
