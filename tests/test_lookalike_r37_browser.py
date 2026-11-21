@@ -11,6 +11,7 @@ from test_pilot_offline_new_sighting import boot
 from test_plumage_compare_layout import open_species
 from test_lookalike_r20_browser import open_pair
 from test_lookalike_r32_browser import close_sheet, check_credit
+from test_lookalike_r34_browser import check_pictures
 
 FOCUS = (
     ("sp149", "Rosse Grutto"),
@@ -20,6 +21,10 @@ FOCUS = (
 NAMES = {"sp149": "Rosse Grutto", "sp150": "Steenloper",
          "sp152": "Drieteenstrandloper", "sp146": "Bontbekplevier",
          "sp101": "Grutto", "sp153": "Bonte Strandloper"}
+COMPARISON_PHOTOS = {
+    "sp101": "plumage/sp101-hero-male.webp", "sp149": "sp149.webp",
+    "sp152": "sp152.webp", "sp153": "sp153.webp",
+}
 REGISTER = json.loads((ROOT / "docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json").read_text())
 ROWS = {r["id"]: r for r in REGISTER["records"] if r["id"] in {x[0] for x in FOCUS}}
 SHOTS = ROOT / "tests/screenshots/lookalike_r37"
@@ -86,7 +91,9 @@ def check_existing_pair(page, own, other):
     open_bird(page, own)
     panel = open_pair(page, other)
     expect(panel).to_be_visible()
-    expect(panel.locator(f'[data-compare-species="{other}"]')).to_have_count(1)
+    check_pictures(panel, [COMPARISON_PHOTOS[own], COMPARISON_PHOTOS[other]])
+    panel.locator(f'[data-compare-species="{other}"]').click()
+    expect(page.locator(f"#detailThumb-{other}")).to_be_visible()
     close_sheet(page)
 
 
@@ -102,14 +109,14 @@ def smoke(page, capture=False):
 
 
 def check_precache(page):
-    paths = sorted({slot["path"] for row in ROWS.values()
-                    for slot in row["currentAssets"]["imageSlots"]})
+    paths = {slot["path"] for row in ROWS.values() for slot in row["currentAssets"]["imageSlots"]}
+    paths.update("/assets/species/" + name for name in COMPARISON_PHOTOS.values())
     page.wait_for_function("() => !!navigator.serviceWorker.controller", timeout=90000)
     missing = page.evaluate("""async paths => {
         const cache=await caches.open('birdspot-media');
         const values=await Promise.all(paths.map(p=>cache.match(p)));
         return paths.filter((p,i)=>!values[i]?.ok);
-    }""",paths)
+    }""",sorted(paths))
     assert not missing, f"R37 fresh media cache misses: {missing}"
     print(f"R37: {len(paths)} existing guide images in fresh offline cache",flush=True)
 

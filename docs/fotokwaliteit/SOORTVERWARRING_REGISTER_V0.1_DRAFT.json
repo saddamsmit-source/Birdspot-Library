@@ -68,7 +68,10 @@
     "sp141",
     "sp143",
     "sp144",
-    "sp145"
+    "sp145",
+    "sp149",
+    "sp150",
+    "sp152"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -3583,10 +3586,10 @@
       ],
       "risk": "Beide hebben opvallende koptekening en kunnen oranje poten vertonen; één kleur is niet diagnostisch.",
       "matchingPlumages": [
-        "adult_unsexed",
-        "adult_unsexed"
+        null,
+        null
       ],
-      "photoState": "TEXT_ONLY_PAIR_PENDING_MATCHED_PHOTOS",
+      "photoState": "MISSING_VERIFIED_PAIR",
       "mediaOpen": [
         "Steenloper- en Bontbekplevier-foto zijn verschillend qua pose en kleed; geen gelijkwaardig fotopaar afgetekend. De wederzijdse vergelijking is voorlopig alleen tekst."
       ],
@@ -3595,8 +3598,8 @@
         {
           "label": "Snavel",
           "values": [
-            "Relatief kort en puntig, donker",
-            "Zwarte punt met vaak oranje snavelbasis in broedkleed"
+            "Korte, donkere, wigvormige snavel",
+            "Korte snavel met oranje basis en zwarte punt in broedkleed"
           ]
         },
         {
@@ -3610,9 +3613,96 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steenloper",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bontbekplevier",
-        "src/features/species/guideComparisons.js"
+        "https://www.tandfonline.com/doi/pdf/10.1080/03078698.2007.9674358",
+        "https://absa.asn.au/wp-content/uploads/2022/02/Ruddy-Turnstone-BIH2-NZ.pdf"
       ],
       "caution": "Snavelvorm, borstpatroon en foerageerwijze samen; variatie naar leeftijd en kleed. Geen fotopaar of FULL PASS op basis van tekst."
+    },
+    {
+      "id": "LK-081",
+      "focus": [
+        "sp149"
+      ],
+      "birds": [
+        "sp101",
+        "sp149"
+      ],
+      "risk": "Staande Grutto en Rosse Grutto kunnen op elkaar lijken. Kleurtinten variëren per seizoen en geslacht.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "De twee bestaande rustfoto’s en bronoriginelen zijn gematcht. Een gelijkwaardig vluchtpaar en precieze leeftijds- en geslachtsaftekening staan open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Lange, vrijwel rechte snavel",
+            "Lange snavel met een omhooggebogen punt"
+          ]
+        },
+        {
+          "label": "Vleugels en staart in vlucht",
+          "values": [
+            "Brede witte vleugelbaan en donkere staartband",
+            "Gebandeerde staart zonder brede witte vleugelbaan"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grutto",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rosse-grutto",
+        "https://commons.wikimedia.org/wiki/File:Black-tailed_godwit_(Limosa_limosa)_male_breeding.jpg",
+        "https://commons.wikimedia.org/wiki/File:Bar-tailed_Godwit_(Limosa_lapponica).jpg"
+      ],
+      "caution": "Gebruik de snavel in zijaanzicht. De vleugelbaan en staarttekening zijn voor een goed vluchtbeeld."
+    },
+    {
+      "id": "LK-082",
+      "focus": [
+        "sp152"
+      ],
+      "birds": [
+        "sp152",
+        "sp153"
+      ],
+      "risk": "Buiten broedkleed hebben beide een lichte onderzijde. Kleur en houding verschillen met licht en rui.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "De twee gebruikte rustfoto’s en hun originelen zijn gematcht. De exacte kleedfase van Drieteenstrandloper en een gelijkwaardig juvenielenpaar blijven open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Kort en vrijwel recht van opzij",
+            "Langer en aan het uiteinde licht omlaaggebogen"
+          ]
+        },
+        {
+          "label": "Bovendelen",
+          "values": [
+            "Vaak bleek met een donker schoudergebied",
+            "Vaak grijzer of bruiner dan Drieteenstrandloper"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/drieteenstrandloper",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-strandloper",
+        "https://commons.wikimedia.org/wiki/File:Sanderling_Westkapelle_02.jpg",
+        "https://commons.wikimedia.org/wiki/File:Dunlin_(Calidris_alpina)_non_breeding_Marken.jpg"
+      ],
+      "caution": "Kijk van opzij naar de snavel. De ontbrekende achterteen is bruikbaar bij goed zicht van dichtbij."
     }
   ],
   "withinSpeciesVariation": [

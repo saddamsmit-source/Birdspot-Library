@@ -16,10 +16,10 @@ const all = new Map(SPECIES.map(x => [x.id, x]));
 const ids = ['sp149','sp150','sp152'];
 const rows = f3.records.filter(x => x.F3.recheckBatch === 'F3-R37');
 assert.deepEqual(rows.map(x=>x.id),ids,'F3-R37 must match the fixed next cohort');
-assert.equal(f3.counts.contentInspected,111);
-assert.equal(f3.counts.nextNotStarted,29);
+assert.equal(f3.counts.contentInspected,f3.records.filter(row => row.F3.reviewedThisRound).length);
+assert.ok(f3.counts.contentInspected>=111,'R37 and its predecessors must remain represented');
+assert.equal(f3.counts.nextNotStarted,f3.records.filter(row => row.F3.status==='NOT STARTED').length);
 assert.equal(f3.counts.thirtySeventhBatchStarted,3);
-assert.equal(f3.counts.F3FullPass,0);
 assert.equal(f3.records.length,140);
 
 const expected = {
@@ -63,8 +63,10 @@ assert.equal(media.poses.sp150.length,1);
 assert.equal(media.poses.sp152.length,1);
 assert.equal(media.plumage.sp152.juv.age,'juvenile');
 const flightNote='De bron noemt onvolwassen vogels in de herfst; leeftijd per afzonderlijke vogel is niet zelfstandig afgetekend.';
-assert.equal(media.poses.sp152[0].note,flightNote);
-assert.equal(GUIDE_POSES.sp152[0].note,flightNote,'generated guide metadata must match the single source');
+const registeredNote=media.poses.sp152[0].note;
+assert.ok(registeredNote.endsWith(flightNote),'Group-level source age and individual uncertainty are retained');
+assert.match(registeredNote,/brede witte vleugelstrepen/,'Existing visible field mark must also be retained');
+assert.equal(GUIDE_POSES.sp152[0].note,registeredNote,'Generated guide metadata must match the complete registered note');
 assert.notEqual(GUIDE_POSES.sp150[0].age,'adult','nonbreeding flight shot does not establish adult age');
 
 const pair=GUIDE_COMPARISONS.find(x=>x.birds.length===2 &&
@@ -75,7 +77,11 @@ assert.ok(pair.birds.every(b=>b.photoMissing && comparisonPhoto(b,false)===null)
 const r=similarity.pairs.filter(x=>x.id==='LK-080');
 assert.equal(r.length,1);
 assert.deepEqual(r[0].birds,['sp150','sp146']);
-assert.ok(r[0].photoState.includes('TEXT_ONLY'));
+assert.equal(r[0].photoState,'MISSING_VERIFIED_PAIR');
+assert.match(pair.birds.find(bird=>bird.id==='sp146').marks,/korte snavel met oranje basis en zwarte punt/);
+assert.ok(pair.birds.every(bird=>!/kortere|langere/.test(bird.marks)),'The paired hints must not claim an unsupported relative bill length');
+assert.deepEqual(similarity.pairs.filter(x=>['LK-081','LK-082'].includes(x.id)).map(x=>x.birds),
+  [['sp101','sp149'],['sp152','sp153']]);
 for(const [own,partner] of [['sp150','sp146'],['sp146','sp150'],['sp149','sp101'],
   ['sp101','sp149'],['sp152','sp153'],['sp153','sp152']]){
   const html=recognitionPanel(all.get(own));

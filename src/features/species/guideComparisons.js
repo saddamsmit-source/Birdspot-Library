@@ -1972,8 +1972,8 @@ export const GUIDE_COMPARISONS = [
     label: 'Steenloper en Bontbekplevier · rustbeeld',
     reciprocalText: true,
     birds: [
-      {id: 'sp150', source: 'steenloper', photoMissing: true, marks: 'Kortere wigvormige donkere snavel, bont zwart-wit kop- en borstpatroon, oranje poten en opvallend geroeste schouderveren in broedkleed.'},
-      {id: 'sp146', source: 'bontbekplevier', photoMissing: true, marks: 'Compacte bouw, duidelijke donkere borstband op witte borst en doorgaans langere, deels oranje snavelbasis in broedkleed.'},
+      {id: 'sp150', source: 'steenloper', photoMissing: true, marks: 'Korte, donkere, wigvormige snavel, onregelmatig zwart-wit borstpatroon en roestbruine vleugeldekveren in broedkleed.'},
+      {id: 'sp146', source: 'bontbekplevier', photoMissing: true, marks: 'Doorlopende donkere borstband. In broedkleed een korte snavel met oranje basis en zwarte punt.'},
     ],
     tip: 'Vergelijk borsttekening, snavelvorm en foerageergedrag samen. Het kleed en de oranje kleur kunnen per leeftijd en seizoen verschillen; er ontbreekt nog een gelijkwaardig fotopaar.',
   },

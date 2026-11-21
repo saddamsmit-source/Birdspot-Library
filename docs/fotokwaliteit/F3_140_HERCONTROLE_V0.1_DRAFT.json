@@ -11613,10 +11613,10 @@
         "reviewedThisRound": true,
         "recheckBatch": "F3-R37",
         "checks": {
-          "photoOriginalIdentity": "PARTIALLY TESTED (alle 1 lokale WebPs visueel bekeken op zichtbare soortkenmerken; primaire bestanden niet pixelgewijs hervergeleken)",
-          "photoIndividualRights": "PARTIALLY TESTED (bronpagina's 5 Commons-foto's gelezen op maker/licentie; lokale pixelmatch en één iNaturalist-licentie open)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle 1 lokale foto’s visueel en op pixels met de oorspronkelijke opname gematcht; vakaftekening open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele bronlicentie en auteurscredit gecontroleerd; volledige onafhankelijke aftekening open)",
           "plumageAndTrueFlight": "PARTIALLY TESTED (Zijaanzicht Rosse Grutto met roodbruine borst en licht opgewipte snavel; geslacht niet zelfstandig te onderbouwen. Vergelijkingspaar Grutto–Rosse Grutto bestaat in twee richtingen maar toont geen bewezen gelijkwaardig beeldpaar of vluchtbeeld.; onafhankelijke ornithologische leeftijd/geslacht-aftekening ontbreekt)",
-          "photoPairComparisons": "PARTIALLY TESTED (Wederzijdse Grutto–Rosse Grutto-tekstvergelijking; geen gecontroleerd vlucht-/staartfotopaar.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-081: bestaande rustfoto’s naast Grutto zijn bron-gematcht. De snavel is zichtbaar. Een vergelijkbaar vluchtpaar blijft open.)",
           "responsiveLayoutAndZoom": "NOT TESTED op finale R37 SHA (Chromium en toestelgescheiden bewijs)",
           "creditsAndCleanAudioUI": "PARTIALLY TESTED (fotometadata en CC-voorwaarden bekeken; zichtbare UI-credits en zoom in R37-browsercheck nog te bewijzen)",
           "audioRecordingsAuthenticity": "BLOCKED (geen lokale opname voor deze vogel, geen bronidentiteit bevestigd)",
@@ -11630,14 +11630,15 @@
           "personalPhotoFeedbackAndRestore": "NOT TESTED (geen nieuwe fysieke back-up-/restoreproef op R37)",
           "endToEndGuideUI": "NOT TESTED (Chromium op R37 SHA en Samsung moeten afzonderlijk geverifieerd worden)",
           "independentSecondReview": "NOT TESTED (eigen lokale visuele inspectie, onafhankelijke determinatie en rechtenreview nog open)",
-          "lookalikePhotoAndText": "PARTIALLY TESTED (Wederzijdse Grutto–Rosse Grutto-tekstvergelijking; geen gecontroleerd vlucht-/staartfotopaar.)"
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-081: bestaande rustfoto’s naast Grutto zijn bron-gematcht. De snavel is zichtbaar. Een vergelijkbaar vluchtpaar blijft open.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
           "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
           "Zijaanzicht Rosse Grutto met roodbruine borst en licht opgewipte snavel; geslacht niet zelfstandig te onderbouwen.",
           "Vergelijkingspaar Grutto–Rosse Grutto bestaat in twee richtingen maar toont geen bewezen gelijkwaardig beeldpaar of vluchtbeeld.",
-          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname."
+          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname.",
+          "Onafhankelijke bronreproductie op #335. Originelen, beeld en licenties van alle actieve foto’s zijn gecontroleerd. LK-081: bestaande rustfoto’s naast Grutto zijn bron-gematcht. De snavel is zichtbaar. Een vergelijkbaar vluchtpaar blijft open."
         ],
         "sourceReferences": [
           "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
@@ -11650,7 +11651,7 @@
         ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED on R37 SHA",
-        "independence": "NOT VERIFIED (eigen visuele controle; onafhankelijke vak-/mediareview ontbreekt)",
+        "independence": "NOT VERIFIED (onafhankelijke technische bron- en pixelreproductie uitgevoerd; volledige vak- en rechtenaftekening open)",
         "fullPass": false,
         "photoFilesInspected": 1,
         "photoBlobSHAs": [
@@ -11692,10 +11693,10 @@
         "reviewedThisRound": true,
         "recheckBatch": "F3-R37",
         "checks": {
-          "photoOriginalIdentity": "PARTIALLY TESTED (alle 2 lokale WebPs visueel bekeken op zichtbare soortkenmerken; primaire bestanden niet pixelgewijs hervergeleken)",
-          "photoIndividualRights": "PARTIALLY TESTED (bronpagina's 5 Commons-foto's gelezen op maker/licentie; lokale pixelmatch en één iNaturalist-licentie open)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle 2 lokale foto’s visueel en op pixels met de oorspronkelijke opname gematcht; vakaftekening open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele bronlicentie en auteurscredit gecontroleerd; volledige onafhankelijke aftekening open)",
           "plumageAndTrueFlight": "PARTIALLY TESTED (Stilstaande Steenloper toont zwarte/witte kop, korte donkere snavel en kastanjebruine vleugeldekveren; geen geslachtslabel bevestigd. Vluchtbeeld toont witte vleugelstrepen; bron vermeldt niet-broedkleed en geen leeftijd of geslacht. LK-080 is een nieuwe wederzijdse, uitsluitend tekstuele vergelijking met Bontbekplevier; geen vals fotopaar.; onafhankelijke ornithologische leeftijd/geslacht-aftekening ontbreekt)",
-          "photoPairComparisons": "PARTIALLY TESTED (LK-080 wederzijdse soorttekst met Bontbekplevier; photoMissing=true voor beide, leeftijd-/kleedgelijkwaardig fotopaar ontbreekt.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-080: herkenningstekst in beide richtingen voor Steenloper en Bontbekplevier. Snavelvorm en -kleur en borsttekening zijn beschreven. Een passend fotopaar blijft open.)",
           "responsiveLayoutAndZoom": "NOT TESTED op finale R37 SHA (Chromium en toestelgescheiden bewijs)",
           "creditsAndCleanAudioUI": "PARTIALLY TESTED (fotometadata en CC-voorwaarden bekeken; zichtbare UI-credits en zoom in R37-browsercheck nog te bewijzen)",
           "audioRecordingsAuthenticity": "BLOCKED (geen lokale opname voor deze vogel, geen bronidentiteit bevestigd)",
@@ -11709,7 +11710,7 @@
           "personalPhotoFeedbackAndRestore": "NOT TESTED (geen nieuwe fysieke back-up-/restoreproef op R37)",
           "endToEndGuideUI": "NOT TESTED (Chromium op R37 SHA en Samsung moeten afzonderlijk geverifieerd worden)",
           "independentSecondReview": "NOT TESTED (eigen lokale visuele inspectie, onafhankelijke determinatie en rechtenreview nog open)",
-          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-080 wederzijdse soorttekst met Bontbekplevier; photoMissing=true voor beide, leeftijd-/kleedgelijkwaardig fotopaar ontbreekt.)"
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-080: herkenningstekst in beide richtingen voor Steenloper en Bontbekplevier. Snavelvorm en -kleur en borsttekening zijn beschreven. Een passend fotopaar blijft open.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
@@ -11717,7 +11718,8 @@
           "Stilstaande Steenloper toont zwarte/witte kop, korte donkere snavel en kastanjebruine vleugeldekveren; geen geslachtslabel bevestigd.",
           "Vluchtbeeld toont witte vleugelstrepen; bron vermeldt niet-broedkleed en geen leeftijd of geslacht.",
           "LK-080 is een nieuwe wederzijdse, uitsluitend tekstuele vergelijking met Bontbekplevier; geen vals fotopaar.",
-          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname."
+          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname.",
+          "Onafhankelijke bronreproductie op #335. Originelen, beeld en licenties van alle actieve foto’s zijn gecontroleerd. LK-080: herkenningstekst in beide richtingen voor Steenloper en Bontbekplevier. Snavelvorm en -kleur en borsttekening zijn beschreven. Een passend fotopaar blijft open."
         ],
         "sourceReferences": [
           "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
@@ -11731,7 +11733,7 @@
         ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED on R37 SHA",
-        "independence": "NOT VERIFIED (eigen visuele controle; onafhankelijke vak-/mediareview ontbreekt)",
+        "independence": "NOT VERIFIED (onafhankelijke technische bron- en pixelreproductie uitgevoerd; volledige vak- en rechtenaftekening open)",
         "fullPass": false,
         "photoFilesInspected": 2,
         "photoBlobSHAs": [
@@ -11779,10 +11781,10 @@
         "reviewedThisRound": true,
         "recheckBatch": "F3-R37",
         "checks": {
-          "photoOriginalIdentity": "PARTIALLY TESTED (alle 3 lokale WebPs visueel bekeken op zichtbare soortkenmerken; primaire bestanden niet pixelgewijs hervergeleken)",
-          "photoIndividualRights": "PARTIALLY TESTED (bronpagina's 5 Commons-foto's gelezen op maker/licentie; lokale pixelmatch en één iNaturalist-licentie open)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle 3 lokale foto’s visueel en op pixels met de oorspronkelijke opname gematcht; vakaftekening open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele bronlicentie en auteurscredit gecontroleerd; volledige onafhankelijke aftekening open)",
           "plumageAndTrueFlight": "PARTIALLY TESTED (Bleekgrijze, witte hoofdfoto met donkere snavel/poten, veerrol neutraal; juveniel met contrast op rugveren en oud bronlabel Juvenile, iNaturalist niet opnieuw toegankelijk. Vluchtgroep toont echte vlieghouding en witte vleugelstrepen. De primaire Commons-bron beschrijft immatures in fall; lokaal onjuist 'leeftijd niet in bron' gecorrigeerd zonder individuele leeftijdsclaim.; onafhankelijke ornithologische leeftijd/geslacht-aftekening ontbreekt)",
-          "photoPairComparisons": "PARTIALLY TESTED (Wederzijdse Drieteenstrandloper–Bonte Strandloper-tekstvergelijking aanwezig; passend winter-fotopaar en onafhankelijke juvenieldeterminatie ontbreken.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-082: beide actuele rustfoto’s naast Bonte Strandloper zijn gematcht. De precieze kleedfase en onafhankelijke leeftijdsbeoordeling blijven open.)",
           "responsiveLayoutAndZoom": "NOT TESTED op finale R37 SHA (Chromium en toestelgescheiden bewijs)",
           "creditsAndCleanAudioUI": "PARTIALLY TESTED (fotometadata en CC-voorwaarden bekeken; zichtbare UI-credits en zoom in R37-browsercheck nog te bewijzen)",
           "audioRecordingsAuthenticity": "BLOCKED (geen lokale opname voor deze vogel, geen bronidentiteit bevestigd)",
@@ -11796,13 +11798,14 @@
           "personalPhotoFeedbackAndRestore": "NOT TESTED (geen nieuwe fysieke back-up-/restoreproef op R37)",
           "endToEndGuideUI": "NOT TESTED (Chromium op R37 SHA en Samsung moeten afzonderlijk geverifieerd worden)",
           "independentSecondReview": "NOT TESTED (eigen lokale visuele inspectie, onafhankelijke determinatie en rechtenreview nog open)",
-          "lookalikePhotoAndText": "PARTIALLY TESTED (Wederzijdse Drieteenstrandloper–Bonte Strandloper-tekstvergelijking aanwezig; passend winter-fotopaar en onafhankelijke juvenieldeterminatie ontbreken.)"
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-082: beide actuele rustfoto’s naast Bonte Strandloper zijn gematcht. De precieze kleedfase en onafhankelijke leeftijdsbeoordeling blijven open.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
           "Bleekgrijze, witte hoofdfoto met donkere snavel/poten, veerrol neutraal; juveniel met contrast op rugveren en oud bronlabel Juvenile, iNaturalist niet opnieuw toegankelijk.",
           "Vluchtgroep toont echte vlieghouding en witte vleugelstrepen. De primaire Commons-bron beschrijft immatures in fall; lokaal onjuist 'leeftijd niet in bron' gecorrigeerd zonder individuele leeftijdsclaim.",
-          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname."
+          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname.",
+          "Onafhankelijke bronreproductie op #335. Originelen, beeld en licenties van alle actieve foto’s zijn gecontroleerd. LK-082: beide actuele rustfoto’s naast Bonte Strandloper zijn gematcht. De precieze kleedfase en onafhankelijke leeftijdsbeoordeling blijven open."
         ],
         "sourceReferences": [
           "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
@@ -11814,11 +11817,12 @@
           "https://www.rspb.org.uk/birds-and-wildlife/sanderling/",
           "https://commons.wikimedia.org/wiki/File:Sanderling_Westkapelle_02.jpg",
           "https://www.inaturalist.org/photos/25120626",
-          "https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_(3972936394).jpg"
+          "https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_(3972936394).jpg",
+          "https://www.inaturalist.org/observations/16659229"
         ],
         "reviewedOriginalAudio": 0,
         "showcasePreview": "NOT TESTED on R37 SHA",
-        "independence": "NOT VERIFIED (eigen visuele controle; onafhankelijke vak-/mediareview ontbreekt)",
+        "independence": "NOT VERIFIED (onafhankelijke technische bron- en pixelreproductie uitgevoerd; volledige vak- en rechtenaftekening open)",
         "fullPass": false,
         "photoFilesInspected": 3,
         "photoBlobSHAs": [
