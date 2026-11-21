@@ -22,7 +22,7 @@ jobs:
         run: |
           node tests/test_lookalike_r25.mjs
           node tests/test_f3_140_unified_rebaseline.mjs
-      - name: Regression: R24, R23, guide metadata and audio ceiling
+      - name: Regression R24, R23, guide metadata and audio ceiling
         run: |
           node tests/test_lookalike_r24.mjs
           node tests/test_lookalike_r23.mjs
