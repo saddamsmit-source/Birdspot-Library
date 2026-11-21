@@ -68,8 +68,10 @@ assert.equal(seenImages,17);assert.equal(seenAudio,7);
 const lk006=confusion.pairs.find(x=>x.id==='LK-006');
 assert.deepEqual(lk006.birds,['sp092','sp133']);
 assert.equal(lk006.photoState,'MISSING_VERIFIED_PAIR');
-assert.ok(!GUIDE_COMPARISONS.some(c=>c.birds.some(b=>b.id==='sp092')&&c.birds.some(b=>b.id==='sp133')),
- 'Do not activate a Kuifeend/Topper photo panel without confirmed pair');
+const topperPanels=GUIDE_COMPARISONS.filter(c=>c.birds.some(b=>b.id==='sp092')&&c.birds.some(b=>b.id==='sp133'));
+assert.equal(topperPanels.length,2,'Retain both historically specified male/female comparisons');
+assert.ok(topperPanels.every(c=>c.birds.some(b=>b.id==='sp133'&&b.photoMissing===true)),
+ 'Unverified Topper photos must remain explicitly unavailable; never show a false pair');
 const winter=GUIDE_COMPARISONS.filter(c=>c.birds.some(b=>b.id==='sp091')&&c.birds.some(b=>b.id==='sp188'));
 assert.ok(winter.length>=3, 'Existing Wintertaling/Zomertaling valid pairs must remain');
 const r24=f3.records.filter(x=>x.F3.recheckBatch==='F3-R24');
