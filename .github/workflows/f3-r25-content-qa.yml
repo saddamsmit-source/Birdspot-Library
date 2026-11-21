@@ -1,0 +1,32 @@
+name: Birdspot F3-R25 content QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r24-kwak-grauwe-gans-wilde-eend-20261120
+  workflow_dispatch:
+concurrency:
+  group: birdspot-f3-r25-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  r25-content:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: R25 source and media integrity (local bytes, no new media)
+        run: |
+          node tests/test_lookalike_r25.mjs
+          node tests/test_f3_140_unified_rebaseline.mjs
+      - name: Regression: R24, R23, guide metadata and audio ceiling
+        run: |
+          node tests/test_lookalike_r24.mjs
+          node tests/test_lookalike_r23.mjs
+          node tests/test_kennisbaseline.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+      - name: Verify generated knowledge remains canonical
+        run: python3 -I tools/kennisbaseline/build_knowledge.py --check
