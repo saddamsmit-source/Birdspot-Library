@@ -62,14 +62,14 @@ const focus={
 const ids=['sp100','sp101','sp102'];
 assert.equal(f3.records.length,140);
 assert.equal(new Set(f3.records.map(x=>x.id)).size,140);
-assert.equal(f3.counts.contentInspected,84);
-assert.equal(f3.counts.nextNotStarted,56);
+assert.ok(f3.counts.contentInspected>=84,'Later F3 rounds may add reviewed species');
+assert.ok(f3.counts.nextNotStarted<=56,'Later F3 rounds may reduce remaining species');
 assert.equal(f3.counts.F3FullPass,0);
 assert.equal(f3.counts.contentComplete,0);
 assert.equal(f3.counts.twentySeventhBatchStarted,3);
 assert.equal(f3.counts.twentyEighthBatchStarted,3);
-assert.equal(f3.records.filter(x=>x.F3.reviewedThisRound).length,84);
-assert.equal(f3.records.filter(x=>x.F3.status==='NOT STARTED').length,56);
+assert.equal(f3.records.filter(x=>x.F3.reviewedThisRound).length,f3.counts.contentInspected);
+assert.equal(f3.records.filter(x=>x.F3.status==='NOT STARTED').length,f3.counts.nextNotStarted);
 assert.deepEqual(f3.records.filter(x=>x.F3.recheckBatch==='F3-R28').map(x=>x.id),ids);
 let inspected=0;
 for(const id of ids){
@@ -109,4 +109,4 @@ assert.ok(knowledge.sp101.critical.some(c=>c.vs?.includes('sp149')));
 assert.ok(knowledge.sp102.critical.some(c=>c.vs?.includes('sp157')));
 for(const id of ids)assert.ok(f3.records.find(x=>x.id===id).F3.sourceReferences.length>=3);
 for(const earlier of ['F3-R25','F3-R26','F3-R27']) assert.equal(f3.records.filter(x=>x.F3.recheckBatch===earlier).length,3,'Historical batch '+earlier);
-console.log('F3-R28 PASS: 84/140 content reviewed, 56 open, 0 FULL PASS; 11 immutable local images, four source-labeled Redshank audio, 2 missing-audio species, historical source/age caveats retained.');
+console.log('F3-R28 historical evidence PASS: 11 immutable local images, four source-labeled Redshank audio, 2 missing-audio species, historic caveats retained; current F3 reviewed='+f3.counts.contentInspected+'.');
