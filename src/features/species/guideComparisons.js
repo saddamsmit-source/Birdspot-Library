@@ -1228,7 +1228,7 @@ export const GUIDE_COMPARISONS = [
     label: 'Fazant en Patrijs · volwassen',
     birds: [
       {id: 'sp105', source: 'fazant', plumage: 'adult_f', marks: 'De hen heeft een lange, gebandeerde staart en een bruin gevlekt kleed.'},
-      {id: 'sp106', source: 'patrijs', marks: 'Compacte bouw met korte roestrode staart. Volwassen vogels hebben een oranjebruin gezicht.'},
+      {id: 'sp106', source: 'patrijs', plumage: 'adult_f', marks: 'Compacte bouw met korte roestrode staart. Volwassen vogels hebben een oranjebruin gezicht.'},
     ],
     rows: [
       {label: 'Staart', values: ['Lang en gebandeerd', 'Kort en roestrood']},
