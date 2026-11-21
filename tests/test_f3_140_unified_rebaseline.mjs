@@ -120,6 +120,7 @@ const counts={
  thirtiethBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R30'),
  thirtyFirstBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R31'),
  thirtySecondBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R32'),
+ thirtyThirdBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R33'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };

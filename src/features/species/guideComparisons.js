@@ -233,6 +233,7 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk volwassen vogels. Jonge Zwartkopmeeuwen kunnen donkere vleugelpunten hebben.',
   },
   {
+    label: 'Wilde Eend en Krakeend · vrouwtjes op het water',
     birds: [
       {id: 'sp089', source: 'wilde-eend', plumage: 'adult_f', marks: 'Bruin vrouwtje met blauw-paarse vleugelspiegel met lichte randen.'},
       {id: 'sp129', source: 'krakeend', plumage: 'adult_f', marks: 'Bruin vrouwtje met een witte vleugelspiegel en een donkere snavel met oranje zijkanten.'},
@@ -241,7 +242,7 @@ export const GUIDE_COMPARISONS = [
       {label: 'Snavelpatroon', values: ['Oranjeachtig met donkere vlekken.', 'Donker middendeel met oranje zijkanten.']},
       {label: 'Spiegel bij geopende vleugel', values: ['Blauwviolet met lichte randen.', 'Wit.']},
     ],
-    tip: 'Vergelijk de vrouwtjes en het snavelpatroon. Op deze gesloten vleugels is het spiegelvlak niet volledig zichtbaar; controleer het bij vleugelstrekken of in vlucht.',
+    tip: 'De snavelpatronen kunnen overlappen. De spiegel is op deze gesloten vleugels niet volledig zichtbaar. Controleer de spiegel zodra een vogel de vleugel opent.',
   },
   {
     label: 'Bruine en Blauwe · volwassen mannetjes',
@@ -1209,16 +1210,16 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk naar oog, poten en snavel samen. Formaat helpt vooral als beide vogels even ver weg staan.',
   },
   {
-    label: 'Smient en Krakeend · vrouwtjes',
+    label: 'Smient en Krakeend · kop en snavel van vrouwtjes',
     birds: [
       {id: 'sp130', source: 'smient', plumage: 'adult_f', marks: 'Korte blauwgrijze snavel en variabel rossig of grijsbruin verenkleed.'},
       {id: 'sp129', source: 'krakeend', plumage: 'adult_f', marks: 'Oranje langs de zijkant van de snavel en een witte spiegel die in vlucht goed opvalt.'},
     ],
     rows: [
       {label: 'Snavel', values: ['Kort, blauwgrijs met donkere punt.', 'Langer, donker van boven met oranje zijkanten.']},
-      {label: 'Kop en bouw', values: ['Rondere kop en compacte bouw.', 'Minder ronde kop en langgerekter profiel.']},
+      {label: 'Kop', values: ['Rondere kop, vaak warmbruin.', 'Meer langgerekte kop, vaak grijzer.']},
     ],
-    tip: 'Bekijk eerst de snavelkleur en wacht zo nodig op een beter zij- of vleugelaanzicht.',
+    tip: 'Begin bij de snavel. De Smient zit op een steen en de Krakeend zwemt. Vergelijk hier vooral de kop, want houding en licht beïnvloeden de indruk van de bouw en kleur.',
   },
   {
     label: 'Grote en Kleine Mantelmeeuw · volwassen',
@@ -2070,16 +2071,35 @@ export const GUIDE_COMPARISONS = [
     tip: 'Geel en streping variëren. Bekijk ook de roodbruine stuit van Geelgors als de rug goed zichtbaar is.',
   },
   {
-    label: 'Knobbelzwaan en Wilde Zwaan · snavel en hals',
+    label: 'Knobbelzwaan en Wilde Zwaan · volwassen op het water',
+    reciprocalText: true,
     birds: [
-      {id: 'sp126', source: 'knobbelzwaan', marks: 'Oranjerode snavel met een zwarte knobbel aan de basis. Bij rustig zwemmen vaak een gebogen hals.'},
-      {id: 'sp187', source: 'wilde-zwaan', marks: 'Grote driehoekige gele snavelvlek en zwarte punt. Bij zwemmen doorgaans een rechtere hals.'},
+      {id: 'sp126', source: 'knobbelzwaan', photo: '/assets/species/sp126.webp', marks: 'Oranjerode snavel met een zwarte knobbel aan de basis. Bij rustig zwemmen vaak een gebogen hals.'},
+      {id: 'sp187', source: 'wilde-zwaan', photo: '/assets/species/sp187.webp', marks: 'Grote driehoekige gele snavelvlek tot voorbij het neusgat en zwarte punt. Bij zwemmen doorgaans een rechtere hals.'},
     ],
     rows: [
-      {label: 'Snavel', values: ['Oranjerood met zwarte knobbel', 'Geel met zwarte punt']},
+      {label: 'Snavel van opzij', values: ['Oranjerood met zwarte knobbel', 'Gele driehoek tot voorbij het neusgat']},
       {label: 'Houding', values: ['Hals vaak gebogen', 'Hals doorgaans rechter']},
     ],
-    tip: 'Bekijk bij een volwassen vogel de hele snavel van opzij. Gebruik halshouding als extra aanwijzing.',
+    tip: 'Begin bij de snavel. Halshouding wisselt. Jonge zwanen van beide soorten kunnen grijsbruin zijn. De snavel van jonge Wilde Zwaan is aan de basis vaak lichter.',
+  },
+  {
+    label: 'Knobbelzwaan en Kleine Zwaan',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp126', source: 'knobbelzwaan', photoMissing: true, marks: 'Volwassen vogels hebben een oranjerode snavel met een zwarte knobbel. De lange hals is bij rustig zwemmen vaak gebogen.'},
+      {id: 'sp127', source: 'kleine-zwaan', photoMissing: true, marks: 'Volwassen vogels hebben een zwarte snavel met een kleine, afgeronde gele basisvlek. De hals is relatief kort en vaak recht.'},
+    ],
+    tip: 'Bekijk de snavel in zijaanzicht. Bij juvenielen zijn de volwassen kleuren nog niet ontwikkeld.',
+  },
+  {
+    label: 'Bergeend en Muskuseend',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp128', source: 'bergeend', photoMissing: true, marks: 'Volwassen vogels hebben een witte romp met een brede kastanjebruine borstband en een donkere kop. Een mannetje kan een gladde rode knobbel aan de snavelbasis hebben.'},
+      {id: 'sp327', source: 'muskuseend', photoMissing: true, marks: 'De tamme vorm heeft vaak rode wratten rond snavel en ogen. Het kleed varieert sterk, van donker tot grotendeels wit.'},
+    ],
+    tip: 'Bekijk waar het rood zit en combineer dat met de borstband en koptekening.',
   },
   {
     label: 'Grote Zilverreiger en Blauwe Reiger · in rust',

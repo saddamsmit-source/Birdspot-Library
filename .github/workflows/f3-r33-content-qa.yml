@@ -1,0 +1,53 @@
+name: Birdspot F3-R33 content and browser QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r32-oeverzwaluw-geelgors-rietgors-20261121-codex
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: birdspot-f3-r33-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  content-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: F3, roles and sound attribution
+        run: |
+          node tests/test_lookalike_r33.mjs
+          node tests/test_f3_140_unified_rebaseline.mjs
+          node tests/test_lookalike_r09.mjs
+          for round in r24 r25 r26 r27 r28 r29 r30 r31 r32; do
+            node "tests/test_lookalike_$round.mjs"
+          done
+          node tests/test_guide_poses.mjs
+          node tests/test_fotovolgorde_2026-11-10.mjs
+          node tests/test_vluchtcontrole.mjs
+          node tests/test_audio_140_contract.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+  chromium-r33:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser test dependencies
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Mobile comparison and offline sound
+        run: python -u tests/test_lookalike_r33_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: birdspot-f3-r33-browser
+          path: tests/screenshots/lookalike_r33/*.png
+          if-no-files-found: ignore

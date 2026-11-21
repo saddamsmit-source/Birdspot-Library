@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 44,
+    "nextNotStarted": 41,
     "secondBatchStarted": 3,
-    "contentInspected": 96,
+    "contentInspected": 99,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -86,7 +86,8 @@
     "twentyNinthBatchStarted": 3,
     "thirtiethBatchStarted": 3,
     "thirtyFirstBatchStarted": 3,
-    "thirtySecondBatchStarted": 3
+    "thirtySecondBatchStarted": 3,
+    "thirtyThirdBatchStarted": 3
   },
   "records": [
     {
@@ -10222,35 +10223,80 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R33",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (vijf bronoriginelen en lokale WebP’s gematcht; zie brondossier en volledige expertgate)",
+          "photoIndividualRights": "PARTIALLY TESTED (bronmaker, licentie en bewerking per beeld gecontroleerd; volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Mannetje en vrouwtje volgen de leeftijds- en geslachtsannotaties van de fotograaf. Knobbelgrootte varieert. Grijsbruine juveniel apart en één echte vrije vlucht zonder geslachtsclaim.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-064 vergelijkt de snavel en hals van twee volwassen zwanen op het water. LK-065 toont wederzijdse herkenningstekst voor Kleine Zwaan. Passende jeugdbeelden staan open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium op kandidaat-SHA in PR #331)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registratie van foto- en audiocredits gecontroleerd; gericht browserbewijs in PR #331)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (volledige technische match met individuele bronbestanden; auditieve determinatie open)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (maker en licentie op de individuele bronbestanden gecontroleerd; volledige aftekening open)",
+          "soundRolesSongCall": "PARTIALLY TESTED (bronlabels gelezen; onafhankelijke akoestische beoordeling open)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (alle bytes lokaal gedecodeerd; browserbewijs online en offline staat in PR #331)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; toepasselijke ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming geeft 140–160 cm en 200–240 cm. Bestaand kennisprofiel met LBV en meerdere bronnen bekeken. Geen maat of status gewijzigd.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen; geen nieuwe aantallen of trends gepubliceerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (gevalideerde Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; Chromium en toestellaag afzonderlijk in PR #331)",
+          "independentSecondReview": "NOT TESTED in het dossier (afzonderlijke onafhankelijke QA op de uiteindelijke SHA in PR #331)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-064 vergelijkt de snavel en hals van twee volwassen zwanen op het water. LK-065 toont wederzijdse herkenningstekst voor Kleine Zwaan. Passende jeugdbeelden staan open.)"
         },
-        "findings": [],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "findings": [
+          "Mannetje en vrouwtje volgen de leeftijds- en geslachtsannotaties van de fotograaf. Knobbelgrootte varieert. Grijsbruine juveniel apart en één echte vrije vlucht zonder geslachtsclaim.",
+          "LK-064 vergelijkt de snavel en hals van twee volwassen zwanen op het water. LK-065 toont wederzijdse herkenningstekst voor Kleine Zwaan. Passende jeugdbeelden staan open.",
+          "Vijf lokale WebP’s gematcht met individuele bronoriginelen. Maker, bewerking en licentie per bestand gecontroleerd.",
+          "Alle geregistreerde lokale fragmenten volledig gematcht met de bron. Auditieve soort- en rolbeoordeling blijft open.",
+          "Credit XC307509 gecorrigeerd naar CC BY-SA 3.0 op basis van het gematchte Commons-bronbestand."
+        ],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/audio/AUDIO_140_AUDIT_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/knobbelzwaan",
+          "https://stats.sovon.nl/stats/soort/1520",
+          "https://www.lbv.de/ratgeber/naturwissen/artenportraits/detail/hoeckerschwan/",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Wilde-zwaan",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-zwaan",
+          "https://www.itfryskegea.nl/nieuws-publicaties/soorten-zwanen/",
+          "https://www.inaturalist.org/photos/487622913",
+          "https://www.inaturalist.org/photos/687016180",
+          "https://commons.wikimedia.org/wiki/File:CygnusOlorJuvenile.jpg",
+          "https://commons.wikimedia.org/wiki/File:Cygnus_olor-pjt1.jpg",
+          "https://commons.wikimedia.org/wiki/File:Mute_Swan_Emsworth2.JPG",
+          "https://commons.wikimedia.org/wiki/File:Cygnus_olor_-_Mute_Swan_XC307509.mp3"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de uiteindelijke SHA in PR #331. Volledige aparte vakaftekening blijft open.",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "d14ca9251b87dd2e8849b5cbd610562542ad902f",
+          "4adf614432840cefb793191e78f849d11a4d0ba3",
+          "f361097c6a6125bb1d965a97c79bec75b8e1fea2",
+          "ae2c0630e714fe0a18a73040d81306071e4abfbb",
+          "81f9bc750ec6c35009c5a2f1576711f25cc2fe9e"
+        ],
+        "audioSourceMatches": [
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Cygnus_olor_-_Mute_Swan_XC307509.mp3",
+            "path": "/assets/species/audio/sp126-a1.mp3",
+            "comparison": "Volledige mono-PCM op 24 kHz, gelijk uitgelijnd",
+            "normalizedCorrelation": 0.999123,
+            "matchedSeconds": 11.74533,
+            "sourceSha1": "94c778c25c5f59aabe1731066bd24b225b7c77e2",
+            "localSha256": "f64e57839556c5a14fba002fbf53c84dd74eae10b98196fcc6eed8c84e01aa11",
+            "sourceLicense": "CC BY-SA 3.0"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie CI en read-only QA op exacte head in de overdracht van PR #331."
       }
     },
     {
@@ -10266,7 +10312,33 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (mannetje)",
+            "path": "/assets/species/sp128.webp",
+            "oldRights": "NOT TESTED in historische audit. Bron en licentie herlezen in R33."
+          },
+          {
+            "role": "Verenkleed (juveniel)",
+            "path": "/assets/species/plumage/sp128-juv-grown.webp",
+            "oldRights": "NOT TESTED in historische audit. Bron en licentie herlezen in R33."
+          },
+          {
+            "role": "In vlucht (vrouwtje)",
+            "path": "/assets/species/plumage/sp128-female-review.webp",
+            "oldRights": "NOT TESTED in historische audit. Bron en licentie herlezen in R33."
+          },
+          {
+            "role": "In vlucht (neutraal)",
+            "path": "/assets/species/plumage/sp128-flight.webp",
+            "oldRights": "NOT TESTED in historische audit. Bron en licentie herlezen in R33."
+          },
+          {
+            "role": "Overige herkenningsfoto (donsjongen)",
+            "path": "/assets/species/plumage/sp128-juv.webp",
+            "oldRights": "NOT TESTED in historische audit. Bron en licentie herlezen in R33."
+          }
+        ],
         "existingAudioCount": 2,
         "existingAudioPaths": [
           "/assets/species/audio/sp128-a1.mp3",
@@ -10274,37 +10346,92 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R33",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (vijf bronoriginelen en lokale WebP’s gematcht; zie brondossier en volledige expertgate)",
+          "photoIndividualRights": "PARTIALLY TESTED (bronmaker, licentie en bewerking per beeld gecontroleerd; volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Donsjongen apart van oudere juveniel met bruingrijze tekening en roodachtige snavel. Twee vrije vluchten. De eerste zonder geslachtslabel, de andere bronbenoemd vrouwtje. Een rustfoto van het vrouwtje ontbreekt.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-066 toont wederzijdse herkenningstekst voor Muskuseend. Een passend rustfotopaar ontbreekt. De grotendeels witte romp en borstband helpen ook bij onderscheid van Casarca.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium op kandidaat-SHA in PR #331)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registratie van foto- en audiocredits gecontroleerd; gericht browserbewijs in PR #331)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (volledige technische match met individuele bronbestanden; auditieve determinatie open)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (maker en licentie op de individuele bronbestanden gecontroleerd; volledige aftekening open)",
+          "soundRolesSongCall": "PARTIALLY TESTED (bronlabels gelezen; onafhankelijke akoestische beoordeling open)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (alle bytes lokaal gedecodeerd; browserbewijs online en offline staat in PR #331)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; toepasselijke ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming geeft 58–67 cm en 110–133 cm. BTO en Blasco-Zumeta/Heinze ondersteunen de grove bouw en de kleedcontrole. Volledig kennisprofiel en weging van de bestaande maten staan open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen; geen nieuwe aantallen of trends gepubliceerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (gevalideerde Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; Chromium en toestellaag afzonderlijk in PR #331)",
+          "independentSecondReview": "NOT TESTED in het dossier (afzonderlijke onafhankelijke QA op de uiteindelijke SHA in PR #331)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-066 toont wederzijdse herkenningstekst voor Muskuseend. Een passend rustfotopaar ontbreekt. De grotendeels witte romp en borstband helpen ook bij onderscheid van Casarca.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Vijf actuele gidsbeelden geteld. Historische negenpuntsinventaris 0 en M23-eerste controle blijven bewaard.",
+          "Donsjongen apart van oudere juveniel met bruingrijze tekening en roodachtige snavel. Twee vrije vluchten. De eerste zonder geslachtslabel, de andere bronbenoemd vrouwtje. Een rustfoto van het vrouwtje ontbreekt.",
+          "LK-066 toont wederzijdse herkenningstekst voor Muskuseend. Een passend rustfotopaar ontbreekt. De grotendeels witte romp en borstband helpen ook bij onderscheid van Casarca.",
+          "Vijf lokale WebP’s gematcht met individuele bronoriginelen. Maker, bewerking en licentie per bestand gecontroleerd.",
+          "Alle geregistreerde lokale fragmenten volledig gematcht met de bron. Auditieve soort- en rolbeoordeling blijft open."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/audio/AUDIO_140_AUDIT_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bergeend",
+          "https://stats.sovon.nl/stats/soort/1730",
+          "https://www.bto.org/learn/about-birds/birdfacts/shelduck",
+          "https://blascozumeta.wimbitek.com/specie_files/01730_ENG_Tadorna_tadorna_aranzadi.pdf",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/muskuseend",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/casarca",
+          "https://commons.wikimedia.org/wiki/File:Common_shelduck_(Tadorna_tadorna)_male_2.jpg",
+          "https://commons.wikimedia.org/wiki/File:Juvenile_common_shelduck_(54206317564).jpg",
+          "https://commons.wikimedia.org/wiki/File:Common_shelduck_(Tadorna_tadorna)_female_in_flight_Sfax.jpg",
+          "https://commons.wikimedia.org/wiki/File:Gravand_-_Common_Shelduck_-_Tadorna_tadorna.JPG",
+          "https://commons.wikimedia.org/wiki/File:Brandgans_K%C3%BCken,_Borkum.JPG",
+          "https://commons.wikimedia.org/wiki/File:Tadorna_tadorna_-_Common_Shelduck_XC466466.mp3",
+          "https://commons.wikimedia.org/wiki/File:Common_Shelduck_(Tadorna_tadorna)_(W1CDR0001430_BD7).ogg"
+        ],
+        "reviewedOriginalAudio": 2,
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de uiteindelijke SHA in PR #331. Volledige aparte vakaftekening blijft open.",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "23a4304e048a0087d547fbc874954911e385e188",
+          "ce5ba3d39c82d26d7e7d00a4c886988b78238aa3",
+          "23dee73cba9c5aa109e151b829b08a187b164d28",
+          "8e7a5432400a166def5e8a9bb98e7664ada96c85",
+          "5f9fc768d149a7350e0c19a53e2fdc56484febea"
+        ],
+        "audioSourceMatches": [
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Tadorna_tadorna_-_Common_Shelduck_XC466466.mp3",
+            "path": "/assets/species/audio/sp128-a1.mp3",
+            "comparison": "Volledige mono-PCM op 24 kHz, gelijk uitgelijnd",
+            "normalizedCorrelation": 0.99996,
+            "matchedSeconds": 33.77633,
+            "sourceSha1": "3dfb784a28bc2142e8d190f8e1358cce613436d4",
+            "localSha256": "960e90cdf3a3b1b92b1946854c483a83c401ef4cffda256e4969a2a1e99da483",
+            "sourceLicense": "CC BY-SA 4.0"
+          },
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Common_Shelduck_(Tadorna_tadorna)_(W1CDR0001430_BD7).ogg",
+            "path": "/assets/species/audio/sp128-a2.mp3",
+            "comparison": "Volledige mono-PCM op 24 kHz, gelijk uitgelijnd",
+            "normalizedCorrelation": 0.999667,
+            "matchedSeconds": 73.2615,
+            "sourceSha1": "59240d1e6bd0cb3493a9c21bd7feb4f3d8599112",
+            "localSha256": "b460b8515ee1dee4b427d59934fb1724265c83a34976644091a4166ee968c184",
+            "sourceLicense": "CC BY-SA 4.0"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie CI en read-only QA op exacte head in de overdracht van PR #331."
       }
     },
     {
@@ -10353,35 +10480,79 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R33",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (vijf bronoriginelen en lokale WebP’s gematcht; zie brondossier en volledige expertgate)",
+          "photoIndividualRights": "PARTIALLY TESTED (bronmaker, licentie en bewerking per beeld gecontroleerd; volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Mannelijke hoofdfoto, apart mannetje in rust, vrouwtje, brongeannoteerde juveniel en vrije vlucht van een mannetje. Eclipskleed en een gelijkwaardig juvenielenpaar staan open.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-058 vergelijkt de twee vrouwtjes op het water en benoemt de beperkt zichtbare spiegel. LK-067 vergelijkt snavels van vrouwtjes Smient en Krakeend in rust. Gelijkwaardige juvenielen- en vluchtparen staan open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium op kandidaat-SHA in PR #331)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registratie van foto- en audiocredits gecontroleerd; gericht browserbewijs in PR #331)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (volledige technische match met individuele bronbestanden; auditieve determinatie open)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (maker en licentie op de individuele bronbestanden gecontroleerd; volledige aftekening open)",
+          "soundRolesSongCall": "PARTIALLY TESTED (bronlabels gelezen; onafhankelijke akoestische beoordeling open)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (alle bytes lokaal gedecodeerd; browserbewijs online en offline staat in PR #331)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; toepasselijke ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming geeft 46–56 cm en 84–95 cm. Bestaande circa-lengteband volgt de tweebronnenmethode. Kennisprofiel, BTO en kleedsleutel bekeken. Geen maat of status gewijzigd.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen; geen nieuwe aantallen of trends gepubliceerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (gevalideerde Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; Chromium en toestellaag afzonderlijk in PR #331)",
+          "independentSecondReview": "NOT TESTED in het dossier (afzonderlijke onafhankelijke QA op de uiteindelijke SHA in PR #331)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-058 vergelijkt de twee vrouwtjes op het water en benoemt de beperkt zichtbare spiegel. LK-067 vergelijkt snavels van vrouwtjes Smient en Krakeend in rust. Gelijkwaardige juvenielen- en vluchtparen staan open.)"
         },
-        "findings": [],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "findings": [
+          "Mannelijke hoofdfoto, apart mannetje in rust, vrouwtje, brongeannoteerde juveniel en vrije vlucht van een mannetje. Eclipskleed en een gelijkwaardig juvenielenpaar staan open.",
+          "LK-058 vergelijkt de twee vrouwtjes op het water en benoemt de beperkt zichtbare spiegel. LK-067 vergelijkt snavels van vrouwtjes Smient en Krakeend in rust. Gelijkwaardige juvenielen- en vluchtparen staan open.",
+          "Vijf lokale WebP’s gematcht met individuele bronoriginelen. Maker, bewerking en licentie per bestand gecontroleerd.",
+          "Alle geregistreerde lokale fragmenten volledig gematcht met de bron. Auditieve soort- en rolbeoordeling blijft open."
+        ],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/audio/AUDIO_140_AUDIT_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+          "https://stats.sovon.nl/stats/soort/1820",
+          "https://www.bto.org/learn/about-birds/birdfacts/gadwall",
+          "https://blascozumeta.com/specie_files/01820_ENG_Mareca_strepera_aranzadi.pdf",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wilde-eend",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient",
+          "https://commons.wikimedia.org/wiki/File:Gadwall_male_(91087).jpg",
+          "https://commons.wikimedia.org/wiki/File:Frisada,_macho,_Gadwall,_male_(49060286588).jpg",
+          "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg",
+          "https://www.inaturalist.org/photos/548529333",
+          "https://commons.wikimedia.org/wiki/File:Frisada,_macho,_Gadwall,_male_(50374265703).jpg",
+          "https://commons.wikimedia.org/wiki/File:Mareca_strepera_-_Gadwall_XC436359.mp3"
+        ],
+        "reviewedOriginalAudio": 1,
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de uiteindelijke SHA in PR #331. Volledige aparte vakaftekening blijft open.",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "2942f6214454515a503161f458303eab1a9105f2",
+          "9df6371d2fe222f11916f7a344499951e92471b0",
+          "86a2faeaec00e613bc1ca402fd0d7d133b867812",
+          "4faf64d1854d9a1a83a8ccd3cd38b13ee720b4f6",
+          "20f7f75399426544dc3e1a79362cee2980219e25"
+        ],
+        "audioSourceMatches": [
+          {
+            "source": "https://commons.wikimedia.org/wiki/File:Mareca_strepera_-_Gadwall_XC436359.mp3",
+            "path": "/assets/species/audio/sp129-a1.mp3",
+            "comparison": "Volledige mono-PCM op 24 kHz, gelijk uitgelijnd",
+            "normalizedCorrelation": 0.999936,
+            "matchedSeconds": 14.735,
+            "sourceSha1": "0246e707d0f81b87346018019ce808815d8979fc",
+            "localSha256": "77552ba1a04a70819493a6234b5eefded70605e09a7bffc7768b11397c404c89",
+            "sourceLicense": "CC BY-SA 4.0"
+          }
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie CI en read-only QA op exacte head in de overdracht van PR #331."
       }
     },
     {
