@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 29,
+    "nextNotStarted": 26,
     "secondBatchStarted": 3,
-    "contentInspected": 111,
+    "contentInspected": 114,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -91,7 +91,8 @@
     "thirtyFourthBatchStarted": 3,
     "thirtyFifthBatchStarted": 3,
     "thirtySixthBatchStarted": 3,
-    "thirtySeventhBatchStarted": 3
+    "thirtySeventhBatchStarted": 3,
+    "thirtyEighthBatchStarted": 3
   },
   "records": [
     {
@@ -11846,43 +11847,65 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (niet-broedkleed)",
+            "path": "/assets/species/sp153.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R38",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (1 huidige lokale WebPs direct visueel bekeken, Git-blob-SHA vastgelegd; originele bronpixels en expert-determinatie open)",
+          "photoIndividualRights": "PARTIALLY TESTED (manifest bronmaker/licentietype bekend; individuele primaire licentie en afbeeldingsaanpassingen niet volledig herbevestigd)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Eén lokale niet-broedkleedfoto (krullende langere snavel) daadwerkelijk bekeken. Broedkleed met zwarte buikvlek, juveniel en vlucht ontbreken in deze soortkaart.; geen definitieve geslachts- of leeftijdsbeoordeling)",
+          "photoPairComparisons": "PARTIALLY TESTED (Bestaand LK-082 met Drieteenstrandloper onderscheidt langere omlaaggebogen snavel en bruinere tint. Alleen winter-rustvergelijking; andere kleed- en vluchtparen open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R38 Chromium en fysiek toestel afzonderlijk nodig)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bestaande auteurs/licenties in manifest; zichtbare credits, zoom en audio-UI nog op R38 SHA te testen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokaal gidsaudiofragment)",
+          "audioLicenseAndAttribution": "BLOCKED (geen lokaal gidsaudiofragment)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal audiofragment)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen gidsaudiofragment)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming-soortbeschrijving gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande indicatieve data bekeken; onafhankelijke bron- en definitieafstemming open, Witgat-spanwijdteconflict beschreven)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (soortstatus kwalitatief gecontroleerd; exacte trend-/jaartalclaims niet opnieuw gevalideerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen nieuwe eBird-waarnemingsbias/audit)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R38-fysieke/persoonlijke herstelproef ontbreekt)",
+          "endToEndGuideUI": "NOT TESTED (gerichtere Chromium/Android PWA nog nodig)",
+          "independentSecondReview": "NOT TESTED (modelcontrole van lokale beelden is geen onafhankelijke ornithologische of rechten-QA)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Bestaand LK-082 met Drieteenstrandloper onderscheidt langere omlaaggebogen snavel en bruinere tint. Alleen winter-rustvergelijking; andere kleed- en vluchtparen open.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Eén lokale niet-broedkleedfoto (krullende langere snavel) daadwerkelijk bekeken. Broedkleed met zwarte buikvlek, juveniel en vlucht ontbreken in deze soortkaart.",
+          "Bestaand LK-082 met Drieteenstrandloper onderscheidt langere omlaaggebogen snavel en bruinere tint. Alleen winter-rustvergelijking; andere kleed- en vluchtparen open.",
+          "Geen dubbele media of nieuwe gidsbijlagen toegevoegd. Originele bron- en rechtenbevestiging OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R38_BONTE_STRANDLOPER_OEVERLOPER_WITGAT_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-strandloper",
+          "https://commons.wikimedia.org/wiki/File:Dunlin_%28Calidris_alpina%29_non_breeding_Marken.jpg",
+          "https://stats.sovon.nl/stats/soort/5120"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R38 SHA",
+        "independence": "NOT VERIFIED (primair eigen lokale visuele beoordeling; onafhankelijke vak-/rechtenreview OPEN)",
+        "fullPass": false,
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "19462df1bebd20a61937321ed0ca839c4119d02a"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -11898,7 +11921,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp155.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp155-juv.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          },
+          {
+            "role": "Verenkleed (Winterkleed)",
+            "path": "/assets/species/plumage/sp155-winter.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          },
+          {
+            "role": "In vlucht",
+            "path": "/assets/species/plumage/sp155-flight.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          }
+        ],
         "existingAudioCount": 3,
         "existingAudioPaths": [
           "/assets/species/audio/sp155-song.mp3",
@@ -11907,37 +11951,62 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R38",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (4 huidige lokale WebPs direct visueel bekeken, Git-blob-SHA vastgelegd; originele bronpixels en expert-determinatie open)",
+          "photoIndividualRights": "PARTIALLY TESTED (manifest bronmaker/licentietype bekend; individuele primaire licentie en afbeeldingsaanpassingen niet volledig herbevestigd)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vier lokale beelden geopend: hoofd met witte inkeping, egaal winterbeeld, klein juveniel beeld en vrije vlucht met witte vleugelstreep. Origineel en precieze kleed-/leeftijdsrol nog onafhankelijk te vergelijken.; geen definitieve geslachts- of leeftijdsbeoordeling)",
+          "photoPairComparisons": "PARTIALLY TESTED (Oeverloper–Witgat winterrustpaar aanwezig; Oeverloper–Bosruiter juveniel uit bestaande gids. Foto's gelijkwaardig per rol nog te hercontroleren.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R38 Chromium en fysiek toestel afzonderlijk nodig)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bestaande auteurs/licenties in manifest; zichtbare credits, zoom en audio-UI nog op R38 SHA te testen)",
+          "audioRecordingsAuthenticity": "NOT TESTED (bestaande MP3's geregistreerd, oorspronkelijke XC-golfvorm niet gematcht en niet onafhankelijk beluisterd)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (maker/licentie/bronlink aanwezig in manifest, primaire Xeno-canto rechten niet opnieuw onafhankelijk afgetekend)",
+          "soundRolesSongCall": "NOT TESTED (rolnamen uit bestaand XC-register; geen onafhankelijke luisterreview)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (technische speler offline op R38 SHA nog te controleren)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming-soortbeschrijving gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande indicatieve data bekeken; onafhankelijke bron- en definitieafstemming open, Witgat-spanwijdteconflict beschreven)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (soortstatus kwalitatief gecontroleerd; exacte trend-/jaartalclaims niet opnieuw gevalideerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen nieuwe eBird-waarnemingsbias/audit)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R38-fysieke/persoonlijke herstelproef ontbreekt)",
+          "endToEndGuideUI": "NOT TESTED (gerichtere Chromium/Android PWA nog nodig)",
+          "independentSecondReview": "NOT TESTED (modelcontrole van lokale beelden is geen onafhankelijke ornithologische of rechten-QA)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Oeverloper–Witgat winterrustpaar aanwezig; Oeverloper–Bosruiter juveniel uit bestaande gids. Foto's gelijkwaardig per rol nog te hercontroleren.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Vier lokale beelden geopend: hoofd met witte inkeping, egaal winterbeeld, klein juveniel beeld en vrije vlucht met witte vleugelstreep. Origineel en precieze kleed-/leeftijdsrol nog onafhankelijk te vergelijken.",
+          "Oeverloper–Witgat winterrustpaar aanwezig; Oeverloper–Bosruiter juveniel uit bestaande gids. Foto's gelijkwaardig per rol nog te hercontroleren.",
+          "Geen dubbele media of nieuwe gidsbijlagen toegevoegd. Originele bron- en rechtenbevestiging OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R38_BONTE_STRANDLOPER_OEVERLOPER_WITGAT_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverloper",
+          "https://stats.sovon.nl/stats/soort/5560",
+          "https://www.inaturalist.org/photos/56953995",
+          "https://www.inaturalist.org/photos/617218276",
+          "https://www.inaturalist.org/photos/85106472",
+          "https://commons.wikimedia.org/wiki/File:NZ7_7499_(52887647148).jpg",
+          "https://xeno-canto.org/901773",
+          "https://xeno-canto.org/432214",
+          "https://xeno-canto.org/1166974"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R38 SHA",
+        "independence": "NOT VERIFIED (primair eigen lokale visuele beoordeling; onafhankelijke vak-/rechtenreview OPEN)",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "809bf705591c104973fec0babb782d0a1216bf92",
+          "88d27391f6c239f277bc4c4cee4d90894f0bc943",
+          "f58c9e3245c3758f7f93857a46660f5997cc8bf2",
+          "08e567cf65548b3f7d7075ee72afda334634ce1b"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -11953,7 +12022,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp156.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp156-juv.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          },
+          {
+            "role": "Verenkleed (Winterkleed)",
+            "path": "/assets/species/plumage/sp156-winter.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          },
+          {
+            "role": "In vlucht",
+            "path": "/assets/species/plumage/sp156-flight.webp",
+            "oldRights": "NOT TESTED in eerdere negenpuntsaudit; primaire bron/licentie niet opnieuw volledig vrijgegeven"
+          }
+        ],
         "existingAudioCount": 4,
         "existingAudioPaths": [
           "/assets/species/audio/sp156-call.mp3",
@@ -11963,37 +12053,64 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R38",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (4 huidige lokale WebPs direct visueel bekeken, Git-blob-SHA vastgelegd; originele bronpixels en expert-determinatie open)",
+          "photoIndividualRights": "PARTIALLY TESTED (manifest bronmaker/licentietype bekend; individuele primaire licentie en afbeeldingsaanpassingen niet volledig herbevestigd)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vier lokale beelden geopend, vlucht met donkere vleugels/witte stuit. Juvenielenbeeld is 371×197 en sterk onscherp, individuele veerdetails niet herkenbaar; foto niet als kleed- of vergelijkings-PASS te gebruiken. Witgat-spanwijdte app 39–44 cm vs Vogelbescherming 57–61 cm; conflict OPEN, twee uitgevers/meetdefinitie nodig.; geen definitieve geslachts- of leeftijdsbeoordeling)",
+          "photoPairComparisons": "PARTIALLY TESTED (Oeverloper–Witgat winter en Witgat–Bosruiter broed/winter/juveniel aanwezig in gids; Witgat-juvenielenbeeld is ontoereikend voor aftekening.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R38 Chromium en fysiek toestel afzonderlijk nodig)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bestaande auteurs/licenties in manifest; zichtbare credits, zoom en audio-UI nog op R38 SHA te testen)",
+          "audioRecordingsAuthenticity": "NOT TESTED (bestaande MP3's geregistreerd, oorspronkelijke XC-golfvorm niet gematcht en niet onafhankelijk beluisterd)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (maker/licentie/bronlink aanwezig in manifest, primaire Xeno-canto rechten niet opnieuw onafhankelijk afgetekend)",
+          "soundRolesSongCall": "NOT TESTED (rolnamen uit bestaand XC-register; geen onafhankelijke luisterreview)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (technische speler offline op R38 SHA nog te controleren)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming-soortbeschrijving gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande indicatieve data bekeken; onafhankelijke bron- en definitieafstemming open, Witgat-spanwijdteconflict beschreven)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (soortstatus kwalitatief gecontroleerd; exacte trend-/jaartalclaims niet opnieuw gevalideerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen nieuwe eBird-waarnemingsbias/audit)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R38-fysieke/persoonlijke herstelproef ontbreekt)",
+          "endToEndGuideUI": "NOT TESTED (gerichtere Chromium/Android PWA nog nodig)",
+          "independentSecondReview": "NOT TESTED (modelcontrole van lokale beelden is geen onafhankelijke ornithologische of rechten-QA)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Oeverloper–Witgat winter en Witgat–Bosruiter broed/winter/juveniel aanwezig in gids; Witgat-juvenielenbeeld is ontoereikend voor aftekening.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Vier lokale beelden geopend, vlucht met donkere vleugels/witte stuit. Juvenielenbeeld is 371×197 en sterk onscherp, individuele veerdetails niet herkenbaar; foto niet als kleed- of vergelijkings-PASS te gebruiken. Witgat-spanwijdte app 39–44 cm vs Vogelbescherming 57–61 cm; conflict OPEN, twee uitgevers/meetdefinitie nodig.",
+          "Oeverloper–Witgat winter en Witgat–Bosruiter broed/winter/juveniel aanwezig in gids; Witgat-juvenielenbeeld is ontoereikend voor aftekening.",
+          "Geen dubbele media of nieuwe gidsbijlagen toegevoegd. Originele bron- en rechtenbevestiging OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R38_BONTE_STRANDLOPER_OEVERLOPER_WITGAT_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/witgat",
+          "https://stats.sovon.nl/stats/soort/5530",
+          "https://www.inaturalist.org/photos/246109837",
+          "https://www.inaturalist.org/photos/604589887",
+          "https://www.inaturalist.org/photos/556521052",
+          "https://commons.wikimedia.org/wiki/File:Green_sandpiper_flying.jpg",
+          "https://xeno-canto.org/490350",
+          "https://xeno-canto.org/951957",
+          "https://xeno-canto.org/432903",
+          "https://xeno-canto.org/791817",
+          "https://www.madeirabirds.com/green-sandpiper-tringa-ochropus"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R38 SHA",
+        "independence": "NOT VERIFIED (primair eigen lokale visuele beoordeling; onafhankelijke vak-/rechtenreview OPEN)",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "af50ccbd8bb18a99365c32529e7f4024b2b885c3",
+          "7d0df8476aa49e8fd3f2c7262ad663ae745653a9",
+          "0c5931256ddb3f69e923220833e59de135cf7e7d",
+          "7f3b5d5913796e791b05181f2d179dfac77617d7"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
