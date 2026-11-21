@@ -1,0 +1,32 @@
+name: Birdspot F3-R26 content QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r25-overname-20261121-gpt6
+  workflow_dispatch:
+concurrency:
+  group: birdspot-f3-r26-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  gull-content:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check R26 gull image bytes, open gaps and 140 cohort
+        run: |
+          node tests/test_lookalike_r26.mjs
+          node tests/test_f3_140_unified_rebaseline.mjs
+      - name: Check R25 R24 and knowledge source regressions
+        run: |
+          node tests/test_lookalike_r25.mjs
+          node tests/test_lookalike_r24.mjs
+          node tests/test_kennisbaseline.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+      - name: Check generated guide knowledge
+        run: python3 -I tools/kennisbaseline/build_knowledge.py --check
