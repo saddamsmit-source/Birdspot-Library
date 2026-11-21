@@ -3,6 +3,7 @@ on:
   pull_request:
     branches:
       - qa/birdspot-f3-r36-bontbek-kleine-plevier-regenwulp-20261121-gpt6
+      - qa/birdspot-f3-r37-rosse-grutto-steenloper-drieteen-20261121-gpt6
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,6 +25,7 @@ jobs:
           node tests/test_lookalike_r37.mjs
           node tests/test_lookalike_r36.mjs
           node tests/test_lookalike_r35.mjs
+          node tests/test_lookalike_r09.mjs
           node tests/test_audio_140_contract.mjs
           node tests/test_audio_evidence_ceiling.mjs
           node tests/test_guide_poses.mjs
