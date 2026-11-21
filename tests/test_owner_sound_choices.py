@@ -123,6 +123,7 @@ def run():
             ev.value.save_as(str(zip_file))
             with zipfile.ZipFile(zip_file) as z:
                 data=json.loads(z.read('gegevens.json'))
+                assert data['backupVersion'] == 3
                 own=[m for m in data['mediaMeta'] if m.get('personalSpecies')]
                 assert len(own)==1 and own[0]['id']==audio_id and own[0]['speciesId']=='sp045'
                 assert own[0].get('sightingId') is None
