@@ -115,6 +115,7 @@ const counts={
  twentyFifthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R25'),
  twentySixthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R26'),
  twentySeventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R27'),
+ twentyEighthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R28'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };

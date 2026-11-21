@@ -1,0 +1,34 @@
+name: Birdspot F3-R28 content QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r27-kokmeeuw-scholekster-kievit-20261121-gpt6
+  workflow_dispatch:
+concurrency:
+  group: birdspot-f3-r28-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  waders-content:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: R28 source media and F3 cohort evidence
+        run: |
+          node tests/test_lookalike_r28.mjs
+          node tests/test_f3_140_unified_rebaseline.mjs
+      - name: Regression of previous R27 R26 R25 R24 and media rights ceiling
+        run: |
+          node tests/test_lookalike_r27.mjs
+          node tests/test_lookalike_r26.mjs
+          node tests/test_lookalike_r25.mjs
+          node tests/test_lookalike_r24.mjs
+          node tests/test_kennisbaseline.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+      - name: Generated knowledge contract
+        run: python3 -I tools/kennisbaseline/build_knowledge.py --check
