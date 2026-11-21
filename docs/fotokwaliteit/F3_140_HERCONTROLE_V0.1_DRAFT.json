@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 56,
+    "nextNotStarted": 53,
     "secondBatchStarted": 3,
-    "contentInspected": 84,
+    "contentInspected": 87,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -82,7 +82,8 @@
     "twentyFifthBatchStarted": 3,
     "twentySixthBatchStarted": 3,
     "twentySeventhBatchStarted": 3,
-    "twentyEighthBatchStarted": 3
+    "twentyEighthBatchStarted": 3,
+    "twentyNinthBatchStarted": 3
   },
   "records": [
     {
@@ -9116,35 +9117,50 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R29",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all existing local app-WebPs directly viewed; independent original-source image identity and exact source-byte match NOT TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing author/CC/public-domain credits inspected; current rights per original NOT independently rechecked)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Three local app photos opened: black/green-scaled resting Aalscholver with white cheek, standing yearling with spread drying wings on snow, and true free-flight Aalscholver with extended neck.; source-specific sex/age review open)",
+          "photoPairComparisons": "PARTIALLY TESTED (Kuifaalscholver sp242 smaller and slimmer (slender neck/bill, steeper forehead) from newly read Vogelbescherming species page; same publisher, no independent second-source diagnosis; no verified pair enabled.; no new unverified photo pair)",
+          "responsiveLayoutAndZoom": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "creditsAndCleanAudioUI": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "audioRecordingsAuthenticity": "NOT TESTED (no independently heard and identified original audio)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (one historic Xeno-canto CC0 source metadata; original license and clip not separately rechecked)",
+          "soundRolesSongCall": "PARTIALLY TESTED (one historic roep source label; no independent acoustic role verification)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (applicable Vogelbescherming species passages newly read; ANWB edition/page NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing knowledge and size claims read, no new recalculation or unsupported biometric update)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new Sovon numerical/trend claim)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird sources)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED on R29 SHA",
+          "endToEndGuideUI": "NOT TESTED on R29 SHA at content checkpoint",
+          "independentSecondReview": "NOT TESTED (own image/source review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Kuifaalscholver sp242 smaller and slimmer (slender neck/bill, steeper forehead) from newly read Vogelbescherming species page; same publisher, no independent second-source diagnosis; no verified pair enabled.; no independent photo/original approval)"
         },
-        "findings": [],
-        "sourceReferences": [],
+        "findings": [
+          "Three local app photos opened: black/green-scaled resting Aalscholver with white cheek, standing yearling with spread drying wings on snow, and true free-flight Aalscholver with extended neck.",
+          "Kuifaalscholver sp242 smaller and slimmer (slender neck/bill, steeper forehead) from newly read Vogelbescherming species page; same publisher, no independent second-source diagnosis; no verified pair enabled.",
+          "One locally registered xeno-canto call from Rozenn Le Fur / Sonothèque ADVL, source role only; no independent auditory determination.",
+          "Twelve existing local app-WebPs directly viewed, source original and independent age/sex/rights/audio NOT TESTED."
+        ],
+        "sourceReferences": [
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/aalscholver",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifaalscholver",
+          "tools/kennisbaseline/knowledge.json",
+          "docs/fotokwaliteit/F3_R29_AALSCHOLVER_FAZANT_PATRIJS_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R29 candidate; earlier owner preview is a different SHA",
+        "independence": "PARTIAL / own local WebP and VB source review; independent original image, age/sex, rights and acoustic review open",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; exact R29 CI later"
       }
     },
     {
@@ -9186,37 +9202,50 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R29",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all existing local app-WebPs directly viewed; independent original-source image identity and exact source-byte match NOT TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing author/CC/public-domain credits inspected; current rights per original NOT independently rechecked)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Four local app photos opened: male rest (colored with long tail), adult female with brown patterned long tail, juvenile with shorter tail, and true male flight from US public-domain original.; source-specific sex/age review open)",
+          "photoPairComparisons": "PARTIALLY TESTED (Fazant hen versus Patrijs: existing comparison uses explicit Fazant adult_f but default Patrijs adult image; matching adult_f image exists. Targeted R29 comparison refinement; juvenile Fazant shorter tail is an exception.; no new unverified photo pair)",
+          "responsiveLayoutAndZoom": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "creditsAndCleanAudioUI": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "audioRecordingsAuthenticity": "NOT TESTED (no independently heard and identified original audio)",
+          "audioLicenseAndAttribution": "NOT TESTED (no locally registered species audio)",
+          "soundRolesSongCall": "NOT TESTED (no locally registered sound)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (applicable Vogelbescherming species passages newly read; ANWB edition/page NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing knowledge and size claims read, no new recalculation or unsupported biometric update)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new Sovon numerical/trend claim)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird sources)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED on R29 SHA",
+          "endToEndGuideUI": "NOT TESTED on R29 SHA at content checkpoint",
+          "independentSecondReview": "NOT TESTED (own image/source review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Fazant hen versus Patrijs: existing comparison uses explicit Fazant adult_f but default Patrijs adult image; matching adult_f image exists. Targeted R29 comparison refinement; juvenile Fazant shorter tail is an exception.; no independent photo/original approval)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Four local app photos opened: male rest (colored with long tail), adult female with brown patterned long tail, juvenile with shorter tail, and true male flight from US public-domain original.",
+          "Fazant hen versus Patrijs: existing comparison uses explicit Fazant adult_f but default Patrijs adult image; matching adult_f image exists. Targeted R29 comparison refinement; juvenile Fazant shorter tail is an exception.",
+          "No registered source audio: call description is not a clip.",
+          "Twelve existing local app-WebPs directly viewed, source original and independent age/sex/rights/audio NOT TESTED."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/fazant",
+          "tools/kennisbaseline/knowledge.json",
+          "docs/fotokwaliteit/F3_R29_AALSCHOLVER_FAZANT_PATRIJS_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R29 candidate; earlier owner preview is a different SHA",
+        "independence": "PARTIAL / own local WebP and VB source review; independent original image, age/sex, rights and acoustic review open",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; exact R29 CI later"
       }
     },
     {
@@ -9263,38 +9292,51 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R29",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all existing local app-WebPs directly viewed; independent original-source image identity and exact source-byte match NOT TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (existing author/CC/public-domain credits inspected; current rights per original NOT independently rechecked)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Five local app photos opened: male rest, female in tall grass, two source-designated juveniles, low-resolution provisional flying bird, and neutral adult portrait.; source-specific sex/age review open)",
+          "photoPairComparisons": "PARTIALLY TESTED (Patrijs versus Fazant hen: short rufous partridge tail compared with pheasant longer banded tail; juveniles and obscured tail require cautious identification. Correct female photo role must be used in adult-female comparison.; no new unverified photo pair)",
+          "responsiveLayoutAndZoom": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "creditsAndCleanAudioUI": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "audioRecordingsAuthenticity": "NOT TESTED (no independently heard and identified original audio)",
+          "audioLicenseAndAttribution": "NOT TESTED (no locally registered species audio)",
+          "soundRolesSongCall": "NOT TESTED (no locally registered sound)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED on R29 candidate SHA at content checkpoint",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (applicable Vogelbescherming species passages newly read; ANWB edition/page NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing knowledge and size claims read, no new recalculation or unsupported biometric update)",
+          "sovonNetherlandsStatus": "NOT TESTED (no new Sovon numerical/trend claim)",
+          "ebirdDistributionAndBias": "NOT TESTED (no eBird sources)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED on R29 SHA",
+          "endToEndGuideUI": "NOT TESTED on R29 SHA at content checkpoint",
+          "independentSecondReview": "NOT TESTED (own image/source review only)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Patrijs versus Fazant hen: short rufous partridge tail compared with pheasant longer banded tail; juveniles and obscured tail require cautious identification. Correct female photo role must be used in adult-female comparison.; no independent photo/original approval)"
         },
         "findings": [
           "Scherpere foto van één Patrijs in vrije vlucht met bevestigde rechten.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Five local app photos opened: male rest, female in tall grass, two source-designated juveniles, low-resolution provisional flying bird, and neutral adult portrait.",
+          "Patrijs versus Fazant hen: short rufous partridge tail compared with pheasant longer banded tail; juveniles and obscured tail require cautious identification. Correct female photo role must be used in adult-female comparison.",
+          "No registered source audio; historic text call not an acoustic check.",
+          "Twelve existing local app-WebPs directly viewed, source original and independent age/sex/rights/audio NOT TESTED."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/patrijs",
+          "tools/kennisbaseline/knowledge.json",
+          "docs/fotokwaliteit/F3_R29_AALSCHOLVER_FAZANT_PATRIJS_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R29 candidate; earlier owner preview is a different SHA",
+        "independence": "PARTIAL / own local WebP and VB source review; independent original image, age/sex, rights and acoustic review open",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at content checkpoint; exact R29 CI later"
       }
     },
     {
