@@ -839,9 +839,9 @@ export const SPECIES = [
 
   // ── WIELEWAAL ────────────────────────────────────────────────
   { id:'sp113', nameNL:'Wielewaal',           nameEN:'Eurasian Golden Oriole',    nameSci:'Oriolus oriolus',            family:'Wielewalen',      category:'zomergast', icon:'🐦', regions:['bos','rivierengebied'],
-    fieldmarks:'Mannetje felgeel met zwarte vleugels, fluittende roep in hoog loofbos.',
+    fieldmarks:'Volwassen mannetje felgeel met zwarte vleugels. Vrouwtjes en jonge vogels zijn groenig boven en fijn gestreept onder. De zang is een vloeiend gefluit, vaak hoog in loofbomen.',
     size:{ length:'22–25 cm', wingspan:'44–47 cm', weight:'56–79 g' },
-    plumage:{ adult_m:'Felgeel; zwarte vleugels en staartcentrum; rode snavel', adult_f:'Geelgroen; gestreepte onderzijde', juv:'Als hen; bruin gestippeld', jaarling:null, breeding:null, winter:null, eclipse:null },
+    plumage:{ adult_m:'Felgeel; zwarte vleugels en staartcentrum; rode snavel', adult_f:'Groenige bovendelen en lichte, fijn gestreepte onderzijde', juv:'Groenige bovendelen, lichte, fijn gestreepte onderzijde en een vale snavel', jaarling:null, breeding:null, winter:null, eclipse:null },
     distribution:'Loofbossen en rivieroeverbos; broedvogel midden en oost NL', status:'Zomergast · mei–augustus',
     statusExtra:null, months:'mei-aug', frequency:'schaars', breeding:'ja', redList:'Kwetsbaar' },
 

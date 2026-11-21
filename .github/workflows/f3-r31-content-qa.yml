@@ -1,0 +1,53 @@
+name: Birdspot F3-R31 content and browser QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r30-grote-karekiet-rietzanger-spreeuw-20261121-gpt6
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: birdspot-f3-r31-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  content-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Current and historical F3 evidence
+        run: |
+          node tests/test_lookalike_r31.mjs
+          node tests/test_f3_140_unified_rebaseline.mjs
+          for round in r09 r24 r25 r26 r27 r28 r29 r30; do
+            node "tests/test_lookalike_$round.mjs" || exit
+          done
+          node tests/test_audio_evidence_ceiling.mjs
+      - name: Guide photos, roles and flight galleries
+        run: |
+          node tests/test_guide_photo_verification.mjs
+          node tests/test_fotovolgorde_2026-11-10.mjs
+          node tests/test_vluchtcontrole.mjs
+  chromium-r31:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Mobile comparison, photo credits, zoom, back and offline reopening
+        run: python -u tests/test_lookalike_r31_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: birdspot-f3-r31-browser
+          path: tests/screenshots/lookalike_r31/*.png
+          if-no-files-found: ignore

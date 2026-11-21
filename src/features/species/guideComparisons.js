@@ -1121,12 +1121,53 @@ export const GUIDE_COMPARISONS = [
     tip: 'Vergelijk vooral het grijs op de bovenzijde. Tegenlicht en een andere vleugelhoek veranderen het zichtbare contrast.',
   },
   {
-    label: 'Boerenzwaluw en Huiszwaluw',
+    label: 'Wielewaal en Groene Specht',
+    reciprocalText: true,
     birds: [
-      {id: 'sp114', source: 'boerenzwaluw', marks: 'Roestrode keel en donker borstbandje. Volwassen vogels hebben lange buitenste staartpennen.'},
-      {id: 'sp115', source: 'huiszwaluw', marks: 'Witte stuit en witte keel. De gevorkte staart is korter.'},
+      {id: 'sp113', source: 'wielewaal', photoMissing: true, marks: 'Vrouwtjes en jonge vogels zijn groenig boven en fijn gestreept onder. Een jong heeft een vale snavel.'},
+      {id: 'sp019', source: 'groene-specht', photoMissing: true, marks: 'Let op de rode kruin en geelgroene stuit. Jonge vogels hebben een duidelijker gevlekte kop en onderzijde.'},
     ],
-    tip: 'Kijk eerst naar stuit en keel. Een jonge Boerenzwaluw heeft kortere staartpennen dan een volwassen vogel.',
+    tip: 'Bekijk de kruin en de onderzijde bij goed licht. Beide soorten kunnen golvend vliegen.',
+  },
+  {
+    label: 'Boerenzwaluw en Huiszwaluw · volwassen',
+    tabLabel: 'Volwassen',
+    birds: [
+      {id: 'sp114', source: 'boerenzwaluw', photo: '/assets/species/plumage/sp114-hero-male.webp', marks: 'Roestrode keel en donkere borstband.'},
+      {id: 'sp115', source: 'huiszwaluw', photo: '/assets/species/plumage/sp115-hero-adult.webp', marks: 'Witte keel en borst.'},
+    ],
+    rows: [
+      {label: 'Keel', values: ['Roestrood', 'Wit']},
+      {label: 'Borst', values: ['Donkere borstband', 'Wit tot aan de keel']},
+    ],
+    tip: 'Gebruik in rust vooral keel en borst. In een bocht krijg je vaak beter zicht op de stuit.',
+  },
+  {
+    label: 'Boerenzwaluw en Huiszwaluw · juveniel',
+    tabLabel: 'Juveniel',
+    birds: [
+      {id: 'sp114', source: 'boerenzwaluw', plumage: 'juv', marks: 'Bleke keel boven een donkere borstband.'},
+      {id: 'sp115', source: 'huiszwaluw', plumage: 'juv', marks: 'Lichte borst en buik, doffere kop.'},
+    ],
+    rows: [
+      {label: 'Borst', values: ['Donkere band onder de bleke keel', 'Lichte borst en buik']},
+      {label: 'Stuit bij zicht op de rug', values: ['Donker', 'Opvallend licht']},
+    ],
+    tip: 'Een jonge Boerenzwaluw heeft kortere staartpennen dan een volwassen vogel. Het borstpatroon helpt als de stuit uit beeld blijft.',
+  },
+  {
+    label: 'Boerenzwaluw en Huiszwaluw · in vlucht',
+    flight: true,
+    birds: [
+      {id: 'sp114', source: 'boerenzwaluw', photo: '/assets/species/plumage/sp114-flight.webp', marks: 'Roestrode keel en lange buitenste staartpennen bij volwassen vogels.'},
+      {id: 'sp115', source: 'huiszwaluw', photo: '/assets/species/plumage/sp115-flight.webp', marks: 'Opvallend witte stuit en korte vorkstaart.'},
+    ],
+    rows: [
+      {label: 'Stuit bij zicht op de rug', values: ['Donker', 'Opvallend wit']},
+      {label: 'Keel', values: ['Roestrood boven donkere borstband', 'Wit']},
+      {label: 'Staart', values: ['Lange buitenste pennen bij volwassen vogels', 'Korte vork']},
+    ],
+    tip: 'Kijk in een bocht naar de stuit. Bij tegenlicht helpt de staartvorm, vooral bij volwassen vogels.',
   },
   {
     label: 'Witte en Gele Kwikstaart · jonge vogels',
@@ -1210,9 +1251,10 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Oeverzwaluw en Huiszwaluw',
+    reciprocalText: true,
     birds: [
-      {id: 'sp116', source: 'oeverzwaluw', textOnly: true, marks: 'Bruine bovenzijde en een duidelijke bruine borstband boven de witte buik.'},
-      {id: 'sp115', source: 'huiszwaluw', textOnly: true, marks: 'Witte keel en buik zonder borstband. In vlucht valt de witte stuit op.'},
+      {id: 'sp116', source: 'oeverzwaluw', photoMissing: true, marks: 'Bruine bovenzijde en een duidelijke bruine borstband boven de witte buik.'},
+      {id: 'sp115', source: 'huiszwaluw', photoMissing: true, marks: 'Witte keel en buik zonder borstband. In vlucht valt de witte stuit op.'},
     ],
     tip: 'Begin bij de borstband en de stuit. Een snelle glimp van alleen de staart is vaak onvoldoende.',
   },

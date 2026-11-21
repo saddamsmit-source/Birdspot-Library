@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.1",
   "documentVersion": "0.1 DRAFT",
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "status": "INCREMENTAL / PARTIALLY TESTED, NOT A COMPLETE LOOKALIKE CENSUS",
   "ownerRule": "docs/BIRDSPOT_KWALITEITSNORM.md §3.4 (owner decision 16-11-2026)",
   "scope": "Critical lookalike sample from F3-R09 and F3-R10 with earlier cases retained as reference; expand as each F3 batch is inspected, do not claim all 597 species assessed",
@@ -53,7 +53,10 @@
     "sp084",
     "sp085",
     "sp086",
-    "sp089"
+    "sp089",
+    "sp113",
+    "sp114",
+    "sp115"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -2648,6 +2651,140 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slobeend"
       ],
       "caution": "Vergelijk passend geslacht en kleed. Slobeend-vluchtpartner behoudt historische rol; geen nieuwe onafhankelijke vluchtgoedkeuring."
+    },
+    {
+      "id": "LK-060",
+      "focus": [
+        "sp113"
+      ],
+      "birds": [
+        "sp113",
+        "sp019"
+      ],
+      "risk": "Groenig vrouwtje of juveniel onder matig zicht, in rust of in een golvende vlucht.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Foto van vrouwtje of juveniele Wielewaal in passende houding ontbreekt."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Jong patroon",
+          "values": [
+            "Lichte, fijn gestreepte onderzijde",
+            "Duidelijker gevlekte kop en onderzijde"
+          ]
+        },
+        {
+          "label": "Kop en stuit",
+          "values": [
+            "Bij jonge vogels vale snavel en groenige kop",
+            "Rode kruin en geelgroene stuit"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wielewaal",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht"
+      ],
+      "caution": "Een korte glimp van een groenige vogel of golvende vlucht alleen is onvoldoende. Gebruik kop en verenkleed samen."
+    },
+    {
+      "id": "LK-061",
+      "focus": [
+        "sp114",
+        "sp115"
+      ],
+      "birds": [
+        "sp114",
+        "sp115"
+      ],
+      "risk": "Beide zwaluwen in vlucht, ook juveniele Boerenzwaluw met kortere buitenste staartpennen.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Individuele originelen en licenties herlezen; vergelijkbaarheid en zelfstandige expertcontrole blijven apart."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Keel en borst",
+          "values": [
+            "Roestrode keel met donkere borstband bij volwassen vogels",
+            "Witte keel en witte onderzijde"
+          ]
+        },
+        {
+          "label": "Stuit in een bocht",
+          "values": [
+            "Donkere stuit bij zicht op de bovenzijde",
+            "Opvallend witte stuit bij zicht op de bovenzijde"
+          ]
+        },
+        {
+          "label": "Staart en leeftijd",
+          "values": [
+            "Verlengde buitenste pennen bij volwassen vogels",
+            "Kortere, gevorkte staart zonder lange buitenste pennen"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+        "https://www.vogelbescherming.nl/actueel/bericht/boerenzwaluw-vs-huiszwaluw",
+        "https://www.blascozumeta.com/specie_files/09920_ENG_Hirundo_rustica_aranzadi.pdf",
+        "https://www.blascozumeta.com/specie_files/10010_Delichon_urbicum.pdf"
+      ],
+      "caution": "Van onderen kan de stuit uit beeld zijn. Een korte staart alleen sluit een jonge Boerenzwaluw niet uit."
+    },
+    {
+      "id": "LK-062",
+      "focus": [
+        "sp115"
+      ],
+      "birds": [
+        "sp115",
+        "sp116"
+      ],
+      "risk": "Korte gevorkte staart bij beide soorten; bruinig jeugdkleed kan de gelijkenis versterken.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Foto’s van sp116 en een gelijkwaardig paar voor beide soorten afzonderlijk te beoordelen in R32."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Borst",
+          "values": [
+            "Lichte keel en witte buik",
+            "Bruine borstband over de lichte onderzijde"
+          ]
+        },
+        {
+          "label": "Rug en stuit",
+          "values": [
+            "Witte stuit tegen de donkere rug",
+            "Bruine bovenzijde met een donkerder stuit"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw"
+      ],
+      "caution": "Bij een korte glimp van alleen de staart blijft determinatie onzeker. Kijk naar borst en stuit in een volgende bocht."
     }
   ],
   "withinSpeciesVariation": [
@@ -2673,7 +2810,8 @@
     "visualReviewR11": "docs/fotokwaliteit/F3_R11_GOUDVINK_APPELVINK_ROODMUS_2026-11-16_DRAFT.md",
     "visualReviewR12": "docs/fotokwaliteit/F3_R12_HUISMUS_RINGMUS_MEREL_2026-11-16_DRAFT.md",
     "visualReviewR13": "docs/fotokwaliteit/F3_R13_ZANGLIJSTER_KRAMSVOGEL_KOPERWIEK_2026-11-16_DRAFT.md",
-    "visualReviewR14": "docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md"
+    "visualReviewR14": "docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md",
+    "visualReviewR31": "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }
