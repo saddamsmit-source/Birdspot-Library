@@ -1,0 +1,53 @@
+name: Birdspot F3-R38 source, media and browser QA
+on:
+  pull_request:
+    branches:
+      - fix/birdspot-f3-r37-source-and-regression-20261121-codex
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: birdspot-f3-r38-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  r38-content-contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: F3-140, nine photo SHA-1s, seven audio paths and comparisons
+        run: |
+          node tests/test_f3_140_unified_rebaseline.mjs
+          node tests/test_lookalike_r38.mjs
+          node tests/test_lookalike_r37.mjs
+          node tests/test_lookalike_r36.mjs
+          node tests/test_lookalike_r35.mjs
+          node tests/test_lookalike_r09.mjs
+          node tests/test_audio_140_contract.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+          node tests/test_guide_poses.mjs
+          node tests/test_guide_photo_verification.mjs
+          node tests/test_kennisbaseline.mjs
+  r38-chromium-offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Chromium test dependencies
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Actual images, sound bytes, reciprocal comparison and offline reopen
+        run: python -u tests/test_lookalike_r38_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: birdspot-f3-r38-chromium
+          path: tests/screenshots/lookalike_r38/*.png
+          if-no-files-found: ignore
