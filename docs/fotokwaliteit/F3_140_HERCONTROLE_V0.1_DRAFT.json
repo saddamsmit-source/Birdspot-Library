@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 50,
+    "nextNotStarted": 47,
     "secondBatchStarted": 3,
-    "contentInspected": 90,
+    "contentInspected": 93,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -84,7 +84,8 @@
     "twentySeventhBatchStarted": 3,
     "twentyEighthBatchStarted": 3,
     "twentyNinthBatchStarted": 3,
-    "thirtiethBatchStarted": 3
+    "thirtiethBatchStarted": 3,
+    "thirtyFirstBatchStarted": 3
   },
   "records": [
     {
@@ -9613,43 +9614,76 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (Mannetje)",
+            "path": "/assets/showcase/sp113.webp",
+            "oldRights": "Historisch geen negenpunts-audit; bron en licentie opnieuw gelezen in F3-R31"
+          },
+          {
+            "role": "In vlucht (Mannetje)",
+            "path": "/assets/species/plumage/sp113-flight.webp",
+            "oldRights": "VERIFIED in historische vluchtcontrole; bron en licentie opnieuw gelezen in F3-R31"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R31",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle lokale WebP’s en individuele bronoriginelen vergeleken; soort/kleed nog afzonderlijk te beoordelen)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker, licentieversie en bronmetadata opnieuw gelezen; zichtbare attributie en onafhankelijk eindoordeel apart)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Twee lokale beelden: geelzwart volwassen mannentype in rust en vrije vlucht; jong en vrouw alleen tekst.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Wielewaal–Groene Specht: tekst in twee richtingen voor jong en vrouw; passend Wielewaal-fotopaar ontbreekt.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (zie PR #329 voor Chromium op exacte kandidaat; fysieke toesteltest apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registratie per beeld gelezen, nul audiobestanden; browserbewijs in PR #329)",
+          "audioRecordingsAuthenticity": "NOT TESTED (0 geregistreerde lokale opnamen)",
+          "audioLicenseAndAttribution": "NOT TESTED (0 geregistreerde lokale opnamen)",
+          "soundRolesSongCall": "NOT TESTED (beschrijvingen bij Vogelbescherming gelezen; geen lokaal fragment)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming ingezien; ANWB-soortpassage niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Wielewaal-kleedtekst bijgesteld (Vogelbescherming en Naturalis); volledig kennisprofiel en apart bronpaar voor spanwijdte/gewicht open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina ingezien; geen nieuwe aantal- of trendclaim opgenomen)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell soortreferenties en methodiek geraadpleegd; geen gevalideerde Nederlandse distributiestatistiek toegevoegd)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; afzonderlijk Chromium-bewijs in PR #329)",
+          "independentSecondReview": "NOT TESTED in het dossier (afzonderlijke read-only QA op exacte head hoort in de PR; volledige expert-aftekening open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-060; Wielewaal–Groene Specht: tekst in twee richtingen voor jong en vrouw; passend Wielewaal-fotopaar ontbreekt.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Actuele inventaris van 0 naar 2 hersteld; historische negenpuntsaudit blijft 0 en NOT TESTED.",
+          "Twee lokale beelden: geelzwart volwassen mannentype in rust en vrije vlucht; jong en vrouw alleen tekst.",
+          "Wielewaal–Groene Specht: tekst in twee richtingen voor jong en vrouw; passend Wielewaal-fotopaar ontbreekt.",
+          "Wielewaal-kleedtekst bijgesteld (Vogelbescherming en Naturalis); volledig kennisprofiel en apart bronpaar voor spanwijdte/gewicht open.",
+          "Bronoriginelen, bronmakers en licentieversies per bestand herlezen. Volledige herpublicatie- en expertaftekening blijven open.",
+          "Geen lokaal geregistreerde zang of roep. Samsung-PWA-installatie OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md",
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wielewaal",
+          "https://stats.sovon.nl/stats/soort/15080",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht",
+          "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?id=130968",
+          "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_from_behind_looking_right.jpg",
+          "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_Barcelona_1.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (geen nieuwe preview; Samsung-PWA blijft OPEN)",
+        "independence": "Zie afzonderlijke read-only QA in PR #329; volledige ornithologische, juridische en akoestische aftekening open.",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "96aff912306d471f3d9449b8433d86c6da80992c",
+          "1acfe85beb4e3a8f9d68bf186dae4b54ed0aad58"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie lokale regressies en CI op exacte head in de handoff van PR #329."
       }
     },
     {
@@ -9696,37 +9730,66 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R31",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle lokale WebP’s en individuele bronoriginelen vergeleken; soort/kleed nog afzonderlijk te beoordelen)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker, licentieversie en bronmetadata opnieuw gelezen; zichtbare attributie en onafhankelijk eindoordeel apart)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Man/vrouw brongeannoteerd, juveniel bronbenoemd, aparte vrije vlucht en neutraal rustbeeld. Staartlengte alleen bepaalt geen geslacht.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Boerenzwaluw–Huiszwaluw: drie bestaande beeldparen voor volwassen/rust, juveniel/rust en vrije vlucht; aparte Gierzwaluwvergelijking behouden.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (zie PR #329 voor Chromium op exacte kandidaat; fysieke toesteltest apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registratie per beeld gelezen, nul audiobestanden; browserbewijs in PR #329)",
+          "audioRecordingsAuthenticity": "NOT TESTED (0 geregistreerde lokale opnamen)",
+          "audioLicenseAndAttribution": "NOT TESTED (0 geregistreerde lokale opnamen)",
+          "soundRolesSongCall": "NOT TESTED (beschrijvingen bij Vogelbescherming gelezen; geen lokaal fragment)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming ingezien; ANWB-soortpassage niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Bestaande lengteband en leeftijdskenmerken tegen Vogelbescherming en Blasco-Zumeta/Heinze gelezen; spreiding van kleden en overige maten open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina ingezien; geen nieuwe aantal- of trendclaim opgenomen)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell soortreferenties en methodiek geraadpleegd; geen gevalideerde Nederlandse distributiestatistiek toegevoegd)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; afzonderlijk Chromium-bewijs in PR #329)",
+          "independentSecondReview": "NOT TESTED in het dossier (afzonderlijke read-only QA op exacte head hoort in de PR; volledige expert-aftekening open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-061; Boerenzwaluw–Huiszwaluw: drie bestaande beeldparen voor volwassen/rust, juveniel/rust en vrije vlucht; aparte Gierzwaluwvergelijking behouden.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Man/vrouw brongeannoteerd, juveniel bronbenoemd, aparte vrije vlucht en neutraal rustbeeld. Staartlengte alleen bepaalt geen geslacht.",
+          "Boerenzwaluw–Huiszwaluw: drie bestaande beeldparen voor volwassen/rust, juveniel/rust en vrije vlucht; aparte Gierzwaluwvergelijking behouden.",
+          "Bestaande lengteband en leeftijdskenmerken tegen Vogelbescherming en Blasco-Zumeta/Heinze gelezen; spreiding van kleden en overige maten open.",
+          "Bronoriginelen, bronmakers en licentieversies per bestand herlezen. Volledige herpublicatie- en expertaftekening blijven open.",
+          "Geen lokaal geregistreerde zang of roep. Samsung-PWA-installatie OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md",
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw",
+          "https://stats.sovon.nl/stats/soort/9920",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+          "https://www.vogelbescherming.nl/actueel/bericht/boerenzwaluw-vs-huiszwaluw",
+          "https://www.blascozumeta.com/specie_files/09920_ENG_Hirundo_rustica_aranzadi.pdf",
+          "https://www.inaturalist.org/photos/375110519",
+          "https://www.inaturalist.org/photos/366904409",
+          "https://commons.wikimedia.org/wiki/File:Juvenile_Barn_Swallow_(Hirundo_rustica),_Schiermonnikoog,_Netherlands.jpg",
+          "https://commons.wikimedia.org/wiki/File:Schiermonnikoog_-_Boerenzwaluw_(Hirundo_rustica)_v2.jpg",
+          "https://commons.wikimedia.org/wiki/File:Barn_Swallow_(14543889672).jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (geen nieuwe preview; Samsung-PWA blijft OPEN)",
+        "independence": "Zie afzonderlijke read-only QA in PR #329; volledige ornithologische, juridische en akoestische aftekening open.",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "dc66cda7a7cff43dbe6d7dd9bfce9415fb1a450e",
+          "a598bfbf10b912ce79f2ae1a5bac8399e1bda82d",
+          "41557ee149052615624fc92ad355b727775f1671",
+          "6873d5edaabe8c0ded8cf022bc8e219a7a465228",
+          "6151d1642b4ced3fb6e6a7d9bed3f68a481a0d6b"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie lokale regressies en CI op exacte head in de handoff van PR #329."
       }
     },
     {
@@ -9768,37 +9831,65 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R31",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle lokale WebP’s en individuele bronoriginelen vergeleken; soort/kleed nog afzonderlijk te beoordelen)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker, licentieversie en bronmetadata opnieuw gelezen; zichtbare attributie en onafhankelijk eindoordeel apart)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Neutraal volwassen portret, juveniel volgens bronannotatie, aparte vrije vlucht met witte stuit, gedragsfoto bij modder.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Huiszwaluw–Boerenzwaluw in drie rollen; Huiszwaluw–Oeverzwaluw voorlopig via wederkerige tekst; passende gepaarde beelden voor dat laatste paar open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (zie PR #329 voor Chromium op exacte kandidaat; fysieke toesteltest apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registratie per beeld gelezen, nul audiobestanden; browserbewijs in PR #329)",
+          "audioRecordingsAuthenticity": "NOT TESTED (0 geregistreerde lokale opnamen)",
+          "audioLicenseAndAttribution": "NOT TESTED (0 geregistreerde lokale opnamen)",
+          "soundRolesSongCall": "NOT TESTED (beschrijvingen bij Vogelbescherming gelezen; geen lokaal fragment)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming ingezien; ANWB-soortpassage niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Bestaande lengteband en neutraal volwassen kleed tegen Vogelbescherming en Blasco-Zumeta/Heinze gelezen; overige maten apart.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina ingezien; geen nieuwe aantal- of trendclaim opgenomen)",
+          "ebirdDistributionAndBias": "PARTIALLY TESTED (Cornell soortreferenties en methodiek geraadpleegd; geen gevalideerde Nederlandse distributiestatistiek toegevoegd)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; afzonderlijk Chromium-bewijs in PR #329)",
+          "independentSecondReview": "NOT TESTED in het dossier (afzonderlijke read-only QA op exacte head hoort in de PR; volledige expert-aftekening open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-061, LK-062; Huiszwaluw–Boerenzwaluw in drie rollen; Huiszwaluw–Oeverzwaluw voorlopig via wederkerige tekst; passende gepaarde beelden voor dat laatste paar open.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Neutraal volwassen portret, juveniel volgens bronannotatie, aparte vrije vlucht met witte stuit, gedragsfoto bij modder.",
+          "Huiszwaluw–Boerenzwaluw in drie rollen; Huiszwaluw–Oeverzwaluw voorlopig via wederkerige tekst; passende gepaarde beelden voor dat laatste paar open.",
+          "Bestaande lengteband en neutraal volwassen kleed tegen Vogelbescherming en Blasco-Zumeta/Heinze gelezen; overige maten apart.",
+          "Bronoriginelen, bronmakers en licentieversies per bestand herlezen. Volledige herpublicatie- en expertaftekening blijven open.",
+          "Geen lokaal geregistreerde zang of roep. Samsung-PWA-installatie OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md",
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+          "https://stats.sovon.nl/stats/soort/10010",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw",
+          "https://www.vogelbescherming.nl/actueel/bericht/boerenzwaluw-vs-huiszwaluw",
+          "https://www.blascozumeta.com/specie_files/10010_Delichon_urbicum.pdf",
+          "https://www.inaturalist.org/photos/500944231",
+          "https://www.inaturalist.org/photos/558901368",
+          "https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg",
+          "https://commons.wikimedia.org/wiki/File:Delichon_urbicum_Oulu_20120527_04.JPG"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (geen nieuwe preview; Samsung-PWA blijft OPEN)",
+        "independence": "Zie afzonderlijke read-only QA in PR #329; volledige ornithologische, juridische en akoestische aftekening open.",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "1b960c61673094bad50739cc31271c0bd522920c",
+          "2e048b5e8693cbd75f5c4b897c03016aed985f3c",
+          "25fc7c57020daed0165795bcdd13cf3f66ba6a82",
+          "4ba63bb17d047cbfc7807d145129f3d5d499d3f1"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie lokale regressies en CI op exacte head in de handoff van PR #329."
       }
     },
     {

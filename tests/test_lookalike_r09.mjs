@@ -67,7 +67,16 @@ for(const pair of registry.pairs) {
       c.birds.every(b=>b.photoMissing));
     assert.ok(hiddenPanel || pair.birds.some(id=>!mediaRegistered(id)),pair.id+' claims missing while both have media');
     assert.ok(pair.mediaOpen.some(x=>/photo|foto|sp\d{3}/i.test(x)));
-    assert.ok(pair.birds.some(id=>KNOWLEDGE[id]?.caution?.text),pair.id+' needs a visible caution');
+    const reciprocal = GUIDE_COMPARISONS.some(c => c.reciprocalText && c.birds.length === 2 &&
+      pair.birds.every(id => c.birds.some(b => b.id === id && b.photoMissing && b.marks)));
+    if (reciprocal) {
+      for (const [index, id] of pair.birds.entries()) {
+        assert.ok(recognitionPanel(catalog.get(id)).includes('data-compare-species="' + pair.birds[1 - index] + '"'),
+          pair.id + ' needs visible reciprocal field guidance for ' + id);
+      }
+    } else {
+      assert.ok(pair.birds.some(id=>KNOWLEDGE[id]?.caution?.text),pair.id+' needs a visible caution');
+    }
     const active=matching.some(c=>c.birds.every(b=>comparisonPhoto(b,Boolean(c.flight))));
     assert.ok(!active,'Incomplete image pair must never be displayed: '+pair.id);
   } else assert.fail('Unsupported media gate '+pair.photoState);
