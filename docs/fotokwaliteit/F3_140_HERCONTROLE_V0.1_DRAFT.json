@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 26,
+    "nextNotStarted": 23,
     "secondBatchStarted": 3,
-    "contentInspected": 114,
+    "contentInspected": 117,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -92,7 +92,8 @@
     "thirtyFifthBatchStarted": 3,
     "thirtySixthBatchStarted": 3,
     "thirtySeventhBatchStarted": 3,
-    "thirtyEighthBatchStarted": 3
+    "thirtyEighthBatchStarted": 3,
+    "thirtyNinthBatchStarted": 3
   },
   "records": [
     {
@@ -12126,7 +12127,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (broedachtig)",
+            "path": "/assets/species/sp157.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "Verenkleed (Juveniel, bronannotatie)",
+            "path": "/assets/species/plumage/sp157-juv.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "Verenkleed (Winterkleed, historische rol)",
+            "path": "/assets/species/plumage/sp157-winter.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "In vlucht (neutraal)",
+            "path": "/assets/species/plumage/sp157-flight.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          }
+        ],
         "existingAudioCount": 3,
         "existingAudioPaths": [
           "/assets/species/audio/sp157-flight-call.mp3",
@@ -12135,37 +12157,60 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R39",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (4 lokale WebP's individueel geopend en visueel beoordeeld; originele bronpixels en onafhankelijke soortdeterminatie NIET TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (bestaande maker/licentie/bronvermeldingen uit manifest geïnspecteerd; oorspronkelijke Commons/iNaturalist-foto/licentie bij R39-webtoegang geblokkeerd en niet vrijgegeven)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vier lokale beelden visueel beoordeeld: zwarte hoofdfoto, bleke wintervogel, jong aandoende getekende vogel en vrije vlucht. De witte rugwig is niet vanuit elke fotopose aantoonbaar. Exacte geslachts- en leeftijdsrol blijft onbewezen. Geen onafhankelijke leeftijd/geslachtsdeterminatie)",
+          "photoPairComparisons": "PARTIALLY TESTED (Tureluur–Zwarte Ruiter drie kleedvergelijkingen in beide richtingen bestaan. Ongelijke pose/kleed en bronoriginelen niet volledig onafhankelijk gematcht.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R39 Chromium en Samsung-toestel apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (auteurs en licenties in manifest; actuele foto-i en rustige audio-UI nog in R39-browser te testen)",
+          "audioRecordingsAuthenticity": "NOT TESTED (bestaande lokale MP3's bekend, geen volledige oorspronkelijke XC-PCM-match of onafhankelijke soortluisterreview)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (bestaande maker/CC/licentielink in manifest aanwezig; oorspronkelijke XC-licenties en commerciële rechten niet onafhankelijk afgetekend)",
+          "soundRolesSongCall": "NOT TESTED (rolnamen uit eerder register, geen zelfstandige luistercontrole)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R39 Chromium offline 10 clips en HTTP 206 nog te draaien)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (directe Vogelbescherming-soortpagina gelezen; concrete ANWB-passage niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande soortmaten en herkenning gelezen; complete twee-uitgeversmethode ontbreekt)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen op verspreiding/seizoenen; alle specifieke trends en jaarstatistiek niet volledig geherverifieerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen actuele Nederland-specifieke eBird-analyse met meldingsbias)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (niet onderdeel van deze bronbatch; Samsung/backup apart)",
+          "endToEndGuideUI": "NOT TESTED (nieuwe R39 browser/preview nog open)",
+          "independentSecondReview": "NOT TESTED (eigen primaire fotovisie, geen onafhankelijke vak/rights QA)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Tureluur–Zwarte Ruiter drie kleedvergelijkingen in beide richtingen bestaan. Ongelijke pose/kleed en bronoriginelen niet volledig onafhankelijk gematcht.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Vier lokale beelden visueel beoordeeld: zwarte hoofdfoto, bleke wintervogel, jong aandoende getekende vogel en vrije vlucht. De witte rugwig is niet vanuit elke fotopose aantoonbaar. Exacte geslachts- en leeftijdsrol blijft onbewezen.",
+          "Tureluur–Zwarte Ruiter drie kleedvergelijkingen in beide richtingen bestaan. Ongelijke pose/kleed en bronoriginelen niet volledig onafhankelijk gematcht.",
+          "Ten opzichte van R38 zijn geen mediabytes of appgedrag veranderd. 10 bestaande audioregistraties voor R39. Onafhankelijke geluid/rights/ANWB/eBird OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R39_ZWARTE_GROENPOOT_BOSRUITER_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "src/features/species/guideComparisons.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-ruiter",
+          "https://stats.sovon.nl/stats/soort/5450",
+          "https://www.inaturalist.org/photos/121189174",
+          "https://www.inaturalist.org/photos/603401014",
+          "https://www.inaturalist.org/photos/722959312",
+          "https://www.inaturalist.org/photos/711147296"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED op R39 kandidaat-SHA",
+        "independence": "NOT VERIFIED (geen onafhankelijke ornithologische/rechtenreview)",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "e8a42385c4f9bc8e8d1820b3cbcc0ddcce505d90",
+          "511e6d043a553f4ee754c9efdcff6fb22e78f6b4",
+          "97e6aa36c333857084991913485ade669b570c46",
+          "39a4896659211f9850ec1ecbdedc8c1d6059e1"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -12181,7 +12226,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp158.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "Verenkleed (Eerstejaars/juveniel bronannotatie)",
+            "path": "/assets/species/plumage/sp158-juv.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "Verenkleed (Winterkleed, historische rol)",
+            "path": "/assets/species/plumage/sp158-winter.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "In vlucht (neutraal)",
+            "path": "/assets/species/plumage/sp158-flight.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          }
+        ],
         "existingAudioCount": 3,
         "existingAudioPaths": [
           "/assets/species/audio/sp158-flight-call.mp3",
@@ -12190,37 +12256,61 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R39",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (4 lokale WebP's individueel geopend en visueel beoordeeld; originele bronpixels en onafhankelijke soortdeterminatie NIET TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (bestaande maker/licentie/bronvermeldingen uit manifest geïnspecteerd; oorspronkelijke Commons/iNaturalist-foto/licentie bij R39-webtoegang geblokkeerd en niet vrijgegeven)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vier lokale beelden visueel beoordeeld: hoofdfoto met stevige snavel, winterrust, bronmatig als eerstejaars in november beschreven juv-beeld met resterende juveniele vleugeldekveren en vrije vlucht. Het label 'Juveniel' mag niet zonder kleedsleutel worden gelijkgesteld aan een volledig jeugdkleed. Geen onafhankelijke leeftijd/geslachtsdeterminatie)",
+          "photoPairComparisons": "PARTIALLY TESTED (Groenpootruiter–Poelruiter drie rust-/kleedvergelijkingen in beide richtingen; brondeterminatie en identiek kleed-/posefotopaar nog open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R39 Chromium en Samsung-toestel apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (auteurs en licenties in manifest; actuele foto-i en rustige audio-UI nog in R39-browser te testen)",
+          "audioRecordingsAuthenticity": "NOT TESTED (bestaande lokale MP3's bekend, geen volledige oorspronkelijke XC-PCM-match of onafhankelijke soortluisterreview)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (bestaande maker/CC/licentielink in manifest aanwezig; oorspronkelijke XC-licenties en commerciële rechten niet onafhankelijk afgetekend)",
+          "soundRolesSongCall": "NOT TESTED (rolnamen uit eerder register, geen zelfstandige luistercontrole)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R39 Chromium offline 10 clips en HTTP 206 nog te draaien)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (directe Vogelbescherming-soortpagina gelezen; concrete ANWB-passage niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande soortmaten en herkenning gelezen; complete twee-uitgeversmethode ontbreekt)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen op verspreiding/seizoenen; alle specifieke trends en jaarstatistiek niet volledig geherverifieerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen actuele Nederland-specifieke eBird-analyse met meldingsbias)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (niet onderdeel van deze bronbatch; Samsung/backup apart)",
+          "endToEndGuideUI": "NOT TESTED (nieuwe R39 browser/preview nog open)",
+          "independentSecondReview": "NOT TESTED (eigen primaire fotovisie, geen onafhankelijke vak/rights QA)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Groenpootruiter–Poelruiter drie rust-/kleedvergelijkingen in beide richtingen; brondeterminatie en identiek kleed-/posefotopaar nog open.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Vier lokale beelden visueel beoordeeld: hoofdfoto met stevige snavel, winterrust, bronmatig als eerstejaars in november beschreven juv-beeld met resterende juveniele vleugeldekveren en vrije vlucht. Het label 'Juveniel' mag niet zonder kleedsleutel worden gelijkgesteld aan een volledig jeugdkleed.",
+          "Groenpootruiter–Poelruiter drie rust-/kleedvergelijkingen in beide richtingen; brondeterminatie en identiek kleed-/posefotopaar nog open.",
+          "Ten opzichte van R38 zijn geen mediabytes of appgedrag veranderd. 10 bestaande audioregistraties voor R39. Onafhankelijke geluid/rights/ANWB/eBird OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R39_ZWARTE_GROENPOOT_BOSRUITER_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "src/features/species/guideComparisons.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groenpootruiter",
+          "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-groenpootruiter-vs-poelruiter",
+          "https://stats.sovon.nl/stats/soort/5480",
+          "https://www.inaturalist.org/photos/198450766",
+          "https://www.inaturalist.org/photos/475334386",
+          "https://www.inaturalist.org/photos/168627338",
+          "https://commons.wikimedia.org/wiki/File:The_Common_Greenshank.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED op R39 kandidaat-SHA",
+        "independence": "NOT VERIFIED (geen onafhankelijke ornithologische/rechtenreview)",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "21e9c57233621c8c5ee366e418ca1dddd6ce0d6a",
+          "eeadde3e16dc5fc2dd4e6b4f398be6e0e0869122",
+          "95824f564d2acc9af77ad3d6a0f769f75a5e54fc",
+          "e176aaadf5427182e4fe8ae14e7d144cae5d18f9"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -12236,7 +12326,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp159.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "Verenkleed (Juveniel, historische rol)",
+            "path": "/assets/species/plumage/sp159-juv.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "Verenkleed (Winterkleed, historische rol)",
+            "path": "/assets/species/plumage/sp159-winter.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          },
+          {
+            "role": "In vlucht (neutraal)",
+            "path": "/assets/species/plumage/sp159-flight.webp",
+            "oldRights": "NOT TESTED (historische media-registratie; originele foto en volledige rechten niet hernieuwd vrijgegeven)"
+          }
+        ],
         "existingAudioCount": 4,
         "existingAudioPaths": [
           "/assets/species/audio/sp159-call.mp3",
@@ -12246,37 +12357,61 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R39",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (4 lokale WebP's individueel geopend en visueel beoordeeld; originele bronpixels en onafhankelijke soortdeterminatie NIET TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (bestaande maker/licentie/bronvermeldingen uit manifest geïnspecteerd; oorspronkelijke Commons/iNaturalist-foto/licentie bij R39-webtoegang geblokkeerd en niet vrijgegeven)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vier lokale beelden visueel beoordeeld: hoofd rust, winterrust, juveniel rust, vrije vlucht met lichte gevlekte ondervleugel. Bosruiter-spanwijdte in app 36–40 cm versus Vogelbescherming en Zootierliste elk 54–57 cm. Materieel biometrisch conflict; bronmeetdefinities/afronding en tweede uitgever apart reconciliëren. Geen onafhankelijke leeftijd/geslachtsdeterminatie)",
+          "photoPairComparisons": "PARTIALLY TESTED (Witgat–Bosruiter drie vergelijkingen en Oeverloper–Bosruiter juvenielenpaar bestaan. Witgat-juvenielenfoto uit R38 is zeer onscherp, dus het gelijkwaardige juvenielenfotopaar blijft ONGESCHIKT voor eindaftekening.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R39 Chromium en Samsung-toestel apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (auteurs en licenties in manifest; actuele foto-i en rustige audio-UI nog in R39-browser te testen)",
+          "audioRecordingsAuthenticity": "NOT TESTED (bestaande lokale MP3's bekend, geen volledige oorspronkelijke XC-PCM-match of onafhankelijke soortluisterreview)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (bestaande maker/CC/licentielink in manifest aanwezig; oorspronkelijke XC-licenties en commerciële rechten niet onafhankelijk afgetekend)",
+          "soundRolesSongCall": "NOT TESTED (rolnamen uit eerder register, geen zelfstandige luistercontrole)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R39 Chromium offline 10 clips en HTTP 206 nog te draaien)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (directe Vogelbescherming-soortpagina gelezen; concrete ANWB-passage niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande soortmaten en herkenning gelezen; complete twee-uitgeversmethode ontbreekt; Bosruiter-spanwijdte 36–40 vs 54–57 cm onopgelost)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen op verspreiding/seizoenen; alle specifieke trends en jaarstatistiek niet volledig geherverifieerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen actuele Nederland-specifieke eBird-analyse met meldingsbias)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (niet onderdeel van deze bronbatch; Samsung/backup apart)",
+          "endToEndGuideUI": "NOT TESTED (nieuwe R39 browser/preview nog open)",
+          "independentSecondReview": "NOT TESTED (eigen primaire fotovisie, geen onafhankelijke vak/rights QA)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Witgat–Bosruiter drie vergelijkingen en Oeverloper–Bosruiter juvenielenpaar bestaan. Witgat-juvenielenfoto uit R38 is zeer onscherp, dus het gelijkwaardige juvenielenfotopaar blijft ONGESCHIKT voor eindaftekening.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Vier lokale beelden visueel beoordeeld: hoofd rust, winterrust, juveniel rust, vrije vlucht met lichte gevlekte ondervleugel. Bosruiter-spanwijdte in app 36–40 cm versus Vogelbescherming en Zootierliste elk 54–57 cm. Materieel biometrisch conflict; bronmeetdefinities/afronding en tweede uitgever apart reconciliëren.",
+          "Witgat–Bosruiter drie vergelijkingen en Oeverloper–Bosruiter juvenielenpaar bestaan. Witgat-juvenielenfoto uit R38 is zeer onscherp, dus het gelijkwaardige juvenielenfotopaar blijft ONGESCHIKT voor eindaftekening.",
+          "Ten opzichte van R38 zijn geen mediabytes of appgedrag veranderd. 10 bestaande audioregistraties voor R39. Onafhankelijke geluid/rights/ANWB/eBird OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R39_ZWARTE_GROENPOOT_BOSRUITER_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "src/features/species/guideComparisons.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bosruiter",
+          "https://stats.sovon.nl/stats/soort/5540",
+          "https://www.zootierliste.de/en/index.php?art=50901284&familie=21508&klasse=2&ordnung=215",
+          "https://www.inaturalist.org/photos/121189166",
+          "https://www.inaturalist.org/photos/365421308",
+          "https://www.inaturalist.org/photos/555542627",
+          "https://commons.wikimedia.org/wiki/File:Wood_Sandpiper_(Tringa_glareola)_(53879706937),_crop.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED op R39 kandidaat-SHA",
+        "independence": "NOT VERIFIED (geen onafhankelijke ornithologische/rechtenreview)",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "84f9a3825c606246873901a53b35490f83d2a685",
+          "68cd51f8b8a927aebcb104df3a69bba1f462cde4",
+          "c08cdd077c8d8f811429ff54b02ef5dbaefc2444",
+          "e0924ddb37eea48910eb492d44d9160773b5604d"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
