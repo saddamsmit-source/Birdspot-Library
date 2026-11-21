@@ -47,6 +47,7 @@ for(const {id,F3,currentAssets,historic} of rows){
  paths[id].forEach((path,i)=>{
   const bytes=read('..'+path);
   assert.ok(bytes.length>1000,id+' missing photo '+path);
+  assert.match(F3.photoBlobSHAs[i],/^[0-9a-f]{40}$/,'Recorded Git blob hash must be exactly 40 hexadecimal digits');
   const blob=createHash('sha1').update('blob '+bytes.length+String.fromCharCode(0)).update(bytes).digest('hex');
   assert.equal(blob,F3.photoBlobSHAs[i],id+' observed photo changed '+path);
  });
