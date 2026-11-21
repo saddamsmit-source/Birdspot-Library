@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 53,
+    "nextNotStarted": 50,
     "secondBatchStarted": 3,
-    "contentInspected": 87,
+    "contentInspected": 90,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -83,7 +83,8 @@
     "twentySixthBatchStarted": 3,
     "twentySeventhBatchStarted": 3,
     "twentyEighthBatchStarted": 3,
-    "twentyNinthBatchStarted": 3
+    "twentyNinthBatchStarted": 3,
+    "thirtiethBatchStarted": 3
   },
   "records": [
     {
@@ -9352,43 +9353,72 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (neutraal)",
+            "path": "/assets/showcase/sp108.webp",
+            "oldRights": "PARTIALLY TESTED (historical Commons Eugene Stolyarov CC BY-SA 4.0; new original-to-local pixel check open)"
+          },
+          {
+            "role": "In vlucht (voorwaardelijk — beperkte scherpte)",
+            "path": "/assets/species/plumage/sp108-flight.webp",
+            "oldRights": "PARTIALLY TESTED (historical iNaturalist Ángel Marcos Luengo Bello CC BY 4.0; original inaccessible, not a full pose pass)"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R30",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebPs directly opened; Git blobs recorded, external original-bytes/pixel match NOT TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical maker/CC metadata read and limited Commons source confirmation; current per-original reproduction authorization NOT independently completed)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Two existing local WebPs viewed: reed-perched large brown warbler with strong bill and eyebrow; separate genuine airborne bird 724×543 with softness, still provisional (not definitive flight-quality).; age/sex independently unverified)",
+          "photoPairComparisons": "PARTIALLY TESTED (Vogelbescherming Grote/Kleine Karekiet pages read; larger heavy bill and brow can help, but no complete own knowledge profile or verified matching photo pair for sp109; no invented photo panel.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R30 exact head at content checkpoint; targeted Chromium pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R30 UI/credits/check pending)",
+          "audioRecordingsAuthenticity": "NOT TESTED (none of these species has registered local audio)",
+          "audioLicenseAndAttribution": "NOT TESTED (0 audio records, no verified source clip)",
+          "soundRolesSongCall": "NOT TESTED (VBN textual song/call description, no registered local audio)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R30; no registered source audio)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species passages read; ANWB book/edition/pages unavailable)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing species text and VBN source read; no full knowledge.json profile for focus species, gap remains)",
+          "sovonNetherlandsStatus": "NOT TESTED (no fresh Sovon trends or numbers promoted)",
+          "ebirdDistributionAndBias": "NOT TESTED (no new eBird data used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R30 device, separate from earlier preview)",
+          "endToEndGuideUI": "NOT TESTED (R30 browser and device test separate)",
+          "independentSecondReview": "NOT TESTED (own visual inspection/source text; no independent ornithologist or audio reviewer)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Vogelbescherming Grote/Kleine Karekiet pages read; larger heavy bill and brow can help, but no complete own knowledge profile or verified matching photo pair for sp109; no invented photo panel.; source/photo pair gaps explicitly preserved)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Two existing local WebPs viewed: reed-perched large brown warbler with strong bill and eyebrow; separate genuine airborne bird 724×543 with softness, still provisional (not definitive flight-quality).",
+          "Vogelbescherming Grote/Kleine Karekiet pages read; larger heavy bill and brow can help, but no complete own knowledge profile or verified matching photo pair for sp109; no invented photo panel.",
+          "Local historical hero CC BY-SA4 and flight iNaturalist CC BY4 metadata preserved; flight source inaccessible during R30.",
+          "Old nine-point audited=false, oldAssetCount=0 retained; actual current guide has 2 local files.",
+          "All registered local audio absent; never grant complete audio PASS; original source rights, age/sex and mobile-device gates open."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-karekiet",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-karekiet",
+          "docs/fotokwaliteit/F3_R30_GROTE_KAREKIET_RIETZANGER_SPREEUW_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R30 SHA (owner tested earlier private preview on a different SHA)",
+        "independence": "PARTIAL / own visible local-photo and source-text review; independent originals/rights/sex/age/audio open",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "aab77a5b109b6cc3e65670c17a79a417c69dfcd9",
+          "cc77338228b820f351259cc726d407d2282157fc"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at R30 content checkpoint; CI per exact head separate"
       }
     },
     {
@@ -9404,43 +9434,73 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (neutraal)",
+            "path": "/assets/species/sp110.webp",
+            "oldRights": "PARTIALLY TESTED (Commons Charles J. Sharp CC BY-SA 4.0 page reread, local/original byte match open)"
+          },
+          {
+            "role": "Overige herkenningsfoto (opvliegend, géén vrije vlucht)",
+            "path": "/assets/species/plumage/sp110-flight.webp",
+            "oldRights": "PARTIALLY TESTED (historical Commons Dominique Armange CC BY-SA 4.0; source inaccessible in R30)"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R30",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebPs directly opened; Git blobs recorded, external original-bytes/pixel match NOT TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical maker/CC metadata read and limited Commons source confirmation; current per-original reproduction authorization NOT independently completed)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Two existing local WebPs viewed: perched Sedge Warbler with bright eyebrow and streaked crown, second bird beating wings among branches; flightReview states out-of-flight (uit-rol), never true free flight.; age/sex independently unverified)",
+          "photoPairComparisons": "PARTIALLY TESTED (Vogelbescherming Sedge Warbler vs small reed warbler: contrasting brow/dark crown and streaked back vs plain brown; no full knowledge profile or approved matching partner photo.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R30 exact head at content checkpoint; targeted Chromium pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R30 UI/credits/check pending)",
+          "audioRecordingsAuthenticity": "NOT TESTED (none of these species has registered local audio)",
+          "audioLicenseAndAttribution": "NOT TESTED (0 audio records, no verified source clip)",
+          "soundRolesSongCall": "NOT TESTED (VBN textual song/call description, no registered local audio)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R30; no registered source audio)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species passages read; ANWB book/edition/pages unavailable)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing species text and VBN source read; no full knowledge.json profile for focus species, gap remains)",
+          "sovonNetherlandsStatus": "NOT TESTED (no fresh Sovon trends or numbers promoted)",
+          "ebirdDistributionAndBias": "NOT TESTED (no new eBird data used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R30 device, separate from earlier preview)",
+          "endToEndGuideUI": "NOT TESTED (R30 browser and device test separate)",
+          "independentSecondReview": "NOT TESTED (own visual inspection/source text; no independent ornithologist or audio reviewer)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Vogelbescherming Sedge Warbler vs small reed warbler: contrasting brow/dark crown and streaked back vs plain brown; no full knowledge profile or approved matching partner photo.; source/photo pair gaps explicitly preserved)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Two existing local WebPs viewed: perched Sedge Warbler with bright eyebrow and streaked crown, second bird beating wings among branches; flightReview states out-of-flight (uit-rol), never true free flight.",
+          "Vogelbescherming Sedge Warbler vs small reed warbler: contrasting brow/dark crown and streaked back vs plain brown; no full knowledge profile or approved matching partner photo.",
+          "Commons original hero page lists Charles J. Sharp and CC BY-SA 4.0; other pose source inaccessible, historical credit preserved; no direct original to WebP match.",
+          "Old nine-point audited=false, oldAssetCount=0 retained; actual current guide has 2 local files.",
+          "All registered local audio absent; never grant complete audio PASS; original source rights, age/sex and mobile-device gates open."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://commons.wikimedia.org/wiki/File:Sedge_warbler_(Acrocephalus_schoenobaenus)_2.jpg",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietzanger",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-karekiet",
+          "docs/fotokwaliteit/F3_R30_GROTE_KAREKIET_RIETZANGER_SPREEUW_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R30 SHA (owner tested earlier private preview on a different SHA)",
+        "independence": "PARTIAL / own visible local-photo and source-text review; independent originals/rights/sex/age/audio open",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "5008b929f93623bde84234f7cdd3a61821597b0f",
+          "5f13b186962bac8190a5f734d2056b279f14084b"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at R30 content checkpoint; CI per exact head separate"
       }
     },
     {
@@ -9487,37 +9547,57 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R30",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (all current local WebPs directly opened; Git blobs recorded, external original-bytes/pixel match NOT TESTED)",
+          "photoIndividualRights": "PARTIALLY TESTED (historical maker/CC metadata read and limited Commons source confirmation; current per-original reproduction authorization NOT independently completed)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Five current distinct local WebPs viewed: male-breeding hero as source described, historical female, neutral-sex juvenile, true airborne flight, older neutral adult; no unsupported sex assignment to flight/older portrait.; age/sex independently unverified)",
+          "photoPairComparisons": "PARTIALLY TESTED (Existing Spreeuw/Merel sp045 comparison retained; short tail, glossy/spotted body and juvenile brown plumage versus dark adult Merel, not a one-feature key.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R30 exact head at content checkpoint; targeted Chromium pending)",
+          "creditsAndCleanAudioUI": "NOT TESTED (R30 UI/credits/check pending)",
+          "audioRecordingsAuthenticity": "NOT TESTED (none of these species has registered local audio)",
+          "audioLicenseAndAttribution": "NOT TESTED (0 audio records, no verified source clip)",
+          "soundRolesSongCall": "NOT TESTED (VBN textual song/call description, no registered local audio)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R30; no registered source audio)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming species passages read; ANWB book/edition/pages unavailable)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (existing sourced Spreeuw knowledge profile inspected; no new biometric values)",
+          "sovonNetherlandsStatus": "NOT TESTED (no fresh Sovon trends or numbers promoted)",
+          "ebirdDistributionAndBias": "NOT TESTED (no new eBird data used)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R30 device, separate from earlier preview)",
+          "endToEndGuideUI": "NOT TESTED (R30 browser and device test separate)",
+          "independentSecondReview": "NOT TESTED (own visual inspection/source text; no independent ornithologist or audio reviewer)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Existing Spreeuw/Merel sp045 comparison retained; short tail, glossy/spotted body and juvenile brown plumage versus dark adult Merel, not a one-feature key.; source/photo pair gaps explicitly preserved)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Five current distinct local WebPs viewed: male-breeding hero as source described, historical female, neutral-sex juvenile, true airborne flight, older neutral adult; no unsupported sex assignment to flight/older portrait.",
+          "Existing Spreeuw/Merel sp045 comparison retained; short tail, glossy/spotted body and juvenile brown plumage versus dark adult Merel, not a one-feature key.",
+          "Historical Commons contributors and CC BY/SA versions retained; original individual image source verification and user-visible attributions open.",
+          "All registered local audio absent; never grant complete audio PASS; original source rights, age/sex and mobile-device gates open."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "tools/kennisbaseline/knowledge.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/spreeuw",
+          "docs/fotokwaliteit/F3_R30_GROTE_KAREKIET_RIETZANGER_SPREEUW_2026-11-21_DRAFT.md"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R30 SHA (owner tested earlier private preview on a different SHA)",
+        "independence": "PARTIAL / own visible local-photo and source-text review; independent originals/rights/sex/age/audio open",
+        "fullPass": false,
+        "photoFilesInspected": 5,
+        "photoBlobSHAs": [
+          "78af86b57c29d6928734b63bcb1f2da6ef86550c",
+          "9fa69a95d9e7800b88ab5ccdcd60ff38abfb5f8b",
+          "bdd13d263dff84b531cea61bf5d4e14243af3311",
+          "2ff77c446528cdb5ae0b7db5a9e346379bf43a07",
+          "7bfca1fa0a620d6da1e1cee5faa6b92312b1fbd5"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "NOT TESTED at R30 content checkpoint; CI per exact head separate"
       }
     },
     {

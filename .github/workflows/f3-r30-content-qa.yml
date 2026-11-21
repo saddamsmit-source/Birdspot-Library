@@ -1,0 +1,55 @@
+name: Birdspot F3-R30 content and mobile browser QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r29-aalscholver-fazant-patrijs-20261121-gpt6
+  workflow_dispatch:
+concurrency:
+  group: birdspot-f3-r30-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  content-history:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Actual R30 guide images old zeros and source bounds
+        run: |
+          node tests/test_lookalike_r30.mjs
+          node tests/test_f3_140_unified_rebaseline.mjs
+      - name: Previous R29 through R24 evidence and knowledge validity
+        run: |
+          node tests/test_lookalike_r29.mjs
+          node tests/test_lookalike_r28.mjs
+          node tests/test_lookalike_r27.mjs
+          node tests/test_lookalike_r26.mjs
+          node tests/test_lookalike_r25.mjs
+          node tests/test_lookalike_r24.mjs
+          node tests/test_kennisbaseline.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+      - name: Generated knowledge remains canonical
+        run: python3 -I tools/kennisbaseline/build_knowledge.py --check
+  chromium-r30:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Chromium test dependencies
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Actual R30 hero photos flight roles zoom and back
+        run: python -u tests/test_lookalike_r30_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: birdspot-f3-r30-browser
+          path: tests/screenshots/lookalike_r30/*.png
