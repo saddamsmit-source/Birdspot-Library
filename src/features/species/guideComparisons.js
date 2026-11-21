@@ -1250,13 +1250,18 @@ export const GUIDE_COMPARISONS = [
     tip: 'Let op mantel, poten en staartverhouding. Gebruik de omgeving als extra aanwijzing.',
   },
   {
-    label: 'Oeverzwaluw en Huiszwaluw',
+    label: 'Oeverzwaluw en Huiszwaluw · vrije vlucht',
+    flight: true,
     reciprocalText: true,
     birds: [
-      {id: 'sp116', source: 'oeverzwaluw', photoMissing: true, marks: 'Bruine bovenzijde en een duidelijke bruine borstband boven de witte buik.'},
-      {id: 'sp115', source: 'huiszwaluw', photoMissing: true, marks: 'Lichte keel en buik. Bij jonge vogels kan de borst vaag grijs getekend zijn. In vlucht valt de witte stuit op.'},
+      {id: 'sp116', source: 'oeverzwaluw', photo: '/assets/species/plumage/sp116-flight.webp', marks: 'Bruine bovenzijde en een duidelijke bruine borstband boven de witte buik.'},
+      {id: 'sp115', source: 'huiszwaluw', photo: '/assets/species/plumage/sp115-flight.webp', marks: 'Lichte keel en buik. Bij jonge vogels kan de borst vaag grijs getekend zijn. In vlucht valt de witte stuit op.'},
     ],
-    tip: 'Begin bij de borstband en de stuit. Een snelle glimp van alleen de staart is vaak onvoldoende.',
+    rows: [
+      {label: 'Borst', values: ['Duidelijke bruine band boven de lichte buik', 'Licht, bij jonge vogels soms vaag grijs getekend']},
+      {label: 'Stuit bij zicht op de rug', values: ['Bruin', 'Opvallend wit']},
+    ],
+    tip: 'De Oeverzwaluw is hier van onderen te zien. Let op de borstband. Kijk bij twijfel in een bocht naar de witte stuit van Huiszwaluw.',
   },
   {
     label: 'Gierzwaluw en Boerenzwaluw',
@@ -2041,16 +2046,28 @@ export const GUIDE_COMPARISONS = [
     tip: 'De twee bestaande rustfoto’s tonen de herkenbare verschillen. Kijk naar keel, snavel en staart in plaats van alleen naar de blauwe kleur.',
   },
   {
-    label: 'Geelgors en Rietgors · kop en stuit',
+    label: 'Geelgors en Rietgors · mannetjes',
     birds: [
-      {id: 'sp117', source: 'geelgors', marks: 'Roodbruine stuit. Bij een volwassen mannetje in broedkleed is de kop doorgaans grotendeels geel.'},
-      {id: 'sp118', source: 'rietgors', marks: 'Volwassen mannetje in broedkleed met zwarte kop en keel en een witte halsband.'},
+      {id: 'sp117', source: 'geelgors', plumage: 'adult_m', marks: 'Gele kop en keel, met donkere streping. Bij goed zicht is de stuit roodbruin.'},
+      {id: 'sp118', source: 'rietgors', plumage: 'adult_m', marks: 'Dit mannetje in winterkleed heeft lichte veerranden op de donkere kop, een witte baardstreep en een witte halsband.'},
     ],
     rows: [
-      {label: 'Kop in broedkleed', values: ['Volwassen mannetje meestal grotendeels geel', 'Volwassen mannetje zwart met witte halsband']},
-      {label: 'Vaak te vinden', values: ['Akkerrand, heg of bosrand', 'Rietkraag en begroeide slootkant']},
+      {label: 'Kop op de foto', values: ['Gele kop met donkere streping', 'Donkere kop met lichte veerranden in winterkleed']},
+      {label: 'Keel en hals', values: ['Geel aan de keel', 'Donkere keel met witte baardstreep en halsband']},
     ],
-    tip: 'Vrouwtjes en jonge vogels zijn minder uitgesproken. Bekijk ook de stuit en let op de omgeving.',
+    tip: 'Bij Rietgors bedekken lichte veerranden een deel van het zwart in winterkleed. Bij een valere Geelgors helpt zicht op de roodbruine stuit.',
+  },
+  {
+    label: 'Geelgors en Rietgors · vrouwtjes',
+    birds: [
+      {id: 'sp117', source: 'geelgors', plumage: 'adult_f', marks: 'Vaak geel op keel en onderzijde, met donkere lengtestrepen. De hoeveelheid geel verschilt per vogel.'},
+      {id: 'sp118', source: 'rietgors', plumage: 'adult_f', marks: 'Bruine kruin met lichte wenkbrauw en baardstreep. Lichte, gestreepte onderzijde.'},
+    ],
+    rows: [
+      {label: 'Kop en keel', values: ['Vaak geel aan de keel, met een gestreepte kruin', 'Lichte wenkbrauw en baardstreep tegen donkerdere wang']},
+      {label: 'Onderzijde', values: ['Vaak gelig en gestreept', 'Licht en gestreept']},
+    ],
+    tip: 'Geel en streping variëren. Bekijk ook de roodbruine stuit van Geelgors als de rug goed zichtbaar is.',
   },
   {
     label: 'Knobbelzwaan en Wilde Zwaan · snavel en hals',

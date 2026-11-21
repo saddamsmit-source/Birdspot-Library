@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 47,
+    "nextNotStarted": 44,
     "secondBatchStarted": 3,
-    "contentInspected": 93,
+    "contentInspected": 96,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -85,7 +85,8 @@
     "twentyEighthBatchStarted": 3,
     "twentyNinthBatchStarted": 3,
     "thirtiethBatchStarted": 3,
-    "thirtyFirstBatchStarted": 3
+    "thirtyFirstBatchStarted": 3,
+    "thirtySecondBatchStarted": 3
   },
   "records": [
     {
@@ -9905,43 +9906,77 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (vrije vlucht)",
+            "path": "/assets/species/plumage/sp116-flight.webp",
+            "oldRights": "Historische vluchtregistratie VERIFIED. Origineel, maker en licentie herlezen in F3-R32."
+          },
+          {
+            "role": "Overige herkenningsfoto (bij nestwand)",
+            "path": "/assets/species/plumage/sp116-nestwand.webp",
+            "oldRights": "Historisch geen negenpuntsaudit. Origineel, maker en licentie herlezen in F3-R32."
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R32",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (lokale beelden en individuele bronoriginelen gematcht; volledige onafhankelijke soortaftekening open)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker, bron en licentieversie per bestand opnieuw gecontroleerd; volledige onafhankelijke aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Neutrale vrije vlucht als hoofdfoto. Nestwandfoto toont houding bij nestgang. Kleed en geslacht van beide exemplaren blijven open.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Huiszwaluw in vrije vlucht naast Oeverzwaluw. De fotohoeken leggen borstband respectievelijk stuit bloot. Jonge Huiszwaluw kan een vage grijze borsttekening hebben.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium-bewijs op exacte SHA in PR #330)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (foto-attributieregistratie gelezen en nul lokale opnamen; browserbewijs in PR #330)",
+          "audioRecordingsAuthenticity": "NOT TESTED (nul geregistreerde lokale opnamen)",
+          "audioLicenseAndAttribution": "NOT TESTED (nul geregistreerde lokale opnamen)",
+          "soundRolesSongCall": "NOT TESTED (soortbronnen gelezen; geen geluidsbestand in de app)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming ingezien; ANWB-soortpassages niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming en Blasco-Zumeta/Heinze gelezen. Volledig kennisprofiel en herijking van alle maten open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen; distributie- en trendstatistiek niet gewijzigd)",
+          "ebirdDistributionAndBias": "NOT TESTED (gevalideerde Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; afzonderlijk Chromium-bewijs in PR #330)",
+          "independentSecondReview": "NOT TESTED in het dossier (read-only QA op de uiteindelijke SHA staat bij PR #330; volledige expert-aftekening open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-062 · Huiszwaluw in vrije vlucht naast Oeverzwaluw. De fotohoeken leggen borstband respectievelijk stuit bloot. Jonge Huiszwaluw kan een vage grijze borsttekening hebben.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Actuele inventaris 0→2, met historische negenpuntsinventaris 0 en NOT TESTED.",
+          "Neutrale vrije vlucht als hoofdfoto. Nestwandfoto toont houding bij nestgang. Kleed en geslacht van beide exemplaren blijven open.",
+          "Huiszwaluw in vrije vlucht naast Oeverzwaluw. De fotohoeken leggen borstband respectievelijk stuit bloot. Jonge Huiszwaluw kan een vage grijze borsttekening hebben.",
+          "Vogelbescherming en Blasco-Zumeta/Heinze gelezen. Volledig kennisprofiel en herijking van alle maten open.",
+          "Individuele WebP en bronorigineel gematcht. Bronmaker en licentieversie per beeld gecontroleerd.",
+          "Nul lokaal geregistreerde zang- of roepbestanden. Samsung-PWA-installatie OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md",
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw",
+          "https://stats.sovon.nl/stats/soort/9810",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+          "https://blascozumeta.com/specie_files/09810_ENG_Riparia_riparia_aranzadi.pdf",
+          "https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg",
+          "https://commons.wikimedia.org/wiki/File:Sandmartin_(28943239906).jpg",
+          "https://commons.wikimedia.org/wiki/File:Riparia_riparia._Sand_Martin_(27556953299).jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA in PR #330. Volledige expert-, mediarechten- en audioaftekening open.",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "109abb5961703e7d19f9d71cd4ac63282c5c0df9",
+          "80caaaf5c2c11cfdde88128e712acade5ed3dbd4"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie CI en read-only QA op exacte head in de overdracht van PR #330."
       }
     },
     {
@@ -9983,37 +10018,64 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R32",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (lokale beelden en individuele bronoriginelen gematcht; volledige onafhankelijke soortaftekening open)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker, bron en licentieversie per bestand opnieuw gecontroleerd; volledige onafhankelijke aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Mannelijke hoofdfoto, volwassen vrouwtje (bronannotatie, ondersoort caliginosa), juveniel uit bronannotatie en aparte echte vluchtfoto. Geen sekse toegewezen aan jong of vlucht.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Geelgors–Rietgors met volwassen mannetjes en vrouwtjes in rust. Geel en streping variëren. Stuitkleur helpt wanneer die zichtbaar is. Passend juvenielenpaar open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium-bewijs op exacte SHA in PR #330)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (foto-attributieregistratie gelezen en nul lokale opnamen; browserbewijs in PR #330)",
+          "audioRecordingsAuthenticity": "NOT TESTED (nul geregistreerde lokale opnamen)",
+          "audioLicenseAndAttribution": "NOT TESTED (nul geregistreerde lokale opnamen)",
+          "soundRolesSongCall": "NOT TESTED (soortbronnen gelezen; geen geluidsbestand in de app)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming ingezien; ANWB-soortpassages niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Bestaande, uit twee bronnen afgeleide lengteband en kennisprofiel gelezen. Overige maten apart te verifiëren.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen; distributie- en trendstatistiek niet gewijzigd)",
+          "ebirdDistributionAndBias": "NOT TESTED (gevalideerde Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; afzonderlijk Chromium-bewijs in PR #330)",
+          "independentSecondReview": "NOT TESTED in het dossier (read-only QA op de uiteindelijke SHA staat bij PR #330; volledige expert-aftekening open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-063 · Geelgors–Rietgors met volwassen mannetjes en vrouwtjes in rust. Geel en streping variëren. Stuitkleur helpt wanneer die zichtbaar is. Passend juvenielenpaar open.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Mannelijke hoofdfoto, volwassen vrouwtje (bronannotatie, ondersoort caliginosa), juveniel uit bronannotatie en aparte echte vluchtfoto. Geen sekse toegewezen aan jong of vlucht.",
+          "Geelgors–Rietgors met volwassen mannetjes en vrouwtjes in rust. Geel en streping variëren. Stuitkleur helpt wanneer die zichtbaar is. Passend juvenielenpaar open.",
+          "Bestaande, uit twee bronnen afgeleide lengteband en kennisprofiel gelezen. Overige maten apart te verifiëren.",
+          "Individuele WebP en bronorigineel gematcht. Bronmaker en licentieversie per beeld gecontroleerd.",
+          "Nul lokaal geregistreerde zang- of roepbestanden. Samsung-PWA-installatie OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md",
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/geelgors",
+          "https://stats.sovon.nl/stats/soort/18570",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+          "https://blascozumeta.com/specie_files/18570_ENG_Emberiza_citrinella_aranzadi.pdf",
+          "https://avibase.bsc-eoc.org/species.jsp?avibaseid=9E63BD409B698B24",
+          "https://commons.wikimedia.org/wiki/File:Yellowhammer_(Emberiza_citrinella)_male_Drenthe.jpg",
+          "https://www.inaturalist.org/photos/265126274",
+          "https://www.inaturalist.org/photos/522379888",
+          "https://www.inaturalist.org/photos/622283477"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA in PR #330. Volledige expert-, mediarechten- en audioaftekening open.",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "e17ccb26d01b48b5229d2e8d66465b270d1b13fd",
+          "42851dd39e42f12b55831a5ee48c2c534108abfe",
+          "27590a4cc7e46d97deba96f0350581f969648520",
+          "78cc968186a0adf8012eb5f76f554cda723e1759"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie CI en read-only QA op exacte head in de overdracht van PR #330."
       }
     },
     {
@@ -10055,38 +10117,63 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R32",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (lokale beelden en individuele bronoriginelen gematcht; volledige onafhankelijke soortaftekening open)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker, bron en licentieversie per bestand opnieuw gecontroleerd; volledige onafhankelijke aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Hoofdfoto is een mannetje in winterkleed volgens fotograaf. Apart vrouwtje en twee jeugdstadia. Bewegingsonscherpe vluchtfoto in archief.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Geelgors–Rietgors met volwassen mannetjes en vrouwtjes in rust. Het zichtbare winterkleed is bij de Rietgors benoemd. Gelijkwaardige juvenielenfoto’s en vluchtpaar open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium-bewijs op exacte SHA in PR #330)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (foto-attributieregistratie gelezen en nul lokale opnamen; browserbewijs in PR #330)",
+          "audioRecordingsAuthenticity": "NOT TESTED (nul geregistreerde lokale opnamen)",
+          "audioLicenseAndAttribution": "NOT TESTED (nul geregistreerde lokale opnamen)",
+          "soundRolesSongCall": "NOT TESTED (soortbronnen gelezen; geen geluidsbestand in de app)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming ingezien; ANWB-soortpassages niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Bestaande, uit twee bronnen afgeleide lengteband en kennisprofiel gelezen. Overige maten apart te verifiëren.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen; distributie- en trendstatistiek niet gewijzigd)",
+          "ebirdDistributionAndBias": "NOT TESTED (gevalideerde Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; afzonderlijk Chromium-bewijs in PR #330)",
+          "independentSecondReview": "NOT TESTED in het dossier (read-only QA op de uiteindelijke SHA staat bij PR #330; volledige expert-aftekening open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-063 · Geelgors–Rietgors met volwassen mannetjes en vrouwtjes in rust. Het zichtbare winterkleed is bij de Rietgors benoemd. Gelijkwaardige juvenielenfoto’s en vluchtpaar open.)"
         },
         "findings": [
-          "Scherpe foto van één Rietgors in vrije vlucht met bevestigde rechten.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Hoofdfoto is een mannetje in winterkleed volgens fotograaf. Apart vrouwtje en twee jeugdstadia. Bewegingsonscherpe vluchtfoto in archief.",
+          "Geelgors–Rietgors met volwassen mannetjes en vrouwtjes in rust. Het zichtbare winterkleed is bij de Rietgors benoemd. Gelijkwaardige juvenielenfoto’s en vluchtpaar open.",
+          "Bestaande, uit twee bronnen afgeleide lengteband en kennisprofiel gelezen. Overige maten apart te verifiëren.",
+          "Individuele WebP en bronorigineel gematcht. Bronmaker en licentieversie per beeld gecontroleerd.",
+          "Nul lokaal geregistreerde zang- of roepbestanden. Samsung-PWA-installatie OPEN."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md",
+          "assets/species/credits.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+          "https://stats.sovon.nl/stats/soort/18770",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/geelgors",
+          "https://blascozumeta.com/specie_files/18770_ENG_Emberiza_schoeniclus_aranzadi.pdf",
+          "https://commons.wikimedia.org/wiki/File:Common_reed_bunting_(emberiza_schoeniclus)_male.jpg",
+          "https://commons.wikimedia.org/wiki/File:Common_reed_bunting_(emberiza_schoeniclus)_female.jpg",
+          "https://commons.wikimedia.org/wiki/File:Reed_Bunting_Juvenile_(4707446668).jpg",
+          "https://www.inaturalist.org/photos/435367037"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA in PR #330. Volledige expert-, mediarechten- en audioaftekening open.",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "a5578547e4e2af2b771896479dedb58aaebec3c0",
+          "0807c91c667ffbb0cc1dc23377066f52f94a9e24",
+          "d6074d3262572b03775be6baeab37bcdc7105518",
+          "e33eecab4d90be15b265eef9057012109d566947"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie CI en read-only QA op exacte head in de overdracht van PR #330."
       }
     },
     {

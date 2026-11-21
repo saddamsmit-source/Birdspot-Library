@@ -58,17 +58,21 @@ assert.deepEqual(swallows.map(pair => pair.birds.map(bird => comparisonPhoto(bir
 assert.deepEqual(swallows.map(pair => pair.rows.length), [2, 2, 3]);
 assert.match(swallows[2].rows[0].values[1], /wit/);
 
-for (const [registryId, first, second] of [['LK-060', 'sp113', 'sp019'], ['LK-062', 'sp115', 'sp116']]) {
-  const record = lookalikes.pairs.find(pair => pair.id === registryId);
-  assert.deepEqual(record.birds, [first, second]);
-  assert.equal(record.photoState, 'MISSING_VERIFIED_PAIR');
-  for (const [own, other] of [[first, second], [second, first]]) {
-    const html = render(own);
-    const targets = [...html.matchAll(/<div class="sd-cmp-panel"[^>]*>.*?data-compare-species="(sp\d+)"/gs)]
-      .map(match => match[1]);
-    assert.ok(html.includes('data-compare-species="' + other + '"'), own + ' missing reciprocal field text');
-    assert.ok(!targets.includes(other), own + ' has an unsupported photo pair');
-  }
+const oriolePair = lookalikes.pairs.find(pair => pair.id === 'LK-060');
+assert.deepEqual(oriolePair.birds, ['sp113', 'sp019']);
+assert.equal(oriolePair.photoState, 'MISSING_VERIFIED_PAIR');
+for (const [own, other] of [['sp113', 'sp019'], ['sp019', 'sp113']]) {
+  const html = render(own);
+  const targets = [...html.matchAll(/<div class="sd-cmp-panel"[^>]*>.*?data-compare-species="(sp\d+)"/gs)]
+    .map(match => match[1]);
+  assert.ok(html.includes('data-compare-species="' + other + '"'), own + ' missing reciprocal field text');
+  assert.ok(!targets.includes(other), own + ' has an unsupported photo pair');
+}
+// R32 source-checked both flight photos. The R31 juvenile caution and reciprocal links remain required.
+assert.deepEqual(lookalikes.pairs.find(pair => pair.id === 'LK-062').birds, ['sp115', 'sp116']);
+for (const [own, other] of [['sp115', 'sp116'], ['sp116', 'sp115']]) {
+  assert.ok(render(own).includes('data-compare-species="' + other + '"'));
+  assert.match(render(own), /vaag grijs getekend/);
 }
 assert.deepEqual(lookalikes.pairs.find(pair => pair.id === 'LK-061').birds, ['sp114', 'sp115']);
-console.log('F3-R31: 11 evidenced WebPs, 0 local recordings, 3 swallow photo panels, 2 reciprocal text comparisons, no full pass.');
+console.log('F3-R31: 11 evidenced WebPs, 0 local recordings, 3 Boerenzwaluw–Huiszwaluw panels, reciprocal guidance retained, no full pass.');

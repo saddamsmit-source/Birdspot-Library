@@ -56,7 +56,10 @@
     "sp089",
     "sp113",
     "sp114",
-    "sp115"
+    "sp115",
+    "sp116",
+    "sp117",
+    "sp118"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -2748,7 +2751,8 @@
     {
       "id": "LK-062",
       "focus": [
-        "sp115"
+        "sp115",
+        "sp116"
       ],
       "birds": [
         "sp115",
@@ -2759,9 +2763,9 @@
         null,
         null
       ],
-      "photoState": "MISSING_VERIFIED_PAIR",
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Foto’s van sp116 en een gelijkwaardig paar voor beide soorten afzonderlijk te beoordelen in R32."
+        "R32 koppelde beide actuele vluchtbeelden aan hun Commons-originelen en CC BY 2.0. Slechts één vrij-vluchtpaar. Passend juvenielen- en rustpaar open."
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -2784,9 +2788,63 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/oeverzwaluw",
         "https://www.natuurstudiegroepdijleland.be/trektelmodule-soortenfiches/",
-        "https://birds-in-flight.net/?p=2575"
+        "https://birds-in-flight.net/?p=2575",
+        "https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg",
+        "https://commons.wikimedia.org/wiki/File:Sandmartin_(28943239906).jpg"
       ],
       "caution": "Een jonge Huiszwaluw kan in het najaar een vage grijze borsttekening hebben. Geef de witte stuit bij twijfel voorrang als die zichtbaar is."
+    },
+    {
+      "id": "LK-063",
+      "focus": [
+        "sp117",
+        "sp118"
+      ],
+      "birds": [
+        "sp117",
+        "sp118"
+      ],
+      "risk": "Bij vrouwtjes en juvenielen lijkt de donkere streping op elkaar. Winterkleed kan het zwart bij een mannelijke Rietgors gedeeltelijk bedekken.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Bron- en vormcontrole van volwassen rustparen uitgevoerd. Een vergelijkbaar juvenielenpaar en een geschikte Rietgors-vluchtfoto staan open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Volwassen mannetjes op beeld",
+          "values": [
+            "Gele kop en keel met donkere streping",
+            "Donkere kop en keel met lichte veerranden in winterkleed en witte halsband"
+          ]
+        },
+        {
+          "label": "Vrouwtjes",
+          "values": [
+            "Vaak geel bij keel en op onderzijde, met lengtestreping",
+            "Lichte wenkbrauw en baardstreep rond de donkerdere wang"
+          ]
+        },
+        {
+          "label": "Stuit bij passend zicht",
+          "values": [
+            "Effen roodbruine stuit en roodbruine bovenstaartdekveren",
+            "Bruin of grijzig getekend, afhankelijk van kleed en licht"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/geelgors",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rietgors",
+        "https://blascozumeta.com/specie_files/18570_ENG_Emberiza_citrinella_aranzadi.pdf",
+        "https://blascozumeta.com/specie_files/18770_ENG_Emberiza_schoeniclus_aranzadi.pdf",
+        "https://commons.wikimedia.org/wiki/File:Common_reed_bunting_(emberiza_schoeniclus)_male.jpg"
+      ],
+      "caution": "Geel, streping en licht variëren. Gebruik de combinatie van kop en stuit bij goed zicht. De Geelgors-vrouwtjesfoto betreft volgens de bron caliginosa."
     }
   ],
   "withinSpeciesVariation": [
@@ -2813,7 +2871,8 @@
     "visualReviewR12": "docs/fotokwaliteit/F3_R12_HUISMUS_RINGMUS_MEREL_2026-11-16_DRAFT.md",
     "visualReviewR13": "docs/fotokwaliteit/F3_R13_ZANGLIJSTER_KRAMSVOGEL_KOPERWIEK_2026-11-16_DRAFT.md",
     "visualReviewR14": "docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md",
-    "visualReviewR31": "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md"
+    "visualReviewR31": "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md",
+    "visualReviewR32": "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }
