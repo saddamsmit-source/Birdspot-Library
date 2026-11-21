@@ -3435,8 +3435,10 @@
           "independentReview": "NOT TESTED"
         }
       ],
-      "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md"
+      ],
+      "next": "XC991857 en XC990310 waren afgeschermd tijdens R34. Beide lokale MP3’s zijn gedecodeerd. Voor originele opname, rechten en rol blijven de primaire bestanden en een luisterbeoordeling nodig.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",

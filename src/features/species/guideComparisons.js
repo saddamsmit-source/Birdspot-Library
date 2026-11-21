@@ -1222,6 +1222,27 @@ export const GUIDE_COMPARISONS = [
     tip: 'Begin bij de snavel. De Smient zit op een steen en de Krakeend zwemt. Vergelijk hier vooral de kop, want houding en licht beïnvloeden de indruk van de bouw en kleur.',
   },
   {
+    label: 'Smient en Tafeleend · vrouwtjes in rust',
+    birds: [
+      {id: 'sp130', source: 'smient', plumage: 'adult_f', marks: 'Ronde kop, met een korte blauwgrijze snavel met donkere punt.'},
+      {id: 'sp132', source: 'tafeleend', plumage: 'adult_f', marks: 'Aflopend voorhoofd, lichte wang en een langere snavel met een lichtere band.'},
+    ],
+    rows: [
+      {label: 'Snavel', values: ['Kort, blauwgrijs met donkere punt', 'Langer, donker met een lichtere band']},
+      {label: 'Kop', values: ['Relatief rond', 'Aflopend voorhoofd, vaak een lichtere wang']},
+    ],
+    tip: 'Vergelijk de snavels en het kopprofiel van opzij. Hoe warmbruin het kleed oogt, kan door het licht verschillen.',
+  },
+  {
+    label: 'Tafeleend en Krooneend',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp132', source: 'tafeleend', photoMissing: true, marks: 'Het mannetje in prachtkleed heeft een roodbruine kop, een donkere snavel met lichte band en lichtgrijze flanken.'},
+      {id: 'sp093', source: 'krooneend', photoMissing: true, marks: 'Het mannetje in prachtkleed heeft een ronde oranjebruine kop, een rode snavel en witte flanken.'},
+    ],
+    tip: 'Kijk eerst naar de snavel en gebruik de flankkleur als tweede kenmerk.',
+  },
+  {
     label: 'Grote en Kleine Mantelmeeuw · volwassen',
     birds: [
       {id: 'sp164', source: 'grote-mantelmeeuw', photo: '/assets/species/plumage/sp164-adult.webp', marks: 'Zwaar gebouwd, met roze poten, een forse snavel en een bijna zwarte mantel.'},
@@ -1265,14 +1286,6 @@ export const GUIDE_COMPARISONS = [
     tip: 'De Oeverzwaluw is hier van onderen te zien. Let op de borstband. Kijk bij twijfel in een bocht naar de witte stuit van Huiszwaluw.',
   },
   {
-    label: 'Gierzwaluw en Boerenzwaluw',
-    birds: [
-      {id: 'sp141', source: 'gierzwaluw', plumage: 'adult_m', marks: 'Vrijwel geheel donker silhouet, lange sikkelvleugels en korte vorkstaart.'},
-      {id: 'sp114', source: 'boerenzwaluw', textOnly: true, marks: 'Roestrode keel, lichte onderzijde en bij volwassen vogels lange buitenste staartpennen.'},
-    ],
-    tip: 'Let op vleugelvorm en staart. Bij tegenlicht is het silhouet bruikbaarder dan de kleur.',
-  },
-  {
     label: 'Fazant en Patrijs · volwassen',
     birds: [
       {id: 'sp105', source: 'fazant', plumage: 'adult_f', marks: 'De hen heeft een lange, gebandeerde staart en een bruin gevlekt kleed.'},
@@ -1287,28 +1300,39 @@ export const GUIDE_COMPARISONS = [
   {
     label: 'Gierzwaluw en Boerenzwaluw · in vlucht',
     flight: true,
+    reciprocalText: true,
     birds: [
-      {id: 'sp141', source: 'gierzwaluw', marks: 'Lange sikkelvleugels, donker lichaam en een gevorkte staart.'},
-      {id: 'sp114', source: 'boerenzwaluw', marks: 'Lichte onderzijde en bij volwassen vogels lange buitenste staartpennen.'},
+      {id: 'sp141', source: 'gierzwaluw', photo: '/assets/species/plumage/sp141-flight.webp', marks: 'Lange sikkelvleugels, donker lichaam met lichte keelvlek en een gevorkte staart.'},
+      {id: 'sp114', source: 'boerenzwaluw', photo: '/assets/species/plumage/sp114-flight.webp', marks: 'Lichte onderzijde met roodbruine keel. Volwassen vogels hebben meestal lange buitenste staartpennen, jonge vogels kortere.'},
     ],
     rows: [
       {label: 'Lichte delen', values: ['Kleine, vaak moeilijk zichtbare keelvlek', 'Lichte onderzijde met roodbruine keel']},
       {label: 'Vliegbeeld', values: ['Lange sikkelvleugels en gevorkte staart', 'Lange buitenste staartpennen bij volwassen vogels']},
     ],
-    tip: 'Begin bij het silhouet. Tegenlicht kan een lichte onderzijde donker doen lijken.',
+    tip: 'Begin bij de vleugelvorm. Jonge Boerenzwaluwen hebben kortere buitenste staartpennen. Bij tegenlicht kan een lichte onderzijde donker lijken.',
   },
   {
     label: 'Gierzwaluw en Huiszwaluw · in vlucht',
     flight: true,
+    reciprocalText: true,
     birds: [
-      {id: 'sp141', source: 'gierzwaluw', marks: 'Lange sikkelvleugels, donker lichaam en een gevorkte staart.'},
-      {id: 'sp115', source: 'huiszwaluw', marks: 'Witte stuit, witte onderzijde en een korte, gevorkte staart.'},
+      {id: 'sp141', source: 'gierzwaluw', photo: '/assets/species/plumage/sp141-flight.webp', marks: 'Lange sikkelvleugels en donkere lichaamsveren. Een lichte keel kan opvallen bij goed zicht.'},
+      {id: 'sp115', source: 'huiszwaluw', photo: '/assets/species/plumage/sp115-flight.webp', marks: 'Witte stuit, lichte onderzijde en een korte, gevorkte staart.'},
     ],
     rows: [
       {label: 'Lichte delen', values: ['Kleine, vaak moeilijk zichtbare keelvlek', 'Witte onderzijde en witte stuit']},
       {label: 'Vliegbeeld', values: ['Lange sikkelvleugels en gevorkte staart', 'Korte, gevorkte staart']},
     ],
-    tip: 'Bekijk ook de stuit als de vogel wegvliegt.',
+    tip: 'Bekijk vleugelvorm en onderzijde. De witte stuit van de Huiszwaluw is vooral goed te zien als de vogel van je wegdraait.',
+  },
+  {
+    label: 'Gierzwaluw en Vale Gierzwaluw',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp141', source: 'gierzwaluw', photoMissing: true, marks: 'Doorgaans donkerder en gelijkmatiger van kleur. Jonge vogels kunnen door lichte veerranden toch geschubd ogen.'},
+      {id: 'sp381', source: 'vale-gierzwaluw', photoMissing: true, marks: 'Bij goed licht contrasteert het donkere oogmasker met de lichtere kopzijden. Lichte veerranden kunnen de onderzijde geschubd doen lijken.'},
+    ],
+    tip: 'Bekijk koptekening en onderzijde samen. Licht en leeftijd beïnvloeden de indruk.',
   },
   {
     label: 'Visdief en Noordse Stern · broedkleed',

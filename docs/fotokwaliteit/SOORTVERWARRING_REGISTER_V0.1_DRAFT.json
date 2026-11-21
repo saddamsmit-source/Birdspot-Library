@@ -62,7 +62,10 @@
     "sp118",
     "sp126",
     "sp128",
-    "sp129"
+    "sp129",
+    "sp130",
+    "sp132",
+    "sp141"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -2981,7 +2984,8 @@
     {
       "id": "LK-067",
       "focus": [
-        "sp129"
+        "sp129",
+        "sp130"
       ],
       "birds": [
         "sp130",
@@ -2994,7 +2998,8 @@
       ],
       "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Beide bronfoto’s gematcht. Kopsilhouet en snavel zijn zichtbaar. De beelden tonen rust met verschillende ondergrond. Een gelijkwaardig zwempaar blijft open."
+        "Beide bronfoto’s gematcht. Kopsilhouet en snavel zijn zichtbaar. De beelden tonen rust met verschillende ondergrond. Een gelijkwaardig zwempaar blijft open.",
+        "R34 herlas het origineel en de rechten van de Smient-foto. Een gelijkwaardige zwemmende Smient blijft open."
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -3020,6 +3025,277 @@
         "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg"
       ],
       "caution": "Kijk eerst naar de snavel. De Smient zit op een steen en de Krakeend zwemt. Bouw is in dit fotopaar geen schaalvergelijking."
+    },
+    {
+      "id": "LK-068",
+      "focus": [
+        "sp130",
+        "sp132"
+      ],
+      "birds": [
+        "sp130",
+        "sp132"
+      ],
+      "risk": "Bruine vrouwtjes in rust. Kleur van de kop verandert sterk met het licht.",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide bestaande rustfoto’s herleid tot hun eigen bron. Een juvenielenpaar staat open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Kort en blauwgrijs met een donkere punt",
+            "Langer en donker met een lichtere zone"
+          ]
+        },
+        {
+          "label": "Kopprofiel",
+          "values": [
+            "Relatief ronde kop met vrij steil voorhoofd",
+            "Aflopend voorhoofd met doorgaans een lichtere wang"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+        "https://blascozumeta.com/specie_files/01790_Mareca_penelope_E.pdf",
+        "https://www.blascozumeta.com/specie_files/01980_ENG_Aythya_ferina_aranzadi.pdf",
+        "https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg",
+        "https://commons.wikimedia.org/wiki/File:Aythya_ferina_(female),_Krasnodar,_Russia.jpg"
+      ],
+      "caution": "Vergelijk vorm en snavelpatroon van opzij. Warmbruin op zichzelf is geen onderscheid."
+    },
+    {
+      "id": "LK-069",
+      "focus": [
+        "sp132"
+      ],
+      "birds": [
+        "sp092",
+        "sp132"
+      ],
+      "risk": "De bruine vrouwtjes zijn lastiger te onderscheiden. Mannetjes in eclipskleed hebben minder contrast.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Volwassen mannetjes, volwassen vrouwtjes en mannetjes in vrije vlucht herleid tot bronbeelden. Passende juvenielen en eclipsebeelden blijven open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop in rust",
+          "values": [
+            "Ronde kop met vaak een kuifje",
+            "Aflopend voorhoofd en een lichtere wang bij vrouwtjes"
+          ]
+        },
+        {
+          "label": "Flanken mannetje",
+          "values": [
+            "Wit tegen zwarte borst en kop",
+            "Lichtgrijs tegen zwarte borst en roodbruine kop"
+          ]
+        },
+        {
+          "label": "Vleugelbaan in geschikte hoek",
+          "values": [
+            "Helderwit met duidelijk donker contrast",
+            "Lichtgrijze vleugelbaan, doorgaans minder contrastrijk"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+        "https://www.blascozumeta.com/specie_files/01980_ENG_Aythya_ferina_aranzadi.pdf",
+        "https://commons.wikimedia.org/wiki/File:Tufted_Duck_Aythya_fuligula_Male_by_Dr._Raju_Kasambe_DSCN9795_(17).jpg",
+        "https://commons.wikimedia.org/wiki/File:Aythya_fuligula_(female).jpg",
+        "https://commons.wikimedia.org/wiki/File:Tufted_Duck_(Aythya_fuligula)_-_Flickr_-_gilgit2.jpg",
+        "https://commons.wikimedia.org/wiki/File:Common_Pochard_2025_11_11_08.jpg",
+        "https://commons.wikimedia.org/wiki/File:Aythya_ferina_(female),_Krasnodar,_Russia.jpg",
+        "https://commons.wikimedia.org/wiki/File:Common_pochard_(Aythaya_ferina)_in_flight_Denmark.jpg"
+      ],
+      "caution": "Een kuif kan platliggen. Vergelijk oogkleur en kopvorm en gebruik vleugelbaan bij goed zicht."
+    },
+    {
+      "id": "LK-070",
+      "focus": [
+        "sp132"
+      ],
+      "birds": [
+        "sp132",
+        "sp093"
+      ],
+      "risk": "Roodbruine kop bij beide mannetjes in prachtkleed. Gebruik de kleur van borst of kop alleen in combinatie.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "In de gids ontbreekt een Krooneend-foto voor dit fotopaar. Wederzijdse herkenningstekst blijft zichtbaar."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel mannetje",
+          "values": [
+            "Donker met een lichte band vóór de punt",
+            "Opvallend rood, ook op de bovensnavel"
+          ]
+        },
+        {
+          "label": "Flanken",
+          "values": [
+            "Lichtgrijs tegen donkere borst",
+            "Wit, contrasterend tegen donkere borst en buik"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krooneend"
+      ],
+      "caution": "Begin met de snavel. Het verschil is gebaseerd op mannetjes in prachtkleed."
+    },
+    {
+      "id": "LK-071",
+      "focus": [
+        "sp141"
+      ],
+      "birds": [
+        "sp141",
+        "sp114"
+      ],
+      "risk": "Snelle insectenjagers met gevorkte staart. Jonge Boerenzwaluwen missen de lange staartpennen van veel volwassen vogels.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide individuele vluchtfoto’s gematcht. Een vergelijkbaar jongerenpaar staat open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Vleugels",
+          "values": [
+            "Lange sikkelvleugels en compacte kop",
+            "Minder sterk sikkelvormig, bij volwassenen vaak lange staartpennen"
+          ]
+        },
+        {
+          "label": "Onderzijde",
+          "values": [
+            "Donker met hoogstens een kleine lichte keelvlek",
+            "Lichte buik onder donkere borstband en roodbruine keel"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gierzwaluw",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw",
+        "https://blascozumeta.wimbitek.com/specie_files/07950_ENG_Apus_apus_aranzadi.pdf",
+        "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg",
+        "https://commons.wikimedia.org/wiki/File:Schiermonnikoog_-_Boerenzwaluw_(Hirundo_rustica)_v2.jpg"
+      ],
+      "caution": "Tegenlicht maakt de buik donkerder. Let op vleugelvorm. Gebruik korte staartpennen bij jonge vogels alleen als extra aanwijzing."
+    },
+    {
+      "id": "LK-072",
+      "focus": [
+        "sp141"
+      ],
+      "birds": [
+        "sp141",
+        "sp115"
+      ],
+      "risk": "Korte gevorkte staart en snel vluchtbeeld bij beide soorten.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide individuele vluchtfoto’s gematcht. Leeftijd en geslacht van de getoonde Gierzwaluw-opname blijven open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Vleugels",
+          "values": [
+            "Lang, smal en duidelijk sikkelvormig",
+            "Kortere indruk, combinatie met witte stuit"
+          ]
+        },
+        {
+          "label": "Buik en stuit",
+          "values": [
+            "Donkere romp, kleine lichte keelvlek mogelijk",
+            "Lichte buik en witte stuit bij zicht van opzij of schuin van achteren"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gierzwaluw",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+        "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg",
+        "https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg"
+      ],
+      "caution": "De stuit is bij een vlucht recht op je af vaak uit beeld. Controleer de vleugelvorm en wacht zo mogelijk op een draai."
+    },
+    {
+      "id": "LK-073",
+      "focus": [
+        "sp141"
+      ],
+      "birds": [
+        "sp141",
+        "sp381"
+      ],
+      "risk": "Sterk gelijkende silhouetten. Een jonge Gierzwaluw kan geschubd ogen en zo op Vale Gierzwaluw lijken.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Een vergelijkbare Vale Gierzwaluw-foto in vrije vlucht ontbreekt. Herkenningstekst blijft in beide richtingen."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Doorgaans gelijkmatiger donker, bij juveniel kunnen lichte randen zichtbaar zijn",
+            "Donker oogmasker tegen lichtere kopzijden bij goed licht"
+          ]
+        },
+        {
+          "label": "Onderzijde",
+          "values": [
+            "Doorgaans donker, juvenielen kunnen geschubd ogen",
+            "Lichte veerranden kunnen een geschubde onderzijde geven"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gierzwaluw",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vale-gierzwaluw",
+        "https://blascozumeta.wimbitek.com/specie_files/07950_ENG_Apus_apus_aranzadi.pdf"
+      ],
+      "caution": "Neem leeftijd en lichtval mee. De geschubde indruk afzonderlijk is onvoldoende voor soortdeterminatie."
     }
   ],
   "withinSpeciesVariation": [
@@ -3048,7 +3324,8 @@
     "visualReviewR14": "docs/fotokwaliteit/F3_R14_GROTELIJSTER_ROODBORST_ZWARTEROODSTAART_2026-11-16_DRAFT.md",
     "visualReviewR31": "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md",
     "visualReviewR32": "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md",
-    "visualReviewR33": "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md"
+    "visualReviewR33": "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md",
+    "visualReviewR34": "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }

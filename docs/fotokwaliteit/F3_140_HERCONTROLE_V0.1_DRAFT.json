@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 41,
+    "nextNotStarted": 38,
     "secondBatchStarted": 3,
-    "contentInspected": 99,
+    "contentInspected": 102,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -87,7 +87,8 @@
     "thirtiethBatchStarted": 3,
     "thirtyFirstBatchStarted": 3,
     "thirtySecondBatchStarted": 3,
-    "thirtyThirdBatchStarted": 3
+    "thirtyThirdBatchStarted": 3,
+    "thirtyFourthBatchStarted": 3
   },
   "records": [
     {
@@ -10594,37 +10595,66 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R34",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle individuele beelden en bronoriginelen gematcht, volledige vakdeterminatie blijft open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele broncredits en licenties gecontroleerd; onafhankelijke volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Mannetje met roomgele bles; vrouwtje op steen; jeugdfoto op basis van bronannotatie en de zichtbare veren. Vrije vlucht toont witte bovenvleugelvelden en donkere spiegel. Eclipsbeeld staat open.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-067 en LK-068. Vrouwtjes naast Krakeend en Tafeleend. De Tafeleend en Smient staan beide stil op een ondergrond. Let op snavelvorm, kopvorm en patroon.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium op kandidaat-SHA in PR #332)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronregistratie gelezen; gerichte browserproef in PR #332)",
+          "audioRecordingsAuthenticity": "NOT TESTED (geen lokale fragmenten)",
+          "audioLicenseAndAttribution": "NOT TESTED (geen lokale fragmenten)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal opnamebestand)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming en bijbehorende kleedsleutel gelezen; bestaande maatband en volledigheid afzonderlijk)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen, bestaande status niet herijkt)",
+          "ebirdDistributionAndBias": "NOT TESTED (Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; Chromium en Samsung-proef apart)",
+          "independentSecondReview": "NOT TESTED in het dossier (zie samenvatting onafhankelijke read-only QA in PR #332)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-067 en LK-068. Vrouwtjes naast Krakeend en Tafeleend. De Tafeleend en Smient staan beide stil op een ondergrond. Let op snavelvorm, kopvorm en patroon.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Mannetje met roomgele bles; vrouwtje op steen; jeugdfoto op basis van bronannotatie en de zichtbare veren. Vrije vlucht toont witte bovenvleugelvelden en donkere spiegel. Eclipsbeeld staat open.",
+          "LK-067 en LK-068. Vrouwtjes naast Krakeend en Tafeleend. De Tafeleend en Smient staan beide stil op een ondergrond. Let op snavelvorm, kopvorm en patroon.",
+          "Individuele bronfoto’s en lokale WebP’s gematcht. Makers, licenties en bewerkingen per bestand gelezen.",
+          "Geen lokale geluidsopnamen geregistreerd."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient",
+          "https://stats.sovon.nl/stats/soort/1790",
+          "https://blascozumeta.com/specie_files/01790_Mareca_penelope_E.pdf",
+          "https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_-_male.jpg",
+          "https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg",
+          "https://www.inaturalist.org/photos/322366665",
+          "https://commons.wikimedia.org/wiki/File:Eurasian_Wigeon_(Anas_penelope)_(51171016336).jpg",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krakeend",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+          "https://commons.wikimedia.org/wiki/File:Female_gadwall_(52294387865).jpg",
+          "https://commons.wikimedia.org/wiki/File:Aythya_ferina_(female),_Krasnodar,_Russia.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de gekopieerde kandidaat-SHA in PR #332. Volledige vakaftekening open.",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "audioSourceMatches": [],
+        "photoBlobSHAs": [
+          "d46ffa7f9a8f340771a97e377ffa157f1438bd2c",
+          "e77251e5e6155c79ab618f0cfd8ae8ccf1f29259",
+          "3f1e35b86a84b57bd3b73cb3ed359a69eabae2d5",
+          "991b1856d9011fd4adba44595fb06892057a8f45"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie de CI- en QA-bewijslagen in de overdracht van PR #332."
       }
     },
     {
@@ -10669,35 +10699,82 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R34",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle individuele beelden en bronoriginelen gematcht, volledige vakdeterminatie blijft open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele broncredits en licenties gecontroleerd; onafhankelijke volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Mannetje en vrouwtje met aparte rustrollen. De kleinere vogel linksachter is volgens de bron de juveniel. Mannetje in vrije vlucht met lichtgrijze vleugelbaan. Eclipsbeeld en juvenielenpaar staan open.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-068/069/070. Vrouwtjespaar Smient, drie bestaande platen met Kuifeend, en wederzijdse herkenningstekst voor Krooneend. Fotopaar Krooneend blijft open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium op kandidaat-SHA in PR #332)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronregistratie gelezen; gerichte browserproef in PR #332)",
+          "audioRecordingsAuthenticity": "BLOCKED (Xeno-canto ontoegankelijk, geen passende Commons-kopie; lokale bytes decoderen)",
+          "audioLicenseAndAttribution": "BLOCKED (CC BY 4.0 staat in de registratie; primaire bronrecords onbereikbaar)",
+          "soundRolesSongCall": "PARTIALLY TESTED (lokale rol volgt historische bronlabels; zelfstandige luisterbeoordeling open)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (twee volledige lokale decodes; Chromium-bewijs op kandidaat in PR #332)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming en bijbehorende kleedsleutel gelezen; bestaande maatband en volledigheid afzonderlijk)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen, bestaande status niet herijkt)",
+          "ebirdDistributionAndBias": "NOT TESTED (Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; Chromium en Samsung-proef apart)",
+          "independentSecondReview": "NOT TESTED in het dossier (zie samenvatting onafhankelijke read-only QA in PR #332)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-068/069/070. Vrouwtjespaar Smient, drie bestaande platen met Kuifeend, en wederzijdse herkenningstekst voor Krooneend. Fotopaar Krooneend blijft open.)"
         },
-        "findings": [],
-        "sourceReferences": [],
+        "findings": [
+          "Mannetje en vrouwtje met aparte rustrollen. De kleinere vogel linksachter is volgens de bron de juveniel. Mannetje in vrije vlucht met lichtgrijze vleugelbaan. Eclipsbeeld en juvenielenpaar staan open.",
+          "LK-068/069/070. Vrouwtjespaar Smient, drie bestaande platen met Kuifeend, en wederzijdse herkenningstekst voor Krooneend. Fotopaar Krooneend blijft open.",
+          "Individuele bronfoto’s en lokale WebP’s gematcht. Makers, licenties en bewerkingen per bestand gelezen.",
+          "Twee lokale MP3’s volledig gedecodeerd. XC991857 en XC990310 waren afgeschermd. Geen bronmatch, auditieve aftekening of nieuwe rechtenclaim."
+        ],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/tafeleend",
+          "https://stats.sovon.nl/stats/soort/1980",
+          "https://www.blascozumeta.com/specie_files/01980_ENG_Aythya_ferina_aranzadi.pdf",
+          "https://commons.wikimedia.org/wiki/File:Common_Pochard_2025_11_11_08.jpg",
+          "https://commons.wikimedia.org/wiki/File:Aythya_ferina_(female),_Krasnodar,_Russia.jpg",
+          "https://www.inaturalist.org/photos/681580697",
+          "https://commons.wikimedia.org/wiki/File:Common_pochard_(Aythaya_ferina)_in_flight_Denmark.jpg",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smient",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifeend",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/krooneend",
+          "https://commons.wikimedia.org/wiki/File:Samice_hv%C3%ADzd%C3%A1ka_eurasijsk%C3%A9ho_na_kameni.jpg",
+          "https://commons.wikimedia.org/wiki/File:Tufted_Duck_Aythya_fuligula_Male_by_Dr._Raju_Kasambe_DSCN9795_(17).jpg",
+          "https://commons.wikimedia.org/wiki/File:Aythya_fuligula_(female).jpg",
+          "https://commons.wikimedia.org/wiki/File:Tufted_Duck_(Aythya_fuligula)_-_Flickr_-_gilgit2.jpg",
+          "https://xeno-canto.org/991857",
+          "https://xeno-canto.org/990310"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de gekopieerde kandidaat-SHA in PR #332. Volledige vakaftekening open.",
+        "fullPass": false,
+        "localAudioDecodes": [
+          {
+            "path": "/assets/species/audio/sp132-a1.mp3",
+            "duration": 9.696,
+            "sha256": "33e165c2888bdaeda4c2e53b2a47fa95084a07d456e91f50744c8ce2ae3bf07d"
+          },
+          {
+            "path": "/assets/species/audio/sp132-a2.mp3",
+            "duration": 14.928,
+            "sha256": "b2ae7a65b6976fbfa55e8d3e454083d71c0bbcbed5da6cb4e8dde4129db31cdd"
+          }
+        ],
+        "photoFilesInspected": 4,
+        "audioSourceMatches": [],
+        "photoBlobSHAs": [
+          "e586688eb2b67c98187109cff5d835771525c688",
+          "fd63ce4e876587fdd0d3553fc5d3f5d16761c245",
+          "fcd73cccd26e086911864b26d9ca856bccddb5f6",
+          "1a144113bdd175b7054866ecb1b4f11097ab3267"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie de CI- en QA-bewijslagen in de overdracht van PR #332."
       }
     },
     {
@@ -10715,7 +10792,7 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto",
+            "role": "Hoofdfoto (vrije vlucht, neutraal)",
             "path": "/assets/species/plumage/sp141-adult.webp",
             "oldRights": "VERIFIED"
           },
@@ -10734,38 +10811,66 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R34",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle individuele beelden en bronoriginelen gematcht, volledige vakdeterminatie blijft open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele broncredits en licenties gecontroleerd; onafhankelijke volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Hoofdfoto is een echte vrije vlucht zonder geslachts- of precieze leeftijdsclaim. Ook de tweede vluchtfoto blijft neutraal. De juvenielenfoto toont opvang na redding en lichte veerranden.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-071/072/073. Exacte bronvluchtparen met Boerenzwaluw en Huiszwaluw. Kortere jeugdstaart van Boerenzwaluw meegewogen. Wederzijdse tekst voor Vale Gierzwaluw, fotopaar open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium op kandidaat-SHA in PR #332)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronregistratie gelezen; gerichte browserproef in PR #332)",
+          "audioRecordingsAuthenticity": "NOT TESTED (geen lokale fragmenten)",
+          "audioLicenseAndAttribution": "NOT TESTED (geen lokale fragmenten)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal opnamebestand)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming en bijbehorende kleedsleutel gelezen; bestaande maatband en volledigheid afzonderlijk)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen, bestaande status niet herijkt)",
+          "ebirdDistributionAndBias": "NOT TESTED (Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; Chromium en Samsung-proef apart)",
+          "independentSecondReview": "NOT TESTED in het dossier (zie samenvatting onafhankelijke read-only QA in PR #332)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-071/072/073. Exacte bronvluchtparen met Boerenzwaluw en Huiszwaluw. Kortere jeugdstaart van Boerenzwaluw meegewogen. Wederzijdse tekst voor Vale Gierzwaluw, fotopaar open.)"
         },
         "findings": [
           "De fotograaf vermeldt bij beide vluchtfoto’s geen exacte leeftijd.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Hoofdfoto is een echte vrije vlucht zonder geslachts- of precieze leeftijdsclaim. Ook de tweede vluchtfoto blijft neutraal. De juvenielenfoto toont opvang na redding en lichte veerranden.",
+          "LK-071/072/073. Exacte bronvluchtparen met Boerenzwaluw en Huiszwaluw. Kortere jeugdstaart van Boerenzwaluw meegewogen. Wederzijdse tekst voor Vale Gierzwaluw, fotopaar open.",
+          "Individuele bronfoto’s en lokale WebP’s gematcht. Makers, licenties en bewerkingen per bestand gelezen.",
+          "Geen lokale geluidsopnamen geregistreerd."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gierzwaluw",
+          "https://stats.sovon.nl/stats/soort/7950",
+          "https://blascozumeta.wimbitek.com/specie_files/07950_ENG_Apus_apus_aranzadi.pdf",
+          "https://commons.wikimedia.org/wiki/File:Common_swift_2024_04_21.jpg",
+          "https://commons.wikimedia.org/wiki/File:Apus_apus_juvenile_rescue_Paris_20260627.jpg",
+          "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_01.jpg",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boerenzwaluw",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/huiszwaluw",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vale-gierzwaluw",
+          "https://commons.wikimedia.org/wiki/File:Schiermonnikoog_-_Boerenzwaluw_(Hirundo_rustica)_v2.jpg",
+          "https://commons.wikimedia.org/wiki/File:Northern_House_Martin_(Delichon_urbicum).jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de gekopieerde kandidaat-SHA in PR #332. Volledige vakaftekening open.",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "audioSourceMatches": [],
+        "photoBlobSHAs": [
+          "aaad7be5b2569b621a910ef333156b73b82cccc9",
+          "d71e2702b3db35a9ab92177ca99e0f3d55fe1e0e",
+          "ef60c85a7dfe0aeb65853efdba8551f59bf7b541"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie de CI- en QA-bewijslagen in de overdracht van PR #332."
       }
     },
     {
