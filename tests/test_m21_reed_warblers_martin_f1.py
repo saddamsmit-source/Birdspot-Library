@@ -225,15 +225,16 @@ def browser_test():
                                        (img.currentSrc||img.getAttribute('src')||'').endsWith(path)).length""",
                                     bird["hero"])
                                 assert repeated == 0, (sid,"hero reused in gallery",repeated)
-                                # Norm v1.7 keeps recognition guidance visible and
-                                # excludes the incomplete photo comparison panel.
+                                # R32 verified the two individual flight photos.
+                                # The hero may be reused only in the paired comparison.
                                 partner = '[data-compare-species="sp115"]'
-                                expect(panel.locator(f".sd-cmp-panel {partner}")).to_have_count(0)
-                                guidance = panel.locator("[data-text-similar]")
+                                guidance = panel.locator(f".sd-cmp-panel[data-cmp-flight]:has({partner})")
                                 expect(guidance.locator(partner)).to_be_visible()
                                 expect(guidance).to_contain_text(bird["similar"])
-                                expect(guidance).to_contain_text("borst vaag grijs")
+                                expect(guidance).to_contain_text("vaag grijs getekend")
                                 expect(guidance).to_contain_text("witte stuit")
+                                expect(guidance.locator("img[src$='sp116-flight.webp']")).to_have_count(1)
+                                expect(guidance.locator("img[src$='sp115-flight.webp']")).to_have_count(1)
                                 assert "Nog geen passende foto" not in panel.inner_text()
                                 print(f"M21 UX-OBSERVED sp116 {width}px: real flight is hero, no duplicate flight card")
                             if sid=="sp108":

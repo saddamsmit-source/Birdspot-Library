@@ -46,7 +46,9 @@ def check_swallow(page, case, width, capture):
     recognition = page.locator("#sdPanel-herkenning")
     assert_no_audio(recognition)
     if bird == "sp115":
-        assert_text_pair(recognition, "sp116")
+        sand_martin = open_pair(page, "sp116")
+        expect(sand_martin).to_have_attribute("data-cmp-flight", "")
+        expect(sand_martin).to_contain_text("vaag grijs getekend")
     visible = open_pair(page, other)
     card = visible.locator("xpath=ancestor::div[contains(@class,'sd-cmp-card')]")
     expect(card.locator(".sd-cmp-tab")).to_have_count(3)
