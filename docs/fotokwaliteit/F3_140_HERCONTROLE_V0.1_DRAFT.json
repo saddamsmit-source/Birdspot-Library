@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 35,
+    "nextNotStarted": 32,
     "secondBatchStarted": 3,
-    "contentInspected": 105,
+    "contentInspected": 108,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -89,7 +89,8 @@
     "thirtySecondBatchStarted": 3,
     "thirtyThirdBatchStarted": 3,
     "thirtyFourthBatchStarted": 3,
-    "thirtyFifthBatchStarted": 3
+    "thirtyFifthBatchStarted": 3,
+    "thirtySixthBatchStarted": 3
   },
   "records": [
     {
@@ -7246,7 +7247,7 @@
             "sourceSHA1": null,
             "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/92502660/original.jpeg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "iNaturalist live API confirms author and CC license family; version 4.0 retained from register",
             "ownVisualSameShot": true,
@@ -7276,7 +7277,7 @@
             "sourceSHA1": null,
             "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/172413835/original.jpg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "iNaturalist live API confirms author and CC license family; version 4.0 retained from register",
             "ownVisualSameShot": true,
@@ -7397,7 +7398,7 @@
             "sourceSHA1": "7b71f6e7fee9c0d58d91f2efea1ae532acf9ee5a",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Egret_(Ardea_alba)_(25562005404).jpg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "Commons author and license checked",
             "ownVisualSameShot": true,
@@ -7412,7 +7413,7 @@
             "sourceSHA1": null,
             "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/388019872/original.jpg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "iNaturalist live API confirms author and CC license family; version 4.0 retained from register",
             "ownVisualSameShot": true,
@@ -7427,7 +7428,7 @@
             "sourceSHA1": null,
             "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/243252269/original.jpeg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "iNaturalist live API confirms author and CC license family; version 4.0 retained from register",
             "ownVisualSameShot": true,
@@ -7442,7 +7443,7 @@
             "sourceSHA1": "9e0a0386206492ce4f3bc481519fcc75af91d1e2",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_egret_(Ardea_alba)_in_flight_Danube_delta.jpg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "Commons author and license checked",
             "ownVisualSameShot": true,
@@ -7547,7 +7548,7 @@
             "sourceSHA1": "f3dfbfb45846ead5567f28bac37c1de4ef58167e",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "Commons author and license checked",
             "ownVisualSameShot": true,
@@ -7562,7 +7563,7 @@
             "sourceSHA1": "03b76e82484672e02dcad1923682aee54c30468f",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gar%C3%A7a-vermelha,_juvenil,_Purple_Heron,_juvenile_(50904679921).jpg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "Commons author and license checked",
             "ownVisualSameShot": true,
@@ -7577,7 +7578,7 @@
             "sourceSHA1": "e786ffe7d315791560a4c9280d71716a59dd0756",
             "sourceUrl": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_flight_01.jpg",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "rightsMatch": true,
             "rightsNote": "Commons author and license checked",
             "ownVisualSameShot": true,
@@ -7681,7 +7682,7 @@
             "localGitBlobSHA1": "760a934cfee68a822827c357afedeeb11f618532",
             "sourceSHA1": "85b870e2e84bbe61ce3f2e3d391dd6fa9955fed4",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": true,
             "manualCreditCheck": null,
             "rightsAssessment": "author and license matched automatically",
@@ -7695,7 +7696,7 @@
             "localGitBlobSHA1": "021c649c6b5663344dee59463cd863c09b15f1d8",
             "sourceSHA1": "b762043b6e05f7f8b4278dcec5345b5e19e84647",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": true,
             "manualCreditCheck": null,
             "rightsAssessment": "author and license matched automatically",
@@ -7815,7 +7816,7 @@
             "localGitBlobSHA1": "75cca6776840a5971a92ea37827c480705c946a0",
             "sourceSHA1": "70101fd500cf5a7f703a65250b2c17d0992cc558",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": false,
             "manualCreditCheck": "Required Commons author Diliff appears literally in existing credit David Iliff (Diliff); no new identity claim for the real name.",
             "rightsAssessment": "manual credit interpretation; automated false retained",
@@ -7829,7 +7830,7 @@
             "localGitBlobSHA1": "51939c92c8d56d4430f9ce50a625bf157004c7bc",
             "sourceSHA1": "24ccb9852d146c2864968f96a8d18f854a17bc20",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": true,
             "manualCreditCheck": null,
             "rightsAssessment": "author and license matched automatically",
@@ -7843,7 +7844,7 @@
             "localGitBlobSHA1": "94c7ce664100cce2ed1e778c8824454b9b76bf4f",
             "sourceSHA1": "db3119e9962d1f0fa684d40e54d03fa285c06024",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": false,
             "manualCreditCheck": "Commons author Tuxyso appears literally; / Wikimedia Commons is platform attribution, not a second maker.",
             "rightsAssessment": "manual credit interpretation; automated false retained",
@@ -7985,7 +7986,7 @@
             "localGitBlobSHA1": "0f2d8f1ccf71dadae5134307da3d1a9a7a510b42",
             "sourceSHA1": "68eeda47197c5e2d4f5ee22a16dd9af2f59cd155",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": true,
             "manualCreditCheck": null,
             "rightsAssessment": "author and license matched automatically",
@@ -7999,7 +8000,7 @@
             "localGitBlobSHA1": "e0c1cade6c7e4f78b32cb33901cf11715ba6a6f5",
             "sourceSHA1": "f66add2be77d1806547a80d670aac1f74ba717e3",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": true,
             "manualCreditCheck": null,
             "rightsAssessment": "author and license matched automatically",
@@ -8013,7 +8014,7 @@
             "localGitBlobSHA1": "71f703ea307f13eb42c0a73311c3503358ccb325",
             "sourceSHA1": "42d453231bc5ea540e2921a9de99200c488e29b9",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": false,
             "manualCreditCheck": "Commons author Marie-Lan Nguyen appears literally; / Wikimedia Commons is platform attribution.",
             "rightsAssessment": "manual credit interpretation; automated false retained",
@@ -8027,7 +8028,7 @@
             "localGitBlobSHA1": "037547ed9ea21929f9e218918178e3d29b3e013b",
             "sourceSHA1": "f91d3f71976b35f1b3712b43a2b59db66641aba7",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": true,
             "manualCreditCheck": null,
             "rightsAssessment": "author and license matched automatically",
@@ -8041,7 +8042,7 @@
             "localGitBlobSHA1": "426a1562081da35015abd4c680828e7686cde174",
             "sourceSHA1": "b3fb3f13befc36cff4aad8e3acb0e99bd71102f0",
             "automatedSameShot": true,
-            "r": 1.0,
+            "r": 1,
             "automatedRightsMatch": true,
             "manualCreditCheck": null,
             "rightsAssessment": "author and license matched automatically",
@@ -11114,7 +11115,7 @@
             "matchedSeconds": 39.98567,
             "sourceSeconds": 39.98567,
             "localSeconds": 39.98596,
-            "offsetSeconds": 0.0,
+            "offsetSeconds": 0,
             "sourceSha256": "865921e0f0462e2f25cb089bb2ac73d63ae1a3ca674516ef106ea4a482b64bd2",
             "localSha256": "a0c00abe4c28833160e4355d2fad0c16743f956150492fea01d3e6ecd4de2db5",
             "sourceLicense": "CC BY-SA 4.0"
@@ -11127,7 +11128,7 @@
             "matchedSeconds": 17.24346,
             "sourceSeconds": 17.24346,
             "localSeconds": 17.24346,
-            "offsetSeconds": 0.0,
+            "offsetSeconds": 0,
             "sourceSha256": "df894243ceba74660fde4b16dec1883b51548cebe09bd8485fb122b162eec92b",
             "localSha256": "53c8d4f8a8427683255c73ec10c7c2e14981cf0325a96fdc53a14519c99c96c2",
             "sourceLicense": "CC BY 4.0"
@@ -11140,7 +11141,7 @@
             "matchedSeconds": 17.59188,
             "sourceSeconds": 17.59188,
             "localSeconds": 17.59188,
-            "offsetSeconds": 0.0,
+            "offsetSeconds": 0,
             "sourceSha256": "f4e73c1d8f48d93577ed613e1a43d69bbaea64ae18b40b9e3e90edfa39988120",
             "localSha256": "a62748c3f8438c66fb671852489aa683a194be54d4ee3a0e5ba02be4ce6e1289",
             "sourceLicense": "CC BY 4.0"
@@ -11279,10 +11280,10 @@
             "path": "/assets/species/audio/sp145-call.mp3",
             "comparison": "Mono-PCM op 24 kHz, tijdsuitlijning over het complete lokale bestand",
             "normalizedCorrelation": 0.999987,
-            "matchedSeconds": 25.0,
+            "matchedSeconds": 25,
             "sourceSeconds": 52.61062,
-            "localSeconds": 25.0,
-            "offsetSeconds": 0.0,
+            "localSeconds": 25,
+            "offsetSeconds": 0,
             "sourceSha256": "40c80dd4f39c340af04b1e5d3d195882f2c4975eb6fe3c089188a5ec5792a87d",
             "localSha256": "9a59ee61c828a42bcb243e4567ad7b50338e8082c0878a8e2bd792edc56e0504",
             "sourceLicense": "CC BY-SA 3.0"
@@ -11292,10 +11293,10 @@
             "path": "/assets/species/audio/sp145-song.mp3",
             "comparison": "Mono-PCM op 24 kHz, tijdsuitlijning over het complete lokale bestand",
             "normalizedCorrelation": 0.998551,
-            "matchedSeconds": 25.0,
+            "matchedSeconds": 25,
             "sourceSeconds": 42.37692,
-            "localSeconds": 25.0,
-            "offsetSeconds": 0.0,
+            "localSeconds": 25,
+            "offsetSeconds": 0,
             "sourceSha256": "fd052d530f6d90978a5502959cb956c6a353a000c2e7bc9d403fdbbb8dc72462",
             "localSha256": "6d15de9bf842234a561dc37407cd244a1a5d3ab92f4fe4a332aeb4de7b42b4bf",
             "sourceLicense": "CC BY-SA 4.0"
@@ -11308,7 +11309,7 @@
             "matchedSeconds": 4.06346,
             "sourceSeconds": 4.06346,
             "localSeconds": 4.06346,
-            "offsetSeconds": 0.0,
+            "offsetSeconds": 0,
             "sourceSha256": "afee5aa7e063b5a00af69943767942c3afeb4f8d88060b0d1c64dd34f9afa200",
             "localSha256": "a65c75556753a0419d4ab736624dbafe57c62902a2b20a734776d856ffb0531d",
             "sourceLicense": "CC BY-SA 4.0"
@@ -11338,7 +11339,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp146.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp146-juv.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          },
+          {
+            "role": "Verenkleed (Winterkleed)",
+            "path": "/assets/species/plumage/sp146-winter.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          },
+          {
+            "role": "In vlucht",
+            "path": "/assets/species/plumage/sp146-flight.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          }
+        ],
         "existingAudioCount": 2,
         "existingAudioPaths": [
           "/assets/species/audio/sp146-night-flight-call.mp3",
@@ -11346,37 +11368,55 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R36",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (herleidbaarheid van lokale manifest naar bron-URL; origineel/pixel en soortdeterminatie niet onafhankelijk hervergeleken)",
+          "photoIndividualRights": "PARTIALLY TESTED (bestaande maker, licentie, URL en bewerkingsmetadata geïnspecteerd; actuele bronnorm, zichtbare verplichtingen en herpublicatierecht niet onafhankelijk afgetekend)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vier geregistreerde beelden (hoofd, juveniel, winter, vlucht). Bontbekplevier kan volgens Sovon en Vogelbescherming jaarrond worden waargenomen; app-seizoensfilter mrt–okt en label zomergast als inhoudelijke discrepantie aangemerkt, zonder wijziging aan uitgesteld Beste-maanden-filter.; geen onafhankelijke visuele rol- en leeftijdsaftekening)",
+          "photoPairComparisons": "PARTIALLY TESTED (Bontbekplevier–Kleine Plevier broedkleed/juveniel en vergelijking met Strandplevier bestaan in code; onafhankelijke vergelijkingsfotoaftekening ontbreekt.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (Chromium/telefoon op R36 SHA nog niet uitgevoerd)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (manifestmetadata aanwezig; zichtbare broncredit en geluidsblok op R36 browser NOT TESTED)",
+          "audioRecordingsAuthenticity": "NOT TESTED (twee lokale bestanden geregistreerd; originele opnames niet geopend en geen volledige PCM-match)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (bestaande maker/licentie/URL in manifest; primaire Xeno-canto-bron niet toegankelijk en geen nieuwe publicatierechten geverifieerd)",
+          "soundRolesSongCall": "PARTIALLY TESTED (rolnamen uit bestaand register; onafhankelijk luisteren NOT TESTED)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (offline browser op R36 SHA nog niet uitgevoerd)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (publieke Vogelbescherming-soortpagina gelezen; ANWB-soortpassage niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande maatvelden en soortnaam beoordeeld; tweede onafhankelijke uitgever en volledige kennis-/biometriecontrole open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina en huidige appstatus vergeleken; oude categorie/numerieke meetmethode niet stil gewijzigd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen nieuwe Nederlandse eBird-bron of biascheck)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R36 mobiele/restore-route)",
+          "endToEndGuideUI": "NOT TESTED (nog geen Chromium/doeltoestel op R36 SHA)",
+          "independentSecondReview": "NOT TESTED (onafhankelijke tweede vak-, rechten- en luisterreview vereist)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Bontbekplevier–Kleine Plevier broedkleed/juveniel en vergelijking met Strandplevier bestaan in code; onafhankelijke vergelijkingsfotoaftekening ontbreekt.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Vier geregistreerde beelden (hoofd, juveniel, winter, vlucht). Bontbekplevier kan volgens Sovon en Vogelbescherming jaarrond worden waargenomen; app-seizoensfilter mrt–okt en label zomergast als inhoudelijke discrepantie aangemerkt, zonder wijziging aan uitgesteld Beste-maanden-filter.",
+          "Bontbekplevier–Kleine Plevier broedkleed/juveniel en vergelijking met Strandplevier bestaan in code; onafhankelijke vergelijkingsfotoaftekening ontbreekt.",
+          "Webtoegang Xeno-canto/Commons primaire media onvolledig; geen nieuw bewijs van afbeeldingsrechten of geluidsdeterminatie."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R36_BONTBEKPLEVIER_KLEINE_PLEVIER_REGENWULP_2026-11-21_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bontbekplevier",
+          "https://stats.sovon.nl/stats/soort/4700",
+          "https://commons.wikimedia.org/wiki/File:Common_ringed_plover_(Charadrius_hiaticula)_Oppdal.jpg",
+          "https://www.inaturalist.org/photos/460492953",
+          "https://www.inaturalist.org/photos/733881501",
+          "https://commons.wikimedia.org/wiki/File:Charadrius_hiaticula_Lvk.jpg",
+          "https://xeno-canto.org/1178346",
+          "https://xeno-canto.org/897533"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (geen geverifieerde R36-preview)",
+        "independence": "NOT VERIFIED (technische en externe ornithologische beoordeling open)",
+        "fullPass": false,
+        "photoFilesInspected": 0,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -11392,7 +11432,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp147.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp147-juv.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          },
+          {
+            "role": "Verenkleed (Winterkleed)",
+            "path": "/assets/species/plumage/sp147-winter.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          },
+          {
+            "role": "In vlucht",
+            "path": "/assets/species/plumage/sp147-flight.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          }
+        ],
         "existingAudioCount": 2,
         "existingAudioPaths": [
           "/assets/species/audio/sp147-flight-call.mp3",
@@ -11400,37 +11461,55 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R36",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (herleidbaarheid van lokale manifest naar bron-URL; origineel/pixel en soortdeterminatie niet onafhankelijk hervergeleken)",
+          "photoIndividualRights": "PARTIALLY TESTED (bestaande maker, licentie, URL en bewerkingsmetadata geïnspecteerd; actuele bronnorm, zichtbare verplichtingen en herpublicatierecht niet onafhankelijk afgetekend)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vier geregistreerde beelden (hoofd, juveniel, winter, vlucht). Oogring, donkere snavel en vleugelstreep als gecombineerde kenmerken; exacte jeugd- en winterrol onafhankelijk te beoordelen.; geen onafhankelijke visuele rol- en leeftijdsaftekening)",
+          "photoPairComparisons": "PARTIALLY TESTED (Kleine Plevier–Bontbekplevier broedkleed/juveniel en Kleine Plevier–Strandplevier broedkleed bestaan in code; nieuwe fotoverificatie open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (Chromium/telefoon op R36 SHA nog niet uitgevoerd)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (manifestmetadata aanwezig; zichtbare broncredit en geluidsblok op R36 browser NOT TESTED)",
+          "audioRecordingsAuthenticity": "NOT TESTED (twee lokale bestanden geregistreerd; originele opnames niet geopend en geen volledige PCM-match)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (bestaande maker/licentie/URL in manifest; primaire Xeno-canto-bron niet toegankelijk en geen nieuwe publicatierechten geverifieerd)",
+          "soundRolesSongCall": "PARTIALLY TESTED (rolnamen uit bestaand register; onafhankelijk luisteren NOT TESTED)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (offline browser op R36 SHA nog niet uitgevoerd)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (publieke Vogelbescherming-soortpagina gelezen; ANWB-soortpassage niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande maatvelden en soortnaam beoordeeld; tweede onafhankelijke uitgever en volledige kennis-/biometriecontrole open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina en huidige appstatus vergeleken; oude categorie/numerieke meetmethode niet stil gewijzigd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen nieuwe Nederlandse eBird-bron of biascheck)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R36 mobiele/restore-route)",
+          "endToEndGuideUI": "NOT TESTED (nog geen Chromium/doeltoestel op R36 SHA)",
+          "independentSecondReview": "NOT TESTED (onafhankelijke tweede vak-, rechten- en luisterreview vereist)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Kleine Plevier–Bontbekplevier broedkleed/juveniel en Kleine Plevier–Strandplevier broedkleed bestaan in code; nieuwe fotoverificatie open.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Vier geregistreerde beelden (hoofd, juveniel, winter, vlucht). Oogring, donkere snavel en vleugelstreep als gecombineerde kenmerken; exacte jeugd- en winterrol onafhankelijk te beoordelen.",
+          "Kleine Plevier–Bontbekplevier broedkleed/juveniel en Kleine Plevier–Strandplevier broedkleed bestaan in code; nieuwe fotoverificatie open.",
+          "Webtoegang Xeno-canto/Commons primaire media onvolledig; geen nieuw bewijs van afbeeldingsrechten of geluidsdeterminatie."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R36_BONTBEKPLEVIER_KLEINE_PLEVIER_REGENWULP_2026-11-21_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-plevier",
+          "https://stats.sovon.nl/stats/soort/4690",
+          "https://www.inaturalist.org/photos/680750765",
+          "https://www.inaturalist.org/photos/94775001",
+          "https://www.inaturalist.org/photos/350059610",
+          "https://commons.wikimedia.org/wiki/File:The_Little_ringed_plover_in_flight.jpg",
+          "https://xeno-canto.org/1143443",
+          "https://xeno-canto.org/1107841"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (geen geverifieerde R36-preview)",
+        "independence": "NOT VERIFIED (technische en externe ornithologische beoordeling open)",
+        "fullPass": false,
+        "photoFilesInspected": 0,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -11446,43 +11525,63 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp148.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; actuele primaire fotoherkomst/rechten apart aftekenen)"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R36",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (herleidbaarheid van lokale manifest naar bron-URL; origineel/pixel en soortdeterminatie niet onafhankelijk hervergeleken)",
+          "photoIndividualRights": "PARTIALLY TESTED (bestaande maker, licentie, URL en bewerkingsmetadata geïnspecteerd; actuele bronnorm, zichtbare verplichtingen en herpublicatierecht niet onafhankelijk afgetekend)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (De bestaande Regenwulp-hoofdfoto is aanwezig in guidePhotos.js, hoewel de oude foto-audit 0 bestanden registreerde. Extra kleed/vlucht en lokale audio ontbreken; eerste F3-review is geen media-PASS.; geen onafhankelijke visuele rol- en leeftijdsaftekening)",
+          "photoPairComparisons": "PARTIALLY TESTED (Bestaande Wulp–Regenwulp-vergelijking beschrijft kruin-/snavelverschil en jonge Wulp-uitzondering; tweede onafhankelijk fotopaar ontbreekt.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (Chromium/telefoon op R36 SHA nog niet uitgevoerd)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (manifestmetadata aanwezig; zichtbare broncredit en geluidsblok op R36 browser NOT TESTED)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokale gidsaudio voor Regenwulp)",
+          "audioLicenseAndAttribution": "BLOCKED (geen lokale audiobron voor deze soort)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal audiofragment)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal audiofragment)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (publieke Vogelbescherming-soortpagina gelezen; ANWB-soortpassage niet beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande maatvelden en soortnaam beoordeeld; tweede onafhankelijke uitgever en volledige kennis-/biometriecontrole open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina en huidige appstatus vergeleken; oude categorie/numerieke meetmethode niet stil gewijzigd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen nieuwe Nederlandse eBird-bron of biascheck)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (R36 mobiele/restore-route)",
+          "endToEndGuideUI": "NOT TESTED (nog geen Chromium/doeltoestel op R36 SHA)",
+          "independentSecondReview": "NOT TESTED (onafhankelijke tweede vak-, rechten- en luisterreview vereist)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Bestaande Wulp–Regenwulp-vergelijking beschrijft kruin-/snavelverschil en jonge Wulp-uitzondering; tweede onafhankelijk fotopaar ontbreekt.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "De bestaande Regenwulp-hoofdfoto is aanwezig in guidePhotos.js, hoewel de oude foto-audit 0 bestanden registreerde. Extra kleed/vlucht en lokale audio ontbreken; eerste F3-review is geen media-PASS.",
+          "Bestaande Wulp–Regenwulp-vergelijking beschrijft kruin-/snavelverschil en jonge Wulp-uitzondering; tweede onafhankelijk fotopaar ontbreekt.",
+          "Webtoegang Xeno-canto/Commons primaire media onvolledig; geen nieuw bewijs van afbeeldingsrechten of geluidsdeterminatie."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R36_BONTBEKPLEVIER_KLEINE_PLEVIER_REGENWULP_2026-11-21_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/regenwulp",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wulp",
+          "https://stats.sovon.nl/stats/soort/5380",
+          "https://commons.wikimedia.org/wiki/File:Whimbrel_%28Numenius_phaeopus%29_Dalvikurbyggd.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (geen geverifieerde R36-preview)",
+        "independence": "NOT VERIFIED (technische en externe ornithologische beoordeling open)",
+        "fullPass": false,
+        "photoFilesInspected": 0,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
