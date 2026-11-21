@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 32,
+    "nextNotStarted": 29,
     "secondBatchStarted": 3,
-    "contentInspected": 108,
+    "contentInspected": 111,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -90,7 +90,8 @@
     "thirtyThirdBatchStarted": 3,
     "thirtyFourthBatchStarted": 3,
     "thirtyFifthBatchStarted": 3,
-    "thirtySixthBatchStarted": 3
+    "thirtySixthBatchStarted": 3,
+    "thirtySeventhBatchStarted": 3
   },
   "records": [
     {
@@ -11597,43 +11598,65 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp149.webp",
+            "oldRights": "NOT TESTED in de oude negenpuntsaudit; bronmetadata opnieuw bekeken in R37"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R37",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle 1 lokale WebPs visueel bekeken op zichtbare soortkenmerken; primaire bestanden niet pixelgewijs hervergeleken)",
+          "photoIndividualRights": "PARTIALLY TESTED (bronpagina's 5 Commons-foto's gelezen op maker/licentie; lokale pixelmatch en één iNaturalist-licentie open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Zijaanzicht Rosse Grutto met roodbruine borst en licht opgewipte snavel; geslacht niet zelfstandig te onderbouwen. Vergelijkingspaar Grutto–Rosse Grutto bestaat in twee richtingen maar toont geen bewezen gelijkwaardig beeldpaar of vluchtbeeld.; onafhankelijke ornithologische leeftijd/geslacht-aftekening ontbreekt)",
+          "photoPairComparisons": "PARTIALLY TESTED (Wederzijdse Grutto–Rosse Grutto-tekstvergelijking; geen gecontroleerd vlucht-/staartfotopaar.)",
+          "responsiveLayoutAndZoom": "NOT TESTED op finale R37 SHA (Chromium en toestelgescheiden bewijs)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (fotometadata en CC-voorwaarden bekeken; zichtbare UI-credits en zoom in R37-browsercheck nog te bewijzen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokale opname voor deze vogel, geen bronidentiteit bevestigd)",
+          "audioLicenseAndAttribution": "BLOCKED (geen lokaal audiofragment, nieuwe licentie niet onderzocht)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal audiofragment)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal audiofragment; gidsfoto's offline alleen via browser/CI te bewijzen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming soortbeschrijving gelezen; geen daadwerkelijke ANWB-soortpassage beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande maten behouden; bij Drieteen historische VB/RSPB-bronband, overige onafhankelijke getalscontrole open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen, seizoen/status kwalitatief vergeleken; numerieke trends en volledige broedstatus-audit open)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen Nederlandse eBird-datascan/biasbepaling)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (geen nieuwe fysieke back-up-/restoreproef op R37)",
+          "endToEndGuideUI": "NOT TESTED (Chromium op R37 SHA en Samsung moeten afzonderlijk geverifieerd worden)",
+          "independentSecondReview": "NOT TESTED (eigen lokale visuele inspectie, onafhankelijke determinatie en rechtenreview nog open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Wederzijdse Grutto–Rosse Grutto-tekstvergelijking; geen gecontroleerd vlucht-/staartfotopaar.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Zijaanzicht Rosse Grutto met roodbruine borst en licht opgewipte snavel; geslacht niet zelfstandig te onderbouwen.",
+          "Vergelijkingspaar Grutto–Rosse Grutto bestaat in twee richtingen maar toont geen bewezen gelijkwaardig beeldpaar of vluchtbeeld.",
+          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/rosse-grutto",
+          "https://stats.sovon.nl/stats/soort/5340",
+          "https://commons.wikimedia.org/wiki/File:Bar-tailed_Godwit_%28Limosa_lapponica%29.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R37 SHA",
+        "independence": "NOT VERIFIED (eigen visuele controle; onafhankelijke vak-/mediareview ontbreekt)",
+        "fullPass": false,
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "fdb6746e373e58e419c3bacc8c17b234e90faf18"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -11649,43 +11672,73 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto",
+            "path": "/assets/species/sp150.webp",
+            "oldRights": "NOT TESTED in de oude negenpuntsaudit; bronmetadata opnieuw bekeken in R37"
+          },
+          {
+            "role": "In vlucht (niet-broedkleed)",
+            "path": "/assets/species/plumage/sp150-flight.webp",
+            "oldRights": "NOT TESTED in de oude negenpuntsaudit; bronmetadata opnieuw bekeken in R37"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R37",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle 2 lokale WebPs visueel bekeken op zichtbare soortkenmerken; primaire bestanden niet pixelgewijs hervergeleken)",
+          "photoIndividualRights": "PARTIALLY TESTED (bronpagina's 5 Commons-foto's gelezen op maker/licentie; lokale pixelmatch en één iNaturalist-licentie open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Stilstaande Steenloper toont zwarte/witte kop, korte donkere snavel en kastanjebruine vleugeldekveren; geen geslachtslabel bevestigd. Vluchtbeeld toont witte vleugelstrepen; bron vermeldt niet-broedkleed en geen leeftijd of geslacht. LK-080 is een nieuwe wederzijdse, uitsluitend tekstuele vergelijking met Bontbekplevier; geen vals fotopaar.; onafhankelijke ornithologische leeftijd/geslacht-aftekening ontbreekt)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-080 wederzijdse soorttekst met Bontbekplevier; photoMissing=true voor beide, leeftijd-/kleedgelijkwaardig fotopaar ontbreekt.)",
+          "responsiveLayoutAndZoom": "NOT TESTED op finale R37 SHA (Chromium en toestelgescheiden bewijs)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (fotometadata en CC-voorwaarden bekeken; zichtbare UI-credits en zoom in R37-browsercheck nog te bewijzen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokale opname voor deze vogel, geen bronidentiteit bevestigd)",
+          "audioLicenseAndAttribution": "BLOCKED (geen lokaal audiofragment, nieuwe licentie niet onderzocht)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal audiofragment)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal audiofragment; gidsfoto's offline alleen via browser/CI te bewijzen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming soortbeschrijving gelezen; geen daadwerkelijke ANWB-soortpassage beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande maten behouden; bij Drieteen historische VB/RSPB-bronband, overige onafhankelijke getalscontrole open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen, seizoen/status kwalitatief vergeleken; numerieke trends en volledige broedstatus-audit open)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen Nederlandse eBird-datascan/biasbepaling)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (geen nieuwe fysieke back-up-/restoreproef op R37)",
+          "endToEndGuideUI": "NOT TESTED (Chromium op R37 SHA en Samsung moeten afzonderlijk geverifieerd worden)",
+          "independentSecondReview": "NOT TESTED (eigen lokale visuele inspectie, onafhankelijke determinatie en rechtenreview nog open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-080 wederzijdse soorttekst met Bontbekplevier; photoMissing=true voor beide, leeftijd-/kleedgelijkwaardig fotopaar ontbreekt.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Stilstaande Steenloper toont zwarte/witte kop, korte donkere snavel en kastanjebruine vleugeldekveren; geen geslachtslabel bevestigd.",
+          "Vluchtbeeld toont witte vleugelstrepen; bron vermeldt niet-broedkleed en geen leeftijd of geslacht.",
+          "LK-080 is een nieuwe wederzijdse, uitsluitend tekstuele vergelijking met Bontbekplevier; geen vals fotopaar.",
+          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steenloper",
+          "https://stats.sovon.nl/stats/soort/5610",
+          "https://commons.wikimedia.org/wiki/File:Tournepierre_%C3%A0_collier_Thyna010.jpg",
+          "https://commons.wikimedia.org/wiki/File:Ruddy_turnstone_(Arenaria_interpres)_in_flight_non-breeding.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R37 SHA",
+        "independence": "NOT VERIFIED (eigen visuele controle; onafhankelijke vak-/mediareview ontbreekt)",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "9059e5cdb00a89af937e28754e23c0dc2489efe0",
+          "2fe4df95883943bca54779e374fb269368e4a83b"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -11705,54 +11758,75 @@
           {
             "role": "Hoofdfoto",
             "path": "/assets/species/sp152.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (historische auditclaim; NIET opnieuw onafhankelijk goedgekeurd)"
           },
           {
             "role": "Verenkleed (Juveniel)",
             "path": "/assets/species/plumage/sp152-juv.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (historische auditclaim; NIET opnieuw onafhankelijk goedgekeurd)"
           },
           {
-            "role": "In vlucht",
+            "role": "In vlucht (groep)",
             "path": "/assets/species/plumage/sp152-flight.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (historische auditclaim; NIET opnieuw onafhankelijk goedgekeurd)"
           }
         ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R37",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (alle 3 lokale WebPs visueel bekeken op zichtbare soortkenmerken; primaire bestanden niet pixelgewijs hervergeleken)",
+          "photoIndividualRights": "PARTIALLY TESTED (bronpagina's 5 Commons-foto's gelezen op maker/licentie; lokale pixelmatch en één iNaturalist-licentie open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Bleekgrijze, witte hoofdfoto met donkere snavel/poten, veerrol neutraal; juveniel met contrast op rugveren en oud bronlabel Juvenile, iNaturalist niet opnieuw toegankelijk. Vluchtgroep toont echte vlieghouding en witte vleugelstrepen. De primaire Commons-bron beschrijft immatures in fall; lokaal onjuist 'leeftijd niet in bron' gecorrigeerd zonder individuele leeftijdsclaim.; onafhankelijke ornithologische leeftijd/geslacht-aftekening ontbreekt)",
+          "photoPairComparisons": "PARTIALLY TESTED (Wederzijdse Drieteenstrandloper–Bonte Strandloper-tekstvergelijking aanwezig; passend winter-fotopaar en onafhankelijke juvenieldeterminatie ontbreken.)",
+          "responsiveLayoutAndZoom": "NOT TESTED op finale R37 SHA (Chromium en toestelgescheiden bewijs)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (fotometadata en CC-voorwaarden bekeken; zichtbare UI-credits en zoom in R37-browsercheck nog te bewijzen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokale opname voor deze vogel, geen bronidentiteit bevestigd)",
+          "audioLicenseAndAttribution": "BLOCKED (geen lokaal audiofragment, nieuwe licentie niet onderzocht)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal audiofragment)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal audiofragment; gidsfoto's offline alleen via browser/CI te bewijzen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming soortbeschrijving gelezen; geen daadwerkelijke ANWB-soortpassage beschikbaar)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande maten behouden; bij Drieteen historische VB/RSPB-bronband, overige onafhankelijke getalscontrole open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina gelezen, seizoen/status kwalitatief vergeleken; numerieke trends en volledige broedstatus-audit open)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen Nederlandse eBird-datascan/biasbepaling)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (geen nieuwe fysieke back-up-/restoreproef op R37)",
+          "endToEndGuideUI": "NOT TESTED (Chromium op R37 SHA en Samsung moeten afzonderlijk geverifieerd worden)",
+          "independentSecondReview": "NOT TESTED (eigen lokale visuele inspectie, onafhankelijke determinatie en rechtenreview nog open)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Wederzijdse Drieteenstrandloper–Bonte Strandloper-tekstvergelijking aanwezig; passend winter-fotopaar en onafhankelijke juvenieldeterminatie ontbreken.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Bleekgrijze, witte hoofdfoto met donkere snavel/poten, veerrol neutraal; juveniel met contrast op rugveren en oud bronlabel Juvenile, iNaturalist niet opnieuw toegankelijk.",
+          "Vluchtgroep toont echte vlieghouding en witte vleugelstrepen. De primaire Commons-bron beschrijft immatures in fall; lokaal onjuist 'leeftijd niet in bron' gecorrigeerd zonder individuele leeftijdsclaim.",
+          "Geen lokaal geregistreerde zang/roep. Geen hergebruik van niet-geautoriseerde geluidsopname."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/drieteenstrandloper",
+          "https://stats.sovon.nl/stats/soort/4970",
+          "https://www.rspb.org.uk/birds-and-wildlife/sanderling/",
+          "https://commons.wikimedia.org/wiki/File:Sanderling_Westkapelle_02.jpg",
+          "https://www.inaturalist.org/photos/25120626",
+          "https://commons.wikimedia.org/wiki/File:Sanderling_(Calidris_alba)_(3972936394).jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R37 SHA",
+        "independence": "NOT VERIFIED (eigen visuele controle; onafhankelijke vak-/mediareview ontbreekt)",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "6c6066f48eac3cc17cfdca910669d836c43295d7",
+          "e9a9cdcc8ac5157e1fce2030752a674b35fdbb2a",
+          "751436696af1a01ac1809eecb108f7ca94d87ab8"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {

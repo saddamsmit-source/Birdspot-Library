@@ -1969,6 +1969,15 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk van opzij naar de snavelvorm. Pootkleur verandert met leeftijd en lichtval.',
   },
   {
+    label: 'Steenloper en Bontbekplevier · rustbeeld',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp150', source: 'steenloper', photoMissing: true, marks: 'Kortere wigvormige donkere snavel, bont zwart-wit kop- en borstpatroon, oranje poten en opvallend geroeste schouderveren in broedkleed.'},
+      {id: 'sp146', source: 'bontbekplevier', photoMissing: true, marks: 'Compacte bouw, duidelijke donkere borstband op witte borst en doorgaans langere, deels oranje snavelbasis in broedkleed.'},
+    ],
+    tip: 'Vergelijk borsttekening, snavelvorm en foerageergedrag samen. Het kleed en de oranje kleur kunnen per leeftijd en seizoen verschillen; er ontbreekt nog een gelijkwaardig fotopaar.',
+  },
+  {
     label: 'Wulp en Regenwulp · kop en snavel',
     birds: [
       {id: 'sp100', source: 'wulp', marks: 'Relatief egale kruin en een lange, gelijkmatig gebogen snavel.'},

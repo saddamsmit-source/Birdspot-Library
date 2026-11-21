@@ -1,0 +1,51 @@
+name: Birdspot F3-R37 original source role and browser QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r36-bontbek-kleine-plevier-regenwulp-20261121-gpt6
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: birdspot-f3-r37-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  r37-data-and-sources:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: F3 ledger, original source-age correction and reciprocal lookalikes
+        run: |
+          node tests/test_f3_140_unified_rebaseline.mjs
+          node tests/test_lookalike_r37.mjs
+          node tests/test_lookalike_r36.mjs
+          node tests/test_lookalike_r35.mjs
+          node tests/test_audio_140_contract.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+          node tests/test_guide_poses.mjs
+          node tests/test_guide_photo_verification.mjs
+          node tests/test_kennisbaseline.mjs
+  r37-browser-and-offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 24
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install headless Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: R37 three birds, credits, text-only pairs, zoom and fresh offline media
+        run: python -u tests/test_lookalike_r37_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: birdspot-f3-r37-browser-shots
+          path: tests/screenshots/lookalike_r37/*.png
+          if-no-files-found: ignore
