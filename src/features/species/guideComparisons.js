@@ -521,23 +521,35 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp145', source: 'goudplevier', plumage: 'breeding', marks: 'Goudgele spikkels op de bovenzijde. De zwarte onderzijde is afgezet met een witte baan.'},
       {id: 'sp144', source: 'zilverplevier', plumage: 'breeding', marks: 'Zilvergrijze, contrastrijke bovenzijde, stevige snavel en eveneens een zwarte onderzijde.'},
     ],
-    tip: 'Beide soorten kunnen een zwarte buik hebben. Kijk naar het patroon op de rug en de stevigheid van de snavel.',
+    rows: [
+      {label: 'Bovendelen', values: ['Fijn goudgeel gespikkeld', 'Zilvergrijs en wit, met meer contrast']},
+      {label: 'Bouw en snavel', values: ['Slanker met een kortere snavel', 'Forser met een stevigere snavel']},
+    ],
+    tip: 'Beide soorten kunnen een zwarte buik met een witte rand hebben. De hoeveelheid zwart varieert per vogel.',
   },
   {
     label: 'Goudplevier en Zilverplevier · winterkleed',
     birds: [
-      {id: 'sp145', source: 'goudplevier', plumage: 'winter', marks: 'Warme goudbruine spikkels, kortere snavel en slankere bouw. In vlucht zijn de oksels wit.'},
-      {id: 'sp144', source: 'zilverplevier', plumage: 'winter', marks: 'Grijzer, forser en vaak met meer contrast tussen kruin en wenkbrauw. In vlucht vallen zwarte oksels op.'},
+      {id: 'sp145', source: 'goudplevier', plumage: 'winter', marks: 'Warme goudbruine spikkels, kortere snavel en slankere bouw.'},
+      {id: 'sp144', source: 'zilverplevier', plumage: 'winter', marks: 'Doorgaans grijzer, forser en vaak met meer contrast tussen kruin en wenkbrauw.'},
     ],
-    tip: 'Kleuren kunnen door het licht veranderen. Kijk bij een overvliegende vogel naar de okselvlekken of luister naar de roep.',
+    rows: [
+      {label: 'Bovendelen', values: ['Vaak warm en goudbruin gespikkeld', 'Meestal grijzer en minder warm van kleur']},
+      {label: 'Bouw en snavel', values: ['Slankere bouw, kortere snavel', 'Forse kop en stevigere snavel']},
+    ],
+    tip: 'Let in rust op bouw en snavel. Bij goed zicht op de ondervleugel in vlucht heeft Zilverplevier zwarte oksels en Goudplevier lichte oksels.',
   },
   {
     label: 'Goudplevier en Zilverplevier · jonge vogels',
     birds: [
-      {id: 'sp145', source: 'goudplevier', plumage: 'juv', marks: 'Lichtere tot goudgele spikkels, fijne borstvlekjes en relatief kleine snavel. In vlucht witte oksels.'},
-      {id: 'sp144', source: 'zilverplevier', plumage: 'juv', marks: 'Kan ook geelachtige spikkels hebben. Let op de forse kop, stevige snavel en zwarte oksels in vlucht.'},
+      {id: 'sp145', source: 'goudplevier', plumage: 'juv', marks: 'Fijne goudgele spikkels, fijne borstvlekjes en een relatief korte snavel.'},
+      {id: 'sp144', source: 'zilverplevier', plumage: 'juv', marks: 'Kan ook geelachtige spikkels hebben. Let op de forse kop en stevige snavel.'},
     ],
-    tip: 'Gele spikkels komen bij beide voor. Combineer bouw en snavel met de ondervleugel of roep. Laat de soort open als die kenmerken ontbreken.',
+    rows: [
+      {label: 'Bovendelen', values: ['Fijne, vaak goudgele spikkels', 'Lichte spikkels die ook geelachtig kunnen zijn']},
+      {label: 'Kop en snavel', values: ['Kleinere kop en relatief korte snavel', 'Forse kop met een stevige snavel']},
+    ],
+    tip: 'Gele spikkels komen bij beide voor. Combineer bouw en snavel met de ondervleugel of roep. Laat de soort open bij twijfel.',
   },
   {
     label: 'Witgat en Bosruiter · broedkleed',
@@ -1611,10 +1623,10 @@ export const GUIDE_COMPARISONS = [
     tip: 'Gebruik een scherpe zijfoto van kop én flank; de koperrode ondervleugel is geen vereiste voor determinatie in rust.',
   },
   {
-    label: 'Kievit en Zilverplevier · volwassen',
+    label: 'Kievit en Zilverplevier · broedkleed',
     birds: [
       {id: 'sp099', source: 'kievit', plumage: 'adult_m', marks: 'Kuif, metaalgroene rug en witte buik onder een donkere borst.'},
-      {id: 'sp144', source: 'zilverplevier', marks: 'Geen kuif. Grijs getekende bovenzijde.'},
+      {id: 'sp144', source: 'zilverplevier', plumage: 'breeding', marks: 'Geen kuif. Zilvergrijs en wit getekende bovenzijde.'},
     ],
     rows: [
       {label: 'Kop', values: ['Opstaande kuif', 'Geen kuif']},
@@ -1946,6 +1958,15 @@ export const GUIDE_COMPARISONS = [
       {label: 'Poten', values: ['Roze', 'Lang en grijsblauw']},
     ],
     tip: 'Vergelijk de snavelvorm en pootlengte. De kleuren zijn lastiger bij tegenlicht.',
+  },
+  {
+    label: 'Kluut en Steltkluut · veldkenmerken',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp143', source: 'kluut', photoMissing: true, marks: 'Dunne, omhooggebogen snavel en lange blauwgrijze poten. Zwarte banden op de witte bovenzijde.'},
+      {id: 'sp205', source: 'steltkluut', photoMissing: true, marks: 'Dunne, rechte snavel en uitzonderlijk lange rozerode poten. Bij volwassen vogels zijn rug en vleugels veel donkerder.'},
+    ],
+    tip: 'Kijk van opzij naar de snavelvorm. Pootkleur verandert met leeftijd en lichtval.',
   },
   {
     label: 'Wulp en Regenwulp · kop en snavel',

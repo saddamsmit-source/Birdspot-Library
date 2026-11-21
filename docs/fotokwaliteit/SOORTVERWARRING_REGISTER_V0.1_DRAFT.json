@@ -65,7 +65,10 @@
     "sp129",
     "sp130",
     "sp132",
-    "sp141"
+    "sp141",
+    "sp143",
+    "sp144",
+    "sp145"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -3296,6 +3299,278 @@
         "https://blascozumeta.wimbitek.com/specie_files/07950_ENG_Apus_apus_aranzadi.pdf"
       ],
       "caution": "Neem leeftijd en lichtval mee. De geschubde indruk afzonderlijk is onvoldoende voor soortdeterminatie."
+    },
+    {
+      "id": "LK-074",
+      "focus": [
+        "sp143"
+      ],
+      "birds": [
+        "sp098",
+        "sp143"
+      ],
+      "risk": "Zwart-witte steltlopers in dezelfde biotoop. Snavel- en pootkleur vallen in tegenlicht minder op.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Twee bronfoto’s in rust gematcht. Een juvenielenpaar staat open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Lang, recht en oranjerood",
+            "Dun, donker en omhooggebogen"
+          ]
+        },
+        {
+          "label": "Borst",
+          "values": [
+            "Volwassen vogel heeft een zwarte borst",
+            "Witte borst onder zwarte kap"
+          ]
+        },
+        {
+          "label": "Poten",
+          "values": [
+            "Roze poten met kortere indruk",
+            "Lange blauwgrijze poten"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/scholekster",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+        "https://commons.wikimedia.org/wiki/File:Eurasian_oystercatcher_(Haematopus_ostralegus)_at_Amrum.jpg",
+        "https://commons.wikimedia.org/wiki/File:Avocet_(Recurvirostra_avosetta).jpg"
+      ],
+      "caution": "Gebruik de snavelvorm en pootlengte ook wanneer poot- en snavelkleur wegvallen."
+    },
+    {
+      "id": "LK-075",
+      "focus": [
+        "sp143"
+      ],
+      "birds": [
+        "sp143",
+        "sp205"
+      ],
+      "risk": "Slanke zwart-witte steltlopers met lange poten en dunne snavel. Lichte poten kunnen grauw lijken bij tegenlicht.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Passende Steltkluut-foto ontbreekt in de gids. Wederzijdse herkenningstekst is aanwezig."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Dun en opvallend omhooggebogen",
+            "Dun en overwegend recht"
+          ]
+        },
+        {
+          "label": "Poten",
+          "values": [
+            "Lang en blauwgrijs bij volwassen vogels",
+            "Uitzonderlijk lang, bij volwassenen rozerood"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steltkluut"
+      ],
+      "caution": "Controleer snavelvorm bij een zijaanzicht en houd rekening met kleurverschillen door leeftijd en lichtval."
+    },
+    {
+      "id": "LK-076",
+      "focus": [
+        "sp144",
+        "sp145"
+      ],
+      "birds": [
+        "sp145",
+        "sp144"
+      ],
+      "risk": "Zwarte onderzijde met een lichte rand komt bij beide voor. Hoeveelheid zwart varieert.",
+      "matchingPlumages": [
+        "breeding",
+        "breeding"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide broedkleedfoto’s herleid tot de bron. De Zilverplevier is door de maker als vrouwtje benoemd. De vergelijking toont broedkleed."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Bovendelen",
+          "values": [
+            "Fijn goudgeel gespikkeld",
+            "Zilvergrijs en wit met meer contrast"
+          ]
+        },
+        {
+          "label": "Bouw en snavel",
+          "values": [
+            "Slankere bouw met een kortere snavel",
+            "Forse bouw met een stevige snavel"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+        "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-goudplevier-vs-zilverplevier",
+        "https://www.inaturalist.org/photos/605984899",
+        "https://www.inaturalist.org/photos/66147127"
+      ],
+      "caution": "Een witte baan en donkere buik zijn onvoldoende. Bekijk bovenzijde, bouw en snavel samen."
+    },
+    {
+      "id": "LK-077",
+      "focus": [
+        "sp144",
+        "sp145"
+      ],
+      "birds": [
+        "sp145",
+        "sp144"
+      ],
+      "risk": "Beide buiten broedkleed met lichte onderzijde en gespikkelde rug. Lamp- of zonlicht beïnvloedt de kleur.",
+      "matchingPlumages": [
+        "winter",
+        "winter"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide winterfoto’s gematcht. Een Goudplevier-foto met zicht op de lichte oksel ontbreekt. Daarom geen ondervleugelfotopaar."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Bovendelen",
+          "values": [
+            "Vaak warm goudbruin gespikkeld",
+            "Gewoonlijk grijzer en minder warm van kleur"
+          ]
+        },
+        {
+          "label": "Bouw en snavel",
+          "values": [
+            "Slankere bouw met een korte snavel",
+            "Forse kop en stevige snavel"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+        "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-goudplevier-vs-zilverplevier",
+        "https://www.inaturalist.org/photos/189221283",
+        "https://www.inaturalist.org/photos/602569884",
+        "https://commons.wikimedia.org/wiki/File:European_golden_plover_(Pluvialis_apricaria)_in_flight.jpg",
+        "https://commons.wikimedia.org/wiki/File:Grey_Plover_-_1192_(11479350056).jpg"
+      ],
+      "caution": "Kijk bij goed zicht op de ondervleugel naar lichte oksels bij Goudplevier of zwarte bij Zilverplevier."
+    },
+    {
+      "id": "LK-078",
+      "focus": [
+        "sp144",
+        "sp145"
+      ],
+      "birds": [
+        "sp145",
+        "sp144"
+      ],
+      "risk": "Ook veel jonge Zilverplevieren hebben geelachtige veerranden. Kleur alleen kan misleiden.",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide individuele juvenielenfoto’s gematcht. Beide bronnen bevatten een Juvenile-annotatie; onafhankelijke vakaftekening staat open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Bovendelen",
+          "values": [
+            "Fijne, vaak goudgele spikkels",
+            "Lichte spikkels die ook geelachtig kunnen zijn"
+          ]
+        },
+        {
+          "label": "Kop en snavel",
+          "values": [
+            "Kleinere kop en relatief korte snavel",
+            "Forse kop en relatief stevige snavel"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+        "https://blascozumeta.wimbitek.com/specie_files/04860_ENG_Pluvialis_squatarola_aranzadi.pdf",
+        "https://blascozumeta.com/specie_files/04850_ENG_Pluvialis_apricaria_aranzadi.pdf",
+        "https://www.inaturalist.org/photos/148325469",
+        "https://www.inaturalist.org/photos/327282937"
+      ],
+      "caution": "Combineer bouw en snavel met het beeld van de ondervleugel of roep. Laat de soort bij twijfel open."
+    },
+    {
+      "id": "LK-079",
+      "focus": [
+        "sp144"
+      ],
+      "birds": [
+        "sp099",
+        "sp144"
+      ],
+      "risk": "Kievit en Zilverplevier kunnen bij beperkt licht beide zwart-wit lijken. Bij jonge Kievit is de kuif kort.",
+      "matchingPlumages": [
+        "adult_m",
+        "breeding"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide broedkleedbronfoto’s gematcht. Beide winter- en jeugdplaten staan als paar open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Duidelijke opstaande kuif in het afgebeelde broedkleed",
+            "Ronde kop zonder opstaande kuif"
+          ]
+        },
+        {
+          "label": "Bovendelen",
+          "values": [
+            "Groen-paarse metaalglans bij goed licht",
+            "Zilvergrijs en wit getekende bovenzijde"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kievit",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+        "https://commons.wikimedia.org/wiki/File:Northern-Lapwing-Vanellus-vanellus.jpg",
+        "https://www.inaturalist.org/photos/66147127"
+      ],
+      "caution": "Kijk naar kuif en rug samen. Bij een jonge Kievit kunnen de korte kuif en bruine veren het beeld veranderen."
     }
   ],
   "withinSpeciesVariation": [
@@ -3325,7 +3600,8 @@
     "visualReviewR31": "docs/fotokwaliteit/F3_R31_WIELEWAAL_BOERENZWALUW_HUISZWALUW_2026-11-21_DRAFT.md",
     "visualReviewR32": "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md",
     "visualReviewR33": "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md",
-    "visualReviewR34": "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md"
+    "visualReviewR34": "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md",
+    "visualReviewR35": "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }

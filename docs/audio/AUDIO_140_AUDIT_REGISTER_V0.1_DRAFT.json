@@ -3489,7 +3489,9 @@
       "pilot": false,
       "status": "MISSING",
       "clips": [],
-      "reviewEvidence": [],
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md"
+      ],
       "next": "Zoek minimaal één herkenbaar origineel met bewezen soort, bron/licentie en correcte zang/roep; houd ontbrekend als MISSING",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
@@ -3513,14 +3515,14 @@
       "f2PhotoVisited": false,
       "mediaCount": 3,
       "pilot": false,
-      "status": "REGISTERED_UNVERIFIED",
+      "status": "PARTIALLY TESTED",
       "clips": [
         {
           "file": "/assets/species/audio/sp144-call-flight.mp3",
           "label": "Roep en vluchtroep",
           "reference": "https://xeno-canto.org/835257",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         },
@@ -3528,8 +3530,8 @@
           "file": "/assets/species/audio/sp144-flight-call.mp3",
           "label": "Vluchtroep",
           "reference": "https://xeno-canto.org/750704",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         },
@@ -3537,14 +3539,16 @@
           "file": "/assets/species/audio/sp144-night-flight-call.mp3",
           "label": "Nachtelijke vluchtroep",
           "reference": "https://xeno-canto.org/1169216",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         }
       ],
-      "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md"
+      ],
+      "next": "Xeno-canto-bron, auteursnaam, licentie en lokale mono-PCM zijn gematcht. Auditieve soort- en rolbeoordeling, onafhankelijke rechtenaftekening en fysiek toestel staan open.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
@@ -3567,14 +3571,14 @@
       "f2PhotoVisited": false,
       "mediaCount": 3,
       "pilot": false,
-      "status": "REGISTERED_UNVERIFIED",
+      "status": "PARTIALLY TESTED",
       "clips": [
         {
           "file": "/assets/species/audio/sp145-call.mp3",
           "label": "Roep",
           "reference": "https://xeno-canto.org/132878",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         },
@@ -3582,8 +3586,8 @@
           "file": "/assets/species/audio/sp145-song.mp3",
           "label": "Zang",
           "reference": "https://xeno-canto.org/1157251",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         },
@@ -3591,14 +3595,16 @@
           "file": "/assets/species/audio/sp145-night-flight-call.mp3",
           "label": "Nachtelijke vluchtroep",
           "reference": "https://xeno-canto.org/471077",
-          "externalRights": "NOT TESTED",
-          "sourceSpecies": "NOT TESTED",
+          "externalRights": "PARTIALLY TESTED",
+          "sourceSpecies": "PARTIALLY TESTED",
           "roleAudition": "NOT TESTED",
           "independentReview": "NOT TESTED"
         }
       ],
-      "reviewEvidence": [],
-      "next": "Controleer originele bron, soort en rol, volledige lokale opname, license/credits, offline browser en fysieke telefoon",
+      "reviewEvidence": [
+        "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md"
+      ],
+      "next": "Xeno-canto-bron, auteursnaam, licentie en lokale mono-PCM zijn gematcht. Auditieve soort- en rolbeoordeling, onafhankelijke rechtenaftekening en fysiek toestel staan open.",
       "sourceChecks": {
         "vogelbescherming": "NOT TESTED IN THIS AUDIO PASS",
         "anwbSpeciesPassage": "NOT TESTED",
