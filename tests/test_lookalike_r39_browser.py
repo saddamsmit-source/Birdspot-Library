@@ -94,14 +94,19 @@ def compare_partner(page,own,other):
             details.locator("summary").click()
     buttons=panel.locator(f'[data-compare-species="{other}"]')
     assert buttons.count()>0,(own,other,"missing comparison")
-    visible=buttons.locator("visible=true")
+    visible=panel.locator(f'[data-compare-species="{other}"]:visible')
     if not visible.count():
-        # A tab can hide one of several same-partner cards: activate its tab.
+        # A tab can hide one of several same-partner comparison cards.
         for card in panel.locator(".sd-cmp-card").all():
-            target=card.locator(f'[data-compare-species="{other}"]')
-            if target.count() and card.locator(".sd-cmp-tab").count():
-                card.locator(".sd-cmp-tab").first.click()
-        visible=panel.locator(f'[data-compare-species="{other}"]:visible')
+            if not card.locator(f'[data-compare-species="{other}"]').count():
+                continue
+            for tab in card.locator(".sd-cmp-tab").all():
+                tab.click()
+                visible=panel.locator(f'[data-compare-species="{other}"]:visible')
+                if visible.count():
+                    break
+            if visible.count():
+                break
     assert visible.count(),(own,other,"comparison hidden")
     visible.first.click()
     expect(page.locator(f"#detailThumb-{other}")).to_be_visible()
