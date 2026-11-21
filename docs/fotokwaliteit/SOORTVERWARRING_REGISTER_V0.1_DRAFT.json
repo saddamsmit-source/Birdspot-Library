@@ -3571,6 +3571,48 @@
         "https://www.inaturalist.org/photos/66147127"
       ],
       "caution": "Kijk naar kuif en rug samen. Bij een jonge Kievit kunnen de korte kuif en bruine veren het beeld veranderen."
+    },
+    {
+      "id": "LK-080",
+      "focus": [
+        "sp150"
+      ],
+      "birds": [
+        "sp150",
+        "sp146"
+      ],
+      "risk": "Beide hebben opvallende koptekening en kunnen oranje poten vertonen; één kleur is niet diagnostisch.",
+      "matchingPlumages": [
+        "adult_unsexed",
+        "adult_unsexed"
+      ],
+      "photoState": "TEXT_ONLY_PAIR_PENDING_MATCHED_PHOTOS",
+      "mediaOpen": [
+        "Steenloper- en Bontbekplevier-foto zijn verschillend qua pose en kleed; geen gelijkwaardig fotopaar afgetekend. De wederzijdse vergelijking is voorlopig alleen tekst."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Relatief kort en puntig, donker",
+            "Zwarte punt met vaak oranje snavelbasis in broedkleed"
+          ]
+        },
+        {
+          "label": "Borst en bovenkant",
+          "values": [
+            "Onregelmatig zwart-wit patroon, roestbruine vleugeldekveren in broedkleed",
+            "Doorlopende donkere borstband en grijsbruine bovenzijde"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steenloper",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bontbekplevier",
+        "src/features/species/guideComparisons.js"
+      ],
+      "caution": "Snavelvorm, borstpatroon en foerageerwijze samen; variatie naar leeftijd en kleed. Geen fotopaar of FULL PASS op basis van tekst."
     }
   ],
   "withinSpeciesVariation": [
@@ -3601,7 +3643,8 @@
     "visualReviewR32": "docs/fotokwaliteit/F3_R32_OEVERZWALUW_GEELGORS_RIETGORS_2026-11-21_DRAFT.md",
     "visualReviewR33": "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md",
     "visualReviewR34": "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md",
-    "visualReviewR35": "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md"
+    "visualReviewR35": "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md",
+    "visualReviewR37": "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }
