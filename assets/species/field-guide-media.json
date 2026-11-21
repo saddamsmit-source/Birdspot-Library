@@ -536,7 +536,8 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://xeno-canto.org/835257",
-        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+        "modifications": "Volledige opname omgezet naar MP3 (mono)",
+        "verification": "PARTIALLY TESTED (Xeno-canto-bron en lokale PCM gematcht; soort en geluidstype volgen de bronvermelding; onafhankelijke luisterbeoordeling open)"
       },
       {
         "file": "XC750704",
@@ -547,7 +548,8 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "source": "https://xeno-canto.org/750704",
-        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+        "modifications": "Volledige opname omgezet naar MP3 (mono)",
+        "verification": "PARTIALLY TESTED (Xeno-canto-bron en lokale PCM gematcht; soort en geluidstype volgen de bronvermelding; onafhankelijke luisterbeoordeling open)"
       },
       {
         "file": "XC1169216",
@@ -558,7 +560,8 @@
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "source": "https://xeno-canto.org/1169216",
-        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+        "modifications": "Volledige opname omgezet naar MP3 (mono)",
+        "verification": "PARTIALLY TESTED (Xeno-canto-bron en lokale PCM gematcht; soort en geluidstype volgen de bronvermelding; onafhankelijke luisterbeoordeling open)"
       }
     ],
     "sp145": [
@@ -571,7 +574,8 @@
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
         "source": "https://xeno-canto.org/132878",
-        "modifications": "Eerste 25 seconden omgezet naar MP3 (mono)"
+        "modifications": "Eerste 25 seconden omgezet naar MP3 (mono)",
+        "verification": "PARTIALLY TESTED (Xeno-canto-bron en lokale PCM gematcht; soort en geluidstype volgen de bronvermelding; onafhankelijke luisterbeoordeling open)"
       },
       {
         "file": "XC1157251",
@@ -582,7 +586,8 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://xeno-canto.org/1157251",
-        "modifications": "Eerste 25 seconden omgezet naar MP3 (mono)"
+        "modifications": "Eerste 25 seconden omgezet naar MP3 (mono)",
+        "verification": "PARTIALLY TESTED (Xeno-canto-bron en lokale PCM gematcht; soort en geluidstype volgen de bronvermelding; onafhankelijke luisterbeoordeling open)"
       },
       {
         "file": "XC471077",
@@ -593,7 +598,8 @@
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
         "source": "https://xeno-canto.org/471077",
-        "modifications": "Volledige opname omgezet naar MP3 (mono)"
+        "modifications": "Volledige opname omgezet naar MP3 (mono)",
+        "verification": "PARTIALLY TESTED (Xeno-canto-bron en lokale PCM gematcht; soort en geluidstype volgen de bronvermelding; onafhankelijke luisterbeoordeling open)"
       }
     ],
     "sp156": [
@@ -4686,7 +4692,7 @@
         "file": "Northern-Lapwing-Vanellus-vanellus.jpg",
         "nl": "Kievit",
         "latin": "Vanellus vanellus",
-        "author": "Andreas Trepte",
+        "author": "Andreas Trepte, www.avi-fauna.info",
         "license": "CC BY-SA 2.5",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/",
         "source": "https://commons.wikimedia.org/wiki/File:Northern-Lapwing-Vanellus-vanellus.jpg",
@@ -9438,7 +9444,7 @@
         "source": "https://commons.wikimedia.org/wiki/File:Kluut-1_(28031728713).jpg",
         "showSourceLink": true,
         "alt": "Kluut in vrije vlucht met omhooggebogen snavel, zwarte vleugelpunten en achterwaarts gestrekte poten.",
-        "modifications": "1280 px-bronweergave omgezet naar WebP met behoud van de fotograafvermelding in beeld",
+        "modifications": "Geschaald naar 1280 px en omgezet naar WebP met behoud van de makervermelding in beeld",
         "reviewed": "2026-11-08",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
         "visualCheck": "Kluut in vrije vlucht met omhooggebogen snavel, zwarte vleugelpunten en achterwaarts gestrekte poten.",

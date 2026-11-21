@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 38,
+    "nextNotStarted": 35,
     "secondBatchStarted": 3,
-    "contentInspected": 102,
+    "contentInspected": 105,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -88,7 +88,8 @@
     "thirtyFirstBatchStarted": 3,
     "thirtySecondBatchStarted": 3,
     "thirtyThirdBatchStarted": 3,
-    "thirtyFourthBatchStarted": 3
+    "thirtyFourthBatchStarted": 3,
+    "thirtyFifthBatchStarted": 3
   },
   "records": [
     {
@@ -10922,37 +10923,68 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R35",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (individuele bronopnamen en uitsneden gematcht; volledige vakdeterminatie open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele broncredits, bewerkingen en licenties gelezen; volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Beide volwassen sekserollen berusten op bronannotaties. Het neutrale hoofdbeeld, de brongeannoteerde juveniel en de vrije vlucht hebben geen sekseclaim. Kleedverschil alleen volstaat niet voor geslacht.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-074 en LK-075. Scholekster en Kluut in rust. Vergelijk snavel, borst en poten. Steltkluut krijgt wederzijdse herkenningstekst zolang een fotopaar ontbreekt.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium-bewijs per kandidaat-SHA in PR #333)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronregistratie gelezen; gerichte Chromium-proef per SHA in PR #333)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen geregistreerd Kluut-fragment)",
+          "audioLicenseAndAttribution": "BLOCKED (geen geregistreerd Kluut-fragment)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal opnamebestand)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen lokaal opnamebestand)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (herkenningsbronnen gelezen; volledige kalibratie van maten en kennisprofielen open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina geraadpleegd; bestaande statussen niet herijkt)",
+          "ebirdDistributionAndBias": "NOT TESTED (Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; browser en Samsung apart)",
+          "independentSecondReview": "NOT TESTED in het dossier (zie onafhankelijke read-only QA op de kandidaat-SHA in PR #333)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-074 en LK-075. Scholekster en Kluut in rust. Vergelijk snavel, borst en poten. Steltkluut krijgt wederzijdse herkenningstekst zolang een fotopaar ontbreekt.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Beide volwassen sekserollen berusten op bronannotaties. Het neutrale hoofdbeeld, de brongeannoteerde juveniel en de vrije vlucht hebben geen sekseclaim. Kleedverschil alleen volstaat niet voor geslacht.",
+          "LK-074 en LK-075. Scholekster en Kluut in rust. Vergelijk snavel, borst en poten. Steltkluut krijgt wederzijdse herkenningstekst zolang een fotopaar ontbreekt.",
+          "Alle getoonde bestanden teruggevonden op individueel bronrecord. Credits, licentie en zichtbare bewerkingen per opname gecontroleerd."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kluut",
+          "https://stats.sovon.nl/stats/soort/4560",
+          "https://bris.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&epi=147&id=112319",
+          "https://commons.wikimedia.org/wiki/File:Avocet_(Recurvirostra_avosetta).jpg",
+          "https://www.inaturalist.org/photos/131474425",
+          "https://commons.wikimedia.org/wiki/File:Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg",
+          "https://www.inaturalist.org/photos/714030288",
+          "https://commons.wikimedia.org/wiki/File:Kluut-1_(28031728713).jpg",
+          "https://www.inaturalist.org/photos/131475532",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/scholekster",
+          "https://commons.wikimedia.org/wiki/File:Eurasian_oystercatcher_(Haematopus_ostralegus)_at_Amrum.jpg",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/steltkluut"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de kandidaat-SHA in PR #333. Onafhankelijke vak- en luisteraftekening open.",
+        "fullPass": false,
+        "audioSourceMatches": [],
+        "photoFilesInspected": 6,
+        "photoBlobSHAs": [
+          "1173c0aa72dc63daea2e0bcdf40310bcf9b351f5",
+          "359614330f79179b77822b7b0d5087181eea8b3a",
+          "92eb90295b39832783ee69fc93ea8f3e88b352b0",
+          "5ec751cd04ba6cf106551cfa184dcd75a248d82d",
+          "aa931275e4af1df2e55df851a6030ad07970c18d",
+          "12311c4cae5bcda5f6939d3d0de892b0233c2d1e"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie de CI- en QA-bewijslagen in de overdracht van PR #333."
       }
     },
     {
@@ -10968,7 +11000,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (Broedkleed)",
+            "path": "/assets/species/sp144.webp",
+            "oldRights": "NOT TESTED in de historische negenpuntsaudit. Origineel, maker en licentie gecontroleerd in F3-R35."
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp144-juv.webp",
+            "oldRights": "NOT TESTED in de historische negenpuntsaudit. Origineel, maker en licentie gecontroleerd in F3-R35."
+          },
+          {
+            "role": "Verenkleed (Winterkleed)",
+            "path": "/assets/species/plumage/sp144-winter.webp",
+            "oldRights": "NOT TESTED in de historische negenpuntsaudit. Origineel, maker en licentie gecontroleerd in F3-R35."
+          },
+          {
+            "role": "In vlucht (neutraal)",
+            "path": "/assets/species/plumage/sp144-flight.webp",
+            "oldRights": "NOT TESTED in de historische negenpuntsaudit. Origineel, maker en licentie gecontroleerd in F3-R35."
+          }
+        ],
         "existingAudioCount": 3,
         "existingAudioPaths": [
           "/assets/species/audio/sp144-call-flight.mp3",
@@ -10977,37 +11030,131 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R35",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (individuele bronopnamen en uitsneden gematcht; volledige vakdeterminatie open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele broncredits, bewerkingen en licenties gelezen; volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Broedbeeld van door de fotograaf als vrouwtje benoemde vogel. Winterkleed rust op datum en zichtbare veren, juveniel op bronannotatie en veren. Vrije vlucht toont de zwarte oksel.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-076/077/078/079. Broedkleed, winterkleed en juveniel met Goudplevier. Broedkleed met Kievit. De zwarte oksel staat afzonderlijk bij In vlucht.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium-bewijs per kandidaat-SHA in PR #333)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronregistratie gelezen; gerichte Chromium-proef per SHA in PR #333)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (drie bronmatches op de complete lokale decode; auditieve soortcontrole open)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (auteurs en individuele bronlicenties komen overeen; onafhankelijke aftekening open)",
+          "soundRolesSongCall": "PARTIALLY TESTED (rollen volgen Xeno-canto-labels; zelfstandige luisterbeoordeling open)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (drie complete lokale decodes; browserbewijs per kandidaat-SHA in PR #333)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (herkenningsbronnen gelezen; volledige kalibratie van maten en kennisprofielen open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina geraadpleegd; bestaande statussen niet herijkt)",
+          "ebirdDistributionAndBias": "NOT TESTED (Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; browser en Samsung apart)",
+          "independentSecondReview": "NOT TESTED in het dossier (zie onafhankelijke read-only QA op de kandidaat-SHA in PR #333)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-076/077/078/079. Broedkleed, winterkleed en juveniel met Goudplevier. Broedkleed met Kievit. De zwarte oksel staat afzonderlijk bij In vlucht.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Broedbeeld van door de fotograaf als vrouwtje benoemde vogel. Winterkleed rust op datum en zichtbare veren, juveniel op bronannotatie en veren. Vrije vlucht toont de zwarte oksel.",
+          "LK-076/077/078/079. Broedkleed, winterkleed en juveniel met Goudplevier. Broedkleed met Kievit. De zwarte oksel staat afzonderlijk bij In vlucht.",
+          "Alle getoonde bestanden teruggevonden op individueel bronrecord. Credits, licentie en zichtbare bewerkingen per opname gecontroleerd.",
+          "Drie lokale MP3’s gematcht aan de oorspronkelijke geluidsgolven bij Xeno-canto. Bronlabels, makers en licenties komen overeen. Onafhankelijke luister- en rechtenaftekening blijven open."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+          "https://stats.sovon.nl/stats/soort/4860",
+          "https://blascozumeta.wimbitek.com/specie_files/04860_ENG_Pluvialis_squatarola_aranzadi.pdf",
+          "https://www.inaturalist.org/photos/66147127",
+          "https://www.inaturalist.org/photos/327282937",
+          "https://www.inaturalist.org/photos/602569884",
+          "https://commons.wikimedia.org/wiki/File:Grey_Plover_-_1192_(11479350056).jpg",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+          "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-goudplevier-vs-zilverplevier",
+          "https://www.inaturalist.org/photos/605984899",
+          "https://www.inaturalist.org/photos/189221283",
+          "https://commons.wikimedia.org/wiki/File:European_golden_plover_(Pluvialis_apricaria)_in_flight.jpg",
+          "https://blascozumeta.com/specie_files/04850_ENG_Pluvialis_apricaria_aranzadi.pdf",
+          "https://www.inaturalist.org/photos/148325469",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kievit",
+          "https://commons.wikimedia.org/wiki/File:Northern-Lapwing-Vanellus-vanellus.jpg",
+          "https://xeno-canto.org/835257",
+          "https://xeno-canto.org/750704",
+          "https://xeno-canto.org/1169216"
+        ],
+        "reviewedOriginalAudio": 3,
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de kandidaat-SHA in PR #333. Onafhankelijke vak- en luisteraftekening open.",
+        "fullPass": false,
+        "localAudioDecodes": [
+          {
+            "path": "/assets/species/audio/sp144-call-flight.mp3",
+            "duration": 40.056,
+            "sha256": "a0c00abe4c28833160e4355d2fad0c16743f956150492fea01d3e6ecd4de2db5"
+          },
+          {
+            "path": "/assets/species/audio/sp144-flight-call.mp3",
+            "duration": 17.304,
+            "sha256": "53c8d4f8a8427683255c73ec10c7c2e14981cf0325a96fdc53a14519c99c96c2"
+          },
+          {
+            "path": "/assets/species/audio/sp144-night-flight-call.mp3",
+            "duration": 17.64,
+            "sha256": "a62748c3f8438c66fb671852489aa683a194be54d4ee3a0e5ba02be4ce6e1289"
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "source": "https://xeno-canto.org/835257",
+            "path": "/assets/species/audio/sp144-call-flight.mp3",
+            "comparison": "Mono-PCM op 24 kHz, tijdsuitlijning over het complete lokale bestand",
+            "normalizedCorrelation": 0.99779,
+            "matchedSeconds": 39.98567,
+            "sourceSeconds": 39.98567,
+            "localSeconds": 39.98596,
+            "offsetSeconds": 0.0,
+            "sourceSha256": "865921e0f0462e2f25cb089bb2ac73d63ae1a3ca674516ef106ea4a482b64bd2",
+            "localSha256": "a0c00abe4c28833160e4355d2fad0c16743f956150492fea01d3e6ecd4de2db5",
+            "sourceLicense": "CC BY-SA 4.0"
+          },
+          {
+            "source": "https://xeno-canto.org/750704",
+            "path": "/assets/species/audio/sp144-flight-call.mp3",
+            "comparison": "Mono-PCM op 24 kHz, tijdsuitlijning over het complete lokale bestand",
+            "normalizedCorrelation": 0.994001,
+            "matchedSeconds": 17.24346,
+            "sourceSeconds": 17.24346,
+            "localSeconds": 17.24346,
+            "offsetSeconds": 0.0,
+            "sourceSha256": "df894243ceba74660fde4b16dec1883b51548cebe09bd8485fb122b162eec92b",
+            "localSha256": "53c8d4f8a8427683255c73ec10c7c2e14981cf0325a96fdc53a14519c99c96c2",
+            "sourceLicense": "CC BY 4.0"
+          },
+          {
+            "source": "https://xeno-canto.org/1169216",
+            "path": "/assets/species/audio/sp144-night-flight-call.mp3",
+            "comparison": "Mono-PCM op 24 kHz, tijdsuitlijning over het complete lokale bestand",
+            "normalizedCorrelation": 0.996791,
+            "matchedSeconds": 17.59188,
+            "sourceSeconds": 17.59188,
+            "localSeconds": 17.59188,
+            "offsetSeconds": 0.0,
+            "sourceSha256": "f4e73c1d8f48d93577ed613e1a43d69bbaea64ae18b40b9e3e90edfa39988120",
+            "localSha256": "a62748c3f8438c66fb671852489aa683a194be54d4ee3a0e5ba02be4ce6e1289",
+            "sourceLicense": "CC BY 4.0"
+          }
+        ],
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "2586c509b8e300d2ccc3f495d2d4a0fbbf904181",
+          "d066a88e2b5b9459772c2f23d4483b076302d569",
+          "5a34242ae2bcf083d4c4bb02f41828a400715a5d",
+          "e3f0341b34fa9320e56c06f308ca15bde7ae16f4"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie de CI- en QA-bewijslagen in de overdracht van PR #333."
       }
     },
     {
@@ -11023,7 +11170,28 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (Broedkleed)",
+            "path": "/assets/species/sp145.webp",
+            "oldRights": "NOT TESTED in de historische negenpuntsaudit. Origineel, maker en licentie gecontroleerd in F3-R35."
+          },
+          {
+            "role": "Verenkleed (Juveniel)",
+            "path": "/assets/species/plumage/sp145-juv.webp",
+            "oldRights": "NOT TESTED in de historische negenpuntsaudit. Origineel, maker en licentie gecontroleerd in F3-R35."
+          },
+          {
+            "role": "Verenkleed (Winterkleed)",
+            "path": "/assets/species/plumage/sp145-winter.webp",
+            "oldRights": "NOT TESTED in de historische negenpuntsaudit. Origineel, maker en licentie gecontroleerd in F3-R35."
+          },
+          {
+            "role": "In vlucht (neutraal)",
+            "path": "/assets/species/plumage/sp145-flight.webp",
+            "oldRights": "NOT TESTED in de historische negenpuntsaudit. Origineel, maker en licentie gecontroleerd in F3-R35."
+          }
+        ],
         "existingAudioCount": 3,
         "existingAudioPaths": [
           "/assets/species/audio/sp145-call.mp3",
@@ -11032,37 +11200,129 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R35",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "PARTIALLY TESTED (individuele bronopnamen en uitsneden gematcht; volledige vakdeterminatie open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele broncredits, bewerkingen en licenties gelezen; volledige aftekening open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Broed- en winterkleed en brongeannoteerde juveniel. Vrije vlucht laat de getekende bovenvleugel zien. Voor de lichte oksel ontbreekt een passende foto.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-076/077/078. Drie kleedparen met Zilverplevier. Geelachtige spikkels kunnen ook bij jonge Zilverplevier voorkomen. Geen ondervleugelpaar zolang de lichte oksel op Goudplevier niet zichtbaar is.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in het dossier (Chromium-bewijs per kandidaat-SHA in PR #333)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronregistratie gelezen; gerichte Chromium-proef per SHA in PR #333)",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (drie bronmatches op de complete lokale decode; auditieve soortcontrole open)",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (auteurs en individuele bronlicenties komen overeen; onafhankelijke aftekening open)",
+          "soundRolesSongCall": "PARTIALLY TESTED (rollen volgen Xeno-canto-labels; zelfstandige luisterbeoordeling open)",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (drie complete lokale decodes; browserbewijs per kandidaat-SHA in PR #333)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming gelezen; ANWB-soortpassages niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (herkenningsbronnen gelezen; volledige kalibratie van maten en kennisprofielen open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon-soortpagina geraadpleegd; bestaande statussen niet herijkt)",
+          "ebirdDistributionAndBias": "NOT TESTED (Nederlandse eBird-analyse ontbreekt)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "endToEndGuideUI": "PARTIALLY TESTED (Node-rendercontract; browser en Samsung apart)",
+          "independentSecondReview": "NOT TESTED in het dossier (zie onafhankelijke read-only QA op de kandidaat-SHA in PR #333)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-076/077/078. Drie kleedparen met Zilverplevier. Geelachtige spikkels kunnen ook bij jonge Zilverplevier voorkomen. Geen ondervleugelpaar zolang de lichte oksel op Goudplevier niet zichtbaar is.)"
         },
         "findings": [
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Broed- en winterkleed en brongeannoteerde juveniel. Vrije vlucht laat de getekende bovenvleugel zien. Voor de lichte oksel ontbreekt een passende foto.",
+          "LK-076/077/078. Drie kleedparen met Zilverplevier. Geelachtige spikkels kunnen ook bij jonge Zilverplevier voorkomen. Geen ondervleugelpaar zolang de lichte oksel op Goudplevier niet zichtbaar is.",
+          "Alle getoonde bestanden teruggevonden op individueel bronrecord. Credits, licentie en zichtbare bewerkingen per opname gecontroleerd.",
+          "Drie lokale MP3’s gematcht aan de oorspronkelijke geluidsgolven bij Xeno-canto. Bronlabels, makers en licenties komen overeen. Onafhankelijke luister- en rechtenaftekening blijven open."
         ],
-        "sourceReferences": [],
-        "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "assets/species/field-guide-media.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/goudplevier",
+          "https://stats.sovon.nl/stats/soort/4850",
+          "https://blascozumeta.com/specie_files/04850_ENG_Pluvialis_apricaria_aranzadi.pdf",
+          "https://www.inaturalist.org/photos/605984899",
+          "https://www.inaturalist.org/photos/148325469",
+          "https://www.inaturalist.org/photos/189221283",
+          "https://commons.wikimedia.org/wiki/File:European_golden_plover_(Pluvialis_apricaria)_in_flight.jpg",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zilverplevier",
+          "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-goudplevier-vs-zilverplevier",
+          "https://www.inaturalist.org/photos/66147127",
+          "https://www.inaturalist.org/photos/602569884",
+          "https://commons.wikimedia.org/wiki/File:Grey_Plover_-_1192_(11479350056).jpg",
+          "https://blascozumeta.wimbitek.com/specie_files/04860_ENG_Pluvialis_squatarola_aranzadi.pdf",
+          "https://www.inaturalist.org/photos/327282937",
+          "https://xeno-canto.org/132878",
+          "https://xeno-canto.org/1157251",
+          "https://xeno-canto.org/471077"
+        ],
+        "reviewedOriginalAudio": 3,
+        "showcasePreview": "NOT TESTED (Samsung-PWA blijft OPEN)",
+        "independence": "Zie onafhankelijke read-only QA op de kandidaat-SHA in PR #333. Onafhankelijke vak- en luisteraftekening open.",
+        "fullPass": false,
+        "localAudioDecodes": [
+          {
+            "path": "/assets/species/audio/sp145-call.mp3",
+            "duration": 25.056,
+            "sha256": "9a59ee61c828a42bcb243e4567ad7b50338e8082c0878a8e2bd792edc56e0504"
+          },
+          {
+            "path": "/assets/species/audio/sp145-song.mp3",
+            "duration": 25.056,
+            "sha256": "6d15de9bf842234a561dc37407cd244a1a5d3ab92f4fe4a332aeb4de7b42b4bf"
+          },
+          {
+            "path": "/assets/species/audio/sp145-night-flight-call.mp3",
+            "duration": 4.128,
+            "sha256": "a65c75556753a0419d4ab736624dbafe57c62902a2b20a734776d856ffb0531d"
+          }
+        ],
+        "audioSourceMatches": [
+          {
+            "source": "https://xeno-canto.org/132878",
+            "path": "/assets/species/audio/sp145-call.mp3",
+            "comparison": "Mono-PCM op 24 kHz, tijdsuitlijning over het complete lokale bestand",
+            "normalizedCorrelation": 0.999987,
+            "matchedSeconds": 25.0,
+            "sourceSeconds": 52.61062,
+            "localSeconds": 25.0,
+            "offsetSeconds": 0.0,
+            "sourceSha256": "40c80dd4f39c340af04b1e5d3d195882f2c4975eb6fe3c089188a5ec5792a87d",
+            "localSha256": "9a59ee61c828a42bcb243e4567ad7b50338e8082c0878a8e2bd792edc56e0504",
+            "sourceLicense": "CC BY-SA 3.0"
+          },
+          {
+            "source": "https://xeno-canto.org/1157251",
+            "path": "/assets/species/audio/sp145-song.mp3",
+            "comparison": "Mono-PCM op 24 kHz, tijdsuitlijning over het complete lokale bestand",
+            "normalizedCorrelation": 0.998551,
+            "matchedSeconds": 25.0,
+            "sourceSeconds": 42.37692,
+            "localSeconds": 25.0,
+            "offsetSeconds": 0.0,
+            "sourceSha256": "fd052d530f6d90978a5502959cb956c6a353a000c2e7bc9d403fdbbb8dc72462",
+            "localSha256": "6d15de9bf842234a561dc37407cd244a1a5d3ab92f4fe4a332aeb4de7b42b4bf",
+            "sourceLicense": "CC BY-SA 4.0"
+          },
+          {
+            "source": "https://xeno-canto.org/471077",
+            "path": "/assets/species/audio/sp145-night-flight-call.mp3",
+            "comparison": "Mono-PCM op 24 kHz, tijdsuitlijning over het complete lokale bestand",
+            "normalizedCorrelation": 0.967715,
+            "matchedSeconds": 4.06346,
+            "sourceSeconds": 4.06346,
+            "localSeconds": 4.06346,
+            "offsetSeconds": 0.0,
+            "sourceSha256": "afee5aa7e063b5a00af69943767942c3afeb4f8d88060b0d1c64dd34f9afa200",
+            "localSha256": "a65c75556753a0419d4ab736624dbafe57c62902a2b20a734776d856ffb0531d",
+            "sourceLicense": "CC BY-SA 4.0"
+          }
+        ],
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "38de8ad2caf24e55bb4728b26666696b67d473e6",
+          "e8b2f3e92f4a97622c457b7b1d343481aa1035b3",
+          "aa3859e4baa34f2a4c74326b281ea0700012fe20",
+          "e4132877e072ace5c2c49ba8ffda01b46912c793"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "functionTests": "Zie de CI- en QA-bewijslagen in de overdracht van PR #333."
       }
     },
     {
