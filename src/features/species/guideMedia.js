@@ -9644,7 +9644,7 @@ export const GUIDE_POSES = Object.freeze({
     {
       "label": "Groep in vlucht",
       "flight": true,
-      "note": "Groep Drieteenstrandlopers boven water. De brede witte vleugelstrepen contrasteren met de donkere bovenvleugels. De leeftijd staat niet in de bron.",
+      "note": "Groep Drieteenstrandlopers boven water. De brede witte vleugelstrepen contrasteren met de donkere bovenvleugels. De bron noemt onvolwassen vogels in de herfst; leeftijd per afzonderlijke vogel is niet zelfstandig afgetekend.",
       "file": "Sanderling (Calidris alba) (3972936394).jpg",
       "nl": "Drieteenstrandloper",
       "latin": "Calidris alba",
