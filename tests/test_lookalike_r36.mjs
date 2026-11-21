@@ -68,7 +68,7 @@ for(const [a,b] of [['sp146','sp147'],['sp147','sp146'],['sp100','sp148'],['sp14
   const html=recognitionPanel(byId.get(a));
   assert.match(html,new RegExp('data-compare-species="'+b+'"'));
 }
-const ringed = byId.get('sp146');
-assert.equal(ringed.months, 'mrt-okt', 'Open documented seasonal discrepancy; requires separate deliberate correction');
-assert.ok(rows[0].F3.findings.some(f=>/jaarrond/.test(f)));
+// The identified season mismatch is intentionally NOT locked to the old UI value by this test.
+assert.ok(rows[0].F3.findings.some(f=>/jaarrond/.test(f)),
+  'Keep the Bontbekplevier season discrepancy traceable until a separate approved correction');
 console.log('R36 data/Node PASS: 3 reviewed rows, 9 registered local photos, 4 audio files, reciprocal comparison paths. No source/audio/real-device PASS.');
