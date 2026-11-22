@@ -3756,6 +3756,57 @@
         "https://commons.wikimedia.org/wiki/File:Arctic_tern_(Sterna_paradisaea)_with_eel_Blonduos.jpg"
       ],
       "caution": "De beschreven lichaams- en vleugelkenmerken gelden bij geschikte belichting en kleed. Geen soortconclusie op alleen snavelkleur; beeldpaar ontbreekt."
+    },
+    {
+      "id": "LK-084",
+      "focus": [
+        "sp164"
+      ],
+      "birds": [
+        "sp164",
+        "sp095"
+      ],
+      "risk": "Beide grote meeuwen hebben een donkergrijze tot zwarte mantel; lichtval en leeftijd beïnvloeden het verschil. Alleen manteltoon is niet voldoende.",
+      "matchingPlumages": [
+        "",
+        ""
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "De bestaande Grote Mantelmeeuw-rustfoto sp164-adult en Kleine Mantelmeeuw-rustfoto sp095 zijn lokaal zichtbaar en beide bron-URL's geregistreerd. De oorspronkelijke pixels, vergelijkbaarheid van kleur/maat, leeftijd en licentievoorwaarden zijn nog niet onafhankelijk op R40 afgetekend.",
+        "Vluchtsilhouet en jonge leeftijden hebben geen gelijkwaardig onafhankelijk fotovergelijkingspaar."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Poten",
+          "values": [
+            "Doorgaans vaalroze bij de volwassen Grote Mantelmeeuw",
+            "Geel bij de volwassen Kleine Mantelmeeuw"
+          ]
+        },
+        {
+          "label": "Bouw en snavel",
+          "values": [
+            "Forser en zwaarder gebouwd, opvallend forse snavel",
+            "Slanker met doorgaans fijnere snavel"
+          ]
+        },
+        {
+          "label": "Mantel",
+          "values": [
+            "Bijna zwart bij de volwassen vogel",
+            "Overwegend donkergrijs tot bijna zwart, afhankelijk van variatie en licht"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-mantelmeeuw",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-mantelmeeuw",
+        "https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_2026_02.jpg",
+        "https://commons.wikimedia.org/wiki/File:Heringsm%C3%B6we_auf_Spiekeroog_04.jpg"
+      ],
+      "caution": "Combineer pootkleur, bouw en snavel; donker verenkleed alleen niet betrouwbaar. Oude beeldregistraties zijn geen onafhankelijke F3-FULL PASS."
     }
   ],
   "withinSpeciesVariation": [
