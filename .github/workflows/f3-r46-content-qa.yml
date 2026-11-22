@@ -1,0 +1,28 @@
+name: Birdspot F3-R46 guide and offline media QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r45-koereiger-blauwe-steppekiekendief-20261122-codex
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: birdspot-f3-r46-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  r46-chromium-offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright and Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: R46 on 320, 360 and 390 px, including a fresh profile and offline
+        run: python -u tests/test_lookalike_r46_browser.py
