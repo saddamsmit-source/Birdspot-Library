@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 17,
+    "nextNotStarted": 14,
     "secondBatchStarted": 3,
-    "contentInspected": 123,
+    "contentInspected": 126,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -95,7 +95,8 @@
     "thirtyEighthBatchStarted": 3,
     "thirtyNinthBatchStarted": 3,
     "fortiethBatchStarted": 3,
-    "fortyFirstBatchStarted": 3
+    "fortyFirstBatchStarted": 3,
+    "fortySecondBatchStarted": 3
   },
   "records": [
     {
@@ -12726,7 +12727,16 @@
         "photoBlobSHAs": [
           "5db0a9b891e0c7a5f4fb4039f4668532af5d95b7"
         ],
-        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "ownerDecision": {
+          "state": "VERIFIED (alleen expliciete eigenaar-keuze over werkvolgorde; geen media/soort-PASS)",
+          "choice": "C: voorlopig doorgaan met gedocumenteerde open punten",
+          "date": "2026-11-22",
+          "scope": "Uitsluitend R41 sp167/sp170/sp173-openpunten; geen generieke toestemming voor R42 of opvolgende soorten, geen mediarechten-/determinatie-/releasebevestiging",
+          "evidence": "Gebruikersantwoord ‘ga verder’ op expliciete vraag over optie C voor deze drie R41-soorten in ChatGPT App Builder; voortzetting PR #344",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/342",
+          "id": "sp167"
+        }
       }
     },
     {
@@ -12797,7 +12807,16 @@
         "photoBlobSHAs": [
           "bbb1dd057774793427243756fd2489783f2b2895"
         ],
-        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "ownerDecision": {
+          "state": "VERIFIED (alleen expliciete eigenaar-keuze over werkvolgorde; geen media/soort-PASS)",
+          "choice": "C: voorlopig doorgaan met gedocumenteerde open punten",
+          "date": "2026-11-22",
+          "scope": "Uitsluitend R41 sp167/sp170/sp173-openpunten; geen generieke toestemming voor R42 of opvolgende soorten, geen mediarechten-/determinatie-/releasebevestiging",
+          "evidence": "Gebruikersantwoord ‘ga verder’ op expliciete vraag over optie C voor deze drie R41-soorten in ChatGPT App Builder; voortzetting PR #344",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/342",
+          "id": "sp170"
+        }
       }
     },
     {
@@ -12909,7 +12928,16 @@
           "17ea26f8ca273dcd5402ff688ebeda6e25a4f16d",
           "68545c91a628e175c2e1d5b8b3b8a1d9ad3c3972"
         ],
-        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "ownerDecision": {
+          "state": "VERIFIED (alleen expliciete eigenaar-keuze over werkvolgorde; geen media/soort-PASS)",
+          "choice": "C: voorlopig doorgaan met gedocumenteerde open punten",
+          "date": "2026-11-22",
+          "scope": "Uitsluitend R41 sp167/sp170/sp173-openpunten; geen generieke toestemming voor R42 of opvolgende soorten, geen mediarechten-/determinatie-/releasebevestiging",
+          "evidence": "Gebruikersantwoord ‘ga verder’ op expliciete vraag over optie C voor deze drie R41-soorten in ChatGPT App Builder; voortzetting PR #344",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/342",
+          "id": "sp173"
+        }
       }
     },
     {
@@ -12927,57 +12955,86 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto (Volwassen)",
+            "role": "Hoofdfoto (volwassen, sekseneutraal)",
             "path": "/assets/species/sp174.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           },
           {
-            "role": "Verenkleed (Juveniel)",
+            "role": "Juveniel (historische iNaturalist-annotatie)",
             "path": "/assets/species/plumage/sp174-juv.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           },
           {
-            "role": "In vlucht",
+            "role": "Vrije vlucht (voorwaardelijk wegens bewegingsonscherpte)",
             "path": "/assets/species/plumage/sp174-flight.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           }
         ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R42",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (3 lokale WebP's rechtstreeks individueel visueel bekeken, Git-blob-SHA vastgelegd; geen volledige originele pixel-/expertmatch)",
+          "photoIndividualRights": "PARTIALLY TESTED (makers/CC-bronnen uit manifest; drie oorspronkelijke Commons-pagina's herlezen, overige origineel/licenties, bewerkingen en publicatierecht nog open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Zwarte Mees-hoofdfoto goed leesbaar met twee vleugelbanden, wangen en zwarte kop. Juveniel heeft gelige wang, maar oorspronkelijke leeftijdsrol opnieuw open. Vluchtbeeld is echte vlucht met sterk onscherpe vleugels; manifest flightReview=voorwaardelijk versus oud F3/historisch 'definitief scherp'. Geen definitieve vluchtfoto-PASS. Geen onafhankelijke bron/age/sex-FULL PASS)",
+          "photoPairComparisons": "PARTIALLY TESTED (Zwarte Mees–Koolmees: witte nekvlek, twee versus één vleugelband, bleke onderzijde zonder middenstreep. Zwarte Mees–Staartmees: duidelijk kortere staart. Vergelijkingsbeelden per partner/kleed en alle mediarechten blijven apart te toetsen.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R42 Chromium en fysieke Samsung apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registered credits; zichtbare app-ⓘ en afwezigheid van fantoom-audio nog in gerichte browser te toetsen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokaal geregistreerde gidsaudio, geen onafhankelijke stemdeterminatie)",
+          "audioLicenseAndAttribution": "BLOCKED (geen geselecteerde gidsaudio en dus geen bronrechten voor geluid)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal gidsaudio; zang/roep-onderscheid ontbreekt)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R42 browser nodig voor absent UI en offline foto's; geen geluid om af te spelen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming individuele soortbeschrijving werkelijk gelezen 2026-11-22; ANWB Vogelgids van Europa concrete editie/ISBN/pagina NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande ca.-banden en soortbeschrijvingen beoordeeld; alle originele bronwaarden + tweede onafhankelijke uitgever en afrondingsbewijs niet voor deze R42 volledig herverifieerd)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon individuele soortpagina gelezen op NL voorkomen/trend; geen nieuwe trends of statustabel zonder geëvalueerde periode geïmporteerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen landelijke eBird-soort-, regio-, seizoensbias-analyse)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (eigen gidsfoto, feedback, ZIP-herstel op tweede telefoon niet op R42 gecontroleerd)",
+          "endToEndGuideUI": "NOT TESTED (R42 detail-, vergelijkings- en offline browserroute nog te bewijzen)",
+          "independentSecondReview": "NOT TESTED (eigen foto-inspectie en bronlezing zijn geen onafhankelijke ornithologische of juridische tweede review)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Zwarte Mees–Koolmees: witte nekvlek, twee versus één vleugelband, bleke onderzijde zonder middenstreep. Zwarte Mees–Staartmees: duidelijk kortere staart. Vergelijkingsbeelden per partner/kleed en alle mediarechten blijven apart te toetsen.)"
         },
         "findings": [
           "Definitieve scherpe foto van één Zwarte Mees in vrije vlucht met bevestigde hergebruikrechten.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Zwarte Mees-hoofdfoto goed leesbaar met twee vleugelbanden, wangen en zwarte kop. Juveniel heeft gelige wang, maar oorspronkelijke leeftijdsrol opnieuw open. Vluchtbeeld is echte vlucht met sterk onscherpe vleugels; manifest flightReview=voorwaardelijk versus oud F3/historisch 'definitief scherp'. Geen definitieve vluchtfoto-PASS.",
+          "Zwarte Mees–Koolmees: witte nekvlek, twee versus één vleugelband, bleke onderzijde zonder middenstreep. Zwarte Mees–Staartmees: duidelijk kortere staart. Vergelijkingsbeelden per partner/kleed en alle mediarechten blijven apart te toetsen.",
+          "Materieel gat onder v1.10 §2.3: eerst eigenaarbesluit vóór nieuwe R43-batch. Geen automatische keuze. ANWB-boekpassage en gidsaudio ontbreken."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R42_ZWARTE_MEES_GRAUWE_BONTE_VLIEGENVANGER_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "src/features/species/guideComparisons.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-mees",
+          "https://stats.sovon.nl/stats/soort/14610",
+          "https://commons.wikimedia.org/wiki/File:Coal_Tit_2026_03_23.jpg",
+          "https://www.inaturalist.org/photos/690152866",
+          "https://www.inaturalist.org/photos/176460220"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R42 SHA",
+        "independence": "NOT VERIFIED (geen onafhankelijke vak- en rechtenreview)",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "3d38ef07d3b0e044b69ada46f457c07a144762da",
+          "51630c5bf687baaf9f7c899469f57c6232e29837",
+          "d61f9303c591640bfcd652c5c557f92babd14a8b"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "ownerDecision": {
+          "state": "NOT TESTED (materiële lacunes nieuw in R42; keuze van eigenaar nodig vóór R43)",
+          "choice": null,
+          "date": null,
+          "scope": "sp174",
+          "request": "A dieper zoeken / B gericht foto- of tekstverbeteren / C voorlopig verder met geregistreerde open punten, geen bewijs-PASS",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/344"
+        }
       }
     },
     {
@@ -12995,56 +13052,84 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto (Volwassen)",
+            "role": "Hoofdfoto (volwassen, sekseneutraal)",
             "path": "/assets/species/sp176.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           },
           {
-            "role": "Verenkleed (Juveniel)",
+            "role": "Juveniel (historische iNaturalist-annotatie, deels bedekt)",
             "path": "/assets/species/plumage/sp176-juv.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           },
           {
-            "role": "In vlucht",
+            "role": "In vlucht (vrij)",
             "path": "/assets/species/plumage/sp176-flight.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           }
         ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R42",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (3 lokale WebP's rechtstreeks individueel visueel bekeken, Git-blob-SHA vastgelegd; geen volledige originele pixel-/expertmatch)",
+          "photoIndividualRights": "PARTIALLY TESTED (makers/CC-bronnen uit manifest; drie oorspronkelijke Commons-pagina's herlezen, overige origineel/licenties, bewerkingen en publicatierecht nog open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Grauwe Vliegenvanger-hoofdbeeld scherp, fijne kruin-/borststrepen en grijsbruine bovenzijde. Juveniel deels door naalden verborgen, oorspronkelijke leeftijdslabel nog te toetsen. Vlucht is echte vrije vlucht met herkenbare lange staart en vleugel. Geen onafhankelijke bron/age/sex-FULL PASS)",
+          "photoPairComparisons": "PARTIALLY TESTED (Grauwe–Bonte Vliegenvanger: fijne borst-/kruinstreping versus lichte vleugelvelden; vrouwelijke/bruine Bonte vorm kan hier verwarren. Alleen geregistreerde rustfoto's voor het volwassen foto- en tekstpaar, rechten/kleed-aftekening open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R42 Chromium en fysieke Samsung apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registered credits; zichtbare app-ⓘ en afwezigheid van fantoom-audio nog in gerichte browser te toetsen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokaal geregistreerde gidsaudio, geen onafhankelijke stemdeterminatie)",
+          "audioLicenseAndAttribution": "BLOCKED (geen geselecteerde gidsaudio en dus geen bronrechten voor geluid)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal gidsaudio; zang/roep-onderscheid ontbreekt)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R42 browser nodig voor absent UI en offline foto's; geen geluid om af te spelen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming individuele soortbeschrijving werkelijk gelezen 2026-11-22; ANWB Vogelgids van Europa concrete editie/ISBN/pagina NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande ca.-banden en soortbeschrijvingen beoordeeld; alle originele bronwaarden + tweede onafhankelijke uitgever en afrondingsbewijs niet voor deze R42 volledig herverifieerd)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon individuele soortpagina gelezen op NL voorkomen/trend; geen nieuwe trends of statustabel zonder geëvalueerde periode geïmporteerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen landelijke eBird-soort-, regio-, seizoensbias-analyse)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (eigen gidsfoto, feedback, ZIP-herstel op tweede telefoon niet op R42 gecontroleerd)",
+          "endToEndGuideUI": "NOT TESTED (R42 detail-, vergelijkings- en offline browserroute nog te bewijzen)",
+          "independentSecondReview": "NOT TESTED (eigen foto-inspectie en bronlezing zijn geen onafhankelijke ornithologische of juridische tweede review)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Grauwe–Bonte Vliegenvanger: fijne borst-/kruinstreping versus lichte vleugelvelden; vrouwelijke/bruine Bonte vorm kan hier verwarren. Alleen geregistreerde rustfoto's voor het volwassen foto- en tekstpaar, rechten/kleed-aftekening open.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Grauwe Vliegenvanger-hoofdbeeld scherp, fijne kruin-/borststrepen en grijsbruine bovenzijde. Juveniel deels door naalden verborgen, oorspronkelijke leeftijdslabel nog te toetsen. Vlucht is echte vrije vlucht met herkenbare lange staart en vleugel.",
+          "Grauwe–Bonte Vliegenvanger: fijne borst-/kruinstreping versus lichte vleugelvelden; vrouwelijke/bruine Bonte vorm kan hier verwarren. Alleen geregistreerde rustfoto's voor het volwassen foto- en tekstpaar, rechten/kleed-aftekening open.",
+          "Materieel gat onder v1.10 §2.3: eerst eigenaarbesluit vóór nieuwe R43-batch. Geen automatische keuze. ANWB-boekpassage en gidsaudio ontbreken."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R42_ZWARTE_MEES_GRAUWE_BONTE_VLIEGENVANGER_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "src/features/species/guideComparisons.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-vliegenvanger",
+          "https://stats.sovon.nl/stats/soort/13350",
+          "https://commons.wikimedia.org/wiki/File:Muscicapa_striata_-_Spotted_Flycatcher_05.jpg",
+          "https://www.inaturalist.org/photos/561527545"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R42 SHA",
+        "independence": "NOT VERIFIED (geen onafhankelijke vak- en rechtenreview)",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "45995e02ba09e881c067e6c9d4229af7c7f4d2b2",
+          "52b2d42b0cb76cd218b8655790ce4d3c45dd3ea4",
+          "aa405401d501b28dbd83875b84d927c05aa76769"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "ownerDecision": {
+          "state": "NOT TESTED (materiële lacunes nieuw in R42; keuze van eigenaar nodig vóór R43)",
+          "choice": null,
+          "date": null,
+          "scope": "sp176",
+          "request": "A dieper zoeken / B gericht foto- of tekstverbeteren / C voorlopig verder met geregistreerde open punten, geen bewijs-PASS",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/344"
+        }
       }
     },
     {
@@ -13062,61 +13147,91 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto (Mannetje)",
+            "role": "Hoofdfoto (mannetje uit oude Commons-bron)",
             "path": "/assets/species/sp177.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           },
           {
-            "role": "Verenkleed (Vrouwtje)",
+            "role": "Vrouwtje (historisch Commons-bronlabel)",
             "path": "/assets/species/plumage/sp177-adult_f.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           },
           {
-            "role": "Verenkleed (Juveniel)",
+            "role": "Juveniel (historisch iNaturalist-bronlabel)",
             "path": "/assets/species/plumage/sp177-juv.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           },
           {
-            "role": "In vlucht",
+            "role": "In vlucht (vrij, frontaal)",
             "path": "/assets/species/plumage/sp177-flight.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (alleen historische F2-metadata; R42 originele rechten en individuele soort-/rolcontrole nog niet volledig afgetekend)"
           }
         ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R42",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (4 lokale WebP's rechtstreeks individueel visueel bekeken, Git-blob-SHA vastgelegd; geen volledige originele pixel-/expertmatch)",
+          "photoIndividualRights": "PARTIALLY TESTED (makers/CC-bronnen uit manifest; drie oorspronkelijke Commons-pagina's herlezen, overige origineel/licenties, bewerkingen en publicatierecht nog open)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Bonte Vliegenvanger: mannetje zwart-wit met helder vleugelveld, vrouwtje bruin met wit vleugelveld, juveniel zichtbare lichte vlekken en vluchtbeeld frontaal. Sexe/jeugd uit oorspronkelijke bronnen deels geregistreerd, maar niet onafhankelijk volledig herbevestigd. Het zwart-witte mannetjesbeeld dekt bruine veldvariatie niet. Geen onafhankelijke bron/age/sex-FULL PASS)",
+          "photoPairComparisons": "PARTIALLY TESTED (Grauwe–Bonte Vliegenvanger-vergelijking bestaat, maar een gelijkwaardig gecontroleerd rustfotopaar met vrouwelijke/bruine Bonte en Grauwe ontbreekt; voor goede velddeterminatie naast mannetje ook tekst over fijne borststreping versus licht vleugelveld blijven tonen.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R42 Chromium en fysieke Samsung apart)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (registered credits; zichtbare app-ⓘ en afwezigheid van fantoom-audio nog in gerichte browser te toetsen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokaal geregistreerde gidsaudio, geen onafhankelijke stemdeterminatie)",
+          "audioLicenseAndAttribution": "BLOCKED (geen geselecteerde gidsaudio en dus geen bronrechten voor geluid)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal gidsaudio; zang/roep-onderscheid ontbreekt)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (R42 browser nodig voor absent UI en offline foto's; geen geluid om af te spelen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming individuele soortbeschrijving werkelijk gelezen 2026-11-22; ANWB Vogelgids van Europa concrete editie/ISBN/pagina NOT TESTED)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (bestaande ca.-banden en soortbeschrijvingen beoordeeld; alle originele bronwaarden + tweede onafhankelijke uitgever en afrondingsbewijs niet voor deze R42 volledig herverifieerd)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon individuele soortpagina gelezen op NL voorkomen/trend; geen nieuwe trends of statustabel zonder geëvalueerde periode geïmporteerd)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen landelijke eBird-soort-, regio-, seizoensbias-analyse)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (eigen gidsfoto, feedback, ZIP-herstel op tweede telefoon niet op R42 gecontroleerd)",
+          "endToEndGuideUI": "NOT TESTED (R42 detail-, vergelijkings- en offline browserroute nog te bewijzen)",
+          "independentSecondReview": "NOT TESTED (eigen foto-inspectie en bronlezing zijn geen onafhankelijke ornithologische of juridische tweede review)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Grauwe–Bonte Vliegenvanger-vergelijking bestaat, maar een gelijkwaardig gecontroleerd rustfotopaar met vrouwelijke/bruine Bonte en Grauwe ontbreekt; voor goede velddeterminatie naast mannetje ook tekst over fijne borststreping versus licht vleugelveld blijven tonen.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Bonte Vliegenvanger: mannetje zwart-wit met helder vleugelveld, vrouwtje bruin met wit vleugelveld, juveniel zichtbare lichte vlekken en vluchtbeeld frontaal. Sexe/jeugd uit oorspronkelijke bronnen deels geregistreerd, maar niet onafhankelijk volledig herbevestigd. Het zwart-witte mannetjesbeeld dekt bruine veldvariatie niet.",
+          "Grauwe–Bonte Vliegenvanger-vergelijking bestaat, maar een gelijkwaardig gecontroleerd rustfotopaar met vrouwelijke/bruine Bonte en Grauwe ontbreekt; voor goede velddeterminatie naast mannetje ook tekst over fijne borststreping versus licht vleugelveld blijven tonen.",
+          "Materieel gat onder v1.10 §2.3: eerst eigenaarbesluit vóór nieuwe R43-batch. Geen automatische keuze. ANWB-boekpassage en gidsaudio ontbreken."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R42_ZWARTE_MEES_GRAUWE_BONTE_VLIEGENVANGER_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "src/features/species/guideComparisons.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bonte-vliegenvanger",
+          "https://stats.sovon.nl/stats/soort/13490",
+          "https://commons.wikimedia.org/wiki/File:Ficedula_hypoleuca-F-Iski_morost.jpg",
+          "https://www.inaturalist.org/photos/695650368",
+          "https://www.inaturalist.org/photos/735032492"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R42 SHA",
+        "independence": "NOT VERIFIED (geen onafhankelijke vak- en rechtenreview)",
+        "fullPass": false,
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "6ec0f4340daab4b143178f5e64990a99f51a369b",
+          "16cf0a5890a7b3aee91472a9ecbcd7798ca9cf3a",
+          "293fab07a03544773af4eed1ad7fcefc346c0f19",
+          "ed5e130bc12fdb8e79649d4d1afa6c5df090797e"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "ownerDecision": {
+          "state": "NOT TESTED (materiële lacunes nieuw in R42; keuze van eigenaar nodig vóór R43)",
+          "choice": null,
+          "date": null,
+          "scope": "sp177",
+          "request": "A dieper zoeken / B gericht foto- of tekstverbeteren / C voorlopig verder met geregistreerde open punten, geen bewijs-PASS",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/344"
+        }
       }
     },
     {
