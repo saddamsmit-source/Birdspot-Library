@@ -72,7 +72,7 @@ def check_own_card(page, species_id, offline):
     in_flight = panel.locator("section.sd-flight img")
     if species_id == "sp251":
         expect(in_flight).to_have_count(1)
-        expect(in_flight).to_have_attribute("src", "/assets/species/sp251.webp")
+        assert in_flight.evaluate("image => new URL(image.src).pathname") == "/assets/species/sp251.webp"
     else:
         expect(in_flight).to_have_count(0)
     if species_id == "sp262":
