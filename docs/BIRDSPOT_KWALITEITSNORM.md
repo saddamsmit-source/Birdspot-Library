@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| Versie | 1.7 · 16-11-2026 |
-| Status | Vastgesteld eigenaarbesluit (Kevin Smit, Project Owner). Onafhankelijke documentreview: open |
+| Versie | **1.10 FINAL · 22-11-2026** · eigenaarbesluit bronverificatie |
+| Status | **FINAL als documentuitgave** na Final QA en eigenaaropdracht van 22-11-2026. Gebaseerd op v1.7 FINAL, met volledige behoudshistorie. v1.8 (#282) en v1.9 (#315) waren afzonderlijke concepten, geen eerdere FINAL. GitHub-merge, hostactivering, inhoudelijke soort-PASS en apprelease zijn **NIET** door deze documentvrijgave uitgevoerd. |
 | Herkomst | Eigenaaropdracht "Nieuwe eigenaarbesluiten, livegang en batch M3" (10-11-2026) en het vastgelegde besluit op PR #127 ([comment 6779875047](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6779875047)) |
 | Geldt voor | Alle soortkaarten van Birdspot Library: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
-| Gezag | Dit document is de enige plek waar deze drie regels staan. Andere documenten verwijzen hiernaar en herhalen de regels niet |
+| Gezag | Dit document is de enige Birdspot-normhouder voor inhoudelijke determinatie, media- en fotokwaliteit en bronverificatie; andere bronnen verwijzen hiernaar en creëren geen parallelle normen. |
 
 De regels gelden alleen voor Birdspot. Het algemene App Development Handbook verandert hierdoor niet.
 
@@ -123,6 +123,14 @@ Verder geldt:
 
 **Bewijsgrens:** beide voorkeursbronnen zijn deskundige naslagwerken, maar niet onfeilbaar en niet altijd direct toegankelijk. Een 'bronvoorkeur' geldt alleen bij daadwerkelijk gelezen passende informatie en is nooit zelfstandig foto-PASS. De app beschrijft feiten in eigen woorden; originele ANWB-/Vogelbeschermingfoto's of beschermde tekst worden niet zonder geldige toestemming hergebruikt.
 
+
+**Bronroute voor inhoudsreview (20-11-2026).**
+
+- Gebruik [De Visdief en de gespecialiseerde naslagwerken](bronnen/VISDIEF_VOGELGIDSEN_BRONNOTITIE_2026-11-19.md) om gericht te zoeken naar een vergelijking, kleed, gedrag, roep of kijkgebied. Geef inhoudelijk bewijsgewicht aan de feitelijk geraadpleegde passage binnen haar toepassingsgebied. Een recensie, inhoudsopgave of boekcatalogus helpt de passage vinden. Leg bij een gelezen boek het werk, de auteur, editie, zo nodig het deel en de pagina vast. Een praktijkwaarneming ondersteunt de beschreven situatie. Onderbouw een algemene soortclaim met passend aanvullend bewijs.
+- Achterhaal bij kritieke kenmerken per bron op welk oorspronkelijk bewijs de bewering rust. Een overgenomen waarneming, foto, meetreeks of boekpassage telt per claim één keer, ook bij verschillende websites, edities, vertalingen of uitgevers. Bewaar die relatie en eventueel bronverschil in het bestaande brondossier. Laat een verschil in regio, periode, kleed of methode zichtbaar in de onderbouwing. Geef een kenmerk bij resterende twijfel de toepasselijke status volgens §2.
+- Leg in de bestaande soortaudit vast welke passage, kenmerken en omstandigheden zijn gecontroleerd. Benoem in de veldtekst waar je kijkt of naar luistert, welk verschil bruikbaar is en wanneer het ontbreekt. Habitat, één losse roep of een modeluitkomst geven op zichzelf onvoldoende houvast bij een onzeker soortpaar. Registreer de uitkomst in het bestaande openpunten- of vergelijkingsregister.
+- Gebruik Sovon en de betreffende landelijke of regionale bronhouder voor verspreiding, trend en formele status. Gebruik voor een openbare kijktip de gebiedsbeheerder voor toegang, openingstijden en afsluitingen. Leg land of regio, periode en de datum van controle vast. Volg voor kwetsbare locaties de bestaande Birdspot-privacyregels.
+
 ---
 
 ### 2.2 Bronvermeldingen in de gebruikersinterface (eigenaarbesluit 14-11-2026)
@@ -135,6 +143,61 @@ Verder geldt:
 - **Herstel en QA:** tests verifiëren dat optionele bronlabels en -links verdwijnen uit soort- en kennispanelen **en** dat attributies voor daadwerkelijk gebruikte media en kaartdata intact blijven. De uitgebreide bronlijst blijft uitsluitend in de controlebestanden.
 
 Deze afspraak gaat over Birdspot en laat eventuele wettelijke informatieverplichtingen elders in de app onverlet.
+
+---
+
+### 2.3 Verificatiebewijs, lacunes en eigenaarbesluit — v1.10 FINAL (eigenaarbesluit 22-11-2026)
+
+**Hoofdprincipe.** Voor een snelle determinatie kijkt de gebruiker in de eerste plaats naar een **goede echte foto**. De herkenningstekst is een even noodzakelijke tweede route en moet vooral bij onvoldoende of ontbrekend beeld zelfstandig bruikbaar zijn. Geen schijnzekerheid, geen ingevulde rol op basis van aannames en geen stilzwijgende voortgang bij een materiële lacune. De Project Owner beslist, niet de agent.
+
+**A. Werkelijke voorkeursbroncontrole, per soort en per relevante claim.**
+1. Lees de rechtstreeks toepasselijke soortinformatie van **Vogelbescherming Nederland** en de soortpassage in de **ANWB Vogelgids van Europa** daadwerkelijk, voor zover rechtmatig toegankelijk. Beide zijn leidend voor Nederlandse/Europese herkenning, kleden, levensstadia en verwarringssoorten; leg de broninhoud niet als automatisch onfeilbaar vast. De bestaande §2.1 blijft gelden.
+2. Bewaar bij Vogelbescherming de directe soort-URL, relevante conclusie, datum en eventuele beperkingen. Bewaar voor ANWB boektitel, auteurs, **editie, ISBN, pagina**, besproken kenmerken en relevante leeftijd/kleed/hoek. Een webshop, recensie, AI-geheugen, zoekfragment of andere editie zonder gelezen soortpassage telt **niet** als ANWB-soortbewijs. Kopieer geen beschermde boekpassages of gidsillustraties in openbare repositorybestanden.
+3. **ANWB-passage niet bereikbaar of niet te lezen?** Meld dit onmiddellijk als `NOT TESTED`, noem de soort en de ontbrekende passages en vraag de eigenaar naar het vervolg: rechtmatig toegankelijk digitaal/gedrukt exemplaar leveren of eerst andere bronnen onderzoeken. Andere bronnen mogen de ontbrekende ANWB-leesproef niet onzichtbaar vervangen en kunnen op zichzelf geen 'ANWB gelezen'-status opleveren. Respecteer licentie, DRM en toegangsvoorwaarden.
+4. **Aanvullende onafhankelijke toets:** gebruik BTO, RSPB, Naturalis, Van Diek, Van Duivendijk, soortstudies en andere passende specialistische publicaties voor kruiscontrole of ontbrekende details; noteer regio, periode, ondersoort, leeftijd en bronfamilie. Dubbeltellingen van dezelfde oorspronkelijke passage zijn verboden. Voor Nederlandse aantallen/trends en formele lijsten behouden Sovon, CDNA/CSNA en bevoegde regionale instanties hun eigen brongezag.
+
+**Aanvullende bronwebsites van 22-11-2026 (eigenaar, bronrol gecontroleerd; individuele soortclaims blijven per keer te lezen).**
+
+| Website / directe ingang | Toepassing en bewijsgrens |
+|---|---|
+| [Vogelbescherming Nederland — Vogelgids](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids) | **Primaire, leidende Nederlandstalige soortbron** voor herkenningsdetails, kleed, leefwijze en Nederlandse context. Leg altijd de gelezen **directe soort-URL**, het concrete herkenningspunt en datum vast, niet alleen de catalogus-URL. De bestaande ANWB-voorkeursroute blijft volledig gelden. |
+| [Vogelskijken.nl — Online vogelgids](https://vogelskijken.nl/soorten/) | **Deskundig redactioneel aanvullend bewijs** voor soortkenmerken, kleden, geluid, foto's en het uitleggen van verwarringssoorten. De uitgever is PiXFACTORY; samenwerking/partnerschap met Sovon en Nederlands Soortenregister maakt de redactie niet automatisch tot een officiële nationale lijst- of statusautoriteit. De afzonderlijke soortpagina en herkomst moeten gelezen worden. Als een artikel Nederlands Soortenregister/Naturalis overneemt, tel die oorspronkelijke gegevens niet opnieuw als onafhankelijke tweede uitgever. |
+| [Mijn Vogelvinder — Vogelquiz](https://mijnvogelvinder.vogelbescherming.nl/vogelquiz) | **Ondersteunende educatieve herkennings- en oefenroute** van MijnVogelvinder, ontwikkeld door Vogelbescherming in samenwerking met Waarneming.nl. Quizvragen/antwoorden, een AI-suggestie of een appresultaat zijn zonder controle van de specifieke grondslag **geen zelfstandige determinatie-, leeftijd-, mediarechten- of statistiek-PASS**. De publieke webroute kan JavaScript vereisen; als de concrete vraag of soortinhoud niet is ingezien, noteer `NOT TESTED` voor die claim. |
+
+**Bronautoriteit is onderwerpgebonden, geen onvoorwaardelijke '100%-juist'-stempel.** Noteer per afzonderlijke claim werkelijk gelezen inhoud, toepasselijk kleed/regio/jaar en onderlinge bronafhankelijkheid. Deze drie ingangen veranderen de regel niet dat de uitgever van een foto/audio afzonderlijk gebruiksrechten moet verlenen. Beelden en tekst van derden niet kopiëren zonder toegestane licentie. Bij ontbrekende of conflicterende hoofdbronnen gaat de lacune naar de eigenaarspoort hieronder, zonder automatisch een lagere bewijsdrempel te kiezen.
+
+**B. Foto en onafhankelijke herkenningstekst per soort.**
+1. Bekijk de werkelijk getoonde Birdspot-foto op relevante resolutie, het bronorigineel en de rol waarvoor het beeld bedoeld is. Beoordeel visuele herkenbaarheid, soort, sekse/leeftijd, rust/vlucht, kleden, zichtbare kritieke kenmerken en beelduitdrukking voor snelle veldherkenning. De zes verplichte controles uit §3.2 inclusief fotoherkomst, bronrechten en publicatie blijven onverkort van kracht. Een werkende URL, ingevuld slot of overeenkomende hash is geen biologische PASS.
+2. Benoem expliciet welke voor de determinatie belangrijke kenmerken een foto **wel of niet** toont. Een onvoldoende, verkeerd gedetermineerd of niet correct gelicenseerd beeld mag niet als geverifieerd worden getoond. Zoek een betere foto wanneer de eigenaar daartoe beslist; dwing geen vlucht- of juvenielbeeld af alleen om een vak te vullen (§3.3/§3.5).
+3. Bij zwakke of ontbrekende foto's: bied onder **Snel herkennen** en bij relevante soortparen **Lijkt op** nauwkeurige, begrijpelijke en brongedragen tekst. Noem in maximaal drie primaire aanknopingspunten *waarop je kijkt of luistert*, *welk verschil zichtbaar/hoorbaar is*, *welke leeftijd, kleed, hoek, licht of seizoen daarvoor nodig is*, en *wanneer het kenmerk onvoldoende zekerheid geeft*. Test dubbelgangers in beide richtingen (§3.4). Bij een onvolledig fotopaar verberg je uitsluitend het incomplete beeldpaneel; de herkenningswaarschuwing en uitleg blijven in de gewone soorttekst beschikbaar.
+4. Controleer daadwerkelijk gebruikte audio op soortidentiteit, zang/roep/vluchtroep, herkomst, hoorbaarheid, credits en herpublicatierechten. Een gelijk audiobestand of bronlabel bewijst niet op zichzelf de biologische betekenis. Ontbrekende audiodekking blijft herkenbaar OPEN.
+
+**C. Verplichte zichtbare lacune- en beslispoort.**
+- Rapporteer **vóór iedere volgende inhoudelijke F3-batch** aan de eigenaar ieder nieuw of relevant onopgelost gat bij bronlezing, foto's, kleedrollen, determinatie, vergelijkingsfoto's, tekst, geluid of herpublicatie. Benoem soort-ID, huidige afbeelding/rol, waarneming, bron met pagina/URL, impact op snelle herkenning, wat wél zeker is, onzekerheid, en de kleinste vervolgopties. Ook bij 'geen geschikte foto gevonden' expliciet melden.
+- Laat de eigenaar bij ieder **materieel** gat kiezen: **(a) verder zoeken/verdiepen**, **(b) eerst tekst corrigeren of een geschikt beeld vervangen**, of **(c) voorlopig verder met het open punt**. Leg het expliciete besluit, datum, relevante soort-ID, voorwaarden en verwijzing naar gesprek/PR vast in het bestaande F3-/soortaudit-/openpuntenregister. Geen fictieve vooraf-toestemming, automatische keuze door een agent of algemene vrijstelling voor toekomstige soorten.
+- Zonder bekendgemaakt materieel gat en **expliciet eigenaarbesluit** volgt **geen volgende F3-soortbatch** en geen inhoudelijke 'afgerond'-claim. Onafhankelijk brononderzoek of veiligheidscontrole binnen de reeds geautoriseerde ronde mag wel doorgaan. Een ontbrekend boek hoeft niet te worden gekocht zonder eigenaarbesluit.
+- Eigenaarbesluit `voorlopig verder` autoriseert alleen de **werkvolgorde**, nooit een onbewezen determinatie, schijnbaar compleet fotopaar, onjuiste mediarechten, privacyafwijking, vervallen broncontrole of `VERIFIED`-/release-PASS. Als een claim of media-item juridisch/biologisch ongeschikt blijft, blijft dat item buiten de openbare gids of draagt het uitsluitend de aantoonbare beperktere claim. Bewaar het gat totdat het bewijs later is aangevuld.
+- Als een batch **geen materiële lacunes** kent, rapporteer alsnog het bron-/foto-/tekstoverzicht en de bewaarde bewijsstatus. Geen publicatie/merge/live zonder de afzonderlijke releasegates.
+
+**D. Beoordelingsrondes en gescheiden tellers.**
+- **Huidige eerste F3-inhoudsronde:** loop eerst de 140 reeds gefotografeerde soorten individueel af in de bestaande volgorde. Bij peilpunt R41: **123/140 inhoudelijk bekeken, 17 te starten, 0 volledige F3-PASS**. Deze telling is een historisch checkpoint en wordt uitsluitend op basis van nieuwe repositorybewijzen bijgewerkt. Bestaande F1-/F2-/F3-bewijzen behouden hun eigen scope.
+- **Tweede F3-verificatie-/eigenaarreviewronde:** pas nadat de eerste 140 individueel inhoudelijk zijn behandeld **en de eigenaar de app voor deze fase voldoende afgerond vindt en de tweede ronde expliciet start**, controleer je alle 140 opnieuw op brongetrouwheid, echte foto's en rollen, zorgvuldig geformuleerde tekst en vergelijkingsparen. De eigenaar kan per soort beelden afkeuren, verbeteringen vragen of een diepgaander foto-/brononderzoek kiezen. Reeds verzameld bewijs mag worden hergebruikt als het traceerbaar en geldig blijft; onbekend bewijs wordt opnieuw onderzocht.
+- Markeer onafhankelijk `CONTENT REVIEWED`, `OWNER DECISION`, `FULL F3 VERIFIED` en `RELEASE` als verschillende vragen. Een eigenaar die een open foto accepteert geeft geen volledige inhoudelijke VERIFIED-status. Geen automatisch terugzetten of opnieuw doen van alle 123 vóór de afgesproken tweede ronde, behalve gerichte veiligheids-/regressiecorrecties.
+- Het bestaande **F3_140_HERCONTROLE**-register, soort-/dubbelgangersdossiers, mediarechtenregister en huidige PR zijn de registratieplek. Geen tweede canoniek status- of besluitboek. Voeg alleen passende velden/controles toe na schema-/testimpactcontrole.
+
+**E. Minimale overdracht aan de eigenaar bij een lacune (korte leeskaart).**
+
+| Veld | Verplicht bij overdracht |
+|---|---|
+| Soort en beeld | Naam/soort-ID, huidige hoofd-/kleed-/vlucht- of vergelijkingsfoto, feitelijke kwaliteit en rol |
+| Primair bewijs | Vogelbescherming directe soortlink + ANWB boek/editie/pagina of expliciet `NOT TESTED` |
+| Veldherkenning | Kritieke kenmerken, ontbrekend fotobewijs, exacte korte tekst als alternatief, relevante dubbelganger |
+| Extra controle | Onafhankelijke bron(nen), eventuele tegenstrijdige gegevens, audio en rechtenstatus |
+| Keuze | Verder zoeken / foto of tekst gericht verbeteren / voorlopig verder met open punt |
+| Eigenaarbesluit | Expliciete keuze + datum/PR + welk bewijs open blijft + veilige volgende batch |
+
+Een onafhankelijke tweede review bevestigt de werkelijk onderzochte bewijslagen en kan vragen of gaten markeren, maar neemt nooit de product-/voortgangsbeslissing van de eigenaar over.
+
 
 ---
 
@@ -158,6 +221,8 @@ Elke getoonde foto staat bij de juiste soort, leeftijd, geslacht en rol, en is g
 6. voldoende kwaliteit voor het beoogde herkenningsdoel.
 
 De uitkomst per foto staat in `docs/fotokwaliteit/soortaudit/M*.json` en `SOORTAUDIT_TRACKER.md`.
+
+Leg bij ieder nieuw of herbeoordeeld bestand afzonderlijk vast wat zichtbaar of hoorbaar is, wat de oorspronkelijke bron vermeldt en welke publicatierechten voor deze versie gelden. Een bestandsnaam, categorie, platformlabel of herkende soort geeft aanleiding tot controle. Een foto met een onzekere leeftijd blijft voor die leeftijdsrol open. Leg bij geluid ook vast wie de soort en het geluidstype daadwerkelijk heeft beluisterd en beoordeeld. Volg hiervoor het [bestaande audioprotocol](audio/BIRDSPOT_EBIRD_SOVON_AUDIO_BRONPROTOCOL_V0.1_DRAFT.md). Noteer zo nodig gewijzigde uitsnede, credits en de rechten voor distributie en offline gebruik.
 
 ### 3.3 Beoordelingsregels
 
@@ -190,6 +255,19 @@ Deze regel breidt de bestaande foto's en herkomstverplichtingen uit; zij vervang
 
 ---
 
+### 3.5 Fotoprioriteit bij de snelle veldcheck — v1.10 FINAL (eigenaarbesluit 22-11-2026)
+
+Voortbouwend op niet-gemergd voorstel v1.8 (#282), onder de eigenaarspoort voor iedere materiële ontbrekende foto (§2.3), zonder versoepeling van §3.1–3.4:
+
+- **Alle soorten:** de scherpste, duidelijkste, soort- en rolgeverifieerde hoofdfoto heeft voorrang. Controleer of elk aanvullend beeld voor een snelle veldcheck werkelijk iets toevoegt; laat zwakke foto's niet stilzwijgend staan.
+- **Kleine vogels:** heldere rust- en kleedfoto's op tak/stengel/ondergrond en goede dubbelgangersparen gaan vóór een twijfelachtige vluchtfoto. Gebruik alleen aantoonbare geslachts-/leeftijdsrollen; waar sekse niet betrouwbaar te zien is, gebruik `Volwassen`. Controleer waar relevant kop, wenkbrauwstreep, snavel, vleugel, poten en tekst.
+- **Grotere vogels en roofvogels:** kies na een geschikte hoofdfoto en kenmerkende kleden vaker ook een bruikbare echte vrije-vluchtfoto wanneer silhouet, vleugels, staart of houding belangrijk zijn. Fotoparen dienen hetzelfde relevante kleed en bij voorkeur een vergelijkbare houding te tonen.
+- **Juvenielen:** zijn geen vuldoel. Alleen opnemen bij werkelijk bewezen soort én leeftijd met alle zes individuele controles van §3.2. Overigens de juvenielenuitzondering van §3.3 behouden voor niet-diagnostisch onzichtbare poten.
+- **Ontbrekende of zwakke foto:** verberg incomplete `Lijkt op`-fotopanelen, maar laat correcte, duidelijke tekst over de zichtbare verschillen beschikbaar. Leg per rol het ontbrekende bewijs vast en toon het aan de eigenaar.
+- **Voortgang:** een ontbrekende optionele vlucht- of juvenielenfoto hoeft niet het andere correcte werk af te keuren, maar de agent mag het gat **nooit automatisch als toestemming voor een volgende batch** behandelen. De eigenaar beslist via §2.3. De foto krijgt zonder bewijs nooit `VERIFIED`.
+
+---
+
 ## 4. Statussen en presentatie
 
 - Gebruik alleen de statussen VERIFIED, PARTIALLY TESTED, NOT TESTED en BLOCKED. Gebruik nooit een PASS die niet echt gehaald is.
@@ -218,3 +296,8 @@ Deze regel breidt de bestaande foto's en herkomstverplichtingen uit; zij vervang
 | 1.5 | 14-11-2026 | Eigenaar bepaalt dat niet-verplichte bronvermeldingen verdwijnen uit de gebruikersweergave, zonder achterliggende broncontroles te verwijderen. Verplichte foto-, audio- en data-attributies blijven intact en toegankelijk. |
 | 1.6 | 15-11-2026 | Eigenaar laat onvolledige fotoparen en lege "Nog geen passende foto"-vakken **bij alle soorten** uit "Lijkt op" verdwijnen. Alleen complete twee-fotopanelen tonen; brondata, openpunten, eerdere vlucht-/leeftijdsafkeuringen en werkende fotovergelijkingen behouden. |
 | 1.7 | 16-11-2026 | Eigenaar stelt voor alle lookalike-soorten bewijsbare foto- **én** tekstverschillen verplicht; sekse-/leeftijdsspecifiek, in beide richtingen, onvolledige fotoparen verborgen maar herkenningstekst zichtbaar. Register + geautomatiseerde QA en bron-/rechten- en fysieke bewijsgrens toegevoegd (§3.4). |
+| 1.8 concept | 16/17-11-2026 | Niet-gemergd voorstel in PR #282: fotoprioriteit per vogelgroep; bron-/rechtenregels van v1.7 behouden. In v1.10 op nieuw eigenaarbesluit verduidelijkt met verplichte lacunemelding en keuze eigenaar. |
+| 1.9 concept | 20-11-2026 | Niet-gemergd voorstel in PR #315: De Visdief-bronroute en bewijs per media-item; als inhoudelijk relevant concept geïntegreerd, niet stilzwijgend als eerdere FINAL geclaimd. |
+| 1.10 FINAL | 22-11-2026 | Eigenaarbesluit: leidende daadwerkelijk gelezen ANWB/Vogelbescherming, foto als snelle check, precieze tekst bij beeldgebrek, eigenaar beslist per materiële lacune, F3 eerst alle 140 inhoudelijk en daarna tweede onafhankelijke/eigenaar-fotoreview. Geen gate-/mediarechtenversoepeling. |
+
+**EINDMARKERING — BIRDSPOT KWALITEITSNORM v1.10 FINAL · BRONVERIFICATIE · EIGENAARBESLUIT · DOCUMENT-QA PASS · GEEN LIVE**
