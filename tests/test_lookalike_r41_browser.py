@@ -85,7 +85,8 @@ def check_harrier_pair(page, own, partner):
     expect(card.locator(".sd-cmp-panel")).to_have_count(2)
     expect(card.locator("img[src$='sp173-juv.webp'],img[src$='sp249-juv.webp']")).to_have_count(0)
     for index, paths in enumerate(ADULT_PAIRS):
-        card.get_by_role("tab", name=re.compile("Mannetje" if index == 0 else "Vrouwtje", re.I)).click()
+        name = re.compile("Mannetje" if index == 0 else "Vrouwtje", re.I)
+        card.locator("[data-cmp-tab]").filter(has_text=name).click()
         active = card.locator(".sd-cmp-panel:not([hidden])")
         expect(active).to_have_attribute("data-cmp-flight", "")
         check_pictures(active, paths if own == "sp173" else paths[::-1])

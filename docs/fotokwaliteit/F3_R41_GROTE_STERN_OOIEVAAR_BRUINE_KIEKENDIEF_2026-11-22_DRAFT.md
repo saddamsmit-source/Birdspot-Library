@@ -8,7 +8,7 @@ R41 begint op de groen geteste R40-herstel-SHA 3080a511391e94fa07fabf8b01ff3f77c
 
 | Soort | Gecontroleerde rol en herkenning | Open |
 |---|---|---|
-| Grote Stern · sp167 · Thalasseus sandvicensis | Eén hoofdfoto in vrije vlucht. De prooi bedekt de punt van de snavel. Een Visdief in rust of een vluchtbeeld met onzichtbaar sleutelkenmerk levert geen bruikbaar vergelijkingspaar op. LK-085 geeft tekst in beide richtingen. | Een geschikte foto met onbedekte snavel en poten, juveniel en winterkleed, gidsaudio. |
+| Grote Stern · sp167 · Thalasseus sandvicensis | Eén hoofdfoto in vrije vlucht. Bij uitvergroting is de gele snavelpunt zichtbaar naast de prooi. De bestaande Visdief in rust heeft een andere houding. De twee vluchtfoto’s bieden onvoldoende zicht op de pootkleur. LK-085 geeft tekst in beide richtingen. | Een goed vergelijkbaar beeld met duidelijke snavel en poten, juveniel en winterkleed, gidsaudio. |
 | Ooievaar · sp170 · Ciconia ciconia | Eén hoofdfoto in vrije vlucht. Witte hals en romp zijn zichtbare kenmerken. Vergelijk die met de donkere hals van Zwarte Ooievaar en met de grijze Kraanvogel. Jonge Ooievaars hebben een valere snavel. LK-086 en LK-087 zijn wederkerige tekst. | Een juvenielenfoto, passende beelden voor beide partners en gidsaudio. |
 | Bruine Kiekendief · sp173 · Circus aeruginosus | Zes beelden. Mannetje als vliegende hoofdfoto, twee verdere vluchtbeelden, een vrouwtje in rust en een in vlucht, en een juveniel dat in het riet neerstrijkt. De adulte vliegparen met Blauwe Kiekendief zijn LK-088 en LK-089. De opnamen tonen verschillende hoeken. Er is één geregistreerde roep. | Mannetje in rust, geschikt gelijkwaardig juvenielenpaar LK-090, onafhankelijke determinatie, luisteren en volledige rechtenaftekening. |
 
@@ -37,7 +37,7 @@ De originele Commons-bytes van alle zeven eigen Commons-foto’s kwamen overeen 
 | sp173-female-rest.webp | Andreas Eichler · CC BY-SA 4.0 | dfe3b524b4f4da525eb483f833da132a0897ca7b79ec1065a12f2b6b0fab52bf | [Opname](https://commons.wikimedia.org/wiki/File:2017.07.19.-05-Grosser_Glubigsee-Wendisch_Rietz--Rohrweihe-Weibchen.jpg) |
 | sp173-hero-male.webp | Stephan Sprinz · CC BY 4.0 | 66ce4f13bed66b4dd055b504aaccb2d036bcb761cc84814500c1d8471fd39456 | [Opname](https://commons.wikimedia.org/wiki/File%3AM%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg) |
 
-De bestaande volwassen fotovergelijkingen gebruiken sp173-male-2.webp met sp249.webp en sp173-adult_f.webp met sp249-adult_f.webp. De volwassen Blauwe-mannenfoto toont de bovenzijde en stuit. De vrouwtjesfoto’s tonen vooral de onderzijde. Beide paren blijven voorlopig. Bij Visdief is de vluchtfoto een uitsnede uit het bronbeeld. Het beeld schuift de vergelijking met de Grote Stern met prooi niet door naar een fotopaar.
+De bestaande volwassen fotovergelijkingen gebruiken sp173-male-2.webp met sp249.webp en sp173-adult_f.webp met sp249-adult_f.webp. De volwassen Blauwe-mannenfoto toont de bovenzijde en stuit. De vrouwtjesfoto’s tonen vooral de onderzijde. Beide paren blijven voorlopig. Bij Visdief is de vluchtfoto een uitsnede uit het bronbeeld. De vluchtfoto’s laten een verschil in snavelkleur zien bij voldoende vergroting. Op deze hoeken is de pootkleur lastig te vergelijken. De vergelijking blijft in tekst beschikbaar.
 
 | Partnerbestand | Maker · licentievermelding | SHA-256 origineel | Primaire bron |
 |---|---|---|---|

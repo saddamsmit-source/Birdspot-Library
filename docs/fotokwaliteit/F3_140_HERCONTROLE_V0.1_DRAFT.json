@@ -12689,8 +12689,8 @@
         "checks": {
           "photoOriginalIdentity": "VERIFIED (individuele primaire originelen gedownload en tegen de gidsbeelden getoetst).",
           "photoIndividualRights": "PARTIALLY TESTED (primaire maker, licentievermelding en geregistreerde bewerking gecontroleerd. Onafhankelijke rechtenaftekening open).",
-          "plumageAndTrueFlight": "PARTIALLY TESTED (Vrije vlucht met prooi. De enige bestaande hoofdfoto heeft ook een vluchtrol. De prooi bedekt de gele snavelpunt. Geslacht, juveniel- en winterbeeld open.)",
-          "photoPairComparisons": "PARTIALLY TESTED (LK-085 houdt wederkerige tekst beschikbaar. Een Visdief in rust vormt geen paar met de Grote Stern in vlucht, en het prooibeeld toont de snavelpunt niet.)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vrije vlucht met prooi. De enige bestaande hoofdfoto heeft ook een vluchtrol. Bij uitvergroting is de gele snavelpunt naast de prooi zichtbaar. Geslacht, juveniel- en winterbeeld open.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-085 houdt wederkerige tekst beschikbaar. Een Visdief in rust past niet bij de Grote Stern in vlucht. De twee vluchtbeelden tonen de pootkleur onvoldoende voor een bruikbaar aanvullend onderscheid.)",
           "responsiveLayoutAndZoom": "NOT TESTED in brondossier. Browserlog op exacte kandidaat staat in de concept-PR.",
           "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronmetadata en feitelijke inventaris gecontroleerd. Browserlog in PR).",
           "audioRecordingsAuthenticity": "BLOCKED (geen geregistreerde gidsclip).",
@@ -12704,11 +12704,11 @@
           "personalPhotoFeedbackAndRestore": "NOT TESTED (toestel- en herstelproef open).",
           "endToEndGuideUI": "NOT TESTED in brondossier. Browser- en offline-job staan in de concept-PR.",
           "independentSecondReview": "NOT TESTED (vak-, luister- en rechtenaftekening). Technische QA staat in de PR.",
-          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-085 houdt wederkerige tekst beschikbaar. Een Visdief in rust vormt geen paar met de Grote Stern in vlucht, en het prooibeeld toont de snavelpunt niet.)"
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-085 houdt wederkerige tekst beschikbaar. Een Visdief in rust past niet bij de Grote Stern in vlucht. De twee vluchtbeelden tonen de pootkleur onvoldoende voor een bruikbaar aanvullend onderscheid.)"
         },
         "findings": [
           "Het register meldde nul fotoslots. De app gebruikt één bestaande vluchtfoto als hoofdfoto.",
-          "Zwarte snavel met gele punt, zwarte poten en kuif zijn bruikbaar bij beter zicht. Geen geregistreerde gidsclip."
+          "De gele snavelpunt is bij uitvergroting zichtbaar naast de prooi. Pootkleur vraagt een beter standpunt. Geen geregistreerde gidsclip."
         ],
         "sourceReferences": [
           "F3_R41_GROTE_STERN_OOIEVAAR_BRUINE_KIEKENDIEF_2026-11-22_DRAFT.md",
