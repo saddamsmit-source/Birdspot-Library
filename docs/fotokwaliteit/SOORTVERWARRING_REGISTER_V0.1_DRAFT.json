@@ -71,7 +71,10 @@
     "sp145",
     "sp149",
     "sp150",
-    "sp152"
+    "sp152",
+    "sp164",
+    "sp165",
+    "sp166"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,

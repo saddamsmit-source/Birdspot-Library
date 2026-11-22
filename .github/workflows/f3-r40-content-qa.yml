@@ -3,6 +3,7 @@ on:
   pull_request:
     branches:
       - qa/birdspot-f3-r39-zwarte-groenpoot-bosruiter-20261122-gpt6
+      - qa/birdspot-f3-r40-grote-mantelmeeuw-visdief-noordse-stern-20261122-gpt6
   workflow_dispatch:
 permissions:
   contents: read

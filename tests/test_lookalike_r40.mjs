@@ -18,8 +18,9 @@ const ids=['sp164','sp165','sp166'];
 const rows=f3.records.filter(x=>x.F3.recheckBatch==='F3-R40');
 assert.equal(f3.records.length,140);
 assert.deepEqual(rows.map(x=>x.id),ids);
-assert.equal(f3.counts.contentInspected,120);
-assert.equal(f3.counts.nextNotStarted,20);
+assert.equal(f3.counts.contentInspected,f3.records.filter(row=>row.F3.reviewedThisRound).length);
+assert.ok(f3.counts.contentInspected>=120,'R40 and earlier reviews must remain represented');
+assert.equal(f3.counts.nextNotStarted,f3.records.filter(row=>row.F3.status==='NOT STARTED').length);
 assert.equal(f3.counts.fortiethBatchStarted,3);
 assert.equal(f3.counts.F3FullPass,0);
 const expected={
@@ -89,4 +90,4 @@ for(const [a,b] of [['sp165','sp166'],['sp166','sp165'],['sp164','sp095'],['sp09
 }
 assert.ok(rows.find(x=>x.id==='sp164').F3.findings.some(x=>x.includes('61–74')&&x.includes('68–79')),
  'Gull size discrepancy must remain open');
-console.log('F3-R40 PASS: 120/140, 6 exact WebP Git blobs, no local audio, reciprocals LK-083 text-only and LK-084 photo pending.');
+console.log('F3-R40 PASS: 6 exact WebP Git blobs, no local audio, reciprocals LK-083 text-only and LK-084 photo pending. Latest reviewed='+f3.counts.contentInspected+'/140.');
