@@ -247,74 +247,14 @@ Deze regel breidt de bestaande foto's en herkomstverplichtingen uit; zij vervang
 
 ### 3.5 Fotoprioriteit bij de snelle veldcheck — v1.10 DRAFT (eigenaarbesluit 22-11-2026)
 
-Voortbouwend op het niet-gemergede voorstel v1.8 (#282), onder **eigenaarsbesluit** voor iedere materiële ontbrekende foto (§2.3), zonder versoepeling van §3.1–3.4:
+Voortbouwend op niet-gemergd voorstel v1.8 (#282), onder de eigenaarspoort voor iedere materiële ontbrekende foto (§2.3), zonder versoepeling van §3.1–3.4:
 
-- **Alle soorten:** geef een scherpe, herkenbare en individueel geverifieerde hoofdfoto de hoogste prioriteit. Bepaal vervolgens welk rust-, kleed-, vlucht- of vergelijkingsbeeld werkelijk een herkenningsprobleem helpt oplossen. Maak een minder geslaagde foto niet stilzwijgend goed; meld kwaliteit en alternatieven aan de eigenaar.
-- **Kleine vogels:** bij voorkeur duidelijke rust- en kleedfoto's op tak/stengel/ondergrond, betrouwbare geslachtslabels of neutraal `Volwassen`, en bruikbare dubbelgangersparen. In vlucht en juveniel alleen wanneer bronmatig aantoonbaar én voor de gebruiker nuttig; geen geforceerde aanvulling. Controleer waar relevant kop, wenkbrauwstreep, snavel, vleugel en poten en de tekstuele vergelijking.
-- **Grotere vogels en roofvogels:** na hoofdfoto en onderscheidbare kleden krijgt een bruikbaar echt vrij vluchtbeeld meer gewicht waar silhouet, vleugels, staart of houding diagnostisch zijn; vergelijk waar mogelijk hetzelfde kleed en gelijke houding. Juveniel alleen met aantoonbare leeftijdsidentiteit.
-- **Onvolledig beeld:** geen leeg fotopaneel onder `Lijkt op`, geen dubbel gebruik binnen de eigen hoofdfoto-/kleed-/vluchtsecties, geen onduidelijke sekse-/leeftijdsrol. Schrijf wel voldoende precieze herkenningstekst en meld aan de eigenaar dat het ideale vergelijkingsbeeld ontbreekt.
-- **Besluit en voortgang:** een ontbrekende optionele foto is op zichzelf geen definitieve afkeur van de overige correcte inhoud, **maar nooit automatisch toestemming om naar de volgende batch te gaan**. De eigenaar kiest het vervolg na een expliciete lacunemelding volgens §2.3. Alle zes controles blijven verplicht voor foto's die wel gebruikt worden.
-
----
-
-## 4. Statussen en presentatie
-
-- Gebruik alleen de statussen VERIFIED, PARTIALLY TESTED, NOT TESTED en BLOCKED. Gebruik nooit een PASS die niet echt gehaald is.
-- Een geautomatiseerde rendercontrole over alle soorten is geen inhoudelijke of visuele goedkeuring van die soorten.
-- Een tussenrelease mag soorten bevatten die nog niet individueel gecontroleerd zijn. Een soort zonder audit en kennisprofiel draagt in de app geen kwaliteitsclaim. Profielen tonen "onafhankelijke controle nog open".
-- Een document dat FINAL is, betekent geen app-PASS en geen productieakkoord.
-
-## 5. Waar wordt deze norm toegepast
-
-| Onderdeel | Document of tool |
-|---|---|
-| App-overzicht | `README.md` §Kwaliteitsnorm |
-| Kennisprofielen | `docs/kennisbaseline/README.md` §2 en §9; validator KV-11..14; tests KB-01..11 |
-| Foto's en soortaudit | `docs/fotokwaliteit/SOORTAUDIT_TRACKER.md` (kop), `tools/fotokwaliteit/soortaudit.mjs`, `vluchtcontrole.json` |
-| Capabilities | `docs/kennisbaseline/README.md` §6 (delta CAP-BIRD-012/015) |
-
-## 6. Historie
-
-| Versie | Datum | Wijziging |
-|---|---|---|
-| 1.0 | 10-11-2026 | Eerste vaststelling. Bundelt de regel "doorslaggevend" van 10-11 (FQA-04, KV-12, KB-10) en voegt de biometrie-, betrouwbaarheids- en fotoregel van de eigenaar toe. Direct toegepast: vier circa-banden (§1.2) en drie herbeoordeelde foto's (§3.3) |
-| 1.1 | 13-11-2026 | Eigenaar verduidelijkt: ontbrekende poten/andere niet-beslissende delen zijn geen automatische stop; met overtuigende leeftijds-/soortkenmerken én volledige bron-, rechten- en fotobevestiging mag een juvenielenfoto worden geplaatst. Onvoldoende herkenningskenmerken of bronbewijs blijven open. Geen normwijziging voor echte vlucht, aantoonbare leeftijd of bronrechten (§3.2). |
-| 1.2 | 14-11-2026 | Eigenaarprecisering: alle eerdere fotoregels en zes bron-/rolcontroles blijven volledig van kracht. De versoepeling 'onzichtbare poten = geen zelfstandige STOP' is slechts een **aanvullende juvenielenregel**, geen algemene vrijstelling voor andere soorten/rollen en geen verkorting van bron- of rechtencontrole. Historie 1.0/1.1 behouden. |
-| 1.3 | 14-11-2026 | Eigenaar legt prioriteit op rustfoto’s en vergelijkingen voor kleine vogels: vlucht alleen wanneer herkenbaar; slechte of ontbrekende vlucht als uitgesteld fotoonderzoek registreren. Bronnen-, rechten-, determinatie- en bestaande vluchtdefinities ongewijzigd. Openpuntenregister aangemaakt voor latere volledigheid. |
-| 1.4 | 14-11-2026 | Eigenaar verduidelijkt bronvoorrang: soortinformatie van Vogelbescherming Nederland en daadwerkelijk ingeziene ANWB-vogelgids als eerste referentie om **zelf gevonden** foto's, kleden en verklarende tekst te controleren. Niet verplicht bronfoto's te gebruiken. ANWB-productpagina is geen soortbewijs; bestand-, rechten- en zespuntscontrole blijven apart. |
-| 1.5 | 14-11-2026 | Eigenaar bepaalt dat niet-verplichte bronvermeldingen verdwijnen uit de gebruikersweergave, zonder achterliggende broncontroles te verwijderen. Verplichte foto-, audio- en data-attributies blijven intact en toegankelijk. |
-| 1.6 | 15-11-2026 | Eigenaar laat onvolledige fotoparen en lege "Nog geen passende foto"-vakken **bij alle soorten** uit "Lijkt op" verdwijnen. Alleen complete twee-fotopanelen tonen; brondata, openpunten, eerdere vlucht-/leeftijdsafkeuringen en werkende fotovergelijkingen behouden. |
-| 1.7 | 16-11-2026 | Eigenaar stelt voor alle lookalike-soorten bewijsbare foto- **én** tekstverschillen verplicht; sekse-/leeftijdsspecifiek, in beide richtingen, onvolledige fotoparen verborgen maar herkenningstekst zichtbaar. Register + geautomatiseerde QA en bron-/rechten- en fysieke bewijsgrens toegevoegd (§3.4). |
-| 1.9 concept | 20-11-2026 | Visdief-onderzoek verwerkt in de bronroute (§2.1) en de controle van bewijs per mediabestand (§3.2). Praktijkvoorbeelden staan bij de bestaande bronnotitie en F3-R21. |
-
-### 3.3 Beoordelingsregels
-
-- **Klein in beeld mag.** Is de vogel goed zichtbaar, herkenbaar en verifieerbaar? Dan is de foto bruikbaar. Een foto wordt niet afgekeurd of voorwaardelijk gemaakt alleen omdat de vogel het beeld niet vult. Voorwaardelijk is alleen terecht als het herkenningsdoel van die positie niet te zien is.
-  Toegepast op 10-11-2026: de hoofdfoto's van Turkse Tortel (sp004) en Zilvermeeuw (sp094) en de vluchtfoto van het Wespendief-vrouwtje (sp248) gingen van voorwaardelijk naar goedgekeurd. Foto's die voorwaardelijk zijn om onscherpte of een onzichtbaar kritisch kenmerk blijven voorwaardelijk.
-- **Aanvullende regel uitsluitend voor juvenielen — geen vervanging van bestaande eisen.** Een goede juvenielenfoto mag worden gebruikt wanneer poten/tenen of andere **niet-diagnostische** lichaamsdelen ontbreken. De foto moet voor het doel voldoende scherp en duidelijk zijn; de zichtbare kenmerken (bijv. juveniele kop-, borst- en veertekening) moeten zowel de soort als de benoemde jeugdige leeftijd overtuigend onderbouwen. **Onzichtbare poten op zichzelf zijn geen STOP of afkeurreden.** Bij een nieuwe toevoeging of definitieve foto-PASS blijven de zes controles van §3.2 **allemaal verplicht**, inclusief individuele originele foto, leeftijds-/soortidentiteit, herkomst, fotograaf, licentie en herpublicatierechten; geen leeftijd aannemen op basis van alleen een bestandsnaam of metadata. Is het ontbrekende onderdeel wél beslissend of ontbreken bewijzen, dan blijft de rol open/PARTIALLY TESTED; geen nieuwe ongetoetste foto publiceren. **Deze regel voegt uitsluitend voor juvenielen een proportionele beoordelingsuitzondering toe. Alle bestaande regels uit §§1–4 blijven ongewijzigd**, waaronder fotokwaliteit, echte vrije vlucht, geen verzonnen geslachtslabels, geen dubbele foto's, bronverificatie en het openlaten van ontbrekende posities.
-- **Echte vlucht voor "In vlucht".** Opvliegen, landen en vleugels strekken zijn aparte houdingen en horen niet in de vluchtsectie. Dit staat in `docs/fotokwaliteit/vluchtcontrole.json` en wordt getest met VC-01..08.
-- **Kleine vogels: herkenbare rustfoto's vóór een moeilijke vluchtfoto (eigenaarbesluit 14-11-2026).** Bij kleine soorten hebben een scherpe foto op een tak, stengel of andere ondergrond, correct mannetje/vrouwtje/juveniel-kleed en de visuele vergelijkingen voorrang. Een vluchtfoto is **niet verplicht** als die zo klein, onscherp of onduidelijk is dat de determinatie er niet beter van wordt. Vul de vluchtpositie dan niet kunstmatig en plaats geen twijfelachtige foto. Een al aantoonbaar bruikbare, echte vrije-vluchtfoto mag blijven. Een ontbrekend of zwak vluchtbeeld is een **later fotografie-onderzoekspunt**, geen automatische STOP voor een overigens correcte soortkaart. De zes controles van §3.2 blijven voor **elke wél geplaatste foto** verplicht. Registreer open beeld- en bronpunten in [F2-openpuntenregister](fotokwaliteit/F2_OPEN_PUNTEN_REGISTER_2026-11-14.md).
-- **Geen verzonnen geslachtslabels.** Zijn mannetje en vrouwtje niet betrouwbaar te onderscheiden? Dan krijgt de foto een neutraal label, bijvoorbeeld "Volwassen".
-- **Een ontbrekende positie blijft open.** Vul haar niet kunstmatig. De kaart toont dan "Nog geen foto" of verwijst naar de hoofdfoto.
-- **Extra foto's mogen**, ook meerdere per categorie, als ze echt iets toevoegen. Toon de hoofdfoto eerst, daarna mannetje, vrouwtje, juveniel en In vlucht voor zover bevestigd beeld beschikbaar is. Gebruik dezelfde opname maar één keer in de hoofdsecties.
-- **Fotovergelijking onder Lijkt op (eigenaarbesluit 14-11-2026).** Toon beide soorten naast elkaar, ook op mobiel. Gebruik beeld van hetzelfde type (vlucht naast vlucht, rust naast rust), liefst vanuit een vergelijkbare hoek. Bestaande gidsfoto's mogen hier terugkomen, ook als dezelfde foto op een ander vergelijkingspaneel staat. Een extra juvenielpaar verschijnt wanneer beide passende foto's beschikbaar zijn. De betreffende leeftijd en het geslacht worden alleen getoond als ze onderbouwd zijn. Wanneer bij een bestaand paneel een passend beeld ontbreekt, blijft de tekst als gewone herkenningsinformatie beschikbaar, maar het **hele incomplete fotopaneel wordt verborgen** volgens §3.1; toon geen leeg fotovak of melding. Houd individuele fotoherkomst toegankelijk via het informatietegeltje.
-- **Gerichte vervanging of aanvulling** bij soorten die al foto's hebben is toegestaan na volledige verificatie (§3.2). Brede fotobatches voor soorten zonder foto's starten pas na een apart eigenaarbesluit.
-- **Verbeterwensen registreren.** De eigenaar beoordeelt later elke vogelkaart zelf. Een verbeterwens, zoals een betere foto of een ontbrekende positie, gaat als `wishes` in de soortaudit en verschijnt in de tracker. Kleine, verdedigbare kwaliteitsverschillen houden de ontwikkeling niet tegen.
-
----
-
-### 3.4 Kritieke dubbelgangers: overtuigend verschil in echte foto's én tekst (eigenaarbesluit 16-11-2026)
-
-**Verplichte Birdspot-regel voor alle huidige en toekomstige F3-soortcontroles:** soorten die sterk op elkaar lijken, krijgen een **symmetrische, brongedragen determinatievergelijking**. Zowel de foto's als de begrijpelijke korte tekst moeten de gebruiker helpen daadwerkelijk het verschil te herkennen. De regel is soortspecifiek, niet een algemene vrijstelling of garantie dat ieder vergelijkingskenmerk altijd zichtbaar is.
-
-1. **Identificeer de verwarringssoort(en).** Noteer per soort welke concrete andere soort/ondersoort erop lijkt, de wetenschappelijke namen en de risicokleden (mannetje, vrouwtje, juveniel, winter/eclips, voor zover relevant). Een afwijkende koptekening binnen dezelfde soort mag nooit automatisch als afzonderlijke soort worden geclaimd.
-2. **Maak onderscheid in eigen woorden.** Toon bij ten minste het kritischste paar maximaal drie werkelijk onderscheidende, brongedragen punten met *beide* soorten naast elkaar: kijkpunt (kop, snavel, vleugel, stuit, roep), zichtbare verschillen, toepasselijke kleed/leeftijd/hoek en uitzonderingen. Rangschik betrouwbare aanwijzingen boven zwakke kleur-, grootte- of gedragsindrukken. Geen enkel overlappend kenmerk presenteren als 'doorslaggevend'. Bij twijfel blijft 'niet zeker' mogelijk.
-3. **Vergelijk alleen betrouwbare, vergelijkbare foto's.** Onder 'Lijkt op' tonen we uitsluitend twee afzonderlijk gecontroleerde, correcte, gelicenseerde en werkelijk vergelijkbare foto's. Liefst dezelfde houding, kleed en kijkhoek. De zes individuele fotocontroles uit §3.2 gelden per beeld; geen andere vogel, AI-vervanging, fictieve geslachts-/leeftijdslabels, oncontroleerbare montage of tekst-only *vergelijkingskaart* als schijnoplossing. De gebruiker kan bij elk beeld de noodzakelijke credits zien.
-4. **Ontbreekt een fotopaar?** **Verberg uitsluitend dat onvolledige paneel** zoals §3.1/v1.6 voorschrijft, maar houd de inhoudelijke waarschuwing zichtbaar in de bestaande herkenningstekst/kennisinformatie van beide soortkaarten. Registreer het ontbrekende fototype/bron of bevestigde audio als open punt; beweer nooit dat de fotovergelijking af is. Dit verduidelijkt de oude zin in §3.3: er verschijnt **géén leeg fotovak** ondanks behoud van de tekstuele herkenning.
-5. **Toets in beide richtingen.** Open soort A → soort B én B → A; controleer werkelijk gepaarde beelden en interpretatie van de maximaal drie regels op mobiel (320/360/390 px), zoomen, terug, kleine schermen en zonder netwerk; bron-/audiorechten, echte rol en een onafhankelijke tweede inhoudsreview blijven aparte F3-gates.
-6. **Borg hergebruik in plaats van een losse herinnering.** Het F3-soortregister verwijst naar het [dubbelgangersregister](fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json), met pair-IDs, risicokleden, bronnen, de status van beide foto's en expliciete open punten. De automatische controle bewaakt ID's, kleur-/sekseclaims en het verbergen van onvolledige paren. **Geen 'foto+tekst-PASS'** zonder werkelijk bewezen voor/na-verschil op beide kaarten en verifieerbare beelden.
-
-Deze regel breidt de bestaande foto's en herkomstverplichtingen uit; zij vervangt **niet** §2 (betrouwbaarheid), §3.1 (alleen complete fotoparen), §3.2 (zes individuele fotocontroles) of het onderscheid tussen CI, inhoudelijke fotoaudit en fysieke toesteltest.
+- **Alle soorten:** de scherpste, duidelijkste, soort- en rolgeverifieerde hoofdfoto heeft voorrang. Controleer of elk aanvullend beeld voor een snelle veldcheck werkelijk iets toevoegt; laat zwakke foto's niet stilzwijgend staan.
+- **Kleine vogels:** heldere rust- en kleedfoto's op tak/stengel/ondergrond en goede dubbelgangersparen gaan vóór een twijfelachtige vluchtfoto. Gebruik alleen aantoonbare geslachts-/leeftijdsrollen; waar sekse niet betrouwbaar te zien is, gebruik `Volwassen`. Controleer waar relevant kop, wenkbrauwstreep, snavel, vleugel, poten en tekst.
+- **Grotere vogels en roofvogels:** kies na een geschikte hoofdfoto en kenmerkende kleden vaker ook een bruikbare echte vrije-vluchtfoto wanneer silhouet, vleugels, staart of houding belangrijk zijn. Fotoparen dienen hetzelfde relevante kleed en bij voorkeur een vergelijkbare houding te tonen.
+- **Juvenielen:** zijn geen vuldoel. Alleen opnemen bij werkelijk bewezen soort én leeftijd met alle zes individuele controles van §3.2. Overigens de juvenielenuitzondering van §3.3 behouden voor niet-diagnostisch onzichtbare poten.
+- **Ontbrekende of zwakke foto:** verberg incomplete `Lijkt op`-fotopanelen, maar laat correcte, duidelijke tekst over de zichtbare verschillen beschikbaar. Leg per rol het ontbrekende bewijs vast en toon het aan de eigenaar.
+- **Voortgang:** een ontbrekende optionele vlucht- of juvenielenfoto hoeft niet het andere correcte werk af te keuren, maar de agent mag het gat **nooit automatisch als toestemming voor een volgende batch** behandelen. De eigenaar beslist via §2.3. De foto krijgt zonder bewijs nooit `VERIFIED`.
 
 ---
 
