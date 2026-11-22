@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 5,
+    "nextNotStarted": 2,
     "secondBatchStarted": 3,
-    "contentInspected": 135,
+    "contentInspected": 138,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -99,7 +99,8 @@
     "fortySecondBatchStarted": 3,
     "fortyThirdBatchStarted": 3,
     "fortyFourthBatchStarted": 3,
-    "fortyFifthBatchStarted": 3
+    "fortyFifthBatchStarted": 3,
+    "fortySixthBatchStarted": 3
   },
   "records": [
     {
@@ -13993,12 +13994,13 @@
           "04f1ae3398cea7019228e7341be983168b458ec7"
         ],
         "ownerDecision": {
-          "state": "NOT TESTED (R45-lacunes vragen een eigen eigenaarbesluit vóór een volgende batch)",
-          "choice": null,
-          "date": null,
-          "scope": "sp245",
-          "request": "A nader onderzoeken / B gericht verbeteren / C voorlopig verder met geregistreerde open punten",
-          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/347"
+          "state": "VERIFIED (besluit over werkvolgorde)",
+          "choice": "C: voorlopig doorgaan met gedocumenteerde open punten",
+          "date": "2026-11-22",
+          "scope": "Uitsluitend de gemelde R45-punten voor sp245. R46 mag starten. Inhoudelijke bewijs- en releasebeoordeling blijven van kracht.",
+          "evidence": "Eigenaarbericht in App Builder na de terugmelding van R45 en de openstaande keuze vóór R46: ‘ga verder’.",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/347#issuecomment-7080701186",
+          "id": "sp245"
         }
       }
     },
@@ -14199,12 +14201,13 @@
           "a1b5acb8813d5494cf7e1bd672004a15e11ac7f4"
         ],
         "ownerDecision": {
-          "state": "NOT TESTED (R45-lacunes vragen een eigen eigenaarbesluit vóór een volgende batch)",
-          "choice": null,
-          "date": null,
-          "scope": "sp249",
-          "request": "A nader onderzoeken / B gericht verbeteren / C voorlopig verder met geregistreerde open punten",
-          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/347"
+          "state": "VERIFIED (besluit over werkvolgorde)",
+          "choice": "C: voorlopig doorgaan met gedocumenteerde open punten",
+          "date": "2026-11-22",
+          "scope": "Uitsluitend de gemelde R45-punten voor sp249. R46 mag starten. Inhoudelijke bewijs- en releasebeoordeling blijven van kracht.",
+          "evidence": "Eigenaarbericht in App Builder na de terugmelding van R45 en de openstaande keuze vóór R46: ‘ga verder’.",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/347#issuecomment-7080701186",
+          "id": "sp249"
         }
       }
     },
@@ -14309,12 +14312,13 @@
           "6989cef001d4f58bfb376ada702491adf955d305"
         ],
         "ownerDecision": {
-          "state": "NOT TESTED (R45-lacunes vragen een eigen eigenaarbesluit vóór een volgende batch)",
-          "choice": null,
-          "date": null,
-          "scope": "sp250",
-          "request": "A nader onderzoeken / B gericht verbeteren / C voorlopig verder met geregistreerde open punten",
-          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/347"
+          "state": "VERIFIED (besluit over werkvolgorde)",
+          "choice": "C: voorlopig doorgaan met gedocumenteerde open punten",
+          "date": "2026-11-22",
+          "scope": "Uitsluitend de gemelde R45-punten voor sp250. R46 mag starten. Inhoudelijke bewijs- en releasebeoordeling blijven van kracht.",
+          "evidence": "Eigenaarbericht in App Builder na de terugmelding van R45 en de openstaande keuze vóór R46: ‘ga verder’.",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/347#issuecomment-7080701186",
+          "id": "sp250"
         }
       }
     },
@@ -14357,39 +14361,71 @@
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R46",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "VERIFIED (bronbestanden en Commons SHA-1 gematcht. Individuele rol- en rechtenbeoordeling apart.)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker en licentielabel via Commons vergeleken. Onafhankelijke herpublicatieaftekening OPEN.)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vier Commons-originelen gematcht. Grijs mannenportret en vliegend volwassen mannetje, met donkere band over de armvleugel, gecontroleerd. De bron ondersteunt de opvliegende vrouw en de juveniel. De vrouw vliegt op en de juveniel landt volgens de opgeslagen rolbeoordeling. Beide beelden staan onder verenkleed. Vrije-vluchtrollen voor vrouw en juveniel blijven open.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Wederkerig vluchtpaar met Steppekiekendief sp250 voor volwassen man getest. Vrouwen- en juvenielenparen met Steppe ontbreken. Blauwe sp249 en Bruine sp173 hebben vanuit hun eigen kaarten een tekstlink naar Grauwe. Geschikte wederkerige fotoparen en retourverwijzingen staan open. Kijk naar vleugelvorm, bandering en stuit in passende houding en licht.)",
+          "responsiveLayoutAndZoom": "VERIFIED (R46 Chromium 320/360/390 px met zoom. Fysieke Samsung/PWA NOT TESTED.)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (hoofdfotocredits zichtbaar. Geen lege speler of geluidscredits. Rechtenaftekening OPEN.)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokaal geregistreerd gidsfragment.)",
+          "audioLicenseAndAttribution": "BLOCKED (geen lokaal geregistreerd gidsfragment.)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal geregistreerd gidsfragment.)",
+          "offlinePlayerAndSoundFiles": "VERIFIED (Chromium offline heropend op 390 px. Foto's beschikbaar. Geen speler bij afwezige clip.)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming direct gelezen. ANWB-soortpassage NOT TESTED.)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming 39–49 cm lengte en 102–123 cm spanwijdte. App circa 40–50 cm en 100–115 cm. Meetbereiken en gewichten apart reconciliëren.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon ondersteunt zeer schaars broeden in graanakkers, vooral in het noordoosten. In doortrek vanaf half april en tot eind september. De app toont mei–augustus. Hoofdseizoen en uiterste maanden apart beoordelen.)",
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
+          "endToEndGuideUI": "PARTIALLY TESTED (gerichte Chromium-soortkaartroute VERIFIED. Toestel, owner-preview en productie NOT TESTED.)",
           "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Wederkerig vluchtpaar met Steppekiekendief sp250 voor volwassen man getest. Vrouwen- en juvenielenparen met Steppe ontbreken. Blauwe sp249 en Bruine sp173 hebben vanuit hun eigen kaarten een tekstlink naar Grauwe. Geschikte wederkerige fotoparen en retourverwijzingen staan open. Kijk naar vleugelvorm, bandering en stuit in passende houding en licht.)"
         },
         "findings": [
-          "Vrouwtje in vrije vlucht",
-          "Juveniel in vrije vlucht",
-          "Geen lokaal geregistreerde zang of roep"
+          "Vier Commons-originelen gematcht. Grijs mannenportret en vliegend volwassen mannetje, met donkere band over de armvleugel, gecontroleerd. De bron ondersteunt de opvliegende vrouw en de juveniel. De vrouw vliegt op en de juveniel landt volgens de opgeslagen rolbeoordeling. Beide beelden staan onder verenkleed. Vrije-vluchtrollen voor vrouw en juveniel blijven open.",
+          "Wederkerig vluchtpaar met Steppekiekendief sp250 voor volwassen man getest. Vrouwen- en juvenielenparen met Steppe ontbreken. Blauwe sp249 en Bruine sp173 hebben vanuit hun eigen kaarten een tekstlink naar Grauwe. Geschikte wederkerige fotoparen en retourverwijzingen staan open. Kijk naar vleugelvorm, bandering en stuit in passende houding en licht.",
+          "Vogelbescherming 39–49 cm lengte en 102–123 cm spanwijdte. App circa 40–50 cm en 100–115 cm. Meetbereiken en gewichten apart reconciliëren.",
+          "Sovon ondersteunt zeer schaars broeden in graanakkers, vooral in het noordoosten. In doortrek vanaf half april en tot eind september. De app toont mei–augustus. Hoofdseizoen en uiterste maanden apart beoordelen.",
+          "Geen lokaal gidsfragment. Afwezigheid van een lege audiospeler technisch gecontroleerd.",
+          "Vogelbescherming en Sovon gelezen. ANWB-soortpassage NOT TESTED.",
+          "Historisch: Vrouwtje in vrije vlucht",
+          "Historisch: Juveniel in vrije vlucht",
+          "Historisch: Geen lokaal geregistreerde zang of roep"
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-kiekendief",
+          "https://stats.sovon.nl/stats/soort/2630",
+          "https://www.bto.org/learn/skills/bird-identification/videos/harriers",
+          "https://commons.wikimedia.org/wiki/File:A_Montagu%27s_Harrier_male_roosting_for_the_night_%2850971610728%29.jpg",
+          "https://commons.wikimedia.org/wiki/File:A_Montagu%27s_Harrier_Taking_Flight_(51621854680).jpg",
+          "https://commons.wikimedia.org/wiki/File:Circus_pygargus_juvenile_flight.jpg",
+          "https://commons.wikimedia.org/wiki/File:Beautiful_Montagu%27s_Harrier_in_Flight_(51042548717).jpg",
+          "docs/fotokwaliteit/F3_R46_GRAUWE_KIEKENDIEF_BIJENETER_GRAUWE_KLAUWIER_2026-11-22_DRAFT.md",
+          "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/45034414520"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R46 SHA",
+        "independence": "NOT VERIFIED (onafhankelijke rol-, luister- en rechtenreview open)",
+        "fullPass": false,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "photoFilesInspected": 4,
+        "photoBlobSHAs": [
+          "482e9312664ff821af4ff9ebd3b571de6646e72b",
+          "ed09a7bcb64d3e40d274c96ddd3e648de0aa9148",
+          "b6cb778fbb22efc30496be2a8fcfb82fa14ee2c3",
+          "0f990dcd0649cc74ae384127099dfcbc9574b3b6"
+        ],
+        "ownerDecision": {
+          "state": "NOT TESTED (R46-punten vragen een afzonderlijk eigenaarbesluit vóór een volgende batch)",
+          "choice": null,
+          "date": null,
+          "scope": "sp251",
+          "request": "A nader onderzoeken / B gericht verbeteren / C voorlopig verder met geregistreerde open punten",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/348"
+        }
       }
     },
     {
@@ -14498,43 +14534,74 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (soortportret, sekse open)",
+            "path": "/assets/species/sp257.webp",
+            "oldRights": "NOT TESTED (historisch auditobject bevatte geen asset)."
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R46",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "VERIFIED (bronbestanden en Commons SHA-1 gematcht. Individuele rol- en rechtenbeoordeling apart.)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker en licentielabel via Commons vergeleken. Onafhankelijke herpublicatieaftekening OPEN.)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Eén Commons-origineel gematcht. Portret toont gele keel, blauwgroene onderzijde, oogstreep en licht neerwaarts gebogen snavel. Sekse blijft open. Individuele jeugd- en vluchtbeelden ontbreken.)",
+          "photoPairComparisons": "PARTIALLY TESTED (Wederkerig fotopaar met IJsvogel sp075 toont keel, verhoudingen en snavelvorm. Technisch getest. Vergelijking betreft de twee bestaande rustportretten.)",
+          "responsiveLayoutAndZoom": "VERIFIED (R46 Chromium 320/360/390 px met zoom. Fysieke Samsung/PWA NOT TESTED.)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (hoofdfotocredits zichtbaar. Geen lege speler of geluidscredits. Rechtenaftekening OPEN.)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokaal geregistreerd gidsfragment.)",
+          "audioLicenseAndAttribution": "BLOCKED (geen lokaal geregistreerd gidsfragment.)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal geregistreerd gidsfragment.)",
+          "offlinePlayerAndSoundFiles": "VERIFIED (Chromium offline heropend op 390 px. Foto's beschikbaar. Geen speler bij afwezige clip.)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming direct gelezen. ANWB-soortpassage NOT TESTED.)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Vogelbescherming 25–29 cm lengte en 36–40 cm spanwijdte. App 27–29 cm inclusief staart en 36–40 cm. Lengteconventie en gewicht staan open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Sovon vermeldt jaarlijks broeden sinds 2010 en waarneming vrijwel uitsluitend eind april–half oktober. De app geeft incidenteel broeden en mei–september. Broedstatus en de formulering van het waarnemingsvenster vragen inhoudelijke correctie of bronverduidelijking.)",
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
+          "endToEndGuideUI": "PARTIALLY TESTED (gerichte Chromium-soortkaartroute VERIFIED. Toestel, owner-preview en productie NOT TESTED.)",
           "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "lookalikePhotoAndText": "PARTIALLY TESTED (Wederkerig fotopaar met IJsvogel sp075 toont keel, verhoudingen en snavelvorm. Technisch getest. Vergelijking betreft de twee bestaande rustportretten.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Eén Commons-origineel gematcht. Portret toont gele keel, blauwgroene onderzijde, oogstreep en licht neerwaarts gebogen snavel. Sekse blijft open. Individuele jeugd- en vluchtbeelden ontbreken.",
+          "Wederkerig fotopaar met IJsvogel sp075 toont keel, verhoudingen en snavelvorm. Technisch getest. Vergelijking betreft de twee bestaande rustportretten.",
+          "Vogelbescherming 25–29 cm lengte en 36–40 cm spanwijdte. App 27–29 cm inclusief staart en 36–40 cm. Lengteconventie en gewicht staan open.",
+          "Sovon vermeldt jaarlijks broeden sinds 2010 en waarneming vrijwel uitsluitend eind april–half oktober. De app geeft incidenteel broeden en mei–september. Broedstatus en de formulering van het waarnemingsvenster vragen inhoudelijke correctie of bronverduidelijking.",
+          "Geen lokaal gidsfragment. Afwezigheid van een lege audiospeler technisch gecontroleerd.",
+          "Vogelbescherming en Sovon gelezen. ANWB-soortpassage NOT TESTED.",
+          "Historisch: Geen lokaal geregistreerde zang of roep",
+          "Historisch: Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bijeneter",
+          "https://stats.sovon.nl/stats/soort/8400",
+          "https://commons.wikimedia.org/wiki/File:European_bee-eater_%28Merops_apiaster%29.jpg",
+          "docs/fotokwaliteit/F3_R46_GRAUWE_KIEKENDIEF_BIJENETER_GRAUWE_KLAUWIER_2026-11-22_DRAFT.md",
+          "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/45034414520"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R46 SHA",
+        "independence": "NOT VERIFIED (onafhankelijke rol-, luister- en rechtenreview open)",
+        "fullPass": false,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "15ae7f392f35fdcf95105535771645997d8657b0"
+        ],
+        "ownerDecision": {
+          "state": "NOT TESTED (R46-punten vragen een afzonderlijk eigenaarbesluit vóór een volgende batch)",
+          "choice": null,
+          "date": null,
+          "scope": "sp257",
+          "request": "A nader onderzoeken / B gericht verbeteren / C voorlopig verder met geregistreerde open punten",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/348"
+        }
       }
     },
     {
@@ -14550,43 +14617,74 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (mannetjeskleed, leeftijd niet onafhankelijk getoetst)",
+            "path": "/assets/showcase/sp262.webp",
+            "oldRights": "NOT TESTED (historisch auditobject bevatte geen asset)."
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R46",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
+          "photoOriginalIdentity": "VERIFIED (bronbestanden en Commons SHA-1 gematcht. Individuele rol- en rechtenbeoordeling apart.)",
+          "photoIndividualRights": "PARTIALLY TESTED (maker en licentielabel via Commons vergeleken. Onafhankelijke herpublicatieaftekening OPEN.)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Eén Commons-origineel gematcht. Gidsportret uit de showcase toont het grijze hoofd, zwarte masker en kastanjebruine rug van het mannetjestype. De bron bevestigt Lanius collurio. Vrouw-, juveniel- en vluchtbeeld ontbreken.)",
+          "photoPairComparisons": "PARTIALLY TESTED (De soortkaart toont geen vergelijkingspaneel. Vrouw en juveniel zijn in tekst benoemd. Geschikt vergelijkingsmateriaal en beoordeling van bruin getekende klauwieren blijven open.)",
+          "responsiveLayoutAndZoom": "VERIFIED (R46 Chromium 320/360/390 px met zoom. Fysieke Samsung/PWA NOT TESTED.)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (hoofdfotocredits zichtbaar. Geen lege speler of geluidscredits. Rechtenaftekening OPEN.)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen lokaal geregistreerd gidsfragment.)",
+          "audioLicenseAndAttribution": "BLOCKED (geen lokaal geregistreerd gidsfragment.)",
+          "soundRolesSongCall": "NOT TESTED (geen lokaal geregistreerd gidsfragment.)",
+          "offlinePlayerAndSoundFiles": "VERIFIED (Chromium offline heropend op 390 px. Foto's beschikbaar. Geen speler bij afwezige clip.)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming direct gelezen. ANWB-soortpassage NOT TESTED.)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Lengte 16–18 cm komt overeen met Vogelbescherming. Spanwijdte en gewicht blijven afzonderlijk open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (Vogelbescherming geeft Nederlandse Rode Lijst Bedreigd. Sovon meldt terugkeer meestal vanaf half mei en wegtrek die halverwege september grotendeels voorbij is. App mei–augustus. Seizoenslabel en kaart apart beoordelen.)",
           "ebirdDistributionAndBias": "NOT TESTED (F3)",
           "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
+          "endToEndGuideUI": "PARTIALLY TESTED (gerichte Chromium-soortkaartroute VERIFIED. Toestel, owner-preview en productie NOT TESTED.)",
           "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "lookalikePhotoAndText": "PARTIALLY TESTED (De soortkaart toont geen vergelijkingspaneel. Vrouw en juveniel zijn in tekst benoemd. Geschikt vergelijkingsmateriaal en beoordeling van bruin getekende klauwieren blijven open.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Eén Commons-origineel gematcht. Gidsportret uit de showcase toont het grijze hoofd, zwarte masker en kastanjebruine rug van het mannetjestype. De bron bevestigt Lanius collurio. Vrouw-, juveniel- en vluchtbeeld ontbreken.",
+          "De soortkaart toont geen vergelijkingspaneel. Vrouw en juveniel zijn in tekst benoemd. Geschikt vergelijkingsmateriaal en beoordeling van bruin getekende klauwieren blijven open.",
+          "Lengte 16–18 cm komt overeen met Vogelbescherming. Spanwijdte en gewicht blijven afzonderlijk open.",
+          "Vogelbescherming geeft Nederlandse Rode Lijst Bedreigd. Sovon meldt terugkeer meestal vanaf half mei en wegtrek die halverwege september grotendeels voorbij is. App mei–augustus. Seizoenslabel en kaart apart beoordelen.",
+          "Geen lokaal gidsfragment. Afwezigheid van een lege audiospeler technisch gecontroleerd.",
+          "Vogelbescherming en Sovon gelezen. ANWB-soortpassage NOT TESTED.",
+          "Historisch: Geen lokaal geregistreerde zang of roep",
+          "Historisch: Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grauwe-klauwier",
+          "https://stats.sovon.nl/stats/soort/15150",
+          "https://commons.wikimedia.org/wiki/File:Lanius_collurio_%D1%81%D0%BE%D1%80%D0%BE%D0%BF%D1%83%D0%B4_%D1%81%D1%96%D1%80%D0%B8%D0%B9.jpg",
+          "docs/fotokwaliteit/F3_R46_GRAUWE_KIEKENDIEF_BIJENETER_GRAUWE_KLAUWIER_2026-11-22_DRAFT.md",
+          "https://github.com/saddamsmit-source/Birdspot-Library/actions/runs/45034414520"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R46 SHA",
+        "independence": "NOT VERIFIED (onafhankelijke rol-, luister- en rechtenreview open)",
+        "fullPass": false,
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)",
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "e7c1dee7c5d634fbbede3811a5c16be85980accc"
+        ],
+        "ownerDecision": {
+          "state": "NOT TESTED (R46-punten vragen een afzonderlijk eigenaarbesluit vóór een volgende batch)",
+          "choice": null,
+          "date": null,
+          "scope": "sp262",
+          "request": "A nader onderzoeken / B gericht verbeteren / C voorlopig verder met geregistreerde open punten",
+          "sourcePR": "https://github.com/saddamsmit-source/Birdspot-Library/pull/348"
+        }
       }
     },
     {
