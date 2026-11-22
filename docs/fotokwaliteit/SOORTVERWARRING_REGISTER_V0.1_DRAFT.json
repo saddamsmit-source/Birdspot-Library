@@ -3703,6 +3703,59 @@
         "https://commons.wikimedia.org/wiki/File:Dunlin_(Calidris_alpina)_non_breeding_Marken.jpg"
       ],
       "caution": "Kijk van opzij naar de snavel. De ontbrekende achterteen is bruikbaar bij goed zicht van dichtbij."
+    },
+    {
+      "id": "LK-083",
+      "focus": [
+        "sp165",
+        "sp166"
+      ],
+      "birds": [
+        "sp165",
+        "sp166"
+      ],
+      "risk": "Visdief en Noordse Stern lijken in broedkleed sterk op elkaar. Snavelpunten kunnen door lichtval/wisselende leeftijd misleiden en de beschikbare foto's tonen niet hetzelfde rust-/vluchtperspectief.",
+      "matchingPlumages": [
+        "breeding",
+        "breeding"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Visdief heeft een gelijkmatige rustfoto in broedkleed en een aparte vluchtfoto; de enige Noordse Stern-foto is een vluchtbeeld en tegelijk hoofdfoto, geen vergelijkbaar rustpaar.",
+        "Maak geen twee-fotopaar met verschillend rust-/vluchtperspectief. Nieuwe gelijkwaardige foto vereist primaire determinatie en publicatierechten."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Doorgaans langer, oranjerood met zwarte punt",
+            "Doorgaans korter, meestal geheel bloedrood zonder zwarte punt"
+          ]
+        },
+        {
+          "label": "Poten en bouw in zit",
+          "values": [
+            "Relatief langere poten en slankere houding",
+            "Kortere poten; lange buitenste staartpennen"
+          ]
+        },
+        {
+          "label": "Handpennen in vlucht",
+          "values": [
+            "Meer donkere buitenste handpennen, bij geschikt licht donkere wig",
+            "Handpennen vaak doorschijnender, kijkhoek en lichtval bepalend"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/visdief",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/noordse-stern",
+        "https://www.vogelbescherming.nl/actueel/bericht/verschillen-tussen-de-noordse-dief",
+        "https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo).jpg",
+        "https://commons.wikimedia.org/wiki/File:Arctic_tern_(Sterna_paradisaea)_with_eel_Blonduos.jpg"
+      ],
+      "caution": "De beschreven lichaams- en vleugelkenmerken gelden bij geschikte belichting en kleed. Geen soortconclusie op alleen snavelkleur; beeldpaar ontbreekt."
     }
   ],
   "withinSpeciesVariation": [
@@ -3734,7 +3787,8 @@
     "visualReviewR33": "docs/fotokwaliteit/F3_R33_KNOBBELZWAAN_BERGEEND_KRAKEEND_2026-11-21_DRAFT.md",
     "visualReviewR34": "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md",
     "visualReviewR35": "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md",
-    "visualReviewR37": "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md"
+    "visualReviewR37": "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
+    "visualReviewR40": "docs/fotokwaliteit/F3_R40_GROTE_MANTELMEEUW_VISDIEF_NOORDSE_STERN_2026-11-22_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }
