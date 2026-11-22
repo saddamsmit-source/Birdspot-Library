@@ -2,11 +2,11 @@
 
 | | |
 |---|---|
-| Versie | 1.10 DRAFT · 22-11-2026 · eigenaarbesluit bronverificatie |
-| Status | **DRAFT op basis van v1.7 FINAL**; eerdere vastgestelde regels intact; revisie v1.10 ter review, geen activering, merge of release. Kandidaten v1.8 (#282) en v1.9 (#315) blijven eigen conceptsporen. |
+| Versie | **1.10 FINAL · 22-11-2026** · eigenaarbesluit bronverificatie |
+| Status | **FINAL als documentuitgave** na Final QA en eigenaaropdracht van 22-11-2026. Gebaseerd op v1.7 FINAL, met volledige behoudshistorie. v1.8 (#282) en v1.9 (#315) waren afzonderlijke concepten, geen eerdere FINAL. GitHub-merge, hostactivering, inhoudelijke soort-PASS en apprelease zijn **NIET** door deze documentvrijgave uitgevoerd. |
 | Herkomst | Eigenaaropdracht "Nieuwe eigenaarbesluiten, livegang en batch M3" (10-11-2026) en het vastgelegde besluit op PR #127 ([comment 6779875047](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6779875047)) |
 | Geldt voor | Alle soortkaarten van Birdspot Library: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
-| Gezag | Dit document is de enige plek waar deze drie regels staan. Andere documenten verwijzen hiernaar en herhalen de regels niet |
+| Gezag | Dit document is de enige Birdspot-normhouder voor inhoudelijke determinatie, media- en fotokwaliteit en bronverificatie; andere bronnen verwijzen hiernaar en creëren geen parallelle normen. |
 
 De regels gelden alleen voor Birdspot. Het algemene App Development Handbook verandert hierdoor niet.
 
@@ -146,7 +146,7 @@ Deze afspraak gaat over Birdspot en laat eventuele wettelijke informatieverplich
 
 ---
 
-### 2.3 Verificatiebewijs, lacunes en eigenaarbesluit — v1.10 DRAFT (eigenaarbesluit 22-11-2026)
+### 2.3 Verificatiebewijs, lacunes en eigenaarbesluit — v1.10 FINAL (eigenaarbesluit 22-11-2026)
 
 **Hoofdprincipe.** Voor een snelle determinatie kijkt de gebruiker in de eerste plaats naar een **goede echte foto**. De herkenningstekst is een even noodzakelijke tweede route en moet vooral bij onvoldoende of ontbrekend beeld zelfstandig bruikbaar zijn. Geen schijnzekerheid, geen ingevulde rol op basis van aannames en geen stilzwijgende voortgang bij een materiële lacune. De Project Owner beslist, niet de agent.
 
@@ -255,7 +255,7 @@ Deze regel breidt de bestaande foto's en herkomstverplichtingen uit; zij vervang
 
 ---
 
-### 3.5 Fotoprioriteit bij de snelle veldcheck — v1.10 DRAFT (eigenaarbesluit 22-11-2026)
+### 3.5 Fotoprioriteit bij de snelle veldcheck — v1.10 FINAL (eigenaarbesluit 22-11-2026)
 
 Voortbouwend op niet-gemergd voorstel v1.8 (#282), onder de eigenaarspoort voor iedere materiële ontbrekende foto (§2.3), zonder versoepeling van §3.1–3.4:
 
@@ -298,6 +298,6 @@ Voortbouwend op niet-gemergd voorstel v1.8 (#282), onder de eigenaarspoort voor 
 | 1.7 | 16-11-2026 | Eigenaar stelt voor alle lookalike-soorten bewijsbare foto- **én** tekstverschillen verplicht; sekse-/leeftijdsspecifiek, in beide richtingen, onvolledige fotoparen verborgen maar herkenningstekst zichtbaar. Register + geautomatiseerde QA en bron-/rechten- en fysieke bewijsgrens toegevoegd (§3.4). |
 | 1.8 concept | 16/17-11-2026 | Niet-gemergd voorstel in PR #282: fotoprioriteit per vogelgroep; bron-/rechtenregels van v1.7 behouden. In v1.10 op nieuw eigenaarbesluit verduidelijkt met verplichte lacunemelding en keuze eigenaar. |
 | 1.9 concept | 20-11-2026 | Niet-gemergd voorstel in PR #315: De Visdief-bronroute en bewijs per media-item; als inhoudelijk relevant concept geïntegreerd, niet stilzwijgend als eerdere FINAL geclaimd. |
-| 1.10 DRAFT | 22-11-2026 | Eigenaarbesluit: leidende daadwerkelijk gelezen ANWB/Vogelbescherming, foto als snelle check, precieze tekst bij beeldgebrek, eigenaar beslist per materiële lacune, F3 eerst alle 140 inhoudelijk en daarna tweede onafhankelijke/eigenaar-fotoreview. Geen gate-/mediarechtenversoepeling. |
+| 1.10 FINAL | 22-11-2026 | Eigenaarbesluit: leidende daadwerkelijk gelezen ANWB/Vogelbescherming, foto als snelle check, precieze tekst bij beeldgebrek, eigenaar beslist per materiële lacune, F3 eerst alle 140 inhoudelijk en daarna tweede onafhankelijke/eigenaar-fotoreview. Geen gate-/mediarechtenversoepeling. |
 
-**EINDMARKERING — BIRDSPOT KWALITEITSNORM v1.10 DRAFT · BRONVERIFICATIE · EIGENAARBESLUIT · GEEN LIVE**
+**EINDMARKERING — BIRDSPOT KWALITEITSNORM v1.10 FINAL · BRONVERIFICATIE · EIGENAARBESLUIT · DOCUMENT-QA PASS · GEEN LIVE**
