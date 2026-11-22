@@ -38,8 +38,13 @@ for(const {id,F3,currentAssets,historic} of rows){
  assert.match(F3.checks.independentSecondReview,/^NOT TESTED/);
  assert.match(F3.checks.audioRecordingsAuthenticity,/^BLOCKED/);
  assert.ok(F3.checks.photoOriginalIdentity.startsWith('PARTIALLY TESTED'));
- assert.ok(F3.ownerDecision?.state.startsWith('NOT TESTED') && F3.ownerDecision.choice===null,
-   'No owner decision automatically granted for '+id);
+ const decision=F3.ownerDecision;
+ assert.match(decision.state,/^VERIFIED \(alleen expliciete eigenaar-keuze/);
+ assert.equal(decision.choice,'C: voorlopig doorgaan met gedocumenteerde open punten');
+ assert.equal(decision.date,'2026-11-22');
+ assert.equal(decision.id,id);
+ assert.match(decision.scope,/Uitsluitend het aan de eigenaar gemelde R42-dossier/);
+ assert.equal(decision.sourcePR,'https://github.com/saddamsmit-source/Birdspot-Library/pull/344#issuecomment-7079680036');
  assert.equal(F3.reviewedOriginalAudio,0);
  const paths=expected[id];
  assert.deepEqual(currentAssets.imageSlots.map(x=>x.path),paths);
@@ -91,4 +96,4 @@ for(const id of ['sp167','sp170','sp173']){
  assert.match(d.state,/VERIFIED \(alleen expliciete eigenaar-keuze/);
  assert.ok(d.scope.includes('Uitsluitend R41'));
 }
-console.log('F3-R42 PASS: 10 unchanged photo blobs, no invented audio, conditional Zwarte Mees flight, cautious flycatcher pairs and scoped R41 owner C.');
+console.log('F3-R42 PASS: 10 unchanged photo blobs, no invented audio, conditional Zwarte Mees flight, cautious flycatcher pairs and scoped R41/R42 owner C.');
