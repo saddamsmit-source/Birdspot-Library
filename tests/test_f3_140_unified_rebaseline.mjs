@@ -134,6 +134,7 @@ const counts={
  fortyFourthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R44'),
  fortyFifthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R45'),
  fortySixthBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R46'),
+ fortySeventhBatchStarted:sum(x=>x.F3.recheckBatch==='F3-R47'),
  contentInspected:sum(x=>x.F3.reviewedThisRound===true),
  contentComplete:sum(x=>x.F3.contentStatus==='CONTENT COMPLETE')
 };
