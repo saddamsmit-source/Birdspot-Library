@@ -422,3 +422,5 @@ De pictogramcontrole omvat hoofdnavigatie, Home, soortdetail en leefgebied, waar
 ### Vervolg voor soorten zonder gidsfoto
 
 Beoordeel per soort de eerste gidsfoto en de volledige mobiele ervaring in dezelfde review. Controleer soort, kleed, houding, maker, licentie, zichtbare credits en beeldkwaliteit. Open vervolgens de soortkaart in licht en donker thema, toets contrast, leefgebiediconen en eventuele complete fotovergelijkingen. Zorg dat de gebruiker open fotosecties kan vullen, een gidsfoto voor zichzelf kan vervangen, de standaardfoto kan herstellen en de ZIP naar een tweede profiel kan terugzetten. Test de vrijwillige foto-inzending afzonderlijk van lokaal opslaan, inclusief foutmelding en ontvangst in de afgeschermde inbox. Bewijs ieder deel op de gebruikte commit en lever de mobiele preview bij dezelfde batch.
+
+<!-- WRITER-BOOTSTRAP 2026-11-22 · concept-PR voor Birdspot bronverificatierevisie; verwijder bij de inhoudelijke wijziging. -->
