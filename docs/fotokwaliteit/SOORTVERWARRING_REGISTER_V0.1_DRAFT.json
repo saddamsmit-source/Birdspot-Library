@@ -74,7 +74,10 @@
     "sp152",
     "sp164",
     "sp165",
-    "sp166"
+    "sp166",
+    "sp167",
+    "sp170",
+    "sp173"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -3810,6 +3813,262 @@
         "https://commons.wikimedia.org/wiki/File:Heringsm%C3%B6we_auf_Spiekeroog_04.jpg"
       ],
       "caution": "Combineer pootkleur, bouw en snavel; donker verenkleed alleen niet betrouwbaar. Oude beeldregistraties zijn geen onafhankelijke F3-FULL PASS."
+    },
+    {
+      "id": "LK-085",
+      "focus": [
+        "sp167"
+      ],
+      "birds": [
+        "sp167",
+        "sp165"
+      ],
+      "risk": "Beide sterns hebben een donkere kap in broedkleed. Snavelpunt en poten kunnen uit beeld vallen.",
+      "matchingPlumages": [
+        "breeding",
+        "breeding"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "De snavelpunt van de Grote Stern is bij zoom zichtbaar naast de prooi. De Visdief in rust heeft een andere houding. Een gelijkwaardig fotopaar met duidelijk zicht op de poten blijft open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Snavel",
+          "values": [
+            "Lange zwarte snavel met kleine gele punt",
+            "Meestal oranjerood met donkere punt"
+          ]
+        },
+        {
+          "label": "Kap en poten",
+          "values": [
+            "Rafelige zwarte kuif en zwarte poten",
+            "Zwarte kap met doorgaans minder rafelige achterrand en rode poten"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-stern",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/visdief",
+        "https://natura2000.vlaanderen.be/soort/visdief"
+      ],
+      "caution": "Voor volwassen broedkleed. Prooi, tegenlicht en afstand kunnen de kleur van snavelpunt en poten maskeren."
+    },
+    {
+      "id": "LK-086",
+      "focus": [
+        "sp170"
+      ],
+      "birds": [
+        "sp170",
+        "sp241"
+      ],
+      "risk": "Beide soorten hebben lichte en donkere vlakken. Leeftijd beïnvloedt de snavelkleur.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Geen lokale gidsfoto voor Zwarte Ooievaar. Zoek vergelijkbare adult- en juvenielbeelden waarop hals en romp zichtbaar zijn."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Hals en romp",
+          "values": [
+            "Witte hals en romp met donkere slagpennen",
+            "Donkere hals en bovendelen met contrasterende witte buik"
+          ]
+        },
+        {
+          "label": "Jonge vogel",
+          "values": [
+            "Valere snavel en bruinige slagpennen",
+            "Grijsgroene snavel en poten bij jonge vogels"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ooievaar",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-ooievaar"
+      ],
+      "caution": "Kijk naar hals en romp. Rode snavel en rode poten komen bij beide volwassen soorten voor."
+    },
+    {
+      "id": "LK-087",
+      "focus": [
+        "sp170"
+      ],
+      "birds": [
+        "sp170",
+        "sp142"
+      ],
+      "risk": "Ooievaar en Kraanvogel vliegen met gestrekte hals. Schijnbare grootte hangt af van afstand.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Geen lokale gidsfoto voor Kraanvogel. Zoek gelijkwaardige zij- of ondervluchtbeelden."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Lichaam",
+          "values": [
+            "Witte hals en romp met zwarte slagpennen",
+            "Overwegend grijs met getekende adulte kop en hals"
+          ]
+        },
+        {
+          "label": "Geluid",
+          "values": [
+            "Vooral snavelklepperen bij het nest",
+            "Luid getrompetter kan ook in vlucht hoorbaar zijn"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ooievaar",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kraanvogel"
+      ],
+      "caution": "Beoordeel kleurpatroon bij bruikbaar licht. Een gestrekte hals onderscheidt deze vogels niet."
+    },
+    {
+      "id": "LK-088",
+      "focus": [
+        "sp173"
+      ],
+      "birds": [
+        "sp173",
+        "sp249"
+      ],
+      "risk": "Beide volwassen mannetjes hebben zwarte vleugelpunten. Zicht op stuit en vleugel varieert met de kijkhoek.",
+      "matchingPlumages": [
+        "adult_m",
+        "adult_m"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide vluchtbeelden zijn aan primaire originelen gematcht. Fotohoek, vakaftekening en volledige rechtenaftekening staan open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Lijf",
+          "values": [
+            "Bruin lijf met grijze vleugelvelden",
+            "Licht blauwgrijs lijf met lichte buik"
+          ]
+        },
+        {
+          "label": "Stuit",
+          "values": [
+            "Grijze staart zonder brede witte stuit",
+            "Brede witte stuit zichtbaar bij een draai"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
+        "https://www.rspb.org.uk/birds-and-wildlife/marsh-harrier",
+        "https://commons.wikimedia.org/wiki/File%3AMarsh_harrier_%28Circus_aeruginosus%29_male_in_flight_Norfolk.jpg",
+        "https://commons.wikimedia.org/wiki/File:Hen_Harrier_-_Male.jpg"
+      ],
+      "caution": "Gebruik lichaamskleur samen met de stuit. Zwarte vleugelpunten komen bij beide voor."
+    },
+    {
+      "id": "LK-089",
+      "focus": [
+        "sp173"
+      ],
+      "birds": [
+        "sp173",
+        "sp249"
+      ],
+      "risk": "Volwassen vrouwtjes ogen beide bruin. Bandering en witte stuit zijn afhankelijk van zicht en kijkhoek.",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Beide bestaande vliegfoto’s zijn aan primaire originelen gematcht. Aftekening van beeldvergelijkbaarheid, vakinhoud en rechten staat open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Ondervleugel",
+          "values": [
+            "Doorgaans donkerder en egaler",
+            "Duidelijker donkere banden op vleugel en staart"
+          ]
+        },
+        {
+          "label": "Stuit",
+          "values": [
+            "Geen brede witte stuit",
+            "Brede witte stuit bij wegdraaien of van boven"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
+        "https://www.rspb.org.uk/birds-and-wildlife/marsh-harrier",
+        "https://commons.wikimedia.org/wiki/File:Circus_aeruginosus_female_Oulu_Finland_2021-04-21.jpg",
+        "https://commons.wikimedia.org/wiki/File:Blauwe_kiekendief_fem.jpg"
+      ],
+      "caution": "De foto’s tonen vooral de onderzijde. De stuit vraagt een andere kijkhoek."
+    },
+    {
+      "id": "LK-090",
+      "focus": [
+        "sp173"
+      ],
+      "birds": [
+        "sp173",
+        "sp249"
+      ],
+      "risk": "Jonge vogels en vrouwelijke adulten kunnen bruin zijn. De lichte kruin alleen is onvoldoende voor leeftijd.",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "De Bruine strijkt neer, de Blauwe is vrij in vlucht. Een juvenielenfotopaar met vergelijkbare houding ontbreekt."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Stuit",
+          "values": [
+            "Geen brede witte stuit bij voldoende zicht",
+            "Brede witte stuit bij voldoende zicht"
+          ]
+        },
+        {
+          "label": "Kleed en bandering",
+          "values": [
+            "Vaak donkerbruin, met soms een lichtere kruin",
+            "Bruin met duidelijker banden op staart en ondervleugels"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
+        "https://www.rspb.org.uk/birds-and-wildlife/marsh-harrier",
+        "https://www.inaturalist.org/observations/134634395",
+        "https://commons.wikimedia.org/wiki/File:Blauwe_Kiekendief.jpg"
+      ],
+      "caution": "Een lichte kruin kan ook bij een volwassen vrouwtje voorkomen. Vergelijk stuit en bandering bij geschikt zicht."
     }
   ],
   "withinSpeciesVariation": [

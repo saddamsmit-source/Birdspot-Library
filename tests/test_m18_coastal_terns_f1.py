@@ -156,11 +156,12 @@ def browser():
                             assert h["ok"] and h["alt"] and h["src"].endswith(bird["hero"]), (sid,h)
                             panel=page.locator("#sdPanel-herkenning")
                             expect(panel).to_have_count(1)
-                            # UX v1.6: incomplete photo comparisons are hidden; keep
-                            # source/identification data and all valid paired cards.
+                            # R41: retain reciprocal field guidance for an incomplete
+                            # pair while keeping its photo panel hidden.
                             if sid == "sp167":
-                                assert bird["similar"] not in panel.inner_text(), (
-                                    sid, "incomplete Grote Stern/Visdief pose pair should not render")
+                                partner = '[data-compare-species="sp165"]'
+                                expect(panel.locator(".sd-similar " + partner)).to_be_visible()
+                                expect(panel.locator(".sd-cmp-panel " + partner)).to_have_count(0)
                                 assert "Nog geen passende foto" not in panel.inner_text()
                             else:
                                 assert bird["similar"] in panel.inner_text(), (sid,"comparison source information missing")

@@ -246,6 +246,7 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Bruine en Blauwe · volwassen mannetjes',
+    flight: true,
     birds: [
       {id: 'sp173', source: 'bruine-kiekendief', plumage: 'adult_m', marks: 'Bruin lijf met grijze vleugelvelden en grijze staart. De vleugelpunten zijn zwart.'},
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_m', marks: 'Licht blauwgrijs lijf, witte buik en witte stuit. De vleugelpunten zijn zwart.'},
@@ -253,12 +254,12 @@ export const GUIDE_COMPARISONS = [
     rows: [
       {label: 'Lijf', values: ['Bruin', 'Lichtblauwgrijs, witte buik']},
       {label: 'Stuit / staart', values: ['Grijze staart, geen witte stuit', 'Witte stuit']},
-      {label: 'Vleugelpunt', values: ['Zwart', 'Zwart']},
     ],
-    tip: 'Begin bij de kleur van het lijf. Kijk bij een draai in de vlucht ook naar de stuit, de plek net boven de staart.',
+    tip: 'Beide hebben zwarte vleugelpunten. Begin bij het lijf en kijk bij een draai naar de stuit, de plek net boven de staart.',
   },
   {
     label: 'Bruine en Blauwe · volwassen vrouwtjes',
+    flight: true,
     birds: [
       {id: 'sp173', source: 'bruine-kiekendief', plumage: 'adult_f', marks: 'Donkerbruin met een lichte kruin en keel, vaak ook een lichte vleugelvoorrand. Geen brede witte stuit.'},
       {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'adult_f', marks: 'Bruin met brede witte stuit. Van onderen vallen donkere banden op de vleugels en staart op.'},
@@ -266,22 +267,18 @@ export const GUIDE_COMPARISONS = [
     rows: [
       {label: 'Kop', values: ['Lichte kruin en keel', 'Geen opvallend lichte kruin']},
       {label: 'Stuit', values: ['Geen brede witte stuit', 'Brede witte stuit']},
-      {label: 'Ondervleugel', values: ['Geen opvallende banden benoemd', 'Donkere banden']},
+      {label: 'Ondervleugel', values: ['Meestal donkerder en egaler', 'Duidelijker donkere banden']},
     ],
-    tip: 'Van onderen zijn de vleugelbanden goed te vergelijken. De witte stuit zie je van boven of wanneer de vogel wegdraait.',
+    tip: 'Van onderen vallen de vleugelbanden op. Controleer ook bij jonge vogels de brede witte stuit van de Blauwe zodra die wegdraait. Een lichte kruin alleen bepaalt de leeftijd niet.',
   },
   {
     label: 'Bruine en Blauwe · jonge vogels',
+    reciprocalText: true,
     birds: [
-      {id: 'sp173', source: 'bruine-kiekendief', plumage: 'juv', marks: 'Meestal vrijwel egaal donkerbruin, met een lichte kruin. Mist een brede witte stuit.'},
-      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'juv', marks: 'Bruin met witte stuit. De staart en ondervleugels zijn gebandeerd.'},
+      {id: 'sp173', source: 'bruine-kiekendief', plumage: 'juv', photoMissing: true, marks: 'Meestal donkerbruin, vaak met een lichte kruin. Geen brede witte stuit.'},
+      {id: 'sp249', source: 'blauwe-kiekendief', plumage: 'juv', photoMissing: true, marks: 'Bruin met brede witte stuit. De staart en ondervleugels zijn gebandeerd.'},
     ],
-    rows: [
-      {label: 'Kleed', values: ['Egaal donkerbruin, lichte kruin', 'Bruin']},
-      {label: 'Stuit', values: ['Geen brede witte stuit', 'Witte stuit']},
-      {label: 'Staart / ondervleugel', values: ['Ongebandeerd', 'Gebandeerd']},
-    ],
-    tip: 'Beide zijn bruin. Gebruik de stuit samen met de bandering. Bij een kort silhouet kan de soort onzeker blijven.',
+    tip: 'Combineer stuit en bandering bij een goede kijkhoek. Ook een volwassen vrouwtje kan een lichte kruin hebben.',
   },
   {
     label: 'Blauwe en Grauwe · volwassen vrouwtjes',
@@ -1359,11 +1356,30 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Grote Stern en Visdief · broedkleed',
+    reciprocalText: true,
     birds: [
-      {id: 'sp167', source: 'grote-stern', plumage: 'breeding', marks: 'Zwarte snavel met gele punt, rafelige kuif en zwarte poten.'},
-      {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Oranjerode snavel met meestal zwarte punt en rode poten.'},
+      {id: 'sp167', source: 'grote-stern', plumage: 'breeding', photoMissing: true, marks: 'Lange zwarte snavel met gele punt, rafelige kuif en zwarte poten. De punt kan op afstand of bij een prooi moeilijk te zien zijn.'},
+      {id: 'sp165', source: 'visdief', plumage: 'breeding', photoMissing: true, marks: 'In broedkleed oranjerode snavel met meestal zwarte punt en rode poten.'},
     ],
-    tip: 'Kijk bij twijfel naar de volledige snavel en pootkleur. De gele punt kan op afstand wegvallen.',
+    tip: 'Controleer de snavelpunt en poten wanneer die vrij in beeld zijn.',
+  },
+  {
+    label: 'Ooievaar en Zwarte Ooievaar · hals en romp',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp170', source: 'ooievaar', photoMissing: true, marks: 'Witte hals en romp naast donkere slagpennen. De snavel van jonge Ooievaars is valer.'},
+      {id: 'sp241', source: 'zwarte-ooievaar', photoMissing: true, marks: 'Donkere hals en bovendelen, ook bij jonge vogels. De witte buik steekt daartegen af. Bij jongen zijn snavel en poten grijsgroen.'},
+    ],
+    tip: 'Begin bij de hals. Bij jonge vogels is de kleur van de snavel minder bruikbaar.',
+  },
+  {
+    label: 'Ooievaar en Kraanvogel · kleur en geluid',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp170', source: 'ooievaar', photoMissing: true, marks: 'Meestal witte hals en romp met donkere slagpennen. Kenmerkend is snavelklepperen bij het nest.'},
+      {id: 'sp142', source: 'kraanvogel', photoMissing: true, marks: 'Overwegend grijs, met bij volwassen vogels een opvallend getekende kop en hals. Een luid trompetgeluid kan ook in vlucht helpen.'},
+    ],
+    tip: 'Beide vliegen met gestrekte hals. Gebruik het kleurpatroon en, als de vogel roept, het geluid.',
   },
   {
     label: 'Sperwer, Havik en Torenvalk · in vlucht',
