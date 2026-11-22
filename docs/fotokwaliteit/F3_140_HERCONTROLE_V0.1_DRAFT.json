@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 20,
+    "nextNotStarted": 17,
     "secondBatchStarted": 3,
-    "contentInspected": 120,
+    "contentInspected": 123,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -94,7 +94,8 @@
     "thirtySeventhBatchStarted": 3,
     "thirtyEighthBatchStarted": 3,
     "thirtyNinthBatchStarted": 3,
-    "fortiethBatchStarted": 3
+    "fortiethBatchStarted": 3,
+    "fortyFirstBatchStarted": 3
   },
   "records": [
     {
@@ -12671,43 +12672,61 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (in vlucht)",
+            "path": "/assets/species/plumage/sp167-adult.webp",
+            "oldRights": "NOT TESTED"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R41",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (individuele primaire originelen gedownload en tegen de gidsbeelden getoetst).",
+          "photoIndividualRights": "PARTIALLY TESTED (primaire maker, licentievermelding en geregistreerde bewerking gecontroleerd. Onafhankelijke rechtenaftekening open).",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vrije vlucht met prooi. De enige bestaande hoofdfoto heeft ook een vluchtrol. De prooi bedekt de gele snavelpunt. Geslacht, juveniel- en winterbeeld open.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-085 houdt wederkerige tekst beschikbaar. Een Visdief in rust vormt geen paar met de Grote Stern in vlucht, en het prooibeeld toont de snavelpunt niet.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in brondossier. Browserlog op exacte kandidaat staat in de concept-PR.",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronmetadata en feitelijke inventaris gecontroleerd. Browserlog in PR).",
+          "audioRecordingsAuthenticity": "BLOCKED (geen geregistreerde gidsclip).",
+          "audioLicenseAndAttribution": "BLOCKED (geen bronclip geselecteerd).",
+          "soundRolesSongCall": "BLOCKED (geen geregistreerde gidsclip).",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (geen clip. Afwezigheid wordt in de browserproef gecontroleerd).",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (directe Vogelbescherming-soortbeschrijvingen gelezen. ANWB-soortpassages open).",
+          "biometryAndKnowledge": "PARTIALLY TESTED (36–46 cm en 86–105 cm komen overeen met Vogelbescherming. Tweede cijferbron en gewicht open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (directe Sovon-soortpagina en gedateerde meetreeks gelezen. Geen nieuwe verspreidingsclaim).",
+          "ebirdDistributionAndBias": "NOT TESTED (waarnemingsinspanning en regionale bias open).",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (toestel- en herstelproef open).",
+          "endToEndGuideUI": "NOT TESTED in brondossier. Browser- en offline-job staan in de concept-PR.",
+          "independentSecondReview": "NOT TESTED (vak-, luister- en rechtenaftekening). Technische QA staat in de PR.",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-085 houdt wederkerige tekst beschikbaar. Een Visdief in rust vormt geen paar met de Grote Stern in vlucht, en het prooibeeld toont de snavelpunt niet.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Het register meldde nul fotoslots. De app gebruikt één bestaande vluchtfoto als hoofdfoto.",
+          "Zwarte snavel met gele punt, zwarte poten en kuif zijn bruikbaar bij beter zicht. Geen geregistreerde gidsclip."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "F3_R41_GROTE_STERN_OOIEVAAR_BRUINE_KIEKENDIEF_2026-11-22_DRAFT.md",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-stern",
+          "https://stats.sovon.nl/stats/soort/6110",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/visdief",
+          "https://natura2000.vlaanderen.be/soort/grote-stern",
+          "https://commons.wikimedia.org/wiki/File:Sandwich_TernSterna_sandvicensis.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED op R41-kandidaat",
+        "independence": "NOT VERIFIED (onafhankelijke soort-, luister- en rechtenaftekening open)",
+        "fullPass": false,
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "5db0a9b891e0c7a5f4fb4039f4668532af5d95b7"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -12723,43 +12742,62 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (in vlucht)",
+            "path": "/assets/species/sp170.webp",
+            "oldRights": "NOT TESTED"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R41",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (individuele primaire originelen gedownload en tegen de gidsbeelden getoetst).",
+          "photoIndividualRights": "PARTIALLY TESTED (primaire maker, licentievermelding en geregistreerde bewerking gecontroleerd. Onafhankelijke rechtenaftekening open).",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Echte vlucht met witte hals, donkere slagpennen en rode snavel. Geen geslachtslabel. Juvenielenfoto ontbreekt.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-086 en LK-087 tonen wederkerige tekst. Passende lokale partnerfoto ontbreekt voor Zwarte Ooievaar en Kraanvogel.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in brondossier. Browserlog op exacte kandidaat staat in de concept-PR.",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronmetadata en feitelijke inventaris gecontroleerd. Browserlog in PR).",
+          "audioRecordingsAuthenticity": "BLOCKED (geen geregistreerde gidsclip).",
+          "audioLicenseAndAttribution": "BLOCKED (geen bronclip geselecteerd).",
+          "soundRolesSongCall": "BLOCKED (geen geregistreerde gidsclip).",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (geen clip. Afwezigheid wordt in de browserproef gecontroleerd).",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (directe Vogelbescherming-soortbeschrijvingen gelezen. ANWB-soortpassages open).",
+          "biometryAndKnowledge": "PARTIALLY TESTED (100–115 cm en 180–218 cm komen overeen met Vogelbescherming. Tweede cijferbron en gewicht open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (directe Sovon-soortpagina en gedateerde meetreeks gelezen. Geen nieuwe verspreidingsclaim).",
+          "ebirdDistributionAndBias": "NOT TESTED (waarnemingsinspanning en regionale bias open).",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (toestel- en herstelproef open).",
+          "endToEndGuideUI": "NOT TESTED in brondossier. Browser- en offline-job staan in de concept-PR.",
+          "independentSecondReview": "NOT TESTED (vak-, luister- en rechtenaftekening). Technische QA staat in de PR.",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-086 en LK-087 tonen wederkerige tekst. Passende lokale partnerfoto ontbreekt voor Zwarte Ooievaar en Kraanvogel.)"
         },
         "findings": [
-          "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Het register meldde nul fotoslots. De app gebruikt één bestaande Ooievaar in vlucht als hoofdfoto.",
+          "Hals en romp helpen tegen Zwarte Ooievaar en Kraanvogel. Bij een jonge Ooievaar is de snavel valer.",
+          "Vogelbescherming beschrijft snavelklepperen bij het nest. Geen geregistreerde gidsclip."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "F3_R41_GROTE_STERN_OOIEVAAR_BRUINE_KIEKENDIEF_2026-11-22_DRAFT.md",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ooievaar",
+          "https://stats.sovon.nl/stats/soort/1340",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-ooievaar",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kraanvogel",
+          "https://commons.wikimedia.org/wiki/File:Ciconia_ciconia_-_01.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED op R41-kandidaat",
+        "independence": "NOT VERIFIED (onafhankelijke soort-, luister- en rechtenaftekening open)",
+        "fullPass": false,
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "bbb1dd057774793427243756fd2489783f2b2895"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -12813,39 +12851,65 @@
         ]
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R41",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "VERIFIED (individuele primaire originelen gedownload en tegen de gidsbeelden getoetst).",
+          "photoIndividualRights": "PARTIALLY TESTED (primaire maker, licentievermelding en geregistreerde bewerking gecontroleerd. Onafhankelijke rechtenaftekening open).",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Vliegend mannetje als hoofdfoto, vrouwtje in rust en vlucht. iNaturalist 134634395 bevestigt Juvenile. De jonge vogel strijkt neer en blijft uit vrije vlucht. Mannetje in rust ontbreekt.)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-088 en LK-089 behouden de bestaande adulte vliegparen. LK-090 houdt landing en vrije vlucht uit één juvenielenfotopaar. Beide kaarten tonen de juvenielenwaarschuwing bij het vrouwtjespaar.)",
+          "responsiveLayoutAndZoom": "NOT TESTED in brondossier. Browserlog op exacte kandidaat staat in de concept-PR.",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (bronmetadata en feitelijke inventaris gecontroleerd. Browserlog in PR).",
+          "audioRecordingsAuthenticity": "PARTIALLY TESTED (OGG/MP3-golfvormmatch 0,998738. Onafhankelijke stemherkenning open).",
+          "audioLicenseAndAttribution": "PARTIALLY TESTED (Sternanita2, Commons CC BY-SA 4.0, conversie naar mono-MP3. Rechtenaftekening open).",
+          "soundRolesSongCall": "PARTIALLY TESTED (maker noemt roep. Leeftijd, geslacht en gedrag onbekend).",
+          "offlinePlayerAndSoundFiles": "PARTIALLY TESTED (MP3 gedecodeerd. Gerichte browserproef in PR).",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (directe Vogelbescherming-soortbeschrijvingen gelezen. ANWB-soortpassages open).",
+          "biometryAndKnowledge": "PARTIALLY TESTED (Behoud de bestaande benaderde appbanden. RSPB vermeldt 48–56 cm en 115–130 cm. Reconciliatie van bronbanden en seksegewicht open.)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (directe Sovon-soortpagina en gedateerde meetreeks gelezen. Geen nieuwe verspreidingsclaim).",
+          "ebirdDistributionAndBias": "NOT TESTED (waarnemingsinspanning en regionale bias open).",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (toestel- en herstelproef open).",
+          "endToEndGuideUI": "NOT TESTED in brondossier. Browser- en offline-job staan in de concept-PR.",
+          "independentSecondReview": "NOT TESTED (vak-, luister- en rechtenaftekening). Technische QA staat in de PR.",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-088 en LK-089 behouden de bestaande adulte vliegparen. LK-090 houdt landing en vrije vlucht uit één juvenielenfotopaar. Beide kaarten tonen de juvenielenwaarschuwing bij het vrouwtjespaar.)"
         },
         "findings": [
-          "Mannetje zittend",
-          "Juveniel in vrije vlucht",
-          "Hoofdfoto is een vluchtfoto (open eigenaarsbesluit over hoofdfoto's die vluchtfoto zijn)."
+          "Zes onderscheiden gidsfoto’s. Alle primaire foto-opnamen en credits gecontroleerd.",
+          "Foto 229518401 hoort bij research-grade waarneming 134634395 met Life Stage Juvenile. Neerstrijkend, buiten vrije vlucht.",
+          "Een lichte kruin alleen bepaalt leeftijd niet. Let ook op stuit en bandering bij Blauwe Kiekendief.",
+          "Bestaande roep en primair OGG-bestand hebben 92.783 gedecodeerde PCM-samples op 8 kHz en correlatie 0,998738 bij nul vertraging. Veldstem, context en rechten blijven apart open."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "F3_R41_GROTE_STERN_OOIEVAAR_BRUINE_KIEKENDIEF_2026-11-22_DRAFT.md",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/bruine-kiekendief",
+          "https://stats.sovon.nl/stats/soort/2600",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/blauwe-kiekendief",
+          "https://www.rspb.org.uk/birds-and-wildlife/marsh-harrier",
+          "https://www.inaturalist.org/observations/134634395",
+          "https://commons.wikimedia.org/wiki/File:Call_circus_aeruginosus.ogg",
+          "https://api.inaturalist.org/v1/controlled_terms",
+          "https://commons.wikimedia.org/wiki/File%3AM%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg",
+          "https://commons.wikimedia.org/wiki/File:2017.07.19.-05-Grosser_Glubigsee-Wendisch_Rietz--Rohrweihe-Weibchen.jpg",
+          "https://www.inaturalist.org/photos/229518401",
+          "https://commons.wikimedia.org/wiki/File%3AMarsh_harrier_%28Circus_aeruginosus%29_male_in_flight_Norfolk.jpg",
+          "https://commons.wikimedia.org/wiki/File:Circus_aeruginosus_female_Oulu_Finland_2021-04-21.jpg",
+          "https://commons.wikimedia.org/wiki/File:An_Eurasian_Marsh_Harrier_-_Adult_Male_in_flight_(50572292483).jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED op R41-kandidaat",
+        "independence": "NOT VERIFIED (onafhankelijke soort-, luister- en rechtenaftekening open)",
+        "fullPass": false,
+        "photoFilesInspected": 6,
+        "photoBlobSHAs": [
+          "f07971243033b3bba22f18b68d593f7904191301",
+          "47d59104090f4c76922565c805fdd7c325c6fe3c",
+          "2c3fa4b2b6e2ee5207fcefd2ca47c9e811cb7eb5",
+          "b44cf842a2fe256b5730d11ef5fcdba4667114cd",
+          "17ea26f8ca273dcd5402ff688ebeda6e25a4f16d",
+          "68545c91a628e175c2e1d5b8b3b8a1d9ad3c3972"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
