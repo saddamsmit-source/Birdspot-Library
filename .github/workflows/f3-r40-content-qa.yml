@@ -1,0 +1,55 @@
+name: Birdspot F3-R40 media roles and reciprocal species QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r39-zwarte-groenpoot-bosruiter-20261122-gpt6
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: birdspot-f3-r40-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  r40-content-and-regressions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: F3, six photos, missing audio, tern text and old comparison gates
+        run: |
+          node tests/test_f3_140_unified_rebaseline.mjs
+          node tests/test_lookalike_r40.mjs
+          node tests/test_lookalike_r39.mjs
+          node tests/test_lookalike_r38.mjs
+          node tests/test_lookalike_r37.mjs
+          node tests/test_lookalike_r36.mjs
+          node tests/test_lookalike_r35.mjs
+          node tests/test_lookalike_r09.mjs
+          node tests/test_audio_140_contract.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+          node tests/test_guide_poses.mjs
+          node tests/test_guide_photo_verification.mjs
+          node tests/test_kennisbaseline.mjs
+  r40-chromium-offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright and Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Mobile photo, text/pair, credits, zoom and offline recovery
+        run: python -u tests/test_lookalike_r40_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: birdspot-f3-r40-chromium
+          path: tests/screenshots/lookalike_r40/*.png
+          if-no-files-found: ignore

@@ -17,8 +17,9 @@ const focus=['sp157','sp158','sp159'];
 const rows=f3.records.filter(row=>row.F3.recheckBatch==='F3-R39');
 assert.deepEqual(rows.map(x=>x.id),focus,'R39 species order must not drift');
 assert.equal(f3.records.length,140);
-assert.equal(f3.counts.contentInspected,117);
-assert.equal(f3.counts.nextNotStarted,23);
+assert.equal(f3.counts.contentInspected,f3.records.filter(x=>x.F3.reviewedThisRound).length);
+assert.ok(f3.counts.contentInspected>=117,'R39 progress cannot regress');
+assert.equal(f3.counts.nextNotStarted,f3.records.filter(x=>x.F3.status==='NOT STARTED').length);
 assert.equal(f3.counts.thirtyNinthBatchStarted,3);
 assert.equal(f3.counts.F3FullPass,0);
 

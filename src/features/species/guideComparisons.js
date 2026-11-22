@@ -1348,9 +1348,12 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Visdief en Noordse Stern · broedkleed',
+    // Only a flying Arctic Tern image is registered; a resting Common Tern and a flying
+    // Arctic Tern cannot form an age/posture-matched photo comparison.
+    reciprocalText: true,
     birds: [
-      {id: 'sp165', source: 'visdief', plumage: 'breeding', marks: 'Langere oranjerode snavel, meestal met zwarte punt. In zit langere poten. In vlucht vaak een donkere wig op de buitenste handpennen.'},
-      {id: 'sp166', source: 'noordse-stern', plumage: 'breeding', marks: 'Kortere, doorgaans geheel bloedrode snavel en zeer korte poten. In vlucht bij goed licht meer doorschijnende handpennen.'},
+      {id: 'sp165', source: 'visdief', plumage: 'breeding', photoMissing: true, marks: 'Langere oranjerode snavel, meestal met zwarte punt. In zit langere poten. In vlucht vaak een donkere wig op de buitenste handpennen.'},
+      {id: 'sp166', source: 'noordse-stern', plumage: 'breeding', photoMissing: true, marks: 'Kortere, doorgaans geheel bloedrode snavel en zeer korte poten. In vlucht bij goed licht meer doorschijnende handpennen.'},
     ],
     tip: 'Gebruik snavel en poten in zit. Bekijk in vlucht de handpennen. De lichtval bepaalt hoeveel doorschijnendheid je ziet.',
   },
