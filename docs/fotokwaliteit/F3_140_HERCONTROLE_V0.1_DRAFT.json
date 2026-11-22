@@ -53,9 +53,9 @@
     "audioMissing": 75,
     "firstBatchStarted": 3,
     "F3FullPass": 0,
-    "nextNotStarted": 23,
+    "nextNotStarted": 20,
     "secondBatchStarted": 3,
-    "contentInspected": 117,
+    "contentInspected": 120,
     "contentComplete": 0,
     "thirdBatchStarted": 3,
     "fourthBatchStarted": 3,
@@ -93,7 +93,8 @@
     "thirtySixthBatchStarted": 3,
     "thirtySeventhBatchStarted": 3,
     "thirtyEighthBatchStarted": 3,
-    "thirtyNinthBatchStarted": 3
+    "thirtyNinthBatchStarted": 3,
+    "fortiethBatchStarted": 3
   },
   "records": [
     {
@@ -12427,43 +12428,72 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (volwassen, sekseneutraal)",
+            "path": "/assets/species/plumage/sp164-adult.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; oorspronkelijke rechten nog open)"
+          },
+          {
+            "role": "In vlucht (volwassen, sekseneutraal)",
+            "path": "/assets/species/plumage/sp164-flight.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; oorspronkelijke rechten nog open)"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R40",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (2 lokale WebP-bestanden individueel bekeken; oorspronkelijke bronpixels, soortdeterminatie en onafhankelijk visueel expert-oordeel open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele bron-URL's, makers en CC-registraties geïnspecteerd; één Commons-pagina primair herlezen, overige originelen/afgeleide rechten NIET volledig bevestigd)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Twee bestaande lokale foto's direct bekeken: forse volwassen Grote Mantelmeeuw in rust met roze poten en zeer donkere mantel; werkelijke vrije vlucht. Geen afzonderlijk juvenielen-/winterbeeld en geen bewezen geslachtsrol. App 61–74 cm / 144–166 cm versus Vogelbescherming 68–79 cm / 152–167 cm; brondefinitie/twee-uitgeversberekening OPEN. Geen nieuwe zelfstandige geslachts- of leeftijdsaftekening)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-084 bestaand volwassenen-fotopaar Grote en Kleine Mantelmeeuw, lokale rustfoto's beide bekeken en gele versus roze poten zichtbaar; originele beelden/rechten nog niet onafhankelijk gematcht.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R40 Chromium online/offline en fysiek Android worden apart geverifieerd)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (maker/licentie en bewerkingen in manifest; foto-info en afwezigheid van geluid in actuele R40-browser nog te toetsen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen geregistreerd lokaal gidsaudiofragment voor deze soort; geen geluidsdeterminatie)",
+          "audioLicenseAndAttribution": "BLOCKED (geen gidsaudiofragment en geen originele bron-/licentietoets)",
+          "soundRolesSongCall": "NOT TESTED (geen lokale zang/roep)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen gidsaudio; R40 browser moet correcte afwezigheid en fotocache aantonen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming direct gelezen; concrete ANWB-soortpassage niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (maatwaarden in soortdata vergeleken met Vogelbescherming; berekening uit twee onafhankelijk vergelijkbare uitgevers en meetdefinitie open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (NL-verspreiding en actuele kwalitatieve broed-/trekcontext gelezen; volledige Sovon-jaardata/herijking open)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen eBird Nederland-waarneming, seizoencorrectie of meldingsbias geverifieerd)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (persoonlijke gidsfoto/feedback en tweede-profiel ZIP-herstel niet op R40 SHA bewezen)",
+          "endToEndGuideUI": "NOT TESTED (de interactieve R40-detailroute vereist eigen Chromium-/toestelbewijs)",
+          "independentSecondReview": "NOT TESTED (eigen directe foto-inspectie is niet onafhankelijk tweede vak-/licentieadvies)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-084 bestaand volwassenen-fotopaar Grote en Kleine Mantelmeeuw, lokale rustfoto's beide bekeken en gele versus roze poten zichtbaar; originele beelden/rechten nog niet onafhankelijk gematcht.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Twee bestaande lokale foto's direct bekeken: forse volwassen Grote Mantelmeeuw in rust met roze poten en zeer donkere mantel; werkelijke vrije vlucht. Geen afzonderlijk juvenielen-/winterbeeld en geen bewezen geslachtsrol. App 61–74 cm / 144–166 cm versus Vogelbescherming 68–79 cm / 152–167 cm; brondefinitie/twee-uitgeversberekening OPEN.",
+          "LK-084 bestaand volwassenen-fotopaar Grote en Kleine Mantelmeeuw, lokale rustfoto's beide bekeken en gele versus roze poten zichtbaar; originele beelden/rechten nog niet onafhankelijk gematcht.",
+          "Geen lokale audio: niet verzinnen. De getoonde maker/licentie is historische metadata en geen nieuwe publicatierechten-PASS."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R40_GROTE_MANTELMEEUW_VISDIEF_NOORDSE_STERN_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-mantelmeeuw",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-mantelmeeuw",
+          "https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_2026_02.jpg",
+          "https://commons.wikimedia.org/wiki/File:Great_black-backed_gull_(Larus_marinus)_in_flight_Moher.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R40 SHA",
+        "independence": "NOT VERIFIED (onafhankelijke vogel-/rechtenreview en precieze mediarechten open)",
+        "fullPass": false,
+        "photoFilesInspected": 2,
+        "photoBlobSHAs": [
+          "2eff0d271f0f5e86c3dda174966c593c9e4eb41c",
+          "6b10e543af169a18ac8c19bf5ec5c0e5648b1ee5"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -12481,57 +12511,77 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto",
+            "role": "Hoofdfoto (broedkleed, in rust)",
             "path": "/assets/species/plumage/sp165-adult.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (historische auditstatus, GEEN nieuwe F3-rechtenvrijgave)"
           },
           {
-            "role": "Verenkleed (Juveniel)",
+            "role": "Juveniel (historische bronannotatie)",
             "path": "/assets/species/plumage/sp165-juv.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (historische auditstatus, GEEN nieuwe F3-rechtenvrijgave)"
           },
           {
-            "role": "In vlucht",
+            "role": "In vlucht (broedkleed)",
             "path": "/assets/species/plumage/sp165-flight.webp",
-            "oldRights": "VERIFIED"
+            "oldRights": "VERIFIED (historische auditstatus, GEEN nieuwe F3-rechtenvrijgave)"
           }
         ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R40",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (3 lokale WebP-bestanden individueel bekeken; oorspronkelijke bronpixels, soortdeterminatie en onafhankelijk visueel expert-oordeel open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele bron-URL's, makers en CC-registraties geïnspecteerd; één Commons-pagina primair herlezen, overige originelen/afgeleide rechten NIET volledig bevestigd)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Drie bestaande lokale foto's direct bekeken: broedrust met zwarte kap, rode snavel en poten; een historisch als Juvenile geannoteerde vogel op paal; vrije vlucht met donkere handpennen. Geen afzonderlijke winterfoto en exacte leeftijd/geslacht open. Eén primaire Commons CC BY-SA 4.0-licentie/Charles J. Sharp is herlezen, originele pixels niet gematcht. Geen nieuwe zelfstandige geslachts- of leeftijdsaftekening)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-083 met Noordse Stern is wederzijdse herkenningstekst; geen betrouwbare gelijkwaardige rustfoto van Noordse Stern, daarom MISSING_VERIFIED_PAIR. Visdief–Grote Stern vergelijkt snavelkleur maar bronbeeld/rol nog opnieuw aftekenen.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R40 Chromium online/offline en fysiek Android worden apart geverifieerd)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (maker/licentie en bewerkingen in manifest; foto-info en afwezigheid van geluid in actuele R40-browser nog te toetsen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen geregistreerd lokaal gidsaudiofragment voor deze soort; geen geluidsdeterminatie)",
+          "audioLicenseAndAttribution": "BLOCKED (geen gidsaudiofragment en geen originele bron-/licentietoets)",
+          "soundRolesSongCall": "NOT TESTED (geen lokale zang/roep)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen gidsaudio; R40 browser moet correcte afwezigheid en fotocache aantonen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming direct gelezen; concrete ANWB-soortpassage niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (maatwaarden in soortdata vergeleken met Vogelbescherming; berekening uit twee onafhankelijk vergelijkbare uitgevers en meetdefinitie open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (NL-verspreiding en actuele kwalitatieve broed-/trekcontext gelezen; volledige Sovon-jaardata/herijking open)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen eBird Nederland-waarneming, seizoencorrectie of meldingsbias geverifieerd)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (persoonlijke gidsfoto/feedback en tweede-profiel ZIP-herstel niet op R40 SHA bewezen)",
+          "endToEndGuideUI": "NOT TESTED (de interactieve R40-detailroute vereist eigen Chromium-/toestelbewijs)",
+          "independentSecondReview": "NOT TESTED (eigen directe foto-inspectie is niet onafhankelijk tweede vak-/licentieadvies)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-083 met Noordse Stern is wederzijdse herkenningstekst; geen betrouwbare gelijkwaardige rustfoto van Noordse Stern, daarom MISSING_VERIFIED_PAIR. Visdief–Grote Stern vergelijkt snavelkleur maar bronbeeld/rol nog opnieuw aftekenen.)"
         },
         "findings": [
           "Vogelbescherming en WWT geven verschillende maten. De Nederlandse waarden blijven staan en de afwijking is vermeld.",
-          "Geen lokaal geregistreerde zang of roep"
+          "Geen lokaal geregistreerde zang of roep",
+          "Drie bestaande lokale foto's direct bekeken: broedrust met zwarte kap, rode snavel en poten; een historisch als Juvenile geannoteerde vogel op paal; vrije vlucht met donkere handpennen. Geen afzonderlijke winterfoto en exacte leeftijd/geslacht open. Eén primaire Commons CC BY-SA 4.0-licentie/Charles J. Sharp is herlezen, originele pixels niet gematcht.",
+          "LK-083 met Noordse Stern is wederzijdse herkenningstekst; geen betrouwbare gelijkwaardige rustfoto van Noordse Stern, daarom MISSING_VERIFIED_PAIR. Visdief–Grote Stern vergelijkt snavelkleur maar bronbeeld/rol nog opnieuw aftekenen.",
+          "Geen lokale audio: niet verzinnen. De getoonde maker/licentie is historische metadata en geen nieuwe publicatierechten-PASS."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R40_GROTE_MANTELMEEUW_VISDIEF_NOORDSE_STERN_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/visdief",
+          "https://www.vogelbescherming.nl/actueel/bericht/verschillen-tussen-de-noordse-dief",
+          "https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo).jpg",
+          "https://www.inaturalist.org/photos/731112915",
+          "https://commons.wikimedia.org/wiki/File:Common_tern_(Sterna_hirundo)_in_flight_Ramsviklandet_2.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R40 SHA",
+        "independence": "NOT VERIFIED (onafhankelijke vogel-/rechtenreview en precieze mediarechten open)",
+        "fullPass": false,
+        "photoFilesInspected": 3,
+        "photoBlobSHAs": [
+          "2d4a787a6ff55eb4b8e026d1474458b69b26bdab",
+          "7c83e4e77c68990f226da2490bc06f517821d84e",
+          "a744945e78faac38e19de74100dba732ce8a416e"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
@@ -12547,43 +12597,65 @@
         "oldClaimsKeptNotReapproved": true
       },
       "currentAssets": {
-        "imageSlots": [],
+        "imageSlots": [
+          {
+            "role": "Hoofdfoto (broedkleed en in vlucht, slechts één fysieke foto)",
+            "path": "/assets/species/plumage/sp166-adult.webp",
+            "oldRights": "NOT TESTED (historische negenpuntsaudit; oorspronkelijke rechten nog open)"
+          }
+        ],
         "existingAudioCount": 0,
         "existingAudioPaths": []
       },
       "F3": {
-        "status": "NOT STARTED",
-        "reviewedThisRound": false,
-        "recheckBatch": null,
+        "status": "IN CONTENT REVIEW / OPEN POINTS",
+        "reviewedThisRound": true,
+        "recheckBatch": "F3-R40",
         "checks": {
-          "photoOriginalIdentity": "NOT TESTED (F3)",
-          "photoIndividualRights": "NOT TESTED (F3)",
-          "plumageAndTrueFlight": "NOT TESTED (F3)",
-          "photoPairComparisons": "NOT TESTED (F3)",
-          "responsiveLayoutAndZoom": "NOT TESTED (F3)",
-          "creditsAndCleanAudioUI": "NOT TESTED (F3)",
-          "audioRecordingsAuthenticity": "NOT TESTED (F3)",
-          "audioLicenseAndAttribution": "NOT TESTED (F3)",
-          "soundRolesSongCall": "NOT TESTED (F3)",
-          "offlinePlayerAndSoundFiles": "NOT TESTED (F3)",
-          "vogelbeschermingAndANWB": "NOT TESTED (F3)",
-          "biometryAndKnowledge": "NOT TESTED (F3)",
-          "sovonNetherlandsStatus": "NOT TESTED (F3)",
-          "ebirdDistributionAndBias": "NOT TESTED (F3)",
-          "personalPhotoFeedbackAndRestore": "NOT TESTED (F3)",
-          "endToEndGuideUI": "NOT TESTED (F3)",
-          "independentSecondReview": "NOT TESTED (F3)",
-          "lookalikePhotoAndText": "NOT TESTED (new v1.7 owner contract; evaluate with verified photos and text when this species is inspected)"
+          "photoOriginalIdentity": "PARTIALLY TESTED (1 lokale WebP-bestanden individueel bekeken; oorspronkelijke bronpixels, soortdeterminatie en onafhankelijk visueel expert-oordeel open)",
+          "photoIndividualRights": "PARTIALLY TESTED (individuele bron-URL's, makers en CC-registraties geïnspecteerd; één Commons-pagina primair herlezen, overige originelen/afgeleide rechten NIET volledig bevestigd)",
+          "plumageAndTrueFlight": "PARTIALLY TESTED (Eén bestaande lokale foto werkelijk bekeken: Noordse Stern in vrije vlucht met visje, korte rode snavel, lange staartpennen en doorschijnende handpennen. Het bestand dient tegelijk als hoofdfoto, broedkleed en vlucht; niet twee verschillende foto's. Geen aparte rust-/winter-/juvenielenfoto, geslacht onbekend. Geen nieuwe zelfstandige geslachts- of leeftijdsaftekening)",
+          "photoPairComparisons": "PARTIALLY TESTED (LK-083 wederzijdse tekstvergelijking met Visdief, photoMissing voor beide; de ontbrekende gelijkwaardige foto blijft expliciet open.)",
+          "responsiveLayoutAndZoom": "NOT TESTED (R40 Chromium online/offline en fysiek Android worden apart geverifieerd)",
+          "creditsAndCleanAudioUI": "PARTIALLY TESTED (maker/licentie en bewerkingen in manifest; foto-info en afwezigheid van geluid in actuele R40-browser nog te toetsen)",
+          "audioRecordingsAuthenticity": "BLOCKED (geen geregistreerd lokaal gidsaudiofragment voor deze soort; geen geluidsdeterminatie)",
+          "audioLicenseAndAttribution": "BLOCKED (geen gidsaudiofragment en geen originele bron-/licentietoets)",
+          "soundRolesSongCall": "NOT TESTED (geen lokale zang/roep)",
+          "offlinePlayerAndSoundFiles": "NOT TESTED (geen gidsaudio; R40 browser moet correcte afwezigheid en fotocache aantonen)",
+          "vogelbeschermingAndANWB": "PARTIALLY TESTED (Vogelbescherming direct gelezen; concrete ANWB-soortpassage niet ingezien)",
+          "biometryAndKnowledge": "PARTIALLY TESTED (maatwaarden in soortdata vergeleken met Vogelbescherming; berekening uit twee onafhankelijk vergelijkbare uitgevers en meetdefinitie open)",
+          "sovonNetherlandsStatus": "PARTIALLY TESTED (NL-verspreiding en actuele kwalitatieve broed-/trekcontext gelezen; volledige Sovon-jaardata/herijking open)",
+          "ebirdDistributionAndBias": "NOT TESTED (geen eBird Nederland-waarneming, seizoencorrectie of meldingsbias geverifieerd)",
+          "personalPhotoFeedbackAndRestore": "NOT TESTED (persoonlijke gidsfoto/feedback en tweede-profiel ZIP-herstel niet op R40 SHA bewezen)",
+          "endToEndGuideUI": "NOT TESTED (de interactieve R40-detailroute vereist eigen Chromium-/toestelbewijs)",
+          "independentSecondReview": "NOT TESTED (eigen directe foto-inspectie is niet onafhankelijk tweede vak-/licentieadvies)",
+          "lookalikePhotoAndText": "PARTIALLY TESTED (LK-083 wederzijdse tekstvergelijking met Visdief, photoMissing voor beide; de ontbrekende gelijkwaardige foto blijft expliciet open.)"
         },
         "findings": [
           "Geen lokaal geregistreerde zang of roep",
-          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim"
+          "Oude 9-punts-audit was NOT TESTED; nieuw F3 start zonder auditclaim",
+          "Eén bestaande lokale foto werkelijk bekeken: Noordse Stern in vrije vlucht met visje, korte rode snavel, lange staartpennen en doorschijnende handpennen. Het bestand dient tegelijk als hoofdfoto, broedkleed en vlucht; niet twee verschillende foto's. Geen aparte rust-/winter-/juvenielenfoto, geslacht onbekend.",
+          "LK-083 wederzijdse tekstvergelijking met Visdief, photoMissing voor beide; de ontbrekende gelijkwaardige foto blijft expliciet open.",
+          "Geen lokale audio: niet verzinnen. De getoonde maker/licentie is historische metadata en geen nieuwe publicatierechten-PASS."
         ],
-        "sourceReferences": [],
+        "sourceReferences": [
+          "docs/fotokwaliteit/F3_R40_GROTE_MANTELMEEUW_VISDIEF_NOORDSE_STERN_2026-11-22_DRAFT.md",
+          "assets/species/field-guide-media.json",
+          "src/features/species/guidePhotos.js",
+          "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+          "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/noordse-stern",
+          "https://www.vogelbescherming.nl/actueel/bericht/verschillen-tussen-de-noordse-dief",
+          "https://commons.wikimedia.org/wiki/File:Arctic_tern_(Sterna_paradisaea)_with_eel_Blonduos.jpg"
+        ],
         "reviewedOriginalAudio": 0,
-        "showcasePreview": "NOT TESTED ON F3",
-        "independence": "NOT VERIFIED",
-        "fullPass": false
+        "showcasePreview": "NOT TESTED on R40 SHA",
+        "independence": "NOT VERIFIED (onafhankelijke vogel-/rechtenreview en precieze mediarechten open)",
+        "fullPass": false,
+        "photoFilesInspected": 1,
+        "photoBlobSHAs": [
+          "f73cece92fb2d0d36f33753c5994e9f6e609d471"
+        ],
+        "contentStatus": "PARTIALLY REVIEWED (not FULL PASS)"
       }
     },
     {
