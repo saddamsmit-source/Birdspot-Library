@@ -1,0 +1,57 @@
+name: Birdspot F3-R42 field photo and source ceilings QA
+on:
+  pull_request:
+    branches:
+      - qa/birdspot-f3-r41-grote-stern-ooievaar-bruine-kiekendief-20261122-codex
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: birdspot-f3-r42-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  r42-data-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Strict 140-row register, owner decisions, ten true photos and regression gates
+        run: |
+          node tests/test_f3_140_unified_rebaseline.mjs
+          node tests/test_lookalike_r42.mjs
+          node tests/test_lookalike_r41.mjs
+          node tests/test_lookalike_r40.mjs
+          node tests/test_lookalike_r39.mjs
+          node tests/test_lookalike_r38.mjs
+          node tests/test_lookalike_r37.mjs
+          node tests/test_lookalike_r36.mjs
+          node tests/test_lookalike_r35.mjs
+          node tests/test_lookalike_r09.mjs
+          node tests/test_audio_140_contract.mjs
+          node tests/test_audio_evidence_ceiling.mjs
+          node tests/test_guide_poses.mjs
+          node tests/test_guide_photo_verification.mjs
+          node tests/test_kennisbaseline.mjs
+  r42-browser-offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 23
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright and Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: R42 320/360/390, decoded photographs, comparisons, offline and no phantom audio
+        run: python -u tests/test_lookalike_r42_browser.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: birdspot-f3-r42-photos
+          path: tests/screenshots/lookalike_r42/*.png
+          if-no-files-found: ignore
