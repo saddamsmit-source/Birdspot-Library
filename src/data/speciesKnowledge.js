@@ -5989,6 +5989,10 @@ const DATA = {
      ]
     }
    ],
+   "quickPrimary": [
+    0,
+    1
+   ],
    "caution": {
     "text": "Een bruine kop en gebandeerde staart wijzen niet automatisch op een vrouwtje; het kleed van jonge vogels is in de geraadpleegde bron niet beschreven.",
     "sources": [
@@ -8301,6 +8305,10 @@ const DATA = {
      ]
     }
    ],
+   "quickPrimary": [
+    1,
+    2
+   ],
    "caution": {
     "text": "Vleugels kunnen in verschillende vluchtfasen smaller lijken. Combineer staartlengte en vleugelbasis met borstbouw en koptekening.",
     "sources": [
@@ -8522,6 +8530,10 @@ const DATA = {
       "VB_GBS_MBS"
      ]
     }
+   ],
+   "quickPrimary": [
+    0,
+    1
    ],
    "caution": {
     "text": "Een jonge Grote Bonte Specht met rood petje lijkt op Middelste Bonte Specht; let op het koppatroon.",
