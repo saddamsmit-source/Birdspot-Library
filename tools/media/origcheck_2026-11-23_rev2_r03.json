@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-23",
+  "purpose": "F3-REV2-R03: alle getoonde foto's en Commons-audio van Torenvalk, Slechtvalk, Grote Bonte Specht tegen origineel, auteur, licentie, SHA-1 en herkomstcontext; iNaturalist-licentie via API",
+  "items": [
+    {
+      "speciesId": "sp008",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "role": "credits/hero",
+      "image": "/assets/species/sp008.webp",
+      "title": "File:Common kestrel on a tree in Kraków, 20250412 1052 3641.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_PLUMAGE:adult_f:None",
+      "image": "/assets/species/plumage/sp008-adult_f.webp",
+      "title": "File:Common kestrel female France.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "author": "caroline legg",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_PLUMAGE:juv:None",
+      "image": "/assets/species/plumage/sp008-juv.webp",
+      "title": "File:Kestrel - Falco tinnunculus - Juvenile.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "author": "Rolf Dietrich Brecher",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_POSES:1:In vlucht · biddend",
+      "image": "/assets/species/plumage/sp008-flight.webp",
+      "title": "File:Falco tinnunculus in flight (45067938032).jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "author": "Zeynel Cebeci",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_POSES:2:Mannetje in vlucht",
+      "image": "/assets/species/plumage/sp008-male-flight.webp",
+      "title": "File:Falco tinnunculus - Common kestrel 20.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "author": "Marie-Lan Taÿ Pamart",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:3:Mannetje",
+      "image": "/assets/species/plumage/sp008-hero-male.webp",
+      "title": "File:Falco tinnunculus WE Faucons LPO 20260621 n06.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "author": "Javier Herrera",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Roep · man en vrouw",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp008-pair.mp3",
+      "title": "File:Falco tinnunculus - Common Kestrel XC463430.mp3"
+    },
+    {
+      "speciesId": "sp008",
+      "author": "Pascal Christe",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:1:Roep · volwassen man",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp008-male-call.mp3",
+      "title": "File:Falco tinnunculus - Common Kestrel XC589714.mp3"
+    },
+    {
+      "speciesId": "sp009",
+      "author": "john581",
+      "license": "CC BY 2.0",
+      "role": "credits/hero",
+      "image": "/assets/showcase/sp009.webp",
+      "title": "File:Falco peregrinus in flight (17659253649).jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "author": "Teddy Llovet",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_PLUMAGE:juv:None",
+      "image": "/assets/species/plumage/sp009-juv.webp",
+      "title": "File:PeregrineFalconperched.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "author": "Dhairya dixit",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_POSES:0:Volwassen in rust",
+      "image": "/assets/species/plumage/sp009-perched.webp",
+      "title": "File:Peregrine falcon portrait.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "author": "Sumeet Moghe",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_POSES:1:Volwassen in rust, van opzij",
+      "image": "/assets/species/plumage/sp009-male-rest.webp",
+      "title": "File:Peregrine Falcon (male) cropped.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "author": "Jonathan Tollin",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:2:Volwassen in vlucht",
+      "image": "/assets/species/plumage/sp009-male-flight.webp",
+      "inatPhotoId": 9819028,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp009",
+      "author": "Josh Boe",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:3:Juveniel in vlucht",
+      "image": "/assets/species/plumage/sp009-juv-flight.webp",
+      "inatPhotoId": 251479995,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp009",
+      "author": "Sternanita3",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Roep",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp009-call.mp3",
+      "title": "File:Halcón peregrino.ogg"
+    },
+    {
+      "speciesId": "sp016",
+      "author": "Andreas Eichler",
+      "license": "CC BY-SA 4.0",
+      "role": "credits/hero",
+      "image": "/assets/species/sp016.webp",
+      "title": "File:2015.05.08.-04-Kaefertaler Wald-Mannheim--Buntspecht-Weibchen.jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_PLUMAGE:juv:None",
+      "image": "/assets/species/plumage/sp016-juv.webp",
+      "title": "File:Juvenile great spotted woodpecker (52200334398).jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_PLUMAGE:adult_m:None",
+      "image": "/assets/species/plumage/sp016-male.webp",
+      "title": "File:Great spotted woodpecker (Dendrocopos major) male Drenthe.jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_POSES:0:In vlucht",
+      "image": "/assets/species/plumage/sp016-flight.webp",
+      "title": "File:Dendrocopos major (51546452028).jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_POSES:1:Mannetje",
+      "image": "/assets/species/plumage/sp016-hero-male.webp",
+      "title": "File:Great Spotted Woodpecker - Dendrocopos major - Male (52580093933).jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Roep",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp016-call-app.mp3",
+      "title": "File:Dendrocopos major - Great Spotted Woodpecker XC542957.mp3"
+    },
+    {
+      "speciesId": "sp016",
+      "author": "Vladimir Yu. Arkhipov",
+      "license": "CC BY-SA 3.0",
+      "role": "GUIDE_AUDIO:1:Roffel",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp016-drum-app.mp3",
+      "title": "File:Dendrocopos major.ogg"
+    }
+  ]
+}
