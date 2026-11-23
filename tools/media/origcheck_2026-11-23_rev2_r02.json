@@ -1,0 +1,261 @@
+{
+  "date": "2026-11-23",
+  "purpose": "F3-REV2-R02: alle getoonde foto's en Commons-audio van Buizerd, Sperwer, Havik tegen origineel, auteur, licentie, SHA-1 en herkomstcontext; iNaturalist-licentie via API; plus R01b-open punt twee iNaturalist-licenties Holenduif",
+  "items": [
+    {
+      "speciesId": "sp005",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "credits/hero",
+      "image": "/assets/species/sp005.webp",
+      "title": "File:Common buzzard 2024-01-20.jpg"
+    },
+    {
+      "speciesId": "sp005",
+      "author": "Roy Lowry",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_PLUMAGE:adult_m:None",
+      "image": "/assets/species/plumage/sp005-adult_m.webp",
+      "inatPhotoId": 309645414,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/309645414/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/309645414/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/309645414/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp005",
+      "author": "rober025",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_PLUMAGE:juv:None",
+      "image": "/assets/species/plumage/sp005-juv.webp",
+      "inatPhotoId": 147178882,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/147178882/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/147178882/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/147178882/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp005",
+      "author": "Gianluca Congi",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_POSES:0:Volwassen in rust",
+      "image": "/assets/species/plumage/sp005-male-rest.webp",
+      "inatPhotoId": 291739391,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/291739391/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/291739391/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/291739391/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp005",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_POSES:1:Donkere Buizerd in vlucht",
+      "image": "/assets/species/plumage/sp005-flight-dark.webp",
+      "title": "File:Common buzzard (Buteo buteo buteo) in flight.jpg"
+    },
+    {
+      "speciesId": "sp005",
+      "author": "Simone Bocca",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_POSES:2:Volwassen in vlucht, van onderen",
+      "image": "/assets/species/plumage/sp005-female-flight.webp",
+      "inatPhotoId": 112563573,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/112563573/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/112563573/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/112563573/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp005",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Roep",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp005-adult-call.mp3",
+      "title": "File:Buteo buteo - Common Buzzard XC538277.mp3"
+    },
+    {
+      "speciesId": "sp005",
+      "author": "T.Voekler",
+      "license": "CC BY-SA 3.0",
+      "role": "GUIDE_AUDIO:1:Alarmroep",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp005-alarm.mp3",
+      "title": "File:Buteo buteo warning the fledglings 7643.ogg"
+    },
+    {
+      "speciesId": "sp006",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "credits/pose",
+      "image": "/assets/species/sp006.webp",
+      "title": "File:Male Sparrowhawk (46103963061).jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_PLUMAGE:adult_f:None",
+      "image": "/assets/species/plumage/sp006-adult_f.webp",
+      "title": "File:Female Sparrowhawk (45968114392).jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_PLUMAGE:juv:None",
+      "image": "/assets/species/plumage/sp006-juv.webp",
+      "title": "File:Female Juvenile Sparrowhawk (36519885205).jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:0:Mannetje in vlucht",
+      "image": "/assets/species/plumage/sp006-flight.webp",
+      "title": "File:Eurasian sparrowhawk 2023 12 31 01.jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_POSES:1:Mannetje",
+      "image": "/assets/species/plumage/sp006-hero-male.webp",
+      "title": "File:Sparrowhawk - Accipiter nisus - Male (52253225702).jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Roep vrouwtje",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp006-nest-call.mp3",
+      "title": "File:Accipiter nisus - Eurasian Sparrowhawk XC467097.mp3"
+    },
+    {
+      "speciesId": "sp006",
+      "author": "Steven Wilson",
+      "license": "CC BY-SA 3.0",
+      "role": "GUIDE_AUDIO:1:Bedelroep jongen",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp006-begging.mp3",
+      "title": "File:Accipiter nisus - Eurasian Sparrowhawk XC234158.mp3"
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "role": "credits/pose",
+      "image": "/assets/species/sp007.webp",
+      "title": "File:Male northern goshawk (49434582392).jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_PLUMAGE:juv:None",
+      "image": "/assets/species/plumage/sp007-juv.webp",
+      "title": "File:Juvenile northern goshawk (52310658114).jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "author": "WATANABE Hitoshi 渡辺仁",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_PLUMAGE:adult_f:None",
+      "image": "/assets/species/plumage/sp007-adult_f.webp",
+      "inatPhotoId": 478065886,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/478065886/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/478065886/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/478065886/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Ken Billington",
+      "license": "CC BY-SA 3.0",
+      "role": "GUIDE_POSES:0:In vlucht",
+      "image": "/assets/species/plumage/sp007-flight.webp",
+      "title": "File:Northern Goshawk (Accipiter gentilis) (1).JPG"
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Вячеслав Юсупов",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:1:Mannetje in vlucht",
+      "image": "/assets/species/plumage/sp007-male-flight.webp",
+      "inatPhotoId": 29451692,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_POSES:2:Mannetje",
+      "image": "/assets/species/plumage/sp007-hero-male.webp",
+      "title": "File:Male northern goshawk (52294386465).jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Roep vrouwtje",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp007-female-call.mp3",
+      "title": "File:Accipiter gentilis - Northern Goshawk XC396289.mp3"
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 3.0",
+      "role": "GUIDE_AUDIO:1:Alarmroep vrouwtje",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp007-alarm.mp3",
+      "title": "File:Accipiter gentilis - Northern Goshawk XC396773.mp3"
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:2:Bedelroep jong",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp007-begging.mp3",
+      "title": "File:Accipiter gentilis - Northern Goshawk XC578067.mp3"
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/plumage/sp003-juv.webp",
+      "author": "Paul Lewis",
+      "license": "CC BY 4.0",
+      "role": "R01b open punt iNat-licentie",
+      "inatPhotoId": 725640198,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/725640198/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/725640198/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/725640198/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/plumage/sp003-flight-open-sky.webp",
+      "author": "andygpos",
+      "license": "CC BY 4.0",
+      "role": "R01b open punt iNat-licentie",
+      "inatPhotoId": 757637556,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/757637556/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/757637556/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/757637556/original.JPG"
+      ]
+    }
+  ]
+}
