@@ -16130,18 +16130,6 @@
         "status": "OWNER DECISION B + LIMITED C EXECUTED (R02b) / R02c HAVIK FLIGHT PHOTO RETIRED / TECHNICAL QA ACCEPTED / OPEN POINTS REMAIN",
         "date": "2026-11-23",
         "pr": 352
-      },
-      {
-        "round": "F3-REV2-R03",
-        "species": [
-          "sp008",
-          "sp009",
-          "sp016"
-        ],
-        "status": "STARTED - REVIEW IN PROGRESS",
-        "date": "2026-11-23",
-        "baseSHA": "ad514b0f298a9143586311a9c079bc26370b71aa",
-        "ownerStart": "Eigenaarbesluit 23-11-2026 22:10 CET: start R03 na R02c-checkpoint"
       }
     ],
     "counts": {
