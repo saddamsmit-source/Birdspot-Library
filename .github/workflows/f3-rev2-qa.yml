@@ -1,0 +1,23 @@
+name: Birdspot F3-REV2 second verification round QA
+on:
+  pull_request:
+    paths:
+      - 'docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json'
+      - 'docs/fotokwaliteit/F3_REV2_*'
+      - 'tests/test_f3_rev2_r01.mjs'
+      - '.github/workflows/f3-rev2-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  f3-rev2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Second round keeps first-round data and has no fake PASS
+        run: node tests/test_f3_rev2_r01.mjs
+      - name: First-round 140 cohort, media and gates unchanged
+        run: node tests/test_f3_140_unified_rebaseline.mjs
+      - name: Audio 140 contract
+        run: node tests/test_audio_140_contract.mjs
