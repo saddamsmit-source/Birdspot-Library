@@ -77,7 +77,10 @@
     "sp166",
     "sp167",
     "sp170",
-    "sp173"
+    "sp173",
+    "sp002",
+    "sp003",
+    "sp004"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -4069,6 +4072,185 @@
         "https://commons.wikimedia.org/wiki/File:Blauwe_Kiekendief.jpg"
       ],
       "caution": "Een lichte kruin kan ook bij een volwassen vrouwtje voorkomen. Vergelijk stuit en bandering bij geschikt zicht."
+    },
+    {
+      "id": "LK-091",
+      "focus": [
+        "sp002",
+        "sp003"
+      ],
+      "birds": [
+        "sp002",
+        "sp003"
+      ],
+      "risk": "Jonge Houtduiven missen witte halsvlek en lichte iris en lijken dan op Holenduif.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Rustpaar (beide volwassen, zijaanzicht) toegevoegd in F3-REV2-R01b; onafhankelijke tweede review open.",
+        "Vluchtpaar heeft ongelijke kijkhoek: Holenduif van onderen, Houtduif van opzij/boven."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Vleugel",
+          "values": [
+            "Brede witte vleugelband, ook bij jonge vogels",
+            "Geen wit; twee korte zwarte vleugelstrepen"
+          ]
+        },
+        {
+          "label": "Hals",
+          "values": [
+            "Volwassen: witte halsvlek",
+            "Geen wit; groen glanzende halsvlek"
+          ]
+        },
+        {
+          "label": "Oog",
+          "values": [
+            "Volwassen: lichte iris",
+            "Donker oog bij volwassen vogels"
+          ]
+        }
+      ],
+      "caution": "Halsvlek en iris gelden alleen voor volwassen Houtduiven; het wit in de vleugel geldt voor alle leeftijden.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/houtduif",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
+        "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-houtduif-vs-holenduif",
+        "https://www.allaboutbirds.org/guide/Common_Wood-Pigeon/id",
+        "https://www.rspb.org.uk/birds-and-wildlife/stock-dove"
+      ]
+    },
+    {
+      "id": "LK-092",
+      "focus": [
+        "sp003"
+      ],
+      "birds": [
+        "sp003",
+        "sp001"
+      ],
+      "risk": "Blauwgrijze Stadsduiven kunnen sterk op Holenduif lijken; Stadsduiven hebben veel kleurvormen.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Stadsduif (sp001) valt buiten het 140-cohort; geen F3-geverifieerde partnerfoto. Alleen tekst."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Stuit",
+          "values": [
+            "Meestal grijs",
+            "Bij veel blauwgrijze Stadsduiven opvallend licht"
+          ]
+        },
+        {
+          "label": "Vleugelstrepen",
+          "values": [
+            "Twee korte, minder duidelijke zwarte strepen",
+            "Vaak langere, duidelijke zwarte banden"
+          ]
+        }
+      ],
+      "caution": "Gebruik stuitkleur samen met de vleugeltekening; één kenmerk is bij Stadsduiven niet zeker.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/stadsduif",
+        "https://www.rspb.org.uk/birds-and-wildlife/stock-dove",
+        "https://www.bto.org/sites/default/files/shared_documents/gbw/associated_files/bird-table-64-pigeon-identification.pdf"
+      ]
+    },
+    {
+      "id": "LK-093",
+      "focus": [
+        "sp004"
+      ],
+      "birds": [
+        "sp004",
+        "sp197"
+      ],
+      "risk": "Juvenielen van beide soorten missen de halstekening.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Zomertortel (sp197) valt buiten het 140-cohort; geen geverifieerde partnerfoto. Paneel terecht verborgen, tekst zichtbaar."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Hals",
+          "values": [
+            "Eén smalle zwarte halsband",
+            "Zwart-wit gestreepte halsvlek"
+          ]
+        },
+        {
+          "label": "Bovendelen",
+          "values": [
+            "Egaal beigegrijs",
+            "Roodbruin en geschubd"
+          ]
+        }
+      ],
+      "caution": "Bij juvenielen alleen de bovendelen gebruiken: egaal beigegrijs tegen roodbruin geschubd.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zomertortel",
+        "https://www.blascozumeta.com/specie_files/06840_ENG_Streptopelia_decaocto_aranzadi.pdf"
+      ]
+    },
+    {
+      "id": "LK-094",
+      "focus": [
+        "sp004"
+      ],
+      "birds": [
+        "sp004",
+        "sp340"
+      ],
+      "risk": "Lichte vorm van de gehouden Lachduif; kleurvormen variëren.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "Lachduif (sp340) valt buiten het 140-cohort; geen geverifieerde partnerfoto. Alleen tekst."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Geluid",
+          "values": [
+            "Vaak drie duidelijk gescheiden klanken",
+            "Rollend gekoer, soms een lachende roep"
+          ]
+        },
+        {
+          "label": "Buitenste slagpennen",
+          "values": [
+            "Steken donker af",
+            "In de lichte vorm vaak minder contrastrijk"
+          ]
+        }
+      ],
+      "caution": "Een enkele foto of onduidelijk geluid is onvoldoende; Lachduiven hebben verschillende kleurvormen.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
+        "https://www.licg.nl/vogels/lachduif/"
+      ]
     }
   ],
   "withinSpeciesVariation": [
@@ -4101,7 +4283,8 @@
     "visualReviewR34": "docs/fotokwaliteit/F3_R34_SMIENT_TAFELEEND_GIERZWALUW_2026-11-21_DRAFT.md",
     "visualReviewR35": "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md",
     "visualReviewR37": "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
-    "visualReviewR40": "docs/fotokwaliteit/F3_R40_GROTE_MANTELMEEUW_VISDIEF_NOORDSE_STERN_2026-11-22_DRAFT.md"
+    "visualReviewR40": "docs/fotokwaliteit/F3_R40_GROTE_MANTELMEEUW_VISDIEF_NOORDSE_STERN_2026-11-22_DRAFT.md",
+    "visualReviewREV2R01": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }

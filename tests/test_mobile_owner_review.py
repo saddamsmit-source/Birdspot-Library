@@ -248,7 +248,9 @@ def main():
         check_recognition_media(page)
 
         dove = open_species(page, 'Holenduif', 'sp003')
-        tip = dove.get_by_text('Tip: Vergelijk de vleugeltekening en de staart.', exact=False).first
+        # F3-REV2-R01b: de eerste zichtbare Holenduif-vergelijking is het rustpaar met Houtduif; contrast blijft getoetst.
+        tip = dove.locator('.sd-cmp-tip:visible').first
+        expect(tip).to_contain_text('Tip: Beide foto’s tonen een volwassen vogel van opzij.')
         expect(tip).to_be_visible()
         themes = ['dark', 'light', '']
         for theme in themes:

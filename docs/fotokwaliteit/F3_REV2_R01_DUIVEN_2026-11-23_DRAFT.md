@@ -9,7 +9,7 @@
 | Werk-PR | #351 · `claude/birdspot-f3-rev2-r01-duiven-20261123` |
 | Eigenaarbesluit | Start tweede verificatieronde 140 soorten, 23-11-2026 |
 | Beoordelaar | Claude (Opus 5.5) — eigen beoordeling, **geen** onafhankelijke review |
-| Status | **SECOND REVIEW RECORDED · EIGENAARSPOORT OPEN** — geen volgende batch zonder eigenaarbesluit (§2.3.C) |
+| Status | **EIGENAARBESLUIT B UITGEVOERD (F3-REV2-R01b) · ONAFHANKELIJKE QA OPEN** — geen volgende batch vóór QA en eigenaarbesluit |
 
 Eerste-rondegegevens (F3-R01…R47, 140/140 inhoudelijk bekeken, 0 FULL F3-PASS) blijven ongewijzigd. Registratie per soort: `F3_140_HERCONTROLE_V0.1_DRAFT.json` → `records[].F3.secondReview`; samenvatting → `secondReview` (los van `counts`).
 
@@ -79,9 +79,28 @@ Niet-materieel, wel geregistreerd: W1 vluchtfoto Houtduif onderbelicht; W2 biome
 
 | Soort | Besluit | Datum | Verwijzing | Resterende bewijsstatus |
 |---|---|---|---|---|
-| sp002 | OPEN | — | PR #351 | zie G1–G7 |
-| sp003 | OPEN | — | PR #351 | zie G1–G7 |
-| sp004 | OPEN | — | PR #351 | zie G1–G4, G6, G7 |
+| sp002 | **B — gericht verbeteren** | 23-11-2026 15:28 | chat + PR #351 (R01b) | ANWB NOT TESTED, VB niet hergelezen, audio OPEN, vluchtfoto onderbelicht (wens), onafhankelijke QA |
+| sp003 | **B — gericht verbeteren** | 23-11-2026 15:28 | chat + PR #351 (R01b) | idem + geen gelijkwaardige vrije-vluchtfoto, iNaturalist-licentie niet via API hergelezen |
+| sp004 | **B — gericht verbeteren** | 23-11-2026 15:28 | chat + PR #351 (R01b) | idem + auteursvorm juveniel (Kreuzschnabel) |
+
+Optie C is **niet** verleend voor ANWB of audio: die blijven `NOT TESTED` respectievelijk `OPEN`.
+
+## F3-REV2-R01b — uitvoering besluit B (23-11-2026)
+
+| # | Opdracht | Uitgevoerd | Status |
+|---|---|---|---|
+| 1 | Remote/claim | head `be2dc8f` ongewijzigd, nieuwe claim (comment 7104068281); geen ChatGPT-QA-comment op #351 aangetroffen | VERIFIED |
+| 2 | Rustpaar Houtduif–Holenduif | Nieuwe vergelijking `Houtduif en Holenduif · in rust` met beide bestaande hoofdfoto's (volwassen, zijaanzicht); rijen hals / oog / gevouwen vleugel uit gebronde claims; beide richtingen met credits | VERIFIED (code + browser), onafhankelijke review open |
+| 3 | Zwakke Holenduif-vluchtfoto | `discover` (3 zoekopdrachten): 1 echte kandidaat (*Skogsduva Stock Dove*, Åsa Berndtsson, CC BY 2.0) — landend/opvliegend, klein, onscherp → **niet beter**, niet geïmporteerd. Vluchtpaar Houtduif–Holenduif verborgen via `pairHidden` (beide foto's bestaan, paar niet gelijkwaardig); eigen vluchtfoto en paar met Turkse Tortel blijven | VERIFIED |
+| 4 | sourceSha1/sourceAudit + bronpagina's | `origcheck` via `media-intake` (GitHub-runner, Commons-API/iNaturalist open-data): 9/9 originelen; sp002-hoofdfoto `f102a9ca…`, sp003-hoofdfoto `cdc04d81…`, sp004-vlucht `04effd85…` vastgelegd; 6 Commons-foto's auteur+licentie gelijk; sp004-hoofdfoto uitsnede visueel bevestigd (r 0,857); sp004-juveniel auteursvorm wijkt af; 2 iNaturalist-foto's zelfde opname, licentie niet via API | zie register per foto |
+| 5 | Dubbelgangerregister | LK-091 Houtduif–Holenduif, LK-092 Holenduif–Stadsduif, LK-093 Turkse Tortel–Zomertortel, LK-094 Turkse Tortel–Lachduif; LK-001…090 ongewijzigd | PARTIALLY TESTED |
+| 6 | Snel herkennen max. 3 | Impact `quickPanel()` onderzocht: 108 profielen gebruiken hem. Optioneel, gevalideerd veld `quickPrimary` (1–2 keyMarks) → kritisch kenmerk + 2 primair; rest ingeklapt onder "Meer kenmerken". Render van alle 597 soorten vergeleken met basis: **alleen sp002–sp004 veranderen** | VERIFIED |
+| 7 | Toekomstbestendige test | `test_f3_rev2_r01.mjs`: digest eerste ronde; ANWB VERIFIED alleen met titel/auteurs/editie/geldig ISBN/pagina/leesdatum; audio alleen met bron/licentie en menselijke luistercontrole; FULL PASS alleen bij alle lagen VERIFIED + onafhankelijke review + 0 open gaten + eigenaarbesluit. Mutatietest: 7/7 nep-situaties afgevangen, 2/2 legitieme toekomstige situaties geaccepteerd | VERIFIED |
+| 8 | Besluit registreren | `secondReview.ownerDecision` per soort: B, datum, verwijzing, resterende punten | VERIFIED |
+
+Vogelbescherming: WebFetch-toestemming opnieuw gevraagd (~15:40) en niet beantwoord; geen omweg gebruikt → `NOT TESTED` in REV2.
+
+Aangepaste bestaande tests (gedrag gewijzigd door besluit B, geen versoepeling): `test_soortaudit.mjs` SA-07 (vluchtpaar Holenduif–Houtduif moet nu **ontbreken**, rustpaar en paar met Turkse Tortel aanwezig), `test_species_detail.py` (rustpaar i.p.v. vluchtpaar), `test_mobile_owner_review.py` (contrast van de eerst zichtbare Holenduif-tip), `test_lookalike_r09.mjs` (setvergelijking focussoorten gesorteerd; positionele R09–R17-controles ongewijzigd).
 
 ## Tests
 
@@ -89,4 +108,4 @@ Niet-materieel, wel geregistreerd: W1 vluchtfoto Houtduif onderbelicht; W2 biome
 - `tests/test_f3_140_unified_rebaseline.mjs`, `tests/test_audio_140_contract.mjs`, `tests/test_kennisbaseline.mjs`, `tests/test_f3_plumage_rule.mjs`: PASS lokaal.
 - CI: `.github/workflows/f3-rev2-qa.yml`.
 
-**EINDMARKERING — F3-REV2-R01 · DUIVEN · EIGENAARSPOORT OPEN · GEEN MERGE · GEEN LIVE**
+**EINDMARKERING — F3-REV2-R01/R01b · DUIVEN · BESLUIT B UITGEVOERD · ONAFHANKELIJKE QA OPEN · GEEN MERGE · GEEN LIVE**

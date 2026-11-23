@@ -205,7 +205,7 @@
           "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
           "pr": 351,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "SECOND REVIEW RECORDED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -220,7 +220,9 @@
               "quality": "VERIFIED - uitstekende hoofdfoto voor snelle determinatie",
               "roleCheck": "VERIFIED - neutraal Volwassen; geslacht niet op kleed te onderscheiden",
               "blobSha": "cef01c89dc5f2ca790d45e7c5e8cf7c7792bc250",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: credits.json reviewed 2026-11-06; geen sourceSha1/sourceAudit vastgelegd."
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 f102a9cafd7b68157cf6539fd8cbe655efcf22a4, zelfde opname r=1.0",
+              "sourceSha1": "f102a9cafd7b68157cf6539fd8cbe655efcf22a4",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
             },
             {
               "role": "In vlucht",
@@ -234,7 +236,9 @@
               "quality": "PARTIALLY TESTED - diagnostisch bruikbaar, maar donker/vlak; kleurindruk misleidend",
               "roleCheck": "VERIFIED - echte vrije vlucht",
               "blobSha": "125332074f2ded4fc51633075196f56d3e013a36",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: sourceAudit 2026-11-14, sourceSha1 29af85c5."
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 29af85c578cb95327181db2319e9a8b828835fb7, zelfde opname r=1.0",
+              "sourceSha1": "29af85c578cb95327181db2319e9a8b828835fb7",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
             },
             {
               "role": "Juveniel",
@@ -248,26 +252,28 @@
               "quality": "PARTIALLY TESTED - bruikbaar, matige scherpte",
               "roleCheck": "PARTIALLY TESTED - juveniel aannemelijk",
               "blobSha": "e8ab1b91733e8beffae29931be3719416f62a6a7",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: sourceAudit 2026-11-14, sourceSha1 29ab2af9."
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 29ab2af935d1deb894ef3c5200cc73fa0e31ab4c, zelfde opname r=1.0",
+              "sourceSha1": "29ab2af935d1deb894ef3c5200cc73fa0e31ab4c",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming op 23-11-2026 13:3x CET niet beantwoord (eigenaar afwezig). Eerste-rondelezing van 10-11-2026 blijft traceerbaar in tools/kennisbaseline/knowledge.json _sources (VB_HOUT, VB_HVH, VB_5D).",
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOUT, VB_HVH, VB_5D).",
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
             "additional": "Repo-geregistreerd: Cornell CL_WP, BTO_DUIVEN, British Garden Birds GB_SD (eerste ronde); in REV2 niet hergelezen.",
             "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
           },
           "text": {
-            "snelHerkennen": "PARTIALLY TESTED - inhoudelijk consistent met geregistreerde bronnen (witte vleugelband alle leeftijden, halsvlek alleen volwassen, lichte iris). Toont 1 kritisch kenmerk + 4 Helpt-punten = 5 aanknopingspunten; v1.10 vraagt max. 3 primaire.",
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk witte vleugelband + witte halsvlek + lichte iris; witte band in vlucht en bouw ingeklapt onder \"Meer kenmerken\" (niets verwijderd). Tekst consistent met geregistreerde bronnen.",
             "herkenning": "PARTIALLY TESTED - leeftijd, geslacht (niet te onderscheiden), juveniel-valkuil en vluchtkenmerk correct beschreven.",
-            "lijktOp": "PARTIALLY TESTED - Holenduif (vlucht) en Turkse Tortel (vlucht) met fotopaar; Stadsduif alleen tekst. Geen rust-tegen-rust fotopaar terwijl beide hoofdfoto's geschikt zijn.",
+            "lijktOp": "PARTIALLY TESTED - rustpaar Houtduif-Holenduif toegevoegd (beide hoofdfoto's, volwassen, zijaanzicht; rijen hals/oog/gevouwen vleugel); ongelijkwaardig vluchtpaar met Holenduif verborgen, vluchtpaar met Turkse Tortel blijft; Stadsduif alleen tekst.",
             "biometry": "Lengte ca. 40-45 cm volgens §1.1 (KV-13). Spanwijdte 68-77 cm en gewicht 300-615 g zonder ca.-band/tweede uitgever: open, niet blokkerend (§1.1.9)."
           },
           "lookalikes": [
             {
               "pair": "sp002<->sp003 Houtduif-Holenduif",
               "bothDirections": "VERIFIED (paneel op beide kaarten aanwezig)",
-              "photoEquivalence": "PARTIALLY TESTED - vlucht tegen vlucht, maar Houtduif van opzij/boven en Holenduif van onderen; kernkenmerk niet in gelijke hoek",
+              "photoEquivalence": "PARTIALLY TESTED - rust tegen rust: beide volwassen, zijaanzicht, browser 320/360/390 px en offline beide richtingen; vluchtpaar verborgen; onafhankelijke review open",
               "diagnosticText": "VERIFIED - witte vleugelband vs. geen wit; halsvlek vs. groene glans; juveniel-uitzondering benoemd"
             },
             {
@@ -283,31 +289,46 @@
               "diagnosticText": "PARTIALLY TESTED - vleugelband als kernpunt"
             }
           ],
-          "lookalikeRegister": "Geen LK-paar in SOORTVERWARRING_REGISTER voor sp002 (§3.4.6 open)",
-          "audio": "BLOCKED - 0 lokaal geregistreerde gidsaudio; kandidaat uit eerste ronde niet geïmporteerd; checkpoint 75/140 ongewijzigd",
+          "lookalikeRegister": "LK-091 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming + 3 fotobronpagina's niet hergelezen (toestemming)",
-            "G3 hoofdfoto zonder sourceSha1/sourceAudit",
-            "G4 Snel herkennen 5 i.p.v. max. 3 aanknopingspunten",
-            "G5 kritisch paar met Holenduif: geen gelijkwaardig fotopaar, geen rustpaar",
-            "G6 geen LK-registratie",
+            "G2 Vogelbescherming niet hergelezen (toestemming)",
             "G7 geen lokaal gidsaudio",
-            "W1 vluchtfoto onderbelicht (wens)"
+            "QA onafhankelijke review R01b open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "options": [
-              "A verder onderzoeken",
-              "B gericht verbeteren",
-              "C voorlopig door met geregistreerde tekortkoming"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R01 optie B (chat 23-11-2026 15:28 CET); uitgevoerd als F3-REV2-R01b in PR #351",
+            "remainingOpen": [
+              "ANWB-soortpassage NOT TESTED (geen optie C verleend)",
+              "Vogelbescherming REV2 niet hergelezen (toestemming)",
+              "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
+              "Vluchtfoto onderbelicht (wens)",
+              "Onafhankelijke review van R01b open",
+              "Biometrie spanwijdte/gewicht zonder ca.-band (niet blokkerend)"
             ],
-            "decision": null,
-            "date": null,
-            "reference": null
+            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
           },
-          "fullPass": false
+          "fullPass": false,
+          "resolvedInR01b": [
+            "G3 hoofdfoto sourceSha1/sourceAudit vastgelegd (f102a9ca)",
+            "G4 Snel herkennen max. 3 primaire punten",
+            "G5 rustpaar met Holenduif toegevoegd; ongelijkwaardig vluchtpaar verborgen",
+            "G6 LK-091 geregistreerd"
+          ],
+          "repair": {
+            "round": "F3-REV2-R01b",
+            "date": "2026-11-23",
+            "evidence": [
+              "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json",
+              "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -414,7 +435,7 @@
           "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
           "pr": 351,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "SECOND REVIEW RECORDED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -429,7 +450,9 @@
               "quality": "VERIFIED - goede hoofdfoto, licht zacht",
               "roleCheck": "VERIFIED - neutraal Volwassen",
               "blobSha": "fc0ad25936f2f8c16205eac84fec582e362a18c1",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: credits.json reviewed 2026-11-06; F3-R01 las Commons-metadata; geen sourceSha1/sourceAudit vastgelegd."
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 cdc04d813e4db915116ca51a9ab06309b67cb5b7, zelfde opname r=1.0",
+              "sourceSha1": "cdc04d813e4db915116ca51a9ab06309b67cb5b7",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
             },
             {
               "role": "Juveniel",
@@ -443,7 +466,8 @@
               "quality": "VERIFIED - goede scherpte en licht",
               "roleCheck": "PARTIALLY TESTED - juveniel aannemelijk",
               "blobSha": "c916463cace41ffeb2cebbb9e49ae35d5b3dd0e1",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: sourceAudit 2026-11-14, sourceSha1 9d670763; waarneming 395731472 annoteert juveniel."
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname bevestigd tegen iNaturalist open-data-origineel (r=1.0, 725640198/original.jpg); auteur/licentie niet via API hergelezen, registerwaarde 14-11-2026 blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
             },
             {
               "role": "In vlucht",
@@ -457,26 +481,28 @@
               "quality": "PARTIALLY TESTED - zwak voor de kritische vergelijking met Houtduif: verkeerde kijkhoek en lage resolutie",
               "roleCheck": "VERIFIED - echte vrije vlucht",
               "blobSha": "228927819c2ebed7bbd206049ed8868d455619f6",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: sourceAudit 2026-11-14, sourceSha1 296f2711."
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname bevestigd tegen iNaturalist open-data-origineel (r=0.944, 757637556/original.jpg); auteur/licentie niet via API hergelezen, registerwaarde 14-11-2026 blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json",
+              "comparisonUse": "Verborgen in vluchtpaar met Houtduif (besluit B); blijft eigen vluchtfoto en paar met Turkse Tortel. Geen beter vrij-vluchtbeeld: docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json"
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming op 23-11-2026 13:3x CET niet beantwoord (eigenaar afwezig). Eerste-rondelezing van 10-11-2026 blijft traceerbaar in tools/kennisbaseline/knowledge.json _sources (VB_HOLEN, VB_HVH, VB_5D).",
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOLEN, VB_HVH, VB_5D).",
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
             "additional": "Repo-geregistreerd: RSPB_SD, BTO_DUIVEN, GB_SD (eerste ronde); in REV2 niet hergelezen. Sovon-referentie sp003 nog open uit F3-R01.",
             "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
           },
           "text": {
-            "snelHerkennen": "PARTIALLY TESTED - inhoudelijk consistent (geen wit, donker oog, groene halsglans, korte zwarte strepen; juveniele Houtduif en Stadsduif als valkuil). 1 kritisch + 4 Helpt = 5 aanknopingspunten; v1.10 max. 3.",
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk geen wit in de vleugel + groen glanzende halsvlek + donker oog; \"geen wit in hals of vleugel\" en staartband/strepen ingeklapt (niets verwijderd).",
             "herkenning": "PARTIALLY TESTED - geslacht niet te onderscheiden correct; juveniel alleen kort (\"Matter, minder glans\").",
-            "lijktOp": "PARTIALLY TESTED - Houtduif en Turkse Tortel alleen als vluchtpaar; Holenduif-vluchtfoto toont ondervleugel. Stadsduif alleen tekst (stuit + vleugelstrepen).",
+            "lijktOp": "PARTIALLY TESTED - rustpaar met Houtduif toegevoegd; vluchtpaar met Houtduif verborgen (ondervleugel vs. bovenvleugel), vluchtpaar met Turkse Tortel blijft; eigen vluchtfoto blijft op de kaart; Stadsduif alleen tekst (LK-092).",
             "biometry": "Lengte 28-32 cm, spanwijdte 60-66 cm, gewicht 250-345 g zonder ca.-band en zonder basis.biometrics: open, niet blokkerend."
           },
           "lookalikes": [
             {
               "pair": "sp003<->sp002 Holenduif-Houtduif",
               "bothDirections": "VERIFIED",
-              "photoEquivalence": "PARTIALLY TESTED - ongelijke kijkhoek (onder vs. opzij/boven)",
+              "photoEquivalence": "PARTIALLY TESTED - rust tegen rust: beide volwassen, zijaanzicht, browser 320/360/390 px en offline beide richtingen; vluchtpaar verborgen; onafhankelijke review open",
               "diagnosticText": "VERIFIED"
             },
             {
@@ -492,31 +518,48 @@
               "diagnosticText": "PARTIALLY TESTED - stuit en vleugelstrepen, variatie benoemd"
             }
           ],
-          "lookalikeRegister": "Geen LK-paar in SOORTVERWARRING_REGISTER voor sp003 (§3.4.6 open)",
-          "audio": "BLOCKED - 0 lokaal geregistreerde gidsaudio; kandidaat uit eerste ronde niet geïmporteerd; checkpoint 75/140 ongewijzigd",
+          "lookalikeRegister": "LK-091, LK-092 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming + 3 fotobronpagina's niet hergelezen (toestemming)",
-            "G3 hoofdfoto zonder sourceSha1/sourceAudit",
-            "G4 Snel herkennen 5 i.p.v. max. 3 aanknopingspunten",
-            "G5 vluchtfoto toont ondervleugel, zwak voor kritisch paar met Houtduif",
-            "G6 geen LK-registratie",
+            "G2 Vogelbescherming niet hergelezen (toestemming)",
+            "G5b geen gelijkwaardige vrije-vluchtfoto (vluchtpaar met Houtduif verborgen)",
             "G7 geen lokaal gidsaudio",
-            "W2 biometrie zonder ca.-band"
+            "QA onafhankelijke review R01b open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "options": [
-              "A verder onderzoeken",
-              "B gericht verbeteren",
-              "C voorlopig door met geregistreerde tekortkoming"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R01 optie B (chat 23-11-2026 15:28 CET); uitgevoerd als F3-REV2-R01b in PR #351",
+            "remainingOpen": [
+              "ANWB-soortpassage NOT TESTED (geen optie C verleend)",
+              "Vogelbescherming REV2 niet hergelezen (toestemming)",
+              "Geen gelijkwaardige vrije-vluchtfoto Holenduif gevonden (discover 23-11: 1 kandidaat, landend/onscherp)",
+              "iNaturalist-licentie/auteur niet via API hergelezen (2 foto's)",
+              "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
+              "Onafhankelijke review van R01b open",
+              "Biometrie zonder ca.-band (niet blokkerend)"
             ],
-            "decision": null,
-            "date": null,
-            "reference": null
+            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
           },
-          "fullPass": false
+          "fullPass": false,
+          "resolvedInR01b": [
+            "G3 hoofdfoto sourceSha1/sourceAudit vastgelegd (cdc04d81)",
+            "G4 Snel herkennen max. 3 primaire punten",
+            "G5 rustpaar met Houtduif toegevoegd; ongelijkwaardig vluchtpaar verborgen",
+            "G6 LK-091 en LK-092 geregistreerd"
+          ],
+          "repair": {
+            "round": "F3-REV2-R01b",
+            "date": "2026-11-23",
+            "evidence": [
+              "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json",
+              "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -621,7 +664,7 @@
           "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
           "pr": 351,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "SECOND REVIEW RECORDED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -636,7 +679,9 @@
               "quality": "VERIFIED - goede hoofdfoto",
               "roleCheck": "VERIFIED - neutraal Volwassen",
               "blobSha": "97d6e4c864bef1d17c220daa7fce92a9846cf0bf",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: sourceAudit 2026-11-14, sourceSha1 13a0c82b; uitsnede vermeld."
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 13a0c82b0b45f54b436bd5e592b5be4864df111a, uitsnede visueel bevestigd door Claude in sp004-adult-crop_vs_source.jpg (automatische r=0.857 onder drempel 0.90)",
+              "sourceSha1": "13a0c82b0b45f54b436bd5e592b5be4864df111a",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
             },
             {
               "role": "In vlucht",
@@ -650,7 +695,9 @@
               "quality": "VERIFIED - goede vluchtfoto",
               "roleCheck": "VERIFIED - echte vrije vlucht",
               "blobSha": "b96d2a4697ac833d76e49e4e8119c2dd5575799b",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: credits reviewed 2026-11-07; flightReview 2026-11-10; geen sourceSha1/sourceAudit vastgelegd."
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 04effd85b5941e750a8efe03065ea58a540f5385, zelfde opname r=1.0",
+              "sourceSha1": "04effd85b5941e750a8efe03065ea58a540f5385",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
             },
             {
               "role": "Juveniel",
@@ -664,19 +711,21 @@
               "quality": "VERIFIED - goede scherpte",
               "roleCheck": "PARTIALLY TESTED - juveniel aannemelijk",
               "blobSha": "75d863d8053e0f542e0a3b7a7b5fdb2681560bf5",
-              "rightsREV2": "NOT TESTED in REV2 - oorspronkelijke bron-/licentiepagina niet opnieuw geopend (zelfde toestemmingsblokkade). Bestaand bewijs: sourceAudit 2026-11-14, sourceSha1 945c7658."
+              "rightsREV2": "PARTIALLY TESTED - licentie CC BY-SA 3.0 en SHA-1 945c7658aae2e673aa99925b86c094038c90e148 gelijk; Commons-auteur \"Kreuzschnabel\" wijkt in vorm af van register \"Kreuzschnabel/Wikimedia Commons\"; vereiste naamsvermelding op bestandspagina niet gelezen",
+              "sourceSha1": "945c7658aae2e673aa99925b86c094038c90e148",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming op 23-11-2026 13:3x CET niet beantwoord (eigenaar afwezig). Eerste-rondelezing van 10-11-2026 blijft traceerbaar in tools/kennisbaseline/knowledge.json _sources (VB_TT, VB_ZT, VB_5D).",
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_TT, VB_ZT, VB_5D).",
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
             "additional": "Repo-geregistreerd: Blasco-Zumeta BZ_CD, eBird EB_ETD, birdspot.co.uk BS_TD, Cornell CL_TURKSETORTEL/CL_DUIVEN, LICG_LACHDUIF, Oiseaux.net ON_CD, ELO_CD (eerste ronde); in REV2 niet hergelezen.",
             "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
           },
           "text": {
-            "snelHerkennen": "PARTIALLY TESTED - consistent (halsband, egale bovendelen, rood oog volwassen/bruin juveniel, driedelig koeren). 1 kritisch + 4 Helpt = 5 aanknopingspunten; v1.10 max. 3.",
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk halsband en egale bovendelen + iriskleur + driedelig koeren; halsband- en kleurregel ingeklapt (niets verwijderd).",
             "herkenning": "PARTIALLY TESTED - leeftijd en geslacht correct genuanceerd; alarmroep vermeld.",
-            "lijktOp": "PARTIALLY TESTED - Zomertortel en Lachduif alleen tekst (geen foto in cohort); kritische tekst Zomertortel bruikbaar, staartkenmerk zelf als onvolledig gemarkeerd.",
+            "lijktOp": "PARTIALLY TESTED - vluchtparen met Houtduif en Holenduif blijven; Zomertortel en Lachduif alleen tekst (LK-093/LK-094).",
             "biometry": "Spanwijdte en gewicht met ca.-band (KV-13). Lengte 31-33 cm zonder ca.-band: open, niet blokkerend."
           },
           "lookalikes": [
@@ -699,29 +748,45 @@
               "diagnosticText": "PARTIALLY TESTED"
             }
           ],
-          "lookalikeRegister": "Geen LK-paar in SOORTVERWARRING_REGISTER voor sp004 (§3.4.6 open)",
-          "audio": "BLOCKED - 0 lokaal geregistreerde gidsaudio; kandidaat uit eerste ronde niet geïmporteerd; checkpoint 75/140 ongewijzigd",
+          "lookalikeRegister": "LK-093, LK-094 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming + 3 fotobronpagina's niet hergelezen (toestemming)",
-            "G3 vluchtfoto zonder sourceSha1/sourceAudit",
-            "G4 Snel herkennen 5 i.p.v. max. 3 aanknopingspunten",
-            "G6 geen LK-registratie",
-            "G7 geen lokaal gidsaudio"
+            "G2 Vogelbescherming niet hergelezen (toestemming)",
+            "G7 geen lokaal gidsaudio",
+            "QA onafhankelijke review R01b open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "options": [
-              "A verder onderzoeken",
-              "B gericht verbeteren",
-              "C voorlopig door met geregistreerde tekortkoming"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R01 optie B (chat 23-11-2026 15:28 CET); uitgevoerd als F3-REV2-R01b in PR #351",
+            "remainingOpen": [
+              "ANWB-soortpassage NOT TESTED (geen optie C verleend)",
+              "Vogelbescherming REV2 niet hergelezen (toestemming)",
+              "Juveniel: Commons-auteur \"Kreuzschnabel\" vs. register \"Kreuzschnabel/Wikimedia Commons\" - naamsvermelding controleren",
+              "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
+              "Onafhankelijke review van R01b open",
+              "Biometrie lengte zonder ca.-band (niet blokkerend)"
             ],
-            "decision": null,
-            "date": null,
-            "reference": null
+            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
           },
-          "fullPass": false
+          "fullPass": false,
+          "resolvedInR01b": [
+            "G3 vluchtfoto sourceSha1/sourceAudit vastgelegd (04effd85)",
+            "G4 Snel herkennen max. 3 primaire punten",
+            "G6 LK-093 en LK-094 geregistreerd"
+          ],
+          "repair": {
+            "round": "F3-REV2-R01b",
+            "date": "2026-11-23",
+            "evidence": [
+              "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json",
+              "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -15225,6 +15290,7 @@
     "baseSHA": "e6aa20e061e42d81de62a4df706f4a004bb06576",
     "workPR": 351,
     "batchSizeLimit": 3,
+    "firstRoundDigest": "98b75caecc7f9273c165b535d89f18231ad49944cb03fc87d8c20c646b760afa",
     "order": "records[] volgorde (seq 1-140), ongewijzigd",
     "firstRoundPreserved": "F3-R01..R47: 140/140 inhoudelijk bekeken, 0 FULL F3-PASS - ongewijzigd",
     "batches": [
@@ -15235,15 +15301,15 @@
           "sp003",
           "sp004"
         ],
-        "status": "OWNER GATE OPEN",
+        "status": "OWNER DECISION B EXECUTED (F3-REV2-R01b) / INDEPENDENT QA OPEN",
         "date": "2026-11-23"
       }
     ],
     "counts": {
       "total": 140,
       "reexamined": 3,
-      "ownerGateOpen": 3,
-      "ownerDecisions": 0,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 3,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },

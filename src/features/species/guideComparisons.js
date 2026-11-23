@@ -1391,15 +1391,53 @@ export const GUIDE_COMPARISONS = [
     ],
     tip: 'Vergelijk eerst vleugelvorm, staart en bouw. De foto’s tonen verschillende vlieghoudingen; gebruik schijnbare grootte alleen als extra aanwijzing.',
   },
+  // F3-REV2-R01b (eigenaarbesluit B, 23-11-2026): de vroegere drievoudige vluchtvergelijking is gesplitst.
+  // Houtduif–Holenduif in vlucht blijft intern geregistreerd maar het fotopaneel is verborgen: de enige
+  // geverifieerde Holenduif-vluchtfoto toont de ondervleugel, de Houtduif-foto de bovenvleugel (geen gelijkwaardig
+  // paar, Kwaliteitsnorm v1.10 §3.4.3). Geen beter gelicenseerd vrij-vluchtbeeld gevonden (discover-rev2-r01b).
+  // De herkenningstekst blijft zichtbaar via het rustpaar en de kritische kenmerken onder "Lijkt op".
   {
-    label: 'Houtduif, Holenduif en Turkse Tortel · in vlucht',
+    label: 'Houtduif en Holenduif · in vlucht',
+    flight: true,
+    pairHidden: 'F3-REV2-R01b 23-11-2026 (eigenaarbesluit B): vluchtfoto Holenduif toont ondervleugel, Houtduif bovenvleugel; geen gelijkwaardig paar',
+    birds: [
+      {id: 'sp002', source: 'houtduif', marks: 'Brede witte vleugelbanden. Volwassen vogels hebben ook een witte halsvlek.'},
+      {id: 'sp003', source: 'holenduif', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
+    ],
+    tip: 'Vergelijk de vleugeltekening en de staart.',
+  },
+  {
+    label: 'Houtduif en Turkse Tortel · in vlucht',
     flight: true,
     birds: [
       {id: 'sp002', source: 'houtduif', marks: 'Brede witte vleugelbanden. Volwassen vogels hebben ook een witte halsvlek.'},
+      {id: 'sp004', source: 'turkse-tortel', marks: 'Lichte vleugelvelden en een lange staart met lichte buitenste staartpennen.'},
+    ],
+    tip: 'Vergelijk de vleugeltekening en de staart. De foto’s tonen verschillende hoeken en afstanden.',
+  },
+  {
+    label: 'Holenduif en Turkse Tortel · in vlucht',
+    flight: true,
+    birds: [
       {id: 'sp003', source: 'holenduif', marks: 'Grijze vleugels met donkere randen. Een brede witte vleugelband ontbreekt.'},
       {id: 'sp004', source: 'turkse-tortel', marks: 'Lichte vleugelvelden en een lange staart met lichte buitenste staartpennen.'},
     ],
     tip: 'Vergelijk de vleugeltekening en de staart. De foto’s tonen verschillende hoeken en afstanden.',
+  },
+  {
+    // F3-REV2-R01b (eigenaarbesluit B, 23-11-2026): rust tegen rust met de twee bestaande, gecontroleerde
+    // hoofdfoto's (beide volwassen, zijaanzicht). Tekst alleen uit gebronde kennisprofielclaims sp002/sp003.
+    label: 'Houtduif en Holenduif · in rust',
+    birds: [
+      {id: 'sp002', source: 'houtduif', marks: 'Volwassen: witte halsvlek en lichte iris. Witte rand langs de gevouwen vleugel.'},
+      {id: 'sp003', source: 'holenduif', marks: 'Geen wit in hals of vleugel; groen glanzende halsvlek en donker oog. Twee korte zwarte vleugelstrepen.'},
+    ],
+    rows: [
+      {label: 'Hals', values: ['Volwassen: witte halsvlek', 'Geen wit; groen glanzende halsvlek']},
+      {label: 'Oog', values: ['Volwassen: lichte iris', 'Donker oog']},
+      {label: 'Gevouwen vleugel', values: ['Witte rand van de vleugelband', 'Twee korte zwarte strepen, geen wit']},
+    ],
+    tip: 'Beide foto’s tonen een volwassen vogel van opzij. Jonge Houtduiven missen halsvlek en lichte iris en lijken dan op Holenduif; let dan op het wit in de vleugel.',
   },
   {
     label: 'Grote, Kleine en Middelste Bonte Specht · in vlucht',

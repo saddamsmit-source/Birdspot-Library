@@ -7074,7 +7074,10 @@ export const GUIDE_POSES = Object.freeze({
       "width": 1400,
       "height": 1053,
       "image": "/assets/species/plumage/sp004-flight.webp",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "sourceAudit": "2026-11-23",
+      "sourceSha1": "04effd85b5941e750a8efe03065ea58a540f5385",
+      "sourceAuditEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json (F3-REV2-R01b; zelfde opname r=1.0; auteur en licentie gelijk aan Commons)"
     },
     {
       "label": "Juveniel",

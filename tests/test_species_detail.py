@@ -484,9 +484,12 @@ def main():
                 assert (panel.get_attribute("data-cmp-flight") is not None) == in_flight
 
             open_species("Houtduif", "sp002")
-            stock_dove_card = cmp_card("Holenduif", flight=True)
+            # F3-REV2-R01b (eigenaarbesluit B): rust tegen rust; het ongelijkwaardige vluchtpaar blijft verborgen.
+            stock_dove_card = cmp_card("Holenduif")
+            expect(stock_dove_card.locator('.sd-cmp-panel[data-cmp-flight]')).to_have_count(0)
             stock_dove_panel = stock_dove_card.locator('.sd-cmp-panel:visible')
-            assert_photo_pair(stock_dove_panel, ["sp002-flight-wingband.webp", "sp003-flight-open-sky.webp"], in_flight=True)
+            assert_photo_pair(stock_dove_panel, ["sp002.webp", "sp003.webp"], in_flight=False)
+            expect(stock_dove_panel).to_contain_text("Gevouwen vleugel")
             check_comparison_photo(stock_dove_panel.locator('.sd-field-photo').last)
             expect(stock_dove_panel.get_by_text("Nog geen foto", exact=True)).to_have_count(0)
             expect(stock_dove_card.locator('.sd-cmp-panel:visible .sd-compare-open')).to_have_text(re.compile(r"Open Holenduif"))
