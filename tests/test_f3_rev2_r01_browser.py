@@ -75,6 +75,31 @@ def check_rest_pair(page, own, other):
     expect(page.locator("#sdPanel-herkenning section.sd-similar")).not_to_contain_text("Nog geen")
 
 
+def check_havik_r02c(page):
+    """F3-REV2-R02c: algemene Havik-vluchtfoto uit de gids; mannetje blijft; terug en heropenen."""
+    for attempt in range(2):  # openen en opnieuw openen
+        open_species(page, NAMES["sp007"], "sp007")
+        panel = page.locator("#sdPanel-herkenning")
+        expect(panel.locator('[data-guide-image$="/sp007-flight.webp"]')).to_have_count(0)
+        own = panel.locator('section.sd-flight [data-guide-image$="/sp007-male-flight.webp"] img')
+        expect(own).to_have_count(1)
+        expect(panel.locator('section.sd-flight [data-guide-image$="/sp007-adult_f.webp"] img')).to_have_count(1)
+        flights = panel.locator(".sd-cmp-panel[data-cmp-flight] img").evaluate_all(
+            "imgs => imgs.map(i => new URL(i.src).pathname)")
+        assert "/assets/species/plumage/sp007-male-flight.webp" in flights, flights
+        assert "/assets/species/plumage/sp006-flight.webp" in flights and "/assets/species/plumage/sp008-flight.webp" in flights, flights
+        frame = panel.locator('[data-guide-image$="/sp007-male-flight.webp"]').first.locator(
+            "xpath=ancestor::*[contains(@class,'photo-info-frame')][1]")
+        if frame.count():
+            check_credit(frame, "Вячеслав Юсупов", "CC BY 4.0")
+        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
+        if attempt == 0:
+            page.go_back()  # terugnavigatie sluit eerst het soortblad
+            expect(page.locator(".signature-species-detail-overlay")).to_have_count(0)
+        else:
+            close_sheet(page)
+
+
 def smoke(page):
     for own, other in (("sp002", "sp003"), ("sp003", "sp002")):
         open_species(page, NAMES[own], own)
@@ -90,6 +115,7 @@ def smoke(page):
             expect(own_flight).to_have_count(1)
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
         close_sheet(page)
+    check_havik_r02c(page)
     for species_id in ("sp004", "sp005", "sp006", "sp007"):
         open_species(page, NAMES[species_id], species_id)
         check_quick(page, species_id)
@@ -123,7 +149,7 @@ def main():
                     page.on("pageerror", lambda error: errors.append(str(error)))
                     boot(page, url)
                     smoke(page)
-                    print(f"F3-REV2 Chromium {width}px: R01b rest pair both directions, no unequal flight pair; max. 3 quick cues on 6 species")
+                    print(f"F3-REV2 Chromium {width}px: R01b rest pair both directions, no unequal flight pair; max. 3 quick cues on 6 species; R02c Havik flight photo retired (open, back, reopen)")
             with browser.new_context(viewport={"width": 390, "height": 844},
                                      is_mobile=True, has_touch=True, reduced_motion="reduce") as context:
                 page = context.new_page()
@@ -136,7 +162,7 @@ def main():
                 boot(page, url)
                 assert page.evaluate("!navigator.onLine && !!navigator.serviceWorker.controller")
                 smoke(page)
-                print("F3-REV2 Chromium 390px offline: cached heroes, rest pair and quick panels")
+                print("F3-REV2 Chromium 390px offline: cached heroes, rest pair, quick panels and R02c Havik card")
         server.shutdown()
     assert not errors, errors
 

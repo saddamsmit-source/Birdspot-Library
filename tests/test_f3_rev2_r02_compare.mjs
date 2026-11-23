@@ -6,6 +6,7 @@
  *   bovenaanzicht-Buizerd en de onbewezen algemene Havik-vluchtfoto keren niet terug als vergelijkingsfoto.
  */
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
 import { KNOWLEDGE } from '../src/data/speciesKnowledge.js';
 import { recognitionPanel } from '../src/features/species/detailSections.js';
@@ -56,6 +57,14 @@ for (const id of ['sp005', 'sp006', 'sp007', 'sp008', 'sp248', 'sp253']) {
     assert.ok(!p.imgs.includes('sp007-flight.webp'), id + ': algemene Havik-vluchtfoto (herkomst/leeftijd onbewezen) is geen vergelijkingsfoto');
   }
 }
+
+// 3b. F3-REV2-R02c (eigenaarbesluit 23-11-2026 22:10): algemene Havik-vluchtfoto nergens zichtbaar, wel bewaard.
+const fgm = JSON.parse(readFileSync(new URL('../assets/species/field-guide-media.json', import.meta.url), 'utf8'));
+assert.ok(!recognitionPanel(byId.get('sp007')).includes('sp007-flight.webp'), 'R02c: algemene Havik-vluchtfoto niet op de kaart');
+assert.ok(!JSON.stringify([fgm.poses, fgm.plumage]).includes('/sp007-flight.webp'), 'R02c: niet meer als actieve gidsfoto');
+const kept = fgm.retired.sp007?.find(p => p.image.endsWith('/sp007-flight.webp'));
+assert.ok(kept && kept.source && kept.author && kept.license && kept.retiredReason && kept.retiredOn === '2026-11-23', 'R02c: origineel met bron, maker, licentie en reden bewaard');
+assert.ok(readFileSync(new URL('../assets/species/plumage/sp007-flight.webp', import.meta.url)).length > 0, 'R02c: bestand blijft in de repository');
 
 // 4. Kritische kaarten in beide richtingen voor Sperwer–Havik; publieke tekst zonder bronnamen.
 const crit = (id, vs) => KNOWLEDGE[id].critical.filter(c => c.vs?.includes(vs)).map(c => c.feature.toLowerCase());

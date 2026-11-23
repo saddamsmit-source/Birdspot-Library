@@ -66,3 +66,13 @@ Alle nieuwe tekst komt uit claims die al met bronsleutel in de kennisprofielen o
 **Blijft open:** ANWB (3), Vogelbescherming (3), audio niet menselijk beluisterd (3; Buizerd-alarm 0,84 s; xeno-canto-rechten), iNaturalist-licenties (Buizerd 4, Havik 2), Havik algemene vluchtfoto nog op de kaart (herkomst/leeftijd; eigenaarkeuze behouden of uit de rol), rustpaar vrouwtjes Sperwer–Havik ontbreekt, Buizerd vluchtfoto van onderen klein in beeld, wensen (rustfoto watermerk, juveniel in rust, vrouwtje in vlucht/rust), onafhankelijke biologische/fotoreview.
 
 **EINDMARKERING — F3-REV2-R02/R02b · ROOFVOGELS · BESLUIT B + BEPERKT C UITGEVOERD · ONAFHANKELIJKE QA OPEN · GEEN MERGE · GEEN LIVE**
+
+## F3-REV2-R02c — Havik: algemene vluchtfoto uit de zichtbare gids (23-11-2026)
+
+- Eigenaarbesluit: chat 23-11-2026 22:10 CET (QA op R02b geaccepteerd).
+- Soort: sp007 Havik. Foto: `/assets/species/plumage/sp007-flight.webp`.
+- Reden: herkomstregio niet vastgesteld, onderscheid Euraziatische/Amerikaanse Havik niet bewezen, leeftijd niet vastgesteld; klein en donker in beeld.
+- Wijziging: pose naar `field-guide-media.json` `retired.sp007` (bron, maker, licentie, reden, datum bewaard); `vluchtcontrole.json` besluit `archief` met historie; soortaudit M2 naar `retiredAssets` met de oorspronkelijke beoordeling. Bestand en origcheck-bewijs blijven in de repository. Herkenningstekst ongewijzigd.
+- Blijft zichtbaar: `sp007-male-flight.webp` (mannetje in vlucht) en `sp007-adult_f.webp`; vergelijkingen Havik–Sperwer en Sperwer/Havik/Torenvalk gebruiken de mannetje-vluchtfoto.
+- Open bewijs: licentie/naamsvermelding iNaturalist-foto mannetje-vlucht niet herbevestigd (API 404) — PARTIALLY TESTED, staat open in het register.
+- Tests: `tests/test_f3_rev2_r02_compare.mjs` (niet op kaart, niet actief, origineel bewaard), `tests/test_f3_rev2_r01_browser.py` (openen, browser-terug, heropenen, In vlucht, vergelijkingen, credit, 320/360/390, offline).

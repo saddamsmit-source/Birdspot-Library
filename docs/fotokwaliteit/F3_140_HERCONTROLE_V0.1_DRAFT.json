@@ -1776,7 +1776,8 @@
               "blobSha": "a317b9a677764479a83e1f5b9f11edd0eda8d449",
               "rightsREV2": "PARTIALLY TESTED - uitsnede visueel bevestigd door Claude in sp007-male-flight_vs_source.jpg (automatische r=0.824) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
               "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
-              "comparisonUse": "F3-REV2-R02b: dragende vluchtvergelijkingsfoto met Sperwer en Torenvalk"
+              "comparisonUse": "F3-REV2-R02b: dragende vluchtvergelijkingsfoto met Sperwer en Torenvalk",
+              "openRights": "Licentie/naamsvermelding iNaturalist-foto 29451692 niet herbevestigd (iNaturalist-API 404 op 23-11); registerwaarde CC BY 4.0 Вячеслав Юсупов; zelfde opname visueel bevestigd"
             },
             {
               "role": "In vlucht (Vrouwtje)",
@@ -1813,7 +1814,15 @@
                   "Astur gentilis in flight"
                 ]
               },
-              "comparisonUse": "F3-REV2-R02b: niet meer als vergelijkingsfoto (vervangen door sp007-male-flight); bijschrift zonder leeftijdsclaim"
+              "comparisonUse": "F3-REV2-R02c: niet zichtbaar in de gids en niet in vergelijkingen",
+              "visibleInGuide": false,
+              "retired": {
+                "round": "F3-REV2-R02c",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit R02b-QA en start R03 (chat 23-11-2026 22:10 CET); uitgevoerd als F3-REV2-R02c in PR #352",
+                "reason": "Herkomstregio niet vastgesteld; onderscheid Euraziatische/Amerikaanse Havik niet bewezen; leeftijd niet vastgesteld; klein en donker.",
+                "change": "Uit GUIDE_POSES naar field-guide-media retired.sp007; vluchtcontrole decision archief (historie bewaard); soortaudit M2 retiredAssets. Bestand, credits en origcheck-bewijs blijven in de repository."
+              }
             }
           ],
           "sources": {
@@ -1825,7 +1834,7 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primair: kritisch kenmerk onderzijde jonge vogels (lengtestrepen vs. dwarsbanden Sperwer) + uitstekende kop/zware borst + afgeronde staartpunt; wenkbrauw/poten en juveniel-regel ingeklapt (niets verwijderd).",
             "herkenning": "PARTIALLY TESTED - leeftijd en geslacht correct genuanceerd.",
-            "lijktOp": "PARTIALLY TESTED - R02b: vluchtparen met Sperwer en Torenvalk nu met bewezen Havik-mannetje; gelabelde rijen voor alle Sperwer-paren, Slechtvalk (kop/vleugels en staart/valkuil) en vlucht; kritische kaarten 3 -> 9 (gespiegelde Sperwer-kaarten staartpunt, vleugels en heupen, vliegstijl, roep, vrouwtjes-bouw + jonge Slechtvalk); similar-teksten zonder \"de bron\"",
+            "lijktOp": "PARTIALLY TESTED - R02b: vluchtparen met Sperwer en Torenvalk nu met bewezen Havik-mannetje; gelabelde rijen voor alle Sperwer-paren, Slechtvalk (kop/vleugels en staart/valkuil) en vlucht; kritische kaarten 3 -> 9 (gespiegelde Sperwer-kaarten staartpunt, vleugels en heupen, vliegstijl, roep, vrouwtjes-bouw + jonge Slechtvalk); similar-teksten zonder \"de bron\" R02c: algemene vluchtfoto niet meer zichtbaar.",
             "publicSourceNames": "VERIFIED - R02b: iNaturalist-waarnemingsnummer uit publiek bijschrift naar intern veld sexEvidence"
           },
           "lookalikes": [
@@ -1889,7 +1898,6 @@
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
             "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
-            "G9b algemene vluchtfoto staat nog op de kaart: herkomst/leeftijd onbewezen (eigenaarkeuze: behouden of uit de rol)",
             "G5 audio niet menselijk beluisterd (beperkt C)",
             "G7 iNaturalist-licenties 2 foto's; herkomst vrouwtje-vluchtfoto",
             "Onafhankelijke biologische/fotoreview open"
@@ -1906,16 +1914,23 @@
                 "date": "2026-11-23",
                 "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
                 "effect": "alleen werkvolgorde; ANWB blijft NOT TESTED, audio blijft PARTIALLY TESTED/OPEN tot menselijk beluisterd, geen FULL PASS"
+              },
+              {
+                "decision": "B (aanvulling) - algemene vluchtfoto uit de zichtbare gids",
+                "scope": "/assets/species/plumage/sp007-flight.webp",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit R02b-QA en start R03 (chat 23-11-2026 22:10 CET); uitgevoerd als F3-REV2-R02c in PR #352",
+                "effect": "Foto niet meer zichtbaar; origineel en administratie bewaard; mannetje-vluchtfoto blijft dragende vluchtfoto met open iNaturalist-rechtenpunt"
               }
             ],
             "remainingOpen": [
               "ANWB NOT TESTED",
               "Vogelbescherming NOT TESTED",
               "Audio PARTIALLY TESTED / OPEN",
-              "Algemene vluchtfoto: herkomst/leeftijd",
               "iNaturalist-licenties 2 foto's",
               "Vrouwtje in rust (wens)",
-              "Onafhankelijke biologische/fotoreview"
+              "Onafhankelijke biologische/fotoreview",
+              "Mannetje-vluchtfoto: iNaturalist-licentie niet herbevestigd"
             ],
             "notGranted": "Geen FULL PASS; beperkt C geldt alleen voor ANWB en audio"
           },
@@ -1936,7 +1951,10 @@
               "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
               "tests/test_f3_rev2_r01_browser.py"
             ]
-          }
+          },
+          "resolvedInR02c": [
+            "G9b algemene vluchtfoto uit de zichtbare gids (eigenaarbesluit 23-11-2026 22:10)"
+          ]
         }
       }
     },
@@ -16109,7 +16127,7 @@
           "sp006",
           "sp007"
         ],
-        "status": "OWNER DECISION B + LIMITED C EXECUTED (F3-REV2-R02b) / INDEPENDENT QA OPEN",
+        "status": "OWNER DECISION B + LIMITED C EXECUTED (R02b) / R02c HAVIK FLIGHT PHOTO RETIRED / TECHNICAL QA ACCEPTED / OPEN POINTS REMAIN",
         "date": "2026-11-23",
         "pr": 352
       }
@@ -16141,6 +16159,12 @@
         "time": "18:56",
         "batch": "F3-REV2-R02",
         "decision": "B voor sp005-sp007; beperkt C alleen ANWB/audio; harde regel: vergelijkingen zo uitgebreid mogelijk, quickPrimary vervangt de vergelijking niet"
+      },
+      {
+        "date": "2026-11-23",
+        "time": "22:10",
+        "batch": "F3-REV2-R02",
+        "decision": "R02b-QA geaccepteerd; algemene Havik-vluchtfoto uit de zichtbare gids (origineel bewaard); start R03 na gecontroleerde correctie"
       }
     ]
   }

@@ -50,13 +50,18 @@
           "sexAge": "volwassen vrouwtje (iNaturalist: Life Stage Adult, Sex Female)",
           "quality": "goed",
           "verdict": "goedgekeurd"
-        },
+        }
+      },
+      "retiredAssets": {
         "/assets/species/plumage/sp007-flight.webp": {
           "role": "In vlucht",
           "content": "Vrij in de lucht van opzij; brede vleugel en gebandeerde staart. Onderzijde ongeschikt om de leeftijd zeker toe te kennen.",
           "sexAge": "leeftijd en geslacht onbeslist; label blijft neutraal",
           "quality": "voldoende: vogel klein in beeld",
-          "verdict": "review"
+          "verdict": "review",
+          "retiredIn": "F3-REV2-R02c",
+          "retiredOn": "2026-11-23",
+          "retiredReason": "Eigenaarbesluit 23-11-2026 22:10: herkomst (Euraziatisch/Amerikaans) en leeftijd niet bewezen; klein en donker. Uit de zichtbare gids; origineel en rechtenadministratie bewaard."
         }
       },
       "corrections": [

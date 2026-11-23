@@ -6839,29 +6839,6 @@
     ],
     "sp007": [
       {
-        "label": "In vlucht",
-        "flight": true,
-        "note": "Vrije vlucht in zijaanzicht. Leeftijd en geslacht zijn op deze foto niet vastgesteld; kijk vooral naar de zware bouw en de uitstekende kop.",
-        "file": "Northern Goshawk (Accipiter gentilis) (1).JPG",
-        "nl": "Havik",
-        "latin": "Accipiter gentilis",
-        "author": "Ken Billington",
-        "license": "CC BY-SA 3.0",
-        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-        "source": "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG",
-        "showSourceLink": false,
-        "alt": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
-        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
-        "reviewed": "2026-11-07",
-        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
-        "visualCheck": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
-        "width": 800,
-        "height": 450,
-        "image": "/assets/species/plumage/sp007-flight.webp",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
-        "openPoint": "F3-REV2-R02b: herkomstregio (Euraziatische vs. Amerikaanse Havik) en leeftijd niet aantoonbaar; niet meer als vergelijkingsfoto gebruikt"
-      },
-      {
         "label": "Mannetje in vlucht",
         "sex": "male",
         "flight": true,
@@ -11084,6 +11061,34 @@
         "retiredFrom": "plumage.sp083.juv",
         "retiredReason": "California nest photo: geographic/taxonomic scope is not the western European reference; CSNA January 2026 treats American Great Egret Ardea egretta separately. Community Ardea alba label is broader. Do not publish as a verified European juvenile.",
         "retiredDate": "2026-11-20"
+      }
+    ],
+    "sp007": [
+      {
+        "label": "In vlucht",
+        "flight": true,
+        "note": "Vrije vlucht in zijaanzicht. Leeftijd en geslacht zijn op deze foto niet vastgesteld; kijk vooral naar de zware bouw en de uitstekende kop.",
+        "file": "Northern Goshawk (Accipiter gentilis) (1).JPG",
+        "nl": "Havik",
+        "latin": "Accipiter gentilis",
+        "author": "Ken Billington",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source": "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG",
+        "showSourceLink": false,
+        "alt": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
+        "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
+        "reviewed": "2026-11-07",
+        "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+        "visualCheck": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
+        "width": 800,
+        "height": 450,
+        "image": "/assets/species/plumage/sp007-flight.webp",
+        "flightReview": "archief 2026-11-23: Eigenaarbesluit 23-11-2026 22:10 (F3-REV2-R02c): herkomstregio niet vastgesteld, onderscheid Euraziatische/Amerikaanse Havik niet bewezen, leeftijd niet vastgesteld; foto klein, donker en beperkt bruikbaar. Origineel en bron-/rechtenadministratie bewaard. Eerdere beoordeling: goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "openPoint": "F3-REV2-R02b: herkomstregio (Euraziatische vs. Amerikaanse Havik) en leeftijd niet aantoonbaar; niet meer als vergelijkingsfoto gebruikt",
+        "retiredFrom": "poses.sp007.0",
+        "retiredOn": "2026-11-23",
+        "retiredReason": "Eigenaarbesluit 23-11-2026 22:10 (F3-REV2-R02c): herkomstregio niet vastgesteld, onderscheid Euraziatische/Amerikaanse Havik niet bewezen, leeftijd niet vastgesteld; foto klein, donker en beperkt bruikbaar. Origineel en bron-/rechtenadministratie bewaard."
       }
     ]
   }
