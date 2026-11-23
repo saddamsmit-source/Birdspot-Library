@@ -12,6 +12,7 @@ on:
       - 'assets/species/credits.json'
       - 'assets/species/field-guide-media.json'
       - 'tests/test_f3_rev2_r01.mjs'
+      - 'tests/test_f3_rev2_r02_compare.mjs'
       - 'tests/test_f3_rev2_r01_browser.py'
       - '.github/workflows/f3-rev2-qa.yml'
   workflow_dispatch:
@@ -25,6 +26,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Second round keeps first-round data and has no status without evidence
         run: node tests/test_f3_rev2_r01.mjs
+      - name: Owner rule 23-11 - comparisons stay extensive; quickPrimary never strips them; R02b pairs
+        run: node tests/test_f3_rev2_r02_compare.mjs
       - name: First-round 140 cohort, media and gates unchanged
         run: node tests/test_f3_140_unified_rebaseline.mjs
       - name: Audio 140 contract

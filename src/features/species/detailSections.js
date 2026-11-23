@@ -195,7 +195,11 @@ export function comparisonPhoto(bird, inFlight) {
   const airborneSources = new Set([...poses, ...portraits, ...variants].filter(photo => photo?.flight).map(photo => photo.source));
   const candidates = plumage
     ? [plumagePhoto(id, plumage), ...poses.filter(photo => photoRole(photo) === plumage),
-      ...portraits.filter(photo => photo && photoRole(photo) === plumage)]
+      ...portraits.filter(photo => photo && photoRole(photo) === plumage),
+      // F3-REV2-R02b: een expliciet gekozen gidsfoto zonder eigen geslachtsrol (bv. Buizerd: man en vrouw gelijk)
+      // blijft bruikbaar naast een kleedsleutel. Achteraan, zodat bestaande keuzes ongewijzigd blijven; de
+      // rolfilter hieronder sluit een foto met een afwijkende rol nog steeds uit.
+      ...(bird.photo ? [...poses, ...portraits, ...variants].filter(photo => photo?.image === bird.photo && !photoRole(photo)) : [])]
     : inFlight ? [...poses, ...portraits, ...variants]
       : [...portraits, ...poses].filter(photo => photo && photoRole(photo) !== 'juv');
   return candidates.find(photo =>

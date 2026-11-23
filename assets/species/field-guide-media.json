@@ -6841,7 +6841,7 @@
       {
         "label": "In vlucht",
         "flight": true,
-        "note": "De fijne dwarsbanden passen bij volwassen kleed. Kijk ook naar de zware bouw en de uitstekende kop.",
+        "note": "Vrije vlucht in zijaanzicht. Leeftijd en geslacht zijn op deze foto niet vastgesteld; kijk vooral naar de zware bouw en de uitstekende kop.",
         "file": "Northern Goshawk (Accipiter gentilis) (1).JPG",
         "nl": "Havik",
         "latin": "Accipiter gentilis",
@@ -6858,13 +6858,14 @@
         "width": 800,
         "height": 450,
         "image": "/assets/species/plumage/sp007-flight.webp",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "openPoint": "F3-REV2-R02b: herkomstregio (Euraziatische vs. Amerikaanse Havik) en leeftijd niet aantoonbaar; niet meer als vergelijkingsfoto gebruikt"
       },
       {
         "label": "Mannetje in vlucht",
         "sex": "male",
         "flight": true,
-        "note": "In zijaanzicht met geheven vleugel. Let op de bandering en de lange staart. Het geslacht is geregistreerd in iNaturalist-waarneming 19176694.",
+        "note": "In zijaanzicht met geheven vleugel. Let op de bandering en de lange staart.",
         "file": "iNaturalist photo 29451692",
         "nl": "Havik",
         "latin": "Accipiter gentilis",
@@ -6881,7 +6882,8 @@
         "width": 922,
         "height": 792,
         "image": "/assets/species/plumage/sp007-male-flight.webp",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "sexEvidence": "Geslacht volgens iNaturalist-waarneming 19176694 (bronannotatie; intern, F3-REV2-R02b uit publieke tekst gehaald)"
       },
       {
         "label": "Mannetje",

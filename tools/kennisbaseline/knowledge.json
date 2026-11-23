@@ -6557,6 +6557,42 @@
         "sources": [
           "VB_HVS"
         ]
+      },
+      {
+        "reliability": "ondersteunend",
+        "feature": "Bouw en poten (volwassen vrouwtjes)",
+        "where": "Zittende vogel: borst, poten, kop",
+        "this": "Rank, met lange, dunne gele poten; kop steekt weinig uit; staarthoeken recht afgesneden",
+        "other": "Haviksvrouwtje: zware borst, stevige gele poten en een ver uitstekende kop met lichte wenkbrauw",
+        "vs": [
+          "sp007"
+        ],
+        "conditions": "Volwassen vrouwtjes, vogel goed zichtbaar",
+        "exceptions": "Beide zijn dwarsgebandeerd; sperwervrouwtje en havikmannetje overlappen bijna in grootte",
+        "supporting": "Staartpunt, vliegstijl",
+        "sources": [
+          "VB_SPERWER",
+          "VB_HVS",
+          "VB_HAVIK"
+        ]
+      },
+      {
+        "reliability": "ondersteunend",
+        "feature": "Jachtwijze en vliegbeeld",
+        "where": "Hele vogel in vlucht",
+        "this": "Jaagt laag langs heggen met een paar snelle slagen en een glijvlucht; korte, brede vleugels",
+        "other": "Torenvalk: bidt veel en hangt stil boven open terrein; lange staart",
+        "vs": [
+          "sp008"
+        ],
+        "conditions": "Vogel enige tijd volgen",
+        "exceptions": "Een Sperwer kan ook cirkelen op thermiek; één korte waarneming is onvoldoende",
+        "supporting": "Tekening van de onderzijde",
+        "sources": [
+          "VB_SPERWER",
+          "VB_HVS",
+          "VB_TOREN"
+        ]
       }
     ],
     "similar": [
@@ -6579,8 +6615,10 @@
     "detail": [
       {
         "topic": "geslacht",
-        "text": "Mannetje: blauwgrijze bovenzijde, oranje wangen en keel, bruinoranje gestreepte onderzijde, geen witte wenkbrauw, iris meestal oranje tot rood.",
+        "text": "Mannetje: blauwgrijze bovenzijde, oranje wangen en keel, bruinoranje dwarsgebandeerde onderzijde, geen witte wenkbrauw, iris meestal oranje tot rood.",
         "sources": [
+          "BZ_SPA",
+          "VB_SPERWER",
           "VB_SPERWER_MV"
         ]
       },
@@ -6801,7 +6839,7 @@
       1
     ],
     "caution": {
-      "text": "Kleur zegt weinig: lichte vogels worden vaak voor Ruigpootbuizerd aangezien, de donkerste lijken op Bruine Kiekendief. De bronnen verschillen over de staarthoeken (Vogelbescherming: afgerond; BirdGuides: hoekig).",
+      "text": "Kleur zegt weinig: lichte vogels worden vaak voor Ruigpootbuizerd aangezien, de donkerste lijken op Bruine Kiekendief. De vorm van de staarthoeken wordt niet eenduidig beschreven; gebruik die niet als kenmerk.",
       "sources": [
         "VB_BUIZ",
         "BG_BUZZ"
@@ -7963,6 +8001,105 @@
         "sources": [
           "VB_HVS"
         ]
+      },
+      {
+        "reliability": "ondersteunend",
+        "feature": "Staartpunt",
+        "where": "Uiteinde van de staart",
+        "this": "Duidelijk afgerond",
+        "other": "Sperwer: recht afgesneden hoeken",
+        "vs": [
+          "sp006"
+        ],
+        "conditions": "Vliegende vogel met (deels) gesloten staart",
+        "exceptions": "Een gespreide staart oogt anders",
+        "supporting": "Kop, vleugelvorm",
+        "sources": [
+          "VB_HVS"
+        ]
+      },
+      {
+        "reliability": "ondersteunend",
+        "feature": "Vleugels en heupen in vlucht",
+        "where": "Silhouet",
+        "this": "Vleugels langer en puntiger ten opzichte van de staart; brede 'heupen'",
+        "other": "Sperwer: korte, rechthoekige vleugels; kop steekt weinig uit",
+        "vs": [
+          "sp006"
+        ],
+        "conditions": "Vliegende vogel, liefst van onderen",
+        "exceptions": "Houding verandert tijdens de vlucht",
+        "supporting": "Staartpunt, vliegstijl",
+        "sources": [
+          "VB_HVS"
+        ]
+      },
+      {
+        "reliability": "ondersteunend",
+        "feature": "Vliegstijl",
+        "where": "Vleugelslag",
+        "this": "Langzamer en krachtiger, behalve tijdens een achtervolging",
+        "other": "Sperwer: snelle slagen met korte glijstukken; tenger",
+        "vs": [
+          "sp006"
+        ],
+        "conditions": "Vogel enige tijd volgen",
+        "exceptions": "Jagende haviken vliegen ook snel",
+        "supporting": "Silhouet",
+        "sources": [
+          "VB_HVS"
+        ]
+      },
+      {
+        "reliability": "ondersteunend",
+        "feature": "Roep",
+        "where": "Geluid, vooral in het voorjaar",
+        "this": "Trager en dieper",
+        "other": "Sperwer: snel en hoog 'kie-kie-kie'",
+        "vs": [
+          "sp006"
+        ],
+        "conditions": "Bij het nestterrein",
+        "exceptions": "Buiten het broedseizoen weinig te horen",
+        "supporting": "Silhouet",
+        "sources": [
+          "VB_HVS"
+        ]
+      },
+      {
+        "reliability": "ondersteunend",
+        "feature": "Bouw en poten (volwassen vrouwtjes)",
+        "where": "Zittende vogel: borst, poten, kop",
+        "this": "Zware borst, stevige gele poten, duidelijke lichte wenkbrauw; kop steekt ver uit",
+        "other": "Sperwervrouwtje: rank, met lange, dunne gele poten en recht afgesneden staarthoeken",
+        "vs": [
+          "sp006"
+        ],
+        "conditions": "Volwassen vrouwtjes, vogel goed zichtbaar",
+        "exceptions": "Beide zijn dwarsgebandeerd; havikmannetje en sperwervrouwtje overlappen bijna in grootte",
+        "supporting": "Staartpunt, vliegstijl",
+        "sources": [
+          "VB_HAVIK",
+          "VB_HVS",
+          "VB_SPERWER"
+        ]
+      },
+      {
+        "reliability": "ondersteunend",
+        "feature": "Kop, vleugels en staart (jonge vogels)",
+        "where": "Kop en silhouet",
+        "this": "Duidelijke lichte wenkbrauwstreep; kop steekt ver uit; afgeronde staartpunt",
+        "other": "Jonge Slechtvalk: brede donkere baardstreep, spitse vleugels met brede basis en een vrij korte staart",
+        "vs": [
+          "sp009"
+        ],
+        "conditions": "Jonge vogels, kop of silhouet goed zichtbaar",
+        "exceptions": "Jonge vogels van beide soorten zijn bruin en in de lengte gestreept; de streping onderscheidt ze niet",
+        "supporting": "Jachtwijze",
+        "sources": [
+          "VB_HAVIK",
+          "VB_SLECHT"
+        ]
       }
     ],
     "similar": [
@@ -7975,21 +8112,21 @@
       },
       {
         "id": "sp005",
-        "why": "Door de bron als gelijkende soort genoemd",
+        "why": "Ook een grote roofvogel. Een Havik heeft een ver uitstekende kop, afgeronde staart en bij jonge vogels lengtestrepen.",
         "sources": [
           "VB_HAVIK"
         ]
       },
       {
         "id": "sp248",
-        "why": "Door de bron als gelijkende soort genoemd",
+        "why": "Ook een grote roofvogel. Vergelijk kop, staartvorm en de tekening van de onderzijde.",
         "sources": [
           "VB_HAVIK"
         ]
       },
       {
         "id": "sp249",
-        "why": "Door de bron als gelijkende soort genoemd",
+        "why": "Ook een grote roofvogel. Vergelijk kop, staartvorm en de tekening van de onderzijde.",
         "sources": [
           "VB_HAVIK"
         ]

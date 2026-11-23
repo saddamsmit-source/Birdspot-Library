@@ -8,7 +8,7 @@
 | Basis | PR #351 @ `3dd7badf79b66950af35d8abf6a699c5a05d29c4` · werk-PR #352 |
 | Eigenaarbesluit | 23-11-2026 16:56: R01b-QA geaccepteerd; C (beperkt) voor ANWB/audio sp002–sp004; bronlezing toegestaan; quickPrimary per batch; start R02 |
 | Beoordelaar | Claude (Opus 5.5) — eigen beoordeling, geen onafhankelijke review |
-| Status | **SECOND REVIEW RECORDED · EIGENAARSPOORT OPEN** — geen R03 zonder eigenaarbesluit |
+| Status | **EIGENAARBESLUIT B + BEPERKT C UITGEVOERD (F3-REV2-R02b) · ONAFHANKELIJKE QA OPEN** — geen R03 zonder eigenaarbesluit |
 
 Registratie: `F3_140_HERCONTROLE_V0.1_DRAFT.json` → `records[sp005–sp007].F3.secondReview` en `secondReview.batches[1]`. Eerste ronde ongewijzigd (digest `98b75cae…`).
 
@@ -47,4 +47,22 @@ Niet-materieel/wens: Buizerd-rustfoto lichte vorm met watermerk en kabel; Buizer
 
 `test_f3_rev2_r01.mjs` (6 records, digest, quickPrimary alleen in gecontroleerde batch — mutatie afgevangen), `test_f3_rev2_r01_browser.py` (6 soorten, 320/360/390 + offline), `test_orig_check.py` (+ inat_rights), node-suite 51/52 (`test_photo_feedback` faalt ook op basis: `sharp` ontbreekt lokaal), browserregressies species_detail (1 lokale niet-verklaarde fout, daarna 2/2 PASS), kennisbaseline_browser, mobile_owner_review, plumage_compare_layout PASS.
 
-**EINDMARKERING — F3-REV2-R02 · ROOFVOGELS · EIGENAARSPOORT OPEN · GEEN MERGE · GEEN LIVE**
+## F3-REV2-R02b — uitvoering eigenaarbesluit B (23-11-2026 18:56)
+
+Besluit: B voor sp005, sp006, sp007; beperkt C alleen voor ANWB en audio (werkvolgorde; ANWB `NOT TESTED`, audio `PARTIALLY TESTED`/`OPEN`, geen FULL PASS). **Harde eigenaarregel:** vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; `quickPrimary` is alleen de compacte bovenkant en vervangt de vergelijking nooit.
+
+| Soort | Aangepast | Vergelijking in tekst | Vergelijking in foto |
+|---|---|---|---|
+| Buizerd | G4: bronnamen uit "Let op" (verschil staarthoeken blijft intern in `discrepancies`); G6: LK-095, LK-096 | Gelabelde rijen: Wespendief-man (kop/staart/vleugelhouding), Wespendief-vrouw (kop/staart/ondervleugel), Ruigpootbuizerd (staartbasis/polsvlek en buik/valkuil); 7 kritische kaarten behouden | G3: alle drie volwassen vluchtparen nu met bestaande Buizerd **van onderen** (`sp005-female-flight`), titel "Volwassen in vlucht" behouden; bovenaanzicht blijft alleen eigen vluchtfoto |
+| Sperwer | G8: mannetje "bruinoranje **dwarsgebandeerde** onderzijde"; G6: LK-097, LK-098 | Rijen voor mannetjes (kop/onderzijde/bouw), juvenielen (borst/staartpunt/kop), vlucht met Havik en Torenvalk (kop en vleugels/staart/vliegstijl), juveniel Torenvalk (borst/vleugels/jachtwijze); kritische kaarten 6 → 8 (vrouwtjes-bouw, jachtwijze vs. Torenvalk) | G9: vluchtpaar met Havik nu Sperwer-mannetje tegen bewezen Havik-mannetje |
+| Havik | G9: algemene vluchtfoto niet meer als vergelijkingsfoto; bijschrift zonder onbewezen leeftijdsclaim; G4: waarnemingsnummer naar intern veld `sexEvidence`; similar-teksten zonder "de bron"; G6: LK-097, LK-099 | Kritische kaarten 3 → 9 (gespiegelde Sperwer-kaarten: staartpunt, vleugels en heupen, vliegstijl, roep, vrouwtjes-bouw; jonge Slechtvalk); rijen voor Slechtvalk (kop/vleugels en staart/valkuil) | Vluchtparen met Sperwer en Torenvalk nu met bewezen Havik-mannetje |
+
+Alle nieuwe tekst komt uit claims die al met bronsleutel in de kennisprofielen of bestaande vergelijkingen stonden; geen nieuwe feiten.
+
+**Code:** `comparisonPhoto()` vindt een expliciet gekozen foto zonder geslachtsrol ook naast een kleedsleutel (achteraan in de kandidatenlijst; rolfilter ongewijzigd). Render van 597 soorten t.o.v. `bf1eb09`: alleen sp005, sp006, sp007 en de partnerkaarten sp008, sp009, sp248, sp253 (dezelfde paren in omgekeerde richting) veranderen; de 18 bestaande foto+kleedcombinaties blijven gelijk.
+
+**Tests:** nieuw `test_f3_rev2_r02_compare.mjs` (quickPrimary laat alle kenmerken en kritische kaarten staan; 16 paarrichtingen met rijen; afgewezen foto's niet terug; Sperwer↔Havik wederkerig; geen bronnamen) — mutatietest 4/4 afgevangen. Aangepast aan besluit B: `test_species_detail.py` (Buizerd- en Havik-vergelijkingsfoto's), `test_fotovolgorde_2026-11-10.mjs` (Buizerd van onderen). Node 52/53 (`test_photo_feedback`: `sharp` lokaal afwezig, ook op basis), browser 6/6 PASS lokaal.
+
+**Blijft open:** ANWB (3), Vogelbescherming (3), audio niet menselijk beluisterd (3; Buizerd-alarm 0,84 s; xeno-canto-rechten), iNaturalist-licenties (Buizerd 4, Havik 2), Havik algemene vluchtfoto nog op de kaart (herkomst/leeftijd; eigenaarkeuze behouden of uit de rol), rustpaar vrouwtjes Sperwer–Havik ontbreekt, Buizerd vluchtfoto van onderen klein in beeld, wensen (rustfoto watermerk, juveniel in rust, vrouwtje in vlucht/rust), onafhankelijke biologische/fotoreview.
+
+**EINDMARKERING — F3-REV2-R02/R02b · ROOFVOGELS · BESLUIT B + BEPERKT C UITGEVOERD · ONAFHANKELIJKE QA OPEN · GEEN MERGE · GEEN LIVE**

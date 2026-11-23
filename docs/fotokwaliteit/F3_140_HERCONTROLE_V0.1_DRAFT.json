@@ -975,7 +975,7 @@
           "base": "c8bdd3b89a2e2b396fbd5f7f2ca5bc6b289e3905",
           "pr": 352,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "SECOND REVIEW RECORDED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED + LIMITED C / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R02_ROOFVOGELS_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -1041,7 +1041,8 @@
               "roleCheck": "VERIFIED - neutraal Volwassen (sleutel adult_m, UI-label Volwassen)",
               "blobSha": "032c10170ad5a8935ffb0778ba23a8a2a5e90bf3",
               "rightsREV2": "PARTIALLY TESTED - zelfde opname r=1.0 tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
-              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json"
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "comparisonUse": "F3-REV2-R02b: niet meer in vergelijkingen (bovenaanzicht); blijft eigen vluchtfoto"
             },
             {
               "role": "In vlucht (donkere vorm)",
@@ -1078,7 +1079,8 @@
               "roleCheck": "VERIFIED - neutraal Volwassen",
               "blobSha": "f4a8e7a7e90870aa0475ab992f7336fb971fb9dd",
               "rightsREV2": "PARTIALLY TESTED - zelfde opname r=0.967 tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
-              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json"
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "comparisonUse": "F3-REV2-R02b: dragende volwassen vluchtvergelijkingsfoto met Wespendief en Ruigpootbuizerd"
             }
           ],
           "sources": {
@@ -1090,20 +1092,20 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primair: kritisch kenmerk staartbasis/bandering (vs. Ruigpootbuizerd) + bouw (brede kop, brede vleugels, korte staart) + zweven in ondiepe V; vleugelslag, polsvlek en roep ingeklapt (niets verwijderd).",
             "herkenning": "PARTIALLY TESTED - kleedvariatie (licht tot donker), leeftijd (iris, achterrand, staartband) en geslacht (gelijk) correct beschreven.",
-            "lijktOp": "PARTIALLY TESTED - Wespendief (man, vrouw, juveniel) en Ruigpootbuizerd (volwassen, juveniel) met fotoparen; volwassen paren tonen Buizerd van boven tegenover partners van onderen. Bruine Kiekendief alleen tekst.",
-            "publicSourceNames": "FAIL - \"Let op\"-tekst noemt bronnen (\"Vogelbescherming: afgerond; BirdGuides: hoekig\"), in strijd met §2.2"
+            "lijktOp": "PARTIALLY TESTED - R02b: volwassen vluchtparen met Wespendief (man, vrouw) en Ruigpootbuizerd nu met Buizerd van onderen (gelijkwaardig); gelabelde rijen kop/staart/vleugelhouding resp. staartbasis/polsvlek/valkuil; 7 kritische vergelijkingskaarten behouden; juveniele paren ongewijzigd. Bruine Kiekendief alleen tekst.",
+            "publicSourceNames": "VERIFIED - R02b: bronnamen uit de \"Let op\"-tekst verwijderd; verschil staarthoeken intern in discrepancies bewaard"
           },
           "lookalikes": [
             {
               "pair": "sp005<->sp248 Buizerd-Wespendief",
               "bothDirections": "VERIFIED (panelen op beide kaarten)",
-              "photoEquivalence": "PARTIALLY TESTED - juveniel tegen juveniel gelijkwaardig (beide van onderen); volwassen paren: Buizerd van boven, Wespendief van onderen",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: alle drie paren nu van onderen (volwassen: Buizerd sp005-female-flight); browser 320/360/390 + offline; onafhankelijke review open",
               "diagnosticText": "PARTIALLY TESTED - kop, staart, vleugelhouding en iris goed uitgewerkt"
             },
             {
               "pair": "sp005<->sp253 Buizerd-Ruigpootbuizerd",
               "bothDirections": "VERIFIED",
-              "photoEquivalence": "PARTIALLY TESTED - juveniel paar gelijkwaardig; volwassen paar: Buizerd van boven, Ruigpootbuizerd van onderen (witte staartbasis)",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: volwassen paar nu Buizerd van onderen tegenover Ruigpootbuizerd van onderen; onafhankelijke review open",
               "diagnosticText": "PARTIALLY TESTED - staartbasis, buikschild, polsvlekken"
             },
             {
@@ -1113,7 +1115,7 @@
               "diagnosticText": "PARTIALLY TESTED - alleen verwijzing"
             }
           ],
-          "lookalikeRegister": "Geen LK-paar voor sp005 in SOORTVERWARRING_REGISTER (§3.4.6 open)",
+          "lookalikeRegister": "LK-095 (Wespendief), LK-096 (Ruigpootbuizerd) in SOORTVERWARRING_REGISTER (F3-REV2-R02b); Bruine Kiekendief alleen tekstverwijzing",
           "audio": {
             "status": "PARTIALLY TESTED - 3 lokale clips; rechten 2/3 via Commons bevestigd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
             "files": [
@@ -1152,27 +1154,57 @@
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern",
           "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
           "materialGaps": [
-            "G1 ANWB-soortpassage NOT TESTED",
+            "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
             "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
-            "G3 volwassen vluchtparen ongelijkwaardig (Buizerd van boven)",
-            "G4 bronnamen in publieke \"Let op\"-tekst (§2.2)",
-            "G5 audio: soort/type niet beluisterd; xeno-canto-rechten niet hercontroleerd; alarmclip 0,84 s",
-            "G6 geen LK-registraties (Wespendief, Ruigpootbuizerd)",
+            "G5 audio niet menselijk beluisterd; alarmclip 0,84 s; xeno-canto-rechten niet hercontroleerd (beperkt C)",
             "G7 iNaturalist-licenties 4 foto's niet herbevestigd (API 404)",
-            "W rustfoto lichte vorm met watermerk/kabel; juveniel in rust ontbreekt"
+            "Vluchtfoto van onderen is klein in beeld (bruikbaar, geen topkwaliteit)",
+            "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "options": [
-              "A verder onderzoeken",
-              "B gericht verbeteren",
-              "C voorlopig door met geregistreerde tekortkoming"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-verificatie en audiobewijs",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+                "effect": "alleen werkvolgorde; ANWB blijft NOT TESTED, audio blijft PARTIALLY TESTED/OPEN tot menselijk beluisterd, geen FULL PASS"
+              }
             ],
-            "decision": null,
-            "date": null,
-            "reference": null
+            "remainingOpen": [
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED",
+              "Audio PARTIALLY TESTED / OPEN",
+              "iNaturalist-licenties 4 foto's",
+              "Rustfoto lichte vorm met watermerk/kabel (wens)",
+              "Juveniel in rust ontbreekt (wens)",
+              "Betere volwassen vluchtfoto van onderen (wens)",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; beperkt C geldt alleen voor ANWB en audio"
           },
-          "fullPass": false
+          "fullPass": false,
+          "resolvedInR02b": [
+            "G3 volwassen vluchtparen gelijkwaardig gemaakt met bestaande Buizerd-foto van onderen",
+            "G4 bronnamen uit publieke tekst",
+            "G6 LK-095 en LK-096 geregistreerd",
+            "Vergelijkingen uitgebreid met gelabelde rijen (Wespendief 2x, Ruigpootbuizerd)"
+          ],
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary is alleen de compacte bovenkant en vervangt de volledige vergelijking nooit.",
+          "repair": {
+            "round": "F3-REV2-R02b",
+            "date": "2026-11-23",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -1293,7 +1325,7 @@
           "base": "c8bdd3b89a2e2b396fbd5f7f2ca5bc6b289e3905",
           "pr": 352,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "SECOND REVIEW RECORDED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED + LIMITED C / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R02_ROOFVOGELS_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -1430,24 +1462,24 @@
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primair: kritisch kenmerk onderzijde jonge vogels (dwarsbanden vs. lengtestrepen Havik) + recht afgesneden staarthoeken + korte rechthoekige vleugels/kleine kop; vliegstijl, onderzijde en poten ingeklapt (niets verwijderd).",
-            "herkenning": "FAIL - detailtekst mannetje zegt \"bruinoranje gestreepte onderzijde\"; dit spreekt het doorslaggevende kenmerk (Sperwer altijd dwarsgebandeerd) tegen. Brontekst VB_SPERWER_MV niet herlezen.",
-            "lijktOp": "PARTIALLY TESTED - Havik (mannetje rust, juveniel rust, vlucht) en Torenvalk (juveniel, vlucht) met fotoparen; vluchtpaar met Havik gebruikt de zwakke algemene Havik-foto."
+            "herkenning": "VERIFIED (tekstconsistentie) - R02b: mannetje nu \"bruinoranje dwarsgebandeerde onderzijde\", consistent met het doorslaggevende kenmerk; bronsleutels VB_SPERWER_MV + VB_SPERWER + BZ_SPA; brontekst VB niet herlezen",
+            "lijktOp": "PARTIALLY TESTED - R02b: Havik-vluchtpaar nu met bewezen Havik-mannetje; gelabelde rijen voor mannetjes (kop/onderzijde/bouw), juvenielen (borst/staartpunt/kop), vlucht met Havik en Torenvalk (kop en vleugels/staart/vliegstijl) en juveniel Torenvalk (borst/vleugels/jachtwijze); kritische kaarten 6 -> 8 (vrouwtjes-bouw, jachtwijze vs. Torenvalk)"
           },
           "lookalikes": [
             {
               "pair": "sp006<->sp007 Sperwer-Havik",
               "bothDirections": "VERIFIED",
-              "photoEquivalence": "PARTIALLY TESTED - juveniel tegen juveniel goed (tekening zichtbaar); mannetje rust: verschillende hoek; vlucht: zwakke algemene Havik-foto",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: juveniel en mannetje rust gelijkwaardig genoeg; vlucht nu Sperwer-mannetje tegen Havik-mannetje; rustpaar vrouwtjes ontbreekt (Havik-vrouwtje alleen in vlucht), tekst in kritische kaart",
               "diagnosticText": "VERIFIED - borsttekening, staartpunt, kop/vleugels, vliegstijl; grootte als onbetrouwbaar gemarkeerd"
             },
             {
               "pair": "sp006<->sp008 Sperwer-Torenvalk",
               "bothDirections": "NOT TESTED (Torenvalk-kaart buiten batch)",
-              "photoEquivalence": "PARTIALLY TESTED - juveniel rust; vlucht: Torenvalk biddend van voren",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: juveniel rust + vlucht met gelabelde rijen; Torenvalk-kaart buiten batch",
               "diagnosticText": "PARTIALLY TESTED"
             }
           ],
-          "lookalikeRegister": "Geen LK-paar voor sp006 in SOORTVERWARRING_REGISTER (§3.4.6 open)",
+          "lookalikeRegister": "LK-097 (Havik), LK-098 (Torenvalk) in SOORTVERWARRING_REGISTER (F3-REV2-R02b)",
           "audio": {
             "status": "PARTIALLY TESTED - 2 lokale clips; rechten 2/2 via Commons bevestigd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
             "files": [
@@ -1476,26 +1508,54 @@
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern",
           "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
           "materialGaps": [
-            "G1 ANWB-soortpassage NOT TESTED",
+            "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
             "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
-            "G8 tekstfout: mannetje \"gestreepte\" onderzijde",
-            "G9 vluchtpaar met Havik gebruikt zwakke Havik-foto",
-            "G5 audio: soort/type niet beluisterd",
-            "G6 geen LK-registraties (Havik, Torenvalk)",
-            "W vrouwtje in vrije vlucht ontbreekt"
+            "G5 audio niet menselijk beluisterd (beperkt C)",
+            "Rustfotopaar volwassen vrouwtjes ontbreekt",
+            "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "options": [
-              "A verder onderzoeken",
-              "B gericht verbeteren",
-              "C voorlopig door met geregistreerde tekortkoming"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-verificatie en audiobewijs",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+                "effect": "alleen werkvolgorde; ANWB blijft NOT TESTED, audio blijft PARTIALLY TESTED/OPEN tot menselijk beluisterd, geen FULL PASS"
+              }
             ],
-            "decision": null,
-            "date": null,
-            "reference": null
+            "remainingOpen": [
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED",
+              "Audio PARTIALLY TESTED / OPEN",
+              "Vrouwtje in vrije vlucht (wens)",
+              "Rustpaar vrouwtjes met Havik",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; beperkt C geldt alleen voor ANWB en audio"
           },
-          "fullPass": false
+          "fullPass": false,
+          "resolvedInR02b": [
+            "G8 \"gestreepte\" -> \"dwarsgebandeerde\" onderzijde mannetje",
+            "G9 vluchtpaar met Havik gebruikt nu het bewezen Havik-mannetje",
+            "G6 LK-097 en LK-098 geregistreerd",
+            "Vergelijkingen uitgebreid: gelabelde rijen + 2 extra kritische kaarten"
+          ],
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary is alleen de compacte bovenkant en vervangt de volledige vergelijking nooit.",
+          "repair": {
+            "round": "F3-REV2-R02b",
+            "date": "2026-11-23",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -1631,7 +1691,7 @@
           "base": "c8bdd3b89a2e2b396fbd5f7f2ca5bc6b289e3905",
           "pr": 352,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "SECOND REVIEW RECORDED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED + LIMITED C / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R02_ROOFVOGELS_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -1715,7 +1775,8 @@
               "roleCheck": "PARTIALLY TESTED - mannetje volgens bron",
               "blobSha": "a317b9a677764479a83e1f5b9f11edd0eda8d449",
               "rightsREV2": "PARTIALLY TESTED - uitsnede visueel bevestigd door Claude in sp007-male-flight_vs_source.jpg (automatische r=0.824) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
-              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json"
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "comparisonUse": "F3-REV2-R02b: dragende vluchtvergelijkingsfoto met Sperwer en Torenvalk"
             },
             {
               "role": "In vlucht (Vrouwtje)",
@@ -1751,7 +1812,8 @@
                 "categories": [
                   "Astur gentilis in flight"
                 ]
-              }
+              },
+              "comparisonUse": "F3-REV2-R02b: niet meer als vergelijkingsfoto (vervangen door sp007-male-flight); bijschrift zonder leeftijdsclaim"
             }
           ],
           "sources": {
@@ -1763,8 +1825,8 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primair: kritisch kenmerk onderzijde jonge vogels (lengtestrepen vs. dwarsbanden Sperwer) + uitstekende kop/zware borst + afgeronde staartpunt; wenkbrauw/poten en juveniel-regel ingeklapt (niets verwijderd).",
             "herkenning": "PARTIALLY TESTED - leeftijd en geslacht correct genuanceerd.",
-            "lijktOp": "PARTIALLY TESTED - Sperwer (mannetje, juveniel, vlucht), Slechtvalk (juveniel), Torenvalk (vlucht); vluchtparen gebruiken de algemene Havik-foto zonder vastgestelde herkomst/leeftijd. Buizerd, Wespendief, Blauwe Kiekendief alleen tekst.",
-            "publicSourceNames": "FAIL - fotobijschrift noemt \"iNaturalist-waarneming 19176694\" in de publieksweergave, in strijd met §2.2"
+            "lijktOp": "PARTIALLY TESTED - R02b: vluchtparen met Sperwer en Torenvalk nu met bewezen Havik-mannetje; gelabelde rijen voor alle Sperwer-paren, Slechtvalk (kop/vleugels en staart/valkuil) en vlucht; kritische kaarten 3 -> 9 (gespiegelde Sperwer-kaarten staartpunt, vleugels en heupen, vliegstijl, roep, vrouwtjes-bouw + jonge Slechtvalk); similar-teksten zonder \"de bron\"",
+            "publicSourceNames": "VERIFIED - R02b: iNaturalist-waarnemingsnummer uit publiek bijschrift naar intern veld sexEvidence"
           },
           "lookalikes": [
             {
@@ -1776,17 +1838,17 @@
             {
               "pair": "sp007<->sp009 Havik-Slechtvalk",
               "bothDirections": "NOT TESTED (Slechtvalk-kaart buiten batch)",
-              "photoEquivalence": "PARTIALLY TESTED - juveniel rust tegen juveniel rust",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: juveniel rust tegen juveniel rust met gelabelde rijen; Slechtvalk-kaart buiten batch",
               "diagnosticText": "PARTIALLY TESTED - koptekening, staart, vleugels"
             },
             {
               "pair": "sp007<->sp008 Havik-Torenvalk",
               "bothDirections": "NOT TESTED",
-              "photoEquivalence": "PARTIALLY TESTED - algemene Havik-vluchtfoto",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: vlucht met bewezen Havik-mannetje",
               "diagnosticText": "PARTIALLY TESTED"
             }
           ],
-          "lookalikeRegister": "Geen LK-paar voor sp007 in SOORTVERWARRING_REGISTER (§3.4.6 open)",
+          "lookalikeRegister": "LK-097 (Sperwer), LK-099 (Slechtvalk) in SOORTVERWARRING_REGISTER (F3-REV2-R02b)",
           "audio": {
             "status": "PARTIALLY TESTED - 3 lokale clips; rechten 3/3 via Commons bevestigd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
             "files": [
@@ -1825,27 +1887,56 @@
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern",
           "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
           "materialGaps": [
-            "G1 ANWB-soortpassage NOT TESTED",
+            "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
             "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
-            "G9 algemene vluchtfoto: herkomst (Euraziatische vs. Amerikaanse Havik) en leeftijd niet aantoonbaar",
-            "G4 iNaturalist-waarnemingsnummer in publiek bijschrift (§2.2)",
-            "G5 audio: soort/type niet beluisterd",
-            "G6 geen LK-registraties (Sperwer, Slechtvalk)",
-            "G7 iNaturalist-licenties 2 foto's niet herbevestigd; herkomst vrouwtje-vluchtfoto",
-            "W vrouwtje in rust ontbreekt"
+            "G9b algemene vluchtfoto staat nog op de kaart: herkomst/leeftijd onbewezen (eigenaarkeuze: behouden of uit de rol)",
+            "G5 audio niet menselijk beluisterd (beperkt C)",
+            "G7 iNaturalist-licenties 2 foto's; herkomst vrouwtje-vluchtfoto",
+            "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "options": [
-              "A verder onderzoeken",
-              "B gericht verbeteren",
-              "C voorlopig door met geregistreerde tekortkoming"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-verificatie en audiobewijs",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+                "effect": "alleen werkvolgorde; ANWB blijft NOT TESTED, audio blijft PARTIALLY TESTED/OPEN tot menselijk beluisterd, geen FULL PASS"
+              }
             ],
-            "decision": null,
-            "date": null,
-            "reference": null
+            "remainingOpen": [
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED",
+              "Audio PARTIALLY TESTED / OPEN",
+              "Algemene vluchtfoto: herkomst/leeftijd",
+              "iNaturalist-licenties 2 foto's",
+              "Vrouwtje in rust (wens)",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; beperkt C geldt alleen voor ANWB en audio"
           },
-          "fullPass": false
+          "fullPass": false,
+          "resolvedInR02b": [
+            "G9 algemene vluchtfoto niet meer als vergelijkingsfoto; bijschrift zonder onbewezen leeftijdsclaim",
+            "G4 waarnemingsnummer uit publieke tekst",
+            "G6 LK-097 en LK-099 geregistreerd",
+            "Vergelijkingen uitgebreid: 6 extra kritische kaarten + gelabelde rijen"
+          ],
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary is alleen de compacte bovenkant en vervangt de volledige vergelijking nooit.",
+          "repair": {
+            "round": "F3-REV2-R02b",
+            "date": "2026-11-23",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -16018,7 +16109,7 @@
           "sp006",
           "sp007"
         ],
-        "status": "OWNER GATE OPEN",
+        "status": "OWNER DECISION B + LIMITED C EXECUTED (F3-REV2-R02b) / INDEPENDENT QA OPEN",
         "date": "2026-11-23",
         "pr": 352
       }
@@ -16026,8 +16117,8 @@
     "counts": {
       "total": 140,
       "reexamined": 6,
-      "ownerGateOpen": 3,
-      "ownerDecisions": 3,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 6,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -16044,6 +16135,12 @@
         "time": "16:56",
         "batch": "F3-REV2-R01",
         "decision": "R01b-QA geaccepteerd; C uitsluitend voor ANWB en audio sp002-sp004; openbare bronlezing toegestaan; quickPrimary per gecontroleerde batch; start R02"
+      },
+      {
+        "date": "2026-11-23",
+        "time": "18:56",
+        "batch": "F3-REV2-R02",
+        "decision": "B voor sp005-sp007; beperkt C alleen ANWB/audio; harde regel: vergelijkingen zo uitgebreid mogelijk, quickPrimary vervangt de vergelijking niet"
       }
     ]
   }

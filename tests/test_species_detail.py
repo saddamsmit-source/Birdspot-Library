@@ -649,8 +649,10 @@ def main():
             expect(flight_section.locator('.sd-cmp-more > summary')).to_have_text("Nog 1 soort: Torenvalk")
             flight_falcon_panel = cmp_card("Torenvalk", flight=True).locator('.sd-cmp-panel:visible')
             assert flight_falcon_panel.locator('.sd-cmp-who strong').all_text_contents() == ["Sperwer", "Torenvalk"]
-            for sid in ("sp006", "sp007", "sp008"):
-                assert_photo_once(f"/assets/species/plumage/{sid}-flight.webp")
+            # F3-REV2-R02b (eigenaarbesluit B): Havik in vluchtvergelijkingen = bewezen volwassen mannetje.
+            for path in ("sp006-flight.webp", "sp007-male-flight.webp", "sp008-flight.webp"):
+                assert_photo_once(f"/assets/species/plumage/{path}")
+            expect(p.locator('#sdPanel-herkenning section.sd-similar [data-guide-image$="/sp007-flight.webp"]')).to_have_count(0)
             sparrow_in_flight = p.locator('#sdPanel-herkenning section[aria-label="In vlucht"]')
             expect(sparrow_in_flight.get_by_text("Mannetje in vlucht", exact=True)).to_have_count(1)
             assert p.get_by_label("Roep vrouwtje van Sperwer").count() == 1
@@ -683,7 +685,7 @@ def main():
                 p.set_viewport_size({"width": width, "height": 844})
                 adult_panel = cmp_tab(rough_card, "In vlucht · Volwassen")
                 assert adult_panel.locator('.sd-cmp-who small').all_text_contents() == ["Volwassen in vlucht", "Vrouwtje in vlucht"]
-                assert_photo_pair(adult_panel, ["sp005-adult_m.webp", "sp253.webp"], in_flight=True)
+                assert_photo_pair(adult_panel, ["sp005-female-flight.webp", "sp253.webp"], in_flight=True)  # F3-REV2-R02b: Buizerd van onderen
                 if width == 390:
                     adult_panel.screenshot(path=str(SHOTS / "species_i_buizerd_ruigpoot_volwassen_390.png"))
                 young_panel = cmp_tab(rough_card, "In vlucht · Juveniel")
@@ -696,7 +698,7 @@ def main():
             assert_photo_once("/assets/species/plumage/sp005-juv.webp")
             honey_card = cmp_card("Wespendief")
             female_honey = cmp_tab(honey_card, "In vlucht · Wespendief-vrouwtje")
-            assert_photo_pair(female_honey, ["sp005-adult_m.webp", "sp248-adult_f.webp"], in_flight=True)
+            assert_photo_pair(female_honey, ["sp005-female-flight.webp", "sp248-adult_f.webp"], in_flight=True)  # F3-REV2-R02b
             young_honey = cmp_tab(honey_card, "In vlucht · Juveniel")
             assert_photo_pair(young_honey, ["sp005-juv.webp", "sp248-juv.webp"], in_flight=True)
             assert p.get_by_label("Alarmroep van Buizerd").count() == 1
