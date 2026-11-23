@@ -109,6 +109,22 @@ def audio_record(e: dict, info: dict | None, norm) -> dict:
     return rec
 
 
+INAT_LICENSES = {"cc0": "CC0", "cc-by": "CC BY 4.0", "cc-by-sa": "CC BY-SA 4.0"}
+
+
+def inat_rights(ci, e: dict) -> dict:
+    """F3-REV2-R02: licentie en naamsvermelding van een iNaturalist-foto via de officiële API (api.inaturalist.org/v1).
+    Alleen CC0 / CC BY / CC BY-SA tellen; NC/ND of onbekend geeft rightsMatch False. Auteur moet in de attributie staan."""
+    try:
+        res = ci.get(f"https://api.inaturalist.org/v1/photos/{int(e['inatPhotoId'])}")["results"][0]
+    except Exception as err:  # API onbereikbaar: niets claimen
+        return {"inat": {"error": str(err)[:160]}, "rightsMatch": None}
+    code, attribution = res.get("license_code") or "", res.get("attribution") or ""
+    lic = INAT_LICENSES.get(code)
+    same = bool(lic) and lic == e.get("license") and (e.get("author") or "").casefold() in attribution.casefold()
+    return {"inat": {"licenseCode": code, "license": lic, "attribution": attribution[:200]}, "rightsMatch": same}
+
+
 def run(manifest: Path, out: Path) -> None:
     sys.path.insert(0, str(Path(__file__).parent))
     import commons_intake as ci
@@ -133,6 +149,8 @@ def run(manifest: Path, out: Path) -> None:
                 if not info:
                     rec["error"] = "niet gevonden op Commons"; report["items"].append(rec); continue
                 rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "author", "width", "height", "creditFields")}
+                # F3-REV2-R02: herkomstcontext (beschrijving, opnamedatum, categorieën) voor soort/regio-controle.
+                rec["commonsContext"] = {k: info.get(k) for k in ("description", "date", "categories")}
                 ok, rule = author_match(info, e.get("author", ""), ci.norm_name)
                 rec["authorRule"] = rule
                 rec["rightsMatch"] = ok and ci.norm_name(info["license"]) == ci.norm_name(e.get("license", ""))
@@ -147,6 +165,8 @@ def run(manifest: Path, out: Path) -> None:
                 if data is None:
                     rec["error"] = "bron niet bereikbaar"; report["items"].append(rec); continue
                 rec["rightsMatch"] = None  # metadata niet via API; register blijft bron
+                if e.get("inatPhotoId"):
+                    rec.update(inat_rights(ci, e))
             src = Image.open(io.BytesIO(data)); src.load()
             rec["sourceSize"] = [src.width, src.height]
             rec.update(compare(src, local))

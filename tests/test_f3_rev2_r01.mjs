@@ -119,4 +119,9 @@ for (const r of reviewed) {
   }
   if (s.fullPass) fullPassOk(s);
 }
+// Eigenaarbesluit C (23-11-2026 16:56): quickPrimary alleen bij soorten uit een daadwerkelijk gecontroleerde F3-REV2-batch.
+const knowledge = JSON.parse(readFileSync(new URL('../tools/kennisbaseline/knowledge.json', import.meta.url), 'utf8'));
+const withQuick = Object.keys(knowledge).filter(id => !id.startsWith('_') && knowledge[id].quickPrimary);
+assert.ok(withQuick.every(id => batchIds.includes(id)), 'quickPrimary buiten een gecontroleerde batch: ' + withQuick.filter(id => !batchIds.includes(id)).join(', '));
+for (const id of withQuick) assert.match(j.records.find(r => r.id === id).F3.secondReview.quickPrimary || 'VERIFIED (R01b)', /^VERIFIED/);
 console.log('F3-REV2: ' + reviewed.length + ' records re-examined; first round digest intact; no status without evidence');

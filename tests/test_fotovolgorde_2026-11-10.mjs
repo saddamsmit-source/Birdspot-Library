@@ -377,7 +377,8 @@ for (const id of ['sp031', 'sp032']) {
 assert.equal(GUIDE_POSES.sp009.some(photo => photo.source === GUIDE_PHOTOS.sp009.source), false);
 const buzzard = recognitionPanel(byId.get('sp005')).split('<section class="sd-similar"')[1];
 assert.ok(buzzard.includes('In vlucht · Juveniel') && buzzard.includes('sp005-juv.webp') && buzzard.includes('sp253-juv.webp'));
-assert.ok(buzzard.includes('In vlucht · Volwassen') && buzzard.includes('sp005-adult_m.webp') && buzzard.includes('sp253.webp'));
+// F3-REV2-R02b (eigenaarbesluit B): volwassen Buizerd in vluchtvergelijkingen van onderen (gelijkwaardig aan de partner).
+assert.ok(buzzard.includes('sp005-female-flight.webp') && buzzard.includes('sp253.webp') && !buzzard.includes('sp005-adult_m.webp'));
 console.log(`FV-01/02/05/06 OK — ${checked} soorten, gidsfoto's uniek en vergelijkingsfoto's per houding gecontroleerd`);
 
 // ── FV-07: representatieve soorten, exact bewijs per gekozen situatie ──────

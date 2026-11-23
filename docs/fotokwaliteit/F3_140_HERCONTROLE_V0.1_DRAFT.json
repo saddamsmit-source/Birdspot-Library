@@ -205,7 +205,7 @@
           "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
           "pr": 351,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "status": "OWNER DECISIONS B + LIMITED C RECORDED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -259,9 +259,9 @@
           ],
           "sources": {
             "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOUT, VB_HVH, VB_5D).",
-            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron. Eigenaarbesluit C (23-11-2026 16:56): alleen werkvolgorde.",
             "additional": "Repo-geregistreerd: Cornell CL_WP, BTO_DUIVEN, British Garden Birds GB_SD (eerste ronde); in REV2 niet hergelezen.",
-            "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
+            "independence": "NOT VERIFIED - technische QA ChatGPT op 3dd7bad door eigenaar geaccepteerd; onafhankelijke biologische/fotoreview niet vastgelegd"
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk witte vleugelband + witte halsvlek + lichte iris; witte band in vlucht en bouw ingeklapt onder \"Meer kenmerken\" (niets verwijderd). Tekst consistent met geregistreerde bronnen.",
@@ -290,13 +290,13 @@
             }
           ],
           "lookalikeRegister": "LK-091 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
-          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; eigenaarbesluit C (23-11-2026 16:56) autoriseert alleen de werkvolgorde; checkpoint 75/140 ongewijzigd",
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
             "G2 Vogelbescherming niet hergelezen (toestemming)",
             "G7 geen lokaal gidsaudio",
-            "QA onafhankelijke review R01b open"
+            "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
             "status": "DECIDED",
@@ -308,10 +308,20 @@
               "Vogelbescherming REV2 niet hergelezen (toestemming)",
               "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
               "Vluchtfoto onderbelicht (wens)",
-              "Onafhankelijke review van R01b open",
-              "Biometrie spanwijdte/gewicht zonder ca.-band (niet blokkerend)"
+              "Biometrie spanwijdte/gewicht zonder ca.-band (niet blokkerend)",
+              "Vogelbescherming per soort opnieuw lezen zodra de hostroute dit toestaat (WebFetch-toestemming 23-11 3x onbeantwoord)",
+              "Onafhankelijke biologische/fotoreview open (technische QA uitgevoerd)"
             ],
-            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
+            "notGranted": "Optie C geldt alleen voor ANWB en audio (besluit 16:56); alle overige open punten blijven open",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-soortpassage en ontbrekend lokaal gidsaudio",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R01b en start R02 (chat 23-11-2026 16:56 CET); vastgelegd in PR #352",
+                "effect": "autoriseert alleen de werkvolgorde; ANWB blijft NOT TESTED, audio blijft OPEN, geen FULL F3-PASS"
+              }
+            ]
           },
           "fullPass": false,
           "resolvedInR01b": [
@@ -328,7 +338,19 @@
               "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
               "tests/test_f3_rev2_r01_browser.py"
             ]
-          }
+          },
+          "qaReviews": [
+            {
+              "reviewer": "ChatGPT (onafhankelijk)",
+              "sha": "3dd7badf79b66950af35d8abf6a699c5a05d29c4",
+              "pr": 351,
+              "scope": "technische QA (code, register, tests)",
+              "result": "door eigenaar geaccepteerd binnen de gerapporteerde bewijsgrenzen",
+              "date": "2026-11-23",
+              "evidence": "eigenaarverklaring 23-11-2026 16:56; op PR #351 is geen QA-comment aangetroffen",
+              "limits": "biologische, foto-, ANWB-, audio-, rechten- en fysieke toestelbewijzen behouden uitsluitend hun eigen behaalde status"
+            }
+          ]
         }
       }
     },
@@ -435,7 +457,7 @@
           "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
           "pr": 351,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "status": "OWNER DECISIONS B + LIMITED C RECORDED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -488,9 +510,9 @@
           ],
           "sources": {
             "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOLEN, VB_HVH, VB_5D).",
-            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron. Eigenaarbesluit C (23-11-2026 16:56): alleen werkvolgorde.",
             "additional": "Repo-geregistreerd: RSPB_SD, BTO_DUIVEN, GB_SD (eerste ronde); in REV2 niet hergelezen. Sovon-referentie sp003 nog open uit F3-R01.",
-            "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
+            "independence": "NOT VERIFIED - technische QA ChatGPT op 3dd7bad door eigenaar geaccepteerd; onafhankelijke biologische/fotoreview niet vastgelegd"
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk geen wit in de vleugel + groen glanzende halsvlek + donker oog; \"geen wit in hals of vleugel\" en staartband/strepen ingeklapt (niets verwijderd).",
@@ -519,14 +541,14 @@
             }
           ],
           "lookalikeRegister": "LK-091, LK-092 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
-          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; eigenaarbesluit C (23-11-2026 16:56) autoriseert alleen de werkvolgorde; checkpoint 75/140 ongewijzigd",
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
             "G2 Vogelbescherming niet hergelezen (toestemming)",
             "G5b geen gelijkwaardige vrije-vluchtfoto (vluchtpaar met Houtduif verborgen)",
             "G7 geen lokaal gidsaudio",
-            "QA onafhankelijke review R01b open"
+            "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
             "status": "DECIDED",
@@ -539,10 +561,22 @@
               "Geen gelijkwaardige vrije-vluchtfoto Holenduif gevonden (discover 23-11: 1 kandidaat, landend/onscherp)",
               "iNaturalist-licentie/auteur niet via API hergelezen (2 foto's)",
               "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
-              "Onafhankelijke review van R01b open",
-              "Biometrie zonder ca.-band (niet blokkerend)"
+              "Biometrie zonder ca.-band (niet blokkerend)",
+              "Nog geen gelijkwaardig, voldoende goed vrij-vluchtbeeld",
+              "Twee iNaturalist-licenties nog niet volledig herbevestigd (herbevestiging via API loopt in R02-origcheck)",
+              "Vogelbescherming per soort opnieuw lezen zodra de hostroute dit toestaat",
+              "Onafhankelijke biologische/fotoreview open (technische QA uitgevoerd)"
             ],
-            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
+            "notGranted": "Optie C geldt alleen voor ANWB en audio (besluit 16:56); alle overige open punten blijven open",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-soortpassage en ontbrekend lokaal gidsaudio",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R01b en start R02 (chat 23-11-2026 16:56 CET); vastgelegd in PR #352",
+                "effect": "autoriseert alleen de werkvolgorde; ANWB blijft NOT TESTED, audio blijft OPEN, geen FULL F3-PASS"
+              }
+            ]
           },
           "fullPass": false,
           "resolvedInR01b": [
@@ -559,7 +593,19 @@
               "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
               "tests/test_f3_rev2_r01_browser.py"
             ]
-          }
+          },
+          "qaReviews": [
+            {
+              "reviewer": "ChatGPT (onafhankelijk)",
+              "sha": "3dd7badf79b66950af35d8abf6a699c5a05d29c4",
+              "pr": 351,
+              "scope": "technische QA (code, register, tests)",
+              "result": "door eigenaar geaccepteerd binnen de gerapporteerde bewijsgrenzen",
+              "date": "2026-11-23",
+              "evidence": "eigenaarverklaring 23-11-2026 16:56; op PR #351 is geen QA-comment aangetroffen",
+              "limits": "biologische, foto-, ANWB-, audio-, rechten- en fysieke toestelbewijzen behouden uitsluitend hun eigen behaalde status"
+            }
+          ]
         }
       }
     },
@@ -664,7 +710,7 @@
           "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
           "pr": 351,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "status": "OWNER DECISIONS B + LIMITED C RECORDED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -718,9 +764,9 @@
           ],
           "sources": {
             "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_TT, VB_ZT, VB_5D).",
-            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron. Eigenaarbesluit C (23-11-2026 16:56): alleen werkvolgorde.",
             "additional": "Repo-geregistreerd: Blasco-Zumeta BZ_CD, eBird EB_ETD, birdspot.co.uk BS_TD, Cornell CL_TURKSETORTEL/CL_DUIVEN, LICG_LACHDUIF, Oiseaux.net ON_CD, ELO_CD (eerste ronde); in REV2 niet hergelezen.",
-            "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
+            "independence": "NOT VERIFIED - technische QA ChatGPT op 3dd7bad door eigenaar geaccepteerd; onafhankelijke biologische/fotoreview niet vastgelegd"
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk halsband en egale bovendelen + iriskleur + driedelig koeren; halsband- en kleurregel ingeklapt (niets verwijderd).",
@@ -749,13 +795,13 @@
             }
           ],
           "lookalikeRegister": "LK-093, LK-094 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
-          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; eigenaarbesluit C (23-11-2026 16:56) autoriseert alleen de werkvolgorde; checkpoint 75/140 ongewijzigd",
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
             "G2 Vogelbescherming niet hergelezen (toestemming)",
             "G7 geen lokaal gidsaudio",
-            "QA onafhankelijke review R01b open"
+            "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
             "status": "DECIDED",
@@ -767,10 +813,22 @@
               "Vogelbescherming REV2 niet hergelezen (toestemming)",
               "Juveniel: Commons-auteur \"Kreuzschnabel\" vs. register \"Kreuzschnabel/Wikimedia Commons\" - naamsvermelding controleren",
               "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
-              "Onafhankelijke review van R01b open",
-              "Biometrie lengte zonder ca.-band (niet blokkerend)"
+              "Biometrie lengte zonder ca.-band (niet blokkerend)",
+              "Uitsnede hoofdfoto: automatische score 0,857 onder 0,90; visueel door Claude bevestigd, afzonderlijke onafhankelijke visuele beoordeling open",
+              "Juveniel: juiste verplichte auteursvermelding (Kreuzschnabel) controleren",
+              "Vogelbescherming per soort opnieuw lezen zodra de hostroute dit toestaat",
+              "Onafhankelijke biologische/fotoreview open (technische QA uitgevoerd)"
             ],
-            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
+            "notGranted": "Optie C geldt alleen voor ANWB en audio (besluit 16:56); alle overige open punten blijven open",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-soortpassage en ontbrekend lokaal gidsaudio",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R01b en start R02 (chat 23-11-2026 16:56 CET); vastgelegd in PR #352",
+                "effect": "autoriseert alleen de werkvolgorde; ANWB blijft NOT TESTED, audio blijft OPEN, geen FULL F3-PASS"
+              }
+            ]
           },
           "fullPass": false,
           "resolvedInR01b": [
@@ -786,7 +844,19 @@
               "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
               "tests/test_f3_rev2_r01_browser.py"
             ]
-          }
+          },
+          "qaReviews": [
+            {
+              "reviewer": "ChatGPT (onafhankelijk)",
+              "sha": "3dd7badf79b66950af35d8abf6a699c5a05d29c4",
+              "pr": 351,
+              "scope": "technische QA (code, register, tests)",
+              "result": "door eigenaar geaccepteerd binnen de gerapporteerde bewijsgrenzen",
+              "date": "2026-11-23",
+              "evidence": "eigenaarverklaring 23-11-2026 16:56; op PR #351 is geen QA-comment aangetroffen",
+              "limits": "biologische, foto-, ANWB-, audio-, rechten- en fysieke toestelbewijzen behouden uitsluitend hun eigen behaalde status"
+            }
+          ]
         }
       }
     },
@@ -898,7 +968,244 @@
         "functionTests": "DEFERRED BY OWNER until 140 CONTENT + UI/UX complete; test gate not waived",
         "selectedHero": "/assets/species/sp005.webp",
         "heroSource": "https://commons.wikimedia.org/wiki/File:Common_buzzard_2024-01-20.jpg",
-        "heroRights": "CC BY 4.0; actual Commons page checked; original WebP pixel identity old F2 evidence"
+        "heroRights": "CC BY 4.0; actual Commons page checked; original WebP pixel identity old F2 evidence",
+        "secondReview": {
+          "round": "F3-REV2-R02",
+          "date": "2026-11-23",
+          "base": "c8bdd3b89a2e2b396fbd5f7f2ca5bc6b289e3905",
+          "pr": 352,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED + LIMITED C / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R02_ROOFVOGELS_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Volwassen in rust (lichte vorm)",
+              "path": "/assets/species/plumage/sp005-male-rest.webp",
+              "source": "https://www.inaturalist.org/photos/291739391",
+              "author": "Gianluca Congi",
+              "license": "CC BY-SA 4.0",
+              "visual": "Lichte Buizerd op een kabel, frontaal; borstpatroon en houding goed zichtbaar. Zichtbaar watermerk van de fotograaf onderin.",
+              "identity": "VERIFIED (visueel; bouw, snavel, borsttekening passen bij lichte Buizerd)",
+              "quality": "PARTIALLY TESTED - scherp, maar kunstmatige zitplaats en watermerk",
+              "roleCheck": "VERIFIED - neutraal Volwassen; geslacht niet op kleed vast te stellen",
+              "blobSha": "1585193a49bdbac3d11e85ec8ebe87b9b129e457",
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname r=1.0 tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json"
+            },
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp005.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Common_buzzard_2024-01-20.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Middenbruine Buizerd op tak, zijaanzicht, scherp; donkere bovenborst, lichte band, gele poten.",
+              "identity": "VERIFIED (visueel; Commons: Franconville, Frankrijk, 19-01-2024)",
+              "quality": "VERIFIED - uitstekende hoofdfoto",
+              "roleCheck": "VERIFIED - neutraal Volwassen",
+              "blobSha": "20260ecfdc850860291a93b8c27b089f76df964e",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 72d78c0753e96d9f4042fdb2a63e2527d1d35bb7, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "72d78c0753e96d9f4042fdb2a63e2527d1d35bb7",
+              "provenance": {
+                "description": "A common buzzard ( Buteo buteo ) perched on a tree in Franconville, France.",
+                "date": "2024-01-19 11:55:32",
+                "categories": [
+                  "Buteo buteo in France",
+                  "Nature of Franconville (Val-d'Oise)"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Juveniel)",
+              "path": "/assets/species/plumage/sp005-juv.webp",
+              "source": "https://www.inaturalist.org/photos/147178882",
+              "author": "rober025",
+              "license": "CC BY 4.0",
+              "visual": "Lichte vogel van onderen, vrije vlucht; gestreepte borst, vage achterrand van de vleugel.",
+              "identity": "PARTIALLY TESTED (passend bij juveniele Buizerd; leeftijd volgt uit bronannotatie + zichtbaar kleed)",
+              "quality": "VERIFIED - scherp",
+              "roleCheck": "PARTIALLY TESTED - juveniel aannemelijk",
+              "blobSha": "4bab071b236c7016ece2898153e23c26f883b381",
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname r=1.0 tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json"
+            },
+            {
+              "role": "In vlucht (Volwassen)",
+              "path": "/assets/species/plumage/sp005-adult_m.webp",
+              "source": "https://www.inaturalist.org/photos/309645414",
+              "author": "Roy Lowry",
+              "license": "CC BY 4.0",
+              "visual": "Vrije vlucht, vooral van BOVEN (bovenvleugel en bovenstaart); onderzijde, polsvlekken en staartbanden van onderen niet zichtbaar.",
+              "identity": "VERIFIED (visueel; bouw en staart passen)",
+              "quality": "PARTIALLY TESTED - goed beeld, maar ongeschikt voor vergelijkingen die over de onderzijde gaan",
+              "roleCheck": "VERIFIED - neutraal Volwassen (sleutel adult_m, UI-label Volwassen)",
+              "blobSha": "032c10170ad5a8935ffb0778ba23a8a2a5e90bf3",
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname r=1.0 tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "comparisonUse": "F3-REV2-R02b: niet meer in vergelijkingen (bovenaanzicht); blijft eigen vluchtfoto"
+            },
+            {
+              "role": "In vlucht (donkere vorm)",
+              "path": "/assets/species/plumage/sp005-flight-dark.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Common_buzzard_(Buteo_buteo_buteo)_in_flight.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Donkere Buizerd van onderen, vrije vlucht, scherp.",
+              "identity": "VERIFIED (visueel; Commons: Engeland, 2015)",
+              "quality": "VERIFIED - toont kleedvariatie",
+              "roleCheck": "VERIFIED - echte vrije vlucht",
+              "blobSha": "5c91fb86d0289fe136e588ff584788dc42eeea73",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 a1ec627483d9fe53a1704761eb8ee31a660625f4, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "a1ec627483d9fe53a1704761eb8ee31a660625f4",
+              "provenance": {
+                "description": "Common buzzard ( Buteo buteo buteo ) in flight",
+                "date": "2015-08-24 11:15:17",
+                "categories": [
+                  "Buteo buteo in England",
+                  "Buteo buteo in flight"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Volwassen, van onderen)",
+              "path": "/assets/species/plumage/sp005-female-flight.webp",
+              "source": "https://www.inaturalist.org/photos/112563573",
+              "author": "Simone Bocca",
+              "license": "CC BY-SA 4.0",
+              "visual": "Lichte Buizerd van onderen, vrije vlucht; polsvlekken en lichte borstband; vogel vrij klein in beeld.",
+              "identity": "VERIFIED (visueel)",
+              "quality": "PARTIALLY TESTED - bruikbaar, vogel klein in beeld",
+              "roleCheck": "VERIFIED - neutraal Volwassen",
+              "blobSha": "f4a8e7a7e90870aa0475ab992f7336fb971fb9dd",
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname r=0.967 tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "comparisonUse": "F3-REV2-R02b: dragende volwassen vluchtvergelijkingsfoto met Wespendief en Ruigpootbuizerd"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_BUIZ).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primair: kritisch kenmerk staartbasis/bandering (vs. Ruigpootbuizerd) + bouw (brede kop, brede vleugels, korte staart) + zweven in ondiepe V; vleugelslag, polsvlek en roep ingeklapt (niets verwijderd).",
+            "herkenning": "PARTIALLY TESTED - kleedvariatie (licht tot donker), leeftijd (iris, achterrand, staartband) en geslacht (gelijk) correct beschreven.",
+            "lijktOp": "PARTIALLY TESTED - R02b: volwassen vluchtparen met Wespendief (man, vrouw) en Ruigpootbuizerd nu met Buizerd van onderen (gelijkwaardig); gelabelde rijen kop/staart/vleugelhouding resp. staartbasis/polsvlek/valkuil; 7 kritische vergelijkingskaarten behouden; juveniele paren ongewijzigd. Bruine Kiekendief alleen tekst.",
+            "publicSourceNames": "VERIFIED - R02b: bronnamen uit de \"Let op\"-tekst verwijderd; verschil staarthoeken intern in discrepancies bewaard"
+          },
+          "lookalikes": [
+            {
+              "pair": "sp005<->sp248 Buizerd-Wespendief",
+              "bothDirections": "VERIFIED (panelen op beide kaarten)",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: alle drie paren nu van onderen (volwassen: Buizerd sp005-female-flight); browser 320/360/390 + offline; onafhankelijke review open",
+              "diagnosticText": "PARTIALLY TESTED - kop, staart, vleugelhouding en iris goed uitgewerkt"
+            },
+            {
+              "pair": "sp005<->sp253 Buizerd-Ruigpootbuizerd",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: volwassen paar nu Buizerd van onderen tegenover Ruigpootbuizerd van onderen; onafhankelijke review open",
+              "diagnosticText": "PARTIALLY TESTED - staartbasis, buikschild, polsvlekken"
+            },
+            {
+              "pair": "sp005->sp173 Buizerd-Bruine Kiekendief",
+              "bothDirections": "NOT TESTED",
+              "photoEquivalence": "N/A - alleen tekst",
+              "diagnosticText": "PARTIALLY TESTED - alleen verwijzing"
+            }
+          ],
+          "lookalikeRegister": "LK-095 (Wespendief), LK-096 (Ruigpootbuizerd) in SOORTVERWARRING_REGISTER (F3-REV2-R02b); Bruine Kiekendief alleen tekstverwijzing",
+          "audio": {
+            "status": "PARTIALLY TESTED - 3 lokale clips; rechten 2/3 via Commons bevestigd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp005-adult-call.mp3",
+                "label": "Roep",
+                "source": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_-_Common_Buzzard_XC538277.mp3",
+                "author": "Benoît Van Hecke",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 161d9062c4df62c8d0d998950fd9b1c82528dc2d",
+                "status": "PARTIALLY TESTED - bestand aanwezig (20.0 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp005-alarm.mp3",
+                "label": "Alarmroep",
+                "source": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_warning_the_fledglings_7643.ogg",
+                "author": "T.Voekler",
+                "license": "CC BY-SA 3.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 88bbd0eaef805ff5aa989d1ccdfd276c84626bb1",
+                "status": "PARTIALLY TESTED - bestand aanwezig (0.8 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd; zeer kort fragment, hoorbaarheid/bruikbaarheid twijfelachtig",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp005-field-call.mp3",
+                "label": "Roep, tweede voorbeeld (xeno-canto)",
+                "source": "https://xeno-canto.org/1036868",
+                "author": "Fiete Nörenberg",
+                "license": "CC BY 4.0",
+                "rights": "NOT TESTED - xeno-canto-bron valt buiten de Commons/iNaturalist-route; registerwaarde blijft",
+                "status": "PARTIALLY TESTED - bestand aanwezig (14.9 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern",
+          "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
+            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
+            "G5 audio niet menselijk beluisterd; alarmclip 0,84 s; xeno-canto-rechten niet hercontroleerd (beperkt C)",
+            "G7 iNaturalist-licenties 4 foto's niet herbevestigd (API 404)",
+            "Vluchtfoto van onderen is klein in beeld (bruikbaar, geen topkwaliteit)",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-verificatie en audiobewijs",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+                "effect": "alleen werkvolgorde; ANWB blijft NOT TESTED, audio blijft PARTIALLY TESTED/OPEN tot menselijk beluisterd, geen FULL PASS"
+              }
+            ],
+            "remainingOpen": [
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED",
+              "Audio PARTIALLY TESTED / OPEN",
+              "iNaturalist-licenties 4 foto's",
+              "Rustfoto lichte vorm met watermerk/kabel (wens)",
+              "Juveniel in rust ontbreekt (wens)",
+              "Betere volwassen vluchtfoto van onderen (wens)",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; beperkt C geldt alleen voor ANWB en audio"
+          },
+          "fullPass": false,
+          "resolvedInR02b": [
+            "G3 volwassen vluchtparen gelijkwaardig gemaakt met bestaande Buizerd-foto van onderen",
+            "G4 bronnamen uit publieke tekst",
+            "G6 LK-095 en LK-096 geregistreerd",
+            "Vergelijkingen uitgebreid met gelabelde rijen (Wespendief 2x, Ruigpootbuizerd)"
+          ],
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary is alleen de compacte bovenkant en vervangt de volledige vergelijking nooit.",
+          "repair": {
+            "round": "F3-REV2-R02b",
+            "date": "2026-11-23",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
+        }
       }
     },
     {
@@ -1011,7 +1318,245 @@
             "minimumNormalizedCorrelation": 0.9892
           }
         ],
-        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R02",
+          "date": "2026-11-23",
+          "base": "c8bdd3b89a2e2b396fbd5f7f2ca5bc6b289e3905",
+          "pr": 352,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED + LIMITED C / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R02_ROOFVOGELS_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/plumage/sp006-hero-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Sparrowhawk_-_Accipiter_nisus_-_Male_(52253225702).jpg",
+              "author": "caroline legg",
+              "license": "CC BY 2.0",
+              "visual": "Volwassen mannetje met geheven vleugels op mospol, scherp; oranje wangen, dwarsgebandeerde oranje onderzijde, blauwgrijze bovenzijde.",
+              "identity": "VERIFIED (visueel; Commons-categorie Accipiter nisus (male), Schotland 2022)",
+              "quality": "VERIFIED - zeer scherp; dynamische houding",
+              "roleCheck": "VERIFIED - Mannetje",
+              "blobSha": "61ae93873f364bcd14fed70719fdfd855d02d3b5",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 c6bec5e043429e9eff72ddddb8acb135547d1aa1, zelfde opname r=0.999",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "c6bec5e043429e9eff72ddddb8acb135547d1aa1",
+              "provenance": {
+                "description": "Sparrowhawk - Dumfries & Galloway",
+                "date": "Taken on 26 July 2022, 14:25",
+                "categories": [
+                  "Accipiter nisus (male)",
+                  "Accipiter nisus in Scotland",
+                  "Birds of Dumfries and Galloway",
+                  "July 2022 in Dumfries and Galloway"
+                ]
+              }
+            },
+            {
+              "role": "Mannetje",
+              "path": "/assets/species/sp006.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Male_Sparrowhawk_(46103963061).jpg",
+              "author": "caroline legg",
+              "license": "CC BY 2.0",
+              "visual": "Volwassen mannetje zittend, zijaanzicht; blauwgrijze rug, oranje wang en flank.",
+              "identity": "VERIFIED (visueel; Commons: male, Schotland 2018)",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - Mannetje",
+              "blobSha": "21e99aa2edf1f7de83cc75dd54209701d382079e",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 c72f1276283f87639b534617644732b64462f1ae, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "c72f1276283f87639b534617644732b64462f1ae",
+              "provenance": {
+                "description": "Male Sparrowhawk",
+                "date": "Taken on 20 November 2018, 13:09",
+                "categories": [
+                  "Accipiter nisus (male)",
+                  "Accipiter nisus in Scotland",
+                  "Birds of Dumfries and Galloway",
+                  "November 2018 in Dumfries and Galloway",
+                  "Wildlife in Dumfriesshire"
+                ]
+              }
+            },
+            {
+              "role": "Vrouwtje",
+              "path": "/assets/species/plumage/sp006-adult_f.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Female_Sparrowhawk_(45968114392).jpg",
+              "author": "caroline legg",
+              "license": "CC BY 2.0",
+              "visual": "Volwassen vrouwtje met gespreide vleugels; grijsbruine bovenzijde, lichte wenkbrauw, donkere dwarsbanden.",
+              "identity": "VERIFIED (visueel; Commons: female, Schotland 2018)",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - Vrouwtje",
+              "blobSha": "c9c13ba81d76e9f4abaf7e495f245e298fb6eb77",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 6b7753b86a43fc0bdfad4c6cd3bf1efe57ca2f03, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "6b7753b86a43fc0bdfad4c6cd3bf1efe57ca2f03",
+              "provenance": {
+                "description": "Female Sparrowhawk - Dumfriesshire",
+                "date": "Taken on 20 November 2018, 12:23",
+                "categories": [
+                  "Accipiter nisus (female)",
+                  "Accipiter nisus in Scotland",
+                  "Birds of Dumfries and Galloway",
+                  "November 2018 in Dumfries and Galloway",
+                  "Wildlife in Dumfriesshire"
+                ]
+              }
+            },
+            {
+              "role": "Juveniel",
+              "path": "/assets/species/plumage/sp006-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Female_Juvenile_Sparrowhawk_(36519885205).jpg",
+              "author": "caroline legg",
+              "license": "CC BY 2.0",
+              "visual": "Jonge vogel op gras; bruine bovenzijde met lichte randen, onregelmatige dwars-/V-vormige tekening.",
+              "identity": "VERIFIED (visueel; Commons-categorie juvenile + female)",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - Juveniel",
+              "blobSha": "a60ffce3f63cfacbaa614fcb1ddc235f63e6835b",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 0ac28a6cbebf0785ce11785c0f2779c913450d13, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "0ac28a6cbebf0785ce11785c0f2779c913450d13",
+              "provenance": {
+                "description": "Sparrowhawk - Dumfries & Galloway",
+                "date": "Taken on 12 August 2017, 13:09",
+                "categories": [
+                  "Accipiter nisus (female)",
+                  "Accipiter nisus (juvenile)",
+                  "Accipiter nisus in Scotland",
+                  "August 2017 in Dumfries and Galloway",
+                  "Birds of Dumfries and Galloway"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Mannetje)",
+              "path": "/assets/species/plumage/sp006-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eurasian_sparrowhawk_2023_12_31_01.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Vrije vlucht van onderen; oranje getinte dwarsbanden, korte vleugels, lange staart.",
+              "identity": "VERIFIED (visueel; Commons: male, Franconville 2023)",
+              "quality": "VERIFIED - scherp",
+              "roleCheck": "VERIFIED - echte vrije vlucht",
+              "blobSha": "3f54446193cc172db0494cc1e7857d23f4bfa18e",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 93bac3ce05a7ba659b3badf9d89ee14ea600f937, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "93bac3ce05a7ba659b3badf9d89ee14ea600f937",
+              "provenance": {
+                "description": "A male Eurasian sparrowhawk ( Accipiter nisus ) flying in Franconville, France.",
+                "date": "2023-12-31 13:39:31",
+                "categories": [
+                  "Accipiter nisus in flight"
+                ]
+              }
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_SPERWER, VB_SPERWER_MV, VB_HVS).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primair: kritisch kenmerk onderzijde jonge vogels (dwarsbanden vs. lengtestrepen Havik) + recht afgesneden staarthoeken + korte rechthoekige vleugels/kleine kop; vliegstijl, onderzijde en poten ingeklapt (niets verwijderd).",
+            "herkenning": "VERIFIED (tekstconsistentie) - R02b: mannetje nu \"bruinoranje dwarsgebandeerde onderzijde\", consistent met het doorslaggevende kenmerk; bronsleutels VB_SPERWER_MV + VB_SPERWER + BZ_SPA; brontekst VB niet herlezen",
+            "lijktOp": "PARTIALLY TESTED - R02b: Havik-vluchtpaar nu met bewezen Havik-mannetje; gelabelde rijen voor mannetjes (kop/onderzijde/bouw), juvenielen (borst/staartpunt/kop), vlucht met Havik en Torenvalk (kop en vleugels/staart/vliegstijl) en juveniel Torenvalk (borst/vleugels/jachtwijze); kritische kaarten 6 -> 8 (vrouwtjes-bouw, jachtwijze vs. Torenvalk)"
+          },
+          "lookalikes": [
+            {
+              "pair": "sp006<->sp007 Sperwer-Havik",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: juveniel en mannetje rust gelijkwaardig genoeg; vlucht nu Sperwer-mannetje tegen Havik-mannetje; rustpaar vrouwtjes ontbreekt (Havik-vrouwtje alleen in vlucht), tekst in kritische kaart",
+              "diagnosticText": "VERIFIED - borsttekening, staartpunt, kop/vleugels, vliegstijl; grootte als onbetrouwbaar gemarkeerd"
+            },
+            {
+              "pair": "sp006<->sp008 Sperwer-Torenvalk",
+              "bothDirections": "NOT TESTED (Torenvalk-kaart buiten batch)",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: juveniel rust + vlucht met gelabelde rijen; Torenvalk-kaart buiten batch",
+              "diagnosticText": "PARTIALLY TESTED"
+            }
+          ],
+          "lookalikeRegister": "LK-097 (Havik), LK-098 (Torenvalk) in SOORTVERWARRING_REGISTER (F3-REV2-R02b)",
+          "audio": {
+            "status": "PARTIALLY TESTED - 2 lokale clips; rechten 2/2 via Commons bevestigd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp006-nest-call.mp3",
+                "label": "Roep vrouwtje",
+                "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC467097.mp3",
+                "author": "Alvaro Ortiz Troncoso",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 ef4cdde6609dfc2314fd441d9d726611cd5bd259",
+                "status": "PARTIALLY TESTED - bestand aanwezig (10.2 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp006-begging.mp3",
+                "label": "Bedelroep jongen",
+                "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC234158.mp3",
+                "author": "Steven Wilson",
+                "license": "CC BY-SA 3.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 3a3daf648654879232b6470ca729ce8bda80ac0d",
+                "status": "PARTIALLY TESTED - bestand aanwezig (22.0 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern",
+          "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
+            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
+            "G5 audio niet menselijk beluisterd (beperkt C)",
+            "Rustfotopaar volwassen vrouwtjes ontbreekt",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-verificatie en audiobewijs",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+                "effect": "alleen werkvolgorde; ANWB blijft NOT TESTED, audio blijft PARTIALLY TESTED/OPEN tot menselijk beluisterd, geen FULL PASS"
+              }
+            ],
+            "remainingOpen": [
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED",
+              "Audio PARTIALLY TESTED / OPEN",
+              "Vrouwtje in vrije vlucht (wens)",
+              "Rustpaar vrouwtjes met Havik",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; beperkt C geldt alleen voor ANWB en audio"
+          },
+          "fullPass": false,
+          "resolvedInR02b": [
+            "G8 \"gestreepte\" -> \"dwarsgebandeerde\" onderzijde mannetje",
+            "G9 vluchtpaar met Havik gebruikt nu het bewezen Havik-mannetje",
+            "G6 LK-097 en LK-098 geregistreerd",
+            "Vergelijkingen uitgebreid: gelabelde rijen + 2 extra kritische kaarten"
+          ],
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary is alleen de compacte bovenkant en vervangt de volledige vergelijking nooit.",
+          "repair": {
+            "round": "F3-REV2-R02b",
+            "date": "2026-11-23",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
+        }
       }
     },
     {
@@ -1139,7 +1684,278 @@
             "minimumNormalizedCorrelation": 0.9973
           }
         ],
-        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R02",
+          "date": "2026-11-23",
+          "base": "c8bdd3b89a2e2b396fbd5f7f2ca5bc6b289e3905",
+          "pr": 352,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED + LIMITED C / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R02_ROOFVOGELS_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/plumage/sp007-hero-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Male_northern_goshawk_(52294386465).jpg",
+              "author": "Andrey Gulivanov",
+              "license": "CC BY 2.0",
+              "visual": "Volwassen mannetje in den, scherp; oranjerood oog, donkere kap, lichte wenkbrauw, fijne dwarsbanden.",
+              "identity": "VERIFIED (visueel; Commons-categorie Astur gentilis (male), Rusland 2022)",
+              "quality": "VERIFIED - uitstekende hoofdfoto",
+              "roleCheck": "VERIFIED - Mannetje",
+              "blobSha": "e4ac7e046d0a8c8933747016cf0280d717d1dd47",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 7d6ecbe1e4d126293b12272763b62e9c6c07da4e, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "7d6ecbe1e4d126293b12272763b62e9c6c07da4e",
+              "provenance": {
+                "description": "St Petersburg/Leningrad Oblast. Accipiter gentilis",
+                "date": "Taken on 1 July 2022, 06:29",
+                "categories": [
+                  "Astur gentilis (male)",
+                  "Astur gentilis in Russia"
+                ]
+              }
+            },
+            {
+              "role": "Mannetje",
+              "path": "/assets/species/sp007.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Male_northern_goshawk_(49434582392).jpg",
+              "author": "Andrey Gulivanov",
+              "license": "CC BY 2.0",
+              "visual": "Volwassen mannetje op tak, van onderen; fijn gebandeerde onderzijde, lichte wenkbrauw.",
+              "identity": "VERIFIED (visueel; Commons: male, Rusland 2020)",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - Mannetje",
+              "blobSha": "bab3b816e1905309c63e78912462a5b7c63f0c73",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 8e5e7d5e404f518afd7015882ca9cb5e8b370924, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "8e5e7d5e404f518afd7015882ca9cb5e8b370924",
+              "provenance": {
+                "description": "St Petersburg/Leningrad Oblast. Accipiter gentilis",
+                "date": "Taken on 10 January 2020, 10:13",
+                "categories": [
+                  "Astur gentilis (male)",
+                  "Astur gentilis in Russia"
+                ]
+              }
+            },
+            {
+              "role": "Juveniel",
+              "path": "/assets/species/plumage/sp007-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Juvenile_northern_goshawk_(52310658114).jpg",
+              "author": "Andrey Gulivanov",
+              "license": "CC BY 2.0",
+              "visual": "Jonge vogel op tak; druppelvormige lengtestrepen op lichte onderzijde, bruine bovenzijde.",
+              "identity": "VERIFIED (visueel; Commons-categorie Astur gentilis (juvenile), Rusland 2022)",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - Juveniel",
+              "blobSha": "c08d80fe567f1812f6babe99f5c143fb23e8e1c0",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 aafdd25ebbf77e850bc6b63a62b21e6931c4c696, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "aafdd25ebbf77e850bc6b63a62b21e6931c4c696",
+              "provenance": {
+                "description": "St Petersburg/Leningrad Oblast. Juvenile northern goshawk",
+                "date": "Taken on 1 July 2022, 05:54",
+                "categories": [
+                  "Astur gentilis (juvenile)",
+                  "Astur gentilis in Russia"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Mannetje)",
+              "path": "/assets/species/plumage/sp007-male-flight.webp",
+              "source": "https://www.inaturalist.org/photos/29451692",
+              "author": "Вячеслав Юсупов",
+              "license": "CC BY 4.0",
+              "visual": "Vrije vlucht in zijaanzicht; gebandeerde onderzijde, witte onderstaartdekveren, donkere kap.",
+              "identity": "PARTIALLY TESTED (visueel passend; geslacht volgt uit bronannotatie; herkomstregio niet gelezen)",
+              "quality": "VERIFIED - goed bruikbaar",
+              "roleCheck": "PARTIALLY TESTED - mannetje volgens bron",
+              "blobSha": "a317b9a677764479a83e1f5b9f11edd0eda8d449",
+              "rightsREV2": "PARTIALLY TESTED - uitsnede visueel bevestigd door Claude in sp007-male-flight_vs_source.jpg (automatische r=0.824) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "comparisonUse": "F3-REV2-R02b: dragende vluchtvergelijkingsfoto met Sperwer en Torenvalk",
+              "openRights": "Licentie/naamsvermelding iNaturalist-foto 29451692 niet herbevestigd (iNaturalist-API 404 op 23-11); registerwaarde CC BY 4.0 Вячеслав Юсупов; zelfde opname visueel bevestigd"
+            },
+            {
+              "role": "In vlucht (Vrouwtje)",
+              "path": "/assets/species/plumage/sp007-adult_f.webp",
+              "source": "https://www.inaturalist.org/photos/478065886",
+              "author": "WATANABE Hitoshi 渡辺仁",
+              "license": "CC BY 4.0",
+              "visual": "Vrije vlucht van onderen; fijn gebandeerd, lichte wenkbrauw.",
+              "identity": "PARTIALLY TESTED (visueel passend; geslacht en herkomst (mogelijk Japanse ondersoort) niet herbevestigd)",
+              "quality": "VERIFIED - scherp",
+              "roleCheck": "PARTIALLY TESTED - vrouwtje volgens bron",
+              "blobSha": "e0ebfc1fc4404f7ea333b6ad17ce183b1e109025",
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname r=1.0 tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json"
+            },
+            {
+              "role": "In vlucht (algemeen)",
+              "path": "/assets/species/plumage/sp007-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG",
+              "author": "Ken Billington",
+              "license": "CC BY-SA 3.0",
+              "visual": "Vrije vlucht in zijaanzicht tegen blauwe lucht, deels tegenlicht, 800x450; buffig en zwaar getekend, leeftijd onduidelijk.",
+              "identity": "NOT VERIFIED - herkomstregio niet vastgelegd (Commons: alleen datum 2010-12-14, categorie in flight); na de taxonomische splitsing van Euraziatische en Amerikaanse Havik is soortidentiteit zonder herkomst niet aantoonbaar",
+              "quality": "PARTIALLY TESTED - klein, tegenlicht, leeftijd onduidelijk",
+              "roleCheck": "PARTIALLY TESTED - echte vrije vlucht, leeftijd/geslacht onbewezen",
+              "blobSha": "b9ebdf6f4b99fe33a68b1967a164d4a793c1b5eb",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 195142d2ac6ea6502f28ad3970a24be0aae1127b, zelfde opname r=0.999",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
+              "sourceSha1": "195142d2ac6ea6502f28ad3970a24be0aae1127b",
+              "provenance": {
+                "description": "Northern Goshawk (Accipiter gentilis)",
+                "date": "2010-12-14",
+                "categories": [
+                  "Astur gentilis in flight"
+                ]
+              },
+              "comparisonUse": "F3-REV2-R02c: niet zichtbaar in de gids en niet in vergelijkingen",
+              "visibleInGuide": false,
+              "retired": {
+                "round": "F3-REV2-R02c",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit R02b-QA en start R03 (chat 23-11-2026 22:10 CET); uitgevoerd als F3-REV2-R02c in PR #352",
+                "reason": "Herkomstregio niet vastgesteld; onderscheid Euraziatische/Amerikaanse Havik niet bewezen; leeftijd niet vastgesteld; klein en donker.",
+                "change": "Uit GUIDE_POSES naar field-guide-media retired.sp007; vluchtcontrole decision archief (historie bewaard); soortaudit M2 retiredAssets. Bestand, credits en origcheck-bewijs blijven in de repository."
+              }
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_HAVIK, VB_HVS).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primair: kritisch kenmerk onderzijde jonge vogels (lengtestrepen vs. dwarsbanden Sperwer) + uitstekende kop/zware borst + afgeronde staartpunt; wenkbrauw/poten en juveniel-regel ingeklapt (niets verwijderd).",
+            "herkenning": "PARTIALLY TESTED - leeftijd en geslacht correct genuanceerd.",
+            "lijktOp": "PARTIALLY TESTED - R02b: vluchtparen met Sperwer en Torenvalk nu met bewezen Havik-mannetje; gelabelde rijen voor alle Sperwer-paren, Slechtvalk (kop/vleugels en staart/valkuil) en vlucht; kritische kaarten 3 -> 9 (gespiegelde Sperwer-kaarten staartpunt, vleugels en heupen, vliegstijl, roep, vrouwtjes-bouw + jonge Slechtvalk); similar-teksten zonder \"de bron\" R02c: algemene vluchtfoto niet meer zichtbaar.",
+            "publicSourceNames": "VERIFIED - R02b: iNaturalist-waarnemingsnummer uit publiek bijschrift naar intern veld sexEvidence"
+          },
+          "lookalikes": [
+            {
+              "pair": "sp007<->sp006 Havik-Sperwer",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - zie sp006",
+              "diagnosticText": "VERIFIED - zie sp006"
+            },
+            {
+              "pair": "sp007<->sp009 Havik-Slechtvalk",
+              "bothDirections": "NOT TESTED (Slechtvalk-kaart buiten batch)",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: juveniel rust tegen juveniel rust met gelabelde rijen; Slechtvalk-kaart buiten batch",
+              "diagnosticText": "PARTIALLY TESTED - koptekening, staart, vleugels"
+            },
+            {
+              "pair": "sp007<->sp008 Havik-Torenvalk",
+              "bothDirections": "NOT TESTED",
+              "photoEquivalence": "PARTIALLY TESTED - R02b: vlucht met bewezen Havik-mannetje",
+              "diagnosticText": "PARTIALLY TESTED"
+            }
+          ],
+          "lookalikeRegister": "LK-097 (Sperwer), LK-099 (Slechtvalk) in SOORTVERWARRING_REGISTER (F3-REV2-R02b)",
+          "audio": {
+            "status": "PARTIALLY TESTED - 3 lokale clips; rechten 3/3 via Commons bevestigd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp007-female-call.mp3",
+                "label": "Roep vrouwtje",
+                "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396289.mp3",
+                "author": "Alvaro Ortiz Troncoso",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 0c1313a3299a4028e7a0504c36a4c7c9591d055f",
+                "status": "PARTIALLY TESTED - bestand aanwezig (22.0 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp007-alarm.mp3",
+                "label": "Alarmroep vrouwtje",
+                "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396773.mp3",
+                "author": "Alvaro Ortiz Troncoso",
+                "license": "CC BY-SA 3.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 74e37a50728d6a37daea0049790f4c904cdf132b",
+                "status": "PARTIALLY TESTED - bestand aanwezig (7.2 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp007-begging.mp3",
+                "label": "Bedelroep jong",
+                "source": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC578067.mp3",
+                "author": "Alvaro Ortiz Troncoso",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 5c32bb148a35d6114f615a511286348281f939d6",
+                "status": "PARTIALLY TESTED - bestand aanwezig (22.0 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern",
+          "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
+            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
+            "G5 audio niet menselijk beluisterd (beperkt C)",
+            "G7 iNaturalist-licenties 2 foto's; herkomst vrouwtje-vluchtfoto",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+            "additional": [
+              {
+                "decision": "C - voorlopig doorgaan (beperkt)",
+                "scope": "uitsluitend ontbrekende ANWB-verificatie en audiobewijs",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit F3-REV2-R02 (chat 23-11-2026 18:56 CET): B voor sp005-sp007 + beperkt C (ANWB/audio); uitgevoerd als F3-REV2-R02b in PR #352",
+                "effect": "alleen werkvolgorde; ANWB blijft NOT TESTED, audio blijft PARTIALLY TESTED/OPEN tot menselijk beluisterd, geen FULL PASS"
+              },
+              {
+                "decision": "B (aanvulling) - algemene vluchtfoto uit de zichtbare gids",
+                "scope": "/assets/species/plumage/sp007-flight.webp",
+                "date": "2026-11-23",
+                "reference": "Eigenaarbesluit R02b-QA en start R03 (chat 23-11-2026 22:10 CET); uitgevoerd als F3-REV2-R02c in PR #352",
+                "effect": "Foto niet meer zichtbaar; origineel en administratie bewaard; mannetje-vluchtfoto blijft dragende vluchtfoto met open iNaturalist-rechtenpunt"
+              }
+            ],
+            "remainingOpen": [
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED",
+              "Audio PARTIALLY TESTED / OPEN",
+              "iNaturalist-licenties 2 foto's",
+              "Vrouwtje in rust (wens)",
+              "Onafhankelijke biologische/fotoreview",
+              "Mannetje-vluchtfoto: iNaturalist-licentie niet herbevestigd"
+            ],
+            "notGranted": "Geen FULL PASS; beperkt C geldt alleen voor ANWB en audio"
+          },
+          "fullPass": false,
+          "resolvedInR02b": [
+            "G9 algemene vluchtfoto niet meer als vergelijkingsfoto; bijschrift zonder onbewezen leeftijdsclaim",
+            "G4 waarnemingsnummer uit publieke tekst",
+            "G6 LK-097 en LK-099 geregistreerd",
+            "Vergelijkingen uitgebreid: 6 extra kritische kaarten + gelabelde rijen"
+          ],
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary is alleen de compacte bovenkant en vervangt de volledige vergelijking nooit.",
+          "repair": {
+            "round": "F3-REV2-R02b",
+            "date": "2026-11-23",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          },
+          "resolvedInR02c": [
+            "G9b algemene vluchtfoto uit de zichtbare gids (eigenaarbesluit 23-11-2026 22:10)"
+          ]
+        }
       }
     },
     {
@@ -15301,18 +16117,55 @@
           "sp003",
           "sp004"
         ],
-        "status": "OWNER DECISION B EXECUTED (F3-REV2-R01b) / INDEPENDENT QA OPEN",
+        "status": "OWNER DECISIONS B + LIMITED C (23-11-2026 16:56) / TECHNICAL QA ACCEPTED / OPEN POINTS REMAIN",
         "date": "2026-11-23"
+      },
+      {
+        "round": "F3-REV2-R02",
+        "species": [
+          "sp005",
+          "sp006",
+          "sp007"
+        ],
+        "status": "OWNER DECISION B + LIMITED C EXECUTED (R02b) / R02c HAVIK FLIGHT PHOTO RETIRED / TECHNICAL QA ACCEPTED / OPEN POINTS REMAIN",
+        "date": "2026-11-23",
+        "pr": 352
       }
     ],
     "counts": {
       "total": 140,
-      "reexamined": 3,
+      "reexamined": 6,
       "ownerGateOpen": 0,
-      "ownerDecisions": 3,
+      "ownerDecisions": 6,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
-    "release": "HOLD - geen merge, deploy of live"
+    "release": "HOLD - geen merge, deploy of live",
+    "ownerDecisionsLog": [
+      {
+        "date": "2026-11-23",
+        "time": "15:28",
+        "batch": "F3-REV2-R01",
+        "decision": "B voor sp002-sp004"
+      },
+      {
+        "date": "2026-11-23",
+        "time": "16:56",
+        "batch": "F3-REV2-R01",
+        "decision": "R01b-QA geaccepteerd; C uitsluitend voor ANWB en audio sp002-sp004; openbare bronlezing toegestaan; quickPrimary per gecontroleerde batch; start R02"
+      },
+      {
+        "date": "2026-11-23",
+        "time": "18:56",
+        "batch": "F3-REV2-R02",
+        "decision": "B voor sp005-sp007; beperkt C alleen ANWB/audio; harde regel: vergelijkingen zo uitgebreid mogelijk, quickPrimary vervangt de vergelijking niet"
+      },
+      {
+        "date": "2026-11-23",
+        "time": "22:10",
+        "batch": "F3-REV2-R02",
+        "decision": "R02b-QA geaccepteerd; algemene Havik-vluchtfoto uit de zichtbare gids (origineel bewaard); start R03 na gecontroleerde correctie"
+      }
+    ]
   }
 }

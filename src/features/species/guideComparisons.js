@@ -362,6 +362,12 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp006', source: 'sperwer', plumage: 'adult_m', marks: 'Rank, met roestkleurige wangen en flanken en een blauwgrijze rug.'},
       {id: 'sp007', source: 'havik', plumage: 'adult_m', marks: 'Forse borst, duidelijke lichte wenkbrauw en fijne donkere banden op de lichte onderzijde.'},
     ],
+    // F3-REV2-R02b: gelabelde rijen uit gebronde profielclaims (VB_SPERWER_MV, VB_HAVIK, VB_HVS).
+    rows: [
+      {label: 'Kop', values: ['Oranje wangen, geen witte wenkbrauw', 'Duidelijke lichte wenkbrauw; kop steekt ver uit']},
+      {label: 'Onderzijde', values: ['Bruinoranje dwarsbanden', 'Licht met fijne donkere dwarsbanden']},
+      {label: 'Bouw', values: ['Rank, met lange, dunne poten', 'Zware borst, stevige poten']},
+    ],
     tip: 'De roestige wangen en onderzijde van een mannetje Sperwer vallen vooral op bij goed licht.',
   },
   {
@@ -378,14 +384,25 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp006', source: 'sperwer', plumage: 'juv', marks: 'Donkere tekening loopt in dwarsbanden over de lichte borst en buik. De banden kunnen hoekig of V-vormig zijn.'},
       {id: 'sp007', source: 'havik', plumage: 'juv', marks: 'Donkere lengtestrepen lopen van boven naar beneden over de lichte borst en buik.'},
     ],
+    rows: [
+      {label: 'Borst en buik', values: ['Dwarsbanden, vaak hoekig of V-vormig', 'Lengtestrepen (druppelvormige vlekken)']},
+      {label: 'Staartpunt', values: ['Recht afgesneden hoeken', 'Duidelijk afgerond']},
+      {label: 'Kop', values: ['Steekt weinig uit', 'Steekt ver uit; lichte wenkbrauw']},
+    ],
     tip: 'Let bij een jonge vogel op de richting van de tekening op de borst. Beide soorten zijn bruin van boven.',
   },
   {
+    // F3-REV2-R02b (eigenaarbesluit B, 23-11-2026): Buizerd van onderen (gelijkwaardig aan de partner); rijen uit gebronde kritische kenmerken.
     label: 'Buizerd en Ruigpootbuizerd · volwassen in vlucht',
     flight: true,
     birds: [
-      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'De relatief korte, bruingrijze staart heeft doorgaans meerdere smalle dwarsbanden. Ook lichte Buizerds kunnen donkere polsvlekken hebben.'},
+      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', photo: '/assets/species/plumage/sp005-female-flight.webp', marks: 'De relatief korte, bruingrijze staart heeft doorgaans meerdere smalle dwarsbanden. Ook lichte Buizerds kunnen donkere polsvlekken hebben.'},
       {id: 'sp253', source: 'Ruigpootbuizerd', plumage: 'adult_f', marks: 'Een brede witte staartbasis met donkere bandering, samen met grote donkere polsvlekken. Dit vrouwtje heeft ook een donker buikschild.'},
+    ],
+    rows: [
+      {label: 'Staartbasis', values: ['Meerdere fijne dwarsbanden over een groot deel van de staart', 'Brede witte basis die contrasteert met de donkere band(en) naar de punt']},
+      {label: 'Polsvlek en buik', values: ['Polsvlekken kunnen ook bij lichte vogels voorkomen', 'Grote donkere polsvlekken; vaak een donker buikschild']},
+      {label: 'Valkuil', values: ['Lichte Buizerds worden vaak voor Ruigpootbuizerd aangezien', 'Bij tegenlicht of gesloten staart is de witte basis lastig te zien']},
     ],
     tip: 'Bekijk eerst de gespreide staart en controleer vervolgens de ondervleugels en buik. Beide soorten kunnen bidden.',
   },
@@ -399,11 +416,17 @@ export const GUIDE_COMPARISONS = [
     tip: 'Beoordeel staartbasis, buik en ondervleugels samen. Bij twijfel helpt een foto met gespreide staart in beter licht.',
   },
   {
+    // F3-REV2-R02b (eigenaarbesluit B, 23-11-2026): Buizerd van onderen (gelijkwaardig aan de partner); rijen uit gebronde kritische kenmerken.
     label: 'Buizerd en Wespendief · volwassen in vlucht',
     flight: true,
     birds: [
-      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'Brede vleugels, kleine afstand van kop tot vleugelvoorrand en een relatief korte staart met meerdere fijne banden.'},
+      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', photo: '/assets/species/plumage/sp005-female-flight.webp', marks: 'Brede vleugels, kleine afstand van kop tot vleugelvoorrand en een relatief korte staart met meerdere fijne banden.'},
       {id: 'sp248', source: 'wespendief', plumage: 'adult_m', marks: 'Verder uitstekende kop en langere staart. Bij dit mannetje zijn de brede donkere eindband en banden dichter bij het lijf te zien.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Kort, breed en stomp; steekt weinig uit', 'Smaller en verder uitstekend, doet aan een koekoek denken']},
+      {label: 'Staart', values: ['Korter dan de vleugelbreedte; volwassen met een brede donkere band vlak voor de punt', 'Langer, met afgeronde hoeken; mannetje met brede eindband en twee smalle banden bij de basis']},
+      {label: 'Vleugelhouding', values: ['Zweeft in een ondiepe V; snelle, wat stijve slagen', 'Zweeft met vlakke vleugels; soepelere slagen']},
     ],
     tip: 'Begin met de verhouding tussen staart, vleugelbreedte en kop. Gebruik daarna de staartbanden om je indruk te toetsen.',
   },
@@ -411,9 +434,15 @@ export const GUIDE_COMPARISONS = [
     label: 'Buizerd en Wespendief · vrouwtje Wespendief in vlucht',
     flight: true,
     tabLabel: 'In vlucht · Wespendief-vrouwtje',
+    // F3-REV2-R02b (eigenaarbesluit B, 23-11-2026): Buizerd van onderen (gelijkwaardig aan de partner); rijen uit gebronde kritische kenmerken.
     birds: [
-      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', marks: 'Brede vleugels met een vrij korte staart. Let op de fijne dwarsbanden over de staart.'},
+      {id: 'sp005', source: 'buizerd', plumage: 'adult_m', photo: '/assets/species/plumage/sp005-female-flight.webp', marks: 'Brede vleugels met een vrij korte staart. Let op de fijne dwarsbanden over de staart.'},
       {id: 'sp248', source: 'wespendief', plumage: 'adult_f', marks: 'Verder uitstekende kop, langere staart en donkere banden op de ondervleugel.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Kort, breed en stomp; steekt weinig uit', 'Smaller en verder uitstekend']},
+      {label: 'Staart', values: ['Vrij kort, met fijne dwarsbanden', 'Langer, met afgeronde hoeken']},
+      {label: 'Ondervleugel', values: ['Komma-vormige polsvlek en lichte handpenvlakken', 'Donkere banden op de ondervleugel']},
     ],
     tip: 'Vergelijk eerst kop en staart. Gebruik de vleugelbanden als extra aanwijzing wanneer de onderzijde goed zichtbaar is.',
   },
@@ -660,6 +689,12 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp008', source: 'torenvalk', plumage: 'juv', marks: 'Gestreepte borst en relatief puntige vleugels. Vaak jagend boven open terrein.'},
       {id: 'sp006', source: 'sperwer', plumage: 'juv', marks: 'Ook als jonge vogel dwarsbanden op de onderzijde; korte brede vleugels en lange dunne poten.'},
     ],
+    // F3-REV2-R02b: gelabelde rijen (volgorde vogels: Torenvalk, Sperwer) uit bestaande gebronde claims.
+    rows: [
+      {label: 'Borsttekening', values: ['Gestreepte borst', 'Dwarsbanden, ook bij jonge vogels']},
+      {label: 'Vleugels', values: ['Relatief puntige vleugels', 'Korte, brede vleugels']},
+      {label: 'Jachtwijze', values: ['Bidt vaak boven open terrein', 'Jaagt laag langs heggen met snelle slagen en een glijvlucht']},
+    ],
     tip: 'Let op de richting van de borsttekening en de vleugelvorm. Alleen een lange staart is onvoldoende.',
   },
   {
@@ -667,6 +702,12 @@ export const GUIDE_COMPARISONS = [
     birds: [
       {id: 'sp009', source: 'slechtvalk', plumage: 'juv', marks: 'Brede donkere baardstreep. In vlucht spitser gevleugeld en korter gestaart dan Havik.'},
       {id: 'sp007', source: 'havik', plumage: 'juv', marks: 'Opvallende lichte wenkbrauw, stevige poten en een langere staart. Jonge vogels hebben eveneens lengtestrepen.'},
+    ],
+    // F3-REV2-R02b: gelabelde rijen (volgorde vogels: Slechtvalk, Havik).
+    rows: [
+      {label: 'Kop', values: ['Brede donkere baardstreep', 'Opvallende lichte wenkbrauw']},
+      {label: 'Vleugels en staart', values: ['Spitse vleugels met brede basis; vrij korte staart', 'Langere staart met afgeronde punt']},
+      {label: 'Valkuil', values: ['Jonge vogels zijn bruin en gestreept', 'Jonge vogels hebben eveneens lengtestrepen']},
     ],
     tip: 'Lengtestrepen komen bij beide voor. Vergelijk de koptekening, staart en vleugels; formaat zonder referentie is lastig.',
   },
@@ -1386,8 +1427,15 @@ export const GUIDE_COMPARISONS = [
     flight: true,
     birds: [
       {id: 'sp006', source: 'sperwer', marks: 'Relatief korte, brede vleugels, kleine kop en lange staart met vaak hoekige uiteinden. Wisselt snelle vleugelslagen af met glijden.'},
-      {id: 'sp007', source: 'havik', marks: 'Forse borst en een kop die verder uitsteekt. De vleugels zijn langer in verhouding tot de staart. Volwassen vogels hebben fijne dwarsbanden op de onderzijde.'},
+      // F3-REV2-R02b: volwassen mannetje in vlucht (bewezen opname) i.p.v. de algemene vluchtfoto zonder vastgestelde herkomst/leeftijd.
+      {id: 'sp007', source: 'havik', photo: '/assets/species/plumage/sp007-male-flight.webp', marks: 'Forse borst en een kop die verder uitsteekt. De vleugels zijn langer in verhouding tot de staart. Volwassen vogels hebben fijne dwarsbanden op de onderzijde.'},
       {id: 'sp008', source: 'torenvalk', marks: 'In doorgaande vlucht puntigere vleugels. Bij het bidden spreidt de vogel zijn lange staart vaak waaiervormig.'},
+    ],
+    // F3-REV2-R02b: gelabelde rijen (volgorde vogels: Sperwer, Havik, Torenvalk) uit VB_HVS, VB_HAVIK en VB_TOREN.
+    rows: [
+      {label: 'Kop en vleugels', values: ['Kop steekt weinig uit; korte, rechthoekige vleugels', "Kop steekt ver uit; vleugels langer ten opzichte van de staart; brede 'heupen'", 'In doorgaande vlucht puntigere vleugels']},
+      {label: 'Staart', values: ['Recht afgesneden hoeken', 'Duidelijk afgerond', 'Lang; bij het bidden vaak waaiervormig gespreid']},
+      {label: 'Vliegstijl', values: ['Snelle slagen met korte glijstukken', 'Langzamer en krachtiger, behalve tijdens een achtervolging', 'Hangt biddend stil; rustige, ondiepe vleugelslag']},
     ],
     tip: 'Vergelijk eerst vleugelvorm, staart en bouw. De foto’s tonen verschillende vlieghoudingen; gebruik schijnbare grootte alleen als extra aanwijzing.',
   },

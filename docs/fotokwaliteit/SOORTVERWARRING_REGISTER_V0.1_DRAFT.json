@@ -80,7 +80,10 @@
     "sp173",
     "sp002",
     "sp003",
-    "sp004"
+    "sp004",
+    "sp005",
+    "sp006",
+    "sp007"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -4251,6 +4254,231 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
         "https://www.licg.nl/vogels/lachduif/"
       ]
+    },
+    {
+      "id": "LK-095",
+      "focus": [
+        "sp005"
+      ],
+      "birds": [
+        "sp005",
+        "sp248"
+      ],
+      "risk": "Kleur overlapt volledig; jonge Wespendieven lijken in vlucht extra veel op Buizerd.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Volwassen paren sinds F3-REV2-R02b met Buizerd van onderen (gelijkwaardig); onafhankelijke review open.",
+        "iNaturalist-licenties van de Buizerd-vluchtfoto's niet via API herbevestigd."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Kort, breed en stomp; steekt weinig uit",
+            "Smaller en verder uitstekend, doet aan een koekoek denken"
+          ]
+        },
+        {
+          "label": "Staart",
+          "values": [
+            "Korter dan de vleugelbreedte; volwassen met brede donkere band vlak voor de punt",
+            "Langer, met afgeronde hoeken; mannetje met brede eindband en twee smalle banden bij de basis"
+          ]
+        },
+        {
+          "label": "Vleugelhouding",
+          "values": [
+            "Zweeft in een ondiepe V; snelle, wat stijve slagen",
+            "Zweeft met vlakke vleugels; soepelere slagen"
+          ]
+        }
+      ],
+      "caution": "Kleur beslist niets: beide soorten variëren van zeer donker tot bijna wit. Combineer bouw, kop en staart.",
+      "sources": [
+        "https://www.birdguides.com/articles/common-and-european-honey-buzzards-photo-id-guide",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/wespendief"
+      ]
+    },
+    {
+      "id": "LK-096",
+      "focus": [
+        "sp005"
+      ],
+      "birds": [
+        "sp005",
+        "sp253"
+      ],
+      "risk": "Lichte Buizerds worden vaak voor Ruigpootbuizerd aangezien.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Volwassen paar sinds F3-REV2-R02b met Buizerd van onderen; onafhankelijke review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Staartbasis",
+          "values": [
+            "Meerdere fijne dwarsbanden over een groot deel van de staart",
+            "Brede witte basis die contrasteert met de donkere band(en) naar de punt"
+          ]
+        },
+        {
+          "label": "Polsvlek en buik",
+          "values": [
+            "Polsvlekken kunnen ook bij lichte vogels voorkomen",
+            "Grote donkere polsvlekken; vaak een donker buikschild"
+          ]
+        }
+      ],
+      "caution": "Bij tegenlicht of een gesloten staart is de witte staartbasis lastig te zien; beoordeel staart, buik en ondervleugel samen.",
+      "sources": [
+        "https://www.vogelbescherming.nl/actueel/bericht/buizerd-vs-ruigpootbuizerd",
+        "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?id=130493",
+        "https://www.bto.org/learn/about-birds/birdfacts/rough-legged-buzzard"
+      ]
+    },
+    {
+      "id": "LK-097",
+      "focus": [
+        "sp006",
+        "sp007"
+      ],
+      "birds": [
+        "sp006",
+        "sp007"
+      ],
+      "risk": "Grootte overlapt (havikmannetje vs. sperwervrouwtje); volwassen vogels van beide soorten zijn dwarsgebandeerd.",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Rustpaar volwassen vrouwtjes ontbreekt (Havik-vrouwtje alleen in vlucht); tekst staat in de kritische kaarten.",
+        "Vluchtpaar sinds F3-REV2-R02b met bewezen Havik-mannetje."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Borst en buik (jong)",
+          "values": [
+            "Dwarsbanden, vaak hoekig of V-vormig",
+            "Lengtestrepen (druppelvormige vlekken)"
+          ]
+        },
+        {
+          "label": "Staartpunt",
+          "values": [
+            "Recht afgesneden hoeken",
+            "Duidelijk afgerond"
+          ]
+        },
+        {
+          "label": "Kop en vleugels",
+          "values": [
+            "Kop steekt weinig uit; korte, rechthoekige vleugels",
+            "Kop steekt ver uit; vleugels langer ten opzichte van de staart"
+          ]
+        }
+      ],
+      "caution": "Grootte alleen is onbetrouwbaar; de borsttekening is alleen bij jonge vogels doorslaggevend.",
+      "sources": [
+        "https://www.vogelbescherming.nl/actueel/bericht/havik-vs-sperwer",
+        "https://www.vogelbescherming.nl/actueel/bericht/vogels-herkennen-sperwer-man-of-vrouw",
+        "https://www.blascozumeta.com/specie_files/02690_ENG_Accipiter_nisus_aranzadi.pdf"
+      ]
+    },
+    {
+      "id": "LK-098",
+      "focus": [
+        "sp006"
+      ],
+      "birds": [
+        "sp006",
+        "sp008"
+      ],
+      "risk": "Lange staart en bruin jeugdkleed bij beide.",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Torenvalk-kaart (sp008) nog niet in de tweede ronde; onafhankelijke review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Borsttekening (jong)",
+          "values": [
+            "Dwarsbanden, ook bij jonge vogels",
+            "Gestreepte borst"
+          ]
+        },
+        {
+          "label": "Jachtwijze",
+          "values": [
+            "Jaagt laag langs heggen met snelle slagen en een glijvlucht",
+            "Bidt vaak en hangt stil boven open terrein"
+          ]
+        }
+      ],
+      "caution": "Alleen een lange staart is onvoldoende; combineer borsttekening, vleugelvorm en gedrag.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk"
+      ]
+    },
+    {
+      "id": "LK-099",
+      "focus": [
+        "sp007"
+      ],
+      "birds": [
+        "sp007",
+        "sp009"
+      ],
+      "risk": "Jonge vogels van beide soorten zijn bruin en in de lengte gestreept.",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Slechtvalk-kaart (sp009) nog niet in de tweede ronde; onafhankelijke review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Opvallende lichte wenkbrauw",
+            "Brede donkere baardstreep"
+          ]
+        },
+        {
+          "label": "Vleugels en staart",
+          "values": [
+            "Langere staart met afgeronde punt",
+            "Spitse vleugels met brede basis; vrij korte staart"
+          ]
+        }
+      ],
+      "caution": "De streping onderscheidt de jonge vogels niet; kijk naar koptekening, vleugels en staart.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk"
+      ]
     }
   ],
   "withinSpeciesVariation": [
@@ -4284,7 +4512,8 @@
     "visualReviewR35": "docs/fotokwaliteit/F3_R35_KLUUT_ZILVERPLEVIER_GOUDPLEVIER_2026-11-21_DRAFT.md",
     "visualReviewR37": "docs/fotokwaliteit/F3_R37_ROSSE_GRUTTO_STEENLOPER_DRIETEENSTRANDLOPER_2026-11-21_DRAFT.md",
     "visualReviewR40": "docs/fotokwaliteit/F3_R40_GROTE_MANTELMEEUW_VISDIEF_NOORDSE_STERN_2026-11-22_DRAFT.md",
-    "visualReviewREV2R01": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md"
+    "visualReviewREV2R01": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
+    "visualReviewREV2R02": "docs/fotokwaliteit/F3_REV2_R02_ROOFVOGELS_2026-11-23_DRAFT.md"
   },
   "gate": "A pair can be labelled COMPLETE only with individual original image/right/sex/age proof, correct side-by-side render both directions and independent second review; structural CI PASS alone is insufficient"
 }

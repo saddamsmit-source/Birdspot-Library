@@ -6884,32 +6884,10 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp007": [
     {
-      "label": "In vlucht",
-      "flight": true,
-      "note": "De fijne dwarsbanden passen bij volwassen kleed. Kijk ook naar de zware bouw en de uitstekende kop.",
-      "file": "Northern Goshawk (Accipiter gentilis) (1).JPG",
-      "nl": "Havik",
-      "latin": "Accipiter gentilis",
-      "author": "Ken Billington",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG",
-      "showSourceLink": false,
-      "alt": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
-      "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
-      "reviewed": "2026-11-07",
-      "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
-      "visualCheck": "Havik in vlucht met brede vleugel, stevige borst, lange staart en fijne dwarsbanden op de onderzijde.",
-      "width": 800,
-      "height": 450,
-      "image": "/assets/species/plumage/sp007-flight.webp",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
-    },
-    {
       "label": "Mannetje in vlucht",
       "sex": "male",
       "flight": true,
-      "note": "In zijaanzicht met geheven vleugel. Let op de bandering en de lange staart. Het geslacht is geregistreerd in iNaturalist-waarneming 19176694.",
+      "note": "In zijaanzicht met geheven vleugel. Let op de bandering en de lange staart.",
       "file": "iNaturalist photo 29451692",
       "nl": "Havik",
       "latin": "Accipiter gentilis",
@@ -6926,7 +6904,8 @@ export const GUIDE_POSES = Object.freeze({
       "width": 922,
       "height": 792,
       "image": "/assets/species/plumage/sp007-male-flight.webp",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "sexEvidence": "Geslacht volgens iNaturalist-waarneming 19176694 (bronannotatie; intern, F3-REV2-R02b uit publieke tekst gehaald)"
     },
     {
       "label": "Mannetje",

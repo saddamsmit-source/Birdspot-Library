@@ -1,0 +1,878 @@
+{
+  "generated": "2026-11-23T16:04:25Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp005",
+      "image": "/assets/species/sp005.webp",
+      "title": "File:Common buzzard 2024-01-20.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_buzzard_2024-01-20.jpg",
+        "sha1": "72d78c0753e96d9f4042fdb2a63e2527d1d35bb7",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 4746,
+        "height": 3164,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "commonsContext": {
+        "description": "A common buzzard ( Buteo buteo ) perched on a tree in Franconville, France.",
+        "date": "2024-01-19 11:55:32",
+        "categories": [
+          "Buteo buteo in France",
+          "Nature of Franconville (Val-d'Oise)"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp005_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp005",
+      "image": "/assets/species/plumage/sp005-adult_m.webp",
+      "title": null,
+      "author": "Roy Lowry",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        683
+      ],
+      "urlErrors": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/309645414/original.jpg: HTTP Error 404: Not Found"
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/309645414/original.jpeg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        2048,
+        1365
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp005-adult_m_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp005",
+      "image": "/assets/species/plumage/sp005-juv.webp",
+      "title": null,
+      "author": "rober025",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1024,
+        682
+      ],
+      "urlErrors": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/147178882/original.jpg: HTTP Error 404: Not Found"
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/147178882/original.jpeg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1280,
+        853
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp005-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp005",
+      "image": "/assets/species/plumage/sp005-male-rest.webp",
+      "title": null,
+      "author": "Gianluca Congi",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1222,
+        1006
+      ],
+      "urlErrors": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/291739391/original.jpg: HTTP Error 404: Not Found"
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/291739391/original.jpeg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1222,
+        1006
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp005-male-rest_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp005",
+      "image": "/assets/species/plumage/sp005-flight-dark.webp",
+      "title": "File:Common buzzard (Buteo buteo buteo) in flight.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1150,
+        1150
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_buzzard_(Buteo_buteo_buteo)_in_flight.jpg",
+        "sha1": "a1ec627483d9fe53a1704761eb8ee31a660625f4",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 2036,
+        "height": 2036,
+        "creditFields": {}
+      },
+      "commonsContext": {
+        "description": "Common buzzard ( Buteo buteo buteo ) in flight",
+        "date": "2015-08-24 11:15:17",
+        "categories": [
+          "Buteo buteo in England",
+          "Buteo buteo in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        960
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp005-flight-dark_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp005",
+      "image": "/assets/species/plumage/sp005-female-flight.webp",
+      "title": null,
+      "author": "Simone Bocca",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1270,
+        958
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/112563573/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1788,
+        1312
+      ],
+      "mode": "crop",
+      "r": 0.967,
+      "scale": 0.7,
+      "offset": [
+        0.157,
+        0.136
+      ],
+      "sameShot": true,
+      "sideBySide": "sp005-female-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp005",
+      "audio": "/assets/species/audio/sp005-adult-call.mp3",
+      "title": "File:Buteo buteo - Common Buzzard XC538277.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_-_Common_Buzzard_XC538277.mp3",
+        "sha1": "161d9062c4df62c8d0d998950fd9b1c82528dc2d",
+        "license": "CC BY-SA 4.0",
+        "author": "Benoît Van Hecke",
+        "duration": 61.87336019081556,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Benoît Van Hecke"
+        },
+        "pageParams": {
+          "date": "2020-03-13 11:00",
+          "author": "Benoît Van Hecke"
+        },
+        "creditLines": [
+          "|author=Benoît Van Hecke"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp005",
+      "audio": "/assets/species/audio/sp005-alarm.mp3",
+      "title": "File:Buteo buteo warning the fledglings 7643.ogg",
+      "author": "T.Voekler",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Buteo_buteo_warning_the_fledglings_7643.ogg",
+        "sha1": "88bbd0eaef805ff5aa989d1ccdfd276c84626bb1",
+        "license": "CC BY-SA 3.0",
+        "author": "T.Voekler",
+        "duration": 0.809795918367347,
+        "mime": "application/ogg",
+        "creditFields": {
+          "author": "T.Voekler"
+        },
+        "pageParams": {
+          "Date": "2008-05-11",
+          "Author": "[[User:Teacoolish|T.Voekler]]",
+          "Permission": ""
+        },
+        "creditLines": [
+          "|Author=[[User:Teacoolish|T.Voekler]]"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp006",
+      "image": "/assets/species/sp006.webp",
+      "title": "File:Male Sparrowhawk (46103963061).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1280,
+        853
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Male_Sparrowhawk_(46103963061).jpg",
+        "sha1": "c72f1276283f87639b534617644732b64462f1ae",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 4721,
+        "height": 3147,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "commonsContext": {
+        "description": "Male Sparrowhawk",
+        "date": "Taken on 20 November 2018, 13:09",
+        "categories": [
+          "Accipiter nisus (male)",
+          "Accipiter nisus in Scotland",
+          "Birds of Dumfries and Galloway",
+          "November 2018 in Dumfries and Galloway",
+          "Wildlife in Dumfriesshire"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp006_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "image": "/assets/species/plumage/sp006-adult_f.webp",
+      "title": "File:Female Sparrowhawk (45968114392).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1280,
+        853
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Female_Sparrowhawk_(45968114392).jpg",
+        "sha1": "6b7753b86a43fc0bdfad4c6cd3bf1efe57ca2f03",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 5568,
+        "height": 3712,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "commonsContext": {
+        "description": "Female Sparrowhawk - Dumfriesshire",
+        "date": "Taken on 20 November 2018, 12:23",
+        "categories": [
+          "Accipiter nisus (female)",
+          "Accipiter nisus in Scotland",
+          "Birds of Dumfries and Galloway",
+          "November 2018 in Dumfries and Galloway",
+          "Wildlife in Dumfriesshire"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp006-adult_f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "image": "/assets/species/plumage/sp006-juv.webp",
+      "title": "File:Female Juvenile Sparrowhawk (36519885205).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1280,
+        853
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Female_Juvenile_Sparrowhawk_(36519885205).jpg",
+        "sha1": "0ac28a6cbebf0785ce11785c0f2779c913450d13",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 5568,
+        "height": 3712,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "commonsContext": {
+        "description": "Sparrowhawk - Dumfries & Galloway",
+        "date": "Taken on 12 August 2017, 13:09",
+        "categories": [
+          "Accipiter nisus (female)",
+          "Accipiter nisus (juvenile)",
+          "Accipiter nisus in Scotland",
+          "August 2017 in Dumfries and Galloway",
+          "Birds of Dumfries and Galloway"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp006-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "image": "/assets/species/plumage/sp006-flight.webp",
+      "title": "File:Eurasian sparrowhawk 2023 12 31 01.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Eurasian_sparrowhawk_2023_12_31_01.jpg",
+        "sha1": "93bac3ce05a7ba659b3badf9d89ee14ea600f937",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 3386,
+        "height": 2257,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "commonsContext": {
+        "description": "A male Eurasian sparrowhawk ( Accipiter nisus ) flying in Franconville, France.",
+        "date": "2023-12-31 13:39:31",
+        "categories": [
+          "Accipiter nisus in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp006-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "image": "/assets/species/plumage/sp006-hero-male.webp",
+      "title": "File:Sparrowhawk - Accipiter nisus - Male (52253225702).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1143
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Sparrowhawk_-_Accipiter_nisus_-_Male_(52253225702).jpg",
+        "sha1": "c6bec5e043429e9eff72ddddb8acb135547d1aa1",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 4488,
+        "height": 3206,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "commonsContext": {
+        "description": "Sparrowhawk - Dumfries & Galloway",
+        "date": "Taken on 26 July 2022, 14:25",
+        "categories": [
+          "Accipiter nisus (male)",
+          "Accipiter nisus in Scotland",
+          "Birds of Dumfries and Galloway",
+          "July 2022 in Dumfries and Galloway"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        686
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp006-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp006",
+      "audio": "/assets/species/audio/sp006-nest-call.mp3",
+      "title": "File:Accipiter nisus - Eurasian Sparrowhawk XC467097.mp3",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC467097.mp3",
+        "sha1": "ef4cdde6609dfc2314fd441d9d726611cd5bd259",
+        "license": "CC BY-SA 4.0",
+        "author": "Alvaro Ortiz Troncoso",
+        "duration": 10.187484680225,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "pageParams": {
+          "date": "2019-04-16 16:35",
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "creditLines": [
+          "|author=Alvaro Ortiz Troncoso"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp006",
+      "audio": "/assets/species/audio/sp006-begging.mp3",
+      "title": "File:Accipiter nisus - Eurasian Sparrowhawk XC234158.mp3",
+      "author": "Steven Wilson",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Eurasian_Sparrowhawk_XC234158.mp3",
+        "sha1": "3a3daf648654879232b6470ca729ce8bda80ac0d",
+        "license": "CC BY-SA 3.0",
+        "author": "Steven Wilson",
+        "duration": 71.332175,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Steven Wilson"
+        },
+        "pageParams": {
+          "date": "2014-08-08 09:57",
+          "author": "Steven Wilson"
+        },
+        "creditLines": [
+          "|author=Steven Wilson"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp007",
+      "image": "/assets/species/sp007.webp",
+      "title": "File:Male northern goshawk (49434582392).jpg",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1280,
+        960
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Male_northern_goshawk_(49434582392).jpg",
+        "sha1": "8e5e7d5e404f518afd7015882ca9cb5e8b370924",
+        "license": "CC BY 2.0",
+        "author": "Andrey Gulivanov",
+        "width": 3000,
+        "height": 2250,
+        "creditFields": {
+          "author": "Andrey Gulivanov"
+        }
+      },
+      "commonsContext": {
+        "description": "St Petersburg/Leningrad Oblast. Accipiter gentilis",
+        "date": "Taken on 10 January 2020, 10:13",
+        "categories": [
+          "Astur gentilis (male)",
+          "Astur gentilis in Russia"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp007_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "image": "/assets/species/plumage/sp007-juv.webp",
+      "title": "File:Juvenile northern goshawk (52310658114).jpg",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1280,
+        853
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Juvenile_northern_goshawk_(52310658114).jpg",
+        "sha1": "aafdd25ebbf77e850bc6b63a62b21e6931c4c696",
+        "license": "CC BY 2.0",
+        "author": "Andrey Gulivanov",
+        "width": 3900,
+        "height": 2600,
+        "creditFields": {
+          "author": "Andrey Gulivanov"
+        }
+      },
+      "commonsContext": {
+        "description": "St Petersburg/Leningrad Oblast. Juvenile northern goshawk",
+        "date": "Taken on 1 July 2022, 05:54",
+        "categories": [
+          "Astur gentilis (juvenile)",
+          "Astur gentilis in Russia"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp007-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "image": "/assets/species/plumage/sp007-adult_f.webp",
+      "title": null,
+      "author": "WATANABE Hitoshi 渡辺仁",
+      "license": "CC BY 4.0",
+      "localSize": [
+        683,
+        1024
+      ],
+      "urlErrors": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/478065886/original.jpg: HTTP Error 404: Not Found"
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/478065886/original.jpeg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1263,
+        1893
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp007-adult_f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "image": "/assets/species/plumage/sp007-flight.webp",
+      "title": "File:Northern Goshawk (Accipiter gentilis) (1).JPG",
+      "author": "Ken Billington",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        800,
+        450
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Northern_Goshawk_(Accipiter_gentilis)_(1).JPG",
+        "sha1": "195142d2ac6ea6502f28ad3970a24be0aae1127b",
+        "license": "CC BY-SA 3.0",
+        "author": "Ken Billington",
+        "width": 800,
+        "height": 450,
+        "creditFields": {
+          "author": "Ken Billington"
+        }
+      },
+      "commonsContext": {
+        "description": "Northern Goshawk (Accipiter gentilis)",
+        "date": "2010-12-14",
+        "categories": [
+          "Astur gentilis in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        800,
+        450
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp007-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "image": "/assets/species/plumage/sp007-male-flight.webp",
+      "title": null,
+      "author": "Вячеслав Юсупов",
+      "license": "CC BY 4.0",
+      "localSize": [
+        922,
+        792
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        2048,
+        1365
+      ],
+      "mode": "crop",
+      "r": 0.824,
+      "scale": 0.6,
+      "offset": [
+        0.388,
+        0.058
+      ],
+      "sameShot": false,
+      "sideBySide": "sp007-male-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "image": "/assets/species/plumage/sp007-hero-male.webp",
+      "title": "File:Male northern goshawk (52294386465).jpg",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Male_northern_goshawk_(52294386465).jpg",
+        "sha1": "7d6ecbe1e4d126293b12272763b62e9c6c07da4e",
+        "license": "CC BY 2.0",
+        "author": "Andrey Gulivanov",
+        "width": 3600,
+        "height": 2400,
+        "creditFields": {
+          "author": "Andrey Gulivanov"
+        }
+      },
+      "commonsContext": {
+        "description": "St Petersburg/Leningrad Oblast. Accipiter gentilis",
+        "date": "Taken on 1 July 2022, 06:29",
+        "categories": [
+          "Astur gentilis (male)",
+          "Astur gentilis in Russia"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp007-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "audio": "/assets/species/audio/sp007-female-call.mp3",
+      "title": "File:Accipiter gentilis - Northern Goshawk XC396289.mp3",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396289.mp3",
+        "sha1": "0c1313a3299a4028e7a0504c36a4c7c9591d055f",
+        "license": "CC BY-SA 4.0",
+        "author": "Alvaro Ortiz Troncoso",
+        "duration": 23.78928008931856,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "pageParams": {
+          "date": "2017-12-18 15:36",
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "creditLines": [
+          "|author=Alvaro Ortiz Troncoso"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp007",
+      "audio": "/assets/species/audio/sp007-alarm.mp3",
+      "title": "File:Accipiter gentilis - Northern Goshawk XC396773.mp3",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC396773.mp3",
+        "sha1": "74e37a50728d6a37daea0049790f4c904cdf132b",
+        "license": "CC BY-SA 3.0",
+        "author": "Alvaro Ortiz Troncoso",
+        "duration": 7.342730297373309,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "pageParams": {
+          "date": "2017-12-21 10:49",
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "creditLines": [
+          "|author=Alvaro Ortiz Troncoso"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp007",
+      "audio": "/assets/species/audio/sp007-begging.mp3",
+      "title": "File:Accipiter gentilis - Northern Goshawk XC578067.mp3",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Accipiter_gentilis_-_Northern_Goshawk_XC578067.mp3",
+        "sha1": "5c32bb148a35d6114f615a511286348281f939d6",
+        "license": "CC BY-SA 4.0",
+        "author": "Alvaro Ortiz Troncoso",
+        "duration": 294.58601118420574,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "pageParams": {
+          "date": "2020-07-18 08:45",
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "creditLines": [
+          "|author=Alvaro Ortiz Troncoso"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/plumage/sp003-juv.webp",
+      "title": null,
+      "author": "Paul Lewis",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1100,
+        804
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/725640198/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        2048,
+        1496
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp003-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/plumage/sp003-flight-open-sky.webp",
+      "title": null,
+      "author": "andygpos",
+      "license": "CC BY 4.0",
+      "localSize": [
+        680,
+        595
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/757637556/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1248,
+        832
+      ],
+      "mode": "crop",
+      "r": 0.944,
+      "scale": 0.7,
+      "offset": [
+        0.117,
+        0.2
+      ],
+      "sameShot": true,
+      "sideBySide": "sp003-flight-open-sky_vs_source.jpg"
+    }
+  ]
+}

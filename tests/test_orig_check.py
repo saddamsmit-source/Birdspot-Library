@@ -45,4 +45,16 @@ assert ci.credit_fields("|performer =\n| permission ={{PermissionTicket|id=1}}")
 au = oc.audio_record({**e, "author": "Aubrey John Williams / The British Library Board", "license": "CC BY-SA 4.0"},
                      {"page": "p", "sha1": "s", "author": "", "license": "CC BY-SA 4.0", "creditFields": bl}, ci.norm_name)
 assert au["rightsMatch"] is True and au["authorRule"] == "recordist+copyright-holder" and "VERIFIED" not in str(au)
+# F3-REV2-R02: iNaturalist-licentie via API — alleen CC0/CC BY/CC BY-SA, auteur moet in de attributie staan; geen netwerk in de test.
+class FakeInat:
+    def __init__(self, code, attribution): self.r = {"results": [{"license_code": code, "attribution": attribution}]}
+    def get(self, url): assert url.startswith("https://api.inaturalist.org/v1/photos/"); return self.r
+class DownInat:
+    def get(self, url): raise RuntimeError("offline")
+item = {"inatPhotoId": 725640198, "author": "Paul Lewis", "license": "CC BY 4.0"}
+assert oc.inat_rights(FakeInat("cc-by", "(c) Paul Lewis, some rights reserved (CC BY)"), item)["rightsMatch"] is True
+assert oc.inat_rights(FakeInat("cc-by-nc", "(c) Paul Lewis, some rights reserved (CC BY-NC)"), item)["rightsMatch"] is False, "NC never passes"
+assert oc.inat_rights(FakeInat("cc-by", "(c) Someone Else, some rights reserved (CC BY)"), item)["rightsMatch"] is False, "author must match"
+assert oc.inat_rights(FakeInat("cc-by-sa", "(c) Paul Lewis"), item)["rightsMatch"] is False, "licence must equal the register"
+assert oc.inat_rights(DownInat(), item)["rightsMatch"] is None, "unreachable API claims nothing"
 print("ORIGCHECK PASS: same shot (full and crop) accepted; other and mirrored image clearly worse", full, crop, diff)
