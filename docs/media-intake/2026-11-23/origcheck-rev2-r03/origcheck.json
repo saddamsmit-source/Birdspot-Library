@@ -1,0 +1,809 @@
+{
+  "generated": "2026-11-23T22:03:47Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp008",
+      "image": "/assets/species/sp008.webp",
+      "title": "File:Common kestrel on a tree in Kraków, 20250412 1052 3641.jpg",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1065,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_kestrel_on_a_tree_in_Krak%C3%B3w,_20250412_1052_3641.jpg",
+        "sha1": "4f2c9f73afec173517ccb75e87874c2920534b82",
+        "license": "CC BY 4.0",
+        "author": "Jakub Hałun",
+        "width": 1785,
+        "height": 2682,
+        "creditFields": {
+          "author": "Jakub Hałun"
+        }
+      },
+      "commonsContext": {
+        "description": "Male common kestrel on top of a trimmed tree in Kraków",
+        "date": "2025-04-12 10:52:33",
+        "categories": [
+          "Birds of Kraków",
+          "Falco tinnunculus (male)",
+          "Falco tinnunculus in Poland"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1442
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp008_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "image": "/assets/species/plumage/sp008-adult_f.webp",
+      "title": "File:Common kestrel female France.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Common_kestrel_female_France.jpg",
+        "sha1": "e493594dc9c77ae4278ed251891c5fb16461361f",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 4239,
+        "height": 2826,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "commonsContext": {
+        "description": "A female common kestrel ( Falco tinnunculus ) perched on a tree. Picture taken in Franconville, France.",
+        "date": "2022-01-16 14:57:18",
+        "categories": [
+          "Aves in left lateral aspect",
+          "Falco tinnunculus (female)",
+          "Falco tinnunculus in France",
+          "Nature of Franconville (Val-d'Oise)"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp008-adult_f_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "image": "/assets/species/plumage/sp008-juv.webp",
+      "title": "File:Kestrel - Falco tinnunculus - Juvenile.jpg",
+      "author": "caroline legg",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1143,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Kestrel_-_Falco_tinnunculus_-_Juvenile.jpg",
+        "sha1": "15f8a1be3c28e4b0b56afce74f192e9b260128c3",
+        "license": "CC BY 4.0",
+        "author": "caroline legg",
+        "width": 2869,
+        "height": 4017,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "commonsContext": {
+        "description": "Kestrel",
+        "date": "Taken on 10 June 2026, 15:07:19",
+        "categories": [
+          "Birds of Dumfries and Galloway",
+          "Falco tinnunculus (juvenile)",
+          "Falco tinnunculus in Scotland",
+          "June 2026 in Dumfries and Galloway"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1344
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp008-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "image": "/assets/species/plumage/sp008-flight.webp",
+      "title": "File:Falco tinnunculus in flight (45067938032).jpg",
+      "author": "Rolf Dietrich Brecher",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1004
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_in_flight_(45067938032).jpg",
+        "sha1": "3658708d402f22a16afe729b4e05da9d997b7962",
+        "license": "CC BY 2.0",
+        "author": "Rolf Dietrich Brecher from Germany",
+        "width": 3167,
+        "height": 1987,
+        "creditFields": {
+          "author": "Rolf Dietrich Brecher from Germany"
+        }
+      },
+      "commonsContext": {
+        "description": "P1091207-001",
+        "date": "2018-10-05 12:59",
+        "categories": [
+          "Falco tinnunculus in flight"
+        ]
+      },
+      "authorRule": "flickr-location-suffix",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        602
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp008-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "image": "/assets/species/plumage/sp008-male-flight.webp",
+      "title": "File:Falco tinnunculus - Common kestrel 20.jpg",
+      "author": "Zeynel Cebeci",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        1050
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_kestrel_20.jpg",
+        "sha1": "0801e85f403acc625b2819c147b84cdeb1856d43",
+        "license": "CC BY-SA 4.0",
+        "author": "Zeynel Cebeci",
+        "width": 2050,
+        "height": 1537,
+        "creditFields": {
+          "author": "Zeynel Cebeci"
+        }
+      },
+      "commonsContext": {
+        "description": "A male common kestrel ( Falco tinnunculus ) in flight. Seyhan - Adana, Turkey.",
+        "date": "2020-04-06 19:34:57",
+        "categories": [
+          "Birds of Adana Province",
+          "Falco tinnunculus (male)",
+          "Falco tinnunculus in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp008-male-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "image": "/assets/species/plumage/sp008-hero-male.webp",
+      "title": "File:Falco tinnunculus WE Faucons LPO 20260621 n06.jpg",
+      "author": "Marie-Lan Taÿ Pamart",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_WE_Faucons_LPO_20260621_n06.jpg",
+        "sha1": "9041286b8d585208dbab30655cacb41c59babd1a",
+        "license": "CC BY 4.0",
+        "author": "Marie-Lan Taÿ Pamart",
+        "width": 5067,
+        "height": 3378,
+        "creditFields": {
+          "author": "Marie-Lan Taÿ Pamart"
+        }
+      },
+      "commonsContext": {
+        "description": "Male Common Kestrel ( Falco tinnunculus ) on a lampstand along the Château de Vincennes, in France",
+        "date": "2026-06-21 11:03:37",
+        "categories": [
+          "Falco tinnunculus (male)",
+          "Falco tinnunculus at Château de Vincennes"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp008-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp008",
+      "audio": "/assets/species/audio/sp008-pair.mp3",
+      "title": "File:Falco tinnunculus - Common Kestrel XC463430.mp3",
+      "author": "Javier Herrera",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_Kestrel_XC463430.mp3",
+        "sha1": "b993aaadf34989397122b4f804b8e4565bd64e00",
+        "license": "CC BY-SA 4.0",
+        "author": "Javier Herrera",
+        "duration": 30.904273227047828,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Javier Herrera"
+        },
+        "pageParams": {
+          "date": "2019-03-23 18:00",
+          "author": "Javier Herrera"
+        },
+        "creditLines": [
+          "|author=Javier Herrera"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp008",
+      "audio": "/assets/species/audio/sp008-male-call.mp3",
+      "title": "File:Falco tinnunculus - Common Kestrel XC589714.mp3",
+      "author": "Pascal Christe",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_Kestrel_XC589714.mp3",
+        "sha1": "27c6dff9f7c5ca314b8f50c7ac5cbacd5d39d5bb",
+        "license": "CC BY-SA 4.0",
+        "author": "Pascal Christe",
+        "duration": 6.754075,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Pascal Christe"
+        },
+        "pageParams": {
+          "date": "2020-09-16 15:00",
+          "author": "Pascal Christe"
+        },
+        "creditLines": [
+          "|author=Pascal Christe"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp009",
+      "image": "/assets/showcase/sp009.webp",
+      "title": "File:Falco peregrinus in flight (17659253649).jpg",
+      "author": "john581",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1277
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
+        "sha1": "cbdcd25f769e5675e356c702a8b78784ac1ea6eb",
+        "license": "CC BY 2.0",
+        "author": "john581",
+        "width": 2048,
+        "height": 1634,
+        "creditFields": {
+          "author": "john581"
+        }
+      },
+      "commonsContext": {
+        "description": "Birds",
+        "date": "2012-10-07 22:22",
+        "categories": [
+          "Falco peregrinus in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        766
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp009_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "image": "/assets/species/plumage/sp009-juv.webp",
+      "title": "File:PeregrineFalconperched.jpg",
+      "author": "Teddy Llovet",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1576,
+        1169
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:PeregrineFalconperched.jpg",
+        "sha1": "a0591ff540c28641abaa343d0e1a9546c506c9c0",
+        "license": "CC BY 2.0",
+        "author": "Teddy Llovet",
+        "width": 1576,
+        "height": 1169,
+        "creditFields": {
+          "author": "Teddy Llovet"
+        }
+      },
+      "commonsContext": {
+        "description": "Morro Rock",
+        "date": "2007-06-16 09:44",
+        "categories": [
+          "Falco peregrinus (juvenile)"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        712
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp009-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "image": "/assets/species/plumage/sp009-perched.webp",
+      "title": "File:Peregrine falcon portrait.jpg",
+      "author": "Dhairya dixit",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1231,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_portrait.jpg",
+        "sha1": "8de343eacfe4acaf22e0b8eee3c11b1303deb6a5",
+        "license": "CC BY-SA 4.0",
+        "author": "Dhairya dixit",
+        "width": 1547,
+        "height": 2010,
+        "creditFields": {
+          "author": "Dhairya dixit"
+        }
+      },
+      "commonsContext": {
+        "description": "It's a Peregrine Falcon Falco peregrinus calidus , wintering in Gujarat, India. It's an adult female wintering at same place for nearly 4 years.",
+        "date": "2018-10-17",
+        "categories": [
+          "Birds of the Rann of Kutch",
+          "Falco peregrinus"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1247
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp009-perched_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "image": "/assets/species/plumage/sp009-male-rest.webp",
+      "title": "File:Peregrine Falcon (male) cropped.jpg",
+      "author": "Sumeet Moghe",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1382,
+        1400
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(male)_cropped.jpg",
+        "sha1": "5f03de1c486ce82c41b79314e903c4fd6c2fd390",
+        "license": "CC BY-SA 4.0",
+        "author": "Sumeet Moghe",
+        "width": 2772,
+        "height": 2808,
+        "creditFields": {
+          "author": "Sumeet Moghe"
+        }
+      },
+      "commonsContext": {
+        "description": "Peregrine Falcon (male) at Rann of Kutch",
+        "date": "2020-03-10 09:02:42",
+        "categories": [
+          "Birds of the Rann of Kutch",
+          "Falco peregrinus in India"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        972
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp009-male-rest_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "image": "/assets/species/plumage/sp009-male-flight.webp",
+      "title": null,
+      "author": "Jonathan Tollin",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1223,
+        815
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1609,
+        1073
+      ],
+      "mode": "full",
+      "r": 0.659,
+      "sameShot": false,
+      "sideBySide": "sp009-male-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "image": "/assets/species/plumage/sp009-juv-flight.webp",
+      "title": null,
+      "author": "Josh Boe",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1238,
+        1105
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1238,
+        1105
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp009-juv-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "audio": "/assets/species/audio/sp009-call.mp3",
+      "title": "File:Halcón peregrino.ogg",
+      "author": "Sternanita3",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Halc%C3%B3n_peregrino.ogg",
+        "sha1": "8cb19334d49f0defe4d2e335fb2adf5a273598be",
+        "license": "CC BY-SA 4.0",
+        "author": "Sternanita3",
+        "duration": 14.84,
+        "mime": "application/ogg",
+        "creditFields": {
+          "author": "Sternanita3"
+        },
+        "pageParams": {
+          "date": "2022-07-31",
+          "author": "[[User:Sternanita3|Sternanita3]]",
+          "permission": ""
+        },
+        "creditLines": [
+          "|author=[[User:Sternanita3|Sternanita3]]"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp016",
+      "image": "/assets/species/sp016.webp",
+      "title": "File:2015.05.08.-04-Kaefertaler Wald-Mannheim--Buntspecht-Weibchen.jpg",
+      "author": "Andreas Eichler",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1421,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:2015.05.08.-04-Kaefertaler_Wald-Mannheim--Buntspecht-Weibchen.jpg",
+        "sha1": "249b69338056a4acb99dc72c1e9c91d6084b6895",
+        "license": "CC BY-SA 4.0",
+        "author": "Andreas Eichler",
+        "width": 2306,
+        "height": 2597,
+        "creditFields": {
+          "author": "Andreas Eichler"
+        }
+      },
+      "commonsContext": {
+        "description": "Great spotted woodpecker - Dendrocopos major, female. Taken in Mannheim im Käfertaler Wald, Baden-Württemberg, Germany.",
+        "date": "Taken on 8 May 2015",
+        "categories": [
+          "Dendrocopos major eating",
+          "Dendrocopos major in Mannheim",
+          "Piciformes in Käfertal (Mannheim)"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1081
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp016_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "image": "/assets/species/plumage/sp016-juv.webp",
+      "title": "File:Juvenile great spotted woodpecker (52200334398).jpg",
+      "author": "Andrey Gulivanov",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1280,
+        960
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Juvenile_great_spotted_woodpecker_(52200334398).jpg",
+        "sha1": "adb765161e60ca0fd0eea31b0ddf534c31bd54b8",
+        "license": "CC BY 2.0",
+        "author": "Andrey Gulivanov",
+        "width": 7466,
+        "height": 5600,
+        "creditFields": {
+          "author": "Andrey Gulivanov"
+        }
+      },
+      "commonsContext": {
+        "description": "St Petersburg/Leningrad Oblast. Juvenile great spotted woodpecker",
+        "date": "Taken on 21 June 2022, 08:46",
+        "categories": [
+          "Dendrocopos major (juvenile)",
+          "Dendrocopos major in Russia"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp016-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "image": "/assets/species/plumage/sp016-male.webp",
+      "title": "File:Great spotted woodpecker (Dendrocopos major) male Drenthe.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1066
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Great_spotted_woodpecker_(Dendrocopos_major)_male_Drenthe.jpg",
+        "sha1": "51f27429c6a9211146db0bcde9627b46c58244bd",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 6328,
+        "height": 4218,
+        "creditFields": {}
+      },
+      "commonsContext": {
+        "description": "Great spotted woodpecker ( Dendrocopos major ) male, Drenthe, Netherlands",
+        "date": "2026-04-09 08:46:05",
+        "categories": [
+          "Dendrocopos major (female)",
+          "Dendrocopos major (male)",
+          "Dendrocopos major in the Netherlands"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp016-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "image": "/assets/species/plumage/sp016-flight.webp",
+      "title": "File:Dendrocopos major (51546452028).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg",
+        "sha1": "a80269d1a0df4346700fa6d5626ae0abb53a2b71",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 3389,
+        "height": 2259,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "commonsContext": {
+        "description": "Dendrocopos major - Scotland",
+        "date": "Taken on 26 June 2021, 10:45",
+        "categories": [
+          "Dendrocopos major in Scotland",
+          "Dendrocopos major in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp016-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "image": "/assets/species/plumage/sp016-hero-male.webp",
+      "title": "File:Great Spotted Woodpecker - Dendrocopos major - Male (52580093933).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1143
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Great_Spotted_Woodpecker_-_Dendrocopos_major_-_Male_(52580093933).jpg",
+        "sha1": "eb15a906daa107613ad83f13b2f93b709da92bc5",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 5099,
+        "height": 3642,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "commonsContext": {
+        "description": "Great Spotted Woodpecker - Dumfries & Galloway",
+        "date": "Taken on 22 December 2022, 10:44",
+        "categories": [
+          "Birds in December 2022",
+          "Birds of Dumfries and Galloway",
+          "December 2022 in Dumfries and Galloway",
+          "Dendrocopos major (male)",
+          "Dendrocopos major in Scotland"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        686
+      ],
+      "mode": "full",
+      "r": 0.999,
+      "sameShot": true,
+      "sideBySide": "sp016-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "audio": "/assets/species/audio/sp016-call-app.mp3",
+      "title": "File:Dendrocopos major - Great Spotted Woodpecker XC542957.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_-_Great_Spotted_Woodpecker_XC542957.mp3",
+        "sha1": "5c558a037a26e0ef0ff5820b93df3cd2f583bac8",
+        "license": "CC BY-SA 4.0",
+        "author": "Benoît Van Hecke",
+        "duration": 3.328023222060958,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Benoît Van Hecke"
+        },
+        "pageParams": {
+          "date": "2020-04-07 18:38",
+          "author": "Benoît Van Hecke"
+        },
+        "creditLines": [
+          "|author=Benoît Van Hecke"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp016",
+      "audio": "/assets/species/audio/sp016-drum-app.mp3",
+      "title": "File:Dendrocopos major.ogg",
+      "author": "Vladimir Yu. Arkhipov",
+      "license": "CC BY-SA 3.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.ogg",
+        "sha1": "2c1f3333aa109ece31e50726fb4910a70318d4a5",
+        "license": "CC BY-SA 3.0",
+        "author": "Vladimir Yu. Arkhipov, Arkhivov",
+        "duration": 10.339541666666667,
+        "mime": "application/ogg",
+        "creditFields": {
+          "author": "Vladimir Yu. Arkhipov, Arkhivov"
+        },
+        "pageParams": {
+          "date": "2009-05-02",
+          "author": "[[User:Arkhivov|Vladimir Yu. Arkhipov, Arkhivov]]",
+          "permission": ""
+        },
+        "creditLines": [
+          "|author=[[User:Arkhivov|Vladimir Yu. Arkhipov, Arkhivov]]"
+        ]
+      },
+      "authorRule": "different",
+      "rightsMatch": false,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    }
+  ]
+}
