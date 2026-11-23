@@ -396,7 +396,10 @@
     "visualCheck": "Witte halsvlek, roze borst en grijze kop. Volledige houtduif in zijaanzicht.",
     "alt": "Houtduif — Witte halsvlek, roze borst en grijze kop. Volledige houtduif in zijaanzicht.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/houtduif",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceAudit": "2026-11-23",
+    "sourceSha1": "f102a9cafd7b68157cf6539fd8cbe655efcf22a4",
+    "sourceAuditEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json (F3-REV2-R01b; zelfde opname r=1.0; auteur en licentie gelijk aan Commons)"
   },
   "sp004": {
     "file": "Sierpówka zwyczajna w Rżuchowie w województwie świętokrzyskim, 20250421 0903 4128.jpg",
@@ -900,7 +903,10 @@
     "visualCheck": "Volledige vogel in gras, met grijsblauw verenkleed, groene halsglans en korte zwarte vleugelstrepen.",
     "alt": "Holenduif — Volledige vogel in gras, met grijsblauw verenkleed, groene halsglans en korte zwarte vleugelstrepen.",
     "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "sourceAudit": "2026-11-23",
+    "sourceSha1": "cdc04d813e4db915116ca51a9ab06309b67cb5b7",
+    "sourceAuditEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json (F3-REV2-R01b; zelfde opname r=1.0; auteur en licentie gelijk aan Commons)"
   },
   "sp017": {
     "file": "Picchio rosso minore con mora di gelso.jpg",

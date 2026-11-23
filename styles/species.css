@@ -1144,6 +1144,18 @@
 @media (min-width: 720px) {
   :is(.kb-similar__item, .sd-similar-links__item) { grid-template-columns: 1fr auto; align-items: center; }
 }
+/* v1.10 §2.3.B.3: max. 3 primaire punten; overige veldkenmerken ingeklapt (alleen bij quickPrimary). */
+.kb-more-marks { border-top: 1px solid var(--line); }
+.kb-more-marks > summary {
+  display: flex; align-items: center; gap: var(--space-8); min-height: 44px;
+  cursor: pointer; color: var(--ink-2); font-size: var(--fs-meta); font-weight: 600;
+}
+.kb-more-marks > summary { list-style: none; }
+.kb-more-marks > summary::-webkit-details-marker { display: none; }
+.kb-more-marks > summary::after { content: '+'; font-size: 1.25rem; color: var(--ink-2); }
+.kb-more-marks[open] > summary::after { content: '−'; }
+.kb-more-marks > summary:focus-visible { outline: 3px solid var(--focus-ink); outline-offset: 2px; }
+.kb-more-marks > .kb-marks { padding-bottom: var(--space-4); }
 .kb-caution {
   margin: 0; padding: var(--space-10) var(--space-12); border-radius: var(--r-sm);
   border-inline-start: 3px solid var(--warn-ink);

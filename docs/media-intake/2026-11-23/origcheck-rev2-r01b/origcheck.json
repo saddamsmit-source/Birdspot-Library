@@ -1,0 +1,284 @@
+{
+  "generated": "2026-11-23T14:35:44Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp002",
+      "image": "/assets/species/sp002.webp",
+      "title": "File:Ringeltaube auf Norderney 03.jpg",
+      "author": "Stephan Sprinz",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1280
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Ringeltaube_auf_Norderney_03.jpg",
+        "sha1": "f102a9cafd7b68157cf6539fd8cbe655efcf22a4",
+        "license": "CC BY 4.0",
+        "author": "Stephan Sprinz",
+        "width": 3735,
+        "height": 2988,
+        "creditFields": {
+          "author": "Stephan Sprinz"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        768
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp002_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp002",
+      "image": "/assets/species/plumage/sp002-flight-wingband.webp",
+      "title": "File:Pigeon ramier 2 (49863738256).jpg",
+      "author": "Pierre-Marie Epiney",
+      "license": "CC BY-SA 2.0",
+      "localSize": [
+        901,
+        731
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Pigeon_ramier_2_(49863738256).jpg",
+        "sha1": "29af85c578cb95327181db2319e9a8b828835fb7",
+        "license": "CC BY-SA 2.0",
+        "author": "Pierre-Marie Epiney",
+        "width": 901,
+        "height": 731,
+        "creditFields": {
+          "author": "Pierre-Marie Epiney"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        901,
+        731
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp002-flight-wingband_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp002",
+      "image": "/assets/species/plumage/sp002-juv.webp",
+      "title": "File:Columba palumbus (juvenile).JPG",
+      "author": "Roland Gromes",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1100,
+        841
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Columba_palumbus_(juvenile).JPG",
+        "sha1": "29ab2af935d1deb894ef3c5200cc73fa0e31ab4c",
+        "license": "CC BY-SA 4.0",
+        "author": "Roland Gromes",
+        "width": 2600,
+        "height": 1988,
+        "creditFields": {
+          "author": "Roland Gromes"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        734
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp002-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/sp003.webp",
+      "title": "File:Columba oenas1.jpg",
+      "author": "Chris Cant from Cumbria, UK",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Columba_oenas1.jpg",
+        "sha1": "cdc04d813e4db915116ca51a9ab06309b67cb5b7",
+        "license": "CC BY 2.0",
+        "author": "Chris Cant from Cumbria, UK",
+        "width": 3888,
+        "height": 2592,
+        "creditFields": {
+          "author": "Chris Cant from Cumbria, UK"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp003_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/plumage/sp003-juv.webp",
+      "title": null,
+      "author": "Paul Lewis",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1100,
+        804
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/725640198/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        2048,
+        1496
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp003-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/plumage/sp003-flight-open-sky.webp",
+      "title": null,
+      "author": "andygpos",
+      "license": "CC BY 4.0",
+      "localSize": [
+        680,
+        595
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/757637556/original.jpg",
+      "rightsMatch": null,
+      "sourceSize": [
+        1248,
+        832
+      ],
+      "mode": "crop",
+      "r": 0.944,
+      "scale": 0.7,
+      "offset": [
+        0.117,
+        0.2
+      ],
+      "sameShot": true,
+      "sideBySide": "sp003-flight-open-sky_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp004",
+      "image": "/assets/species/plumage/sp004-adult-crop.webp",
+      "title": "File:Sierpówka zwyczajna w Rżuchowie w województwie świętokrzyskim, 20250421 0903 4128.jpg",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1100,
+        969
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Sierp%C3%B3wka_zwyczajna_w_R%C5%BCuchowie_w_wojew%C3%B3dztwie_%C5%9Bwi%C4%99tokrzyskim,_20250421_0903_4128.jpg",
+        "sha1": "13a0c82b0b45f54b436bd5e592b5be4864df111a",
+        "license": "CC BY 4.0",
+        "author": "Jakub Hałun",
+        "width": 2429,
+        "height": 1616,
+        "creditFields": {
+          "author": "Jakub Hałun"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        639
+      ],
+      "mode": "crop",
+      "r": 0.857,
+      "scale": 0.7,
+      "offset": [
+        0.28,
+        0.099
+      ],
+      "sameShot": false,
+      "sideBySide": "sp004-adult-crop_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp004",
+      "image": "/assets/species/plumage/sp004-flight.webp",
+      "title": "File:Tourterelle turque en vol près de Chambéry (avril 2020).JPG",
+      "author": "Florian Pépellin",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        1053
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Tourterelle_turque_en_vol_pr%C3%A8s_de_Chamb%C3%A9ry_(avril_2020).JPG",
+        "sha1": "04effd85b5941e750a8efe03065ea58a540f5385",
+        "license": "CC BY-SA 4.0",
+        "author": "Florian Pépellin",
+        "width": 2694,
+        "height": 2026,
+        "creditFields": {
+          "author": "Florian Pépellin"
+        }
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        722
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp004-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp004",
+      "image": "/assets/species/plumage/sp004-juv.webp",
+      "title": "File:Streptopelia decaocto juvenile 2.jpg",
+      "author": "Kreuzschnabel/Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1100,
+        825
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Streptopelia_decaocto_juvenile_2.jpg",
+        "sha1": "945c7658aae2e673aa99925b86c094038c90e148",
+        "license": "CC BY-SA 3.0",
+        "author": "Kreuzschnabel",
+        "width": 2627,
+        "height": 1970,
+        "creditFields": {
+          "author": "Kreuzschnabel"
+        }
+      },
+      "authorRule": "different",
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp004-juv_vs_source.jpg"
+    }
+  ]
+}

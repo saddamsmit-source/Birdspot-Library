@@ -81,7 +81,9 @@ for(const pair of registry.pairs) {
     assert.ok(!active,'Incomplete image pair must never be displayed: '+pair.id);
   } else assert.fail('Unsupported media gate '+pair.photoState);
 }
-assert.deepEqual([...focusUsed].sort(),registry.focusSpecies);
+// F3-REV2-R01b: nieuwe focussoorten (sp002–sp004) staan achteraan zodat de positionele R09–R17-controles gelijk blijven;
+// de setcontrole (elke focussoort gebruikt, geen extra's) vergelijkt daarom beide kanten gesorteerd.
+assert.deepEqual([...focusUsed].sort(),[...registry.focusSpecies].sort());
 assert.equal(registry.withinSpeciesVariation.length,1);
 assert.equal(registry.withinSpeciesVariation[0].speciesId,'sp034');
 assert.match(KNOWLEDGE.sp034.caution.text,/witkop|witte kop/i);

@@ -8,7 +8,7 @@ Validatie (contract v0.1):
   Birdspot-vergelijking verwijst mag leeg zijn en wordt dan als zodanig getoond);
 - betrouwbaarheid is doorslaggevend | ondersteunend | onbetrouwbaar-alleen;
 - vs- en similar-ID's bestaan en verwijzen niet naar de soort zelf;
-- keyMarks 3–5 stuks;
+- keyMarks 3–5 stuks; optioneel quickPrimary = 1–2 keyMarks-indexen (v1.10: max. 3 primaire punten);
 - doorslaggevend alleen met bronnen van >=2 verschillende uitgevers en een context (regel 10-11-2026);
 - biometrie (docs/BIRDSPOT_KWALITEITSNORM.md §1): >=2 uitgevers, display volgt exact uit gemiddelde
   grenzen + afronding en begint met "ca." (KV-13); display gelijk aan size.<field> in species.js (KV-14).
@@ -118,6 +118,13 @@ def validate(data, ids, sizes=None):
             if m.get("reliability") not in RELIABILITY:
                 errors.append(f"{sid} keyMarks[{i}]: ongeldige betrouwbaarheid {m.get('reliability')}")
             decisive(sid, f"keyMarks[{i}]", m)
+        # Kwaliteitsnorm v1.10 §2.3.B.3 (F3-REV2-R01b): optioneel max. 3 primaire aanknopingspunten in Snel
+        # herkennen = kritisch kenmerk + max. 2 keyMarks; de overige keyMarks blijven ingeklapt zichtbaar.
+        if "quickPrimary" in k:
+            qp = k["quickPrimary"]
+            if (not isinstance(qp, list) or not 1 <= len(qp) <= 2 or len(set(qp)) != len(qp)
+                    or not all(isinstance(i, int) and 0 <= i < len(marks) for i in qp)):
+                errors.append(f"{sid}: quickPrimary moet 1–2 unieke geldige keyMarks-indexen zijn")
         if k.get("caution") is not None:
             claim(sid, "caution", k["caution"])
         for i, c in enumerate(k.get("critical", [])):

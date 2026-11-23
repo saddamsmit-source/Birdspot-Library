@@ -46,7 +46,9 @@ for (const [id, clips] of Object.entries(GUIDE_AUDIO)) {
   assert.ok(species.has(id), `Onbekende soort bij opname: ${id}`);
   for (const clip of clips) checkMedia(clip, clip.audio);
 }
-for (const {birds, tip, flight} of GUIDE_COMPARISONS) {
+for (const {birds, tip, flight, pairHidden} of GUIDE_COMPARISONS) {
+  // Een verborgen (niet-gelijkwaardig) paar vereist een herleidbare F3-beslissing; de foto's zelf blijven gecontroleerd.
+  if (pairHidden !== undefined) assert.ok(/^F3-[A-Za-z0-9-]+ \d{2}-\d{2}-\d{4} \(eigenaarbesluit [A-C]\): .{20,}/.test(String(pairHidden)), 'pairHidden zonder F3-eigenaarbesluit');
   assert.ok(tip && (birds.length === 2 || (flight && birds.length === 3)) &&
     new Set(birds.map(bird => bird.id)).size === birds.length, 'Ongeldige vergelijking');
   for (const bird of birds) {

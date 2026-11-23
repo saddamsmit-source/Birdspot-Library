@@ -1,0 +1,34 @@
+{
+  "queries": [
+    {
+      "id": "sp003_flight_a",
+      "speciesId": "sp003",
+      "role": "flight",
+      "kind": "image",
+      "search": "Columba oenas flight",
+      "limit": 30,
+      "keep": 8,
+      "thumb": 800
+    },
+    {
+      "id": "sp003_flight_b",
+      "speciesId": "sp003",
+      "role": "flight",
+      "kind": "image",
+      "search": "Columba oenas in flight",
+      "limit": 30,
+      "keep": 8,
+      "thumb": 800
+    },
+    {
+      "id": "sp003_flight_c",
+      "speciesId": "sp003",
+      "role": "flight",
+      "kind": "image",
+      "search": "Stock dove flying",
+      "limit": 30,
+      "keep": 8,
+      "thumb": 800
+    }
+  ]
+}

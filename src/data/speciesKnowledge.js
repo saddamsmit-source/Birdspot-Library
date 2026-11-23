@@ -7130,6 +7130,10 @@ const DATA = {
      ]
     }
    ],
+   "quickPrimary": [
+    1,
+    2
+   ],
    "caution": {
     "text": "Jonge Houtduiven missen de halsvlek en de lichte iris en lijken dan op Holenduif; let op de witte vleugelband.",
     "sources": [
@@ -7378,6 +7382,10 @@ const DATA = {
      ]
     }
    ],
+   "quickPrimary": [
+    3,
+    2
+   ],
    "caution": {
     "text": "Jonge Houtduiven hebben ook een donker oog en geen halsvlek, maar wel een witte vleugelband. Stadsduiven kunnen sterk op Holenduif lijken.",
     "sources": [
@@ -7602,6 +7610,10 @@ const DATA = {
       "VB_5D"
      ]
     }
+   ],
+   "quickPrimary": [
+    2,
+    3
    ],
    "caution": {
     "text": "Jonge vogels hebben geen of een vage halsband en een bruin oog; let dan op de egale, ongeschubde bovendelen.",

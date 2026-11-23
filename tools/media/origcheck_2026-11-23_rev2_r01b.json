@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-23",
+  "purpose": "F3-REV2-R01b (eigenaarbesluit B): alle 9 getoonde duivenfoto's opnieuw tegen origineel, auteur, licentie en SHA-1; ontbrekende sourceSha1 voor sp002/sp003-hoofdfoto en sp004-vlucht",
+  "items": [
+    {
+      "speciesId": "sp002",
+      "image": "/assets/species/sp002.webp",
+      "title": "File:Ringeltaube auf Norderney 03.jpg",
+      "author": "Stephan Sprinz",
+      "license": "CC BY 4.0",
+      "role": "Hoofdfoto"
+    },
+    {
+      "speciesId": "sp002",
+      "image": "/assets/species/plumage/sp002-flight-wingband.webp",
+      "title": "File:Pigeon ramier 2 (49863738256).jpg",
+      "author": "Pierre-Marie Epiney",
+      "license": "CC BY-SA 2.0",
+      "role": "In vlucht"
+    },
+    {
+      "speciesId": "sp002",
+      "image": "/assets/species/plumage/sp002-juv.webp",
+      "title": "File:Columba palumbus (juvenile).JPG",
+      "author": "Roland Gromes",
+      "license": "CC BY-SA 4.0",
+      "role": "Juveniel"
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/sp003.webp",
+      "title": "File:Columba oenas1.jpg",
+      "author": "Chris Cant from Cumbria, UK",
+      "license": "CC BY 2.0",
+      "role": "Hoofdfoto"
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/plumage/sp003-juv.webp",
+      "author": "Paul Lewis",
+      "license": "CC BY 4.0",
+      "role": "Juveniel",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/725640198/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/725640198/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/725640198/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp003",
+      "image": "/assets/species/plumage/sp003-flight-open-sky.webp",
+      "author": "andygpos",
+      "license": "CC BY 4.0",
+      "role": "In vlucht",
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/757637556/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/757637556/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/757637556/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp004",
+      "image": "/assets/species/plumage/sp004-adult-crop.webp",
+      "title": "File:Sierpówka zwyczajna w Rżuchowie w województwie świętokrzyskim, 20250421 0903 4128.jpg",
+      "author": "Jakub Hałun",
+      "license": "CC BY 4.0",
+      "role": "Hoofdfoto"
+    },
+    {
+      "speciesId": "sp004",
+      "image": "/assets/species/plumage/sp004-flight.webp",
+      "title": "File:Tourterelle turque en vol près de Chambéry (avril 2020).JPG",
+      "author": "Florian Pépellin",
+      "license": "CC BY-SA 4.0",
+      "role": "In vlucht"
+    },
+    {
+      "speciesId": "sp004",
+      "image": "/assets/species/plumage/sp004-juv.webp",
+      "title": "File:Streptopelia decaocto juvenile 2.jpg",
+      "author": "Kreuzschnabel/Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "role": "Juveniel"
+    }
+  ]
+}

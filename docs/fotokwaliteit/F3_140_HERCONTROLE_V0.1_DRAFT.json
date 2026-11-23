@@ -198,6 +198,137 @@
           ],
           "mediaFileIntegrity": "NOT TESTED",
           "soundSpeciesAndRole": "NOT TESTED"
+        },
+        "secondReview": {
+          "round": "F3-REV2-R01",
+          "date": "2026-11-23",
+          "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
+          "pr": 351,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp002.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Ringeltaube_auf_Norderney_03.jpg",
+              "author": "Stephan Sprinz",
+              "license": "CC BY 4.0",
+              "priorRights": "credits.json reviewed 2026-11-06; geen sourceSha1/sourceAudit vastgelegd",
+              "visual": "Volwassen Houtduif, scherp, goed licht, volledig zijaanzicht. Zichtbaar: witte halsvlek, groene/paarse halsglans, roze borst, lichte (gele) iris, oranje-rode snavel met lichte punt, witte rand van de gevouwen vleugel.",
+              "identity": "VERIFIED (visueel door Claude; soort volgt uit halsvlek + lichte iris + witte vleugelrand)",
+              "quality": "VERIFIED - uitstekende hoofdfoto voor snelle determinatie",
+              "roleCheck": "VERIFIED - neutraal Volwassen; geslacht niet op kleed te onderscheiden",
+              "blobSha": "cef01c89dc5f2ca790d45e7c5e8cf7c7792bc250",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 f102a9cafd7b68157cf6539fd8cbe655efcf22a4, zelfde opname r=1.0",
+              "sourceSha1": "f102a9cafd7b68157cf6539fd8cbe655efcf22a4",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp002-flight-wingband.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Pigeon_ramier_2_(49863738256).jpg",
+              "author": "Pierre-Marie Epiney",
+              "license": "CC BY-SA 2.0",
+              "priorRights": "sourceAudit 2026-11-14, sourceSha1 29af85c5",
+              "visual": "Echte vrije vlucht tegen grijze lucht. Witte band over de bovenvleugel en witte halsvlek zichtbaar. Onderbelicht: grijs verenkleed oogt bijna zwart, weinig detail.",
+              "identity": "VERIFIED (visueel; witte vleugelband + halsvlek)",
+              "quality": "PARTIALLY TESTED - diagnostisch bruikbaar, maar donker/vlak; kleurindruk misleidend",
+              "roleCheck": "VERIFIED - echte vrije vlucht",
+              "blobSha": "125332074f2ded4fc51633075196f56d3e013a36",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 29af85c578cb95327181db2319e9a8b828835fb7, zelfde opname r=1.0",
+              "sourceSha1": "29af85c578cb95327181db2319e9a8b828835fb7",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
+            },
+            {
+              "role": "Juveniel",
+              "path": "/assets/species/plumage/sp002-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Columba_palumbus_(juvenile).JPG",
+              "author": "Roland Gromes",
+              "license": "CC BY-SA 4.0",
+              "priorRights": "sourceAudit 2026-11-14, sourceSha1 29ab2af9",
+              "visual": "Jonge Houtduif op grind: geen witte halsvlek, donker oog, bruinige borst, witte vleugelrand zichtbaar. Iets zacht.",
+              "identity": "PARTIALLY TESTED (kenmerken passen bij juveniele Houtduif; leeftijd volgt uit fotografenlabel + zichtbaar kleed, niet onafhankelijk bevestigd)",
+              "quality": "PARTIALLY TESTED - bruikbaar, matige scherpte",
+              "roleCheck": "PARTIALLY TESTED - juveniel aannemelijk",
+              "blobSha": "e8ab1b91733e8beffae29931be3719416f62a6a7",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 29ab2af935d1deb894ef3c5200cc73fa0e31ab4c, zelfde opname r=1.0",
+              "sourceSha1": "29ab2af935d1deb894ef3c5200cc73fa0e31ab4c",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOUT, VB_HVH, VB_5D).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
+            "additional": "Repo-geregistreerd: Cornell CL_WP, BTO_DUIVEN, British Garden Birds GB_SD (eerste ronde); in REV2 niet hergelezen.",
+            "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk witte vleugelband + witte halsvlek + lichte iris; witte band in vlucht en bouw ingeklapt onder \"Meer kenmerken\" (niets verwijderd). Tekst consistent met geregistreerde bronnen.",
+            "herkenning": "PARTIALLY TESTED - leeftijd, geslacht (niet te onderscheiden), juveniel-valkuil en vluchtkenmerk correct beschreven.",
+            "lijktOp": "PARTIALLY TESTED - rustpaar Houtduif-Holenduif toegevoegd (beide hoofdfoto's, volwassen, zijaanzicht; rijen hals/oog/gevouwen vleugel); ongelijkwaardig vluchtpaar met Holenduif verborgen, vluchtpaar met Turkse Tortel blijft; Stadsduif alleen tekst.",
+            "biometry": "Lengte ca. 40-45 cm volgens §1.1 (KV-13). Spanwijdte 68-77 cm en gewicht 300-615 g zonder ca.-band/tweede uitgever: open, niet blokkerend (§1.1.9)."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp002<->sp003 Houtduif-Holenduif",
+              "bothDirections": "VERIFIED (paneel op beide kaarten aanwezig)",
+              "photoEquivalence": "PARTIALLY TESTED - rust tegen rust: beide volwassen, zijaanzicht, browser 320/360/390 px en offline beide richtingen; vluchtpaar verborgen; onafhankelijke review open",
+              "diagnosticText": "VERIFIED - witte vleugelband vs. geen wit; halsvlek vs. groene glans; juveniel-uitzondering benoemd"
+            },
+            {
+              "pair": "sp002<->sp004 Houtduif-Turkse Tortel",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - beide vlucht, verschillende hoek",
+              "diagnosticText": "PARTIALLY TESTED - weinig verwarringsrisico; tekst kort"
+            },
+            {
+              "pair": "sp002->Stadsduif",
+              "bothDirections": "NOT TESTED (Stadsduif buiten 140-cohort)",
+              "photoEquivalence": "N/A - alleen tekst",
+              "diagnosticText": "PARTIALLY TESTED - vleugelband als kernpunt"
+            }
+          ],
+          "lookalikeRegister": "LK-091 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet hergelezen (toestemming)",
+            "G7 geen lokaal gidsaudio",
+            "QA onafhankelijke review R01b open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R01 optie B (chat 23-11-2026 15:28 CET); uitgevoerd als F3-REV2-R01b in PR #351",
+            "remainingOpen": [
+              "ANWB-soortpassage NOT TESTED (geen optie C verleend)",
+              "Vogelbescherming REV2 niet hergelezen (toestemming)",
+              "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
+              "Vluchtfoto onderbelicht (wens)",
+              "Onafhankelijke review van R01b open",
+              "Biometrie spanwijdte/gewicht zonder ca.-band (niet blokkerend)"
+            ],
+            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
+          },
+          "fullPass": false,
+          "resolvedInR01b": [
+            "G3 hoofdfoto sourceSha1/sourceAudit vastgelegd (f102a9ca)",
+            "G4 Snel herkennen max. 3 primaire punten",
+            "G5 rustpaar met Holenduif toegevoegd; ongelijkwaardig vluchtpaar verborgen",
+            "G6 LK-091 geregistreerd"
+          ],
+          "repair": {
+            "round": "F3-REV2-R01b",
+            "date": "2026-11-23",
+            "evidence": [
+              "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json",
+              "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -297,6 +428,138 @@
           ],
           "mediaFileIntegrity": "NOT TESTED",
           "soundSpeciesAndRole": "NOT TESTED"
+        },
+        "secondReview": {
+          "round": "F3-REV2-R01",
+          "date": "2026-11-23",
+          "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
+          "pr": 351,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp003.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Columba_oenas1.jpg",
+              "author": "Chris Cant from Cumbria, UK",
+              "license": "CC BY 2.0",
+              "priorRights": "credits.json reviewed 2026-11-06; F3-R01 las Commons-metadata; geen sourceSha1/sourceAudit vastgelegd",
+              "visual": "Volwassen Holenduif in gras, volledig zijaanzicht. Zichtbaar: donker oog, groene halsglans zonder wit, twee korte zwarte vleugelstrepen, donkere staartpunt.",
+              "identity": "VERIFIED (visueel; donker oog + groene halsglans + korte zwarte strepen, geen wit)",
+              "quality": "VERIFIED - goede hoofdfoto, licht zacht",
+              "roleCheck": "VERIFIED - neutraal Volwassen",
+              "blobSha": "fc0ad25936f2f8c16205eac84fec582e362a18c1",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 cdc04d813e4db915116ca51a9ab06309b67cb5b7, zelfde opname r=1.0",
+              "sourceSha1": "cdc04d813e4db915116ca51a9ab06309b67cb5b7",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
+            },
+            {
+              "role": "Juveniel",
+              "path": "/assets/species/plumage/sp003-juv.webp",
+              "source": "https://www.inaturalist.org/photos/725640198",
+              "author": "Paul Lewis",
+              "license": "CC BY 4.0",
+              "priorRights": "sourceAudit 2026-11-14, sourceSha1 9d670763; waarneming 395731472 annoteert juveniel",
+              "visual": "Jonge Holenduif op tak: geschubd grijs kleed, donker oog, geen groene halsglans, korte donkere vleugeltekening. Scherp.",
+              "identity": "PARTIALLY TESTED (passend kleed; leeftijd volgt uit waarnemingsannotatie, niet onafhankelijk bevestigd)",
+              "quality": "VERIFIED - goede scherpte en licht",
+              "roleCheck": "PARTIALLY TESTED - juveniel aannemelijk",
+              "blobSha": "c916463cace41ffeb2cebbb9e49ae35d5b3dd0e1",
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname bevestigd tegen iNaturalist open-data-origineel (r=1.0, 725640198/original.jpg); auteur/licentie niet via API hergelezen, registerwaarde 14-11-2026 blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp003-flight-open-sky.webp",
+              "source": "https://www.inaturalist.org/photos/757637556",
+              "author": "andygpos",
+              "license": "CC BY 4.0",
+              "priorRights": "sourceAudit 2026-11-14, sourceSha1 296f2711",
+              "visual": "Vrije vlucht, vooral van onderen gezien (680x595 px). Ondervleugel oogt licht/wittig door het licht; het kernkenmerk (grijze bovenvleugel zonder witte band, lichte vleugelvelden, donkere achterrand) is alleen deels op de opgeheven verre vleugel zichtbaar. Zacht.",
+              "identity": "PARTIALLY TESTED (roze borst, groene hals en donkere staartpunt passen; bovenvleugel nauwelijks zichtbaar, Stadsduif niet visueel uitgesloten)",
+              "quality": "PARTIALLY TESTED - zwak voor de kritische vergelijking met Houtduif: verkeerde kijkhoek en lage resolutie",
+              "roleCheck": "VERIFIED - echte vrije vlucht",
+              "blobSha": "228927819c2ebed7bbd206049ed8868d455619f6",
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname bevestigd tegen iNaturalist open-data-origineel (r=0.944, 757637556/original.jpg); auteur/licentie niet via API hergelezen, registerwaarde 14-11-2026 blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json",
+              "comparisonUse": "Verborgen in vluchtpaar met Houtduif (besluit B); blijft eigen vluchtfoto en paar met Turkse Tortel. Geen beter vrij-vluchtbeeld: docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOLEN, VB_HVH, VB_5D).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
+            "additional": "Repo-geregistreerd: RSPB_SD, BTO_DUIVEN, GB_SD (eerste ronde); in REV2 niet hergelezen. Sovon-referentie sp003 nog open uit F3-R01.",
+            "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk geen wit in de vleugel + groen glanzende halsvlek + donker oog; \"geen wit in hals of vleugel\" en staartband/strepen ingeklapt (niets verwijderd).",
+            "herkenning": "PARTIALLY TESTED - geslacht niet te onderscheiden correct; juveniel alleen kort (\"Matter, minder glans\").",
+            "lijktOp": "PARTIALLY TESTED - rustpaar met Houtduif toegevoegd; vluchtpaar met Houtduif verborgen (ondervleugel vs. bovenvleugel), vluchtpaar met Turkse Tortel blijft; eigen vluchtfoto blijft op de kaart; Stadsduif alleen tekst (LK-092).",
+            "biometry": "Lengte 28-32 cm, spanwijdte 60-66 cm, gewicht 250-345 g zonder ca.-band en zonder basis.biometrics: open, niet blokkerend."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp003<->sp002 Holenduif-Houtduif",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - rust tegen rust: beide volwassen, zijaanzicht, browser 320/360/390 px en offline beide richtingen; vluchtpaar verborgen; onafhankelijke review open",
+              "diagnosticText": "VERIFIED"
+            },
+            {
+              "pair": "sp003<->sp004 Holenduif-Turkse Tortel",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED",
+              "diagnosticText": "PARTIALLY TESTED"
+            },
+            {
+              "pair": "sp003->Stadsduif",
+              "bothDirections": "NOT TESTED (Stadsduif buiten cohort)",
+              "photoEquivalence": "N/A - alleen tekst",
+              "diagnosticText": "PARTIALLY TESTED - stuit en vleugelstrepen, variatie benoemd"
+            }
+          ],
+          "lookalikeRegister": "LK-091, LK-092 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet hergelezen (toestemming)",
+            "G5b geen gelijkwaardige vrije-vluchtfoto (vluchtpaar met Houtduif verborgen)",
+            "G7 geen lokaal gidsaudio",
+            "QA onafhankelijke review R01b open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R01 optie B (chat 23-11-2026 15:28 CET); uitgevoerd als F3-REV2-R01b in PR #351",
+            "remainingOpen": [
+              "ANWB-soortpassage NOT TESTED (geen optie C verleend)",
+              "Vogelbescherming REV2 niet hergelezen (toestemming)",
+              "Geen gelijkwaardige vrije-vluchtfoto Holenduif gevonden (discover 23-11: 1 kandidaat, landend/onscherp)",
+              "iNaturalist-licentie/auteur niet via API hergelezen (2 foto's)",
+              "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
+              "Onafhankelijke review van R01b open",
+              "Biometrie zonder ca.-band (niet blokkerend)"
+            ],
+            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
+          },
+          "fullPass": false,
+          "resolvedInR01b": [
+            "G3 hoofdfoto sourceSha1/sourceAudit vastgelegd (cdc04d81)",
+            "G4 Snel herkennen max. 3 primaire punten",
+            "G5 rustpaar met Houtduif toegevoegd; ongelijkwaardig vluchtpaar verborgen",
+            "G6 LK-091 en LK-092 geregistreerd"
+          ],
+          "repair": {
+            "round": "F3-REV2-R01b",
+            "date": "2026-11-23",
+            "evidence": [
+              "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json",
+              "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -394,6 +657,136 @@
           ],
           "mediaFileIntegrity": "NOT TESTED",
           "soundSpeciesAndRole": "NOT TESTED"
+        },
+        "secondReview": {
+          "round": "F3-REV2-R01",
+          "date": "2026-11-23",
+          "base": "e6aa20e061e42d81de62a4df706f4a004bb06576",
+          "pr": 351,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R01_DUIVEN_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/plumage/sp004-adult-crop.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Sierp%C3%B3wka_zwyczajna_w_R%C5%BCuchowie_w_wojew%C3%B3dztwie_%C5%9Bwi%C4%99tokrzyskim,_20250421_0903_4128.jpg",
+              "author": "Jakub Hałun",
+              "license": "CC BY 4.0",
+              "priorRights": "sourceAudit 2026-11-14, sourceSha1 13a0c82b; uitsnede vermeld",
+              "visual": "Volwassen Turkse Tortel op sparrentop, iets van onderen. Zichtbaar: rood oog, zwarte halsband met witte rand, egaal beigegrijze bovendelen, lange staart. Scherp.",
+              "identity": "VERIFIED (visueel; halsband + rood oog + egale bovendelen)",
+              "quality": "VERIFIED - goede hoofdfoto",
+              "roleCheck": "VERIFIED - neutraal Volwassen",
+              "blobSha": "97d6e4c864bef1d17c220daa7fce92a9846cf0bf",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 13a0c82b0b45f54b436bd5e592b5be4864df111a, uitsnede visueel bevestigd door Claude in sp004-adult-crop_vs_source.jpg (automatische r=0.857 onder drempel 0.90)",
+              "sourceSha1": "13a0c82b0b45f54b436bd5e592b5be4864df111a",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp004-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Tourterelle_turque_en_vol_pr%C3%A8s_de_Chamb%C3%A9ry_(avril_2020).JPG",
+              "author": "Florian Pépellin",
+              "license": "CC BY-SA 4.0",
+              "priorRights": "credits reviewed 2026-11-07; flightReview 2026-11-10; geen sourceSha1/sourceAudit vastgelegd",
+              "visual": "Echte vrije vlucht, hellend, scherp. Zichtbaar: halsband, rood oog, lichte ondervleugel met donkere handpennen, staart van onderen met zwarte basis en brede witte eindrand.",
+              "identity": "VERIFIED (visueel)",
+              "quality": "VERIFIED - goede vluchtfoto",
+              "roleCheck": "VERIFIED - echte vrije vlucht",
+              "blobSha": "b96d2a4697ac833d76e49e4e8119c2dd5575799b",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 04effd85b5941e750a8efe03065ea58a540f5385, zelfde opname r=1.0",
+              "sourceSha1": "04effd85b5941e750a8efe03065ea58a540f5385",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
+            },
+            {
+              "role": "Juveniel",
+              "path": "/assets/species/plumage/sp004-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Streptopelia_decaocto_juvenile_2.jpg",
+              "author": "Kreuzschnabel/Wikimedia Commons",
+              "license": "CC BY-SA 3.0",
+              "priorRights": "sourceAudit 2026-11-14, sourceSha1 945c7658",
+              "visual": "Jonge Turkse Tortel op reling: geen halsband, bruinig oog, egaal beige, lange staart. Scherp.",
+              "identity": "PARTIALLY TESTED (passend kleed; leeftijd volgt uit bronbeschrijving + zichtbaar kleed, niet onafhankelijk bevestigd)",
+              "quality": "VERIFIED - goede scherpte",
+              "roleCheck": "PARTIALLY TESTED - juveniel aannemelijk",
+              "blobSha": "75d863d8053e0f542e0a3b7a7b5fdb2681560bf5",
+              "rightsREV2": "PARTIALLY TESTED - licentie CC BY-SA 3.0 en SHA-1 945c7658aae2e673aa99925b86c094038c90e148 gelijk; Commons-auteur \"Kreuzschnabel\" wijkt in vorm af van register \"Kreuzschnabel/Wikimedia Commons\"; vereiste naamsvermelding op bestandspagina niet gelezen",
+              "sourceSha1": "945c7658aae2e673aa99925b86c094038c90e148",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_TT, VB_ZT, VB_5D).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron.",
+            "additional": "Repo-geregistreerd: Blasco-Zumeta BZ_CD, eBird EB_ETD, birdspot.co.uk BS_TD, Cornell CL_TURKSETORTEL/CL_DUIVEN, LICG_LACHDUIF, Oiseaux.net ON_CD, ELO_CD (eerste ronde); in REV2 niet hergelezen.",
+            "independence": "NOT VERIFIED - geen onafhankelijke tweede review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - nu max. 3 primaire punten: kritisch kenmerk halsband en egale bovendelen + iriskleur + driedelig koeren; halsband- en kleurregel ingeklapt (niets verwijderd).",
+            "herkenning": "PARTIALLY TESTED - leeftijd en geslacht correct genuanceerd; alarmroep vermeld.",
+            "lijktOp": "PARTIALLY TESTED - vluchtparen met Houtduif en Holenduif blijven; Zomertortel en Lachduif alleen tekst (LK-093/LK-094).",
+            "biometry": "Spanwijdte en gewicht met ca.-band (KV-13). Lengte 31-33 cm zonder ca.-band: open, niet blokkerend."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp004->Zomertortel",
+              "bothDirections": "NOT TESTED (Zomertortel buiten 140-cohort)",
+              "photoEquivalence": "N/A - geen fotopaar, paneel terecht verborgen",
+              "diagnosticText": "PARTIALLY TESTED - halsvlek en bovendelen, juveniel-uitzondering benoemd"
+            },
+            {
+              "pair": "sp004->Lachduif",
+              "bothDirections": "NOT TESTED (buiten cohort)",
+              "photoEquivalence": "N/A - alleen tekst",
+              "diagnosticText": "PARTIALLY TESTED - geluid en handpennen; onzekerheid benoemd"
+            },
+            {
+              "pair": "sp004<->sp002/sp003",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED",
+              "diagnosticText": "PARTIALLY TESTED"
+            }
+          ],
+          "lookalikeRegister": "LK-093, LK-094 in SOORTVERWARRING_REGISTER (F3-REV2-R01b)",
+          "audio": "OPEN - 0 lokaal geregistreerde gidsaudio; geen optie C verleend; checkpoint 75/140 ongewijzigd",
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet hergelezen (toestemming)",
+            "G7 geen lokaal gidsaudio",
+            "QA onafhankelijke review R01b open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-23",
+            "reference": "Eigenaarbesluit F3-REV2-R01 optie B (chat 23-11-2026 15:28 CET); uitgevoerd als F3-REV2-R01b in PR #351",
+            "remainingOpen": [
+              "ANWB-soortpassage NOT TESTED (geen optie C verleend)",
+              "Vogelbescherming REV2 niet hergelezen (toestemming)",
+              "Juveniel: Commons-auteur \"Kreuzschnabel\" vs. register \"Kreuzschnabel/Wikimedia Commons\" - naamsvermelding controleren",
+              "Geen lokaal gidsaudio: OPEN (geen optie C verleend)",
+              "Onafhankelijke review van R01b open",
+              "Biometrie lengte zonder ca.-band (niet blokkerend)"
+            ],
+            "notGranted": "Optie C niet verleend voor ontbrekende ANWB-passage of audio; die blijven NOT TESTED respectievelijk OPEN"
+          },
+          "fullPass": false,
+          "resolvedInR01b": [
+            "G3 vluchtfoto sourceSha1/sourceAudit vastgelegd (04effd85)",
+            "G4 Snel herkennen max. 3 primaire punten",
+            "G6 LK-093 en LK-094 geregistreerd"
+          ],
+          "repair": {
+            "round": "F3-REV2-R01b",
+            "date": "2026-11-23",
+            "evidence": [
+              "docs/media-intake/2026-11-23/origcheck-rev2-r01b/origcheck.json",
+              "docs/media-intake/2026-11-23/discover-rev2-r01b/candidates.json",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -14888,5 +15281,38 @@
     "boundary": "Content visually reviewed is not media-rights VERIFIED or release PASS. No audio invention, no source attribution hidden where license requires directly visible credit. All ordinary source references behind accessible i.",
     "technicalStage": "DEFERRED, NOT WAIVED",
     "integratedReviewBase": "PR #256, aed05b02ccb77ee4284076cfbe88c2a0d9a3a503"
+  },
+  "secondReview": {
+    "label": "F3-REV2 - tweede volledige verificatieronde (Kwaliteitsnorm v1.10 FINAL)",
+    "ownerStart": "2026-11-23 eigenaarbesluit: start tweede diepgaande verificatieronde 140 soorten; Claude primaire schrijver, ChatGPT later onafhankelijke QA",
+    "norm": "docs/BIRDSPOT_KWALITEITSNORM.md v1.10 FINAL",
+    "basePR": 350,
+    "baseSHA": "e6aa20e061e42d81de62a4df706f4a004bb06576",
+    "workPR": 351,
+    "batchSizeLimit": 3,
+    "firstRoundDigest": "98b75caecc7f9273c165b535d89f18231ad49944cb03fc87d8c20c646b760afa",
+    "order": "records[] volgorde (seq 1-140), ongewijzigd",
+    "firstRoundPreserved": "F3-R01..R47: 140/140 inhoudelijk bekeken, 0 FULL F3-PASS - ongewijzigd",
+    "batches": [
+      {
+        "round": "F3-REV2-R01",
+        "species": [
+          "sp002",
+          "sp003",
+          "sp004"
+        ],
+        "status": "OWNER DECISION B EXECUTED (F3-REV2-R01b) / INDEPENDENT QA OPEN",
+        "date": "2026-11-23"
+      }
+    ],
+    "counts": {
+      "total": 140,
+      "reexamined": 3,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 3,
+      "secondReviewClosed": 0,
+      "fullF3Pass": 0
+    },
+    "release": "HOLD - geen merge, deploy of live"
   }
 }

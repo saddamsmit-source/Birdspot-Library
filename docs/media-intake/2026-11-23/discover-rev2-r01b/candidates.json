@@ -1,0 +1,294 @@
+{
+  "generated": "2026-11-23T14:38:15Z",
+  "userAgent": "BirdspotLibrary-media-intake/1.0 (https://github.com/saddamsmit-source/Birdspot-Library; build-time license-checked import)",
+  "licensePolicy": "CC0 / publiek domein / CC BY / CC BY-SA; NC en ND uitgesloten",
+  "status": "CANDIDATES ONLY - niet goedgekeurd, niet in de app",
+  "queries": [
+    {
+      "id": "sp003_flight_a",
+      "speciesId": "sp003",
+      "role": "flight",
+      "kind": "image",
+      "search": "Columba oenas flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Wood Pigeons (Columba palumbus), Altcar Moss - geograph.org.uk - 929635.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Wood_Pigeons_(Columba_palumbus),_Altcar_Moss_-_geograph.org.uk_-_929635.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Wood_Pigeons_%28Columba_palumbus%29%2C_Altcar_Moss_-_geograph.org.uk_-_929635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/83/Wood_Pigeons_%28Columba_palumbus%29%2C_Altcar_Moss_-_geograph.org.uk_-_929635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "43010eb387f82c6eacc6d5d8e8b9aca507678a5f",
+          "size": 53079,
+          "width": 640,
+          "height": 426,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Mike Pennington",
+          "credit": "From geograph.org.uk",
+          "description": "Common wood pigeons , Altcar Moss Large flocks gather on the mosses in autumn and winter. For the sharp-eyed there is also one Stock Dove (Columba oenas).",
+          "date": "2005-12-26",
+          "categories": [
+            "Columba palumbus in flight"
+          ],
+          "creditFields": {
+            "author": "Mike Pennington"
+          },
+          "pageParams": {
+            "date": "2005-12-26",
+            "author": "[https://www.geograph.org.uk/profile/9715 Mike Pennington]",
+            "permission": "",
+            "Author": "Mike Pennington",
+            "License": "CC-BY-SA-2.0"
+          },
+          "creditLines": [
+            "|author=[https://www.geograph.org.uk/profile/9715 Mike Pennington]",
+            "|Author = Mike Pennington"
+          ],
+          "preview": "sp003_flight_a_01.jpg"
+        },
+        {
+          "title": "File:Skogsduva Stock Dove (19730362773).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Skogsduva_Stock_Dove_(19730362773).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Skogsduva_Stock_Dove_%2819730362773%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Skogsduva_Stock_Dove_%2819730362773%29.jpg/960px-Skogsduva_Stock_Dove_%2819730362773%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f7348d81d9be04a2ba3aee9fb44fc0cf4ce3c822",
+          "size": 510197,
+          "width": 1200,
+          "height": 698,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Åsa Berndtsson",
+          "credit": "Skogsduva / Stock Dove",
+          "description": "Stock Dove Columba oenas , Trönningeängar, Halmstad, Sweden",
+          "date": "Taken on 13 June 2015, 08:58",
+          "categories": [
+            "Birds of Halmstad",
+            "Columba oenas",
+            "Columbidae in flight",
+            "Columbiformes in Sweden"
+          ],
+          "creditFields": {
+            "author": "Åsa Berndtsson"
+          },
+          "pageParams": {
+            "Date": "{{taken on|2015-06-13 08:58|location=Sweden}}",
+            "Author": "[https://www.flickr.com/people/93892629@N07 Åsa Berndtsson]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/93892629@N07 Åsa Berndtsson]",
+            "{{FlickreviewR|status=passed|author=Åsa Berndtsson|sourceurl=https://flickr.com/photos/93892629@N07/19730362773|archive=https://web.archive.org/web/201901311917"
+          ],
+          "preview": "sp003_flight_a_02.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:Britain's birds and their nests (1910) (14568703129).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    },
+    {
+      "id": "sp003_flight_b",
+      "speciesId": "sp003",
+      "role": "flight",
+      "kind": "image",
+      "search": "Columba oenas in flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Wood Pigeons (Columba palumbus), Altcar Moss - geograph.org.uk - 929635.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Wood_Pigeons_(Columba_palumbus),_Altcar_Moss_-_geograph.org.uk_-_929635.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Wood_Pigeons_%28Columba_palumbus%29%2C_Altcar_Moss_-_geograph.org.uk_-_929635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/83/Wood_Pigeons_%28Columba_palumbus%29%2C_Altcar_Moss_-_geograph.org.uk_-_929635.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "43010eb387f82c6eacc6d5d8e8b9aca507678a5f",
+          "size": 53079,
+          "width": 640,
+          "height": 426,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Mike Pennington",
+          "credit": "From geograph.org.uk",
+          "description": "Common wood pigeons , Altcar Moss Large flocks gather on the mosses in autumn and winter. For the sharp-eyed there is also one Stock Dove (Columba oenas).",
+          "date": "2005-12-26",
+          "categories": [
+            "Columba palumbus in flight"
+          ],
+          "creditFields": {
+            "author": "Mike Pennington"
+          },
+          "pageParams": {
+            "date": "2005-12-26",
+            "author": "[https://www.geograph.org.uk/profile/9715 Mike Pennington]",
+            "permission": "",
+            "Author": "Mike Pennington",
+            "License": "CC-BY-SA-2.0"
+          },
+          "creditLines": [
+            "|author=[https://www.geograph.org.uk/profile/9715 Mike Pennington]",
+            "|Author = Mike Pennington"
+          ],
+          "preview": "sp003_flight_b_01.jpg"
+        },
+        {
+          "title": "File:Skogsduva Stock Dove (19730362773).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Skogsduva_Stock_Dove_(19730362773).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Skogsduva_Stock_Dove_%2819730362773%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Skogsduva_Stock_Dove_%2819730362773%29.jpg/960px-Skogsduva_Stock_Dove_%2819730362773%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f7348d81d9be04a2ba3aee9fb44fc0cf4ce3c822",
+          "size": 510197,
+          "width": 1200,
+          "height": 698,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Åsa Berndtsson",
+          "credit": "Skogsduva / Stock Dove",
+          "description": "Stock Dove Columba oenas , Trönningeängar, Halmstad, Sweden",
+          "date": "Taken on 13 June 2015, 08:58",
+          "categories": [
+            "Birds of Halmstad",
+            "Columba oenas",
+            "Columbidae in flight",
+            "Columbiformes in Sweden"
+          ],
+          "creditFields": {
+            "author": "Åsa Berndtsson"
+          },
+          "pageParams": {
+            "Date": "{{taken on|2015-06-13 08:58|location=Sweden}}",
+            "Author": "[https://www.flickr.com/people/93892629@N07 Åsa Berndtsson]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/93892629@N07 Åsa Berndtsson]",
+            "{{FlickreviewR|status=passed|author=Åsa Berndtsson|sourceurl=https://flickr.com/photos/93892629@N07/19730362773|archive=https://web.archive.org/web/201901311917"
+          ],
+          "preview": "sp003_flight_b_02.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:Britain's birds and their nests (1910) (14568703129).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    },
+    {
+      "id": "sp003_flight_c",
+      "speciesId": "sp003",
+      "role": "flight",
+      "kind": "image",
+      "search": "Stock dove flying filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Hawker Hurricane Mk. IIC - DPLA - 89d4a57c7bab92f452f19ca23d906797 (page 4).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_(page_4).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_4%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "898470061dbfbabfb724200fa352bee0f6428137",
+          "size": 60923,
+          "width": 780,
+          "height": 472,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Hawker Aircraft Ltd",
+          "credit": "File URL Catalog record",
+          "description": "Hawker Hurricane Mk. IIC single seat, low wing monoplane ground attack fighter; enclosed cockpit; steel tube fuselage with aircraft spruce forms and fabric, aluminum cowling, stressed skin aluminum wings and horizontal stablizer, fabric covered aluminum rudder and control surfaces; grey green camouflage top surface paint scheme with dove grey underside; red and blue national roundel on upper wing ",
+          "date": "1944",
+          "categories": [
+            "Hawker Hurricane Mark IIC"
+          ],
+          "creditFields": {},
+          "pageParams": {},
+          "creditLines": [],
+          "preview": "sp003_flight_c_01.jpg"
+        },
+        {
+          "title": "File:Hawker Hurricane Mk. IIC - DPLA - 89d4a57c7bab92f452f19ca23d906797 (page 3).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_(page_3).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_3%29.jpg/960px-Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "6be1f09177a31a9d4afa63bec66644766e817623",
+          "size": 1063034,
+          "width": 1750,
+          "height": 2000,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Hawker Aircraft Ltd",
+          "credit": "File URL Catalog record",
+          "description": "Hawker Hurricane Mk. IIC single seat, low wing monoplane ground attack fighter; enclosed cockpit; steel tube fuselage with aircraft spruce forms and fabric, aluminum cowling, stressed skin aluminum wings and horizontal stablizer, fabric covered aluminum rudder and control surfaces; grey green camouflage top surface paint scheme with dove grey underside; red and blue national roundel on upper wing ",
+          "date": "1944",
+          "categories": [
+            "Hawker Hurricane at Steven F. Udvar-Hazy Center"
+          ],
+          "creditFields": {},
+          "pageParams": {},
+          "creditLines": [],
+          "preview": "sp003_flight_c_02.jpg"
+        },
+        {
+          "title": "File:Hawker Hurricane Mk. IIC - DPLA - 89d4a57c7bab92f452f19ca23d906797 (page 1).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_(page_1).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_1%29.jpg/960px-Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "20329fca3f6aa8f3715e443df320f111e418cf2f",
+          "size": 680811,
+          "width": 2000,
+          "height": 1527,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Hawker Aircraft Ltd",
+          "credit": "File URL Catalog record",
+          "description": "Hawker Hurricane Mk. IIC single seat, low wing monoplane ground attack fighter; enclosed cockpit; steel tube fuselage with aircraft spruce forms and fabric, aluminum cowling, stressed skin aluminum wings and horizontal stablizer, fabric covered aluminum rudder and control surfaces; grey green camouflage top surface paint scheme with dove grey underside; red and blue national roundel on upper wing ",
+          "date": "1944",
+          "categories": [
+            "Hawker Hurricane at Steven F. Udvar-Hazy Center"
+          ],
+          "creditFields": {},
+          "pageParams": {},
+          "creditLines": [],
+          "preview": "sp003_flight_c_03.jpg"
+        },
+        {
+          "title": "File:Hawker Hurricane Mk. IIC - DPLA - 89d4a57c7bab92f452f19ca23d906797 (page 2).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_(page_2).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_2%29.jpg/960px-Hawker_Hurricane_Mk._IIC_-_DPLA_-_89d4a57c7bab92f452f19ca23d906797_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "9c1dec9e449f1547add52bb8f029065c42c877f3",
+          "size": 855421,
+          "width": 2000,
+          "height": 1500,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Hawker Aircraft Ltd",
+          "credit": "File URL Catalog record",
+          "description": "Hawker Hurricane Mk. IIC single seat, low wing monoplane ground attack fighter; enclosed cockpit; steel tube fuselage with aircraft spruce forms and fabric, aluminum cowling, stressed skin aluminum wings and horizontal stablizer, fabric covered aluminum rudder and control surfaces; grey green camouflage top surface paint scheme with dove grey underside; red and blue national roundel on upper wing ",
+          "date": "1944",
+          "categories": [
+            "Hawker Hurricane at Steven F. Udvar-Hazy Center"
+          ],
+          "creditFields": {},
+          "pageParams": {},
+          "creditLines": [],
+          "preview": "sp003_flight_c_04.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    }
+  ]
+}

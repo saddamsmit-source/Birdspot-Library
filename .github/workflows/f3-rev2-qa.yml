@@ -1,0 +1,52 @@
+name: Birdspot F3-REV2 second verification round QA
+on:
+  pull_request:
+    paths:
+      - 'docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json'
+      - 'docs/fotokwaliteit/F3_REV2_*'
+      - 'docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json'
+      - 'src/features/species/**'
+      - 'tools/kennisbaseline/**'
+      - 'tools/species/**'
+      - 'styles/species.css'
+      - 'assets/species/credits.json'
+      - 'assets/species/field-guide-media.json'
+      - 'tests/test_f3_rev2_r01.mjs'
+      - 'tests/test_f3_rev2_r01_browser.py'
+      - '.github/workflows/f3-rev2-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  f3-rev2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Second round keeps first-round data and has no status without evidence
+        run: node tests/test_f3_rev2_r01.mjs
+      - name: First-round 140 cohort, media and gates unchanged
+        run: node tests/test_f3_140_unified_rebaseline.mjs
+      - name: Audio 140 contract
+        run: node tests/test_audio_140_contract.mjs
+      - name: Lookalike register (R09 set + new LK-091..094), photo audit, guide poses and knowledge baseline
+        run: |
+          node tests/test_lookalike_r09.mjs
+          node tests/test_soortaudit.mjs
+          node tests/test_guide_poses.mjs
+          node tests/test_kennisbaseline.mjs
+          python3 -I tools/kennisbaseline/build_knowledge.py --check
+  f3-rev2-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Playwright and Chromium
+        run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Rest pair both directions, hidden unequal flight pair, max. 3 quick cues (320/360/390 px and offline)
+        run: python -u tests/test_f3_rev2_r01_browser.py

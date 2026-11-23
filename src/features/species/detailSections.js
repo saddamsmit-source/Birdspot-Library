@@ -364,7 +364,9 @@ export function recognitionPanel(s, life = null, personal = false) {
     keys.forEach(key => displayed.add(key));
     return true;
   };
-  const comparisons = GUIDE_COMPARISONS.filter(pair => pair.birds.some(bird => bird.id === s.id));
+  // pairHidden (F3-REV2-R01b): beide foto's bestaan, maar het paar is niet gelijkwaardig (Kwaliteitsnorm v1.10 §3.4.3);
+  // het paar blijft intern geregistreerd en wordt niet als fotopaneel getoond.
+  const comparisons = GUIDE_COMPARISONS.filter(pair => !pair.pairHidden && pair.birds.some(bird => bird.id === s.id));
   const regular = comparisons.filter(pair => !pair.flight);
   const flight = comparisons.filter(pair => pair.flight);
   const comparisonGroups = groupComparisonsByPartner(s.id, [...regular, ...flight]);

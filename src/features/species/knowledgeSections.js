@@ -74,8 +74,15 @@ export function quickPanel(s) {
   const k = knowledgeFor(s.id);
   if (!k) return '';
   const crit = topCritical(k);
-  const marks = (k.keyMarks || []).map(m =>
-    `<li class="kb-mark">${relPill(m.reliability)}<span>${esc(m.text)}</span></li>`).join('');
+  const mark = m => `<li class="kb-mark">${relPill(m.reliability)}<span>${esc(m.text)}</span></li>`;
+  const all = k.keyMarks || [];
+  // Kwaliteitsnorm v1.10 §2.3.B.3: alleen profielen met quickPrimary tonen max. 3 primaire punten
+  // (kritisch kenmerk + 1–2 keyMarks); de overige keyMarks blijven ingeklapt in hetzelfde paneel.
+  // Zonder quickPrimary is de uitvoer ongewijzigd.
+  const primary = Array.isArray(k.quickPrimary) ? k.quickPrimary.map(i => all[i]).filter(Boolean) : all;
+  const rest = Array.isArray(k.quickPrimary) ? all.filter((_, i) => !k.quickPrimary.includes(i)) : [];
+  const marks = primary.map(mark).join('');
+  const more = rest.length ? `<details class="kb-more-marks" data-kb-more-marks><summary>Meer kenmerken <span class="kb-count">${rest.length}</span></summary><ul class="kb-marks">${rest.map(mark).join('')}</ul></details>` : '';
   const critical = crit ? `<div class="kb-critical" data-kb-critical>
       <strong>Kritisch kenmerk · ${esc(crit.feature)}</strong>
       <p>${esc(crit.this)}</p>
@@ -88,7 +95,7 @@ export function quickPanel(s) {
     <p class="kb-summary">${esc(k.summary.text)}</p>
     ${critical}
     <ul class="kb-marks">${marks}</ul>
-    ${caution}
+    ${more}${caution}
   </section>`;
 }
 
