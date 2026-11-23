@@ -6451,6 +6451,10 @@ const DATA = {
      ]
     }
    ],
+   "quickPrimary": [
+    1,
+    2
+   ],
    "caution": {
     "text": "Grootte is onbetrouwbaar: een sperwervrouwtje en een havikmannetje lijken in vlucht sterk op elkaar. Ook het kleed van beide soorten lijkt veel op elkaar.",
     "sources": [
@@ -6795,6 +6799,10 @@ const DATA = {
       "BG_BUZZ"
      ]
     }
+   ],
+   "quickPrimary": [
+    0,
+    1
    ],
    "caution": {
     "text": "Kleur zegt weinig: lichte vogels worden vaak voor Ruigpootbuizerd aangezien, de donkerste lijken op Bruine Kiekendief. De bronnen verschillen over de staarthoeken (Vogelbescherming: afgerond; BirdGuides: hoekig).",
@@ -7896,6 +7904,10 @@ const DATA = {
       "BZ_SPA"
      ]
     }
+   ],
+   "quickPrimary": [
+    0,
+    1
    ],
    "caution": {
     "text": "Een havikmannetje is niet veel groter dan een sperwervrouwtje; grootte alleen is onbetrouwbaar.",
