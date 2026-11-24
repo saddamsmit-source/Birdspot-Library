@@ -1,0 +1,2199 @@
+{
+  "generated": "2026-11-24T07:03:33Z",
+  "userAgent": "BirdspotLibrary-media-intake/1.0 (https://github.com/saddamsmit-source/Birdspot-Library; build-time license-checked import)",
+  "licensePolicy": "CC0 / publiek domein / CC BY / CC BY-SA; NC en ND uitgesloten",
+  "status": "CANDIDATES ONLY - niet goedgekeurd, niet in de app",
+  "queries": [
+    {
+      "id": "sp009_eu_adult_a",
+      "speciesId": "sp009",
+      "role": "adult",
+      "kind": "image",
+      "search": "incategory:\"Falco peregrinus peregrinus\" filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Falco peregrinus peregrinus.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_peregrinus.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Falco_peregrinus_peregrinus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Falco_peregrinus_peregrinus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "158d55b683663c1f6a1288e7a213a49935ccd089",
+          "size": 279368,
+          "width": 420,
+          "height": 549,
+          "mime": "image/png",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Süd&Luft",
+          "credit": "Wikimedia Commons",
+          "description": "A Peregrine Falcon of the nominate subspecies F. p. peregrinus , Naturschutzgebiet Weltenburger Enge (NSG 00089.01), Bayern, Germany.",
+          "date": "10 April 2012",
+          "categories": [
+            "Falco peregrinus",
+            "Falco peregrinus peregrinus"
+          ],
+          "creditFields": {
+            "author": "Süd&Luft"
+          },
+          "pageParams": {
+            "date": "10 April 2012",
+            "author": "Süd&Luft",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=Süd&Luft"
+          ],
+          "preview": "sp009_eu_adult_a_01.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp009_eu_adult_b",
+      "speciesId": "sp009",
+      "role": "adult",
+      "kind": "image",
+      "search": "Wanderfalke filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Falco peregrinus MHNT.ZOO.2010.11.102.1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_MHNT.ZOO.2010.11.102.1.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Falco_peregrinus_MHNT.ZOO.2010.11.102.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Falco_peregrinus_MHNT.ZOO.2010.11.102.1.jpg/960px-Falco_peregrinus_MHNT.ZOO.2010.11.102.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f6ce018e2c188a6fb6a78ae8e7226d3fbf550fcf",
+          "size": 5668467,
+          "width": 4252,
+          "height": 2835,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Roger Culos",
+          "credit": "Own work",
+          "description": "Eggs of peregrine falcon Two specimens of the same spawn ; collection of Jacques Perrin de Brichambaut.",
+          "date": "5 March 2020",
+          "categories": [
+            "Bird eggs on black background",
+            "Falco peregrinus eggs",
+            "Falconiformes eggs of the Muséum de Toulouse",
+            "Falconiformes of France"
+          ],
+          "creditFields": {
+            "author": "Roger Culos"
+          },
+          "pageParams": {
+            "authority": "Tunstall, 1771",
+            "Author": "[[User:Ercé|Roger Culos]]",
+            "Date": "2020-03-05",
+            "Permission": "{{self|cc-by-sa-4.0}}"
+          },
+          "creditLines": [
+            "|authority =  Tunstall, 1771",
+            "|Author=[[User:Ercé|Roger Culos]]"
+          ],
+          "preview": "sp009_eu_adult_b_01.jpg"
+        },
+        {
+          "title": "File:Peregrine falcon (Falco peregrinus) in flight, Cape Baily, Kamay Botany Bay NSW Jun 2022.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_(Falco_peregrinus)_in_flight,_Cape_Baily,_Kamay_Botany_Bay_NSW_Jun_2022.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg/960px-Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "95689523af467ab2802aab23c32db6ce1d9e9294",
+          "size": 2609766,
+          "width": 2202,
+          "height": 2202,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Kytabu",
+          "credit": "Own work",
+          "description": "A peregrine falcon in flight as it hunts off the cliffs of Cape Baily in Kamay Botany Bay National Park, New South Wales.",
+          "date": "2022-06-30 12:35:53",
+          "categories": [
+            "Falco peregrinus in flight",
+            "Kamay Botany Bay National Park"
+          ],
+          "creditFields": {
+            "author": "Kytabu"
+          },
+          "pageParams": {
+            "date": "2022-06-30 12:35:53",
+            "author": "[[User:Kytabu|Kytabu]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Kytabu|Kytabu]]"
+          ],
+          "preview": "sp009_eu_adult_b_02.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus - 01.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_-_01.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Falco_peregrinus_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Falco_peregrinus_-_01.jpg/960px-Falco_peregrinus_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "cafb7509e6300f67fab1dbb3a9f228f53c508872",
+          "size": 3257571,
+          "width": 3248,
+          "height": 2212,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Carlos Delgado",
+          "credit": "Own work",
+          "description": "Captive peregrine falcon ( Falco peregrinus ) in the Community of Madrid, Spain.",
+          "date": "2014-10-18 11:28:30",
+          "categories": [
+            "Birds in October 2014",
+            "Falco peregrinus (captive)",
+            "October 2014 in Spain"
+          ],
+          "creditFields": {
+            "author": "Carlos Delgado"
+          },
+          "pageParams": {
+            "date": "2014-10-18 11:28:30",
+            "author": "[[User:Kadellar|Carlos Delgado]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Kadellar|Carlos Delgado]]"
+          ],
+          "preview": "sp009_eu_adult_b_03.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus madens MHNT.ZOO.2010.11.102.8.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_madens_MHNT.ZOO.2010.11.102.8.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Falco_peregrinus_madens_MHNT.ZOO.2010.11.102.8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Falco_peregrinus_madens_MHNT.ZOO.2010.11.102.8.jpg/960px-Falco_peregrinus_madens_MHNT.ZOO.2010.11.102.8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "15185b9bbeca8ac3bfbc622e1c7b095c9e89a12e",
+          "size": 5803247,
+          "width": 4252,
+          "height": 2835,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Roger Culos",
+          "credit": "Own work",
+          "description": "Eggs of peregrine falcon Two specimens of the same spawn ; collection of Jacques Perrin de Brichambaut.",
+          "date": "5 March 2020",
+          "categories": [
+            "Bird eggs on black background",
+            "Birds of Cape Verde",
+            "Falco peregrinus eggs",
+            "Falconiformes eggs of the Muséum de Toulouse",
+            "René de Naurois"
+          ],
+          "creditFields": {
+            "author": "Roger Culos"
+          },
+          "pageParams": {
+            "authority": "Ripley & Watson, 1963",
+            "Author": "[[User:Ercé|Roger Culos]]",
+            "Date": "2020-03-05",
+            "Permission": "{{self|cc-by-sa-4.0}}"
+          },
+          "creditLines": [
+            "|authority =  Ripley & Watson, 1963",
+            "|Author=[[User:Ercé|Roger Culos]]"
+          ],
+          "preview": "sp009_eu_adult_b_04.jpg"
+        },
+        {
+          "title": "File:African peregrine falcon (Falco peregrinus minor) Arusha.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:African_peregrine_falcon_(Falco_peregrinus_minor)_Arusha.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/African_peregrine_falcon_%28Falco_peregrinus_minor%29_Arusha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/African_peregrine_falcon_%28Falco_peregrinus_minor%29_Arusha.jpg/960px-African_peregrine_falcon_%28Falco_peregrinus_minor%29_Arusha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "71f2ddfba70c57384efd4a7de2b817bcf93dbb86",
+          "size": 4059191,
+          "width": 3692,
+          "height": 2462,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Charles J. Sharp",
+          "credit": "Own work , from Sharp Photography, sharpphotography.co.uk",
+          "description": "African peregrine falcon ( Falco peregrinus minor ), Arusha National Park, Tanzania",
+          "date": "2026-08-02 09:02:47",
+          "categories": [
+            "Falco peregrinus minor",
+            "Falconiformes of Tanzania",
+            "Valued images of birds in Tanzania"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "date": "2026-08-02 09:02:47",
+            "author": "{{Creator:Charles J Sharp}}",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author={{Creator:Charles J Sharp}}"
+          ],
+          "preview": "sp009_eu_adult_b_05.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus in Moussem Moulay Abdallah Amghar.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_Moussem_Moulay_Abdallah_Amghar.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Falco_peregrinus_in_Moussem_Moulay_Abdallah_Amghar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Falco_peregrinus_in_Moussem_Moulay_Abdallah_Amghar.jpg/960px-Falco_peregrinus_in_Moussem_Moulay_Abdallah_Amghar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "b127057e05760a21136977334c97388c88c80b67",
+          "size": 2828489,
+          "width": 1984,
+          "height": 3312,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Mounir Neddi",
+          "credit": "Own work",
+          "description": "Falco peregrinus in Moussem Moulay Abdellah Morocco, (Chorafae Lkwassem Falconry Association)",
+          "date": "2023-07-31 11:29:44",
+          "categories": [
+            "Chorafae Lkwassem Falconry Association",
+            "Falco peregrinus in Morocco",
+            "Moussem Moulay Abdellah Amghar",
+            "Valued Images By Mou"
+          ],
+          "creditFields": {
+            "author": "Mounir Neddi"
+          },
+          "pageParams": {
+            "date": "2023-07-31 11:29:44",
+            "author": "[[User:Mounir Neddi|Mounir Neddi]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "| author         = [[User:Mounir Neddi|Mounir Neddi]]"
+          ],
+          "preview": "sp009_eu_adult_b_06.jpg"
+        },
+        {
+          "title": "File:Adlerwarte Obernberg am Inn Falkner Wanderfalke-9506.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Adlerwarte_Obernberg_am_Inn_Falkner_Wanderfalke-9506.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Adlerwarte_Obernberg_am_Inn_Falkner_Wanderfalke-9506.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Adlerwarte_Obernberg_am_Inn_Falkner_Wanderfalke-9506.jpg/960px-Adlerwarte_Obernberg_am_Inn_Falkner_Wanderfalke-9506.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "082979d7b88a9df6b6fc188d1b699fd18a1e36f4",
+          "size": 7591762,
+          "width": 4187,
+          "height": 3140,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Isiwal",
+          "credit": "Own work",
+          "description": "Falconry Obernberg am Inn; Falconer Christian Schweiger with peregrine falcon ( Falco peregrinus )",
+          "date": "2018-09-12",
+          "categories": [
+            "Falco peregrinus (captive)",
+            "Falknerei Adlerwarte Obernberg"
+          ],
+          "creditFields": {
+            "author": "Isiwal"
+          },
+          "pageParams": {
+            "date": "2018-09-12",
+            "author": "[[user:Isiwal|Isiwal]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author = [[user:Isiwal|Isiwal]]"
+          ],
+          "preview": "sp009_eu_adult_b_07.jpg"
+        },
+        {
+          "title": "File:American Peregrine Falcon (Falco peregrinus) (10700651733).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:American_Peregrine_Falcon_(Falco_peregrinus)_(10700651733).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/American_Peregrine_Falcon_%28Falco_peregrinus%29_%2810700651733%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/American_Peregrine_Falcon_%28Falco_peregrinus%29_%2810700651733%29.jpg/960px-American_Peregrine_Falcon_%28Falco_peregrinus%29_%2810700651733%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "44b8ea20cdf399538d3e22b27b44c4a12985f415",
+          "size": 1076366,
+          "width": 2353,
+          "height": 1738,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Gregory \"Slobirdr\" Smith",
+          "credit": "American Peregrine Falcon (Falco peregrinus)",
+          "description": "Not too often we get to see a Peregrine sitting this close to the ground. And even less often it lets me get this close...",
+          "date": "2007-01-17 20:56",
+          "categories": [
+            "Falco peregrinus in the United States",
+            "Falconiformes of California"
+          ],
+          "creditFields": {
+            "author": "Gregory \"Slobirdr\" Smith"
+          },
+          "pageParams": {
+            "Date": "2007-01-17 20:56",
+            "Author": "[https://www.flickr.com/people/22170893@N06 Gregory \"Slobirdr\" Smith]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/22170893@N06 Gregory \"Slobirdr\" Smith]"
+          ],
+          "preview": "sp009_eu_adult_b_08.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus minor, Cape Town, South Africa 118534019.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_minor,_Cape_Town,_South_Africa_118534019.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Falco_peregrinus_minor%2C_Cape_Town%2C_South_Africa_118534019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Falco_peregrinus_minor%2C_Cape_Town%2C_South_Africa_118534019.jpg/960px-Falco_peregrinus_minor%2C_Cape_Town%2C_South_Africa_118534019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "b91a53ca82e71cfb11319695f5311dbe7e18a6d4",
+          "size": 1352046,
+          "width": 1754,
+          "height": 2048,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "author": "Timothy Whitehead",
+          "credit": "https://www.inaturalist.org/photos/118534019",
+          "description": "African peregrine falcon ( Falco peregrinus minor )",
+          "date": "2021-04-02",
+          "categories": [
+            "Animals of Tygerberg Nature Reserve",
+            "Birds of Cape Town",
+            "Falco peregrinus",
+            "Falconiformes of the Western Cape"
+          ],
+          "creditFields": {
+            "author": "Timothy Whitehead"
+          },
+          "pageParams": {
+            "date": "2021-04-02",
+            "author": "[https://www.inaturalist.org/users/767381 Timothy Whitehead]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[https://www.inaturalist.org/users/767381 Timothy Whitehead]",
+            "{{iNaturalistReview |status=pass |author=twhitehead |sourceurl=https://www.inaturalist.org/photos/118534019 |archive= |reviewdate=2021-04-26 |reviewer=INaturali"
+          ],
+          "preview": "sp009_eu_adult_b_09.jpg"
+        },
+        {
+          "title": "File:Peregrine Falcon (Falco peregrinus cassini), Iguasu, Misiones, Argentina (8077729007).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(Falco_peregrinus_cassini),_Iguasu,_Misiones,_Argentina_(8077729007).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Peregrine_Falcon_%28Falco_peregrinus_cassini%29%2C_Iguasu%2C_Misiones%2C_Argentina_%288077729007%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/28/Peregrine_Falcon_%28Falco_peregrinus_cassini%29%2C_Iguasu%2C_Misiones%2C_Argentina_%288077729007%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "5979f1e3f3590065d15e7be4eedc4fd45106cbd2",
+          "size": 417515,
+          "width": 640,
+          "height": 960,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Ron Knight from Seaford, East Sussex, United Kingdom",
+          "credit": "Peregrine Falcon (Falco peregrinus)",
+          "description": "Iguazu National Park, Misiones",
+          "date": "9 November 2008, 17:33 (according to Exi",
+          "categories": [
+            "Birds of Iguazu National Park",
+            "Falco peregrinus",
+            "Falconiformes of Argentina"
+          ],
+          "creditFields": {
+            "author": "Ron Knight from Seaford, East Sussex, United Kingdom"
+          },
+          "pageParams": {
+            "Date": "{{Exif date|2008-11-09 17:33|location=Argentina}}",
+            "Author": "[https://www.flickr.com/people/9919745@N03 Ron Knight] from Seaford, East Sussex, United Kingdom",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/9919745@N03 Ron Knight] from Seaford, East Sussex, United Kingdom",
+            "{{FlickreviewR|status=passed|author=sussexbirder|sourceurl=https://flickr.com/photos/9919745@N03/8077729007|archive=https://web.archive.org/web/20190112104305/h"
+          ],
+          "preview": "sp009_eu_adult_b_10.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus peregrinus.png",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_peregrinus.png",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Falco_peregrinus_peregrinus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Falco_peregrinus_peregrinus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "158d55b683663c1f6a1288e7a213a49935ccd089",
+          "size": 279368,
+          "width": 420,
+          "height": 549,
+          "mime": "image/png",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Süd&Luft",
+          "credit": "Wikimedia Commons",
+          "description": "A Peregrine Falcon of the nominate subspecies F. p. peregrinus , Naturschutzgebiet Weltenburger Enge (NSG 00089.01), Bayern, Germany.",
+          "date": "10 April 2012",
+          "categories": [
+            "Falco peregrinus",
+            "Falco peregrinus peregrinus"
+          ],
+          "creditFields": {
+            "author": "Süd&Luft"
+          },
+          "pageParams": {
+            "date": "10 April 2012",
+            "author": "Süd&Luft",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=Süd&Luft"
+          ],
+          "preview": "sp009_eu_adult_b_11.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus on nest Silverdale.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_on_nest_Silverdale.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Falco_peregrinus_on_nest_Silverdale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Falco_peregrinus_on_nest_Silverdale.jpg/960px-Falco_peregrinus_on_nest_Silverdale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "01524a050c22f9844d2f40a2a19d78fcc208447a",
+          "size": 350196,
+          "width": 1188,
+          "height": 812,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "sighmanb",
+          "credit": "Peregrine on nest Silverdale May 06",
+          "description": "Peregrine Falcon Falco peregrinus on nest, Silverdale, Lancashire, May 2006",
+          "date": "2009-04-09 18:09",
+          "categories": [
+            "Falco peregrinus"
+          ],
+          "creditFields": {
+            "author": "sighmanb"
+          },
+          "pageParams": {
+            "Date": "2009-04-09 18:09",
+            "Author": "[https://www.flickr.com/people/23632548@N00 sighmanb]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "|Author=[https://www.flickr.com/people/23632548@N00 sighmanb]"
+          ],
+          "preview": "sp009_eu_adult_b_12.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp009_eu_adult_c",
+      "speciesId": "sp009",
+      "role": "adult",
+      "kind": "image",
+      "search": "Falco peregrinus Netherlands filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Falco peregrinus 122816425.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_122816425.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Falco_peregrinus_122816425.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Falco_peregrinus_122816425.jpg/960px-Falco_peregrinus_122816425.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "0e83681693e393cf97408bd1d15c6b5b0ca0d7d8",
+          "size": 205527,
+          "width": 1085,
+          "height": 723,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Michel Langeveld",
+          "credit": "https://www.inaturalist.org/photos/122816425",
+          "description": "Peregrine Falcon ( Falco peregrinus )",
+          "date": "2021-04-24",
+          "categories": [
+            "Birds of Noordwijk, South Holland",
+            "Falco peregrinus",
+            "Falconiformes of the Netherlands"
+          ],
+          "creditFields": {
+            "author": "Michel Langeveld"
+          },
+          "pageParams": {
+            "date": "2021-04-24",
+            "author": "[https://www.inaturalist.org/users/3599717 Michel Langeveld]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[https://www.inaturalist.org/users/3599717 Michel Langeveld]",
+            "{{iNaturalistReview |status=pass |author=rudolphous |sourceurl=https://www.inaturalist.org/photos/122816425 |archive= |reviewdate=2021-04-26 |reviewer=INaturali"
+          ],
+          "preview": "sp009_eu_adult_c_01.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus 148261320.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_148261320.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Falco_peregrinus_148261320.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Falco_peregrinus_148261320.jpg/960px-Falco_peregrinus_148261320.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "38d6ec6314cf3949ba8bb52ee210cd981678f084",
+          "size": 177419,
+          "width": 1050,
+          "height": 701,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Michel Langeveld",
+          "credit": "https://www.inaturalist.org/photos/148261320",
+          "description": "Peregrine Falcon ( Falco peregrinus )",
+          "date": "2021-07-31",
+          "categories": [
+            "Birds of Noordwijk, South Holland",
+            "Falco peregrinus",
+            "Falconiformes of the Netherlands"
+          ],
+          "creditFields": {
+            "author": "Michel Langeveld"
+          },
+          "pageParams": {
+            "date": "2021-07-31",
+            "author": "[https://www.inaturalist.org/users/3599717 Michel Langeveld]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[https://www.inaturalist.org/users/3599717 Michel Langeveld]",
+            "{{iNaturalistReview |status=pass |author=rudolphous |sourceurl=https://www.inaturalist.org/photos/148261320 |archive= |reviewdate=2021-08-03 |reviewer=INaturali"
+          ],
+          "preview": "sp009_eu_adult_c_02.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus 114336093.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_114336093.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Falco_peregrinus_114336093.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Falco_peregrinus_114336093.jpg/960px-Falco_peregrinus_114336093.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "43e6eed4090c1833cf4b0406f240b4733ccd3a9f",
+          "size": 332183,
+          "width": 1415,
+          "height": 946,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Michel Langeveld",
+          "credit": "https://www.inaturalist.org/photos/114336093",
+          "description": "Peregrine Falcon ( Falco peregrinus )",
+          "date": "2021-02-28",
+          "categories": [
+            "Birds of Noordwijk, South Holland",
+            "Falco peregrinus",
+            "Falconiformes of the Netherlands"
+          ],
+          "creditFields": {
+            "author": "Michel Langeveld"
+          },
+          "pageParams": {
+            "date": "2021-02-28",
+            "author": "[https://www.inaturalist.org/users/3599717 Michel Langeveld]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[https://www.inaturalist.org/users/3599717 Michel Langeveld]",
+            "{{iNaturalistReview |status=pass |author=rudolphous |sourceurl=https://www.inaturalist.org/photos/114336093 |archive= |reviewdate=2021-03-01 |reviewer=INaturali"
+          ],
+          "preview": "sp009_eu_adult_c_03.jpg"
+        },
+        {
+          "title": "File:Slechtvalk Falco peregrinus Jos Zwarts 3.tif",
+          "page": "https://commons.wikimedia.org/wiki/File:Slechtvalk_Falco_peregrinus_Jos_Zwarts_3.tif",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Slechtvalk_Falco_peregrinus_Jos_Zwarts_3.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Slechtvalk_Falco_peregrinus_Jos_Zwarts_3.tif/lossy-page1-960px-Slechtvalk_Falco_peregrinus_Jos_Zwarts_3.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "6e13461ee38836856b95154d0885ea6fdd57c52b",
+          "size": 31103636,
+          "width": 3507,
+          "height": 2956,
+          "mime": "image/tiff",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Jos Zwarts",
+          "credit": "Jos Zwarts",
+          "description": "Slechtvalk",
+          "date": "2015-09-16",
+          "categories": [
+            "Falco peregrinus (illustrations)",
+            "Images by Jos Zwarts"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "Date": "2015-09-16",
+            "Author": "{{Creator:Jos Zwarts}}",
+            "Permission": "{{PermissionTicket|id=2015091710026487}}"
+          },
+          "creditLines": [
+            "|Author={{Creator:Jos Zwarts}}"
+          ],
+          "preview": "sp009_eu_adult_c_04.jpg"
+        },
+        {
+          "title": "File:Slechtvalk Falco peregrinus Jos Zwarts 2.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Slechtvalk_Falco_peregrinus_Jos_Zwarts_2.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Slechtvalk_Falco_peregrinus_Jos_Zwarts_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Slechtvalk_Falco_peregrinus_Jos_Zwarts_2.jpg/960px-Slechtvalk_Falco_peregrinus_Jos_Zwarts_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "e994880b095b16609badbb0c0edca857662d9c49",
+          "size": 291252,
+          "width": 1152,
+          "height": 1312,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Jos Zwarts",
+          "credit": "Jos Zwarts",
+          "description": "Slechtvalk",
+          "date": "2015-09-16",
+          "categories": [
+            "Falco peregrinus (illustrations)",
+            "Images by Jos Zwarts"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "Date": "2015-09-16",
+            "Author": "{{Creator:Jos Zwarts}}",
+            "Permission": "{{PermissionTicket|id=2015091710026487}}"
+          },
+          "creditLines": [
+            "|Author={{Creator:Jos Zwarts}}"
+          ],
+          "preview": "sp009_eu_adult_c_05.jpg"
+        },
+        {
+          "title": "File:Slechtvalk Falco peregrinus Jos Zwarts 1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Slechtvalk_Falco_peregrinus_Jos_Zwarts_1.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Slechtvalk_Falco_peregrinus_Jos_Zwarts_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Slechtvalk_Falco_peregrinus_Jos_Zwarts_1.jpg/960px-Slechtvalk_Falco_peregrinus_Jos_Zwarts_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "dd3216e70d01035f6cec02d4f2d99ef580013acf",
+          "size": 604812,
+          "width": 2182,
+          "height": 633,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Jos Zwarts",
+          "credit": "Jos Zwarts",
+          "description": "Slechtvalk",
+          "date": "2014-03-19 17:03:33",
+          "categories": [
+            "Falco peregrinus (illustrations)",
+            "Images by Jos Zwarts"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "Date": "2014-03-19 17:03:33",
+            "Author": "{{Creator:Jos Zwarts}}",
+            "Permission": "{{PermissionTicket|id=2015091710026487}}"
+          },
+          "creditLines": [
+            "|Author={{Creator:Jos Zwarts}}"
+          ],
+          "preview": "sp009_eu_adult_c_06.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - ZMA.AVES.43803 2 DORS - Falco peregrinus harterti Buturlin, 1907 - Falconidae - skin - preserved specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_2_DORS_-_Falco_peregrinus_harterti_Buturlin,_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_2_DORS_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_2_DORS_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_2_DORS_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "a74af1c9d87a893724c6405b443d6f0b02d95dee",
+          "size": 115542,
+          "width": 1224,
+          "height": 1920,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Buturlin, 1907",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Falco peregrinus harterti Buturlin, 1907",
+          "date": "",
+          "categories": [
+            "Falco peregrinus (museum specimens)",
+            "Naturalis Biodiversity Center - Netherlands and the world"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "Artist": "",
+            "Author artwork": "",
+            "Author publication": "",
+            "Collection date": "21-7-1905",
+            "Date artwork": "",
+            "Permission license": "{{Naturalis donation}}{{CC-0}}",
+            "Scientific name authorship": "Buturlin, 1907"
+          },
+          "creditLines": [
+            "| Artist =",
+            "| Author artwork =",
+            "| Author publication =",
+            "| Scientific name authorship = Buturlin, 1907",
+            "<!-- <metadata_mapped_json>{\"Abstract\":null,\"Altitude\":null,\"Artist\":null,\"Author artwork\":null,\"Author publication\":null,\"Basis of record\":\"preserved specimen\"",
+            "&lt;SCIENTIFIC_NAME_AUTHORSHIP&gt;Buturlin, 1907&lt;/SCIENTIFIC_NAME_AUTHORSHIP&gt;"
+          ],
+          "preview": "sp009_eu_adult_c_07.jpg"
+        },
+        {
+          "title": "File:Nederlandsche vogelen (KB) - Falco peregrinus (438b).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Nederlandsche_vogelen_(KB)_-_Falco_peregrinus_(438b).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Nederlandsche_vogelen_%28KB%29_-_Falco_peregrinus_%28438b%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Nederlandsche_vogelen_%28KB%29_-_Falco_peregrinus_%28438b%29.jpg/960px-Nederlandsche_vogelen_%28KB%29_-_Falco_peregrinus_%28438b%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "786824432a11205080ae555b471ee0651ecd77ba",
+          "size": 1118807,
+          "width": 1000,
+          "height": 1490,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "Cornelius Nozeman / Christiaan Andreas Sepp / Jan Christiaan Sepp / Martinus Houttuyn",
+          "credit": "This digital media file - and/or the physical objects depicted on it - originates from the digital and/or physical collections of the Koninklijke Bibliotheek , national library of the Netherlands.",
+          "description": "Plate 223 from the Nederlandsche vogelen by Nozeman and Sepp.",
+          "date": "between 1770 and 1829 date QS:P571,+1500",
+          "categories": [
+            "Falco peregrinus (illustrations)",
+            "Nederlandsche vogelen van Nozeman en Sepp"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "author": "",
+            "date": "{{other date|between|1770|1829}}",
+            "permission": "{{PD-old-100}}"
+          },
+          "creditLines": [
+            "|author ="
+          ],
+          "preview": "sp009_eu_adult_c_08.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - ZMA.AVES.43803 3 VENT - Falco peregrinus harterti Buturlin, 1907 - Falconidae - skin - preserved specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_3_VENT_-_Falco_peregrinus_harterti_Buturlin,_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_3_VENT_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_3_VENT_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_3_VENT_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "9a67cc047d4db6edd88371250a8d367c760be7d5",
+          "size": 124151,
+          "width": 1224,
+          "height": 1920,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Buturlin, 1907",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Falco peregrinus harterti Buturlin, 1907",
+          "date": "",
+          "categories": [
+            "Falco peregrinus (museum specimens)",
+            "Naturalis Biodiversity Center - Netherlands and the world"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "Artist": "",
+            "Author artwork": "",
+            "Author publication": "",
+            "Collection date": "21-7-1905",
+            "Date artwork": "",
+            "Permission license": "{{Naturalis donation}}{{CC-0}}",
+            "Scientific name authorship": "Buturlin, 1907"
+          },
+          "creditLines": [
+            "| Artist =",
+            "| Author artwork =",
+            "| Author publication =",
+            "| Scientific name authorship = Buturlin, 1907",
+            "<!-- <metadata_mapped_json>{\"Abstract\":null,\"Altitude\":null,\"Artist\":null,\"Author artwork\":null,\"Author publication\":null,\"Basis of record\":\"preserved specimen\"",
+            "&lt;SCIENTIFIC_NAME_AUTHORSHIP&gt;Buturlin, 1907&lt;/SCIENTIFIC_NAME_AUTHORSHIP&gt;"
+          ],
+          "preview": "sp009_eu_adult_c_09.jpg"
+        },
+        {
+          "title": "File:Naturalis Biodiversity Center - ZMA.AVES.43803 1 LAT - Falco peregrinus harterti Buturlin, 1907 - Falconidae - skin - preserved specimen.jpeg",
+          "page": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_1_LAT_-_Falco_peregrinus_harterti_Buturlin,_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_1_LAT_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_1_LAT_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg/960px-Naturalis_Biodiversity_Center_-_ZMA.AVES.43803_1_LAT_-_Falco_peregrinus_harterti_Buturlin%2C_1907_-_Falconidae_-_skin_-_preserved_specimen.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "a523b065bb51b75cd881c3a2c07a29d149af1982",
+          "size": 110066,
+          "width": 1224,
+          "height": 1920,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "author": "Buturlin, 1907",
+          "credit": "Naturalis Biodiversity Center",
+          "description": "Falco peregrinus harterti Buturlin, 1907",
+          "date": "",
+          "categories": [
+            "Falco peregrinus (museum specimens)",
+            "Naturalis Biodiversity Center - Netherlands and the world"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "Artist": "",
+            "Author artwork": "",
+            "Author publication": "",
+            "Collection date": "21-7-1905",
+            "Date artwork": "",
+            "Permission license": "{{Naturalis donation}}{{CC-0}}",
+            "Scientific name authorship": "Buturlin, 1907"
+          },
+          "creditLines": [
+            "| Artist =",
+            "| Author artwork =",
+            "| Author publication =",
+            "| Scientific name authorship = Buturlin, 1907",
+            "<!-- <metadata_mapped_json>{\"Abstract\":null,\"Altitude\":null,\"Artist\":null,\"Author artwork\":null,\"Author publication\":null,\"Basis of record\":\"preserved specimen\"",
+            "&lt;SCIENTIFIC_NAME_AUTHORSHIP&gt;Buturlin, 1907&lt;/SCIENTIFIC_NAME_AUTHORSHIP&gt;"
+          ],
+          "preview": "sp009_eu_adult_c_10.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp009_eu_adult_d",
+      "speciesId": "sp009",
+      "role": "adult",
+      "kind": "image",
+      "search": "Faucon pèlerin filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:(Albi) Un faucon pèlerin Toulouse-Lautrec 1880 MLT30.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:(Albi)_Un_faucon_p%C3%A8lerin_Toulouse-Lautrec_1880_MLT30.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/%28Albi%29_Un_faucon_p%C3%A8lerin_Toulouse-Lautrec_1880_MLT30.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/%28Albi%29_Un_faucon_p%C3%A8lerin_Toulouse-Lautrec_1880_MLT30.jpg/960px-%28Albi%29_Un_faucon_p%C3%A8lerin_Toulouse-Lautrec_1880_MLT30.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "d9d53cae7260d76317311610896c11d3f77c1a21",
+          "size": 19166296,
+          "width": 3168,
+          "height": 4685,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "Didier Descouens",
+          "credit": "Own work",
+          "description": "",
+          "date": "Taken on 21 May 2021",
+          "categories": [
+            "May 2021 in Tarn",
+            "Un faucon pèlerin - Toulouse-Lautrec 1880"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "artist": "{{Creator:Henri de Toulouse-Lautrec}}",
+            "date": "1880",
+            "credit line": "",
+            "artwork license": "{{PD-old-100-1923}}",
+            "photo date": "{{taken on|2021-05-21|location=Occitanie}}",
+            "photo license": "{{NoImageNotes|1=[[File:No Facebook.svg|80px]]"
+          },
+          "creditLines": [
+            "|artist             = {{Creator:Henri de Toulouse-Lautrec}}"
+          ],
+          "preview": "sp009_eu_adult_d_01.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus MHNT.ZOO.2010.11.102.1.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_MHNT.ZOO.2010.11.102.1.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Falco_peregrinus_MHNT.ZOO.2010.11.102.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Falco_peregrinus_MHNT.ZOO.2010.11.102.1.jpg/960px-Falco_peregrinus_MHNT.ZOO.2010.11.102.1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f6ce018e2c188a6fb6a78ae8e7226d3fbf550fcf",
+          "size": 5668467,
+          "width": 4252,
+          "height": 2835,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Roger Culos",
+          "credit": "Own work",
+          "description": "Eggs of peregrine falcon Two specimens of the same spawn ; collection of Jacques Perrin de Brichambaut.",
+          "date": "5 March 2020",
+          "categories": [
+            "Bird eggs on black background",
+            "Falco peregrinus eggs",
+            "Falconiformes eggs of the Muséum de Toulouse",
+            "Falconiformes of France"
+          ],
+          "creditFields": {
+            "author": "Roger Culos"
+          },
+          "pageParams": {
+            "authority": "Tunstall, 1771",
+            "Author": "[[User:Ercé|Roger Culos]]",
+            "Date": "2020-03-05",
+            "Permission": "{{self|cc-by-sa-4.0}}"
+          },
+          "creditLines": [
+            "|authority =  Tunstall, 1771",
+            "|Author=[[User:Ercé|Roger Culos]]"
+          ],
+          "preview": "sp009_eu_adult_d_02.jpg"
+        },
+        {
+          "title": "File:Peregrine falcon (Falco peregrinus) in flight, Cape Baily, Kamay Botany Bay NSW Jun 2022.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_(Falco_peregrinus)_in_flight,_Cape_Baily,_Kamay_Botany_Bay_NSW_Jun_2022.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg/960px-Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "95689523af467ab2802aab23c32db6ce1d9e9294",
+          "size": 2609766,
+          "width": 2202,
+          "height": 2202,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Kytabu",
+          "credit": "Own work",
+          "description": "A peregrine falcon in flight as it hunts off the cliffs of Cape Baily in Kamay Botany Bay National Park, New South Wales.",
+          "date": "2022-06-30 12:35:53",
+          "categories": [
+            "Falco peregrinus in flight",
+            "Kamay Botany Bay National Park"
+          ],
+          "creditFields": {
+            "author": "Kytabu"
+          },
+          "pageParams": {
+            "date": "2022-06-30 12:35:53",
+            "author": "[[User:Kytabu|Kytabu]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Kytabu|Kytabu]]"
+          ],
+          "preview": "sp009_eu_adult_d_03.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus - 01.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_-_01.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Falco_peregrinus_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Falco_peregrinus_-_01.jpg/960px-Falco_peregrinus_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "cafb7509e6300f67fab1dbb3a9f228f53c508872",
+          "size": 3257571,
+          "width": 3248,
+          "height": 2212,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Carlos Delgado",
+          "credit": "Own work",
+          "description": "Captive peregrine falcon ( Falco peregrinus ) in the Community of Madrid, Spain.",
+          "date": "2014-10-18 11:28:30",
+          "categories": [
+            "Birds in October 2014",
+            "Falco peregrinus (captive)",
+            "October 2014 in Spain"
+          ],
+          "creditFields": {
+            "author": "Carlos Delgado"
+          },
+          "pageParams": {
+            "date": "2014-10-18 11:28:30",
+            "author": "[[User:Kadellar|Carlos Delgado]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Kadellar|Carlos Delgado]]"
+          ],
+          "preview": "sp009_eu_adult_d_04.jpg"
+        },
+        {
+          "title": "File:(Montauban) Le faucon pèlerin par André Abbal.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:(Montauban)_Le_faucon_p%C3%A8lerin_par_Andr%C3%A9_Abbal.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/%28Montauban%29_Le_faucon_p%C3%A8lerin_par_Andr%C3%A9_Abbal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/%28Montauban%29_Le_faucon_p%C3%A8lerin_par_Andr%C3%A9_Abbal.jpg/960px-%28Montauban%29_Le_faucon_p%C3%A8lerin_par_Andr%C3%A9_Abbal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "ce01716566b702f0c59646fc5d240a95cf9eaf94",
+          "size": 19668949,
+          "width": 5237,
+          "height": 8065,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "Didier Descouens",
+          "credit": "Own work",
+          "description": "",
+          "date": "Taken on 12 August 2026",
+          "categories": [
+            "Sculptures in Musée Ingres"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "artist": "André Abbal",
+            "date": "XXe",
+            "credit line": "",
+            "artwork license": "{{PD-old-100-1923}}",
+            "photo date": "{{taken on|2026-08-12}}",
+            "photo license": "{{NoImageNotes|1=[[File:No Facebook.svg|80px]]"
+          },
+          "creditLines": [
+            "|artist             = André Abbal"
+          ],
+          "preview": "sp009_eu_adult_d_05.jpg"
+        },
+        {
+          "title": "File:African peregrine falcon (Falco peregrinus minor) Arusha.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:African_peregrine_falcon_(Falco_peregrinus_minor)_Arusha.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/African_peregrine_falcon_%28Falco_peregrinus_minor%29_Arusha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/African_peregrine_falcon_%28Falco_peregrinus_minor%29_Arusha.jpg/960px-African_peregrine_falcon_%28Falco_peregrinus_minor%29_Arusha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "71f2ddfba70c57384efd4a7de2b817bcf93dbb86",
+          "size": 4059191,
+          "width": 3692,
+          "height": 2462,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Charles J. Sharp",
+          "credit": "Own work , from Sharp Photography, sharpphotography.co.uk",
+          "description": "African peregrine falcon ( Falco peregrinus minor ), Arusha National Park, Tanzania",
+          "date": "2026-08-02 09:02:47",
+          "categories": [
+            "Falco peregrinus minor",
+            "Falconiformes of Tanzania",
+            "Valued images of birds in Tanzania"
+          ],
+          "creditFields": {},
+          "pageParams": {
+            "date": "2026-08-02 09:02:47",
+            "author": "{{Creator:Charles J Sharp}}",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author={{Creator:Charles J Sharp}}"
+          ],
+          "preview": "sp009_eu_adult_d_06.jpg"
+        },
+        {
+          "title": "File:American Peregrine Falcon (Falco peregrinus) (10700651733).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:American_Peregrine_Falcon_(Falco_peregrinus)_(10700651733).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/American_Peregrine_Falcon_%28Falco_peregrinus%29_%2810700651733%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/American_Peregrine_Falcon_%28Falco_peregrinus%29_%2810700651733%29.jpg/960px-American_Peregrine_Falcon_%28Falco_peregrinus%29_%2810700651733%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "44b8ea20cdf399538d3e22b27b44c4a12985f415",
+          "size": 1076366,
+          "width": 2353,
+          "height": 1738,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Gregory \"Slobirdr\" Smith",
+          "credit": "American Peregrine Falcon (Falco peregrinus)",
+          "description": "Not too often we get to see a Peregrine sitting this close to the ground. And even less often it lets me get this close...",
+          "date": "2007-01-17 20:56",
+          "categories": [
+            "Falco peregrinus in the United States",
+            "Falconiformes of California"
+          ],
+          "creditFields": {
+            "author": "Gregory \"Slobirdr\" Smith"
+          },
+          "pageParams": {
+            "Date": "2007-01-17 20:56",
+            "Author": "[https://www.flickr.com/people/22170893@N06 Gregory \"Slobirdr\" Smith]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/22170893@N06 Gregory \"Slobirdr\" Smith]"
+          ],
+          "preview": "sp009_eu_adult_d_07.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus in Moussem Moulay Abdallah Amghar.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_Moussem_Moulay_Abdallah_Amghar.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Falco_peregrinus_in_Moussem_Moulay_Abdallah_Amghar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Falco_peregrinus_in_Moussem_Moulay_Abdallah_Amghar.jpg/960px-Falco_peregrinus_in_Moussem_Moulay_Abdallah_Amghar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "b127057e05760a21136977334c97388c88c80b67",
+          "size": 2828489,
+          "width": 1984,
+          "height": 3312,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Mounir Neddi",
+          "credit": "Own work",
+          "description": "Falco peregrinus in Moussem Moulay Abdellah Morocco, (Chorafae Lkwassem Falconry Association)",
+          "date": "2023-07-31 11:29:44",
+          "categories": [
+            "Chorafae Lkwassem Falconry Association",
+            "Falco peregrinus in Morocco",
+            "Moussem Moulay Abdellah Amghar",
+            "Valued Images By Mou"
+          ],
+          "creditFields": {
+            "author": "Mounir Neddi"
+          },
+          "pageParams": {
+            "date": "2023-07-31 11:29:44",
+            "author": "[[User:Mounir Neddi|Mounir Neddi]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "| author         = [[User:Mounir Neddi|Mounir Neddi]]"
+          ],
+          "preview": "sp009_eu_adult_d_08.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus minor, Cape Town, South Africa 118534019.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_minor,_Cape_Town,_South_Africa_118534019.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Falco_peregrinus_minor%2C_Cape_Town%2C_South_Africa_118534019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Falco_peregrinus_minor%2C_Cape_Town%2C_South_Africa_118534019.jpg/960px-Falco_peregrinus_minor%2C_Cape_Town%2C_South_Africa_118534019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "b91a53ca82e71cfb11319695f5311dbe7e18a6d4",
+          "size": 1352046,
+          "width": 1754,
+          "height": 2048,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "author": "Timothy Whitehead",
+          "credit": "https://www.inaturalist.org/photos/118534019",
+          "description": "African peregrine falcon ( Falco peregrinus minor )",
+          "date": "2021-04-02",
+          "categories": [
+            "Animals of Tygerberg Nature Reserve",
+            "Birds of Cape Town",
+            "Falco peregrinus",
+            "Falconiformes of the Western Cape"
+          ],
+          "creditFields": {
+            "author": "Timothy Whitehead"
+          },
+          "pageParams": {
+            "date": "2021-04-02",
+            "author": "[https://www.inaturalist.org/users/767381 Timothy Whitehead]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[https://www.inaturalist.org/users/767381 Timothy Whitehead]",
+            "{{iNaturalistReview |status=pass |author=twhitehead |sourceurl=https://www.inaturalist.org/photos/118534019 |archive= |reviewdate=2021-04-26 |reviewer=INaturali"
+          ],
+          "preview": "sp009_eu_adult_d_09.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus-3860.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus-3860.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Falco_peregrinus-3860.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Falco_peregrinus-3860.jpg/960px-Falco_peregrinus-3860.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "5eddb3abb282fb54dfc0b47276cb703a05db493d",
+          "size": 1254178,
+          "width": 1756,
+          "height": 1166,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Colsu",
+          "credit": "Own work",
+          "description": "En chasse",
+          "date": "2017-09-01 11:01:39",
+          "categories": [
+            "Birds of baie de Saint-Brieuc",
+            "Falco peregrinus in flight",
+            "Falconiformes of Côtes-d'Armor"
+          ],
+          "creditFields": {
+            "author": "Colsu"
+          },
+          "pageParams": {
+            "date": "2017-09-01 11:01:39",
+            "author": "[[User:Colsu|Colsu]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Colsu|Colsu]]"
+          ],
+          "preview": "sp009_eu_adult_d_10.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp009_eu_juv_a",
+      "speciesId": "sp009",
+      "role": "juv",
+      "kind": "image",
+      "search": "Falco peregrinus juvenile Germany filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Птенец сапсана с передатчиком.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:%D0%9F%D1%82%D0%B5%D0%BD%D0%B5%D1%86_%D1%81%D0%B0%D0%BF%D1%81%D0%B0%D0%BD%D0%B0_%D1%81_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%BC.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/%D0%9F%D1%82%D0%B5%D0%BD%D0%B5%D1%86_%D1%81%D0%B0%D0%BF%D1%81%D0%B0%D0%BD%D0%B0_%D1%81_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%BC.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/%D0%9F%D1%82%D0%B5%D0%BD%D0%B5%D1%86_%D1%81%D0%B0%D0%BF%D1%81%D0%B0%D0%BD%D0%B0_%D1%81_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%BC.JPG/960px-%D0%9F%D1%82%D0%B5%D0%BD%D0%B5%D1%86_%D1%81%D0%B0%D0%BF%D1%81%D0%B0%D0%BD%D0%B0_%D1%81_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%BC.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "18c7c7d3368c44dfb16beab8e19bf851a667cfb1",
+          "size": 10278624,
+          "width": 4672,
+          "height": 3104,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Hobboto4ek",
+          "credit": "Own work",
+          "description": "This peregrine fledging was tagged in the nest on Kolguyev Island in the Arctic Ocean to study its' migration behavior. The study of the tundra species movements is funded by Max Planck Institute for Ornithology (Radolfzell, Germany).",
+          "date": "Taken on 4 August 2015, 14:59:29",
+          "categories": [
+            "2015 in Nenetsia",
+            "3 birds",
+            "Animal transponders",
+            "Bird migration",
+            "Bird nests in Russia",
+            "Birds eating birds",
+            "Birds looking at viewer",
+            "Birds of Arkhangelsk Oblast",
+            "Birds of Nenetsia",
+            "Falco peregrinus (juvenile)",
+            "Falco peregrinus (nests)",
+            "Falco peregrinus and predation",
+            "Falco peregrinus in Russia",
+            "Kolguyev Island",
+            "Ringed Falconidae"
+          ],
+          "creditFields": {
+            "author": "Hobboto4ek"
+          },
+          "pageParams": {
+            "date": "{{taken on|2015-08-04 14:59:29|location=Russia}}",
+            "author": "[[User:Hobboto4ek|Hobboto4ek]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Hobboto4ek|Hobboto4ek]]"
+          ],
+          "preview": "sp009_eu_juv_a_01.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp009_eu_juv_b",
+      "speciesId": "sp009",
+      "role": "juv",
+      "kind": "image",
+      "search": "Wanderfalke juvenil filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Falco rusticolus, juvenil, Naturschutzgebiet Schleimündung.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_rusticolus,_juvenil,_Naturschutzgebiet_Schleim%C3%BCndung.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Falco_rusticolus%2C_juvenil%2C_Naturschutzgebiet_Schleim%C3%BCndung.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Falco_rusticolus%2C_juvenil%2C_Naturschutzgebiet_Schleim%C3%BCndung.jpg/960px-Falco_rusticolus%2C_juvenil%2C_Naturschutzgebiet_Schleim%C3%BCndung.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "946b9e723b135af4fe39360056a80e391db3c7fc",
+          "size": 2087505,
+          "width": 2816,
+          "height": 2112,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "George Lalla",
+          "credit": "Own work",
+          "description": "Gerfalke ( Falco rusticolus ), juvenil, im Naturschutzgebiet Schleimündung, Deutschland",
+          "date": "22 March 2015, 08:53:55",
+          "categories": [
+            "Birds of Naturschutzgebiet Schleimündung",
+            "Falco rusticolus",
+            "Falconiformes in Schleswig-Holstein"
+          ],
+          "creditFields": {
+            "author": "George Lalla"
+          },
+          "pageParams": {
+            "date": "{{ISOdate|2015-03-22 08:53:55}}",
+            "author": "[[User:George Lalla|George Lalla]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:George Lalla|George Lalla]]"
+          ],
+          "preview": "sp009_eu_juv_b_01.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp009_eu_juv_c",
+      "speciesId": "sp009",
+      "role": "juv",
+      "kind": "image",
+      "search": "Falco peregrinus juvenile England filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Peregrine Falcon Juvenile (Falco peregrinus) (48451681366).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_Juvenile_(Falco_peregrinus)_(48451681366).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Peregrine_Falcon_Juvenile_%28Falco_peregrinus%29_%2848451681366%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Peregrine_Falcon_Juvenile_%28Falco_peregrinus%29_%2848451681366%29.jpg/960px-Peregrine_Falcon_Juvenile_%28Falco_peregrinus%29_%2848451681366%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "c53c4b515c941523d3baa6a21c2ccf837861aada",
+          "size": 1769897,
+          "width": 2972,
+          "height": 2811,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "gailhampshire from Cradley, Malvern, U.K",
+          "credit": "Peregrine Falcon Juvenile (Falco peregrinus)",
+          "description": "Newent Bird of Prey Centre",
+          "date": "2019-07-26 12:45",
+          "categories": [
+            "Falco peregrinus (captive)"
+          ],
+          "creditFields": {
+            "author": "gailhampshire from Cradley, Malvern, U.K"
+          },
+          "pageParams": {
+            "Date": "2019-07-26 12:45",
+            "Author": "[https://www.flickr.com/people/43272765@N04 gailhampshire] from Cradley, Malvern, U.K",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/43272765@N04 gailhampshire] from Cradley, Malvern, U.K",
+            "{{FlickreviewR|status=passed|author=gailhampshire|sourceurl=https://flickr.com/photos/43272765@N04/48451681366|archive=https://web.archive.org/web/2020060908213"
+          ],
+          "preview": "sp009_eu_juv_c_01.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus juvenile.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_juvenile.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Falco_peregrinus_juvenile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Falco_peregrinus_juvenile.jpg/960px-Falco_peregrinus_juvenile.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "ac19df2119446905c1dd3e97579206ee8aa68219",
+          "size": 252838,
+          "width": 1143,
+          "height": 1425,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Flickr user All that comes with it (Dan Hughes)",
+          "credit": "Flickr here",
+          "description": "A juvenile Peregrine Falcon ( Falco peregrinus ) kept for falconry demonstrations at the Royal Armouries in Leeds , England .",
+          "date": "2006-10-11",
+          "categories": [
+            "Falco peregrinus (captive)"
+          ],
+          "creditFields": {
+            "author": "Flickr user All that comes with it (Dan Hughes)"
+          },
+          "pageParams": {
+            "Date": "2006-10-11",
+            "Author": "Flickr user [https://www.flickr.com/people/dghughes/ All that comes with it] (Dan Hughes)",
+            "Permission": ""
+          },
+          "creditLines": [
+            "|Author=Flickr user [https://www.flickr.com/people/dghughes/ All that comes with it] (Dan Hughes)"
+          ],
+          "preview": "sp009_eu_juv_c_02.jpg"
+        },
+        {
+          "title": "File:Peregrine falcon and Derby Cathedral tower.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_and_Derby_Cathedral_tower.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Peregrine_falcon_and_Derby_Cathedral_tower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Peregrine_falcon_and_Derby_Cathedral_tower.jpg/960px-Peregrine_falcon_and_Derby_Cathedral_tower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "cbf83779c0429f9fd67bb8f311d9230ae22538ff",
+          "size": 1044533,
+          "width": 1378,
+          "height": 1943,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Nick Moyes",
+          "credit": "Own work",
+          "description": "Juvenile male peregrine falcon outside Derby Cathedral, England. The bird (ring no.005) had failed to remain aloft after fledging from an artificial nest ledge on the Cathedral tower. It was captured and returned to the tower by members of the Derby Cathedral Peregrine Project who had installed a nest ledge and webcameras in 2006.",
+          "date": "2008-06-13",
+          "categories": [
+            "Birds of Derbyshire",
+            "Church towers in Derbyshire",
+            "Derby Cathedral",
+            "Falco peregrinus (juvenile)",
+            "Falconiformes of the United Kingdom"
+          ],
+          "creditFields": {
+            "author": "Nick Moyes"
+          },
+          "pageParams": {
+            "date": "2008-06-13",
+            "author": "[[User:Nick Moyes|Nick Moyes]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Nick Moyes|Nick Moyes]]"
+          ],
+          "preview": "sp009_eu_juv_c_03.jpg"
+        },
+        {
+          "title": "File:Peregrine Falcon (2) (9594380746).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(2)_(9594380746).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Peregrine_Falcon_%282%29_%289594380746%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Peregrine_Falcon_%282%29_%289594380746%29.jpg/960px-Peregrine_Falcon_%282%29_%289594380746%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "82f8154eb1de683919658f60cc0cc79b1a714e90",
+          "size": 584310,
+          "width": 1500,
+          "height": 1200,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Jacob Spinks from Northamptonshire, England",
+          "credit": "Peregrine Falcon (2)",
+          "description": "Taken at Brandon Marsh. I was really lucky to get this!! fastest bird in the WORLD!! But it wasnt going full speed as it is a Juvenile but it was hunting with no success!! The peregrine is a large and powerful falcon. It has long, broad, pointed wings and a relatively short tail. It is blue-grey above, with a blackish top of the head and an obvious black 'moustache' that contrasts with its white f",
+          "date": "2013-08-24 16:47",
+          "categories": [
+            "Falco peregrinus in flight"
+          ],
+          "creditFields": {
+            "author": "Jacob Spinks from Northamptonshire, England"
+          },
+          "pageParams": {
+            "Date": "2013-08-24 16:47",
+            "Author": "[https://www.flickr.com/people/91677891@N07 Jacob  Spinks] from Northamptonshire, England",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/91677891@N07 Jacob  Spinks] from Northamptonshire, England"
+          ],
+          "preview": "sp009_eu_juv_c_04.jpg"
+        },
+        {
+          "title": "File:Peregrine Falcon (9594377598).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(9594377598).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Peregrine_Falcon_%289594377598%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Peregrine_Falcon_%289594377598%29.jpg/960px-Peregrine_Falcon_%289594377598%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "2a3ccbde493654568ea3e3e549455296f6d2d3d7",
+          "size": 525093,
+          "width": 1500,
+          "height": 1200,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Jacob Spinks from Northamptonshire, England",
+          "credit": "Peregrine Falcon",
+          "description": "Taken at Brandon Marsh. I was really lucky to get this!! fastest bird in the WORLD!! But it wasnt going full speed as it is a Juvenile but it was hunting with no success!! The peregrine is a large and powerful falcon. It has long, broad, pointed wings and a relatively short tail. It is blue-grey above, with a blackish top of the head and an obvious black 'moustache' that contrasts with its white f",
+          "date": "2013-08-24 16:47",
+          "categories": [
+            "Falco peregrinus in flight"
+          ],
+          "creditFields": {
+            "author": "Jacob Spinks from Northamptonshire, England"
+          },
+          "pageParams": {
+            "Date": "2013-08-24 16:47",
+            "Author": "[https://www.flickr.com/people/91677891@N07 Jacob  Spinks] from Northamptonshire, England",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/91677891@N07 Jacob  Spinks] from Northamptonshire, England"
+          ],
+          "preview": "sp009_eu_juv_c_05.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:Stories about birds of land and water (1874) (14564163358).jpg",
+          "license": "No restrictions"
+        }
+      ]
+    },
+    {
+      "id": "sp009_eu_flight_a",
+      "speciesId": "sp009",
+      "role": "flight",
+      "kind": "image",
+      "search": "Wanderfalke Flug filetype:bitmap",
+      "candidates": [],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp009_eu_flight_b",
+      "speciesId": "sp009",
+      "role": "flight",
+      "kind": "image",
+      "search": "Falco peregrinus peregrinus flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Peregrine falcon (Falco peregrinus) in flight, Cape Baily, Kamay Botany Bay NSW Jun 2022.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_(Falco_peregrinus)_in_flight,_Cape_Baily,_Kamay_Botany_Bay_NSW_Jun_2022.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg/960px-Peregrine_falcon_%28Falco_peregrinus%29_in_flight%2C_Cape_Baily%2C_Kamay_Botany_Bay_NSW_Jun_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "95689523af467ab2802aab23c32db6ce1d9e9294",
+          "size": 2609766,
+          "width": 2202,
+          "height": 2202,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Kytabu",
+          "credit": "Own work",
+          "description": "A peregrine falcon in flight as it hunts off the cliffs of Cape Baily in Kamay Botany Bay National Park, New South Wales.",
+          "date": "2022-06-30 12:35:53",
+          "categories": [
+            "Falco peregrinus in flight",
+            "Kamay Botany Bay National Park"
+          ],
+          "creditFields": {
+            "author": "Kytabu"
+          },
+          "pageParams": {
+            "date": "2022-06-30 12:35:53",
+            "author": "[[User:Kytabu|Kytabu]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Kytabu|Kytabu]]"
+          ],
+          "preview": "sp009_eu_flight_b_01.jpg"
+        },
+        {
+          "title": "File:Peregrine falcon (Falco peregrinus) in flight - geograph.org.uk - 6462418.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_(Falco_peregrinus)_in_flight_-_geograph.org.uk_-_6462418.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Peregrine_falcon_%28Falco_peregrinus%29_in_flight_-_geograph.org.uk_-_6462418.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Peregrine_falcon_%28Falco_peregrinus%29_in_flight_-_geograph.org.uk_-_6462418.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "1d792f6863cec56d46ec5a7f5471d6c8c9842767",
+          "size": 23225,
+          "width": 800,
+          "height": 501,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "author": "Evelyn Simak",
+          "credit": "Geograph Britain and Ireland",
+          "description": "Peregrine falcon (Falco peregrinus) in flight",
+          "date": "2020-05-03",
+          "categories": [
+            "Birds of Norwich",
+            "Falco peregrinus in flight"
+          ],
+          "creditFields": {},
+          "pageParams": {},
+          "creditLines": [],
+          "preview": "sp009_eu_flight_b_02.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus 143424598.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_143424598.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Falco_peregrinus_143424598.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Falco_peregrinus_143424598.jpg/960px-Falco_peregrinus_143424598.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "e839ee081e903b67f8f92956425d87f0e79502a7",
+          "size": 936662,
+          "width": 2048,
+          "height": 1152,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "author": "Vladimir Kharuk",
+          "credit": "https://www.inaturalist.org/photos/143424598",
+          "description": "Peregrine Falcon ( Falco peregrinus )",
+          "date": "Taken on 13 July 2021",
+          "categories": [
+            "2021 in Sverdlovsk Oblast",
+            "Birds of Sverdlovsk Oblast",
+            "Falco peregrinus in Russia",
+            "Falco peregrinus in flight",
+            "Nature of Kamensk-Uralsky"
+          ],
+          "creditFields": {
+            "author": "Vladimir Kharuk"
+          },
+          "pageParams": {
+            "date": "{{taken on|2021-07-13|location=Russia}}",
+            "author": "[https://www.inaturalist.org/users/2645644 Vladimir Kharuk]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[https://www.inaturalist.org/users/2645644 Vladimir Kharuk]",
+            "{{iNaturalistReview |status=pass |author=vladimirkharuk |sourceurl=https://www.inaturalist.org/photos/143424598 |archive= |reviewdate=2021-08-03 |reviewer=INatu"
+          ],
+          "preview": "sp009_eu_flight_b_03.jpg"
+        },
+        {
+          "title": "File:Peregrine falcon (Falco peregrinus).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_(Falco_peregrinus).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Peregrine_falcon_%28Falco_peregrinus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/14/Peregrine_falcon_%28Falco_peregrinus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "c8bdb988ca35f2af42453b2b97a48c74955f9878",
+          "size": 138866,
+          "width": 724,
+          "height": 1010,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Shino jacob koottanad",
+          "credit": "Own work",
+          "description": "Peregrine falcon (Falco peregrinus)",
+          "date": "2023-01-08 12:28:15",
+          "categories": [
+            "Birds of Palakkad district",
+            "Falco peregrinus in flight"
+          ],
+          "creditFields": {
+            "author": "Shino jacob koottanad"
+          },
+          "pageParams": {
+            "date": "2023-01-08 12:28:15",
+            "author": "[[User:Shino jacob koottanad|Shino jacob koottanad]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Shino jacob koottanad|Shino jacob koottanad]]"
+          ],
+          "preview": "sp009_eu_flight_b_04.jpg"
+        },
+        {
+          "title": "File:Peregrine falcon (Falco peregrinus),.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_(Falco_peregrinus),.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Peregrine_falcon_%28Falco_peregrinus%29%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Peregrine_falcon_%28Falco_peregrinus%29%2C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "sha1": "eb7062d29ee290df258fbaf2b030d8b1da1726da",
+          "size": 113619,
+          "width": 674,
+          "height": 943,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Shino jacob koottanad",
+          "credit": "Own work",
+          "description": "peregrine falcon (Falco peregrinus),",
+          "date": "2023-01-08 12:28:15",
+          "categories": [
+            "Birds of Palakkad district",
+            "Falco peregrinus in flight"
+          ],
+          "creditFields": {
+            "author": "Shino jacob koottanad"
+          },
+          "pageParams": {
+            "date": "2023-01-08 12:28:15",
+            "author": "[[User:Shino jacob koottanad|Shino jacob koottanad]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Shino jacob koottanad|Shino jacob koottanad]]"
+          ],
+          "preview": "sp009_eu_flight_b_05.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus-3860.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus-3860.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Falco_peregrinus-3860.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Falco_peregrinus-3860.jpg/960px-Falco_peregrinus-3860.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "5eddb3abb282fb54dfc0b47276cb703a05db493d",
+          "size": 1254178,
+          "width": 1756,
+          "height": 1166,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Colsu",
+          "credit": "Own work",
+          "description": "En chasse",
+          "date": "2017-09-01 11:01:39",
+          "categories": [
+            "Birds of baie de Saint-Brieuc",
+            "Falco peregrinus in flight",
+            "Falconiformes of Côtes-d'Armor"
+          ],
+          "creditFields": {
+            "author": "Colsu"
+          },
+          "pageParams": {
+            "date": "2017-09-01 11:01:39",
+            "author": "[[User:Colsu|Colsu]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Colsu|Colsu]]"
+          ],
+          "preview": "sp009_eu_flight_b_06.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus - San Giuliano Terme (Toscana).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_-_San_Giuliano_Terme_(Toscana).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Falco_peregrinus_-_San_Giuliano_Terme_%28Toscana%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Falco_peregrinus_-_San_Giuliano_Terme_%28Toscana%29.jpg/960px-Falco_peregrinus_-_San_Giuliano_Terme_%28Toscana%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "4c8acd03833975f48873d1a81be94a6756b607fd",
+          "size": 1721210,
+          "width": 1944,
+          "height": 1296,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Scontardi",
+          "credit": "Own work",
+          "description": "Falco peregrinus",
+          "date": "2025-05-23 09:29:42",
+          "categories": [
+            "Falco peregrinus in flight"
+          ],
+          "creditFields": {
+            "author": "Scontardi"
+          },
+          "pageParams": {
+            "date": "2025-05-23 09:29:42",
+            "author": "[[User:Scontardi|Scontardi]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Scontardi|Scontardi]]"
+          ],
+          "preview": "sp009_eu_flight_b_07.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus-3859.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus-3859.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Falco_peregrinus-3859.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Falco_peregrinus-3859.jpg/960px-Falco_peregrinus-3859.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "3c158ca961529c8571a5f5f4683ccaf54ef2a726",
+          "size": 1372699,
+          "width": 1802,
+          "height": 1198,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Colsu",
+          "credit": "Own work",
+          "description": "En quête de sa proie",
+          "date": "2017-09-01 11:01:37",
+          "categories": [
+            "Birds of baie de Saint-Brieuc",
+            "Falco peregrinus in flight",
+            "Falconiformes of Côtes-d'Armor"
+          ],
+          "creditFields": {
+            "author": "Colsu"
+          },
+          "pageParams": {
+            "date": "2017-09-01 11:01:37",
+            "author": "[[User:Colsu|Colsu]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Colsu|Colsu]]"
+          ],
+          "preview": "sp009_eu_flight_b_08.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus in flight (17659253649).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Falco_peregrinus_in_flight_%2817659253649%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Falco_peregrinus_in_flight_%2817659253649%29.jpg/960px-Falco_peregrinus_in_flight_%2817659253649%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "cbdcd25f769e5675e356c702a8b78784ac1ea6eb",
+          "size": 327635,
+          "width": 2048,
+          "height": 1634,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "john581",
+          "credit": "Flickr",
+          "description": "Birds",
+          "date": "2012-10-07 22:22",
+          "categories": [
+            "Falco peregrinus in flight"
+          ],
+          "creditFields": {
+            "author": "john581"
+          },
+          "pageParams": {
+            "Date": "2012-10-07 22:22",
+            "Author": "[https://www.flickr.com/people/24103367@N00 john581]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/24103367@N00 john581]",
+            "{{FlickreviewR|status=passed|author=john581|sourceurl=https://flickr.com/photos/24103367@N00/17659253649|archive=https://web.archive.org/web/20200508001921/http"
+          ],
+          "preview": "sp009_eu_flight_b_09.jpg"
+        },
+        {
+          "title": "File:Falco peregrinus flight - Christopher Watson.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_flight_-_Christopher_Watson.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Falco_peregrinus_flight_-_Christopher_Watson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Falco_peregrinus_flight_-_Christopher_Watson.jpg/960px-Falco_peregrinus_flight_-_Christopher_Watson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "a2b4aec463a568b78050315fc087183db79ac841",
+          "size": 75348,
+          "width": 1227,
+          "height": 1600,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Christopher Watson ( http://www.comebirdwatching.blogspot.com/ )",
+          "credit": "http://www.comebirdwatching.blogspot.com/?view=classic (Images are released under CC-BY-SA 3.0 per the notice found by pressing the 'text' button on the right side bar: https://imgur.com/h6Loq )",
+          "description": "Peregrine Falcon ( Falco peregrinus ), Northern Territory, Australia",
+          "date": "",
+          "categories": [
+            "Birds of the Northern Territory",
+            "Falco peregrinus in flight",
+            "Falconiformes of Australia"
+          ],
+          "creditFields": {
+            "author": "Christopher Watson (http://www.comebirdwatching.blogspot.com/)"
+          },
+          "pageParams": {
+            "Date": "",
+            "Author": "Christopher Watson (http://www.comebirdwatching.blogspot.com/)",
+            "Permission": "{{PermissionTicket|id=2013013110001011}}"
+          },
+          "creditLines": [
+            "|Author=Christopher Watson (http://www.comebirdwatching.blogspot.com/)"
+          ],
+          "preview": "sp009_eu_flight_b_10.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    },
+    {
+      "id": "sp016_flight_a",
+      "speciesId": "sp016",
+      "role": "flight",
+      "kind": "image",
+      "search": "Dendrocopos major flight filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Dendrocopos major feathers.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_feathers.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Dendrocopos_major_feathers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Dendrocopos_major_feathers.jpg/960px-Dendrocopos_major_feathers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "1980e033750f0a8a39e88637c8351ffc1cfe4bab",
+          "size": 1933385,
+          "width": 2448,
+          "height": 3264,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Pieter Van Pamel",
+          "credit": "Own work",
+          "description": "Flight feathers of Great spotted woodpecker ( Dendrocopos major )",
+          "date": "2019-09-12 14:26:10",
+          "categories": [
+            "Dendrocopos major anatomy",
+            "Dendrocopos major feathers",
+            "Remiges"
+          ],
+          "creditFields": {
+            "author": "Pieter Van Pamel"
+          },
+          "pageParams": {
+            "date": "2019-09-12 14:26:10",
+            "author": "[[User:Pieter Van Pamel|Pieter Van Pamel]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Pieter Van Pamel|Pieter Van Pamel]]"
+          ],
+          "preview": "sp016_flight_a_01.jpg"
+        },
+        {
+          "title": "File:Dendrocopos major with Picea abies cone.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_with_Picea_abies_cone.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dendrocopos_major_with_Picea_abies_cone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Dendrocopos_major_with_Picea_abies_cone.jpg/960px-Dendrocopos_major_with_Picea_abies_cone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "87430fc54708e039873a015deefb538eb606f53d",
+          "size": 611990,
+          "width": 1058,
+          "height": 1587,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "Public domain",
+          "licenseUrl": "",
+          "author": "Yaroslav Murashkin",
+          "credit": "Own work",
+          "description": "Great Spotted Woodpecker Dendrocopos major with Norway Spruce Picea abies cone",
+          "date": "2009-02-21",
+          "categories": [
+            "Animals with Picea abies",
+            "Birds eating Picea cone seeds",
+            "Dendrocopos major major",
+            "Picea abies cones",
+            "Picidae in flight"
+          ],
+          "creditFields": {
+            "author": "Yaroslav Murashkin"
+          },
+          "pageParams": {
+            "Author": "Yaroslav Murashkin",
+            "Date": "2009-02-21",
+            "Permission": ""
+          },
+          "creditLines": [
+            "|Author=Yaroslav Murashkin"
+          ],
+          "preview": "sp016_flight_a_02.jpg"
+        },
+        {
+          "title": "File:Dendrocopos major (51546452028).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Dendrocopos_major_%2851546452028%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Dendrocopos_major_%2851546452028%29.jpg/960px-Dendrocopos_major_%2851546452028%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "a80269d1a0df4346700fa6d5626ae0abb53a2b71",
+          "size": 4096300,
+          "width": 3389,
+          "height": 2259,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "caroline legg",
+          "credit": "Feeding Time!",
+          "description": "Dendrocopos major - Scotland",
+          "date": "Taken on 26 June 2021, 10:45",
+          "categories": [
+            "Dendrocopos major in Scotland",
+            "Dendrocopos major in flight"
+          ],
+          "creditFields": {
+            "author": "caroline legg"
+          },
+          "pageParams": {
+            "Date": "{{Taken on|2021-06-26 10:45|location=Scotland}}",
+            "Author": "[https://www.flickr.com/people/128941223@N02 caroline legg]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/128941223@N02 caroline legg]",
+            "{{FlickreviewR|status=passed|author=cazalegg|sourceurl=https://flickr.com/photos/128941223@N02/51546452028|archive=|reviewdate=2023-10-22 13:47:50|reviewlicense"
+          ],
+          "preview": "sp016_flight_a_03.jpg"
+        },
+        {
+          "title": "File:Dendrocopos major ready for flight! (50257878178).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_ready_for_flight%21_(50257878178).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Dendrocopos_major_ready_for_flight%21_%2850257878178%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Dendrocopos_major_ready_for_flight%21_%2850257878178%29.jpg/960px-Dendrocopos_major_ready_for_flight%21_%2850257878178%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "5f4a5298ccb20225fc4134c2b4dfdf22c9f3a0c6",
+          "size": 3607866,
+          "width": 2912,
+          "height": 1942,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "caroline legg",
+          "credit": "'Ready for flight!'",
+          "description": "Dumfries & Galloway - Dendrocopos major",
+          "date": "Taken on 14 July 2020, 14:29",
+          "categories": [
+            "Birds of Dumfries and Galloway",
+            "Dendrocopos major in Scotland",
+            "July 2020 in Dumfries and Galloway"
+          ],
+          "creditFields": {
+            "author": "caroline legg"
+          },
+          "pageParams": {
+            "Date": "{{Taken on|2020-07-14 14:29|location=Scotland}}",
+            "Author": "[https://www.flickr.com/people/128941223@N02 caroline legg]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/128941223@N02 caroline legg]",
+            "{{FlickreviewR|status=passed|author=cazalegg|sourceurl=https://flickr.com/photos/128941223@N02/50257878178|archive=|reviewdate=2023-10-24 13:35:23|reviewlicense"
+          ],
+          "preview": "sp016_flight_a_04.jpg"
+        },
+        {
+          "title": "File:Dendrocopos major hondoensis in flight.JPG",
+          "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_hondoensis_in_flight.JPG",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Dendrocopos_major_hondoensis_in_flight.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Dendrocopos_major_hondoensis_in_flight.JPG/960px-Dendrocopos_major_hondoensis_in_flight.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "9b54f531d7785a6451c5bcd391da8e6739d9de20",
+          "size": 1379154,
+          "width": 1920,
+          "height": 1440,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "author": "Alpsdake",
+          "credit": "Own work",
+          "description": "Dendrocopos major hondoensis ( Great Spotted Woodpecker ), male in flight in Japan.",
+          "date": "2012-12-02 13:06:41",
+          "categories": [
+            "Dendrocopos major japonicus"
+          ],
+          "creditFields": {
+            "author": "Alpsdake"
+          },
+          "pageParams": {
+            "date": "2012-12-02 13:06:41",
+            "author": "[[User:Alpsdake|Alpsdake]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Alpsdake|Alpsdake]]"
+          ],
+          "preview": "sp016_flight_a_05.jpg"
+        },
+        {
+          "title": "File:Dendrocopos (47441023271).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_(47441023271).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Dendrocopos_%2847441023271%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Dendrocopos_%2847441023271%29.jpg/960px-Dendrocopos_%2847441023271%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "f469f0bcd0df79ea544465b1a2f6a0c4dc4eb9a9",
+          "size": 13132614,
+          "width": 5184,
+          "height": 3456,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "Rolf Dietrich Brecher from Germany",
+          "credit": "weg isser.....",
+          "description": "weg isser.....",
+          "date": "2019-03-20 13:40",
+          "categories": [
+            "Dendrocopos major in flight"
+          ],
+          "creditFields": {
+            "author": "Rolf Dietrich Brecher from Germany"
+          },
+          "pageParams": {
+            "Date": "2019-03-20 13:40",
+            "Author": "[https://www.flickr.com/people/104249543@N07 Rolf Dietrich Brecher] from Germany",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/104249543@N07 Rolf Dietrich Brecher] from Germany",
+            "{{FlickreviewR|status=passed|author=Rolf Dietrich Brecher|sourceurl=https://flickr.com/photos/104249543@N07/47441023271|archive=https://web.archive.org/web/2020"
+          ],
+          "preview": "sp016_flight_a_06.jpg"
+        },
+        {
+          "title": "File:FlyingDendrocoposMajor.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:FlyingDendrocoposMajor.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/FlyingDendrocoposMajor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/FlyingDendrocoposMajor.jpg/960px-FlyingDendrocoposMajor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "ed1d007a63d943b452118f537d1e6fcc9cb3820a",
+          "size": 602121,
+          "width": 1024,
+          "height": 768,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 2.0 de",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
+          "author": "David Meisel ( BlueFox at de.wikipedia )",
+          "credit": "own photography, first upload on de.wikipedia.org ( de:Bild:FlyingDendrocoposMajor.jpg )",
+          "description": "Flying Dendrocopos major, ♀",
+          "date": "2007-12-22",
+          "categories": [
+            "Dendrocopos major in Germany",
+            "Picidae in flight"
+          ],
+          "creditFields": {
+            "author": "David Meisel (BlueFox at de.wikipedia)"
+          },
+          "pageParams": {
+            "Date": "2007-12-22",
+            "Author": "David Meisel ([[:de:User:BlueFox|BlueFox]] at [http://de.wikipedia.org de.wikipedia])",
+            "Permission": "CC-BY-SA-2.0-DE."
+          },
+          "creditLines": [
+            "|Author=David Meisel ([[:de:User:BlueFox|BlueFox]] at [http://de.wikipedia.org de.wikipedia])"
+          ],
+          "preview": "sp016_flight_a_07.jpg"
+        },
+        {
+          "title": "File:Juvenile Great Spotted Woodpecker (54551826188).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Juvenile_Great_Spotted_Woodpecker_(54551826188).jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Juvenile_Great_Spotted_Woodpecker_%2854551826188%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Juvenile_Great_Spotted_Woodpecker_%2854551826188%29.jpg/960px-Juvenile_Great_Spotted_Woodpecker_%2854551826188%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "d16c0d96dde2dd579786f660ec86d28dcabf08b8",
+          "size": 1730862,
+          "width": 1765,
+          "height": 2110,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "author": "caroline legg",
+          "credit": "'Jumping for joy!'",
+          "description": "Juvenile Great Spotted Woodpecker - Dumfries & Galloway",
+          "date": "Taken on 28 May 2025, 09:58",
+          "categories": [
+            "Birds of Dumfries and Galloway",
+            "Dendrocopos major (juvenile)",
+            "Dendrocopos major in Scotland",
+            "Dendrocopos major in flight",
+            "May 2025 in Dumfries and Galloway"
+          ],
+          "creditFields": {
+            "author": "caroline legg"
+          },
+          "pageParams": {
+            "Date": "{{Taken on|2025-05-28 09:58|location=Scotland}}",
+            "Author": "[https://www.flickr.com/people/128941223@N02 caroline legg]",
+            "Permission": ""
+          },
+          "creditLines": [
+            "| Author      = [https://www.flickr.com/people/128941223@N02 caroline legg]",
+            "{{FlickreviewR|status=passed|author=cazalegg|sourceurl=https://flickr.com/photos/128941223@N02/54551826188|archive=|reviewdate=2025-06-08 07:08:57|reviewlicense"
+          ],
+          "preview": "sp016_flight_a_08.jpg"
+        }
+      ],
+      "rejectedForLicense": [
+        {
+          "title": "File:Ocicat-woodpecker.jpg",
+          "license": "Copyrighted free use"
+        }
+      ]
+    },
+    {
+      "id": "sp016_flight_b",
+      "speciesId": "sp016",
+      "role": "flight",
+      "kind": "image",
+      "search": "Buntspecht Flug filetype:bitmap",
+      "candidates": [
+        {
+          "title": "File:Buntspecht 6750.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Buntspecht_6750.jpg",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Buntspecht_6750.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Buntspecht_6750.jpg/960px-Buntspecht_6750.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "sha1": "bc31b086b5af4002ce1c9c4ba5ca51d35eb6b601",
+          "size": 1970313,
+          "width": 4317,
+          "height": 2878,
+          "mime": "image/jpeg",
+          "duration": null,
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "author": "Ein Dahmer",
+          "credit": "Own work",
+          "description": "A juvenile Great Spotted Woodpecker recovering after collision with a windowpane",
+          "date": "2019-06-03 17:34:32",
+          "categories": [
+            "Dendrocopos major (juvenile)"
+          ],
+          "creditFields": {
+            "author": "Ein Dahmer"
+          },
+          "pageParams": {
+            "date": "2019-06-03 17:34:32",
+            "author": "[[User:Ein Dahmer|Ein Dahmer]]",
+            "permission": ""
+          },
+          "creditLines": [
+            "|author=[[User:Ein Dahmer|Ein Dahmer]]"
+          ],
+          "preview": "sp016_flight_b_01.jpg"
+        }
+      ],
+      "rejectedForLicense": []
+    }
+  ]
+}
