@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-24",
+  "purpose": "F3-REV2-R03b G8: licentie, auteur en herkomst van iNaturalist-foto's via openbare fallbackroutes (v1, v2, fotopagina .json, waarneming); sp007-mannetje-vlucht omdat het in het nieuwe Slechtvalk–Havik-paar staat",
+  "items": [
+    {
+      "speciesId": "sp009",
+      "author": "Jonathan Tollin",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:2:Volwassen in vlucht",
+      "image": "/assets/species/plumage/sp009-male-flight.webp",
+      "inatPhotoId": 9819028,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp009",
+      "author": "Josh Boe",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:3:Juveniel in vlucht",
+      "image": "/assets/species/plumage/sp009-juv-flight.webp",
+      "inatPhotoId": 251479995,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Вячеслав Юсупов",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:1:Mannetje in vlucht",
+      "image": "/assets/species/plumage/sp007-male-flight.webp",
+      "inatPhotoId": 29451692,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.JPG"
+      ]
+    }
+  ]
+}

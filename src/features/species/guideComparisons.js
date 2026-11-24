@@ -135,10 +135,32 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp020",
         "source": "middelste-bonte-specht",
-        "marks": "Middelste: lichte kop met oog vrij in wit, kruin zonder zwarte onderrand, gestreepte flanken en roze onderstaart."
+        "marks": "Middelste: lichte kop met oog vrij in wit, kruin zonder zwarte onderrand, gestreepte flanken en roze onderstaart.",
+        // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): volwassen vogel (Commons: male; geslacht niet zichtbaar, daarom label "Volwassen").
+        "plumage": "adult_m"
       }
     ],
-    "tip": "Een rode kruin alleen is onvoldoende: ook jonge Grote Bonte Spechten hebben die."
+    // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): gelabelde rijen (volgorde vogels: Grote, Middelste) uit VB_GBS_MBS, VB_GBS en VB_MBS.
+    rows: [
+      {label: 'Koptekening', values: ['Rode jeugdkruin met zwarte onderrand; zwarte streep loopt door tot het achterhoofd', 'Rode kruin doorgaans zonder zwarte onderrand; halsstreep niet verbonden met het achterhoofd; oog in licht gezicht']},
+      {label: 'Onderzijde', values: ['Rode onderstaart', 'Roze onderstaart en fijne flankstrepen']},
+      {label: 'Valkuil', values: ['Jonge vogels hebben een rood petje', 'Rood op de kruin in alle kleden']},
+    ],
+    "tip": "Een rode kruin alleen is onvoldoende: ook jonge Grote Bonte Spechten hebben die. Bekijk de kop van opzij en controleer onderstaart en flanken."
+  },
+  {
+    // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): volwassen paar: mannetje Grote Bonte Specht tegen volwassen Middelste Bonte Specht.
+    label: 'Grote en Middelste Bonte Specht · volwassen',
+    birds: [
+      {id: 'sp016', source: 'grote-bonte-specht', plumage: 'adult_m', marks: 'Zwarte kruin met rode nekvlek (mannetje). Zwarte streep loopt door tot het achterhoofd; rode onderstaart.'},
+      {id: 'sp020', source: 'middelste-bonte-specht', plumage: 'adult_m', marks: 'Rode kruin en licht gezicht. Halsstreep niet verbonden met het achterhoofd; fijne flankstrepen en roze onderstaart.'},
+    ],
+    rows: [
+      {label: 'Rood op de kop', values: ['Zwarte kruin; mannetje met rode nekvlek, vrouwtje zonder rood', 'Rode kruin in alle kleden']},
+      {label: 'Nekstreep en gezicht', values: ['Zwarte streep loopt door tot het achterhoofd', 'Halsstreep niet verbonden met het achterhoofd; licht gezicht']},
+      {label: 'Onderzijde', values: ['Rode onderstaart', 'Roze onderstaart en fijne flankstrepen']},
+    ],
+    tip: 'Bij Grote Bonte Specht zit het rood van het mannetje in de nek, bij Middelste Bonte Specht op de hele kruin. Bij volwassen vogels is het koppatroon meestal goed te zien.',
   },
   {
     label: 'Kleine en Grote Zilverreiger · buiten broedkleed',
@@ -673,13 +695,25 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp008', source: 'torenvalk', plumage: 'adult_m', marks: 'Lange staart met donkere eindband. Slanker gebouwd, met spitse vleugels.'},
       {id: 'sp009', source: 'slechtvalk', photo: '/assets/species/plumage/sp009-male-flight.webp', marks: 'Zware borst, brede donkere baardstreep en relatief korte staart. De spitse vleugels hebben een brede basis.'},
     ],
-    tip: 'Vergelijk de lengte van de staart ten opzichte van de vleugelbasis. De foto’s zijn niet op dezelfde schaal.',
+    // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): gelabelde rijen (volgorde vogels: Torenvalk, Slechtvalk) uit VB_TOREN, EB_KES en VB_SLECHT.
+    rows: [
+      {label: 'Bouw, vleugels en staart', values: ['Slank; spitse vleugels; lange staart met donkere eindband', 'Zware borst; spitse vleugels met brede basis; vrij korte staart']},
+      {label: 'Kop', values: ['Mannetje: grijze kop', 'Zwarte kopkap en brede donkere baardstreep']},
+      {label: 'Jachtwijze', values: ['Hangt biddend stil boven open terrein', 'Stootduik of volhardende achtervolging']},
+    ],
+    tip: 'Vergelijk de lengte van de staart ten opzichte van de vleugelbasis. Vleugels kunnen in verschillende vluchtfasen smaller lijken. De foto’s zijn niet op dezelfde schaal.',
   },
   {
     label: 'Torenvalk en Slechtvalk · juveniel',
     birds: [
       {id: 'sp008', source: 'torenvalk', plumage: 'juv', marks: 'Warmer bruine, gebandeerde rug en lange staart. Lijkt sterk op een volwassen vrouwtje Torenvalk.'},
       {id: 'sp009', source: 'slechtvalk', plumage: 'juv', marks: 'Donkerder bruine bovenzijde met lichte veerranden, zware bouw en een brede donkere baardstreep.'},
+    ],
+    // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): gelabelde rijen (volgorde vogels: Torenvalk, Slechtvalk) uit VB_TOREN, BZ_TOREN en VB_SLECHT.
+    rows: [
+      {label: 'Kop', values: ['Bruine kop; lijkt sterk op een volwassen vrouwtje Torenvalk', 'Brede donkere baardstreep']},
+      {label: 'Bovenzijde', values: ['Warmer bruin met dwarsbanden op de rug', 'Donkerder bruin met lichte veerranden']},
+      {label: 'Bouw en staart', values: ['Slanker; lange staart', 'Zware bouw; vrij korte staart']},
     ],
     tip: 'Beide jonge vogels hebben lengtestrepen: die alleen bepalen de soort niet. Combineer koptekening met lichaamsbouw en staartlengte.',
   },
@@ -712,6 +746,23 @@ export const GUIDE_COMPARISONS = [
     tip: 'Lengtestrepen komen bij beide voor. Vergelijk de koptekening, staart en vleugels; formaat zonder referentie is lastig.',
   },
   {
+    // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): volwassen paar in vlucht. Slechtvalk: Commons-foto met bevestigde rechten (zijaanzicht);
+    // Havik: bewezen mannetje in vlucht (R02b). Tekst uit VB_SLECHT, VB_HAVIK en VB_HVS.
+    label: 'Slechtvalk en Havik · volwassen in vlucht',
+    flight: true,
+    tabLabel: 'In vlucht · Volwassen',
+    birds: [
+      {id: 'sp009', source: 'slechtvalk', photo: '/assets/showcase/sp009.webp', marks: 'Zware borst, zwarte kopkap en brede baardstreep. Spitse vleugels met brede basis en een vrij korte staart.'},
+      {id: 'sp007', source: 'havik', photo: '/assets/species/plumage/sp007-male-flight.webp', marks: 'Kop steekt ver uit en brede heupen. Langere staart met afgeronde punt; volwassen vogels fijn dwarsgebandeerd van onderen.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Zwarte kopkap en brede donkere baardstreep', 'Kop steekt ver uit; lichte wenkbrauwstreep']},
+      {label: 'Vleugels en staart', values: ['Spitse vleugels met brede basis; vrij korte staart', "Brede 'heupen'; langere staart met afgeronde punt"]},
+      {label: 'Vliegstijl', values: ['Stootduik of volhardende achtervolging', 'Langzamer en krachtiger, behalve tijdens een achtervolging']},
+    ],
+    tip: 'Kijk eerst naar kopkap en baardstreep, dan naar de staartlengte ten opzichte van de vleugels. Volwassen Haviken zijn van onderen fijn dwarsgebandeerd. De foto’s tonen verschillende hoeken; formaat zonder referentie misleidt.',
+  },
+  {
     "label": "Grote of kleine bonte specht?",
     "birds": [
       {
@@ -725,7 +776,27 @@ export const GUIDE_COMPARISONS = [
         "marks": "Kleine: dwarsgestreepte rug zonder grote witte schoudervlekken, bleke onderstaart en musformaat."
       }
     ],
-    "tip": "Gebruik rugpatroon en onderstaart naast formaat."
+    // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): gelabelde rijen (volgorde vogels: Grote, Kleine) uit VB_GBS, VB_GBS_MBS en VB_KLEINE_BONTE_SPECHT.
+    rows: [
+      {label: 'Rug', values: ['Twee grote witte schoudervlekken', 'Dwarsgestreepte rug zonder grote witte schoudervlekken']},
+      {label: 'Rood op de kop', values: ['Mannetje: rode nekvlek, zwarte kruin', 'Mannetje: rode kruin']},
+      {label: 'Onderstaart en formaat', values: ['Rode onderstaart; groter', 'Geen rode onderstaart; musformaat']},
+    ],
+    "tip": "Gebruik rugpatroon en onderstaart naast formaat. Formaat zonder referentie is onbetrouwbaar."
+  },
+  {
+    // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): vrouwtjespaar met bestaande, gecontroleerde foto's (beide zonder rood op de kop).
+    label: 'Grote en Kleine Bonte Specht · vrouwtje',
+    birds: [
+      {id: 'sp016', source: 'grote-bonte-specht', plumage: 'adult_f', marks: 'Geen rood op de kop. Grote witte schoudervlekken en rode onderstaart.'},
+      {id: 'sp017', source: 'kleine-bonte-specht', plumage: 'adult_f', marks: 'Lichte kruin zonder rood. Dwarsgestreepte rug en geen rode onderstaart.'},
+    ],
+    rows: [
+      {label: 'Kop', values: ['Zwarte kruin, geen rood', 'Lichte kruin, geen rood']},
+      {label: 'Rug', values: ['Twee grote witte schoudervlekken', 'Zwart-wit dwarsgestreept']},
+      {label: 'Onderstaart en formaat', values: ['Rode onderstaart; groter', 'Geen rode onderstaart; musformaat']},
+    ],
+    tip: 'Bij vrouwtjes valt het rood op de kop als kenmerk weg. Kijk naar de rug en de onderstaart.',
   },
   {
     "label": "Kleine of middelste bonte specht?",
@@ -1495,7 +1566,13 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp017', source: 'kleine-bonte-specht', photoMissing: 'vluchtcontrole 2026-11-10: geen geschikte vluchtfoto', marks: 'Lichte dwarsbanden op de rug, zonder grote witte schoudervlek of rode onderstaart.'},
       {id: 'sp020', source: 'middelste-bonte-specht', marks: 'Gestreepte flanken en een roze onderstaart. Op deze foto vallen vooral de vleugeltekening en onderzijde op.'},
     ],
-    tip: 'Combineer het rugpatroon, de flankstrepen en de kleur van de onderstaart. De foto’s tonen verschillende hoeken.',
+    // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): gelabelde rijen (volgorde vogels: Grote, Kleine, Middelste).
+    rows: [
+      {label: 'Rug en schouder', values: ['Grote witte schoudervlekken', 'Lichte dwarsbanden, geen grote schoudervlek', 'Witte schoudervlekken']},
+      {label: 'Onderstaart', values: ['Rood', 'Niet rood', 'Roze, met gestreepte flanken']},
+      {label: 'Rood op de kop', values: ['Mannetje: rode nekvlek', 'Mannetje: rode kruin', 'Rode kruin in alle kleden']},
+    ],
+    tip: 'Combineer het rugpatroon, de flankstrepen en de kleur van de onderstaart. Op de Middelste-foto vallen vooral de vleugeltekening en onderzijde op. De foto’s tonen verschillende hoeken.',
   },
   {
     label: 'Groene en Zwarte Specht · in vlucht',

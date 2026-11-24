@@ -83,7 +83,10 @@
     "sp004",
     "sp005",
     "sp006",
-    "sp007"
+    "sp007",
+    "sp008",
+    "sp009",
+    "sp016"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -4414,7 +4417,7 @@
       ],
       "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Torenvalk-kaart (sp008) nog niet in de tweede ronde; onafhankelijke review open."
+        "Torenvalk-kaart (sp008) in F3-REV2-R03 beoordeeld; eigenaarspoort open; onafhankelijke review open."
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -4455,7 +4458,7 @@
       ],
       "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
       "mediaOpen": [
-        "Slechtvalk-kaart (sp009) nog niet in de tweede ronde; onafhankelijke review open."
+        "Slechtvalk-kaart (sp009) in F3-REV2-R03 beoordeeld; eigenaarspoort open; onafhankelijke review open."
       ],
       "textState": "PARTIALLY TESTED",
       "criticalMarks": [
@@ -4478,6 +4481,395 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk"
+      ]
+    },
+    {
+      "id": "LK-100",
+      "focus": [
+        "sp008",
+        "sp009"
+      ],
+      "birds": [
+        "sp008",
+        "sp009"
+      ],
+      "risk": "Jonge vogels van beide soorten zijn bruin en in de lengte gestreept.",
+      "matchingPlumages": [
+        "juv",
+        "juv"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R03: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "Slechtvalk-foto's (sp009) van niet-Europese herkomst (India, Californië, VS); iNaturalist-licenties niet herbevestigd.",
+        "F3-REV2-R03b (eigenaarbesluit B 24-11-2026): gelabelde rijen toegevoegd (vlucht en juveniel); kritische kaarten in beide richtingen."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop en bovenzijde",
+          "values": [
+            "Warmer bruine, gebandeerde rug",
+            "Donkerder bruine bovenzijde met lichte veerranden en brede donkere baardstreep"
+          ]
+        },
+        {
+          "label": "Bouw en staart",
+          "values": [
+            "Slanker gebouwd met lange staart",
+            "Zware borst en relatief korte staart"
+          ]
+        }
+      ],
+      "caution": "Lengtestrepen komen bij beide jonge vogels voor; combineer koptekening, bouw en staartlengte.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk"
+      ]
+    },
+    {
+      "id": "LK-101",
+      "focus": [
+        "sp016"
+      ],
+      "birds": [
+        "sp016",
+        "sp020"
+      ],
+      "risk": "Jonge Grote Bonte Specht heeft een rode kruin, net als Middelste Bonte Specht.",
+      "matchingPlumages": [
+        "juv",
+        "adult_m"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R03: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "F3-REV2-R03b (eigenaarbesluit B 24-11-2026): rollabel gecorrigeerd: Middelste-foto toont \"Volwassen\" (plumage adult_m; Commons noemt male, geslacht niet zichtbaar); gelabelde rijen toegevoegd."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Koppatroon",
+          "values": [
+            "Zwarte streep loopt door tot het achterhoofd; rode kruin zwart omrand",
+            "Halsstreep niet verbonden met het achterhoofd, opener gezicht"
+          ]
+        },
+        {
+          "label": "Onderzijde",
+          "values": [
+            "Rode onderstaart",
+            "Roze onderstaart en gestreepte flanken"
+          ]
+        }
+      ],
+      "caution": "Een rode kruin alleen is onvoldoende; ook jonge Grote Bonte Spechten hebben die.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+        "https://www.vogelbescherming.nl/actueel/bericht/grote-bonte-vs-middelste-bonte-specht"
+      ]
+    },
+    {
+      "id": "LK-102",
+      "focus": [
+        "sp016"
+      ],
+      "birds": [
+        "sp016",
+        "sp017"
+      ],
+      "risk": "Beide zwart-wit, mannetjes met rood op de kop.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R03: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "Kleine Bonte Specht-kaart (sp017) nog niet in de tweede ronde; geen geschikte Kleine Bonte Specht-vluchtfoto.",
+        "F3-REV2-R03b (eigenaarbesluit B 24-11-2026): gelabelde rijen toegevoegd; vrouwtjespaar als LK-107."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Rug",
+          "values": [
+            "Grote witte schoudervlekken",
+            "Dwarsgestreepte rug zonder grote witte schoudervlekken"
+          ]
+        },
+        {
+          "label": "Onderstaart en formaat",
+          "values": [
+            "Rode onderstaart, groter formaat",
+            "Bleke onderstaart en musformaat"
+          ]
+        }
+      ],
+      "caution": "Formaat zonder referentie is lastig; gebruik rugpatroon en onderstaart.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+        "https://www.vogelbescherming.nl/actueel/bericht/grote-bonte-vs-middelste-bonte-specht"
+      ]
+    },
+    {
+      "id": "LK-103",
+      "focus": [
+        "sp008"
+      ],
+      "birds": [
+        "sp008",
+        "sp261"
+      ],
+      "risk": "Beide valken met spitse vleugels boven open terrein.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "F3-REV2-R03: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "Geen gidsfoto's voor Boomvalk (sp261); alleen tekstvergelijking."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Vleugelpunten",
+          "values": [
+            "Minder spitse vleugelpunten",
+            "Langere, spitsere vleugelpunten"
+          ]
+        },
+        {
+          "label": "Staart",
+          "values": [
+            "Lange staart; bidt veel",
+            "Relatief korte staart"
+          ]
+        }
+      ],
+      "caution": "Een enkele vlieghouding kan de vleugelvorm vertekenen; bekijk de vlucht over een langer traject.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomvalk"
+      ]
+    },
+    {
+      "id": "LK-104",
+      "focus": [
+        "sp008"
+      ],
+      "birds": [
+        "sp008",
+        "sp260"
+      ],
+      "risk": "Beide kleine valken boven open terrein.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "F3-REV2-R03: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "Geen gidsfoto's voor Smelleken (sp260); alleen tekstvergelijking."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Silhouet",
+          "values": [
+            "Slank met lange staart",
+            "Compact met brede vleugelbasis"
+          ]
+        },
+        {
+          "label": "Jachtwijze",
+          "values": [
+            "Hangt biddend stil boven open terrein",
+            "Volgt prooi vaak laag en snel"
+          ]
+        }
+      ],
+      "caution": "Combineer silhouet en jachtwijze; een enkele vlieghouding kan misleiden.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/smelleken"
+      ]
+    },
+    {
+      "id": "LK-105",
+      "focus": [
+        "sp009"
+      ],
+      "birds": [
+        "sp009",
+        "sp261"
+      ],
+      "risk": "Beide valken met lange spitse vleugels.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "MISSING_VERIFIED_PAIR",
+      "mediaOpen": [
+        "F3-REV2-R03: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "Geen gidsfoto's voor Boomvalk (sp261); alleen tekstvergelijking.",
+        "F3-REV2-R03b (eigenaarbesluit B 24-11-2026): Boomvalk-kaart Slechtvalk aangescherpt; Smelleken als eigen kritische kaart."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Bouw",
+          "values": [
+            "Zwaar gebouwd met brede vleugelbasis",
+            "Kleiner en slanker gebouwd"
+          ]
+        },
+        {
+          "label": "Poten (volwassen)",
+          "values": [
+            "Geen roodbruin rond de poten",
+            "Roodbruine veren rond de poten"
+          ]
+        }
+      ],
+      "caution": "Combineer bouw met de kleur rond de poten bij volwassen vogels.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/boomvalk"
+      ]
+    },
+    {
+      "id": "LK-106",
+      "focus": [
+        "sp016"
+      ],
+      "birds": [
+        "sp016",
+        "sp020"
+      ],
+      "risk": "Volwassen vogels van beide soorten zijn zwart-wit met rood op de kop.",
+      "matchingPlumages": [
+        "adult_m",
+        "adult_m"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R03b (eigenaarbesluit B 24-11-2026): nieuw fotopaar uit bestaande, gecontroleerde gidsfoto's; onafhankelijke review open.",
+        "Middelste-foto 500 px breed (Commons-voorbeeld); scherper origineel is verbeterwens van sp020."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Rood op de kop",
+          "values": [
+            "Mannetje: rode nekvlek; vrouwtje zonder rood",
+            "Rode kruin in alle kleden"
+          ]
+        },
+        {
+          "label": "Nekstreep",
+          "values": [
+            "Zwarte streep loopt door tot het achterhoofd",
+            "Halsstreep niet verbonden met het achterhoofd"
+          ]
+        },
+        {
+          "label": "Onderzijde",
+          "values": [
+            "Rode onderstaart",
+            "Roze onderstaart en fijne flankstrepen"
+          ]
+        }
+      ],
+      "caution": "Bij volwassen vogels is het koppatroon meestal goed te zien; controleer onderstaart en flanken.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+        "https://www.vogelbescherming.nl/actueel/bericht/grote-bonte-vs-middelste-bonte-specht"
+      ]
+    },
+    {
+      "id": "LK-107",
+      "focus": [
+        "sp016"
+      ],
+      "birds": [
+        "sp016",
+        "sp017"
+      ],
+      "risk": "Vrouwtjes van beide soorten hebben geen rood op de kop.",
+      "matchingPlumages": [
+        "adult_f",
+        "adult_f"
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R03b (eigenaarbesluit B 24-11-2026): nieuw fotopaar uit bestaande, gecontroleerde gidsfoto's; onafhankelijke review open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Rug",
+          "values": [
+            "Twee grote witte schoudervlekken",
+            "Zwart-wit dwarsgestreept"
+          ]
+        },
+        {
+          "label": "Onderstaart en formaat",
+          "values": [
+            "Rode onderstaart; groter",
+            "Geen rode onderstaart; musformaat"
+          ]
+        }
+      ],
+      "caution": "Zonder rood op de kop beslissen rug en onderstaart; formaat zonder referentie misleidt.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-bonte-specht"
+      ]
+    },
+    {
+      "id": "LK-108",
+      "focus": [
+        "sp009"
+      ],
+      "birds": [
+        "sp009",
+        "sp007"
+      ],
+      "risk": "Volwassen vogels in vlucht; beide zwaar gebouwd en van onderen getekend.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R03b (eigenaarbesluit B 24-11-2026): nieuw fotopaar uit bestaande, gecontroleerde gidsfoto's; onafhankelijke review open.",
+        "Slechtvalk-foto zonder vastgestelde herkomst (Commons, rechten VERIFIED); Havik-mannetje met open iNaturalist-licentiepunt."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kop",
+          "values": [
+            "Zwarte kopkap en brede donkere baardstreep",
+            "Kop steekt ver uit; lichte wenkbrauwstreep"
+          ]
+        },
+        {
+          "label": "Vleugels en staart",
+          "values": [
+            "Spitse vleugels met brede basis; vrij korte staart",
+            "Brede heupen; langere staart met afgeronde punt"
+          ]
+        }
+      ],
+      "caution": "Formaat zonder referentie misleidt; gebruik kop en staartlengte.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+        "https://www.vogelbescherming.nl/actueel/bericht/havik-vs-sperwer"
       ]
     }
   ],

@@ -1,0 +1,294 @@
+{
+  "generated": "2026-11-24T08:56:32Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp009",
+      "image": "/assets/species/plumage/sp009-male-flight.webp",
+      "title": null,
+      "author": "Jonathan Tollin",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1223,
+        815
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "https://api.inaturalist.org/v1/photos/9819028: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/9819028: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/9819028.json: HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1609,
+        1073
+      ],
+      "mode": "full",
+      "r": 0.659,
+      "sameShot": false,
+      "sideBySide": "sp009-male-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp009",
+      "image": "/assets/species/plumage/sp009-juv-flight.webp",
+      "title": null,
+      "author": "Josh Boe",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1238,
+        1105
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "https://api.inaturalist.org/v1/photos/251479995: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/251479995: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/251479995.json: HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        1238,
+        1105
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp009-juv-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp007",
+      "image": "/assets/species/plumage/sp007-male-flight.webp",
+      "title": null,
+      "author": "Вячеслав Юсупов",
+      "license": "CC BY 4.0",
+      "localSize": [
+        922,
+        792
+      ],
+      "sourceUrl": "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg",
+      "rightsMatch": null,
+      "inat": {
+        "error": "https://api.inaturalist.org/v1/photos/29451692: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/29451692: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/29451692.json: HTTP Error 404: Not Found"
+      },
+      "sourceSize": [
+        2048,
+        1365
+      ],
+      "mode": "crop",
+      "r": 0.824,
+      "scale": 0.6,
+      "offset": [
+        0.388,
+        0.058
+      ],
+      "sameShot": false,
+      "sideBySide": "sp007-male-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp016",
+      "image": "/assets/species/plumage/sp016-flight.webp",
+      "title": "File:Dendrocopos major (51546452028).jpg",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        933
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg",
+        "sha1": "a80269d1a0df4346700fa6d5626ae0abb53a2b71",
+        "license": "CC BY 2.0",
+        "author": "caroline legg",
+        "width": 3389,
+        "height": 2259,
+        "creditFields": {
+          "author": "caroline legg"
+        }
+      },
+      "commonsContext": {
+        "description": "Dendrocopos major - Scotland",
+        "date": "Taken on 26 June 2021, 10:45",
+        "categories": [
+          "Dendrocopos major in Scotland",
+          "Dendrocopos major in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp016-flight_vs_source.jpg",
+      "originalBytes": 4096300,
+      "sha1Verified": true,
+      "originalSize": [
+        3389,
+        2259
+      ],
+      "fullCrop": {
+        "file": "sp016-flight_full_crop.jpg",
+        "box": [
+          746,
+          678,
+          2271,
+          1762
+        ],
+        "note": "uitsnede op oorspronkelijke resolutie, niet verkleind"
+      },
+      "overview": "sp016-flight_overview.jpg"
+    },
+    {
+      "id": "sp009_kandidaat1_toscane",
+      "speciesId": "sp009",
+      "title": "File:Falco peregrinus - San Giuliano Terme (Toscana).jpg",
+      "proposedRole": "volwassen in vlucht",
+      "kind": "candidate",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_-_San_Giuliano_Terme_(Toscana).jpg",
+        "sha1": "4c8acd03833975f48873d1a81be94a6756b607fd",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Scontardi",
+        "credit": "Own work",
+        "width": 1944,
+        "height": 1296,
+        "creditFields": {
+          "author": "Scontardi"
+        },
+        "pageParams": {
+          "date": "2025-05-23 09:29:42",
+          "author": "[[User:Scontardi|Scontardi]]",
+          "permission": ""
+        }
+      },
+      "commonsContext": {
+        "description": "Falco peregrinus",
+        "date": "2025-05-23 09:29:42",
+        "categories": [
+          "Falco peregrinus in flight"
+        ]
+      },
+      "licenseAllowed": true,
+      "originalBytes": 1721210,
+      "sha1Verified": true,
+      "originalSize": [
+        1944,
+        1296
+      ],
+      "fullCrop": {
+        "file": "sp009_kandidaat1_toscane_full_crop.jpg",
+        "box": [
+          389,
+          0,
+          1069,
+          1037
+        ],
+        "note": "uitsnede op oorspronkelijke resolutie, niet verkleind"
+      },
+      "overview": "sp009_kandidaat1_toscane_overview.jpg"
+    },
+    {
+      "id": "sp009_kandidaat2_brandon",
+      "speciesId": "sp009",
+      "title": "File:Peregrine Falcon (2) (9594380746).jpg",
+      "proposedRole": "juveniel in vlucht",
+      "kind": "candidate",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(2)_(9594380746).jpg",
+        "sha1": "82f8154eb1de683919658f60cc0cc79b1a714e90",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Jacob Spinks from Northamptonshire, England",
+        "credit": "Peregrine Falcon (2)",
+        "width": 1500,
+        "height": 1200,
+        "creditFields": {
+          "author": "Jacob Spinks from Northamptonshire, England"
+        },
+        "pageParams": {
+          "Date": "2013-08-24 16:47",
+          "Author": "[https://www.flickr.com/people/91677891@N07 Jacob  Spinks] from Northamptonshire, England",
+          "Permission": ""
+        }
+      },
+      "commonsContext": {
+        "description": "Taken at Brandon Marsh. I was really lucky to get this!! fastest bird in the WORLD!! But it wasnt going full speed as it is a Juvenile but it was hunting with no success!! The peregrine is a large and powerful falcon. It has long, broad, pointed wings and a relatively short tail. It is blue-grey above, with a blackish top of the head and an obvious black 'moustache' that contrasts with its white f",
+        "date": "2013-08-24 16:47",
+        "categories": [
+          "Falco peregrinus in flight"
+        ]
+      },
+      "licenseAllowed": true,
+      "originalBytes": 584310,
+      "sha1Verified": true,
+      "originalSize": [
+        1500,
+        1200
+      ],
+      "fullCrop": {
+        "file": "sp009_kandidaat2_brandon_full_crop.jpg",
+        "box": [
+          150,
+          360,
+          825,
+          1140
+        ],
+        "note": "uitsnede op oorspronkelijke resolutie, niet verkleind"
+      },
+      "overview": "sp009_kandidaat2_brandon_overview.jpg"
+    },
+    {
+      "id": "sp009_kandidaat3_langeveld",
+      "speciesId": "sp009",
+      "title": "File:Falco peregrinus 114336093.jpg",
+      "proposedRole": "volwassen (hoofdfoto/rust)",
+      "kind": "candidate",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_114336093.jpg",
+        "sha1": "43e6eed4090c1833cf4b0406f240b4733ccd3a9f",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Michel Langeveld",
+        "credit": "https://www.inaturalist.org/photos/114336093",
+        "width": 1415,
+        "height": 946,
+        "creditFields": {
+          "author": "Michel Langeveld"
+        },
+        "pageParams": {
+          "date": "2021-02-28",
+          "author": "[https://www.inaturalist.org/users/3599717 Michel Langeveld]",
+          "permission": ""
+        }
+      },
+      "commonsContext": {
+        "description": "Peregrine Falcon ( Falco peregrinus )",
+        "date": "2021-02-28",
+        "categories": [
+          "Birds of Noordwijk, South Holland",
+          "Falco peregrinus",
+          "Falconiformes of the Netherlands"
+        ]
+      },
+      "licenseAllowed": true,
+      "originalBytes": 332183,
+      "sha1Verified": true,
+      "originalSize": [
+        1415,
+        946
+      ],
+      "fullCrop": {
+        "file": "sp009_kandidaat3_langeveld_full_crop.jpg",
+        "box": [
+          467,
+          142,
+          920,
+          804
+        ],
+        "note": "uitsnede op oorspronkelijke resolutie, niet verkleind"
+      },
+      "overview": "sp009_kandidaat3_langeveld_overview.jpg"
+    }
+  ]
+}

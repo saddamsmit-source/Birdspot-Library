@@ -10,7 +10,8 @@ from test_pilot_offline_new_sighting import Quiet, Server, boot
 from test_plumage_compare_layout import open_species
 
 NAMES = {"sp002": "Houtduif", "sp003": "Holenduif", "sp004": "Turkse Tortel",
-         "sp005": "Buizerd", "sp006": "Sperwer", "sp007": "Havik"}
+         "sp005": "Buizerd", "sp006": "Sperwer", "sp007": "Havik",
+         "sp008": "Torenvalk", "sp009": "Slechtvalk", "sp016": "Grote Bonte Specht"}
 HEROES = {
     "sp002": ("/assets/species/sp002.webp", "Stephan Sprinz", "CC BY 4.0"),
     "sp003": ("/assets/species/sp003.webp", "Chris Cant from Cumbria, UK", "CC BY 2.0"),
@@ -23,8 +24,12 @@ PRIMARY = {
     "sp005": ["Brede kop die weinig uitsteekt; brede vleugels; vrij korte staart.", "Zweeft met de vleugels in een ondiepe V."],
     "sp006": ["Staart met recht afgesneden hoeken; bij de Havik is de staartpunt afgerond.", "Korte, rechthoekige vleugels en een kleine kop die weinig uitsteekt."],
     "sp007": ["Kop steekt in vlucht ver uit; zware borst.", "Afgeronde staartpunt."],
+    # F3-REV2-R03 (eigenaarbesluit 23-11-2026 22:10): alleen Torenvalk, Slechtvalk, Grote Bonte Specht
+    "sp008": ["Bidt veel: hangt stil in de lucht boven open terrein.", "Lange staart; in zit steekt die ver voorbij de vleugelpunten."],
+    "sp009": ["Zware borst, spitse vleugels met brede basis, vrij korte staart.", "Volwassen licht van onderen en blauwgrijs van boven; jong bruin en gestreept."],
+    "sp016": ["Grote witte schoudervlekken, in vlucht opvallend.", "Rode onderkant."],
 }
-MORE = {"sp002": 2, "sp003": 2, "sp004": 2, "sp005": 3, "sp006": 3, "sp007": 2}
+MORE = {"sp002": 2, "sp003": 2, "sp004": 2, "sp005": 3, "sp006": 3, "sp007": 2, "sp008": 2, "sp009": 1, "sp016": 1}
 
 
 def check_quick(page, species_id):
@@ -100,6 +105,61 @@ def check_havik_r02c(page):
             close_sheet(page)
 
 
+def cmp_card(panel, partner):
+    for d in range(panel.locator("details.sd-cmp-more").count()):
+        panel.locator("details.sd-cmp-more").nth(d).evaluate("el => el.open = true")
+    return panel.locator(".sd-cmp-card").filter(has=page_panel_partner(partner)).first
+
+
+def page_panel_partner(partner):
+    return _PAGE[0].locator(f'.sd-cmp-panel [data-compare-species="{partner}"], .sd-cmp-panel[data-compare-species="{partner}"]')
+
+
+_PAGE = [None]
+
+
+def walk_tabs_keyboard(card, expect_imgs):
+    """F3-REV2-R03b: elk vergelijkingstabblad is met het toetsenbord te kiezen; elk paneel heeft 3 gelabelde rijen."""
+    tabs = card.locator(".sd-cmp-tab")
+    n = max(tabs.count(), 1)
+    seen = []
+    for i in range(n):
+        if tabs.count():
+            tabs.nth(i).focus()
+            tabs.nth(i).press("Enter")
+            expect(tabs.nth(i)).to_have_attribute("aria-selected", "true")
+        visible = card.locator(".sd-cmp-panel:visible")
+        expect(visible).to_have_count(1)
+        expect(visible.locator(".sd-cmp-row b")).to_have_count(3)
+        seen += visible.locator("img").evaluate_all(
+            "imgs => imgs.map(i => new URL(i.currentSrc || i.src).pathname.split('/').pop().replace(/-\\d+w(?=\\.webp$)/, ''))")
+    for img in expect_imgs:
+        assert any(img.split('.')[0] in x for x in seen), (img, seen)
+
+
+def check_r03b(page):
+    """F3-REV2-R03b: nieuwe en uitgebreide vergelijkingen Grote Bonte Specht en Slechtvalk; terug en opnieuw openen."""
+    _PAGE[0] = page
+    for attempt in range(2):
+        open_species(page, NAMES["sp016"], "sp016")
+        panel = page.locator("#sdPanel-herkenning")
+        walk_tabs_keyboard(cmp_card(panel, "sp020"), ["sp016-juv", "sp016-male", "sp020-male", "sp016-flight", "sp020-flight"])
+        walk_tabs_keyboard(cmp_card(panel, "sp017"), ["sp016-hero-male", "sp017", "sp016", "sp017-female"])
+        assert "Grote of middelste bonte specht?" not in panel.locator(".sd-cmp-who").all_inner_texts().__str__()
+        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
+        if attempt == 0:
+            page.go_back()
+            expect(page.locator(".signature-species-detail-overlay")).to_have_count(0)
+        else:
+            close_sheet(page)
+    open_species(page, NAMES["sp009"], "sp009")
+    panel = page.locator("#sdPanel-herkenning")
+    walk_tabs_keyboard(cmp_card(panel, "sp007"), ["sp009-juv", "sp007-juv", "sp009", "sp007-male-flight"])
+    walk_tabs_keyboard(cmp_card(panel, "sp008"), ["sp009-juv", "sp008-juv", "sp009-male-flight", "sp008-male-flight"])
+    assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
+    close_sheet(page)
+
+
 def smoke(page):
     for own, other in (("sp002", "sp003"), ("sp003", "sp002")):
         open_species(page, NAMES[own], own)
@@ -116,7 +176,8 @@ def smoke(page):
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
         close_sheet(page)
     check_havik_r02c(page)
-    for species_id in ("sp004", "sp005", "sp006", "sp007"):
+    check_r03b(page)
+    for species_id in ("sp004", "sp005", "sp006", "sp007", "sp008", "sp009", "sp016"):
         open_species(page, NAMES[species_id], species_id)
         check_quick(page, species_id)
         # De uitgebreide herkenning en kritische verschillen blijven beschikbaar (niets verwijderd).
@@ -149,7 +210,7 @@ def main():
                     page.on("pageerror", lambda error: errors.append(str(error)))
                     boot(page, url)
                     smoke(page)
-                    print(f"F3-REV2 Chromium {width}px: R01b rest pair both directions, no unequal flight pair; max. 3 quick cues on 6 species; R02c Havik flight photo retired (open, back, reopen)")
+                    print(f"F3-REV2 Chromium {width}px: R01b rest pair both directions, no unequal flight pair; max. 3 quick cues on 9 species; R02c Havik flight photo retired (open, back, reopen); R03b GBS/Slechtvalk comparisons by keyboard, back, reopen")
             with browser.new_context(viewport={"width": 390, "height": 844},
                                      is_mobile=True, has_touch=True, reduced_motion="reduce") as context:
                 page = context.new_page()

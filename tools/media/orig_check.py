@@ -112,17 +112,83 @@ def audio_record(e: dict, info: dict | None, norm) -> dict:
 INAT_LICENSES = {"cc0": "CC0", "cc-by": "CC BY 4.0", "cc-by-sa": "CC BY-SA 4.0"}
 
 
+INAT_ROUTES = (  # F3-REV2-R03b: openbare routes in volgorde; de gebruikte route wordt vastgelegd
+    "https://api.inaturalist.org/v1/photos/{id}",
+    "https://api.inaturalist.org/v2/photos/{id}?fields=all",
+    "https://www.inaturalist.org/photos/{id}.json",
+)
+
+
+def _inat_photo(res):
+    """Pak de foto uit een API- of paginaresultaat (v1/v2: results[0]; .json: het object zelf)."""
+    if isinstance(res, dict) and isinstance(res.get("results"), list):
+        return res["results"][0] if res["results"] else None
+    return res if isinstance(res, dict) else None
+
+
 def inat_rights(ci, e: dict) -> dict:
-    """F3-REV2-R02: licentie en naamsvermelding van een iNaturalist-foto via de officiële API (api.inaturalist.org/v1).
-    Alleen CC0 / CC BY / CC BY-SA tellen; NC/ND of onbekend geeft rightsMatch False. Auteur moet in de attributie staan."""
+    """F3-REV2-R02/R03b: licentie en naamsvermelding van een iNaturalist-foto via openbare routes.
+    Alleen CC0 / CC BY / CC BY-SA tellen; NC/ND of onbekend geeft rightsMatch False. Auteur moet in de attributie staan.
+    Waarnemingscontext (plaats, datum, taxon) wordt alleen gelezen, nooit als rechtenbewijs gebruikt."""
+    pid, errors = int(e["inatPhotoId"]), []
+    for route in INAT_ROUTES:
+        url = route.format(id=pid)
+        try:
+            photo = _inat_photo(ci.get(url))
+        except Exception as err:  # route onbereikbaar: volgende proberen, niets claimen
+            errors.append(f"{url.split('?')[0]}: {str(err)[:80]}"); continue
+        if not photo or not (photo.get("license_code") or photo.get("attribution")):
+            errors.append(f"{url.split('?')[0]}: geen licentiegegevens"); continue
+        code, attribution = photo.get("license_code") or "", photo.get("attribution") or ""
+        lic = INAT_LICENSES.get(code)
+        same = bool(lic) and lic == e.get("license") and (e.get("author") or "").casefold() in attribution.casefold()
+        out = {"inat": {"route": url.split("?")[0], "licenseCode": code, "license": lic, "attribution": attribution[:200]}, "rightsMatch": same}
+        obs = [o.get("id") if isinstance(o, dict) else o for o in (photo.get("observations") or photo.get("observation_ids") or [])]
+        if obs and obs[0]:
+            try:
+                o = ci.get(f"https://api.inaturalist.org/v1/observations/{int(obs[0])}")["results"][0]
+                out["inat"]["observation"] = {"id": o.get("id"), "placeGuess": o.get("place_guess"), "observedOn": o.get("observed_on"),
+                                              "taxon": (o.get("taxon") or {}).get("name"), "qualityGrade": o.get("quality_grade")}
+            except Exception as err:
+                out["inat"]["observationError"] = str(err)[:120]
+        if errors:
+            out["inat"]["triedFirst"] = errors
+        return out
+    return {"inat": {"error": "; ".join(errors)[:300]}, "rightsMatch": None}
+
+
+def full_crop(ci, info: dict, crop, out: Path, stem: str) -> dict:
+    """F3-REV2-R03c: origineel downloaden (SHA-1 tegen Commons), een uitsnede op volle resolutie en een overzicht
+    opslaan voor visuele beoordeling. Alleen reviewmateriaal: niets wordt in de app gezet."""
+    import hashlib
+    from PIL import Image, ImageOps
+    data = ci.get(info["url"], binary=True)
+    rec = {"originalBytes": len(data), "sha1Verified": hashlib.sha1(data).hexdigest() == info.get("sha1")}
+    img = ImageOps.exif_transpose(Image.open(io.BytesIO(data))).convert("RGB")
+    rec["originalSize"] = [img.width, img.height]
+    box = ci.crop_box(img.size, crop) if crop else None
+    if box:
+        img.crop(box).save(out / f"{stem}_full_crop.jpg", quality=92)
+        rec["fullCrop"] = {"file": f"{stem}_full_crop.jpg", "box": list(box), "note": "uitsnede op oorspronkelijke resolutie, niet verkleind"}
+    ov = img.copy(); ov.thumbnail((1400, 1400)); ov.save(out / f"{stem}_overview.jpg", quality=85)
+    rec["overview"] = f"{stem}_overview.jpg"
+    return rec
+
+
+def candidate_record(ci, e: dict, info: dict | None, out: Path) -> dict:
+    """F3-REV2-R03c: kandidaat zonder lokaal bestand - bronpagina-metadata en origineel op volle resolutie."""
+    rec = {k: e.get(k) for k in ("id", "speciesId", "title", "proposedRole")}
+    rec["kind"] = "candidate"
+    if not info:
+        rec["error"] = "niet gevonden op Commons"; return rec
+    rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "licenseUrl", "author", "credit", "width", "height", "creditFields", "pageParams")}
+    rec["commonsContext"] = {k: info.get(k) for k in ("description", "date", "categories")}
+    rec["licenseAllowed"] = ci.license_ok(info.get("license", ""))
     try:
-        res = ci.get(f"https://api.inaturalist.org/v1/photos/{int(e['inatPhotoId'])}")["results"][0]
-    except Exception as err:  # API onbereikbaar: niets claimen
-        return {"inat": {"error": str(err)[:160]}, "rightsMatch": None}
-    code, attribution = res.get("license_code") or "", res.get("attribution") or ""
-    lic = INAT_LICENSES.get(code)
-    same = bool(lic) and lic == e.get("license") and (e.get("author") or "").casefold() in attribution.casefold()
-    return {"inat": {"licenseCode": code, "license": lic, "attribution": attribution[:200]}, "rightsMatch": same}
+        rec.update(full_crop(ci, info, e.get("fullCrop"), out, e["id"]))
+    except Exception as err:
+        rec["error"] = str(err)[:200]
+    return rec
 
 
 def run(manifest: Path, out: Path) -> None:
@@ -139,6 +205,9 @@ def run(manifest: Path, out: Path) -> None:
     for e in spec["items"]:
         if e.get("kind") == "audio":
             report["items"].append(audio_record(e, infos.get(e["title"]), ci.norm_name))
+            continue
+        if e.get("kind") == "candidate":
+            report["items"].append(candidate_record(ci, e, infos.get(e["title"]), out))
             continue
         rec = {k: e.get(k) for k in ("speciesId", "image", "title", "author", "license")}
         local = Image.open(ROOT / e["image"].lstrip("/"))
@@ -178,6 +247,8 @@ def run(manifest: Path, out: Path) -> None:
             sheet = Image.new("RGB", (a.width + b.width + 8, max(a.height, b.height)), "white")
             sheet.paste(a, (0, 0)); sheet.paste(b, (a.width + 8, 0)); sheet.save(out / name, quality=82)
             rec["sideBySide"] = name
+            if e.get("fullCrop") and e.get("title"):
+                rec.update(full_crop(ci, infos[e["title"]], e["fullCrop"], out, Path(e["image"]).stem))
         except Exception as err:
             rec["error"] = str(err)[:200]
         report["items"].append(rec)

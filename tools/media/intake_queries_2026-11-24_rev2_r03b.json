@@ -1,0 +1,115 @@
+{
+  "purpose": "F3-REV2-R03b eigenaarbesluit B 24-11-2026: gericht onderzoek Europese Slechtvalk-referenties (volwassen, juveniel, vlucht) en betere vluchtfoto Grote Bonte Specht; KANDIDATEN, geen import",
+  "queries": [
+    {
+      "id": "sp009_eu_adult_a",
+      "speciesId": "sp009",
+      "role": "adult",
+      "kind": "image",
+      "search": "incategory:\"Falco peregrinus peregrinus\"",
+      "limit": 50,
+      "keep": 14,
+      "thumb": 800
+    },
+    {
+      "id": "sp009_eu_adult_b",
+      "speciesId": "sp009",
+      "role": "adult",
+      "kind": "image",
+      "search": "Wanderfalke",
+      "limit": 40,
+      "keep": 12,
+      "thumb": 800
+    },
+    {
+      "id": "sp009_eu_adult_c",
+      "speciesId": "sp009",
+      "role": "adult",
+      "kind": "image",
+      "search": "Falco peregrinus Netherlands",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    },
+    {
+      "id": "sp009_eu_adult_d",
+      "speciesId": "sp009",
+      "role": "adult",
+      "kind": "image",
+      "search": "Faucon pèlerin",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    },
+    {
+      "id": "sp009_eu_juv_a",
+      "speciesId": "sp009",
+      "role": "juv",
+      "kind": "image",
+      "search": "Falco peregrinus juvenile Germany",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    },
+    {
+      "id": "sp009_eu_juv_b",
+      "speciesId": "sp009",
+      "role": "juv",
+      "kind": "image",
+      "search": "Wanderfalke juvenil",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    },
+    {
+      "id": "sp009_eu_juv_c",
+      "speciesId": "sp009",
+      "role": "juv",
+      "kind": "image",
+      "search": "Falco peregrinus juvenile England",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    },
+    {
+      "id": "sp009_eu_flight_a",
+      "speciesId": "sp009",
+      "role": "flight",
+      "kind": "image",
+      "search": "Wanderfalke Flug",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    },
+    {
+      "id": "sp009_eu_flight_b",
+      "speciesId": "sp009",
+      "role": "flight",
+      "kind": "image",
+      "search": "Falco peregrinus peregrinus flight",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    },
+    {
+      "id": "sp016_flight_a",
+      "speciesId": "sp016",
+      "role": "flight",
+      "kind": "image",
+      "search": "Dendrocopos major flight",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    },
+    {
+      "id": "sp016_flight_b",
+      "speciesId": "sp016",
+      "role": "flight",
+      "kind": "image",
+      "search": "Buntspecht Flug",
+      "limit": 30,
+      "keep": 10,
+      "thumb": 800
+    }
+  ]
+}

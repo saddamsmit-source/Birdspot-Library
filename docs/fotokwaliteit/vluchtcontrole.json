@@ -2056,15 +2056,26 @@
    "registry": "GUIDE_POSES[0]",
    "sexLabel": null,
    "class": "vlucht",
-   "quality": "goed",
-   "decision": "goedgekeurd",
+   "quality": "beperkte scherpte",
+   "decision": "voorwaardelijk",
    "target": null,
    "newLabel": null,
    "newNote": null,
-   "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+   "reason": "Eigenaarbesluit R03b-QA 24-11-2026 09:53 (F3-REV2-R03c): vrije vlucht; kop, rode nekvlek, witte schoudervlek en rode onderstaart scherp op het origineel (3389×2259), vleugel grotendeels bewegingsonscherp. Voorlopig behouden vanwege herkenningswaarde.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0",
+   "replacement": "gewenst",
+   "history": [
+    {
+     "class": "vlucht",
+     "quality": "goed",
+     "decision": "goedgekeurd",
+     "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+     "date": "2026-11-10",
+     "round": "vluchtcontrole ronde 1"
+    }
+   ]
   },
   "/assets/species/plumage/sp017-flight.webp": {
    "n": 112,

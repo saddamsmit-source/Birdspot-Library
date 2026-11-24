@@ -7042,7 +7042,7 @@
       {
         "label": "In vlucht",
         "flight": true,
-        "note": "De witte schoudervlek is ook met uitgespreide vleugels goed zichtbaar.",
+        "note": "Voorlopige foto: beperkte scherpte. Kop, rode nekvlek, grote witte schoudervlek en rode onderstaart zijn scherp; de vleugel is door de beweging grotendeels onscherp.",
         "file": "Dendrocopos major (51546452028).jpg",
         "nl": "Grote Bonte Specht",
         "latin": "Dendrocopos major",
@@ -7051,15 +7051,16 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg",
         "showSourceLink": false,
-        "alt": "Grote Bonte Specht in vlucht met een grote witte schoudervlek, witte vleugelstippen en voedsel in de snavel.",
+        "alt": "Grote Bonte Specht in vlucht met voedsel in de snavel; kop, rode nekvlek, witte schoudervlek en rode onderstaart scherp, vleugel bewegingsonscherp.",
         "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-07",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
-        "visualCheck": "Grote Bonte Specht in vlucht met een grote witte schoudervlek, witte vleugelstippen en voedsel in de snavel.",
+        "visualCheck": "Origineel 3389×2259 op volle resolutie bekeken (24-11-2026): kop met rode nekvlek, witte schoudervlek, rug en rode onderstaart scherp; witte vleugelvlekken zichtbaar maar de vleugel (vooral slagpennen) grotendeels bewegingsonscherp.",
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp016-flight.webp",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+        "flightReview": "voorwaardelijk 2026-11-24: Eigenaarbesluit R03b-QA 24-11-2026 09:53 (F3-REV2-R03c). Vrije vlucht bevestigd; kop, nekvlek, schoudervlek en onderstaart scherp, vleugel grotendeels bewegingsonscherp. Voorlopig behouden vanwege herkenningswaarde; scherpere vluchtfoto gewenst.",
+        "reviewHistory": [{"date": "2026-11-10", "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.", "note": "De witte schoudervlek is ook met uitgespreide vleugels goed zichtbaar.", "alt": "Grote Bonte Specht in vlucht met een grote witte schoudervlek, witte vleugelstippen en voedsel in de snavel.", "visualCheck": "Grote Bonte Specht in vlucht met een grote witte schoudervlek, witte vleugelstippen en voedsel in de snavel.", "correctedOn": "2026-11-24", "reason": "Eigenaarbesluit R03b-QA 24-11-2026 09:53 (F3-REV2-R03c): totale beeldkwaliteit was te stellig beoordeeld"}]
       },
       {
         "label": "Mannetje",

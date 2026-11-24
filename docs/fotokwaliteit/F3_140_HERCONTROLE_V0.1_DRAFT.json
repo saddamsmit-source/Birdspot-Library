@@ -1777,7 +1777,9 @@
               "rightsREV2": "PARTIALLY TESTED - uitsnede visueel bevestigd door Claude in sp007-male-flight_vs_source.jpg (automatische r=0.824) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
               "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
               "comparisonUse": "F3-REV2-R02b: dragende vluchtvergelijkingsfoto met Sperwer en Torenvalk",
-              "openRights": "Licentie/naamsvermelding iNaturalist-foto 29451692 niet herbevestigd (iNaturalist-API 404 op 23-11); registerwaarde CC BY 4.0 Вячеслав Юсупов; zelfde opname visueel bevestigd"
+              "openRights": "Licentie/naamsvermelding iNaturalist-foto 29451692 niet herbevestigd (iNaturalist-API 404 op 23-11); registerwaarde CC BY 4.0 Вячеслав Юсупов; zelfde opname visueel bevestigd",
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED.",
+              "rightsR03c": "PARTIALLY TESTED (R03c, één gecontroleerde heruitvoering): media-intake-run 45360468665 (head 37b7fae, ffmpeg-stap overgeslagen). Origineel bereikbaar via https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg en uitsnede, visueel eerder bevestigd (automatische r=0.824, modus crop). Licentie/attributie: alle openbare routes gaven 404 (https://api.inaturalist.org/v1/photos/29451692: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/29451692: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/29451692.json: HTTP Error 404: Not Found). Geen licentiecode, attributie, waarneming, plaats of taxon verkregen; registerwaarde blijft, geen VERIFIED. Geen verdere retries (eigenaarregel). docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json"
             },
             {
               "role": "In vlucht (Vrouwtje)",
@@ -1954,7 +1956,52 @@
           },
           "resolvedInR02c": [
             "G9b algemene vluchtfoto uit de zichtbare gids (eigenaarbesluit 23-11-2026 22:10)"
-          ]
+          ],
+          "g8R03d": {
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
+            "run": "media-intake-run 45360468665 (head 37b7fae, geslaagd, ffmpeg overgeslagen)",
+            "evidence": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json",
+            "decision": "Geen nieuwe automatische iNaturalist-aanroepen (eigenaar). Een beschikbare afbeelding, eerdere registratie of werkende download is geen bewijs van herpublicatierechten. Nieuwe eigenaarbeslissing nodig bij een betrouwbare handmatige bron of een afzonderlijk goedgekeurde vervangingsfoto.",
+            "photos": [
+              {
+                "speciesId": "sp007",
+                "path": "/assets/species/plumage/sp007-male-flight.webp",
+                "inatPhotoId": null,
+                "registeredClaim": {
+                  "author": "Вячеслав Юсупов",
+                  "license": "CC BY 4.0",
+                  "source": "https://www.inaturalist.org/photos/29451692",
+                  "file": "iNaturalist photo 29451692"
+                },
+                "originalReachable": {
+                  "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg",
+                  "sourceSize": [
+                    2048,
+                    1365
+                  ],
+                  "localSize": [
+                    922,
+                    792
+                  ],
+                  "mode": "crop",
+                  "r": 0.824,
+                  "sameShotAutomatic": false,
+                  "identity": "uitsnede; eerder visueel bevestigd als zelfde opname (R02/R03)"
+                },
+                "routes404": "https://api.inaturalist.org/v1/photos/29451692: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/29451692: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/29451692.json: HTTP Error 404: Not Found",
+                "missing": [
+                  "licentiecode",
+                  "attributie/naamsvermelding zoals op iNaturalist",
+                  "waarneming-ID",
+                  "plaats",
+                  "datum",
+                  "taxon/kwaliteitsgraad"
+                ],
+                "status": "PARTIALLY TESTED - foto-identiteit bevestigd, herpublicatierechten NIET bevestigd"
+              }
+            ]
+          }
         }
       }
     },
@@ -2075,7 +2122,268 @@
             "minimumNormalizedCorrelation": 0.9992
           }
         ],
-        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated field, offline and release QA. Local targeted guide and credit regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R03",
+          "date": "2026-11-23",
+          "base": "ad514b0f298a9143586311a9c079bc26370b71aa",
+          "pr": 353,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED (R03b) / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R03_VALKEN_SPECHT_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/plumage/sp008-hero-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File%3AFalco_tinnunculus_WE_Faucons_LPO_20260621_n06.jpg",
+              "author": "Marie-Lan Taÿ Pamart",
+              "license": "CC BY 4.0",
+              "visual": "Volwassen mannetje op lantaarnboog; grijze kop, roodbruine gevlekte rug, grijze staart met zwarte eindband; scherp.",
+              "identity": "VERIFIED (visueel; Commons-categorie Falco tinnunculus (male), Frankrijk 2026)",
+              "quality": "VERIFIED - zeer goede hoofdfoto",
+              "roleCheck": "VERIFIED - Hoofdfoto (mannetje)",
+              "blobSha": "8f9a29629259680f2ffbde8f91f962d5ec15349f",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 9041286b8d585208dbab30655cacb41c59babd1a, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "9041286b8d585208dbab30655cacb41c59babd1a",
+              "provenance": {
+                "description": "Male Common Kestrel ( Falco tinnunculus ) on a lampstand along the Château de Vincennes, in France",
+                "date": "2026-06-21 11:03:37",
+                "categories": [
+                  "Falco tinnunculus (male)",
+                  "Falco tinnunculus at Château de Vincennes"
+                ]
+              }
+            },
+            {
+              "role": "Mannetje",
+              "path": "/assets/species/sp008.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Common_kestrel_on_a_tree_in_Krak%C3%B3w,_20250412_1052_3641.jpg",
+              "author": "Jakub Hałun",
+              "license": "CC BY 4.0",
+              "visual": "Mannetje op afgezaagde boom; grijze kop met snorstreep, roodbruine rug met zwarte vlekken, grijze staart; scherp.",
+              "identity": "VERIFIED (visueel; Commons-categorie male, Polen 2025)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Mannetje",
+              "blobSha": "a936a1b0759a9a7f460493e25bd57a8d349e64fb",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 4f2c9f73afec173517ccb75e87874c2920534b82, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "4f2c9f73afec173517ccb75e87874c2920534b82",
+              "provenance": {
+                "description": "Male common kestrel on top of a trimmed tree in Kraków",
+                "date": "2025-04-12 10:52:33",
+                "categories": [
+                  "Birds of Kraków",
+                  "Falco tinnunculus (male)",
+                  "Falco tinnunculus in Poland"
+                ]
+              }
+            },
+            {
+              "role": "Vrouwtje",
+              "path": "/assets/species/plumage/sp008-adult_f.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Common_kestrel_female_France.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Vrouwtje op tak; bruine kop en rug met dwarsbanden, gebandeerde bruine staart.",
+              "identity": "VERIFIED (visueel; Commons-categorie female, Frankrijk 2022)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Vrouwtje",
+              "blobSha": "73a315be07ede115eda952812809e1c0693e8bca",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 e493594dc9c77ae4278ed251891c5fb16461361f, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "e493594dc9c77ae4278ed251891c5fb16461361f",
+              "provenance": {
+                "description": "A female common kestrel ( Falco tinnunculus ) perched on a tree. Picture taken in Franconville, France.",
+                "date": "2022-01-16 14:57:18",
+                "categories": [
+                  "Aves in left lateral aspect",
+                  "Falco tinnunculus (female)",
+                  "Falco tinnunculus in France",
+                  "Nature of Franconville (Val-d'Oise)"
+                ]
+              }
+            },
+            {
+              "role": "Juveniel",
+              "path": "/assets/species/plumage/sp008-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Kestrel_-_Falco_tinnunculus_-_Juvenile.jpg",
+              "author": "caroline legg",
+              "license": "CC BY 4.0",
+              "visual": "Jonge vogel op tak; bruine kop, zwaar gevlekte borst, gebandeerde rug; vers kleed.",
+              "identity": "VERIFIED (soort visueel; leeftijd volgens Commons-categorie juvenile, Schotland juni 2026)",
+              "quality": "VERIFIED - scherp, goed",
+              "roleCheck": "PARTIALLY TESTED - juveniel volgens bron; visueel passend, leeftijdskenmerk (lichte toppen binnenste slagpennen) niet zichtbaar",
+              "blobSha": "9cb373617c00b552d782d314b6212a06dbb01e31",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 15f8a1be3c28e4b0b56afce74f192e9b260128c3, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "15f8a1be3c28e4b0b56afce74f192e9b260128c3",
+              "provenance": {
+                "description": "Kestrel",
+                "date": "Taken on 10 June 2026, 15:07:19",
+                "categories": [
+                  "Birds of Dumfries and Galloway",
+                  "Falco tinnunculus (juvenile)",
+                  "Falco tinnunculus in Scotland",
+                  "June 2026 in Dumfries and Galloway"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Mannetje)",
+              "path": "/assets/species/plumage/sp008-male-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_kestrel_20.jpg",
+              "author": "Zeynel Cebeci",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vrije vlucht schuin van voren/onder; grijze staart met brede zwarte eindband zonder dwarsbanden, gevlekte ondervleugel; kop niet duidelijk grijs.",
+              "identity": "VERIFIED (soort visueel; Commons male, Turkije 2020)",
+              "quality": "VERIFIED - goed bruikbaar",
+              "roleCheck": "PARTIALLY TESTED - mannetje volgens bron; staart past, kopkleur niet beoordeelbaar",
+              "blobSha": "a43a30f212b9edcb0fe0f6ab28b26cffe354ad91",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 0801e85f403acc625b2819c147b84cdeb1856d43, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "0801e85f403acc625b2819c147b84cdeb1856d43",
+              "provenance": {
+                "description": "A male common kestrel ( Falco tinnunculus ) in flight. Seyhan - Adana, Turkey.",
+                "date": "2020-04-06 19:34:57",
+                "categories": [
+                  "Birds of Adana Province",
+                  "Falco tinnunculus (male)",
+                  "Falco tinnunculus in flight"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (biddend)",
+              "path": "/assets/species/plumage/sp008-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_in_flight_(45067938032).jpg",
+              "author": "Rolf Dietrich Brecher",
+              "license": "CC BY 2.0",
+              "visual": "Biddende/remmende bruine vogel met gespreide gebandeerde staart tegen blauwe lucht; geslacht en leeftijd niet vast te stellen.",
+              "identity": "VERIFIED (soort visueel; herkomst niet vastgesteld)",
+              "quality": "VERIFIED - goed bruikbaar",
+              "roleCheck": "VERIFIED - neutraal label \"In vlucht · biddend\", geen geslacht/leeftijd geclaimd",
+              "blobSha": "e056d206163a5ef28548181ceb5023a8b64caaf1",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (flickr-location-suffix), origineel SHA-1 3658708d402f22a16afe729b4e05da9d997b7962, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "3658708d402f22a16afe729b4e05da9d997b7962",
+              "provenance": {
+                "description": "P1091207-001",
+                "date": "2018-10-05 12:59",
+                "categories": [
+                  "Falco tinnunculus in flight"
+                ]
+              }
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_TOREN).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - quickPrimary [bidden, lange staart] onder het doorslaggevende geslachtskenmerk; man/vrouw-kenmerken onder Meer kenmerken (niets verwijderd). \"Let op\" zegt dat het jeugdkleed in de bron niet beschreven is, terwijl de kaart een juveniel toont en de leeftijdsdetail het jeugdkleed beschrijft (tegenstrijdig)",
+            "herkenning": "PARTIALLY TESTED - verenkleed man/vrouw/juveniel consistent met foto's; brontekst VB niet herlezen",
+            "lijktOp": "PARTIALLY TESTED - fotoparen met Slechtvalk (juveniel, vlucht), Sperwer (juveniel, vlucht, gelabelde rijen) en Havik (vlucht, gelabelde rijen); Slechtvalk-paren zonder gelabelde rijen; Boomvalk en Smelleken alleen tekst (geen gidsfoto's); kritische kaarten 2 (geslacht; silhouet vs. Boomvalk/Smelleken), geen kritische kaart vs. Sperwer of Slechtvalk R03b: zie resolvedInR03b."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp008<->sp006 Torenvalk-Sperwer",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - juveniel rust gelijkwaardig; vlucht Torenvalk onbepaald tegen Sperwer-mannetje",
+              "diagnosticText": "PARTIALLY TESTED - rijen borst/vleugels/jachtwijze en kop-vleugels/staart/vliegstijl; geen kritische kaart in de Torenvalk-kaart"
+            },
+            {
+              "pair": "sp008<->sp009 Torenvalk-Slechtvalk",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - juveniel en volwassen vlucht aanwezig; Slechtvalk-juveniel donker Noord-Amerikaans type",
+              "diagnosticText": "PARTIALLY TESTED - vrije tekst zonder gelabelde rijen; \"slanker gebouwd, met spitse vleugels\" tegen \"spitse vleugels met brede basis\" onderscheidt zwak"
+            },
+            {
+              "pair": "sp008<->sp007 Torenvalk-Havik (vlucht)",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - Torenvalk onbepaald tegen bewezen Havik-mannetje",
+              "diagnosticText": "VERIFIED - rijen kop en vleugels/staart/vliegstijl"
+            },
+            {
+              "pair": "sp008<->sp261/sp260 Boomvalk, Smelleken",
+              "bothDirections": "NOT TESTED (geen kaartinhoud/foto's voor sp260/sp261)",
+              "photoEquivalence": "BLOCKED - geen gidsfoto's van Boomvalk en Smelleken",
+              "diagnosticText": "PARTIALLY TESTED - kritische kaart silhouet en jachtgedrag"
+            }
+          ],
+          "lookalikeRegister": "LK-098 (Sperwer), LK-100 (Slechtvalk), LK-103 (Boomvalk), LK-104 (Smelleken) in SOORTVERWARRING_REGISTER (F3-REV2-R03)",
+          "audio": {
+            "status": "PARTIALLY TESTED - lokale clips aanwezig, rechten via Commons gecontroleerd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp008-pair.mp3",
+                "label": "Roep · man en vrouw",
+                "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_Kestrel_XC463430.mp3",
+                "author": "Javier Herrera",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 b993aaadf34989397122b4f804b8e4565bd64e00",
+                "status": "PARTIALLY TESTED - bestand aanwezig (30.9 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp008-male-call.mp3",
+                "label": "Roep · volwassen man",
+                "source": "https://commons.wikimedia.org/wiki/File:Falco_tinnunculus_-_Common_Kestrel_XC589714.mp3",
+                "author": "Pascal Christe",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 27c6dff9f7c5ca314b8f50c7ac5cbacd5d39d5bb",
+                "status": "PARTIALLY TESTED - bestand aanwezig (6.8 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern",
+          "quickPrimary": "VERIFIED (code/render) - quickPrimary [0,1] volgens eigenaarbesluit 23-11-2026 22:10 (alleen R03-soorten)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
+            "G5 Audio niet menselijk beluisterd",
+            "G6 Boomvalk/Smelleken alleen tekst (geen gidsfoto's)",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit B F3-REV2-R03b (chat 24-11-2026 07:39 CET) voor sp008, sp009, sp016; uitgevoerd in PR #353",
+            "executionStatus": "UITGEVOERD (R03b) - open punten blijven",
+            "remainingOpen": [
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED (hostprompt 24-11 07:45 onbeantwoord)",
+              "Audio PARTIALLY TESTED (niet menselijk beluisterd)",
+              "Boomvalk en Smelleken zonder gidsfoto: alleen tekst",
+              "Volwassen rustpaar Torenvalk-Sperwer ontbreekt (geen gelijkwaardige foto's gekozen)",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; geen nieuwe optie C; geen start R04; ANWB/Vogelbescherming/audio-grenzen blijven"
+          },
+          "fullPass": false,
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "resolvedInR03b": [
+            "G3 \"Let op\" herschreven: jonge vogels lijken sterk op volwassen vrouwtjes; leeftijdskenmerken en onzekerheid behouden (VB_TOREN, BZ_TOREN)",
+            "G4 kritische kaarten vs. Sperwer (jachtwijze, vleugels, borsttekening) en vs. Slechtvalk (bouw, kop, staart); Boomvalk/Smelleken-kaart aangevuld (broekveren, blauwgrijze rug mannetje Smelleken)",
+            "G4 gelabelde rijen op Torenvalk-Slechtvalk vlucht (bouw en staart, kop, jachtwijze) en juveniel (kop, bovenzijde, bouw en staart)",
+            "Lijkt-op-teksten Sperwer/Slechtvalk inhoudelijk i.p.v. \"door de bron genoemd\""
+          ],
+          "repair": {
+            "round": "F3-REV2-R03b",
+            "date": "2026-11-24",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r03.mjs",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
+        }
       }
     },
     {
@@ -2231,7 +2539,474 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R03",
+          "date": "2026-11-23",
+          "base": "ad514b0f298a9143586311a9c079bc26370b71aa",
+          "pr": 353,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED (R03b) / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R03_VALKEN_SPECHT_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/plumage/sp009-male-rest.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(male)_cropped.jpg",
+              "author": "Sumeet Moghe",
+              "license": "CC BY-SA 4.0",
+              "visual": "Volwassen in zit op de grond; zwarte kopkap, brede baardstreep, dwarsbanden op de flanken; scherp.",
+              "identity": "VERIFIED (soort visueel; herkomst Rann of Kutch, India 2020 - overwinteraar, ondersoort niet vermeld)",
+              "quality": "VERIFIED - zeer goed",
+              "roleCheck": "VERIFIED - Hoofdfoto volwassen; kaart claimt geen geslacht",
+              "blobSha": "a8576c0ad6cb519e1afd685b935c63145e02e7cc",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 5f03de1c486ce82c41b79314e903c4fd6c2fd390, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "5f03de1c486ce82c41b79314e903c4fd6c2fd390",
+              "provenance": {
+                "description": "Peregrine Falcon (male) at Rann of Kutch",
+                "date": "2020-03-10 09:02:42",
+                "categories": [
+                  "Birds of the Rann of Kutch",
+                  "Falco peregrinus in India"
+                ]
+              }
+            },
+            {
+              "role": "Juveniel",
+              "path": "/assets/species/plumage/sp009-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:PeregrineFalconperched.jpg",
+              "author": "Teddy Llovet",
+              "license": "CC BY 2.0",
+              "visual": "Jonge vogel op rots; zeer donkerbruin met zware lengtestrepen en donkere kop.",
+              "identity": "VERIFIED (soort visueel; juvenile volgens Commons, Morro Rock Californie 2007)",
+              "quality": "PARTIALLY TESTED - scherp, maar donker Noord-Amerikaans type; minder representatief voor jonge Slechtvalken in Nederland",
+              "roleCheck": "VERIFIED - Juveniel",
+              "blobSha": "9520672365ffb96f331440fd933da9e2840292b8",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 a0591ff540c28641abaa343d0e1a9546c506c9c0, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "a0591ff540c28641abaa343d0e1a9546c506c9c0",
+              "provenance": {
+                "description": "Morro Rock",
+                "date": "2007-06-16 09:44",
+                "categories": [
+                  "Falco peregrinus (juvenile)"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Volwassen)",
+              "path": "/assets/showcase/sp009.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
+              "author": "john581",
+              "license": "CC BY 2.0",
+              "visual": "Volwassen in vlucht van opzij; baardstreep, fijne dwarsbanden op de onderzijde, spitse vleugels.",
+              "identity": "VERIFIED (soort visueel; herkomst niet vastgesteld)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - In vlucht (Volwassen)",
+              "blobSha": "c6674f5dc4317784a7aa57979d3b4f2c2b0bcb11",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 cbdcd25f769e5675e356c702a8b78784ac1ea6eb, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "cbdcd25f769e5675e356c702a8b78784ac1ea6eb",
+              "provenance": {
+                "description": "Birds",
+                "date": "2012-10-07 22:22",
+                "categories": [
+                  "Falco peregrinus in flight"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Volwassen)",
+              "path": "/assets/species/plumage/sp009-male-flight.webp",
+              "source": "https://www.inaturalist.org/photos/9819028",
+              "author": "Jonathan Tollin",
+              "license": "CC BY 4.0",
+              "visual": "Volwassen van onderen; kopkap, dwarsgebandeerde onderzijde, gespreide staart.",
+              "identity": "VERIFIED (soort visueel; herkomst niet vastgesteld)",
+              "quality": "VERIFIED - goed bruikbaar",
+              "roleCheck": "VERIFIED - In vlucht (Volwassen); geen geslacht getoond",
+              "blobSha": "4783c810bae514019186dcccfc1e9a764a84bbc3",
+              "rightsREV2": "PARTIALLY TESTED - uitsnede visueel bevestigd door Claude in sp009-male-flight_vs_source.jpg (automatische r=0.659) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "openRights": "Licentie/naamsvermelding iNaturalist-foto niet herbevestigd (API 404 op 23-11-2026)",
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED.",
+              "rightsR03c": "PARTIALLY TESTED (R03c, één gecontroleerde heruitvoering): media-intake-run 45360468665 (head 37b7fae, ffmpeg-stap overgeslagen). Origineel bereikbaar via https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg en uitsnede, visueel eerder bevestigd (automatische r=0.659, modus full). Licentie/attributie: alle openbare routes gaven 404 (https://api.inaturalist.org/v1/photos/9819028: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/9819028: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/9819028.json: HTTP Error 404: Not Found). Geen licentiecode, attributie, waarneming, plaats of taxon verkregen; registerwaarde blijft, geen VERIFIED. Geen verdere retries (eigenaarregel). docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json"
+            },
+            {
+              "role": "Overige herkenningsfoto's (Volwassen in rust)",
+              "path": "/assets/species/plumage/sp009-perched.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Peregrine_falcon_portrait.jpg",
+              "author": "Dhairya dixit",
+              "license": "CC BY-SA 4.0",
+              "visual": "Volwassen van voren; kopkap, baardstreep, dwarsbanden; lichte borst.",
+              "identity": "VERIFIED (soort visueel; Commons: ondersoort calidus, volwassen vrouwtje, Gujarat India 2018)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Overige herkenningsfoto; ondersoort en herkomst in bijschrift",
+              "blobSha": "4fa140112b2a9d5117d8734259fbb73cfede57bd",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 8de343eacfe4acaf22e0b8eee3c11b1303deb6a5, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "8de343eacfe4acaf22e0b8eee3c11b1303deb6a5",
+              "provenance": {
+                "description": "It's a Peregrine Falcon Falco peregrinus calidus , wintering in Gujarat, India. It's an adult female wintering at same place for nearly 4 years.",
+                "date": "2018-10-17",
+                "categories": [
+                  "Birds of the Rann of Kutch",
+                  "Falco peregrinus"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Juveniel)",
+              "path": "/assets/species/plumage/sp009-juv-flight.webp",
+              "source": "https://www.inaturalist.org/photos/251479995",
+              "author": "Josh Boe",
+              "license": "CC BY 4.0",
+              "visual": "Jonge vogel in vlucht van opzij; bruine bovenzijde, lengtestrepen op lichte onderzijde, baardstreep.",
+              "identity": "VERIFIED (soort visueel; herkomst niet vastgesteld)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Juveniel in vlucht",
+              "blobSha": "24e0053e70e7843eb74fd96c4fbd98d651e13ac6",
+              "rightsREV2": "PARTIALLY TESTED - zelfde opname automatisch (r=1.0) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "openRights": "Licentie/naamsvermelding iNaturalist-foto niet herbevestigd (API 404 op 23-11-2026)",
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED.",
+              "rightsR03c": "PARTIALLY TESTED (R03c, één gecontroleerde heruitvoering): media-intake-run 45360468665 (head 37b7fae, ffmpeg-stap overgeslagen). Origineel bereikbaar via https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg en zelfde opname (r=1.0). Licentie/attributie: alle openbare routes gaven 404 (https://api.inaturalist.org/v1/photos/251479995: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/251479995: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/251479995.json: HTTP Error 404: Not Found). Geen licentiecode, attributie, waarneming, plaats of taxon verkregen; registerwaarde blijft, geen VERIFIED. Geen verdere retries (eigenaarregel). docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_SLECHT).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - quickPrimary [bouw/vleugels/staart, kleed volwassen/jong] onder kritisch kenmerk bouw en kopkap; kopkap-kenmerk onder Meer kenmerken (zelfde inhoud staat in de kritische kaart)",
+            "herkenning": "PARTIALLY TESTED - volwassen/juveniel consistent met foto's; geslacht terecht niet gelabeld; brontekst VB niet herlezen",
+            "lijktOp": "PARTIALLY TESTED - fotoparen met Torenvalk (juveniel, vlucht; vrije tekst) en Havik (juveniel, gelabelde rijen); geen volwassen paar met Havik; Boomvalk en Smelleken alleen tekst; 1 kritische kaart (vs. Boomvalk); geen kritische kaart vs. Havik, Torenvalk of Smelleken R03b: zie resolvedInR03b."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp009<->sp007 Slechtvalk-Havik",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - juveniel rust; Slechtvalk-juveniel donker Noord-Amerikaans type; geen volwassen paar",
+              "diagnosticText": "PARTIALLY TESTED - rijen kop/vleugels en staart/valkuil; geen kritische kaart in de Slechtvalk-kaart"
+            },
+            {
+              "pair": "sp009<->sp008 Slechtvalk-Torenvalk",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - zie sp008",
+              "diagnosticText": "PARTIALLY TESTED - zie sp008"
+            },
+            {
+              "pair": "sp009<->sp261/sp260 Boomvalk, Smelleken",
+              "bothDirections": "NOT TESTED (geen kaartinhoud/foto's voor sp260/sp261)",
+              "photoEquivalence": "BLOCKED - geen gidsfoto's van Boomvalk en Smelleken",
+              "diagnosticText": "PARTIALLY TESTED - kritische kaart bouw en kopkap (Boomvalk); Smelleken alleen in similar-tekst"
+            }
+          ],
+          "lookalikeRegister": "LK-099 (Havik), LK-100 (Torenvalk), LK-105 (Boomvalk) in SOORTVERWARRING_REGISTER (F3-REV2-R03)",
+          "audio": {
+            "status": "PARTIALLY TESTED - lokale clips aanwezig, rechten via Commons gecontroleerd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp009-call.mp3",
+                "label": "Roep",
+                "source": "https://commons.wikimedia.org/wiki/File:Halcón_peregrino.ogg",
+                "author": "Sternanita3",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 8cb19334d49f0defe4d2e335fb2adf5a273598be",
+                "status": "PARTIALLY TESTED - bestand aanwezig (14.8 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern (behalve bestaande ondersoort-/herkomstvermelding Slechtvalk calidus, geen persoonsgegevens)",
+          "quickPrimary": "VERIFIED (code/render) - quickPrimary [1,2] volgens eigenaarbesluit 23-11-2026 22:10 (alleen R03-soorten)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
+            "G7 Alle zes foto's niet-Europees of herkomst onbekend (India 2x, Californie, VS/onbekend 3x); juveniel donker Noord-Amerikaans type",
+            "G8 Twee iNaturalist-licenties niet herbevestigd (API 404)",
+            "G5 Audio niet menselijk beluisterd; bron noemt geen roeptype of herkomst",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit B F3-REV2-R03b (chat 24-11-2026 07:39 CET) voor sp008, sp009, sp016; uitgevoerd in PR #353",
+            "executionStatus": "UITGEVOERD (R03b) - open punten blijven",
+            "remainingOpen": [
+              "G7 OPEN: geen aantoonbaar betere Europese hoofdfoto of juveniel gevonden; beste kandidaten voor eigenaarkeuze: volwassen in vlucht San Giuliano Terme, Toscane (Scontardi, CC BY-SA 4.0), juveniel in vlucht Brandon Marsh, Engeland (Jacob Spinks, CC BY 2.0; minder scherp), volwassen op nestkast Noordwijk (Michel Langeveld, CC BY-SA 4.0; klein in beeld)",
+              "G8: iNaturalist-licenties (2) PARTIALLY TESTED - alle openbare routes 404 (R03c); geen verdere retries",
+              "Eigenaarbesluit nodig: kandidaat 1 (Toscane) als vervanging van sp009-male-flight",
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED (hostprompt 24-11 07:45 onbeantwoord)",
+              "Audio PARTIALLY TESTED; bron noemt geen roeptype of herkomst",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; geen nieuwe optie C; geen start R04; ANWB/Vogelbescherming/audio-grenzen blijven"
+          },
+          "fullPass": false,
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "resolvedInR03b": [
+            "G4 kritische kaarten vs. Havik, Torenvalk en Smelleken; Boomvalk-kaart aangescherpt",
+            "G4 nieuw fotopaar Slechtvalk-Havik volwassen in vlucht met gelabelde rijen (Commons-foto met bevestigde rechten tegen bewezen Havik-mannetje)",
+            "G4 gelabelde rijen op Torenvalk-paren (wederkerig)",
+            "G7 gericht fotoonderzoek uitgevoerd (discover-rev2-r03b, 11 zoekopdrachten): geen kandidaat aantoonbaar beter; niets vervangen of verwijderd",
+            "G8 fallbackroutes gebouwd en getest (test_orig_check.py); uitvoering BLOCKED door runner (apt-get), zie foto-regels",
+            "Lijkt-op-teksten Torenvalk/Havik inhoudelijk"
+          ],
+          "repair": {
+            "round": "F3-REV2-R03b",
+            "date": "2026-11-24",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r03.mjs",
+              "tests/test_f3_rev2_r01_browser.py",
+              "tools/media/orig_check.py",
+              "docs/media-intake/2026-11-24/origcheck-rev2-r03b-inat/origcheck.json",
+              "docs/media-intake/2026-11-24/discover-rev2-r03b/candidates.json"
+            ]
+          },
+          "candidatesR03c": {
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit R03b-QA (chat 24-11-2026 09:53 CET), uitgevoerd als F3-REV2-R03c in PR #353",
+            "evidence": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json",
+            "reviewSheet": "R03c_Slechtvalk_huidig_vs_kandidaten.jpg (in chat aan eigenaar)",
+            "candidates": [
+              {
+                "id": "sp009_kandidaat1_toscane",
+                "title": "File:Falco peregrinus - San Giuliano Terme (Toscana).jpg",
+                "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_-_San_Giuliano_Terme_(Toscana).jpg",
+                "author": "Scontardi",
+                "license": "CC BY-SA 4.0",
+                "licenseAllowed": true,
+                "originalSize": [
+                  1944,
+                  1296
+                ],
+                "sha1": "4c8acd03833975f48873d1a81be94a6756b607fd",
+                "sha1Verified": true,
+                "context": {
+                  "description": "Falco peregrinus",
+                  "date": "2025-05-23 09:29:42",
+                  "categories": [
+                    "Falco peregrinus in flight"
+                  ]
+                },
+                "proposedRole": "volwassen in vlucht",
+                "fullCrop": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat1_toscane_full_crop.jpg",
+                "verdict": "Beter en geschikt als vervanging (voorstel; niet uitgevoerd)",
+                "assessment": "Volwassen (leikleurige kopkap, brede baardstreep, dwarsgebandeerde onderzijde); vleugels en staart volledig gespreid van onderen, dus spitse vleugels met brede basis en korte staart in één beeld. Rechten bevestigd via Commons (eigen werk, CC BY-SA 4.0, SHA-1 origineel gelijk), herkomst Toscane (bestandsnaam). Minder scherp dan de huidige foto van Tollin en met prooi in de klauwen. Meerwaarde: volledig silhouet + bevestigde rechten + Europese herkomst tegenover een foto waarvan de licentie niet te bevestigen is. Ondersoort niet vastgesteld.",
+                "imported": false
+              },
+              {
+                "id": "sp009_kandidaat2_brandon",
+                "title": "File:Peregrine Falcon (2) (9594380746).jpg",
+                "page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(2)_(9594380746).jpg",
+                "author": "Jacob Spinks from Northamptonshire, England",
+                "license": "CC BY 2.0",
+                "licenseAllowed": true,
+                "originalSize": [
+                  1500,
+                  1200
+                ],
+                "sha1": "82f8154eb1de683919658f60cc0cc79b1a714e90",
+                "sha1Verified": true,
+                "context": {
+                  "description": "Taken at Brandon Marsh. I was really lucky to get this!! fastest bird in the WORLD!! But it wasnt going full speed as it is a Juvenile but it was hunting with no success!! The peregrine is a large and powerful falcon. It has long, broad, pointed wings and a relatively short tail. It is blue-grey above, with a blackish top of the head and an obvious black 'moustache' that contrasts with its white f",
+                  "date": "2013-08-24 16:47",
+                  "categories": [
+                    "Falco peregrinus in flight"
+                  ]
+                },
+                "proposedRole": "juveniel in vlucht",
+                "fullCrop": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat2_brandon_full_crop.jpg",
+                "verdict": "Niet beter dan de bestaande foto",
+                "assessment": "Juveniel volgens fotograaf; bruine bovenzijde, lengtestrepen en baardstreep zichtbaar, maar tegenlicht, laag contrast en zacht. Huidige juveniel in vlucht (Josh Boe) is scherper en toont dezelfde kenmerken duidelijker. Rechten bevestigd (CC BY 2.0, SHA-1 gelijk), herkomst Brandon Marsh, Engeland. Alleen als terugval als de rechten van de huidige foto niet te bevestigen zijn.",
+                "imported": false
+              },
+              {
+                "id": "sp009_kandidaat3_langeveld",
+                "title": "File:Falco peregrinus 114336093.jpg",
+                "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_114336093.jpg",
+                "author": "Michel Langeveld",
+                "license": "CC BY-SA 4.0",
+                "licenseAllowed": true,
+                "originalSize": [
+                  1415,
+                  946
+                ],
+                "sha1": "43e6eed4090c1833cf4b0406f240b4733ccd3a9f",
+                "sha1Verified": true,
+                "context": {
+                  "description": "Peregrine Falcon ( Falco peregrinus )",
+                  "date": "2021-02-28",
+                  "categories": [
+                    "Birds of Noordwijk, South Holland",
+                    "Falco peregrinus",
+                    "Falconiformes of the Netherlands"
+                  ]
+                },
+                "proposedRole": "volwassen in rust (hoofdfoto)",
+                "fullCrop": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat3_langeveld_full_crop.jpg",
+                "verdict": "Niet beter dan de bestaande foto",
+                "assessment": "Volwassen op nestkast aan een gebouw (Noordwijk volgens Commons-categorie); vogel klein in beeld (~300 px), zacht, één vleugel in beweging, deels afgedekt. Huidige hoofdfoto en rustfoto zijn veel scherper en groter. Rechten bevestigd (CC BY-SA 4.0 op Commons, SHA-1 gelijk). Wel Nederlandse herkomst; geen determinatiemeerwaarde.",
+                "imported": false
+              }
+            ],
+            "proposal": "Kandidaat 1 (Toscane) als vervanging van sp009-male-flight in \"In vlucht\" en in het paar Torenvalk–Slechtvalk volwassen in vlucht; huidige foto naar retired met historie. Alleen na afzonderlijk eigenaarbesluit en volledige import- en zes-puntscontrole.",
+            "proposalR03d": {
+              "date": "2026-11-24",
+              "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
+              "status": "VOORSTEL - wacht op afzonderlijk definitief eigenaarbesluit; niet geïmporteerd, niet actief, geen FULL PASS",
+              "replaces": "/assets/species/plumage/sp009-male-flight.webp (In vlucht, volwassen; ook in paar Torenvalk–Slechtvalk volwassen in vlucht)",
+              "candidate": {
+                "title": "File:Falco peregrinus - San Giuliano Terme (Toscana).jpg",
+                "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_-_San_Giuliano_Terme_(Toscana).jpg",
+                "author": "Scontardi",
+                "credit": "Own work",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                "originalSize": [
+                  1944,
+                  1296
+                ],
+                "originalBytes": 1721210,
+                "sha1": "4c8acd03833975f48873d1a81be94a6756b607fd",
+                "sha1Verified": true,
+                "commonsDate": "2025-05-23 09:29:42",
+                "reviewFiles": [
+                  "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat1_toscane_overview.jpg",
+                  "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat1_toscane_full_crop.jpg"
+                ],
+                "attributionIfChosen": "Foto: Scontardi, CC BY-SA 4.0, via Wikimedia Commons; bewerking (verkleind en omgezet naar WebP) valt onder dezelfde licentie"
+              },
+              "checks": {
+                "identity": "VERIFIED (visueel) - Slechtvalk: zwarte kopkap met brede baardstreep, lichte borst, dwarse tekening op onderzijde en ondervleugel, gele poten",
+                "age": "VERIFIED (visueel) - volwassen (dwarsgebandeerd, geen lengtestrepen)",
+                "sex": "niet vastgesteld",
+                "subspecies": "niet vastgesteld (in Italië peregrinus of brookei mogelijk)",
+                "origin": "PARTIALLY TESTED - Toscane alleen volgens bestandsnaam; beschrijving \"Falco peregrinus\", geen locatiecategorie of coördinaten",
+                "sharpness": "VERIFIED - op 100 % kap, baardstreep en tekening scherp; vogel ca. 700 px lang in het origineel, kleiner in beeld dan de huidige foto",
+                "silhouette": "volledig: vleugels en staart gespreid van onderen, vleugelpunten en korte staart in één beeld",
+                "angle": "recht van onderen",
+                "rights": "VERIFIED - Commons-API: eigen werk, CC BY-SA 4.0, SHA-1 origineel gelijk",
+                "attribution": "auteur Scontardi (Commons-gebruiker)"
+              },
+              "currentPhoto": {
+                "pros": "groter en scherper in beeld; kap, baardstreep, borst en gele poten zeer duidelijk",
+                "cons": "vleugels half ingevouwen (silhouet minder diagnostisch); herkomst onbekend; iNaturalist-licentie niet bevestigd"
+              },
+              "candidatePros": "volledig vluchtsilhouet; dwarse tekening onder- en ondervleugel; rechten bevestigd; Europese herkomst (volgens bestandsnaam); zelfde kijkhoek als de Torenvalk-vluchtfoto",
+              "candidateCons": "kleiner in beeld; lichte tegenlichttint; kleine prooi onder de staart; ondersoort en geslacht onbekend; herkomst alleen uit bestandsnaam",
+              "effectComparisons": {
+                "Torenvalk–Slechtvalk volwassen in vlucht": "meerwaarde: beide van onderen met gespreide vleugels, waardoor vleugelvorm en staartlengte direct vergelijkbaar zijn; tekst en rijen blijven geldig",
+                "Slechtvalk–Havik volwassen in vlucht": "beperkte meerwaarde: Havik-foto is schuin van opzij; Toscane toont vleugelvorm beter dan de huidige zijaanzichtfoto (sp009.webp); alleen na afzonderlijk besluit",
+                "Slechtvalk–Havik juveniel, Torenvalk–Slechtvalk juveniel": "geen (volwassen foto)"
+              },
+              "remainingUncertainty": [
+                "herkomst alleen uit bestandsnaam",
+                "ondersoort onbekend",
+                "onafhankelijke foto-/soortreview open"
+              ],
+              "ifApproved": "kleine import van één foto (geen batch) met zes-puntscontrole, oude foto naar retired met historie en credits, vluchtcontrole/soortaudit bijwerken, render-diff"
+            }
+          },
+          "resolvedInR03c": [
+            "G8 één gecontroleerde heruitvoering na ffmpeg-correctie: routes 404, rechten blijven PARTIALLY TESTED (niet meer BLOCKED)",
+            "G7 drie Europese kandidaten op origineel en bronpagina vergeleken; geen vervanging uitgevoerd"
+          ],
+          "g8R03d": {
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
+            "run": "media-intake-run 45360468665 (head 37b7fae, geslaagd, ffmpeg overgeslagen)",
+            "evidence": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json",
+            "decision": "Geen nieuwe automatische iNaturalist-aanroepen (eigenaar). Een beschikbare afbeelding, eerdere registratie of werkende download is geen bewijs van herpublicatierechten. Nieuwe eigenaarbeslissing nodig bij een betrouwbare handmatige bron of een afzonderlijk goedgekeurde vervangingsfoto.",
+            "photos": [
+              {
+                "speciesId": "sp009",
+                "path": "/assets/species/plumage/sp009-male-flight.webp",
+                "inatPhotoId": null,
+                "registeredClaim": {
+                  "author": "Jonathan Tollin",
+                  "license": "CC BY 4.0",
+                  "source": "https://www.inaturalist.org/photos/9819028",
+                  "file": "iNaturalist photo 9819028"
+                },
+                "originalReachable": {
+                  "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg",
+                  "sourceSize": [
+                    1609,
+                    1073
+                  ],
+                  "localSize": [
+                    1223,
+                    815
+                  ],
+                  "mode": "full",
+                  "r": 0.659,
+                  "sameShotAutomatic": false,
+                  "identity": "uitsnede; eerder visueel bevestigd als zelfde opname (R02/R03)"
+                },
+                "routes404": "https://api.inaturalist.org/v1/photos/9819028: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/9819028: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/9819028.json: HTTP Error 404: Not Found",
+                "missing": [
+                  "licentiecode",
+                  "attributie/naamsvermelding zoals op iNaturalist",
+                  "waarneming-ID",
+                  "plaats",
+                  "datum",
+                  "taxon/kwaliteitsgraad"
+                ],
+                "status": "PARTIALLY TESTED - foto-identiteit bevestigd, herpublicatierechten NIET bevestigd"
+              },
+              {
+                "speciesId": "sp009",
+                "path": "/assets/species/plumage/sp009-juv-flight.webp",
+                "inatPhotoId": null,
+                "registeredClaim": {
+                  "author": "Josh Boe",
+                  "license": "CC BY 4.0",
+                  "source": "https://www.inaturalist.org/photos/251479995",
+                  "file": "iNaturalist photo 251479995"
+                },
+                "originalReachable": {
+                  "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg",
+                  "sourceSize": [
+                    1238,
+                    1105
+                  ],
+                  "localSize": [
+                    1238,
+                    1105
+                  ],
+                  "mode": "full",
+                  "r": 1.0,
+                  "sameShotAutomatic": true,
+                  "identity": "zelfde opname automatisch bevestigd"
+                },
+                "routes404": "https://api.inaturalist.org/v1/photos/251479995: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/251479995: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/251479995.json: HTTP Error 404: Not Found",
+                "missing": [
+                  "licentiecode",
+                  "attributie/naamsvermelding zoals op iNaturalist",
+                  "waarneming-ID",
+                  "plaats",
+                  "datum",
+                  "taxon/kwaliteitsgraad"
+                ],
+                "status": "PARTIALLY TESTED - foto-identiteit bevestigd, herpublicatierechten NIET bevestigd"
+              }
+            ]
+          },
+          "resolvedInR03d": [
+            "G7/Toscane: kandidaat volledig vastgelegd als niet-actief reviewbewijs met voorstel en effect op vergelijkingen",
+            "G8: run-uitkomst, bereikbare originelen, ontbrekende gegevens en geregistreerde claims vastgelegd; geen nieuwe aanroepen"
+          ]
+        }
       }
     },
     {
@@ -2364,7 +3139,259 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R03",
+          "date": "2026-11-23",
+          "base": "ad514b0f298a9143586311a9c079bc26370b71aa",
+          "pr": 353,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "OWNER DECISION B EXECUTED (R03b) / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R03_VALKEN_SPECHT_2026-11-23_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/plumage/sp016-hero-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File%3AGreat_Spotted_Woodpecker_-_Dendrocopos_major_-_Male_%2852580093933%29.jpg",
+              "author": "caroline legg",
+              "license": "CC BY 2.0",
+              "visual": "Mannetje op tak; rode nekvlek, zwarte kruin, witte schoudervlek, rode onderstaart; scherp.",
+              "identity": "VERIFIED (visueel; Commons male, Schotland 2022)",
+              "quality": "VERIFIED - zeer goed",
+              "roleCheck": "VERIFIED - Hoofdfoto (mannetje)",
+              "blobSha": "d8d636ba0175e121ea82517ddbcf196b81eb4061",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 eb15a906daa107613ad83f13b2f93b709da92bc5, zelfde opname r=0.999",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "eb15a906daa107613ad83f13b2f93b709da92bc5",
+              "provenance": {
+                "description": "Great Spotted Woodpecker - Dumfries & Galloway",
+                "date": "Taken on 22 December 2022, 10:44",
+                "categories": [
+                  "Birds in December 2022",
+                  "Birds of Dumfries and Galloway",
+                  "December 2022 in Dumfries and Galloway",
+                  "Dendrocopos major (male)",
+                  "Dendrocopos major in Scotland"
+                ]
+              }
+            },
+            {
+              "role": "Mannetje",
+              "path": "/assets/species/plumage/sp016-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Great_spotted_woodpecker_(Dendrocopos_major)_male_Drenthe.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Mannetje op stronk; rode nekvlek, grote witte schoudervlek, rode onderstaart.",
+              "identity": "VERIFIED (visueel; Commons-beschrijving male, Drenthe 2026; Commons-categorie noemt ook female)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Mannetje (rode nekvlek zichtbaar)",
+              "blobSha": "d413dc650bcd0f0d6ccc2649396ff6d598a0fbb3",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 51f27429c6a9211146db0bcde9627b46c58244bd, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "51f27429c6a9211146db0bcde9627b46c58244bd",
+              "provenance": {
+                "description": "Great spotted woodpecker ( Dendrocopos major ) male, Drenthe, Netherlands",
+                "date": "2026-04-09 08:46:05",
+                "categories": [
+                  "Dendrocopos major (female)",
+                  "Dendrocopos major (male)",
+                  "Dendrocopos major in the Netherlands"
+                ]
+              }
+            },
+            {
+              "role": "Vrouwtje",
+              "path": "/assets/species/sp016.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:2015.05.08.-04-Kaefertaler_Wald-Mannheim--Buntspecht-Weibchen.jpg",
+              "author": "Andreas Eichler",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vrouwtje aan stam met voedsel; geen rood op de kop, witte schoudervlek, rode onderstaart.",
+              "identity": "VERIFIED (visueel; Commons female, Mannheim 2015)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Vrouwtje",
+              "blobSha": "2bd57c291f0766fb86ab4cdd1f0234d5004d5a7e",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 249b69338056a4acb99dc72c1e9c91d6084b6895, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "249b69338056a4acb99dc72c1e9c91d6084b6895",
+              "provenance": {
+                "description": "Great spotted woodpecker - Dendrocopos major, female. Taken in Mannheim im Käfertaler Wald, Baden-Württemberg, Germany.",
+                "date": "Taken on 8 May 2015",
+                "categories": [
+                  "Dendrocopos major eating",
+                  "Dendrocopos major in Mannheim",
+                  "Piciformes in Käfertal (Mannheim)"
+                ]
+              }
+            },
+            {
+              "role": "Juveniel",
+              "path": "/assets/species/plumage/sp016-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Juvenile_great_spotted_woodpecker_(52200334398).jpg",
+              "author": "Andrey Gulivanov",
+              "license": "CC BY 2.0",
+              "visual": "Jonge vogel aan berk; rode kruin met zwarte rand, witte schoudervlek.",
+              "identity": "VERIFIED (visueel; Commons juvenile, Sint-Petersburg 2022)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Juveniel",
+              "blobSha": "d9c01e298740d126bf23bbbd167483212de42038",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 adb765161e60ca0fd0eea31b0ddf534c31bd54b8, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "adb765161e60ca0fd0eea31b0ddf534c31bd54b8",
+              "provenance": {
+                "description": "St Petersburg/Leningrad Oblast. Juvenile great spotted woodpecker",
+                "date": "Taken on 21 June 2022, 08:46",
+                "categories": [
+                  "Dendrocopos major (juvenile)",
+                  "Dendrocopos major in Russia"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp016-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg",
+              "author": "caroline legg",
+              "license": "CC BY 2.0",
+              "visual": "Vliegend met voedsel in de snavel; kop, rode nekvlek (mannetje), witte schoudervlek en rode onderstaart scherp; vleugel grotendeels bewegingsonscherp.",
+              "identity": "VERIFIED (soort visueel; Schotland 2021)",
+              "quality": "PARTIALLY TESTED - origineel 3389×2259 op volle resolutie bekeken (SHA-1 a80269d1a0df4346700fa6d5626ae0abb53a2b71 gelijk; docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp016-flight_full_crop.jpg): kop, rode nekvlek, witte schoudervlek, rug en rode onderstaart scherp; witte vleugelvlekken zichtbaar, maar de vleugel (vooral slagpennen) grotendeels bewegingsonscherp. Voorlopig behouden vanwege herkenningswaarde; scherpere vluchtfoto gewenst",
+              "roleCheck": "VERIFIED - In vlucht",
+              "blobSha": "549ac36b8eed9340e0db99e4e607d808939e9965",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 a80269d1a0df4346700fa6d5626ae0abb53a2b71, zelfde opname r=1.0",
+              "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
+              "sourceSha1": "a80269d1a0df4346700fa6d5626ae0abb53a2b71",
+              "provenance": {
+                "description": "Dendrocopos major - Scotland",
+                "date": "Taken on 26 June 2021, 10:45",
+                "categories": [
+                  "Dendrocopos major in Scotland",
+                  "Dendrocopos major in flight"
+                ]
+              },
+              "qualityHistory": "F3-REV2-R03 23-11-2026: PARTIALLY TESTED op basis van verkleind beeld; ingetrokken in R03b na beoordeling op volle resolutie | R03b 24-11-2026: VERIFIED - goed (op 1400 px-versie); door eigenaar/QA te stellig bevonden",
+              "rightsR03c": "VERIFIED - Commons: auteur caroline legg en CC BY 2.0 gelijk; origineel SHA-1 a80269d1a0df4346700fa6d5626ae0abb53a2b71 opnieuw gecontroleerd (media-intake-run 45360468665 (head 37b7fae, ffmpeg-stap overgeslagen))"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_GBS, VB_GBS_MBS).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - quickPrimary [witte schoudervlekken, rode onderkant] onder kritisch kenmerk koppatroon; man/vrouw/juveniel onder Meer kenmerken (niets verwijderd)",
+            "herkenning": "VERIFIED (tekstconsistentie) - man/vrouw/juveniel consistent met de vier rustfoto's; brontekst VB niet herlezen",
+            "lijktOp": "PARTIALLY TESTED - fotoparen juveniel vs. Middelste (rollabel Middelste toont paartitel \"Grote of middelste bonte specht?\" i.p.v. kleed), vlucht met Middelste (Kleine zonder vluchtfoto) en mannetjes met Kleine; geen gelabelde rijen; geen vrouwtjespaar met Kleine en geen volwassen paar met Middelste; kritische kaart koppatroon met \"Bron noemt ...\"-formulering in publieke tekst R03b: zie resolvedInR03b."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp016<->sp020 Grote-Middelste Bonte Specht",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - juveniel Grote tegen volwassen Middelste (relevante verwarring), rollabel onjuist; vlucht beide aanwezig, Grote bewegingsonscherp",
+              "diagnosticText": "PARTIALLY TESTED - koppatroon en onderstaart/flanken in vrije tekst; geen gelabelde rijen"
+            },
+            {
+              "pair": "sp016<->sp017 Grote-Kleine Bonte Specht",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - mannetjes gelijkwaardig; geen vrouwtjespaar; Kleine zonder vluchtfoto",
+              "diagnosticText": "PARTIALLY TESTED - rug, onderstaart, formaat in vrije tekst; kritische kaart grootte en rug"
+            }
+          ],
+          "lookalikeRegister": "LK-101 (Middelste), LK-102 (Kleine) in SOORTVERWARRING_REGISTER (F3-REV2-R03)",
+          "audio": {
+            "status": "PARTIALLY TESTED - lokale clips aanwezig, rechten via Commons gecontroleerd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp016-call-app.mp3",
+                "label": "Roep",
+                "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_-_Great_Spotted_Woodpecker_XC542957.mp3",
+                "author": "Benoît Van Hecke",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk, origineel SHA-1 5c558a037a26e0ef0ff5820b93df3cd2f583bac8",
+                "status": "PARTIALLY TESTED - bestand aanwezig (3.3 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp016-drum-app.mp3",
+                "label": "Roffel",
+                "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.ogg",
+                "author": "Vladimir Yu. Arkhipov",
+                "license": "CC BY-SA 3.0",
+                "rights": "PARTIALLY TESTED - licentie gelijk (CC BY-SA 3.0); Commons-auteur 'Vladimir Yu. Arkhipov, Arkhivov' voegt gebruikersnaam toe aan registernaam 'Vladimir Yu. Arkhipov'; SHA-1 2c1f3333aa109ece31e50726fb4910a70318d4a5",
+                "status": "PARTIALLY TESTED - bestand aanwezig (10.3 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern",
+          "quickPrimary": "VERIFIED (code/render) - quickPrimary [0,1] volgens eigenaarbesluit 23-11-2026 22:10 (alleen R03-soorten)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
+            "G13 Audio niet menselijk beluisterd; roffel-auteur op Commons met gebruikersnaam",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit B F3-REV2-R03b (chat 24-11-2026 07:39 CET) voor sp008, sp009, sp016; uitgevoerd in PR #353",
+            "executionStatus": "UITGEVOERD (R03b) - open punten blijven",
+            "remainingOpen": [
+              "Juvenielenpaar Grote-Middelste blijft juveniel tegen volwassen (geen geverifieerde juveniele Middelste-foto)",
+              "Kleine Bonte Specht zonder vluchtfoto",
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED",
+              "Audio PARTIALLY TESTED; roffel-auteur Commons met gebruikersnaam",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; geen nieuwe optie C; geen start R04; ANWB/Vogelbescherming/audio-grenzen blijven",
+            "additional": [
+              {
+                "decision": "R03b-QA: foto voorlopig behouden, kwaliteitsstatus aanpassen",
+                "scope": "/assets/species/plumage/sp016-flight.webp",
+                "date": "2026-11-24",
+                "reference": "Eigenaarbesluit R03b-QA (chat 24-11-2026 09:53 CET), uitgevoerd als F3-REV2-R03c in PR #353",
+                "effect": "Kwaliteit PARTIALLY TESTED, voorwaardelijk, vervanging gewenst; geen nieuwe foto"
+              },
+              {
+                "decision": "R03c-QA: actuele status consistent maken (voorwaardelijk), historie behouden",
+                "scope": "/assets/species/plumage/sp016-flight.webp",
+                "date": "2026-11-24",
+                "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
+                "effect": "Soortaudit-verdict voorwaardelijk; foto blijft; scherpere vluchtfoto OPEN"
+              }
+            ]
+          },
+          "fullPass": false,
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "resolvedInR03b": [
+            "G9 Middelste-foto in juveniel-paar: plumage adult_m -> label \"Volwassen\" (Commons: male; geslacht niet zichtbaar, dus geen geslachtslabel)",
+            "G10 nieuwe paren: volwassen Grote (mannetje) vs Middelste (volwassen), vrouwtjes Grote vs Kleine; gelabelde rijen op alle vijf de paren incl. vlucht",
+            "G10 kritische kaarten onderstaart/flanken en rood op de kop (geslacht/leeftijd) vs. Middelste en Kleine",
+            "G11 \"Bron noemt ...\" vervangen door zelfstandige herkenningstekst; bron intern",
+            "G12 vluchtfoto op volle resolutie herbeoordeeld: witte schoudervlek, vleugelstippen, rode nekvlek en onderstaart scherp zichtbaar; alleen vleugeltoppen licht bewegingsonscherp. Bijschrift klopt en blijft; R03-oordeel \"overschat\" was gebaseerd op een verkleind beeld en is ingetrokken",
+            "Discover GBS-vlucht: geen beter vrij vluchtbeeld (zelfde opname, Japanse ondersoort, lage resolutie)"
+          ],
+          "repair": {
+            "round": "F3-REV2-R03b",
+            "date": "2026-11-24",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r03.mjs",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          },
+          "resolvedInR03c": [
+            "Vluchtfoto: totale kwaliteit PARTIALLY TESTED (voorwaardelijk, vervanging gewenst); bijschrift \"Voorlopige foto: beperkte scherpte\" met alleen scherp zichtbare kenmerken; historie in field-guide-media reviewHistory, vluchtcontrole history en soortaudit qualityHistory",
+            "Vergelijkingsteksten gecontroleerd: de vluchtvergelijking noemt schoudervlekken, onderstaart en rood op de kop (op de foto scherp); geen vleugeldetails aan de foto ontleend"
+          ],
+          "resolvedInR03d": [
+            "Soortaudit M2 verdict sp016-flight: goedgekeurd (10-11-2026, historie) -> voorwaardelijk (actueel), gelijk aan vluchtcontrole; vervanging gewenst blijft OPEN. Gedateerde momentopname soortaudit-status.json (sha 2e20f1d) niet herschreven (historisch)"
+          ]
+        }
       }
     },
     {
@@ -16130,13 +17157,26 @@
         "status": "OWNER DECISION B + LIMITED C EXECUTED (R02b) / R02c HAVIK FLIGHT PHOTO RETIRED / TECHNICAL QA ACCEPTED / OPEN POINTS REMAIN",
         "date": "2026-11-23",
         "pr": 352
+      },
+      {
+        "round": "F3-REV2-R03",
+        "species": [
+          "sp008",
+          "sp009",
+          "sp016"
+        ],
+        "status": "OWNER DECISION B EXECUTED (R03b) / OPEN POINTS REMAIN",
+        "date": "2026-11-23",
+        "pr": 353,
+        "baseSHA": "ad514b0f298a9143586311a9c079bc26370b71aa",
+        "ownerStart": "Eigenaarbesluit 23-11-2026 22:10 CET: start R03 na R02c-checkpoint"
       }
     ],
     "counts": {
       "total": 140,
-      "reexamined": 6,
+      "reexamined": 9,
       "ownerGateOpen": 0,
-      "ownerDecisions": 6,
+      "ownerDecisions": 9,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -16165,6 +17205,24 @@
         "time": "22:10",
         "batch": "F3-REV2-R02",
         "decision": "R02b-QA geaccepteerd; algemene Havik-vluchtfoto uit de zichtbare gids (origineel bewaard); start R03 na gecontroleerde correctie"
+      },
+      {
+        "date": "2026-11-24",
+        "time": "07:39",
+        "batch": "F3-REV2-R03",
+        "decision": "B voor sp008, sp009, sp016 (gericht verbeteren); Slechtvalk met gericht fotoonderzoek; geen nieuwe C, geen FULL PASS, R04 niet starten"
+      },
+      {
+        "date": "2026-11-24",
+        "time": "09:53",
+        "batch": "F3-REV2-R03",
+        "decision": "R03b-QA geaccepteerd binnen bewijsgrenzen; toestemming: GBS-fotokwaliteit nauwkeuriger, ffmpeg alleen voor audio, één G8-heruitvoering, visuele vergelijking drie Slechtvalk-kandidaten; geen automatische vervanging, geen import, geen R04"
+      },
+      {
+        "date": "2026-11-24",
+        "time": "12:16",
+        "batch": "F3-REV2-R03",
+        "decision": "R03c-QA geaccepteerd; GBS-auditstatus consistent; Toscane-kandidaat voorbereiden zonder import; G8 open zonder retries; start R04 (sp017, sp018, sp019) na geslaagd R03d-checkpoint"
       }
     ]
   }
