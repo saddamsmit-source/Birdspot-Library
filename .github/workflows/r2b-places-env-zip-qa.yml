@@ -31,6 +31,22 @@ jobs:
           set -o pipefail
           git log -1 --format='Uitgecheckt: %H' | tee qa-herstel.log
           python tests/test_r2b_qa_herstel.py 2>&1 | tee -a qa-herstel.log
+      - name: H8-oorzaak soortkiezerfocus (F1–F4) op deze commit
+        run: |
+          set -o pipefail
+          python tests/test_r2b_h8_picker_focus.py 2>&1 | tee h8-focus.log
+      - name: Zelfde H8-focustest op 87bcdf9 moet F1 en F2 raken
+        run: |
+          git fetch --depth=1 origin 87bcdf9cf42f8a91187815fe0e1001a175fb4e42
+          git worktree add /tmp/wt-87bcdf9 87bcdf9cf42f8a91187815fe0e1001a175fb4e42
+          set +e
+          BIRDSPOT_APP_ROOT=/tmp/wt-87bcdf9 python tests/test_r2b_h8_picker_focus.py > h8-oud.log 2>&1
+          rc=$?
+          set -e
+          cat h8-oud.log
+          test "$rc" -ne 0
+          for code in F1 F2; do grep -q "^$code .* FAIL" h8-oud.log || { echo "$code faalde NIET op 87bcdf9"; exit 1; }; done
+          echo "BEWEZEN: F1 F2 falen op 87bcdf9 (focus naar sluitende soortkiezer)"
       - name: Zelfde QA-tests op c2b63a0 moeten de gemelde fouten raken
         run: |
           git fetch --depth=1 origin c2b63a003839327a7f2bde0a3af0a7888553b1be
