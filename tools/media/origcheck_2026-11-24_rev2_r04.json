@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-24",
+  "purpose": "F3-REV2-R04: alle getoonde foto's en Commons-audio van Kleine Bonte Specht, Zwarte Specht en Groene Specht tegen origineel, auteur, licentie, SHA-1 en herkomstcontext; volle-resolutie-uitsneden hoofdfoto Kleine Bonte Specht en mannetje Groene Specht",
+  "items": [
+    {
+      "speciesId": "sp017",
+      "author": "Maurizio Carlini",
+      "license": "CC BY-SA 4.0",
+      "role": "credits/hero",
+      "image": "/assets/species/sp017.webp",
+      "title": "File:Picchio rosso minore con mora di gelso.jpg",
+      "fullCrop": [
+        0.1,
+        0.05,
+        0.95,
+        0.95
+      ]
+    },
+    {
+      "speciesId": "sp017",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_PLUMAGE:adult_f:None",
+      "image": "/assets/species/plumage/sp017-female.webp",
+      "title": "File:Lesser-spotted woodpecker (Dryobates minor hortorum) female.jpg"
+    },
+    {
+      "speciesId": "sp017",
+      "author": "blondinrikard",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_POSES:0:Vrouwtje, wegvliegend bij nestholte",
+      "image": "/assets/species/plumage/sp017-flight.webp",
+      "title": "File:Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett.jpg"
+    },
+    {
+      "speciesId": "sp017",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Roep",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp017-call-app.mp3",
+      "title": "File:Dryobates minor - Lesser Spotted Woodpecker XC538968.mp3"
+    },
+    {
+      "speciesId": "sp017",
+      "author": "Hannu Varkki",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:1:Roffel",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp017-drum-app.mp3",
+      "title": "File:Dryobates minor - Lesser Spotted Woodpecker XC470657.mp3"
+    },
+    {
+      "speciesId": "sp018",
+      "author": "xulescu_g",
+      "license": "CC BY-SA 2.0",
+      "role": "credits/hero",
+      "image": "/assets/showcase/sp018.webp",
+      "title": "File:Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped).jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "author": "Andreas Eichler",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_PLUMAGE:adult_f:None",
+      "image": "/assets/species/plumage/sp018-female-single.webp",
+      "title": "File:2016.08.27.-15-Viernheimer Heide-Viernheim--Schwarzspecht-Weibchen.jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "author": "Janus Mosbacher",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_POSES:0:In vlucht",
+      "image": "/assets/species/plumage/sp018-flight.webp",
+      "title": "File:Schwarzspecht (Dryocopus martius).jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "author": "Philippe Kurlapski",
+      "license": "CC BY 1.0",
+      "role": "GUIDE_POSES:1:Juveniel — kopdetail",
+      "image": "/assets/species/plumage/sp018-juv-review.webp",
+      "title": "File:Dryocopus martius 03.jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "author": "Frank Vassen from Brussels, Belgium",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_POSES:2:Mannetje",
+      "image": "/assets/species/plumage/sp018-hero-male.webp",
+      "title": "File:Black Woodpecker (Dryocopus martius), Parc de Woluwé, Brussels 1.jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "author": "Alexander Kürthy",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Vluchtroep",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp018-flight-call-app.mp3",
+      "title": "File:Black woodpecker Dryocopus martius, flying call.ogg"
+    },
+    {
+      "speciesId": "sp018",
+      "author": "Alexander Kürthy",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:1:Roep in zit",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp018-sit-call-app.mp3",
+      "title": "File:Dryocopus martius call at sitting Kjeee.ogg"
+    },
+    {
+      "speciesId": "sp019",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "credits/hero",
+      "image": "/assets/species/sp019.webp",
+      "title": "File:Green woodpecker Franconville 2022 01 21 2.jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "author": "Remyymer",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_PLUMAGE:adult_f:Op de grond",
+      "image": "/assets/species/plumage/sp019-female-ground.webp",
+      "title": "File:European green woodpecker eating.jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "author": "Hans Hillewaert",
+      "license": "CC BY-SA 3.0",
+      "role": "GUIDE_PLUMAGE:juv:None",
+      "image": "/assets/species/plumage/sp019-juv.webp",
+      "title": "File:Picus viridis (juvenile).jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:1:Vrouwtje in vlucht",
+      "image": "/assets/species/plumage/sp019-flight.webp",
+      "title": "File:Female green woodpecker in flight.jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_POSES:2:Mannetje",
+      "image": "/assets/species/plumage/sp019-hero-male.webp",
+      "title": "File:European green woodpecker (Picus viridis) male.JPG",
+      "fullCrop": [
+        0.2,
+        0.1,
+        0.55,
+        0.55
+      ]
+    },
+    {
+      "speciesId": "sp019",
+      "author": "Aubrey John Williams / The British Library Board",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:0:Lachende roep",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp019-laugh-call-app.mp3",
+      "title": "File:Green Woodpecker (Picus viridis) (W1CDR0001497 BD6).ogg"
+    },
+    {
+      "speciesId": "sp019",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 4.0",
+      "role": "GUIDE_AUDIO:1:Alarmroep",
+      "kind": "audio",
+      "audio": "/assets/species/audio/sp019-call-app.mp3",
+      "title": "File:Picus viridis - European Green Woodpecker XC416424.mp3"
+    }
+  ]
+}
