@@ -143,7 +143,8 @@ def record(page):
     page.wait_for_function("() => document.querySelector('#soundElapsed').textContent >= '00:02'", timeout=15000)
     page.locator('#soundRecord').click()
     page.locator('#soundPlayback').wait_for(state='visible', timeout=15000)
-    page.wait_for_function("() => document.querySelector('#soundDraftState').textContent.includes('bewaard op dit toestel')", timeout=15000)
+    page.locator('#soundSaveDraft').wait_for(state='visible', timeout=10000)
+    assert not page.evaluate(DRAFT_EXISTS), 'Stoppen mag zonder keuze geen duurzaam concept bewaren'
 
 
 def open_merlin(page):
@@ -255,7 +256,7 @@ def run(browser, url, tmp):
     tick(p, 'Roodborst: Merlin gaf deze soort')
     tick(p, 'Roodborst: ook gezien')
     tick(p, 'Roodborst: Merlin-suggestie zelf gecontroleerd')
-    tick(p, 'Bewaar de opname bij de waarneming')
+    p.locator('#soundAttach').check()
     pin(p)
     s = rows(p)[0]
     ids, recs = rz.audio_of(p, s['id'])
@@ -318,6 +319,9 @@ def run(browser, url, tmp):
     cancel_msg = p.locator('#soundMerlinState').inner_text()
     nothing = not rows(p) and p.evaluate(DRAFT_EXISTS)
     p.locator('#addSheetCancel').click()
+    p.locator('#soundExitPrompt').wait_for(state='visible')
+    p.locator('[data-sound-exit="keep"]').click()
+    p.locator('#quickAddSheet').wait_for(state='detached')
     open_sound(p)
     kept = p.locator('#soundDraftState').inner_text()
     add_species(p, 'Merel')
@@ -401,7 +405,7 @@ def run(browser, url, tmp):
     add_species(p, 'Merel'); add_species(p, 'Roodborst')
     multi = (p.locator('#soundAttach').is_disabled(), p.locator('#soundAttachNote').inner_text())
     p.get_by_role('checkbox', name='Roodborst', exact=True).uncheck()
-    tick(p, 'Bewaar de opname bij de waarneming')
+    p.locator('#soundAttach').check()
     p.evaluate(FAIL_ONCE)
     p.locator('#soundSave').click()
     p.wait_for_function("() => /Opslaan mislukt/.test(document.querySelector('#soundSaveState').textContent)", timeout=10000)
@@ -414,7 +418,7 @@ def run(browser, url, tmp):
     fresh = p.locator('#soundDraftState').inner_text()
     ctx.close()
     check('M9', 'opslagfout → geen losse opname; opnieuw → precies 1 waarneming, 1 pin, 1 opname; bijlage bij meerdere soorten uit',
-          multi[0] and 'Bewerken' in multi[1] and after_fail == (0, 0) and len(r) == 1 and len(recs) == 1
+          multi[0] and 'Selecteer één soort' in multi[1] and after_fail == (0, 0) and len(r) == 1 and len(recs) == 1
           and r[0].get('audioIds') == [recs[0]['id']] and places == 1 and fresh == '' and not errors,
           f"meerdere_soorten={multi[0]} na_fout={after_fail} rijen={len(r)} opnamen={len(recs)} plekken={places} concept='{fresh}'")
 
@@ -449,7 +453,7 @@ def run(browser, url, tmp):
         open_sound(page); wav_ready(page)
     for page, name in ((a, 'Merel'), (b, 'Zanglijster'), (c, 'Merel')):
         add_species(page, name)
-        tick(page, 'Bewaar de opname bij de waarneming')
+        page.locator('#soundAttach').check()
     pin(a)
     first = rows(a)[0]
     first_ids, first_audio = rz.audio_of(a, first['id'])
@@ -481,13 +485,14 @@ def run(browser, url, tmp):
 
     # M12: re-openen mag de keuze van één soort niet op de andere toepassen.
     ctx, p, errors = context(browser, url)
-    open_sound(p); open_merlin(p)
+    open_sound(p); record(p); open_merlin(p)
     tick(p, 'Ik heb Merlin gebruikt voor deze vogels')
     add_species(p, 'Merel')
     tick(p, 'Merel: Merlin gaf deze soort')
     tick(p, 'Merel: Merlin-suggestie zelf gecontroleerd')
     add_species(p, 'Zanglijster')
     tick(p, 'Zanglijster: Merlin gaf deze soort')
+    p.locator('#soundSaveDraft').click()
     p.wait_for_function("() => document.querySelector('#soundDraftState').textContent.includes('bewaard op dit toestel')")
     p.reload(wait_until='domcontentloaded'); boot(p, url)
     open_sound(p)

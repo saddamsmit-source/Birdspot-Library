@@ -203,19 +203,25 @@ def main():
               const title = el.querySelector('summary').getBoundingClientRect();
               const where = el.querySelector('#featuredBirdWhere').getBoundingClientRect();
               const presence = el.querySelector('#featuredBirdPresence').getBoundingClientRect();
+              const rows = [...el.querySelectorAll('.field-featured-fact:not([hidden])')].map(row => row.getBoundingClientRect());
+              const gaps = rows.slice(1).map((row, i) => row.top - rows[i].bottom);
+              const icons = [...el.querySelectorAll('.field-featured-fact:not([hidden]) .field-featured-fact__icon')].length;
               return {
                 inset: Math.min(where.left - panel.left, presence.left - panel.left,
                   panel.right - where.right, panel.right - presence.right),
                 aligned: Math.abs(where.left - presence.left) <= 1,
                 titleHeight: title.height,
                 titleGap: where.top - title.bottom,
-                textGap: presence.top - where.bottom,
+                rows: rows.length,
+                icons,
+                gaps,
                 bottom: panel.bottom - presence.bottom,
               };
             }""")
             assert spacing['inset'] >= 12 and spacing['aligned'], (width, spacing)
             assert spacing['titleHeight'] >= 44 and 6 <= spacing['titleGap'] <= 14, (width, spacing)
-            assert 6 <= spacing['textGap'] <= 12 and spacing['bottom'] >= 12, (width, spacing)
+            assert spacing['rows'] >= 3 and spacing['icons'] == spacing['rows'], (width, spacing)
+            assert all(0 <= gap <= 16 for gap in spacing['gaps']) and spacing['bottom'] >= 12, (width, spacing)
             assert contrast(hero.locator('#featuredBirdWhere'), text_edge=True) >= 4.5
             if width == 390:
                 notes.screenshot(path=str(SHOTS / 'mobile_owner_fieldnotes_390.png'))
