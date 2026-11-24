@@ -69,3 +69,4 @@ Registratie: `F3_140_HERCONTROLE_V0.1_DRAFT.json` → `records[sp008, sp009, sp0
 - Soortverwarring: LK-106 (Grote–Middelste volwassen), LK-107 (Grote–Kleine vrouwtjes), LK-108 (Slechtvalk–Havik volwassen vlucht); LK-100/101/102/105 bijgewerkt; LK-001…LK-105 behouden.
 - Render-diff t.o.v. 9c6ecd3: alleen sp007, sp008, sp009, sp016, sp017, sp020 (partnerkaarten door gedeelde vergelijkingen, bedoeld).
 - Vogelbescherming: hostprompt 24-11 ~07:45 onbeantwoord → NOT TESTED, niet herhaald. ANWB NOT TESTED. Audio niet beluisterd.
+- G8 BLOCKED: de fallbackroutes zijn gebouwd en getest (`tests/test_orig_check.py`), maar media-intake-run 45345440099 hing twee keer 20 min in `apt-get` (ffmpeg) op de GitHub-runner (pip slaagde). Eén veilige herhaling gebruikt; iNaturalist-licenties (sp009 ×2, sp007 mannetje-vlucht) blijven PARTIALLY TESTED. Eigenaaractie: later opnieuw starten, of akkoord om ffmpeg alleen in audiomodus te installeren.

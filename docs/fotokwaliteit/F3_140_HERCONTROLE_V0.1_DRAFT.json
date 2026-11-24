@@ -1777,7 +1777,8 @@
               "rightsREV2": "PARTIALLY TESTED - uitsnede visueel bevestigd door Claude in sp007-male-flight_vs_source.jpg (automatische r=0.824) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
               "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
               "comparisonUse": "F3-REV2-R02b: dragende vluchtvergelijkingsfoto met Sperwer en Torenvalk",
-              "openRights": "Licentie/naamsvermelding iNaturalist-foto 29451692 niet herbevestigd (iNaturalist-API 404 op 23-11); registerwaarde CC BY 4.0 Вячеслав Юсупов; zelfde opname visueel bevestigd"
+              "openRights": "Licentie/naamsvermelding iNaturalist-foto 29451692 niet herbevestigd (iNaturalist-API 404 op 23-11); registerwaarde CC BY 4.0 Вячеслав Юсупов; zelfde opname visueel bevestigd",
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED."
             },
             {
               "role": "In vlucht (Vrouwtje)",
@@ -2582,7 +2583,8 @@
               "blobSha": "4783c810bae514019186dcccfc1e9a764a84bbc3",
               "rightsREV2": "PARTIALLY TESTED - uitsnede visueel bevestigd door Claude in sp009-male-flight_vs_source.jpg (automatische r=0.659) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
               "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
-              "openRights": "Licentie/naamsvermelding iNaturalist-foto niet herbevestigd (API 404 op 23-11-2026)"
+              "openRights": "Licentie/naamsvermelding iNaturalist-foto niet herbevestigd (API 404 op 23-11-2026)",
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED."
             },
             {
               "role": "Overige herkenningsfoto's (Volwassen in rust)",
@@ -2620,7 +2622,8 @@
               "blobSha": "24e0053e70e7843eb74fd96c4fbd98d651e13ac6",
               "rightsREV2": "PARTIALLY TESTED - zelfde opname automatisch (r=1.0) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
               "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
-              "openRights": "Licentie/naamsvermelding iNaturalist-foto niet herbevestigd (API 404 op 23-11-2026)"
+              "openRights": "Licentie/naamsvermelding iNaturalist-foto niet herbevestigd (API 404 op 23-11-2026)",
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED."
             }
           ],
           "sources": {
@@ -2688,6 +2691,7 @@
             "executionStatus": "UITGEVOERD (R03b) - open punten blijven",
             "remainingOpen": [
               "G7 OPEN: geen aantoonbaar betere Europese hoofdfoto of juveniel gevonden; beste kandidaten voor eigenaarkeuze: volwassen in vlucht San Giuliano Terme, Toscane (Scontardi, CC BY-SA 4.0), juveniel in vlucht Brandon Marsh, Engeland (Jacob Spinks, CC BY 2.0; minder scherp), volwassen op nestkast Noordwijk (Michel Langeveld, CC BY-SA 4.0; klein in beeld)",
+              "G8 BLOCKED: media-intake opnieuw starten zodra de runner apt-get weer afrondt, of eigenaarakkoord om ffmpeg alleen in audiomodus te installeren",
               "ANWB NOT TESTED",
               "Vogelbescherming NOT TESTED (hostprompt 24-11 07:45 onbeantwoord)",
               "Audio PARTIALLY TESTED; bron noemt geen roeptype of herkomst",
@@ -2702,7 +2706,7 @@
             "G4 nieuw fotopaar Slechtvalk-Havik volwassen in vlucht met gelabelde rijen (Commons-foto met bevestigde rechten tegen bewezen Havik-mannetje)",
             "G4 gelabelde rijen op Torenvalk-paren (wederkerig)",
             "G7 gericht fotoonderzoek uitgevoerd (discover-rev2-r03b, 11 zoekopdrachten): geen kandidaat aantoonbaar beter; niets vervangen of verwijderd",
-            "G8 iNaturalist-rechten via fallbackroutes gecontroleerd (zie foto-regels)",
+            "G8 fallbackroutes gebouwd en getest (test_orig_check.py); uitvoering BLOCKED door runner (apt-get), zie foto-regels",
             "Lijkt-op-teksten Torenvalk/Havik inhoudelijk"
           ],
           "repair": {
