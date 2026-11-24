@@ -805,7 +805,17 @@
 }
 .sound-details[open] > label:not([hidden]) { display: block; margin-bottom: 8px; }
 .sound-details > summary { min-height: 44px; align-content: center; cursor: pointer; }
-#soundSaveState:empty { display: none; }
+#soundSaveState:empty, #soundSaveHint:empty { display: none; }
+#soundSaveHint { margin: 10px 0 2px; padding: 10px 12px; border-inline-start: 3px solid var(--info-ink); border-radius: var(--r-sm); background: var(--accent-soft); color: var(--ink); line-height: 1.45; }
+.sound-action-location { display: block; width: 100%; min-height: 48px; margin-top: 10px; padding: 10px 14px; border: 1px solid var(--brand-mid); border-radius: var(--r-sm); background: var(--surface-2); color: var(--ink); font-weight: 700; text-align: left; cursor: pointer; }
+.sound-action-location[hidden] { display: none !important; }
+.sound-action-location:focus-visible { outline: 3px solid var(--focus-ink); outline-offset: 2px; }
+#soundReview fieldset { min-width: 0; }
+#soundReview legend { font-weight: 750; }
+#soundReview #soundAttachField, #soundReview #soundAttachSpeciesField, #soundReview #soundVerifyField { border: 1px solid var(--line); border-radius: var(--r-sm); padding: 10px; margin: 8px 0; background: var(--surface-2); }
+#soundReview :is(#soundAttachField, #soundAttachSpeciesField, #soundVerifyField):has(input:checked) { border-color: var(--brand-mid); background: var(--info-soft); }
+#soundReview :is(#soundAttachField, #soundAttachSpeciesField, #soundVerifyField)[hidden] { display: none !important; }
+#soundReview :is(#soundAttach, #soundAttachSpecies, #soundVerify) { min-width: 20px; min-height: 20px; }
 #soundSave { width: 100%; margin-block-start: 10px; }
 @media (max-width:360px) { .quick-add-options{padding:14px 12px 18px} .quick-add-option{gap:10px;padding:12px} }
 

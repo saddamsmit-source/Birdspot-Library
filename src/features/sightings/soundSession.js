@@ -76,6 +76,7 @@ export function mountSoundSession(root, onSaved) {
         <p id="soundMoment"></p>
         <p id="soundPosition" role="status" tabindex="-1">Plek bepalen…</p>
         <ul id="soundPlaceOptions" aria-label="Beschikbare kaartpinnen" hidden></ul>
+        <button type="button" id="soundPlaceFix" class="sound-action-location" hidden>Kies een plek op de kaart</button>
         <label id="soundAttachField" class="sound-merlin__used" hidden><input type="checkbox" id="soundAttach"> Bewaar de opname bij mijn waarneming</label>
         <label id="soundAttachSpeciesField" class="sound-merlin__used" hidden><input type="checkbox" id="soundAttachSpecies"> Bewaar de opname bij mijn soortgeluiden</label>
         <label id="soundVerifyField" class="sound-merlin__used" hidden><input type="checkbox" id="soundVerify"> Ik heb zelf gecontroleerd dat het geluid bij deze soort hoort</label>
@@ -94,6 +95,7 @@ export function mountSoundSession(root, onSaved) {
           <label>Notitie voor deze vogels <textarea id="soundNotes" rows="2" maxlength="1000"></textarea></label>
         </details>
       </fieldset>
+      <p id="soundSaveHint" role="status" aria-live="polite"></p>
       <p id="soundSaveState" role="status"></p>
       <button class="btn-primary" id="soundSave" type="submit">Pin je waarneming</button>
     </form>
@@ -118,6 +120,7 @@ export function mountSoundSession(root, onSaved) {
   const date = find('soundDate'), time = find('soundTime'), pinStatus = find('soundPosition');
   const placeOptions = find('soundPlaceOptions'), locationName = find('soundPlace');
   const gps = find('soundGps'), pin = find('soundPin'), save = find('soundSave');
+  const placeFix = find('soundPlaceFix'), saveHint = find('soundSaveHint');
   const candidates = new Map();
   const levels = [];
   const timeline = find('soundTimeline'), waveform = find('soundWaveform'), discarder = find('soundDiscard');
@@ -240,11 +243,28 @@ export function mountSoundSession(root, onSaved) {
     updateMerlin();
     const speciesOnly = attachSpecies && !attachClip && selected === 1;
     const requiresPosition = !speciesOnly;
-    const invalidAudio = (attachClip || attachSpecies) &&
-      (!wavFile || selected !== 1 || (attachSpecies && !verifyBox.checked));
+    const wantsAudio = attachClip || attachSpecies;
+    const invalidAudio = wantsAudio && (!wavFile || selected !== 1 || (attachSpecies && !verifyBox.checked));
+    // Wacht bij een opgenomen clip op WAV-conversie voordat iemand per ongeluk
+    // zonder de nog niet zichtbare bewaarkeuzes pint.
     save.disabled = sessionCommitted || !selected || !date.value || !time.value || invalidAudio ||
+      (Boolean(clip) && wavState === 'pending') ||
       (requiresPosition && (!coordinates || locationPending || needsPlaceChoice)) ||
       starting || finishing || recorder?.state === 'recording';
+    // Leg op hetzelfde scherm uit waarom opslaan nog niet mogelijk is; een verborgen
+    // 'Details aanpassen' mag de enige route naar een geldige kaartpin niet zijn.
+    const placeBlocked = requiresPosition && (!coordinates || locationPending || needsPlaceChoice);
+    placeFix.hidden = sessionCommitted || !selected || !placeBlocked;
+    placeFix.textContent = needsPlaceChoice ? 'Kies bestaande of nieuwe plek op kaart' : 'Kies een plek op de kaart';
+    saveHint.textContent = sessionCommitted ? 'Opgeslagen.'
+      : !selected ? 'Selecteer eerst minimaal één vogelsoort.'
+      : starting || finishing || recorder?.state === 'recording' ? 'Stop de opname voordat je opslaat.'
+      : clip && wavState === 'pending' ? 'Opname wordt klaargemaakt; bewaarkeuzes worden zo beschikbaar.'
+      : wantsAudio && selected !== 1 ? 'Een opname kan aan één gekozen soort worden gekoppeld.'
+      : wantsAudio && !wavFile ? (wavState === 'pending' ? 'Opname wordt klaargemaakt; daarna kun je bewaren.' : 'De opname is nog niet beschikbaar als WAV; probeer opnieuw op te nemen.')
+      : attachSpecies && !verifyBox.checked ? 'Bevestig eerst dat je het geluid bij deze soort hebt gecontroleerd.'
+      : placeBlocked ? (locationPending ? 'GPS wordt opgehaald. Je kunt ook handmatig een pin kiezen.' : 'Kies een kaartpin om de waarneming vast te leggen.')
+      : '';
     save.textContent = sessionCommitted ? 'Al opgeslagen'
       : speciesOnly ? 'Bewaar bij mijn soortgeluiden'
       : attachClip && attachSpecies ? 'Bewaar bij waarneming én soort'
@@ -285,8 +305,8 @@ export function mountSoundSession(root, onSaved) {
     find('soundMerlinCompare').textContent = compare;
     const attachField = find('soundAttachField'), attachNote = find('soundAttachNote');
     const speciesField = find('soundAttachSpeciesField'), verifyField = find('soundVerifyField');
-    attachField.hidden = speciesField.hidden = !wavFile;
-    attachBox.disabled = speciesBox.disabled = chosen.length !== 1;
+    attachField.hidden = speciesField.hidden = !clip;
+    attachBox.disabled = speciesBox.disabled = chosen.length !== 1 || !wavFile;
     if (chosen.length !== 1) {
       attachBox.checked = speciesBox.checked = verifyBox.checked = false;
       attachClip = attachSpecies = false;
@@ -310,7 +330,7 @@ export function mountSoundSession(root, onSaved) {
       wavState = 'ready';
     }).catch(() => {
       if (!closed && request === wavRequest) wavState = 'failed';
-    }).finally(() => { if (!closed && request === wavRequest) updateMerlin(); });
+    }).finally(() => { if (!closed && request === wavRequest) updateSelection(); });
   }
 
   function persistDraft() {
@@ -608,6 +628,15 @@ export function mountSoundSession(root, onSaved) {
     showPlace();
     pinStatus.focus();
     persistDraft();
+  });
+  placeFix.addEventListener('click', () => {
+    if (needsPlaceChoice) {
+      placeOptions.hidden = false;
+      placeOptions.scrollIntoView?.({ block: 'nearest' });
+      const first = placeOptions.querySelector('button');
+      if (first) { first.focus(); return; }
+    }
+    pin.click();
   });
   pin.addEventListener('click', () => {
     gpsRequest++;
