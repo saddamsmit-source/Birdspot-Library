@@ -12,6 +12,7 @@ import { DISTRIBUTION, GBIF_YEARS, MAP_CELL, MAP_COLUMNS, MAP_MIN_RECORDS, MAP_P
 import { GUIDE_COMPARISONS } from './guideComparisons.js';
 import { GUIDE_PHOTOS } from './guidePhotos.js';
 import { GUIDE_AUDIO, GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from './guideMedia.js';
+import { GUIDE_HERO_SETS, MAX_HERO_PHOTOS } from './guideHeroSets.js';
 import { photoInfoMarkup } from '../../utils/photoInfo.js';
 import { assetUrl } from '../../utils/assetUrl.js';
 import { appIcon } from '../../utils/icons.js';
@@ -83,6 +84,31 @@ export function guideHeroPhoto(id) {
   if (!image) return GUIDE_PHOTOS[id];
   return [...(GUIDE_POSES[id] || []), ...Object.values(GUIDE_PLUMAGE[id] || {})]
     .find(photo => photo.image === image) || GUIDE_PHOTOS[id];
+}
+
+/** FOT-02: hoofdfoto plus optionele extra hoofdfoto's (max. MAX_HERO_PHOTOS), alleen uit de eigen,
+ * gecrediteerde gidsfoto's van deze soort; geen dubbele opnames. Label alleen uit vastgelegde rol. */
+export function guideHeroPhotos(id, sets = GUIDE_HERO_SETS) {
+  const hero = guideHeroPhoto(id);
+  if (!hero) return [];
+  const own = [...(GUIDE_POSES[id] || []), ...Object.values(GUIDE_PLUMAGE[id] || {}), GUIDE_PHOTOS[id]]
+    .filter(photo => photo?.image && photo.author && photo.license);
+  const out = [hero];
+  for (const image of Array.isArray(sets[id]) ? sets[id] : []) {
+    const photo = own.find(candidate => candidate.image === image);
+    if (!photo || out.some(kept => kept.image === photo.image)) continue;
+    out.push(photo);
+    if (out.length === MAX_HERO_PHOTOS) break;
+  }
+  return out;
+}
+
+const ROLE_LABELS = {adult_m: 'Mannetje', adult_f: 'Vrouwtje', juv: 'Juveniel'};
+/** Rol voor de fotokijker, alleen uit vastgelegde velden (geslacht, leeftijd, vlucht, label). */
+export function guidePhotoRole(photo) {
+  const role = ROLE_LABELS[photoRole(photo)] || photo?.label || '';
+  if (photo?.flight) return role && role !== 'In vlucht' ? `${role} · in vlucht` : 'In vlucht';
+  return role;
 }
 
 function photoRole(photo) {

@@ -5,7 +5,7 @@
  */
 
 import { SPECIES, CATEGORY_LABELS, REGIONS, searchSpecies, activeCategories, CATEGORY_BADGES, matchesSpeciesStatus } from '../../data/species.js';
-import { tabBar, guideHeroPhoto, recognitionPanel, voicePanel, voiceText, statusPanel, wherePanel, wherePlaces, minePanel, sightingStats } from './detailSections.js';
+import { tabBar, guideHeroPhoto, guideHeroPhotos, guidePhotoRole, recognitionPanel, voicePanel, voiceText, statusPanel, wherePanel, wherePlaces, minePanel, sightingStats } from './detailSections.js';
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
 import { getDB, getPhotosBySpecies, getPhoto, changePhotos, isSightingAudio } from '../../data/db.js';
 import { withDataLock } from '../../data/dataLock.js';
@@ -544,6 +544,22 @@ function counterText(seenIds) {
   return `Nederland · ${seen}/${pool.length} ${label} waargenomen`;
 }
 
+/** Zichtbaar label van een gidsfoto, alleen uit bestaande kaarttekst (rol, kleed, vergelijkingskop). */
+function guideTriggerLabel(el) {
+  if (el.dataset.photoLabel) return el.dataset.photoLabel;
+  const who = el.closest('.sd-cmp-who');
+  if (who) return [who.querySelector('strong')?.textContent, who.querySelector('small')?.textContent].filter(Boolean).join(' · ');
+  const card = el.closest('.sd-plumage');
+  if (card) {
+    const title = card.querySelector(':scope > div > strong')?.firstChild?.textContent?.trim();
+    const caption = el.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
+    // Een bijschrift dat al met de kleedtitel begint ("Mannetje, landend") vervangt de titel; geen dubbele rol.
+    if (caption && title && caption.toLowerCase().startsWith(title.toLowerCase())) return caption;
+    return [title, caption && caption !== title ? caption : ''].filter(Boolean).join(' · ');
+  }
+  return el.closest('.sd-compare-card')?.querySelector('strong')?.textContent?.trim() || '';
+}
+
 // ── Detail sheet ───────────────────────────────────────────────
 function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   const s = SPECIES.find(x => x.id === speciesId);
@@ -559,9 +575,20 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   const photoList = [];
   let closed = false;
   let closeViewer;
+  // FOT-02: extra hoofdfoto's (max. 3) komen alleen uit de gecontroleerde lijst; zonder lijst blijft het één foto.
+  const heroPhotos = guidePhoto ? guideHeroPhotos(speciesId) : [];
+  const heroExtras = heroPhotos.slice(1);
   const stockHero = guidePhoto
-    ? '<button type="button" class="sd-hero-photo" data-guide-image="' + escHtml(assetUrl(guidePhoto.image)) + '" aria-label="Vergroot hoofdfoto">' +
-      '<img class="species-guide-photo" data-src="' + escHtml(assetUrl(guidePhoto.image)) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' + photoInfoMarkup(guidePhoto)
+    ? '<button type="button" class="sd-hero-photo" data-guide-image="' + escHtml(assetUrl(guidePhoto.image)) + '"' +
+        ' data-photo-label="' + escHtml(guidePhotoRole(guidePhoto) || 'Hoofdfoto') + '"' +
+        ' aria-label="' + (heroExtras.length ? 'Vergroot hoofdfoto, 1 van ' + heroPhotos.length + '; veeg of gebruik de pijlen voor de volgende' : 'Vergroot hoofdfoto') + '">' +
+      '<img class="species-guide-photo" data-src="' + escHtml(assetUrl(guidePhoto.image)) + '" alt="' + escHtml(guidePhoto.alt) + '"></button>' + photoInfoMarkup(guidePhoto) +
+      (heroExtras.length
+        ? '<small class="sd-hero-count" aria-hidden="true">1/' + heroPhotos.length + '</small>' +
+          heroExtras.map((photo, i) => '<div class="sd-hero-extra" hidden data-hero-extra="' + (i + 1) + '"' +
+            ' data-guide-image="' + escHtml(assetUrl(photo.image)) + '" data-alt="' + escHtml(photo.alt || s.nameNL) + '"' +
+            ' data-photo-label="' + escHtml(guidePhotoRole(photo) || 'Hoofdfoto ' + (i + 2)) + '">' + photoInfoMarkup(photo) + '</div>').join('')
+        : '')
     : '<span aria-hidden="true">' + escHtml(s.icon) + '</span>';
 
   const sheet = document.createElement('div');
@@ -683,7 +710,10 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
   sheet.addEventListener('click',e => {
     if (e.target===sheet || e.target.closest('.signature-species-detail-close')) close();
     const photo = e.target.closest('[data-guide-image]');
-    if (photo) openViewer(photo.dataset.guideImage, photo.querySelector('img').alt, photo);
+    if (photo) {
+      const {items, index} = guideGallery(photo);
+      openViewer(photo.dataset.guideImage, photo.querySelector('img')?.alt || s.nameNL, photo, items, index);
+    }
     const compare = e.target.closest('[data-compare-species]');
     if (compare) {
       close(false);
@@ -763,13 +793,32 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
     openViewer(item.url, s.nameNL, button);
   });
 
-  function openViewer(url, alt, trigger) {
+  function openViewer(url, alt, trigger, items = null, index = 0) {
     closeViewer?.(false);
     closeViewer = openPhotoViewer({
-      url, alt, trigger,
+      url, alt, trigger, items, index,
       photoInfo: trigger.parentElement.querySelector('.photo-info'),
       onClose: () => { closeViewer = undefined; },
     });
+  }
+
+  /** FOT-01/FOT-02: de zichtbare gidsfoto's uit dezelfde groep (kleedfoto's, vlucht, overige,
+   * één vergelijkingspaar, of de hoofdfotoreeks) worden één doorbladerbare reeks. */
+  function guideGallery(trigger) {
+    const hero = trigger.matches('.sd-hero-photo') && trigger.closest('.signature-species-detail-image');
+    const scope = hero || trigger.closest('.sd-cmp-panel, .sd-plumage-list, .sd-compare-grid');
+    if (!scope) return {items: null, index: 0};
+    const visible = [...scope.querySelectorAll('[data-guide-image]')]
+      .filter(el => !el.hasAttribute('data-hero-extra') && el.getClientRects().length);
+    const extras = hero ? [...scope.querySelectorAll('[data-hero-extra]')] : [];
+    const items = [...visible, ...extras].map(el => ({
+      url: el.dataset.guideImage,
+      alt: el.querySelector('img')?.alt || el.dataset.alt || s.nameNL,
+      label: guideTriggerLabel(el),
+      photoInfo: el.hasAttribute('data-hero-extra') ? el.querySelector('.photo-info') : el.parentElement.querySelector('.photo-info'),
+      trigger: el.hasAttribute('data-hero-extra') ? trigger : el,
+    }));
+    return {items: items.length > 1 ? items : null, index: Math.max(0, visible.indexOf(trigger))};
   }
 
   (async()=>{

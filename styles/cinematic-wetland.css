@@ -92,6 +92,8 @@
 .ambient-wetland .weather-desc,
 .ambient-wetland .weather-feels,
 .ambient-wetland .weather-meta,
+.ambient-wetland .weather-place,
+.ambient-wetland .weather-place__name,
 .ambient-wetland .hotspot-meta {
   color:#f2e9d6!important;
 }
