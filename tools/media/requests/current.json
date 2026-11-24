@@ -1,7 +1,7 @@
 {
   "mode": "origcheck",
-  "manifest": "tools/media/origcheck_2026-11-24_rev2_r03b_inat.json",
-  "out": "docs/media-intake/2026-11-24/origcheck-rev2-r03b-inat",
-  "requestedBy": "Claude (writerclaim PR #353, comment 7124166865)",
-  "nonce": 55
+  "manifest": "tools/media/origcheck_2026-11-24_rev2_r03c.json",
+  "out": "docs/media-intake/2026-11-24/origcheck-rev2-r03c",
+  "requestedBy": "Claude (writerclaim PR #353, comment 7126709921)",
+  "nonce": 56
 }

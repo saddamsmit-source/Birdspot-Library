@@ -71,4 +71,21 @@ r = oc.inat_rights(g, item)
 assert r["rightsMatch"] is True and r["inat"]["route"].endswith("/photos/725640198.json") and r["inat"]["observation"]["placeGuess"] == "Utrecht, NL", r
 assert len(r["inat"]["triedFirst"]) == 2, r
 assert oc.inat_rights(V1Gone({"id": 1}), item)["rightsMatch"] is None, "a page without licence data claims nothing"
+# F3-REV2-R03c: kandidaat (geen lokaal bestand) en volle-resolutie-uitsnede; SHA-1 van de download wordt gecontroleerd.
+import hashlib, io as _io, tempfile as _tf
+from PIL import Image as _Im
+_buf = _io.BytesIO(); _Im.new("RGB", (400, 300), (120, 80, 40)).save(_buf, "JPEG"); _raw = _buf.getvalue()
+class FullCi:
+    crop_box = staticmethod(ci.crop_box)
+    license_ok = staticmethod(ci.license_ok)
+    def get(self, url, binary=False): return _raw
+_info = {"url": "u", "sha1": hashlib.sha1(_raw).hexdigest(), "license": "CC BY-SA 4.0", "author": "A", "page": "p", "width": 400, "height": 300}
+with _tf.TemporaryDirectory() as _d:
+    _d = Path(_d)
+    cr = oc.candidate_record(FullCi(), {"id": "c1", "speciesId": "sp009", "title": "File:X.jpg", "fullCrop": [0.25, 0.25, 0.75, 0.75]}, _info, _d)
+    assert cr["sha1Verified"] is True and cr["licenseAllowed"] is True and cr["originalSize"] == [400, 300], cr
+    assert cr["fullCrop"]["box"] == [100, 75, 300, 225] and _Im.open(_d / "c1_full_crop.jpg").size == (200, 150), "uitsnede op oorspronkelijke resolutie"
+    bad = oc.candidate_record(FullCi(), {"id": "c2", "title": "File:Y.jpg"}, {**_info, "sha1": "0" * 40, "license": "CC BY-NC 4.0"}, _d)
+    assert bad["sha1Verified"] is False and bad["licenseAllowed"] is False, "afwijkende SHA-1 en NC worden zichtbaar"
+    assert oc.candidate_record(FullCi(), {"id": "c3", "title": "File:Z.jpg"}, None, _d)["error"], "onbekende kandidaat claimt niets"
 print("ORIGCHECK PASS: same shot (full and crop) accepted; other and mirrored image clearly worse", full, crop, diff)

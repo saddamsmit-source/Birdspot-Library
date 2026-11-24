@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-24",
+  "purpose": "F3-REV2-R03c (eigenaarbesluit 24-11-2026 09:53): één gecontroleerde heruitvoering G8 iNaturalist-rechten (sp009 x2, sp007 mannetje-vlucht) na de ffmpeg-correctie; GBS-vluchtfoto op oorspronkelijke resolutie; drie Europese Slechtvalk-kandidaten (bronpagina + origineel, GEEN import)",
+  "items": [
+    {
+      "speciesId": "sp009",
+      "author": "Jonathan Tollin",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:2:Volwassen in vlucht",
+      "image": "/assets/species/plumage/sp009-male-flight.webp",
+      "inatPhotoId": 9819028,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp009",
+      "author": "Josh Boe",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:3:Juveniel in vlucht",
+      "image": "/assets/species/plumage/sp009-juv-flight.webp",
+      "inatPhotoId": 251479995,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp007",
+      "author": "Вячеслав Юсупов",
+      "license": "CC BY 4.0",
+      "role": "GUIDE_POSES:1:Mannetje in vlucht",
+      "image": "/assets/species/plumage/sp007-male-flight.webp",
+      "inatPhotoId": 29451692,
+      "urls": [
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpeg",
+        "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.JPG"
+      ]
+    },
+    {
+      "speciesId": "sp016",
+      "author": "caroline legg",
+      "license": "CC BY 2.0",
+      "role": "GUIDE_POSES:0:In vlucht",
+      "image": "/assets/species/plumage/sp016-flight.webp",
+      "title": "File:Dendrocopos major (51546452028).jpg",
+      "fullCrop": [
+        0.22,
+        0.3,
+        0.67,
+        0.78
+      ]
+    },
+    {
+      "kind": "candidate",
+      "id": "sp009_kandidaat1_toscane",
+      "speciesId": "sp009",
+      "title": "File:Falco peregrinus - San Giuliano Terme (Toscana).jpg",
+      "proposedRole": "volwassen in vlucht",
+      "fullCrop": [
+        0.2,
+        0.0,
+        0.55,
+        0.8
+      ]
+    },
+    {
+      "kind": "candidate",
+      "id": "sp009_kandidaat2_brandon",
+      "speciesId": "sp009",
+      "title": "File:Peregrine Falcon (2) (9594380746).jpg",
+      "proposedRole": "juveniel in vlucht",
+      "fullCrop": [
+        0.1,
+        0.3,
+        0.55,
+        0.95
+      ]
+    },
+    {
+      "kind": "candidate",
+      "id": "sp009_kandidaat3_langeveld",
+      "speciesId": "sp009",
+      "title": "File:Falco peregrinus 114336093.jpg",
+      "proposedRole": "volwassen (hoofdfoto/rust)",
+      "fullCrop": [
+        0.33,
+        0.15,
+        0.65,
+        0.85
+      ]
+    }
+  ]
+}

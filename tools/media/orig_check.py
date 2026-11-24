@@ -157,6 +157,40 @@ def inat_rights(ci, e: dict) -> dict:
     return {"inat": {"error": "; ".join(errors)[:300]}, "rightsMatch": None}
 
 
+def full_crop(ci, info: dict, crop, out: Path, stem: str) -> dict:
+    """F3-REV2-R03c: origineel downloaden (SHA-1 tegen Commons), een uitsnede op volle resolutie en een overzicht
+    opslaan voor visuele beoordeling. Alleen reviewmateriaal: niets wordt in de app gezet."""
+    import hashlib
+    from PIL import Image, ImageOps
+    data = ci.get(info["url"], binary=True)
+    rec = {"originalBytes": len(data), "sha1Verified": hashlib.sha1(data).hexdigest() == info.get("sha1")}
+    img = ImageOps.exif_transpose(Image.open(io.BytesIO(data))).convert("RGB")
+    rec["originalSize"] = [img.width, img.height]
+    box = ci.crop_box(img.size, crop) if crop else None
+    if box:
+        img.crop(box).save(out / f"{stem}_full_crop.jpg", quality=92)
+        rec["fullCrop"] = {"file": f"{stem}_full_crop.jpg", "box": list(box), "note": "uitsnede op oorspronkelijke resolutie, niet verkleind"}
+    ov = img.copy(); ov.thumbnail((1400, 1400)); ov.save(out / f"{stem}_overview.jpg", quality=85)
+    rec["overview"] = f"{stem}_overview.jpg"
+    return rec
+
+
+def candidate_record(ci, e: dict, info: dict | None, out: Path) -> dict:
+    """F3-REV2-R03c: kandidaat zonder lokaal bestand - bronpagina-metadata en origineel op volle resolutie."""
+    rec = {k: e.get(k) for k in ("id", "speciesId", "title", "proposedRole")}
+    rec["kind"] = "candidate"
+    if not info:
+        rec["error"] = "niet gevonden op Commons"; return rec
+    rec["commons"] = {k: info.get(k) for k in ("page", "sha1", "license", "licenseUrl", "author", "credit", "width", "height", "creditFields", "pageParams")}
+    rec["commonsContext"] = {k: info.get(k) for k in ("description", "date", "categories")}
+    rec["licenseAllowed"] = ci.license_ok(info.get("license", ""))
+    try:
+        rec.update(full_crop(ci, info, e.get("fullCrop"), out, e["id"]))
+    except Exception as err:
+        rec["error"] = str(err)[:200]
+    return rec
+
+
 def run(manifest: Path, out: Path) -> None:
     sys.path.insert(0, str(Path(__file__).parent))
     import commons_intake as ci
@@ -171,6 +205,9 @@ def run(manifest: Path, out: Path) -> None:
     for e in spec["items"]:
         if e.get("kind") == "audio":
             report["items"].append(audio_record(e, infos.get(e["title"]), ci.norm_name))
+            continue
+        if e.get("kind") == "candidate":
+            report["items"].append(candidate_record(ci, e, infos.get(e["title"]), out))
             continue
         rec = {k: e.get(k) for k in ("speciesId", "image", "title", "author", "license")}
         local = Image.open(ROOT / e["image"].lstrip("/"))
@@ -210,6 +247,8 @@ def run(manifest: Path, out: Path) -> None:
             sheet = Image.new("RGB", (a.width + b.width + 8, max(a.height, b.height)), "white")
             sheet.paste(a, (0, 0)); sheet.paste(b, (a.width + 8, 0)); sheet.save(out / name, quality=82)
             rec["sideBySide"] = name
+            if e.get("fullCrop") and e.get("title"):
+                rec.update(full_crop(ci, infos[e["title"]], e["fullCrop"], out, Path(e["image"]).stem))
         except Exception as err:
             rec["error"] = str(err)[:200]
         report["items"].append(rec)
