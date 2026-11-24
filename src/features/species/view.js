@@ -7,7 +7,8 @@
 import { SPECIES, CATEGORY_LABELS, REGIONS, searchSpecies, activeCategories, CATEGORY_BADGES, matchesSpeciesStatus } from '../../data/species.js';
 import { tabBar, guideHeroPhoto, recognitionPanel, voicePanel, voiceText, statusPanel, wherePanel, wherePlaces, minePanel, sightingStats } from './detailSections.js';
 import { SEASONS, SEASON_ORDER, toggleSeason, seasonPeriod, presentIn, periodMonthsText, isYearRound } from '../../data/seasons.js';
-import { getDB, getPhotosBySpecies, getPhoto } from '../../data/db.js';
+import { getDB, getPhotosBySpecies, getPhoto, changePhotos, isSightingAudio } from '../../data/db.js';
+import { withDataLock } from '../../data/dataLock.js';
 import { getSightings, getSightingsSnapshot }                 from '../../data/sightings.js';
 import { loadPlaces }                   from '../../data/places.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
@@ -554,6 +555,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
 
   const guidePhoto = guideHeroPhoto(speciesId);
   const photosUrls = new Set();
+  const personalAudioUrls = new Map();
   const photoList = [];
   let closed = false;
   let closeViewer;
@@ -586,6 +588,11 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
           '<button type="button" class="signature-species-media-link" id="speciesDetailMedia" aria-label="Open Media Studio">Media Studio <span aria-hidden="true">↗</span></button></div>' +
           '<div class="signature-species-photo-grid" id="speciesDetailPhotos">' +
             '<div class="detail-photos-loading"><span class="spinner" aria-hidden="true"></span></div></div>' +
+        '</section>' +
+        '<section class="detail-section sd-own-audio" id="speciesOwnAudioSection" hidden>' +
+          '<h3 class="detail-section__label">Mijn soortgeluiden</h3>' +
+          '<p>Eigen, zelf gecontroleerde opnamen. Privé op dit toestel.</p>' +
+          '<div id="speciesOwnAudioList" class="sd-own-audio-list"></div>' +
         '</section>' +
         tabBar('herkenning') +
         '<div class="sd-panel" id="sdPanel-herkenning" role="tabpanel" aria-labelledby="sdTab-herkenning">' + recognitionPanel(s, null, true) + '</div>' +
@@ -645,6 +652,8 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
       sheet.remove();
       for (const url of photosUrls) revokePhotoUrl(url);
       photosUrls.clear();
+      for (const url of personalAudioUrls.values()) URL.revokeObjectURL(url);
+      personalAudioUrls.clear();
       if (ctx?.detailCleanup === close) ctx.detailCleanup = null;
       if (animate && !ctx?.destroyed && !ctx?.detailCleanup && restoreGuideDefaults(screenEl, ctx)) {
         const id = returnFocus?.closest('.species-row')?.dataset.id;
@@ -710,6 +719,41 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
     import('../../app.js').then(({navigate}) => navigate('media'));
   });
 
+  sheet.querySelector('#speciesOwnAudioList').addEventListener('click', async event => {
+    const button = event.target.closest('[data-private-audio-remove]');
+    if (!button || button.disabled) return;
+    if (button.dataset.confirm !== 'yes') {
+      button.dataset.confirm = 'yes';
+      button.textContent = 'Bevestig verwijderen';
+      return;
+    }
+    button.disabled = true;
+    try {
+      const removedId = button.dataset.privateAudioRemove;
+      await withDataLock(async () => {
+        const current = await getPhoto(removedId);
+        if (!current || !isSightingAudio(current) || !current.personalSpecies || current.speciesId !== speciesId) {
+          throw new Error('De opname is intussen gewijzigd');
+        }
+        if (current.sightingId) {
+          // De waarneming behoudt haar eigen audio. Alleen persoonlijke soortkoppeling vervalt.
+          await changePhotos({ put: [{ ...current, personalSpecies: false, speciesId: null }] });
+        } else {
+          await changePhotos({ remove: [removedId] });
+        }
+      });
+      const url = personalAudioUrls.get(removedId);
+      if (url) URL.revokeObjectURL(url);
+      personalAudioUrls.delete(removedId);
+      button.closest('.sd-own-audio-item').remove();
+      if (!sheet.querySelector('#speciesOwnAudioList').children.length) sheet.querySelector('#speciesOwnAudioSection').hidden = true;
+    } catch (_) {
+      button.disabled = false;
+      button.textContent = 'Verwijderen mislukt, probeer opnieuw';
+      button.dataset.confirm = '';
+    }
+  });
+
   sheet.querySelector('#speciesDetailPhotos').addEventListener('click',e => {
     const button=e.target.closest('[data-photo-index]');
     if (!button) return;
@@ -732,6 +776,32 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
     try {
       const [indexed, sightings] = await Promise.all([getPhotosBySpecies(speciesId),getSightings()]);
       if (closed || ctx?.destroyed) return;
+      const privateAudio = indexed.filter(item => isSightingAudio(item) && item.personalSpecies === true &&
+        item.speciesId === speciesId && item.blob instanceof Blob);
+      const ownSection = sheet.querySelector('#speciesOwnAudioSection');
+      const ownList = sheet.querySelector('#speciesOwnAudioList');
+      if (privateAudio.length) {
+        ownSection.hidden = false;
+        for (const item of privateAudio) {
+          const card = document.createElement('div');
+          card.className = 'sd-own-audio-item';
+          card.dataset.privateAudioId = item.id;
+          const heading = document.createElement('strong');
+          heading.textContent = item.filename || 'Eigen opname';
+          const player = document.createElement('audio');
+          player.controls = true;
+          player.setAttribute('aria-label', 'Eigen opname van ' + s.nameNL);
+          const url = URL.createObjectURL(item.blob);
+          personalAudioUrls.set(item.id, url);
+          player.src = url;
+          const remove = document.createElement('button');
+          remove.type = 'button';
+          remove.dataset.privateAudioRemove = item.id;
+          remove.textContent = 'Verwijder uit mijn soortgeluiden';
+          card.append(heading, player, remove);
+          ownList.append(card);
+        }
+      }
       const matches = sightings.filter(item=>item && item.speciesId===speciesId)
         .sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
       const recordIds = new Set(matches.map(item=>item.id));

@@ -239,11 +239,27 @@
   display: grid;
   gap: 8px;
   margin-inline: var(--featured-notes-inset);
-  padding-block: 9px 14px;
+  padding-block: 7px 14px;
   border-top: 1px solid rgb(248 244 232 / .3);
 }
-#slideshow.featured-birds .featured-birds__caption .field-featured-notes__body > p {
-  margin: 0;
+#slideshow.featured-birds .featured-birds__caption .field-featured-fact[hidden] { display: none; }
+.field-featured-fact {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding-block: 3px;
+  font-size: .875rem;
+  line-height: 1.45;
+  min-width: 0;
+}
+.field-featured-fact__icon { width: 20px; height: 20px; margin-top: 2px; color: var(--selected-gold); }
+.field-featured-fact strong { display: block; font-size: .8125rem; letter-spacing: .01em; }
+#slideshow.featured-birds .featured-birds__caption .field-featured-fact p {
+  margin: 2px 0 0;
+  font-size: .875rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 #slideshow .field-featured-actions > .field-action:active {
   background: rgb(16 39 31 / .68);

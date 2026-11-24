@@ -136,8 +136,26 @@ function buildSkeleton() {
           <details class="field-featured-notes">
             <summary>Veldkenmerken</summary>
             <div class="field-featured-notes__body">
-              <p id="featuredBirdWhere"></p>
-              <p class="featured-birds__presence" id="featuredBirdPresence"></p>
+              <div class="field-featured-fact">
+                ${appIcon('eye', 'ui-icon field-featured-fact__icon')}
+                <div><p id="featuredBirdWhere"></p></div>
+              </div>
+              <div class="field-featured-fact" hidden>
+                ${appIcon('male', 'ui-icon field-featured-fact__icon')}
+                <div><strong>Man en vrouw</strong><p id="featuredBirdSexes"></p></div>
+              </div>
+              <div class="field-featured-fact" hidden>
+                ${appIcon('reed', 'ui-icon field-featured-fact__icon')}
+                <div><strong>Waar zoeken?</strong><p id="featuredBirdHabitat"></p></div>
+              </div>
+              <div class="field-featured-fact" hidden>
+                ${appIcon('map', 'ui-icon field-featured-fact__icon')}
+                <div><strong>Waar in Nederland?</strong><p id="featuredBirdDistribution"></p></div>
+              </div>
+              <div class="field-featured-fact">
+                ${appIcon('calendar', 'ui-icon field-featured-fact__icon')}
+                <div><p id="featuredBirdPresence"></p></div>
+              </div>
             </div>
           </details>
         </div>
