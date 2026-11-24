@@ -1,0 +1,17 @@
+name: Birdspot Vercel deployset QA
+# Snelle statische controle (geen browser, geen deployment): de app gebruikt alleen bestanden
+# uit de .vercelignore-toelatingslijst. Zonder padfilter, zodat ook nieuwe hoofdmapitems worden gezien.
+on:
+  pull_request:
+jobs:
+  deployset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Runtime files stay inside the Vercel allowlist
+        run: node tests/test_vercelignore_runtime.mjs
+      - name: Deploy set size (git gitignore semantics)
+        run: |
+          git ls-files --cached -i --exclude-from=.vercelignore > /tmp/excluded.txt
+          git ls-files --cached | grep -vxF -f /tmp/excluded.txt | grep -vx '.gitignore' | xargs -d '\n' du -cb | tail -1
