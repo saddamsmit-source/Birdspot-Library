@@ -245,7 +245,10 @@ export function mountSoundSession(root, onSaved) {
     const requiresPosition = !speciesOnly;
     const wantsAudio = attachClip || attachSpecies;
     const invalidAudio = wantsAudio && (!wavFile || selected !== 1 || (attachSpecies && !verifyBox.checked));
+    // Wacht bij een opgenomen clip op WAV-conversie voordat iemand per ongeluk
+    // zonder de nog niet zichtbare bewaarkeuzes pint.
     save.disabled = sessionCommitted || !selected || !date.value || !time.value || invalidAudio ||
+      (Boolean(clip) && wavState === 'pending') ||
       (requiresPosition && (!coordinates || locationPending || needsPlaceChoice)) ||
       starting || finishing || recorder?.state === 'recording';
     // Leg op hetzelfde scherm uit waarom opslaan nog niet mogelijk is; een verborgen
@@ -256,6 +259,7 @@ export function mountSoundSession(root, onSaved) {
     saveHint.textContent = sessionCommitted ? 'Opgeslagen.'
       : !selected ? 'Selecteer eerst minimaal één vogelsoort.'
       : starting || finishing || recorder?.state === 'recording' ? 'Stop de opname voordat je opslaat.'
+      : clip && wavState === 'pending' ? 'Opname wordt klaargemaakt; bewaarkeuzes worden zo beschikbaar.'
       : wantsAudio && selected !== 1 ? 'Een opname kan aan één gekozen soort worden gekoppeld.'
       : wantsAudio && !wavFile ? (wavState === 'pending' ? 'Opname wordt klaargemaakt; daarna kun je bewaren.' : 'De opname is nog niet beschikbaar als WAV; probeer opnieuw op te nemen.')
       : attachSpecies && !verifyBox.checked ? 'Bevestig eerst dat je het geluid bij deze soort hebt gecontroleerd.'
@@ -301,8 +305,8 @@ export function mountSoundSession(root, onSaved) {
     find('soundMerlinCompare').textContent = compare;
     const attachField = find('soundAttachField'), attachNote = find('soundAttachNote');
     const speciesField = find('soundAttachSpeciesField'), verifyField = find('soundVerifyField');
-    attachField.hidden = speciesField.hidden = !wavFile;
-    attachBox.disabled = speciesBox.disabled = chosen.length !== 1;
+    attachField.hidden = speciesField.hidden = !clip;
+    attachBox.disabled = speciesBox.disabled = chosen.length !== 1 || !wavFile;
     if (chosen.length !== 1) {
       attachBox.checked = speciesBox.checked = verifyBox.checked = false;
       attachClip = attachSpecies = false;
