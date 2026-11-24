@@ -1956,7 +1956,52 @@
           },
           "resolvedInR02c": [
             "G9b algemene vluchtfoto uit de zichtbare gids (eigenaarbesluit 23-11-2026 22:10)"
-          ]
+          ],
+          "g8R03d": {
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
+            "run": "media-intake-run 45360468665 (head 37b7fae, geslaagd, ffmpeg overgeslagen)",
+            "evidence": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json",
+            "decision": "Geen nieuwe automatische iNaturalist-aanroepen (eigenaar). Een beschikbare afbeelding, eerdere registratie of werkende download is geen bewijs van herpublicatierechten. Nieuwe eigenaarbeslissing nodig bij een betrouwbare handmatige bron of een afzonderlijk goedgekeurde vervangingsfoto.",
+            "photos": [
+              {
+                "speciesId": "sp007",
+                "path": "/assets/species/plumage/sp007-male-flight.webp",
+                "inatPhotoId": null,
+                "registeredClaim": {
+                  "author": "Вячеслав Юсупов",
+                  "license": "CC BY 4.0",
+                  "source": "https://www.inaturalist.org/photos/29451692",
+                  "file": "iNaturalist photo 29451692"
+                },
+                "originalReachable": {
+                  "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg",
+                  "sourceSize": [
+                    2048,
+                    1365
+                  ],
+                  "localSize": [
+                    922,
+                    792
+                  ],
+                  "mode": "crop",
+                  "r": 0.824,
+                  "sameShotAutomatic": false,
+                  "identity": "uitsnede; eerder visueel bevestigd als zelfde opname (R02/R03)"
+                },
+                "routes404": "https://api.inaturalist.org/v1/photos/29451692: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/29451692: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/29451692.json: HTTP Error 404: Not Found",
+                "missing": [
+                  "licentiecode",
+                  "attributie/naamsvermelding zoals op iNaturalist",
+                  "waarneming-ID",
+                  "plaats",
+                  "datum",
+                  "taxon/kwaliteitsgraad"
+                ],
+                "status": "PARTIALLY TESTED - foto-identiteit bevestigd, herpublicatierechten NIET bevestigd"
+              }
+            ]
+          }
         }
       }
     },
@@ -2814,11 +2859,152 @@
                 "imported": false
               }
             ],
-            "proposal": "Kandidaat 1 (Toscane) als vervanging van sp009-male-flight in \"In vlucht\" en in het paar Torenvalk–Slechtvalk volwassen in vlucht; huidige foto naar retired met historie. Alleen na afzonderlijk eigenaarbesluit en volledige import- en zes-puntscontrole."
+            "proposal": "Kandidaat 1 (Toscane) als vervanging van sp009-male-flight in \"In vlucht\" en in het paar Torenvalk–Slechtvalk volwassen in vlucht; huidige foto naar retired met historie. Alleen na afzonderlijk eigenaarbesluit en volledige import- en zes-puntscontrole.",
+            "proposalR03d": {
+              "date": "2026-11-24",
+              "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
+              "status": "VOORSTEL - wacht op afzonderlijk definitief eigenaarbesluit; niet geïmporteerd, niet actief, geen FULL PASS",
+              "replaces": "/assets/species/plumage/sp009-male-flight.webp (In vlucht, volwassen; ook in paar Torenvalk–Slechtvalk volwassen in vlucht)",
+              "candidate": {
+                "title": "File:Falco peregrinus - San Giuliano Terme (Toscana).jpg",
+                "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_-_San_Giuliano_Terme_(Toscana).jpg",
+                "author": "Scontardi",
+                "credit": "Own work",
+                "license": "CC BY-SA 4.0",
+                "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+                "originalSize": [
+                  1944,
+                  1296
+                ],
+                "originalBytes": 1721210,
+                "sha1": "4c8acd03833975f48873d1a81be94a6756b607fd",
+                "sha1Verified": true,
+                "commonsDate": "2025-05-23 09:29:42",
+                "reviewFiles": [
+                  "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat1_toscane_overview.jpg",
+                  "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat1_toscane_full_crop.jpg"
+                ],
+                "attributionIfChosen": "Foto: Scontardi, CC BY-SA 4.0, via Wikimedia Commons; bewerking (verkleind en omgezet naar WebP) valt onder dezelfde licentie"
+              },
+              "checks": {
+                "identity": "VERIFIED (visueel) - Slechtvalk: zwarte kopkap met brede baardstreep, lichte borst, dwarse tekening op onderzijde en ondervleugel, gele poten",
+                "age": "VERIFIED (visueel) - volwassen (dwarsgebandeerd, geen lengtestrepen)",
+                "sex": "niet vastgesteld",
+                "subspecies": "niet vastgesteld (in Italië peregrinus of brookei mogelijk)",
+                "origin": "PARTIALLY TESTED - Toscane alleen volgens bestandsnaam; beschrijving \"Falco peregrinus\", geen locatiecategorie of coördinaten",
+                "sharpness": "VERIFIED - op 100 % kap, baardstreep en tekening scherp; vogel ca. 700 px lang in het origineel, kleiner in beeld dan de huidige foto",
+                "silhouette": "volledig: vleugels en staart gespreid van onderen, vleugelpunten en korte staart in één beeld",
+                "angle": "recht van onderen",
+                "rights": "VERIFIED - Commons-API: eigen werk, CC BY-SA 4.0, SHA-1 origineel gelijk",
+                "attribution": "auteur Scontardi (Commons-gebruiker)"
+              },
+              "currentPhoto": {
+                "pros": "groter en scherper in beeld; kap, baardstreep, borst en gele poten zeer duidelijk",
+                "cons": "vleugels half ingevouwen (silhouet minder diagnostisch); herkomst onbekend; iNaturalist-licentie niet bevestigd"
+              },
+              "candidatePros": "volledig vluchtsilhouet; dwarse tekening onder- en ondervleugel; rechten bevestigd; Europese herkomst (volgens bestandsnaam); zelfde kijkhoek als de Torenvalk-vluchtfoto",
+              "candidateCons": "kleiner in beeld; lichte tegenlichttint; kleine prooi onder de staart; ondersoort en geslacht onbekend; herkomst alleen uit bestandsnaam",
+              "effectComparisons": {
+                "Torenvalk–Slechtvalk volwassen in vlucht": "meerwaarde: beide van onderen met gespreide vleugels, waardoor vleugelvorm en staartlengte direct vergelijkbaar zijn; tekst en rijen blijven geldig",
+                "Slechtvalk–Havik volwassen in vlucht": "beperkte meerwaarde: Havik-foto is schuin van opzij; Toscane toont vleugelvorm beter dan de huidige zijaanzichtfoto (sp009.webp); alleen na afzonderlijk besluit",
+                "Slechtvalk–Havik juveniel, Torenvalk–Slechtvalk juveniel": "geen (volwassen foto)"
+              },
+              "remainingUncertainty": [
+                "herkomst alleen uit bestandsnaam",
+                "ondersoort onbekend",
+                "onafhankelijke foto-/soortreview open"
+              ],
+              "ifApproved": "kleine import van één foto (geen batch) met zes-puntscontrole, oude foto naar retired met historie en credits, vluchtcontrole/soortaudit bijwerken, render-diff"
+            }
           },
           "resolvedInR03c": [
             "G8 één gecontroleerde heruitvoering na ffmpeg-correctie: routes 404, rechten blijven PARTIALLY TESTED (niet meer BLOCKED)",
             "G7 drie Europese kandidaten op origineel en bronpagina vergeleken; geen vervanging uitgevoerd"
+          ],
+          "g8R03d": {
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
+            "run": "media-intake-run 45360468665 (head 37b7fae, geslaagd, ffmpeg overgeslagen)",
+            "evidence": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json",
+            "decision": "Geen nieuwe automatische iNaturalist-aanroepen (eigenaar). Een beschikbare afbeelding, eerdere registratie of werkende download is geen bewijs van herpublicatierechten. Nieuwe eigenaarbeslissing nodig bij een betrouwbare handmatige bron of een afzonderlijk goedgekeurde vervangingsfoto.",
+            "photos": [
+              {
+                "speciesId": "sp009",
+                "path": "/assets/species/plumage/sp009-male-flight.webp",
+                "inatPhotoId": null,
+                "registeredClaim": {
+                  "author": "Jonathan Tollin",
+                  "license": "CC BY 4.0",
+                  "source": "https://www.inaturalist.org/photos/9819028",
+                  "file": "iNaturalist photo 9819028"
+                },
+                "originalReachable": {
+                  "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg",
+                  "sourceSize": [
+                    1609,
+                    1073
+                  ],
+                  "localSize": [
+                    1223,
+                    815
+                  ],
+                  "mode": "full",
+                  "r": 0.659,
+                  "sameShotAutomatic": false,
+                  "identity": "uitsnede; eerder visueel bevestigd als zelfde opname (R02/R03)"
+                },
+                "routes404": "https://api.inaturalist.org/v1/photos/9819028: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/9819028: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/9819028.json: HTTP Error 404: Not Found",
+                "missing": [
+                  "licentiecode",
+                  "attributie/naamsvermelding zoals op iNaturalist",
+                  "waarneming-ID",
+                  "plaats",
+                  "datum",
+                  "taxon/kwaliteitsgraad"
+                ],
+                "status": "PARTIALLY TESTED - foto-identiteit bevestigd, herpublicatierechten NIET bevestigd"
+              },
+              {
+                "speciesId": "sp009",
+                "path": "/assets/species/plumage/sp009-juv-flight.webp",
+                "inatPhotoId": null,
+                "registeredClaim": {
+                  "author": "Josh Boe",
+                  "license": "CC BY 4.0",
+                  "source": "https://www.inaturalist.org/photos/251479995",
+                  "file": "iNaturalist photo 251479995"
+                },
+                "originalReachable": {
+                  "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg",
+                  "sourceSize": [
+                    1238,
+                    1105
+                  ],
+                  "localSize": [
+                    1238,
+                    1105
+                  ],
+                  "mode": "full",
+                  "r": 1.0,
+                  "sameShotAutomatic": true,
+                  "identity": "zelfde opname automatisch bevestigd"
+                },
+                "routes404": "https://api.inaturalist.org/v1/photos/251479995: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/251479995: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/251479995.json: HTTP Error 404: Not Found",
+                "missing": [
+                  "licentiecode",
+                  "attributie/naamsvermelding zoals op iNaturalist",
+                  "waarneming-ID",
+                  "plaats",
+                  "datum",
+                  "taxon/kwaliteitsgraad"
+                ],
+                "status": "PARTIALLY TESTED - foto-identiteit bevestigd, herpublicatierechten NIET bevestigd"
+              }
+            ]
+          },
+          "resolvedInR03d": [
+            "G7/Toscane: kandidaat volledig vastgelegd als niet-actief reviewbewijs met voorstel en effect op vergelijkingen",
+            "G8: run-uitkomst, bereikbare originelen, ontbrekende gegevens en geregistreerde claims vastgelegd; geen nieuwe aanroepen"
           ]
         }
       }
@@ -3167,6 +3353,13 @@
                 "date": "2026-11-24",
                 "reference": "Eigenaarbesluit R03b-QA (chat 24-11-2026 09:53 CET), uitgevoerd als F3-REV2-R03c in PR #353",
                 "effect": "Kwaliteit PARTIALLY TESTED, voorwaardelijk, vervanging gewenst; geen nieuwe foto"
+              },
+              {
+                "decision": "R03c-QA: actuele status consistent maken (voorwaardelijk), historie behouden",
+                "scope": "/assets/species/plumage/sp016-flight.webp",
+                "date": "2026-11-24",
+                "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
+                "effect": "Soortaudit-verdict voorwaardelijk; foto blijft; scherpere vluchtfoto OPEN"
               }
             ]
           },
@@ -3194,6 +3387,9 @@
           "resolvedInR03c": [
             "Vluchtfoto: totale kwaliteit PARTIALLY TESTED (voorwaardelijk, vervanging gewenst); bijschrift \"Voorlopige foto: beperkte scherpte\" met alleen scherp zichtbare kenmerken; historie in field-guide-media reviewHistory, vluchtcontrole history en soortaudit qualityHistory",
             "Vergelijkingsteksten gecontroleerd: de vluchtvergelijking noemt schoudervlekken, onderstaart en rood op de kop (op de foto scherp); geen vleugeldetails aan de foto ontleend"
+          ],
+          "resolvedInR03d": [
+            "Soortaudit M2 verdict sp016-flight: goedgekeurd (10-11-2026, historie) -> voorwaardelijk (actueel), gelijk aan vluchtcontrole; vervanging gewenst blijft OPEN. Gedateerde momentopname soortaudit-status.json (sha 2e20f1d) niet herschreven (historisch)"
           ]
         }
       }
@@ -17021,6 +17217,12 @@
         "time": "09:53",
         "batch": "F3-REV2-R03",
         "decision": "R03b-QA geaccepteerd binnen bewijsgrenzen; toestemming: GBS-fotokwaliteit nauwkeuriger, ffmpeg alleen voor audio, één G8-heruitvoering, visuele vergelijking drie Slechtvalk-kandidaten; geen automatische vervanging, geen import, geen R04"
+      },
+      {
+        "date": "2026-11-24",
+        "time": "12:16",
+        "batch": "F3-REV2-R03",
+        "decision": "R03c-QA geaccepteerd; GBS-auditstatus consistent; Toscane-kandidaat voorbereiden zonder import; G8 open zonder retries; start R04 (sp017, sp018, sp019) na geslaagd R03d-checkpoint"
       }
     ]
   }

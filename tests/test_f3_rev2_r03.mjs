@@ -104,6 +104,33 @@ for (const c of cands) {
   assert.ok(['Beter en geschikt als vervanging (voorstel; niet uitgevoerd)', 'Geschikt als aanvullende foto', 'Niet beter dan de bestaande foto', 'Onvoldoende bewijs'].includes(c.verdict), c.verdict);
 }
 
+// F3-REV2-R03d (eigenaarbesluit R03c-QA, 24-11-2026): actuele auditstatus = vluchtcontrole; historie behouden;
+// Toscane-kandidaat alleen als niet-actief voorstel; G8 blijft PARTIALLY TESTED met geregistreerde claims intact.
+{
+  const { readdirSync } = await import('node:fs');
+  const dir = new URL('../docs/fotokwaliteit/soortaudit/', import.meta.url);
+  const audit = {};
+  for (const f of readdirSync(dir).filter(f => /^M\d+\.json$/.test(f)))
+    for (const sp of Object.values(JSON.parse(readFileSync(new URL(f, dir), 'utf8')).species)) Object.assign(audit, sp.assets);
+  for (const [img, r] of Object.entries(vc.assets).filter(([, r]) => r.decision === 'voorwaardelijk'))
+    if (audit[img]) assert.equal(audit[img].verdict, 'voorwaardelijk', `R03d: soortaudit ${img} wijkt af van vluchtcontrole`);
+  const a16 = audit['/assets/species/plumage/sp016-flight.webp'];
+  assert.ok(/2026-11-10: goedgekeurd/.test(a16.verdictHistory) && /2026-11-10: voldoende/.test(a16.qualityHistory), 'R03d: oorspronkelijk besluit in de historie');
+  const prop = rec('sp009').candidatesR03c.proposalR03d;
+  assert.ok(prop.status.startsWith('VOORSTEL') && prop.candidate.sha1 === '4c8acd03833975f48873d1a81be94a6756b607fd' && prop.candidate.sha1Verified === true, 'R03d: Toscane-voorstel met SHA-1');
+  assert.ok(!JSON.stringify(fgm).includes('San Giuliano') && !JSON.stringify(fgm).includes('4c8acd0383'), 'R03d: Toscane-kandidaat niet als gidsfoto');
+  assert.ok(fgm.poses.sp009.some(p => p.image.endsWith('/sp009-male-flight.webp')), 'R03d: huidige vluchtfoto blijft');
+  for (const [id, n] of [['sp009', 2], ['sp007', 1]]) {
+    const g = rec(id).g8R03d;
+    assert.equal(g.photos.length, n);
+    for (const ph of g.photos) {
+      assert.ok(ph.status.startsWith('PARTIALLY TESTED') && ph.registeredClaim.license === 'CC BY 4.0', `R03d: ${ph.path} rechten open, geregistreerde claim behouden`);
+      const live = [...(fgm.poses[id] || []), ...Object.values(fgm.plumage[id] || {})].find(p => p?.image === ph.path);
+      assert.ok(live && live.license === ph.registeredClaim.license && live.author === ph.registeredClaim.author, `R03d: ${ph.path} credits ongewijzigd`);
+    }
+  }
+}
+
 // Register: R03-batch met open eigenaarspoort, geen FULL PASS.
 const r03 = reg.secondReview.batches.find(b => b.round === 'F3-REV2-R03');
 assert.deepEqual(r03.species, ['sp008', 'sp009', 'sp016']);
@@ -114,4 +141,4 @@ for (const id of r03.species) {
   if (s.ownerDecision.status === 'OPEN') assert.ok(s.materialGaps.length > 0, id + ': open poort zonder benoemde tekortkoming');
 }
 assert.ok(reg.secondReview.counts.reexamined <= 9 || reg.secondReview.batches.length > 3, 'na R03 maximaal 9/140 in de tweede ronde');
-console.log('F3-REV2-R03/R03b PASS: bestaande vergelijkingen behouden; 3 nieuwe paren wederkerig; gelabelde rijen; kritische kaarten wederkerig; geen publieke bronverwijzing; LK-001…LK-108; R03c GBS-vluchtfoto voorlopig, 3 kandidaten niet geïmporteerd, iNaturalist niet VERIFIED');
+console.log('F3-REV2-R03/R03b PASS: bestaande vergelijkingen behouden; 3 nieuwe paren wederkerig; gelabelde rijen; kritische kaarten wederkerig; geen publieke bronverwijzing; LK-001…LK-108; R03c GBS-vluchtfoto voorlopig, 3 kandidaten niet geïmporteerd, iNaturalist niet VERIFIED; R03d audit = vluchtcontrole, Toscane alleen voorstel, G8 open');
