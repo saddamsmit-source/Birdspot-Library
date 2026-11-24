@@ -318,9 +318,21 @@
   white-space: nowrap;
 }
 
+/* WEE-01: locatie van het weerbericht en windrichting (wind uit …). */
+.weather-place {
+  font-size: var(--fs-meta);
+  color: var(--muted);
+  margin-bottom: var(--space-8);
+  overflow-wrap: anywhere;
+}
+.weather-place__name { color: var(--ink-2); font-weight: 600; }
+.weather-wind { display: inline-flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.weather-wind-arrow { display: inline-block; font-weight: 700; line-height: 1; }
+
 .weather-meta {
   display: flex;
-  gap: var(--space-16);
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-16);
   font-size: var(--fs-meta);
   color: var(--ink-2);
   border-top: 1px solid var(--line);

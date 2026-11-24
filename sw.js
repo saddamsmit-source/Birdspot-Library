@@ -68,6 +68,7 @@ const PRECACHE_PATHS = [
 
   // JS — features
   'src/features/home/view.js',
+  'src/features/home/weatherFormat.js',
   'src/features/home/hotspots.js',
   'src/features/search/index.js',
   'src/features/home/featuredCarousel.js',
@@ -75,6 +76,7 @@ const PRECACHE_PATHS = [
   'src/features/home/specialBirds.js',
   'src/features/home/showcaseData.js',
   'src/features/species/view.js',
+  'src/features/species/guideHeroSets.js',
   'src/features/species/guidePhotos.js',
   'src/features/species/guideComparisons.js',
   'src/features/species/guideMedia.js',

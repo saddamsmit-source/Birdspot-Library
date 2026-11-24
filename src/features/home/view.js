@@ -20,6 +20,8 @@ import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
 import { bindAppSearch, searchMarkup } from '../search/index.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
+import { windMarkup, weatherPlace, weatherPlaceMarkup } from './weatherFormat.js';
+import { loadPlaces } from '../../data/places.js';
 
 // ── Constanten ─────────────────────────────────────────────
 const FALLBACK_LAT = 52.3676;
@@ -407,18 +409,23 @@ async function loadWeather(el, ctx) {
   const loader = section.querySelector('.dash-section__loading');
 
   try {
-    const { lat, lon } = await getLocation();
+    const { lat, lon, source } = await getLocation();
     if (ctx.destroyed) return;
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
-      `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m,is_day` +
+      `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m,relative_humidity_2m,is_day` +
       `&wind_speed_unit=ms&timezone=auto`;
 
     const res  = await fetch(url);
     if (!res.ok) throw new Error('Weerdata niet beschikbaar');
     const data = await res.json();
     if (ctx.destroyed) return;
-    const c    = data.current;
+    const c    = data.current || {};
     const code = c.weather_code;
+    // WEE-01: plaats zonder coördinaten (eigen plek binnen 3 km, anders "je huidige omgeving").
+    let places = [];
+    try { places = loadPlaces(); } catch (_) { /* plekken niet leesbaar: algemene omschrijving */ }
+    const place = weatherPlace({ source, lat, lon, places });
+    const degrees = value => Number.isFinite(Number(value)) && value !== null ? `${Math.round(value)}°C` : '—';
     const icon = (code === 0 || code === 1) && c.is_day === 0 ? '🌙' : WMO_ICON[code] || '🌡';
     const desc = WMO_CODES[code] || 'Onbekend';
     const [summary, ...tips] = weatherBirdTips(code, c.wind_speed_10m, c.is_day);
@@ -426,17 +433,18 @@ async function loadWeather(el, ctx) {
     if (loader) {
       loader.outerHTML = `
         <div class="weather-card">
+          ${weatherPlaceMarkup(place)}
           <div class="weather-main">
             <span class="weather-icon" role="img" aria-label="${desc}">${icon}</span>
             <div>
-              <div class="weather-temp">${Math.round(c.temperature_2m)}°C</div>
+              <div class="weather-temp">${degrees(c.temperature_2m)}</div>
               <div class="weather-desc">${desc}</div>
             </div>
-            <div class="weather-feels">Voelt als ${Math.round(c.apparent_temperature)}°C</div>
+            <div class="weather-feels">Voelt als ${degrees(c.apparent_temperature)}</div>
           </div>
           <div class="weather-meta">
-            <span>💨 ${c.wind_speed_10m} m/s</span>
-            <span>💧 ${c.relative_humidity_2m}%</span>
+            ${windMarkup(c.wind_speed_10m, c.wind_direction_10m)}
+            ${Number.isFinite(Number(c.relative_humidity_2m)) && c.relative_humidity_2m !== null ? `<span>💧 ${Math.round(c.relative_humidity_2m)}%</span>` : ''}
           </div>
           <div class="weather-tip">
             <strong><span aria-hidden="true">${appIcon('bird')}</span>${summary}</strong>
@@ -849,11 +857,11 @@ async function loadHotspotsMap(el, ctx, onSearchSelect) {
 function getLocation() {
   return new Promise(resolve => {
     if (!navigator.geolocation) {
-      return resolve({ lat: FALLBACK_LAT, lon: FALLBACK_LON });
+      return resolve({ lat: FALLBACK_LAT, lon: FALLBACK_LON, source: 'fallback' });
     }
     navigator.geolocation.getCurrentPosition(
-      pos => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
-      _   => resolve({ lat: FALLBACK_LAT, lon: FALLBACK_LON }),
+      pos => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude, source: 'gps' }),
+      _   => resolve({ lat: FALLBACK_LAT, lon: FALLBACK_LON, source: 'fallback' }),
       { timeout: 5000 }
     );
   });

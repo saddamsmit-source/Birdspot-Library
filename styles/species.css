@@ -937,6 +937,24 @@
 .sd-photo-zoom { display:flex; gap:8px; }
 .sd-photo-zoom button { min-width:44px; min-height:44px; color:#fff; background:#102a20; border:1px solid #8da99b; border-radius:8px; }
 .sd-photo-zoom button:disabled { opacity:.5; }
+/* FOT-01 (24-11-2026): dezelfde kijker als galerij. Pijlen rustig op de fotorand, rol + teller boven de zoomknoppen. */
+.signature-lightbox.sd-photo-viewer.is-gallery { grid-template-rows:minmax(0, 1fr) auto auto; gap:8px; }
+.sd-photo-viewer.is-gallery .sd-photo-viewport:not(.is-zoomed) { touch-action:pan-y pinch-zoom; }
+.sd-photo-step {
+  position:absolute; top:50%; z-index:2; width:44px; height:44px; margin-top:-22px; border-radius:50%;
+  color:#fff; background:rgba(16,42,32,.62); border:1px solid rgba(141,169,155,.7); font-size:28px; line-height:1;
+}
+.sd-photo-step[data-step="-1"] { left:max(8px, env(safe-area-inset-left)); }
+.sd-photo-step[data-step="1"] { right:max(8px, env(safe-area-inset-right)); }
+.sd-photo-step:disabled { opacity:.25; }
+.sd-photo-step:focus-visible, .sd-photo-zoom button:focus-visible { outline:3px solid #f2c14e; outline-offset:2px; }
+.sd-photo-caption { margin:0; max-width:100%; color:#fff; font-size:14px; text-align:center; overflow-wrap:anywhere; }
+.sd-photo-caption span::before { content:"·"; margin:0 6px; opacity:.7; }
+/* FOT-02: rustige aanduiding van meerdere hoofdfoto's op de soortkaart. */
+.signature-species-detail-image .sd-hero-count {
+  position:absolute; right:10px; bottom:10px; z-index:1; padding:3px 9px; border-radius:999px;
+  color:#fff; background:rgba(16,42,32,.72); font-size:12px; font-weight:600; pointer-events:none;
+}
 
 .sd-plumage-photo { min-width: 0; margin: 0; overflow-wrap: anywhere; }
 .sd-plumage-photo > p { font-size: var(--fs-meta); }
