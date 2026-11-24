@@ -1298,3 +1298,22 @@
 .sd-own-audio-item strong { overflow-wrap: anywhere; }
 .sd-own-audio-item audio { display: block; width: 100%; max-width: 100%; }
 .sd-own-audio-item button { width: fit-content; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--ink); }
+
+/* Owner mobile feedback 24-11: show one clear reading hierarchy rather than identical green panels. */
+.kb-quick { gap: 12px; background: var(--surface-2); }
+.kb-quick .sd-h { letter-spacing: .035em; text-transform: uppercase; font-size: var(--fs-label); color: var(--ink-2); }
+.kb-summary { padding: 2px 2px 6px; font-size: 1.025rem; font-weight: 550; line-height: 1.6; }
+.kb-quick > .kb-marks { display: grid; gap: 8px; }
+.kb-quick > .kb-marks .kb-mark { padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); }
+.kb-critical { gap: 8px; border-inline-start-width: 5px; border-color: var(--info-ink); background: var(--info-soft); }
+.kb-critical > strong { font-size: 1rem; line-height: 1.4; }
+.kb-critical .kb-vs { padding-top: 8px; border-top: 1px solid var(--line); }
+.kb-caution { border-inline-start-width: 5px; padding: 12px 14px; background: var(--warn-soft); }
+.sd-similar .sd-similar-links__item, .sd-similar .kb-similar__item { gap: 10px; padding: 16px; border-inline-start: 4px solid var(--info-ink); background: var(--surface-2); }
+.sd-similar :is(.sd-similar-links__item,.kb-similar__item) > strong { font-size: 1.05rem; }
+.sd-similar :is(.sd-similar-links__item,.kb-similar__item) p { margin: 0; line-height: 1.55; }
+.sd-similar .sd-compare-open { border-color: var(--brand-mid); background: var(--surface); font-weight: 700; }
+.sd-cmp-card { background: var(--surface-2); }
+.sd-cmp-row { padding: 10px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); }
+.sd-cmp-row b { font-size: var(--fs-meta); color: var(--ink); }
+.sd-cmp-tip { border-inline-start: 4px solid var(--warn-ink); background: var(--warn-soft); color: var(--ink); }
