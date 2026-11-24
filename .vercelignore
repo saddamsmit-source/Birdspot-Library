@@ -1,0 +1,17 @@
+# Birdspot — alleen runtimebestanden naar Vercel (toelatingslijst; eigenaarakkoord 24-11-2026, PR #358).
+# Alles in de hoofdmap is uitgesloten, behalve de regels met '!'.
+# Nieuw bestand of nieuwe map in de hoofdmap die de app nodig heeft? Voeg hier een '!'-regel toe;
+# tests/test_vercelignore_runtime.mjs faalt anders.
+/*
+!index.html
+!feedback-inbox.html
+!manifest.webmanifest
+!sw.js
+!icons
+!styles
+!src
+!assets
+!api
+!package.json
+!package-lock.json
+!vercel.json
