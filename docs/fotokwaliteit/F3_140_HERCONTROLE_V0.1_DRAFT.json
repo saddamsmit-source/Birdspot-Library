@@ -1778,7 +1778,8 @@
               "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r02/origcheck.json",
               "comparisonUse": "F3-REV2-R02b: dragende vluchtvergelijkingsfoto met Sperwer en Torenvalk",
               "openRights": "Licentie/naamsvermelding iNaturalist-foto 29451692 niet herbevestigd (iNaturalist-API 404 op 23-11); registerwaarde CC BY 4.0 Вячеслав Юсупов; zelfde opname visueel bevestigd",
-              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED."
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED.",
+              "rightsR03c": "PARTIALLY TESTED (R03c, één gecontroleerde heruitvoering): media-intake-run 45360468665 (head 37b7fae, ffmpeg-stap overgeslagen). Origineel bereikbaar via https://inaturalist-open-data.s3.amazonaws.com/photos/29451692/original.jpg en uitsnede, visueel eerder bevestigd (automatische r=0.824, modus crop). Licentie/attributie: alle openbare routes gaven 404 (https://api.inaturalist.org/v1/photos/29451692: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/29451692: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/29451692.json: HTTP Error 404: Not Found). Geen licentiecode, attributie, waarneming, plaats of taxon verkregen; registerwaarde blijft, geen VERIFIED. Geen verdere retries (eigenaarregel). docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json"
             },
             {
               "role": "In vlucht (Vrouwtje)",
@@ -2584,7 +2585,8 @@
               "rightsREV2": "PARTIALLY TESTED - uitsnede visueel bevestigd door Claude in sp009-male-flight_vs_source.jpg (automatische r=0.659) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
               "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
               "openRights": "Licentie/naamsvermelding iNaturalist-foto niet herbevestigd (API 404 op 23-11-2026)",
-              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED."
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED.",
+              "rightsR03c": "PARTIALLY TESTED (R03c, één gecontroleerde heruitvoering): media-intake-run 45360468665 (head 37b7fae, ffmpeg-stap overgeslagen). Origineel bereikbaar via https://inaturalist-open-data.s3.amazonaws.com/photos/9819028/original.jpg en uitsnede, visueel eerder bevestigd (automatische r=0.659, modus full). Licentie/attributie: alle openbare routes gaven 404 (https://api.inaturalist.org/v1/photos/9819028: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/9819028: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/9819028.json: HTTP Error 404: Not Found). Geen licentiecode, attributie, waarneming, plaats of taxon verkregen; registerwaarde blijft, geen VERIFIED. Geen verdere retries (eigenaarregel). docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json"
             },
             {
               "role": "Overige herkenningsfoto's (Volwassen in rust)",
@@ -2623,7 +2625,8 @@
               "rightsREV2": "PARTIALLY TESTED - zelfde opname automatisch (r=1.0) tegen iNaturalist open-data-origineel; licentie/auteur niet herbevestigd (iNaturalist-API gaf HTTP Error 404: Not Found), registerwaarde blijft",
               "rightsEvidence": "docs/media-intake/2026-11-23/origcheck-rev2-r03/origcheck.json",
               "openRights": "Licentie/naamsvermelding iNaturalist-foto niet herbevestigd (API 404 op 23-11-2026)",
-              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED."
+              "rightsR03b": "BLOCKED (24-11-2026) - iNaturalist-herbevestiging via fallbackroutes (tools/media/orig_check.py, verzoek tools/media/origcheck_2026-11-24_rev2_r03b_inat.json) niet uitgevoerd: media-intake-run 45345440099 hing twee keer (poging 1 en één veilige herhaling) 20 min in 'apt-get update/install ffmpeg' op de GitHub-runner en werd afgebroken; pip-installatie slaagde. Licentie blijft PARTIALLY TESTED (registerwaarde), geen VERIFIED.",
+              "rightsR03c": "PARTIALLY TESTED (R03c, één gecontroleerde heruitvoering): media-intake-run 45360468665 (head 37b7fae, ffmpeg-stap overgeslagen). Origineel bereikbaar via https://inaturalist-open-data.s3.amazonaws.com/photos/251479995/original.jpg en zelfde opname (r=1.0). Licentie/attributie: alle openbare routes gaven 404 (https://api.inaturalist.org/v1/photos/251479995: HTTP Error 404: Not Found; https://api.inaturalist.org/v2/photos/251479995: HTTP Error 404: Not Found; https://www.inaturalist.org/photos/251479995.json: HTTP Error 404: Not Found). Geen licentiecode, attributie, waarneming, plaats of taxon verkregen; registerwaarde blijft, geen VERIFIED. Geen verdere retries (eigenaarregel). docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json"
             }
           ],
           "sources": {
@@ -2691,7 +2694,8 @@
             "executionStatus": "UITGEVOERD (R03b) - open punten blijven",
             "remainingOpen": [
               "G7 OPEN: geen aantoonbaar betere Europese hoofdfoto of juveniel gevonden; beste kandidaten voor eigenaarkeuze: volwassen in vlucht San Giuliano Terme, Toscane (Scontardi, CC BY-SA 4.0), juveniel in vlucht Brandon Marsh, Engeland (Jacob Spinks, CC BY 2.0; minder scherp), volwassen op nestkast Noordwijk (Michel Langeveld, CC BY-SA 4.0; klein in beeld)",
-              "G8 BLOCKED: media-intake opnieuw starten zodra de runner apt-get weer afrondt, of eigenaarakkoord om ffmpeg alleen in audiomodus te installeren",
+              "G8: iNaturalist-licenties (2) PARTIALLY TESTED - alle openbare routes 404 (R03c); geen verdere retries",
+              "Eigenaarbesluit nodig: kandidaat 1 (Toscane) als vervanging van sp009-male-flight",
               "ANWB NOT TESTED",
               "Vogelbescherming NOT TESTED (hostprompt 24-11 07:45 onbeantwoord)",
               "Audio PARTIALLY TESTED; bron noemt geen roeptype of herkomst",
@@ -2722,7 +2726,100 @@
               "docs/media-intake/2026-11-24/origcheck-rev2-r03b-inat/origcheck.json",
               "docs/media-intake/2026-11-24/discover-rev2-r03b/candidates.json"
             ]
-          }
+          },
+          "candidatesR03c": {
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit R03b-QA (chat 24-11-2026 09:53 CET), uitgevoerd als F3-REV2-R03c in PR #353",
+            "evidence": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/origcheck.json",
+            "reviewSheet": "R03c_Slechtvalk_huidig_vs_kandidaten.jpg (in chat aan eigenaar)",
+            "candidates": [
+              {
+                "id": "sp009_kandidaat1_toscane",
+                "title": "File:Falco peregrinus - San Giuliano Terme (Toscana).jpg",
+                "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_-_San_Giuliano_Terme_(Toscana).jpg",
+                "author": "Scontardi",
+                "license": "CC BY-SA 4.0",
+                "licenseAllowed": true,
+                "originalSize": [
+                  1944,
+                  1296
+                ],
+                "sha1": "4c8acd03833975f48873d1a81be94a6756b607fd",
+                "sha1Verified": true,
+                "context": {
+                  "description": "Falco peregrinus",
+                  "date": "2025-05-23 09:29:42",
+                  "categories": [
+                    "Falco peregrinus in flight"
+                  ]
+                },
+                "proposedRole": "volwassen in vlucht",
+                "fullCrop": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat1_toscane_full_crop.jpg",
+                "verdict": "Beter en geschikt als vervanging (voorstel; niet uitgevoerd)",
+                "assessment": "Volwassen (leikleurige kopkap, brede baardstreep, dwarsgebandeerde onderzijde); vleugels en staart volledig gespreid van onderen, dus spitse vleugels met brede basis en korte staart in één beeld. Rechten bevestigd via Commons (eigen werk, CC BY-SA 4.0, SHA-1 origineel gelijk), herkomst Toscane (bestandsnaam). Minder scherp dan de huidige foto van Tollin en met prooi in de klauwen. Meerwaarde: volledig silhouet + bevestigde rechten + Europese herkomst tegenover een foto waarvan de licentie niet te bevestigen is. Ondersoort niet vastgesteld.",
+                "imported": false
+              },
+              {
+                "id": "sp009_kandidaat2_brandon",
+                "title": "File:Peregrine Falcon (2) (9594380746).jpg",
+                "page": "https://commons.wikimedia.org/wiki/File:Peregrine_Falcon_(2)_(9594380746).jpg",
+                "author": "Jacob Spinks from Northamptonshire, England",
+                "license": "CC BY 2.0",
+                "licenseAllowed": true,
+                "originalSize": [
+                  1500,
+                  1200
+                ],
+                "sha1": "82f8154eb1de683919658f60cc0cc79b1a714e90",
+                "sha1Verified": true,
+                "context": {
+                  "description": "Taken at Brandon Marsh. I was really lucky to get this!! fastest bird in the WORLD!! But it wasnt going full speed as it is a Juvenile but it was hunting with no success!! The peregrine is a large and powerful falcon. It has long, broad, pointed wings and a relatively short tail. It is blue-grey above, with a blackish top of the head and an obvious black 'moustache' that contrasts with its white f",
+                  "date": "2013-08-24 16:47",
+                  "categories": [
+                    "Falco peregrinus in flight"
+                  ]
+                },
+                "proposedRole": "juveniel in vlucht",
+                "fullCrop": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat2_brandon_full_crop.jpg",
+                "verdict": "Niet beter dan de bestaande foto",
+                "assessment": "Juveniel volgens fotograaf; bruine bovenzijde, lengtestrepen en baardstreep zichtbaar, maar tegenlicht, laag contrast en zacht. Huidige juveniel in vlucht (Josh Boe) is scherper en toont dezelfde kenmerken duidelijker. Rechten bevestigd (CC BY 2.0, SHA-1 gelijk), herkomst Brandon Marsh, Engeland. Alleen als terugval als de rechten van de huidige foto niet te bevestigen zijn.",
+                "imported": false
+              },
+              {
+                "id": "sp009_kandidaat3_langeveld",
+                "title": "File:Falco peregrinus 114336093.jpg",
+                "page": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_114336093.jpg",
+                "author": "Michel Langeveld",
+                "license": "CC BY-SA 4.0",
+                "licenseAllowed": true,
+                "originalSize": [
+                  1415,
+                  946
+                ],
+                "sha1": "43e6eed4090c1833cf4b0406f240b4733ccd3a9f",
+                "sha1Verified": true,
+                "context": {
+                  "description": "Peregrine Falcon ( Falco peregrinus )",
+                  "date": "2021-02-28",
+                  "categories": [
+                    "Birds of Noordwijk, South Holland",
+                    "Falco peregrinus",
+                    "Falconiformes of the Netherlands"
+                  ]
+                },
+                "proposedRole": "volwassen in rust (hoofdfoto)",
+                "fullCrop": "docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp009_kandidaat3_langeveld_full_crop.jpg",
+                "verdict": "Niet beter dan de bestaande foto",
+                "assessment": "Volwassen op nestkast aan een gebouw (Noordwijk volgens Commons-categorie); vogel klein in beeld (~300 px), zacht, één vleugel in beweging, deels afgedekt. Huidige hoofdfoto en rustfoto zijn veel scherper en groter. Rechten bevestigd (CC BY-SA 4.0 op Commons, SHA-1 gelijk). Wel Nederlandse herkomst; geen determinatiemeerwaarde.",
+                "imported": false
+              }
+            ],
+            "proposal": "Kandidaat 1 (Toscane) als vervanging van sp009-male-flight in \"In vlucht\" en in het paar Torenvalk–Slechtvalk volwassen in vlucht; huidige foto naar retired met historie. Alleen na afzonderlijk eigenaarbesluit en volledige import- en zes-puntscontrole."
+          },
+          "resolvedInR03c": [
+            "G8 één gecontroleerde heruitvoering na ffmpeg-correctie: routes 404, rechten blijven PARTIALLY TESTED (niet meer BLOCKED)",
+            "G7 drie Europese kandidaten op origineel en bronpagina vergeleken; geen vervanging uitgevoerd"
+          ]
         }
       }
     },
@@ -2969,9 +3066,9 @@
               "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(51546452028).jpg",
               "author": "caroline legg",
               "license": "CC BY 2.0",
-              "visual": "Vliegend met voedsel; vleugels bewegingsonscherp, rode nekvlek en rode onderstaart zichtbaar.",
+              "visual": "Vliegend met voedsel in de snavel; kop, rode nekvlek (mannetje), witte schoudervlek en rode onderstaart scherp; vleugel grotendeels bewegingsonscherp.",
               "identity": "VERIFIED (soort visueel; Schotland 2021)",
-              "quality": "VERIFIED - goed: op volle resolutie (1400x933) schoudervlek, vleugelstippen, rode nekvlek en onderstaart scherp; vleugeltoppen licht bewegingsonscherp",
+              "quality": "PARTIALLY TESTED - origineel 3389×2259 op volle resolutie bekeken (SHA-1 a80269d1a0df4346700fa6d5626ae0abb53a2b71 gelijk; docs/media-intake/2026-11-24/origcheck-rev2-r03c/sp016-flight_full_crop.jpg): kop, rode nekvlek, witte schoudervlek, rug en rode onderstaart scherp; witte vleugelvlekken zichtbaar, maar de vleugel (vooral slagpennen) grotendeels bewegingsonscherp. Voorlopig behouden vanwege herkenningswaarde; scherpere vluchtfoto gewenst",
               "roleCheck": "VERIFIED - In vlucht",
               "blobSha": "549ac36b8eed9340e0db99e4e607d808939e9965",
               "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 a80269d1a0df4346700fa6d5626ae0abb53a2b71, zelfde opname r=1.0",
@@ -2985,7 +3082,8 @@
                   "Dendrocopos major in flight"
                 ]
               },
-              "qualityHistory": "F3-REV2-R03 23-11-2026: PARTIALLY TESTED op basis van verkleind beeld; ingetrokken in R03b na beoordeling op volle resolutie"
+              "qualityHistory": "F3-REV2-R03 23-11-2026: PARTIALLY TESTED op basis van verkleind beeld; ingetrokken in R03b na beoordeling op volle resolutie | R03b 24-11-2026: VERIFIED - goed (op 1400 px-versie); door eigenaar/QA te stellig bevonden",
+              "rightsR03c": "VERIFIED - Commons: auteur caroline legg en CC BY 2.0 gelijk; origineel SHA-1 a80269d1a0df4346700fa6d5626ae0abb53a2b71 opnieuw gecontroleerd (media-intake-run 45360468665 (head 37b7fae, ffmpeg-stap overgeslagen))"
             }
           ],
           "sources": {
@@ -3061,7 +3159,16 @@
               "Audio PARTIALLY TESTED; roffel-auteur Commons met gebruikersnaam",
               "Onafhankelijke biologische/fotoreview"
             ],
-            "notGranted": "Geen FULL PASS; geen nieuwe optie C; geen start R04; ANWB/Vogelbescherming/audio-grenzen blijven"
+            "notGranted": "Geen FULL PASS; geen nieuwe optie C; geen start R04; ANWB/Vogelbescherming/audio-grenzen blijven",
+            "additional": [
+              {
+                "decision": "R03b-QA: foto voorlopig behouden, kwaliteitsstatus aanpassen",
+                "scope": "/assets/species/plumage/sp016-flight.webp",
+                "date": "2026-11-24",
+                "reference": "Eigenaarbesluit R03b-QA (chat 24-11-2026 09:53 CET), uitgevoerd als F3-REV2-R03c in PR #353",
+                "effect": "Kwaliteit PARTIALLY TESTED, voorwaardelijk, vervanging gewenst; geen nieuwe foto"
+              }
+            ]
           },
           "fullPass": false,
           "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit.",
@@ -3083,7 +3190,11 @@
               "tests/test_f3_rev2_r03.mjs",
               "tests/test_f3_rev2_r01_browser.py"
             ]
-          }
+          },
+          "resolvedInR03c": [
+            "Vluchtfoto: totale kwaliteit PARTIALLY TESTED (voorwaardelijk, vervanging gewenst); bijschrift \"Voorlopige foto: beperkte scherpte\" met alleen scherp zichtbare kenmerken; historie in field-guide-media reviewHistory, vluchtcontrole history en soortaudit qualityHistory",
+            "Vergelijkingsteksten gecontroleerd: de vluchtvergelijking noemt schoudervlekken, onderstaart en rood op de kop (op de foto scherp); geen vleugeldetails aan de foto ontleend"
+          ]
         }
       }
     },
@@ -16904,6 +17015,12 @@
         "time": "07:39",
         "batch": "F3-REV2-R03",
         "decision": "B voor sp008, sp009, sp016 (gericht verbeteren); Slechtvalk met gericht fotoonderzoek; geen nieuwe C, geen FULL PASS, R04 niet starten"
+      },
+      {
+        "date": "2026-11-24",
+        "time": "09:53",
+        "batch": "F3-REV2-R03",
+        "decision": "R03b-QA geaccepteerd binnen bewijsgrenzen; toestemming: GBS-fotokwaliteit nauwkeuriger, ffmpeg alleen voor audio, één G8-heruitvoering, visuele vergelijking drie Slechtvalk-kandidaten; geen automatische vervanging, geen import, geen R04"
       }
     ]
   }

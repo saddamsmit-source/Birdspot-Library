@@ -70,3 +70,17 @@ Registratie: `F3_140_HERCONTROLE_V0.1_DRAFT.json` → `records[sp008, sp009, sp0
 - Render-diff t.o.v. 9c6ecd3: alleen sp007, sp008, sp009, sp016, sp017, sp020 (partnerkaarten door gedeelde vergelijkingen, bedoeld).
 - Vogelbescherming: hostprompt 24-11 ~07:45 onbeantwoord → NOT TESTED, niet herhaald. ANWB NOT TESTED. Audio niet beluisterd.
 - G8 BLOCKED: de fallbackroutes zijn gebouwd en getest (`tests/test_orig_check.py`), maar media-intake-run 45345440099 hing twee keer 20 min in `apt-get` (ffmpeg) op de GitHub-runner (pip slaagde). Eén veilige herhaling gebruikt; iNaturalist-licenties (sp009 ×2, sp007 mannetje-vlucht) blijven PARTIALLY TESTED. Eigenaaractie: later opnieuw starten, of akkoord om ffmpeg alleen in audiomodus te installeren.
+
+## F3-REV2-R03c — eigenaarbesluit R03b-QA (24-11-2026 09:53)
+
+- Toestemming: GBS-fotokwaliteit nauwkeuriger, ffmpeg alleen bij audio, één G8-heruitvoering, visuele vergelijking van drie Slechtvalk-kandidaten. Geen import, geen vervanging, geen R04.
+- Writer: claim #353 ACTIEF 09:58 (comment 7126709921). Oude runs op `feat/birdspot-m4-k03-phase-4` (gesloten PR #140, laatste commit 11-11) zijn geen concurrerende schrijver.
+
+| Onderdeel | Uitkomst |
+|---|---|
+| ffmpeg | `tools/media/needs_ffmpeg.py` + voorwaardelijke stap in `media-intake.yml`: ffmpeg alleen bij `audiocheck` en `import` met audio-items; `discover`, `origcheck` en foto-import zonder; onbekende modus of kapot importmanifest = fout. Branchbeveiliging, rechten, pip-afhankelijkheden en time-out ongewijzigd. Test `tests/test_media_intake_deps.py` (6 modi/varianten, 4 weigeringen, CLI-uitvoer, workflowstructuur). Op de runner: run 45360468665 sloeg de ffmpeg-stap over en slaagde |
+| G8 iNaturalist | één heruitvoering (run 45360468665): originelen bereikbaar via open-data (sp009 juveniel r=1,0; sp009 volwassen en sp007 uitsneden), maar v1-, v2- en `.json`-route gaven 404 voor alle drie de foto-ID's → licentie, attributie en waarnemingscontext niet verkregen; PARTIALLY TESTED (niet meer BLOCKED), geen verdere retries |
+| GBS-vluchtfoto | origineel 3389×2259 op volle resolutie (`origcheck-rev2-r03c/sp016-flight_full_crop.jpg`, SHA-1 gelijk): kop, rode nekvlek, witte schoudervlek, rug en rode onderstaart scherp; vleugel grotendeels bewegingsonscherp. Totale kwaliteit PARTIALLY TESTED; vluchtcontrole `voorwaardelijk`, vervanging gewenst; bijschrift "Voorlopige foto: beperkte scherpte…" met alleen scherpe kenmerken; oude beoordeling in `reviewHistory`, `history` en `qualityHistory`. Vergelijkingsteksten ontlenen geen vleugeldetails aan de foto |
+| Slechtvalk-kandidaten | origineel + bronpagina via `kind: candidate` (geen import): 1 Toscane volwassen in vlucht → **beter en geschikt als vervanging** van `sp009-male-flight` (volledig silhouet, rechten bevestigd, Europees; minder scherp, prooi in klauwen) — voorstel, niet uitgevoerd; 2 Brandon Marsh juveniel → niet beter (tegenlicht, zacht); 3 Noordwijk volwassen → niet beter (klein, zacht, deels afgedekt) |
+
+- Render-diff t.o.v. 6950244: alleen sp016 (bijschrift) en sp020 (alt-tekst van dezelfde foto in de vergelijking).

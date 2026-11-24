@@ -77,8 +77,34 @@ assert.ok(!similar('sp016').includes('Grote of middelste bonte specht?</'), 'G9:
 for (const id of ['LK-106', 'LK-107', 'LK-108']) assert.ok(lk.pairs.find(p => p.id === id), id);
 for (let n = 1; n <= 108; n++) assert.ok(lk.pairs.find(p => p.id === `LK-${String(n).padStart(3, '0')}`), `LK-${n} behouden`);
 
-// Register: R03-batch met open eigenaarspoort, geen FULL PASS.
+// F3-REV2-R03c (eigenaarbesluit R03b-QA, 24-11-2026): GBS-vluchtfoto voorlopig, kandidaten niet geïmporteerd,
 const reg = JSON.parse(readFileSync(new URL('../docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json', import.meta.url), 'utf8'));
+// iNaturalist-rechten niet VERIFIED zonder licentiegegevens.
+const fgm = JSON.parse(readFileSync(new URL('../assets/species/field-guide-media.json', import.meta.url), 'utf8'));
+const vc = JSON.parse(readFileSync(new URL('../docs/fotokwaliteit/vluchtcontrole.json', import.meta.url), 'utf8'));
+const gbsFlight = fgm.poses.sp016.find(p => p.image.endsWith('/sp016-flight.webp'));
+assert.ok(gbsFlight.note.startsWith('Voorlopige foto') && /grotendeels onscherp/.test(gbsFlight.note), 'R03c: bijschrift GBS-vlucht voorlopig en eerlijk');
+assert.ok(!/goed zichtbaar/.test(gbsFlight.note + gbsFlight.alt), 'R03c: geen overschatting van vleugeldetails');
+assert.ok(gbsFlight.reviewHistory?.[0]?.note?.includes('uitgespreide vleugels'), 'R03c: oorspronkelijke beoordeling bewaard');
+const vcg = vc.assets['/assets/species/plumage/sp016-flight.webp'];
+assert.ok(vcg.decision === 'voorwaardelijk' && vcg.replacement === 'gewenst' && vcg.history.some(h => h.decision === 'goedgekeurd'), 'R03c: vluchtcontrole voorwaardelijk met historie');
+assert.ok(similar('sp016').includes('sp016-flight.webp'), 'R03c: foto blijft in de vluchtvergelijking (herkenningswaarde)');
+const rec = id => reg.records.find(r => r.id === id).F3.secondReview;
+assert.ok(rec('sp016').photos.find(p => p.path.endsWith('sp016-flight.webp')).quality.startsWith('PARTIALLY TESTED'), 'R03c: totale kwaliteit PARTIALLY TESTED');
+for (const [id, path] of [['sp009', 'sp009-male-flight.webp'], ['sp009', 'sp009-juv-flight.webp'], ['sp007', 'sp007-male-flight.webp']]) {
+  const ph = rec(id).photos.find(p => p.path.endsWith(path));
+  assert.ok(ph.rightsR03c.startsWith('PARTIALLY TESTED') && !/^VERIFIED/.test(ph.rightsR03c), `R03c: ${path} niet VERIFIED zonder licentiegegevens`);
+}
+const cands = rec('sp009').candidatesR03c.candidates;
+assert.equal(cands.length, 3);
+const allMedia = JSON.stringify([fgm.poses, fgm.plumage]);
+for (const c of cands) {
+  assert.equal(c.imported, false, c.id);
+  assert.ok(!allMedia.includes(c.title.replace(/^File:/, '')), `R03c: kandidaat ${c.id} niet in de app gezet`);
+  assert.ok(['Beter en geschikt als vervanging (voorstel; niet uitgevoerd)', 'Geschikt als aanvullende foto', 'Niet beter dan de bestaande foto', 'Onvoldoende bewijs'].includes(c.verdict), c.verdict);
+}
+
+// Register: R03-batch met open eigenaarspoort, geen FULL PASS.
 const r03 = reg.secondReview.batches.find(b => b.round === 'F3-REV2-R03');
 assert.deepEqual(r03.species, ['sp008', 'sp009', 'sp016']);
 for (const id of r03.species) {
@@ -88,4 +114,4 @@ for (const id of r03.species) {
   if (s.ownerDecision.status === 'OPEN') assert.ok(s.materialGaps.length > 0, id + ': open poort zonder benoemde tekortkoming');
 }
 assert.ok(reg.secondReview.counts.reexamined <= 9 || reg.secondReview.batches.length > 3, 'na R03 maximaal 9/140 in de tweede ronde');
-console.log('F3-REV2-R03/R03b PASS: bestaande vergelijkingen behouden; 3 nieuwe paren wederkerig; gelabelde rijen; kritische kaarten wederkerig; geen publieke bronverwijzing; LK-001…LK-108');
+console.log('F3-REV2-R03/R03b PASS: bestaande vergelijkingen behouden; 3 nieuwe paren wederkerig; gelabelde rijen; kritische kaarten wederkerig; geen publieke bronverwijzing; LK-001…LK-108; R03c GBS-vluchtfoto voorlopig, 3 kandidaten niet geïmporteerd, iNaturalist niet VERIFIED');
