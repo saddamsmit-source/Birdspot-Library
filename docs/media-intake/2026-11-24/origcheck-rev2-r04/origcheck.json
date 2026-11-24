@@ -1,0 +1,753 @@
+{
+  "generated": "2026-11-24T12:00:40Z",
+  "rule": {
+    "sameMinR": 0.9
+  },
+  "items": [
+    {
+      "speciesId": "sp017",
+      "image": "/assets/species/sp017.webp",
+      "title": "File:Picchio rosso minore con mora di gelso.jpg",
+      "author": "Maurizio Carlini",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1067,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Picchio_rosso_minore_con_mora_di_gelso.jpg",
+        "sha1": "7147b8e3e86e857922b2185f0bac56d43b1706c4",
+        "license": "CC BY-SA 4.0",
+        "author": "Maurizio Carlini",
+        "width": 3155,
+        "height": 4733,
+        "creditFields": {
+          "author": "Maurizio Carlini"
+        }
+      },
+      "commonsContext": {
+        "description": "Male Lesser Spotted Woodpecker (Dryobates minor) carrying a mulberry in its nest",
+        "date": "2024-06-05 16:36:38",
+        "categories": [
+          "Dryobates minor",
+          "Greto dello Scrivia"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1440
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp017_vs_source.jpg",
+      "originalBytes": 14714366,
+      "sha1Verified": true,
+      "originalSize": [
+        3155,
+        4733
+      ],
+      "fullCrop": {
+        "file": "sp017_full_crop.jpg",
+        "box": [
+          316,
+          237,
+          2997,
+          4496
+        ],
+        "note": "uitsnede op oorspronkelijke resolutie, niet verkleind"
+      },
+      "overview": "sp017_overview.jpg"
+    },
+    {
+      "speciesId": "sp017",
+      "image": "/assets/species/plumage/sp017-female.webp",
+      "title": "File:Lesser-spotted woodpecker (Dryobates minor hortorum) female.jpg",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1101,
+        1101
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Lesser-spotted_woodpecker_(Dryobates_minor_hortorum)_female.jpg",
+        "sha1": "6ab4ca0f4600d3943d1b01965c0c12bf80d6767a",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 1101,
+        "height": 1101,
+        "creditFields": {}
+      },
+      "commonsContext": {
+        "description": "Lesser-spotted woodpecker ( Dryobates minor hortorum ) female, Hungary",
+        "date": "2019-08-11 11:01:11",
+        "categories": [
+          "Dryobates minor",
+          "Piciformes of Hungary"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        960
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp017-female_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp017",
+      "image": "/assets/species/plumage/sp017-flight.webp",
+      "title": "File:Lesser spotted woodpecker (f), Dryobates minor, Mindre hackspett.jpg",
+      "author": "blondinrikard",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1400,
+        1400
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Lesser_spotted_woodpecker_(f),_Dryobates_minor,_Mindre_hackspett.jpg",
+        "sha1": "f0c24e03b8ce97a34da3eb81d598570630a107dc",
+        "license": "CC BY 2.0",
+        "author": "blondinrikard",
+        "width": 1783,
+        "height": 1783,
+        "creditFields": {
+          "author": "blondinrikard"
+        }
+      },
+      "commonsContext": {
+        "description": "Lesser spotted woodpecker, Dryobates minor, Mindre hackspett Near threatened (NT) – close to being at high risk of extinction in the near future. Swedish Red List 2020",
+        "date": "2020-05-18 13:15:39",
+        "categories": [
+          "Dryobates minor",
+          "Picidae in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        960
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp017-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp017",
+      "audio": "/assets/species/audio/sp017-call-app.mp3",
+      "title": "File:Dryobates minor - Lesser Spotted Woodpecker XC538968.mp3",
+      "author": "Benoît Van Hecke",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dryobates_minor_-_Lesser_Spotted_Woodpecker_XC538968.mp3",
+        "sha1": "e65ca05e18c63422dc3d8b620c36aba73058c9f2",
+        "license": "CC BY-SA 4.0",
+        "author": "Benoît Van Hecke",
+        "duration": 10.212358458913112,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Benoît Van Hecke"
+        },
+        "pageParams": {
+          "date": "2020-03-17 08:00",
+          "author": "Benoît Van Hecke"
+        },
+        "creditLines": [
+          "|author=Benoît Van Hecke"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp017",
+      "audio": "/assets/species/audio/sp017-drum-app.mp3",
+      "title": "File:Dryobates minor - Lesser Spotted Woodpecker XC470657.mp3",
+      "author": "Hannu Varkki",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dryobates_minor_-_Lesser_Spotted_Woodpecker_XC470657.mp3",
+        "sha1": "cda58f0f83cd1db476cb5c996188ab050d435cd7",
+        "license": "CC BY-SA 4.0",
+        "author": "Hannu Varkki",
+        "duration": 33.3087259618563,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Hannu Varkki"
+        },
+        "pageParams": {
+          "date": "2019-05-05 06:45",
+          "author": "Hannu Varkki"
+        },
+        "creditLines": [
+          "|author=Hannu Varkki"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp018",
+      "image": "/assets/showcase/sp018.webp",
+      "title": "File:Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped).jpg",
+      "author": "xulescu_g",
+      "license": "CC BY-SA 2.0",
+      "localSize": [
+        1211,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg",
+        "sha1": "545977136e3d32c1f1fc04bd200126a9e039f657",
+        "license": "CC BY-SA 2.0",
+        "author": "xulescu_g",
+        "width": 1817,
+        "height": 2400,
+        "creditFields": {
+          "author": "xulescu_g"
+        }
+      },
+      "commonsContext": {
+        "description": "Black Woodpecker ( Dryocopus martius ), Lempeş hill near Sânpetru, Braşov County, Romania",
+        "date": "2015-04-26 11:12",
+        "categories": [
+          "Bokeh photographs of birds",
+          "Dealul Cetății - Lempeș",
+          "Dryocopus martius",
+          "Piciformes in Romania"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1268
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp018_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "image": "/assets/species/plumage/sp018-female-single.webp",
+      "title": "File:2016.08.27.-15-Viernheimer Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
+      "author": "Andreas Eichler",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1211,
+        1600
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:2016.08.27.-15-Viernheimer_Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
+        "sha1": "26a9ab628423781a7b6d9ee99f1c134d748665fc",
+        "license": "CC BY-SA 4.0",
+        "author": "Andreas Eichler",
+        "width": 2196,
+        "height": 2901,
+        "creditFields": {
+          "author": "Andreas Eichler"
+        }
+      },
+      "commonsContext": {
+        "description": "Black woodpecker - Dryocopus martius, female. Taken in the Viernheimer Heide in Viernheim, Hesse, Germany.",
+        "date": "2016-08-27",
+        "categories": [
+          "Birds of Viernheimer Heide",
+          "Dryocopus martius",
+          "Piciformes in Hesse"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        1268
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp018-female-single_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "image": "/assets/species/plumage/sp018-flight.webp",
+      "title": "File:Schwarzspecht (Dryocopus martius).jpg",
+      "author": "Janus Mosbacher",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1400,
+        1085
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Schwarzspecht_(Dryocopus_martius).jpg",
+        "sha1": "ac02cc59cc0cf08c9cc12f6ac9d4ae0c69d0905d",
+        "license": "CC BY-SA 4.0",
+        "author": "Janus Mosbacher",
+        "width": 4928,
+        "height": 3264,
+        "creditFields": {
+          "author": "Janus Mosbacher"
+        }
+      },
+      "commonsContext": {
+        "description": "Dieser Schwarzspecht ( Dryocopus martius ) ist mir im Frühjahr vergangenen Jahres zwischen Sommerberg und Kaltenbronn im Wildseemoor (Teil des Naturschutzgebiets „Kaltenbronn“) vor die Linse geflogen.",
+        "date": "28 February 2016, 18:50:33",
+        "categories": [
+          "Birds of Baden-Württemberg",
+          "Dryocopus martius",
+          "Picidae in flight",
+          "Wildseemoor"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        636
+      ],
+      "mode": "crop",
+      "r": 0.7,
+      "scale": 0.5,
+      "offset": [
+        0.081,
+        0.486
+      ],
+      "sameShot": false,
+      "sideBySide": "sp018-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "image": "/assets/species/plumage/sp018-juv-review.webp",
+      "title": "File:Dryocopus martius 03.jpg",
+      "author": "Philippe Kurlapski",
+      "license": "CC BY 1.0",
+      "localSize": [
+        1000,
+        550
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_03.jpg",
+        "sha1": "d0d3ff3ba4e7905e88b00a44dae51cc259bdedca",
+        "license": "CC BY 1.0",
+        "author": "",
+        "width": 1000,
+        "height": 550,
+        "creditFields": {}
+      },
+      "commonsContext": {
+        "description": "",
+        "date": "",
+        "categories": [
+          "Dryocopus martius",
+          "Picidae heads"
+        ]
+      },
+      "authorRule": "commons-author-empty",
+      "rightsMatch": false,
+      "sourceSize": [
+        960,
+        528
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp018-juv-review_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "image": "/assets/species/plumage/sp018-hero-male.webp",
+      "title": "File:Black Woodpecker (Dryocopus martius), Parc de Woluwé, Brussels 1.jpg",
+      "author": "Frank Vassen from Brussels, Belgium",
+      "license": "CC BY 2.0",
+      "localSize": [
+        1600,
+        1045
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Black_Woodpecker_(Dryocopus_martius),_Parc_de_Woluw%C3%A9,_Brussels_1.jpg",
+        "sha1": "305a08246ecd575f7e8546ccfd240ecca70581bd",
+        "license": "CC BY 2.0",
+        "author": "Frank Vassen from Brussels, Belgium",
+        "width": 2624,
+        "height": 1714,
+        "creditFields": {
+          "author": "Frank Vassen from Brussels, Belgium"
+        }
+      },
+      "commonsContext": {
+        "description": "Black Woodpecker Dryocopus martius male, Parc de Woluwé, Brussels, Belgium. Panasonic GX7 + Panasonic Lumix G Vario 100-300, O.I.S",
+        "date": "2016-03-22 18:58",
+        "categories": [
+          "Birds of Woluwe Park",
+          "Dryocopus martius",
+          "Piciformes of Belgium"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        627
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp018-hero-male_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp018",
+      "audio": "/assets/species/audio/sp018-flight-call-app.mp3",
+      "title": "File:Black woodpecker Dryocopus martius, flying call.ogg",
+      "author": "Alexander Kürthy",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Black_woodpecker_Dryocopus_martius,_flying_call.ogg",
+        "sha1": "4c00212ce9468a7e40744f8e37d75d3f5779bdba",
+        "license": "CC BY-SA 4.0",
+        "author": "SanoAK: Alexander Kürthy",
+        "duration": 7.0082086167800455,
+        "mime": "application/ogg",
+        "creditFields": {
+          "author": "SanoAK: Alexander Kürthy"
+        },
+        "pageParams": {
+          "date": "2012-05-09",
+          "author": "[[User:SanoAK|SanoAK: Alexander Kürthy]]",
+          "permission": ""
+        },
+        "creditLines": [
+          "|author=[[User:SanoAK|SanoAK: Alexander Kürthy]]"
+        ]
+      },
+      "authorRule": "different",
+      "rightsMatch": false,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp018",
+      "audio": "/assets/species/audio/sp018-sit-call-app.mp3",
+      "title": "File:Dryocopus martius call at sitting Kjeee.ogg",
+      "author": "Alexander Kürthy",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_call_at_sitting_Kjeee.ogg",
+        "sha1": "3ac924ba60cb235f104e953943199b8ea3fdb517",
+        "license": "CC BY-SA 4.0",
+        "author": "Alexander Kürthy",
+        "duration": 11.847120181405895,
+        "mime": "application/ogg",
+        "creditFields": {
+          "author": "Alexander Kürthy"
+        },
+        "pageParams": {
+          "date": "2015-07-17",
+          "author": "[[User:SanoAK|Alexander Kürthy]]",
+          "permission": ""
+        },
+        "creditLines": [
+          "|author=[[User:SanoAK|Alexander Kürthy]]"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp019",
+      "image": "/assets/species/sp019.webp",
+      "title": "File:Green woodpecker Franconville 2022 01 21 2.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Green_woodpecker_Franconville_2022_01_21_2.jpg",
+        "sha1": "1a771718ad137c381726e3d1c25b10672c69f711",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 4225,
+        "height": 2817,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "commonsContext": {
+        "description": "An European Green Woodpecker ( Picus viridis ) perched on a birch tree in Franconville, France.",
+        "date": "2022-01-21 15:01:50",
+        "categories": [
+          "Nature of Franconville (Val-d'Oise)",
+          "Picus viridis (male)"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp019_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "image": "/assets/species/plumage/sp019-female-ground.webp",
+      "title": "File:European green woodpecker eating.jpg",
+      "author": "Remyymer",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1599
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:European_green_woodpecker_eating.jpg",
+        "sha1": "53be9981138c5b7e9adbf1a89713916596bdc430",
+        "license": "CC BY-SA 4.0",
+        "author": "Remyymer",
+        "width": 2967,
+        "height": 2966,
+        "creditFields": {
+          "author": "Remyymer"
+        }
+      },
+      "commonsContext": {
+        "description": "European green woodpecker eating",
+        "date": "2017-12-24",
+        "categories": [
+          "Picidae eating",
+          "Piciformes eating insects",
+          "Picus viridis (female)"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        960
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp019-female-ground_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "image": "/assets/species/plumage/sp019-juv.webp",
+      "title": "File:Picus viridis (juvenile).jpg",
+      "author": "Hans Hillewaert",
+      "license": "CC BY-SA 3.0",
+      "localSize": [
+        1600,
+        1200
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Picus_viridis_(juvenile).jpg",
+        "sha1": "7fbbe5f99b57b5931f9a661ac0ed9fa780716d93",
+        "license": "CC BY-SA 3.0",
+        "author": "Hans Hillewaert",
+        "width": 2732,
+        "height": 2049,
+        "creditFields": {
+          "author": "Hans Hillewaert"
+        }
+      },
+      "commonsContext": {
+        "description": "Juvenile Green Woodpecker at Kampenhout, Belgium",
+        "date": "2008-06-07",
+        "categories": [
+          "Piciformes of Belgium",
+          "Picus viridis (juvenile)"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        720
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp019-juv_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "image": "/assets/species/plumage/sp019-flight.webp",
+      "title": "File:Female green woodpecker in flight.jpg",
+      "author": "Alexis Lours",
+      "license": "CC BY 4.0",
+      "localSize": [
+        1400,
+        1050
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Female_green_woodpecker_in_flight.jpg",
+        "sha1": "5fd7e438f21842fd8d3468f24fcc8c57c5e4e5dd",
+        "license": "CC BY 4.0",
+        "author": "Alexis Lours",
+        "width": 3697,
+        "height": 2465,
+        "creditFields": {
+          "author": "Alexis Lours"
+        }
+      },
+      "commonsContext": {
+        "description": "A female green woodpecker ( Picus viridis ) in flight in Bouffémont (Val-d'Oise, France).",
+        "date": "2023-12-03 16:15:48",
+        "categories": [
+          "Picus viridis (female)",
+          "Picus viridis in Val-d'Oise",
+          "Picus viridis in flight"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "crop",
+      "r": 0.971,
+      "scale": 0.6,
+      "offset": [
+        0.356,
+        0.2
+      ],
+      "sameShot": true,
+      "sideBySide": "sp019-flight_vs_source.jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "image": "/assets/species/plumage/sp019-hero-male.webp",
+      "title": "File:European green woodpecker (Picus viridis) male.JPG",
+      "author": "Charles J. Sharp",
+      "license": "CC BY-SA 4.0",
+      "localSize": [
+        1600,
+        1067
+      ],
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:European_green_woodpecker_(Picus_viridis)_male.JPG",
+        "sha1": "dcca199304f4e8bd1c68ee2bab9a84be93aef3fd",
+        "license": "CC BY-SA 4.0",
+        "author": "Charles J. Sharp",
+        "width": 3461,
+        "height": 2308,
+        "creditFields": {}
+      },
+      "commonsContext": {
+        "description": "European green woodpecker ( Picus viridis ) male, Kew Gardens, Kingston upon THames",
+        "date": "2014-07-26 11:35:19",
+        "categories": [
+          "Picus viridis (male)"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "sourceSize": [
+        960,
+        640
+      ],
+      "mode": "full",
+      "r": 1.0,
+      "sameShot": true,
+      "sideBySide": "sp019-hero-male_vs_source.jpg",
+      "originalBytes": 2501915,
+      "sha1Verified": true,
+      "originalSize": [
+        3461,
+        2308
+      ],
+      "fullCrop": {
+        "file": "sp019-hero-male_full_crop.jpg",
+        "box": [
+          692,
+          231,
+          1904,
+          1269
+        ],
+        "note": "uitsnede op oorspronkelijke resolutie, niet verkleind"
+      },
+      "overview": "sp019-hero-male_overview.jpg"
+    },
+    {
+      "speciesId": "sp019",
+      "audio": "/assets/species/audio/sp019-laugh-call-app.mp3",
+      "title": "File:Green Woodpecker (Picus viridis) (W1CDR0001497 BD6).ogg",
+      "author": "Aubrey John Williams / The British Library Board",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Green_Woodpecker_(Picus_viridis)_(W1CDR0001497_BD6).ogg",
+        "sha1": "accf99c25c093d29cf32faed6462b1aeba6a9fe9",
+        "license": "CC BY-SA 4.0",
+        "author": "",
+        "duration": 56.51698412698413,
+        "mime": "application/ogg",
+        "creditFields": {
+          "copyrightHolder": "The British Library Board",
+          "recordist": "Aubrey John Williams"
+        },
+        "pageParams": {
+          "performance_date": "",
+          "performer": "| permission ={{PermissionTicket|id=2015111010010706}}{{cc-by-sa-4.0}}"
+        },
+        "creditLines": [
+          "| other_fields = {{Information field|name=British Library Shelfmark|value=W1CDR0001497 BD6}}{{Information field|name=Copyright Holder|value=The British Library ",
+          "<!-- <metadata_mapped_json>{\"composer\":null,\"composition_date\":null,\"description\":\"The yaffle song of the Green Woodpecker, recorded at Frensham Great Pond, Sur",
+          "&lt;OtherFields2&gt;{{Information field|name=Copyright Holder|value=The British Library Board}}&lt;/OtherFields2&gt;",
+          "&lt;OtherFields3&gt;{{Information field|name=Recordist|value=Aubrey John Williams}}&lt;/OtherFields3&gt;"
+        ]
+      },
+      "authorRule": "recordist+copyright-holder",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    },
+    {
+      "speciesId": "sp019",
+      "audio": "/assets/species/audio/sp019-call-app.mp3",
+      "title": "File:Picus viridis - European Green Woodpecker XC416424.mp3",
+      "author": "Alvaro Ortiz Troncoso",
+      "license": "CC BY-SA 4.0",
+      "kind": "audio",
+      "commons": {
+        "page": "https://commons.wikimedia.org/wiki/File:Picus_viridis_-_European_Green_Woodpecker_XC416424.mp3",
+        "sha1": "00a0b9e32613d1f3457ba74d89f28e3e597c7e5e",
+        "license": "CC BY-SA 4.0",
+        "author": "Alvaro Ortiz Troncoso",
+        "duration": 13.984592821959895,
+        "mime": "audio/mpeg",
+        "creditFields": {
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "pageParams": {
+          "date": "2018-03-29 14:17",
+          "author": "Alvaro Ortiz Troncoso"
+        },
+        "creditLines": [
+          "|author=Alvaro Ortiz Troncoso"
+        ]
+      },
+      "authorRule": "exact",
+      "rightsMatch": true,
+      "evidenceCeiling": "bronlabel en rechten; geen soortverificatie"
+    }
+  ]
+}

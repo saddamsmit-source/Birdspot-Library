@@ -47,7 +47,7 @@ for (const [id, birds] of Object.entries(want)) {
     for (const [i, b] of birds.entries()) assert.ok(recognitionPanel(byId.get(b)).includes(`data-compare-species="${birds[1 - i]}"`), `${id}: ${b} -> ${birds[1 - i]}`);
   }
 }
-assert.deepEqual(lk.focusSpecies.slice(-3), ['sp008', 'sp009', 'sp016']);
+for (const id of ['sp008', 'sp009', 'sp016']) assert.ok(lk.focusSpecies.includes(id), `focusSpecies mist ${id}`); // R04 voegt later soorten toe
 
 // F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): nieuwe paren, gelabelde rijen in beide richtingen,
 // kritische kaarten wederkerig, geen publieke bronverwijzing, geen tegenstrijdige jeugdkleedtekst.

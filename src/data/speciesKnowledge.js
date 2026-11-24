@@ -23464,6 +23464,10 @@ const DATA = {
      "reliability": "ondersteunend"
     }
    ],
+   "quickPrimary": [
+    2,
+    3
+   ],
    "caution": {
     "text": "Eén rode kruin is geen zekere determinatie: een jonge Grote Bonte Specht kan ook een rood petje hebben. Controleer rugbandering, onderstaart en formaat samen; een onduidelijke foto blijft onzeker.",
     "sources": [
@@ -23702,6 +23706,10 @@ const DATA = {
      "reliability": "ondersteunend"
     }
    ],
+   "quickPrimary": [
+    0,
+    2
+   ],
    "caution": {
     "text": "Een kopdetail bewijst niet automatisch het volledige jeugdkleed of het geslacht. Gebruik bij een vogel in vlucht ook silhouet en vleugelslag, niet alleen een rood vlekje.",
     "sources": [
@@ -23922,6 +23930,10 @@ const DATA = {
      ],
      "reliability": "ondersteunend"
     }
+   ],
+   "quickPrimary": [
+    0,
+    1
    ],
    "critical": [
     {

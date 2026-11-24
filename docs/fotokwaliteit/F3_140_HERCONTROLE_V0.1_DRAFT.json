@@ -3500,7 +3500,162 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R04",
+          "date": "2026-11-24",
+          "base": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
+          "pr": 354,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "REVIEWED / OWNER GATE OPEN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Mannetje)",
+              "path": "/assets/species/sp017.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Picchio_rosso_minore_con_mora_di_gelso.jpg",
+              "author": "Maurizio Carlini",
+              "license": "CC BY-SA 4.0",
+              "visual": "Mannetje tegen een stam met moerbeien in de snavel; rode kruin, zwarte oogstreep en baardstreep, gebandeerde vleugel; scherp op volle resolutie.",
+              "identity": "VERIFIED (visueel; Commons: male, Italië 2024)",
+              "quality": "PARTIALLY TESTED - scherp, maar sterk versleten/bevlekt kleed met warme bruingele tinten en gestreepte flanken; de dwarsgestreepte rug is grotendeels verborgen. Minder representatief als hoofdfoto",
+              "roleCheck": "VERIFIED - Hoofdfoto (mannetje)",
+              "blobSha": "0c6437bc810dc11ac99e258c069ac8b3830573e6",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 7147b8e3e86e857922b2185f0bac56d43b1706c4, zelfde opname r=1.0",
+              "sourceSha1": "7147b8e3e86e857922b2185f0bac56d43b1706c4",
+              "provenance": {
+                "description": "Male Lesser Spotted Woodpecker (Dryobates minor) carrying a mulberry in its nest",
+                "date": "2024-06-05 16:36:38",
+                "categories": [
+                  "Dryobates minor",
+                  "Greto dello Scrivia"
+                ]
+              }
+            },
+            {
+              "role": "Verenkleed (Vrouwtje)",
+              "path": "/assets/species/plumage/sp017-female.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Lesser-spotted_woodpecker_(Dryobates_minor_hortorum)_female.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vrouwtje op tak van achter-opzij; zwart-wit dwarsgestreepte rug, geen rood op de kop, lichte kruin.",
+              "identity": "VERIFIED (visueel; Commons: female, Hongarije 2019)",
+              "quality": "VERIFIED - goed, iets tegenlicht",
+              "roleCheck": "VERIFIED - Vrouwtje",
+              "blobSha": "297e384d205d94fa62a20b364ae54771871289dc",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 6ab4ca0f4600d3943d1b01965c0c12bf80d6767a, zelfde opname r=1.0",
+              "sourceSha1": "6ab4ca0f4600d3943d1b01965c0c12bf80d6767a",
+              "provenance": {
+                "description": "Lesser-spotted woodpecker ( Dryobates minor hortorum ) female, Hungary",
+                "date": "2019-08-11 11:01:11",
+                "categories": [
+                  "Dryobates minor",
+                  "Piciformes of Hungary"
+                ]
+              }
+            },
+            {
+              "role": "Verenkleed (Vrouwtje; niet echte vrije vlucht)",
+              "path": "/assets/species/plumage/sp017-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Lesser_spotted_woodpecker_(f),_Dryobates_minor,_Mindre_hackspett.jpg",
+              "author": "blondinrikard",
+              "license": "CC BY 2.0",
+              "visual": "Vrouwtje zet af van de stam bij de nestholte; vleugels gespreid, gebandeerde vleugel.",
+              "identity": "VERIFIED (visueel; Commons: female, Zweden 2020)",
+              "quality": "VERIFIED - goed bruikbaar als vrouwtje",
+              "roleCheck": "VERIFIED - getoond als Verenkleed (Vrouwtje), terecht niet als vrije vlucht (vluchtcontrole uit-rol)",
+              "blobSha": "5b9c837b6a52ef55b678a1f2a0706252d85ecc37",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 f0c24e03b8ce97a34da3eb81d598570630a107dc, zelfde opname r=1.0",
+              "sourceSha1": "f0c24e03b8ce97a34da3eb81d598570630a107dc",
+              "provenance": {
+                "description": "Lesser spotted woodpecker, Dryobates minor, Mindre hackspett Near threatened (NT) – close to being at high risk of extinction in the near future. Swedish Red List 2020",
+                "date": "2020-05-18 13:15:39",
+                "categories": [
+                  "Dryobates minor",
+                  "Picidae in flight"
+                ]
+              }
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_KLEINE_BONTE_SPECHT, RSPB_KLEINE_BONTE_SPECHT, WT_KLEINE_BONTE_SPECHT).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - quickPrimary [geen rode onderstaart, rode kruin mannetje] onder het kritische kenmerk rugbandering; formaat onder Meer kenmerken (niet als enig kenmerk)",
+            "herkenning": "PARTIALLY TESTED - mannetje/vrouwtje consistent met foto's; juveniel alleen tekst (geen foto); brontekst VB niet herlezen",
+            "lijktOp": "PARTIALLY TESTED - fotoparen met Grote Bonte Specht (mannetjes, vrouwtjes; gelabelde rijen uit R03b) en Middelste Bonte Specht (zonder rijen; rollabel Middelste toont paartitel \"Kleine of middelste bonte specht?\"); vlucht alleen via GBS-paar (Kleine zonder vluchtfoto); 2 kritische kaarten (GBS, Middelste)"
+          },
+          "lookalikes": [
+            {
+              "pair": "sp017<->sp016 Kleine-Grote Bonte Specht",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "VERIFIED - mannetjes en vrouwtjes gelijkwaardig (R03b)",
+              "diagnosticText": "VERIFIED - rijen rug, rood op de kop, onderstaart en formaat"
+            },
+            {
+              "pair": "sp017<->sp020 Kleine-Middelste Bonte Specht",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "PARTIALLY TESTED - Kleine-mannetje tegen Middelste zonder kleedlabel; rollabel onjuist",
+              "diagnosticText": "PARTIALLY TESTED - vrije tekst zonder gelabelde rijen; kritische kaart formaat en onderstaart"
+            }
+          ],
+          "lookalikeRegister": "LK-102, LK-107 (Grote) en LK-109 (Middelste) in SOORTVERWARRING_REGISTER (F3-REV2-R04)",
+          "audio": {
+            "status": "PARTIALLY TESTED - lokale clips aanwezig, rechten via Commons gecontroleerd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp017-call-app.mp3",
+                "label": "Roep",
+                "source": "https://commons.wikimedia.org/wiki/File:Dryobates_minor_-_Lesser_Spotted_Woodpecker_XC538968.mp3",
+                "author": "Benoît Van Hecke",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk (exact), origineel SHA-1 e65ca05e18c63422dc3d8b620c36aba73058c9f2",
+                "status": "PARTIALLY TESTED - bestand aanwezig (10.2 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp017-drum-app.mp3",
+                "label": "Roffel",
+                "source": "https://commons.wikimedia.org/wiki/File:Dryobates_minor_-_Lesser_Spotted_Woodpecker_XC470657.mp3",
+                "author": "Hannu Varkki",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk (exact), origineel SHA-1 cda58f0f83cd1db476cb5c996188ab050d435cd7",
+                "status": "PARTIALLY TESTED - bestand aanwezig (33.3 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern; geen nest- of broedlocaties vermeld",
+          "quickPrimary": "VERIFIED (code/render) - quickPrimary [2,3] volgens eigenaarbesluit 24-11-2026 12:16 (alleen R04-soorten)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
+            "G14 Hoofdfoto: scherp maar sterk versleten/bevlekt kleed met warme tinten; dwarsgestreepte rug nauwelijks zichtbaar - weinig representatief als eerste beeld",
+            "G15 Geen juveniele foto en geen echte vrije-vluchtfoto",
+            "G16 Paar Kleine-Middelste: rollabel toont paartitel, geen gelabelde rijen",
+            "G5 Audio niet menselijk beluisterd",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "OPEN",
+            "decision": null,
+            "date": null,
+            "reference": null,
+            "options": [
+              "A - verder onderzoeken",
+              "B - gericht verbeteren",
+              "C - voorlopig doorgaan (alleen met expliciet besluit)"
+            ]
+          },
+          "fullPass": false,
+          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit."
+        }
       }
     },
     {
@@ -3705,7 +3860,200 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R04",
+          "date": "2026-11-24",
+          "base": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
+          "pr": 354,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "REVIEWED / OWNER GATE OPEN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Mannetje)",
+              "path": "/assets/showcase/sp018.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg",
+              "author": "xulescu_g",
+              "license": "CC BY-SA 2.0",
+              "visual": "Mannetje aan stam; rode kruin van voorhoofd tot achterhoofd, lichte snavel, geheel zwart; scherp.",
+              "identity": "VERIFIED (visueel; Commons: Roemenië 2015)",
+              "quality": "VERIFIED - zeer goede hoofdfoto",
+              "roleCheck": "VERIFIED - Hoofdfoto (mannetje)",
+              "blobSha": "5e6fd5ed07b51e5b02b07d01b7056df6bf1d0dce",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 545977136e3d32c1f1fc04bd200126a9e039f657, zelfde opname r=1.0",
+              "sourceSha1": "545977136e3d32c1f1fc04bd200126a9e039f657",
+              "provenance": {
+                "description": "Black Woodpecker ( Dryocopus martius ), Lempeş hill near Sânpetru, Braşov County, Romania",
+                "date": "2015-04-26 11:12",
+                "categories": [
+                  "Bokeh photographs of birds",
+                  "Dealul Cetății - Lempeș",
+                  "Dryocopus martius",
+                  "Piciformes in Romania"
+                ]
+              }
+            },
+            {
+              "role": "Verenkleed (Mannetje; eerdere hoofdfoto)",
+              "path": "/assets/species/plumage/sp018-hero-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File%3ABlack_Woodpecker_%28Dryocopus_martius%29%2C_Parc_de_Woluw%C3%A9%2C_Brussels_1.jpg",
+              "author": "Frank Vassen from Brussels, Belgium",
+              "license": "CC BY 2.0",
+              "visual": "Mannetje op de bosbodem bij een liggende stam; volledige rode kruin; vogel klein in beeld.",
+              "identity": "VERIFIED (visueel; Commons: male, Brussel 2016)",
+              "quality": "VERIFIED - bruikbaar, vogel klein in beeld",
+              "roleCheck": "VERIFIED - Mannetje",
+              "blobSha": "d55b9dce51c5a7705501b3c84e7ceab8c6fda023",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 305a08246ecd575f7e8546ccfd240ecca70581bd, zelfde opname r=1.0",
+              "sourceSha1": "305a08246ecd575f7e8546ccfd240ecca70581bd",
+              "provenance": {
+                "description": "Black Woodpecker Dryocopus martius male, Parc de Woluwé, Brussels, Belgium. Panasonic GX7 + Panasonic Lumix G Vario 100-300, O.I.S",
+                "date": "2016-03-22 18:58",
+                "categories": [
+                  "Birds of Woluwe Park",
+                  "Dryocopus martius",
+                  "Piciformes of Belgium"
+                ]
+              }
+            },
+            {
+              "role": "Verenkleed (Vrouwtje)",
+              "path": "/assets/species/plumage/sp018-female-single.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:2016.08.27.-15-Viernheimer_Heide-Viernheim--Schwarzspecht-Weibchen.jpg",
+              "author": "Andreas Eichler",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vrouwtje aan stam van achteren; rood alleen op de achterkruin.",
+              "identity": "VERIFIED (visueel; Commons: female, Hessen 2016)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Vrouwtje",
+              "blobSha": "8ba9f8d39c7ffbb5824fcdf5159bd5f98084c400",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 26a9ab628423781a7b6d9ee99f1c134d748665fc, zelfde opname r=1.0",
+              "sourceSha1": "26a9ab628423781a7b6d9ee99f1c134d748665fc",
+              "provenance": {
+                "description": "Black woodpecker - Dryocopus martius, female. Taken in the Viernheimer Heide in Viernheim, Hesse, Germany.",
+                "date": "2016-08-27",
+                "categories": [
+                  "Birds of Viernheimer Heide",
+                  "Dryocopus martius",
+                  "Piciformes in Hesse"
+                ]
+              }
+            },
+            {
+              "role": "Verenkleed (Juveniel; uitsluitend kopdetail)",
+              "path": "/assets/species/plumage/sp018-juv-review.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_03.jpg",
+              "author": "Philippe Kurlapski",
+              "license": "CC BY 1.0",
+              "visual": "Kopdetail met matte rode kruin, lichte snavel, donkere oogpartij; geen volledig vogelportret.",
+              "identity": "PARTIALLY TESTED (soort visueel; leeftijd volgens eerdere Commons-beschrijving \"pic noir juvénile\" (09-11-2026); de Commons-API geeft nu geen beschrijving of auteur terug)",
+              "quality": "VERIFIED - scherp kopdetail",
+              "roleCheck": "PARTIALLY TESTED - juveniel volgens bron; uit het kopdetail alleen niet te bewijzen",
+              "blobSha": "1ea547cee352fd1ed80ad838dfb0e712f388c8f3",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "PARTIALLY TESTED - licentie CC BY 1.0 gelijk en zelfde opname (r=1.0, SHA-1 d0d3ff3ba4e7905e88b00a44dae51cc259bdedca), maar de Commons-API geeft geen auteur of beschrijving (commons-author-empty); registerauteur Philippe Kurlapski uit de eerdere controle van 09-11-2026 blijft",
+              "openRights": "Auteur op Commons-API leeg; naamsvermelding niet opnieuw bevestigd"
+            },
+            {
+              "role": "In vlucht (geslacht onbekend)",
+              "path": "/assets/species/plumage/sp018-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Schwarzspecht_(Dryocopus_martius).jpg",
+              "author": "Janus Mosbacher",
+              "license": "CC BY-SA 4.0",
+              "visual": "Opvliegend tussen kale takken, vleugels omhoog; rode kruin en lichte snavel zichtbaar; uitsnede.",
+              "identity": "VERIFIED (soort visueel; Commons: Baden-Württemberg)",
+              "quality": "VERIFIED - bruikbaar; vogel deels voor takken",
+              "roleCheck": "VERIFIED - In vlucht (geslacht onbekend); uitsnede visueel bevestigd als zelfde opname",
+              "blobSha": "dba789e52c21b2b5d100886f16616683113285ee",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk, SHA-1 ac02cc59cc0cf08c9cc12f6ac9d4ae0c69d0905d; uitsnede visueel bevestigd als zelfde opname in sp018-flight_vs_source.jpg (automatische r=0.7)",
+              "sourceSha1": "ac02cc59cc0cf08c9cc12f6ac9d4ae0c69d0905d",
+              "provenance": {
+                "description": "Dieser Schwarzspecht ( Dryocopus martius ) ist mir im Frühjahr vergangenen Jahres zwischen Sommerberg und Kaltenbronn im Wildseemoor (Teil des Naturschutzgebiets „Kaltenbronn“) vor die Linse geflogen.",
+                "date": "28 February 2016, 18:50:33",
+                "categories": [
+                  "Birds of Baden-Württemberg",
+                  "Dryocopus martius",
+                  "Picidae in flight",
+                  "Wildseemoor"
+                ]
+              }
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_ZWARTE_SPECHT, NAT_ZWARTE_SPECHT, JENNI_ZWARTE_SPECHT).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - quickPrimary [geheel zwart en groot, rood op de kop man/vrouw] onder kritisch kenmerk zwart tegenover Groene Specht; snavel en vlucht onder Meer kenmerken",
+            "herkenning": "PARTIALLY TESTED - mannetje (2 foto's), vrouwtje en juveniel-kopdetail consistent; jaarling alleen tekst; brontekst VB niet herlezen",
+            "lijktOp": "PARTIALLY TESTED - fotoparen met Groene Specht (mannetjes in rust, vlucht) zonder gelabelde rijen; 1 kritische kaart (Groene Specht); geen andere verwarringssoorten in het profiel"
+          },
+          "lookalikes": [
+            {
+              "pair": "sp018<->sp019 Zwarte-Groene Specht",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "VERIFIED - rust (mannetjes) en vlucht aanwezig",
+              "diagnosticText": "PARTIALLY TESTED - vrije tekst zonder gelabelde rijen; kritische kaart in beide richtingen"
+            }
+          ],
+          "lookalikeRegister": "LK-110 (rust) en LK-111 (vlucht) met Groene Specht in SOORTVERWARRING_REGISTER (F3-REV2-R04)",
+          "audio": {
+            "status": "PARTIALLY TESTED - lokale clips aanwezig, rechten via Commons gecontroleerd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp018-flight-call-app.mp3",
+                "label": "Vluchtroep",
+                "source": "https://commons.wikimedia.org/wiki/File:Black_woodpecker_Dryocopus_martius,_flying_call.ogg",
+                "author": "Alexander Kürthy",
+                "license": "CC BY-SA 4.0",
+                "rights": "PARTIALLY TESTED - licentie gelijk (CC BY-SA 4.0); Commons-auteur 'SanoAK: Alexander Kürthy' voegt gebruikersnaam toe aan registernaam 'Alexander Kürthy'; SHA-1 4c00212ce9468a7e40744f8e37d75d3f5779bdba",
+                "status": "PARTIALLY TESTED - bestand aanwezig (7.0 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp018-sit-call-app.mp3",
+                "label": "Roep in zit",
+                "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_call_at_sitting_Kjeee.ogg",
+                "author": "Alexander Kürthy",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk (exact), origineel SHA-1 3ac924ba60cb235f104e953943199b8ea3fdb517",
+                "status": "PARTIALLY TESTED - bestand aanwezig (11.8 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern; geen nest- of broedlocaties vermeld",
+          "quickPrimary": "VERIFIED (code/render) - quickPrimary [0,2] volgens eigenaarbesluit 24-11-2026 12:16 (alleen R04-soorten)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet gelezen",
+            "G17 Juveniel alleen als kopdetail; leeftijd volgt de bron; Commons-API geeft nu geen auteur of beschrijving (rechten PARTIALLY TESTED)",
+            "G18 Geen roffel-opname (alleen tekst); vluchtroep-auteur op Commons met gebruikersnaam",
+            "G19 Paren met Groene Specht zonder gelabelde rijen; geen andere verwarringssoort onderzocht",
+            "G5 Audio niet menselijk beluisterd",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "OPEN",
+            "decision": null,
+            "date": null,
+            "reference": null,
+            "options": [
+              "A - verder onderzoeken",
+              "B - gericht verbeteren",
+              "C - voorlopig doorgaan (alleen met expliciet besluit)"
+            ]
+          },
+          "fullPass": false,
+          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit."
+        }
       }
     },
     {
@@ -3910,7 +4258,214 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R04",
+          "date": "2026-11-24",
+          "base": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
+          "pr": 354,
+          "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
+          "status": "REVIEWED / OWNER GATE OPEN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Mannetje)",
+              "path": "/assets/species/plumage/sp019-hero-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File%3AEuropean_green_woodpecker_%28Picus_viridis%29_male.JPG",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Mannetje op gras; rode kruin, zwart oogmasker, rode kern in de baardstreep (op volle resolutie duidelijk); grijsgroen, iets versleten kleed.",
+              "identity": "VERIFIED (visueel; Commons: male, Kew Gardens 2014)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Hoofdfoto (mannetje)",
+              "blobSha": "cfc3124b0e05dc98fd38ef490b4ef28323c64fbc",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 dcca199304f4e8bd1c68ee2bab9a84be93aef3fd, zelfde opname r=1.0",
+              "sourceSha1": "dcca199304f4e8bd1c68ee2bab9a84be93aef3fd",
+              "provenance": {
+                "description": "European green woodpecker ( Picus viridis ) male, Kew Gardens, Kingston upon THames",
+                "date": "2014-07-26 11:35:19",
+                "categories": [
+                  "Picus viridis (male)"
+                ]
+              }
+            },
+            {
+              "role": "Verenkleed (Mannetje)",
+              "path": "/assets/species/sp019.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Green_woodpecker_Franconville_2022_01_21_2.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Op berkenstam van opzij; rode kruin, zwart oogmasker, groene rug, gele stuit gedeeltelijk zichtbaar.",
+              "identity": "VERIFIED (visueel; Commons-categorie Picus viridis (male), Franconville 2022)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Zijaanzicht (neutraal label; Commons noemt mannetje)",
+              "blobSha": "1fdc803171e0e163e03ce42cebd8639479cfd0d3",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 1a771718ad137c381726e3d1c25b10672c69f711, zelfde opname r=1.0",
+              "sourceSha1": "1a771718ad137c381726e3d1c25b10672c69f711",
+              "provenance": {
+                "description": "An European Green Woodpecker ( Picus viridis ) perched on a birch tree in Franconville, France.",
+                "date": "2022-01-21 15:01:50",
+                "categories": [
+                  "Nature of Franconville (Val-d'Oise)",
+                  "Picus viridis (male)"
+                ]
+              }
+            },
+            {
+              "role": "Verenkleed (Vrouwtje op de grond)",
+              "path": "/assets/species/plumage/sp019-female-ground.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:European_green_woodpecker_eating.jpg",
+              "author": "Remyymer",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vrouwtje foeragerend op de grond; geheel zwarte baardstreep, gele stuit zichtbaar.",
+              "identity": "VERIFIED (visueel; Commons: female 2017)",
+              "quality": "VERIFIED - zeer goed",
+              "roleCheck": "VERIFIED - Vrouwtje (Op de grond)",
+              "blobSha": "0d1030f94d48258b0bd9db743514c22bf1e959de",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 53be9981138c5b7e9adbf1a89713916596bdc430, zelfde opname r=1.0",
+              "sourceSha1": "53be9981138c5b7e9adbf1a89713916596bdc430",
+              "provenance": {
+                "description": "European green woodpecker eating",
+                "date": "2017-12-24",
+                "categories": [
+                  "Picidae eating",
+                  "Piciformes eating insects",
+                  "Picus viridis (female)"
+                ]
+              }
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp019-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Picus_viridis_(juvenile).jpg",
+              "author": "Hans Hillewaert",
+              "license": "CC BY-SA 3.0",
+              "visual": "Jonge vogel in vegetatie; sterk gevlekt op kop en onderzijde, rode kruin gestippeld.",
+              "identity": "VERIFIED (visueel; Commons: juvenile, Kampenhout België 2008)",
+              "quality": "VERIFIED - goed",
+              "roleCheck": "VERIFIED - Juveniel",
+              "blobSha": "8b105c2f179e8f378c830d2329a493923857d2a6",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 7fbbe5f99b57b5931f9a661ac0ed9fa780716d93, zelfde opname r=1.0",
+              "sourceSha1": "7fbbe5f99b57b5931f9a661ac0ed9fa780716d93",
+              "provenance": {
+                "description": "Juvenile Green Woodpecker at Kampenhout, Belgium",
+                "date": "2008-06-07",
+                "categories": [
+                  "Piciformes of Belgium",
+                  "Picus viridis (juvenile)"
+                ]
+              }
+            },
+            {
+              "role": "In vlucht (Vrouwtje)",
+              "path": "/assets/species/plumage/sp019-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Female_green_woodpecker_in_flight.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Vrouwtje in vrije vlucht van opzij; zwarte baardstreep, gele stuit, gebandeerde slagpennen.",
+              "identity": "VERIFIED (visueel; Commons: female, Val-d'Oise 2023)",
+              "quality": "VERIFIED - zeer goed",
+              "roleCheck": "VERIFIED - In vlucht (vrouwtje)",
+              "blobSha": "cd667891a302483c9a49db65b90e832d73d70bde",
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
+              "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 5fd7e438f21842fd8d3468f24fcc8c57c5e4e5dd, zelfde opname r=0.971",
+              "sourceSha1": "5fd7e438f21842fd8d3468f24fcc8c57c5e4e5dd",
+              "provenance": {
+                "description": "A female green woodpecker ( Picus viridis ) in flight in Bouffémont (Val-d'Oise, France).",
+                "date": "2023-12-03 16:15:48",
+                "categories": [
+                  "Picus viridis (female)",
+                  "Picus viridis in Val-d'Oise",
+                  "Picus viridis in flight"
+                ]
+              }
+            }
+          ],
+          "sources": {
+            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_GROENE_SPECHT).",
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
+            "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
+            "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - quickPrimary [olijfgroene rug en rode kruin, oogmasker en baardstreep] onder kritisch kenmerk stuit en vlucht; juveniel en vlucht onder Meer kenmerken",
+            "herkenning": "VERIFIED (tekstconsistentie) - mannetje (rode kern baardstreep op volle resolutie), vrouwtje (zwarte baardstreep), juveniel (gevlekt) en vrouwtje in vlucht consistent; brontekst VB niet herlezen",
+            "lijktOp": "PARTIALLY TESTED - fotoparen met Zwarte Specht (rust, vlucht) zonder rijen; Wielewaal alleen tekst; Grijskopspecht (sp482, dwaalgast zonder profiel en foto's) niet vergeleken; 1 kritische kaart; kennisprofiel zonder \"Let op\" en zonder similar-lijst"
+          },
+          "lookalikes": [
+            {
+              "pair": "sp019<->sp018 Groene-Zwarte Specht",
+              "bothDirections": "VERIFIED",
+              "photoEquivalence": "VERIFIED - rust (mannetjes) en vlucht",
+              "diagnosticText": "PARTIALLY TESTED - vrije tekst zonder gelabelde rijen"
+            },
+            {
+              "pair": "sp019<->sp113 Groene Specht-Wielewaal",
+              "bothDirections": "VERIFIED (tekst)",
+              "photoEquivalence": "BLOCKED - paar zonder fotos (LK-060, MISSING_VERIFIED_PAIR)",
+              "diagnosticText": "PARTIALLY TESTED - korte tekst"
+            },
+            {
+              "pair": "sp019<->sp482 Groene Specht-Grijskopspecht",
+              "bothDirections": "NOT TESTED",
+              "photoEquivalence": "BLOCKED - geen kaartinhoud of foto's voor sp482",
+              "diagnosticText": "NOT TESTED - geen gebronde claim in het profiel"
+            }
+          ],
+          "lookalikeRegister": "LK-060 (Wielewaal), LK-110 en LK-111 (Zwarte Specht) in SOORTVERWARRING_REGISTER",
+          "audio": {
+            "status": "PARTIALLY TESTED - lokale clips aanwezig, rechten via Commons gecontroleerd; soort/geluidstype niet menselijk beluisterd (eigenaarregel 16-11-2026)",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp019-laugh-call-app.mp3",
+                "label": "Lachende roep",
+                "source": "https://commons.wikimedia.org/wiki/File:Green_Woodpecker_(Picus_viridis)_(W1CDR0001497_BD6).ogg",
+                "author": "Aubrey John Williams / The British Library Board",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk (recordist+copyright-holder), origineel SHA-1 accf99c25c093d29cf32faed6462b1aeba6a9fe9",
+                "status": "PARTIALLY TESTED - bestand aanwezig (56.5 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp019-call-app.mp3",
+                "label": "Alarmroep",
+                "source": "https://commons.wikimedia.org/wiki/File:Picus_viridis_-_European_Green_Woodpecker_XC416424.mp3",
+                "author": "Alvaro Ortiz Troncoso",
+                "license": "CC BY-SA 4.0",
+                "rights": "VERIFIED - Commons-API: auteur en licentie gelijk (exact), origineel SHA-1 00a0b9e32613d1f3457ba74d89f28e3e597c7e5e",
+                "status": "PARTIALLY TESTED - bestand aanwezig (14.0 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
+                "listenedBy": null
+              }
+            ]
+          },
+          "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst; Commons-herkomst alleen intern; geen nest- of broedlocaties vermeld",
+          "quickPrimary": "VERIFIED (code/render) - quickPrimary [0,1] volgens eigenaarbesluit 24-11-2026 12:16 (alleen R04-soorten)",
+          "materialGaps": [
+            "G1 ANWB-soortpassage NOT TESTED",
+            "G2 Vogelbescherming niet gelezen",
+            "G20 Grijskopspecht niet vergeleken (geen bron, profiel of foto's)",
+            "G21 Paren met Zwarte Specht zonder gelabelde rijen; 1 kritische kaart; geen \"Let op\"-tekst (bv. vrouwtje/juveniel, tegenlicht)",
+            "G5 Audio niet menselijk beluisterd",
+            "Onafhankelijke biologische/fotoreview open"
+          ],
+          "ownerDecision": {
+            "status": "OPEN",
+            "decision": null,
+            "date": null,
+            "reference": null,
+            "options": [
+              "A - verder onderzoeken",
+              "B - gericht verbeteren",
+              "C - voorlopig doorgaan (alleen met expliciet besluit)"
+            ]
+          },
+          "fullPass": false,
+          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit."
+        }
       }
     },
     {
@@ -17170,12 +17725,25 @@
         "pr": 353,
         "baseSHA": "ad514b0f298a9143586311a9c079bc26370b71aa",
         "ownerStart": "Eigenaarbesluit 23-11-2026 22:10 CET: start R03 na R02c-checkpoint"
+      },
+      {
+        "round": "F3-REV2-R04",
+        "species": [
+          "sp017",
+          "sp018",
+          "sp019"
+        ],
+        "status": "REVIEWED / OWNER GATE OPEN",
+        "date": "2026-11-24",
+        "pr": 354,
+        "baseSHA": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
+        "ownerStart": "Eigenaarbesluit 24-11-2026 12:16 CET: start R04 na geslaagd R03d-checkpoint"
       }
     ],
     "counts": {
       "total": 140,
-      "reexamined": 9,
-      "ownerGateOpen": 0,
+      "reexamined": 12,
+      "ownerGateOpen": 3,
       "ownerDecisions": 9,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
