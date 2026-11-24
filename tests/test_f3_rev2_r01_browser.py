@@ -11,7 +11,8 @@ from test_plumage_compare_layout import open_species
 
 NAMES = {"sp002": "Houtduif", "sp003": "Holenduif", "sp004": "Turkse Tortel",
          "sp005": "Buizerd", "sp006": "Sperwer", "sp007": "Havik",
-         "sp008": "Torenvalk", "sp009": "Slechtvalk", "sp016": "Grote Bonte Specht"}
+         "sp008": "Torenvalk", "sp009": "Slechtvalk", "sp016": "Grote Bonte Specht",
+         "sp017": "Kleine Bonte Specht", "sp018": "Zwarte Specht", "sp019": "Groene Specht"}
 HEROES = {
     "sp002": ("/assets/species/sp002.webp", "Stephan Sprinz", "CC BY 4.0"),
     "sp003": ("/assets/species/sp003.webp", "Chris Cant from Cumbria, UK", "CC BY 2.0"),
@@ -28,8 +29,12 @@ PRIMARY = {
     "sp008": ["Bidt veel: hangt stil in de lucht boven open terrein.", "Lange staart; in zit steekt die ver voorbij de vleugelpunten."],
     "sp009": ["Zware borst, spitse vleugels met brede basis, vrij korte staart.", "Volwassen licht van onderen en blauwgrijs van boven; jong bruin en gestreept."],
     "sp016": ["Grote witte schoudervlekken, in vlucht opvallend.", "Rode onderkant."],
+    # F3-REV2-R04 (eigenaarbesluit 24-11-2026 12:16): alleen Kleine Bonte Specht, Zwarte Specht, Groene Specht
+    "sp017": ["Geen rode onderstaartdekkers; een Grote Bonte Specht toont daar wel een duidelijke rode vlek.", "Volwassen mannetje met rode kruin; volwassen vrouwtje met lichte of zwarte kruin zonder rood."],
+    "sp018": ["Vrijwel geheel zwart en duidelijk groter dan andere Europese spechten.", "Mannetje met rood over de kruin, vrouwtje alleen rood op de achterkruin; let op kijkhoek en zichtbaarheid."],
+    "sp019": ["Olijfgroene rug en rode kruin.", "Bij volwassen vogels een zwart oogmasker. In de zwarte baardstreep van het mannetje zit rood."],
 }
-MORE = {"sp002": 2, "sp003": 2, "sp004": 2, "sp005": 3, "sp006": 3, "sp007": 2, "sp008": 2, "sp009": 1, "sp016": 1}
+MORE = {"sp002": 2, "sp003": 2, "sp004": 2, "sp005": 3, "sp006": 3, "sp007": 2, "sp008": 2, "sp009": 1, "sp016": 1, "sp017": 2, "sp018": 2, "sp019": 2}
 
 
 def check_quick(page, species_id):
@@ -177,7 +182,7 @@ def smoke(page):
         close_sheet(page)
     check_havik_r02c(page)
     check_r03b(page)
-    for species_id in ("sp004", "sp005", "sp006", "sp007", "sp008", "sp009", "sp016"):
+    for species_id in ("sp004", "sp005", "sp006", "sp007", "sp008", "sp009", "sp016", "sp017", "sp018", "sp019"):
         open_species(page, NAMES[species_id], species_id)
         check_quick(page, species_id)
         # De uitgebreide herkenning en kritische verschillen blijven beschikbaar (niets verwijderd).
@@ -210,7 +215,7 @@ def main():
                     page.on("pageerror", lambda error: errors.append(str(error)))
                     boot(page, url)
                     smoke(page)
-                    print(f"F3-REV2 Chromium {width}px: R01b rest pair both directions, no unequal flight pair; max. 3 quick cues on 9 species; R02c Havik flight photo retired (open, back, reopen); R03b GBS/Slechtvalk comparisons by keyboard, back, reopen")
+                    print(f"F3-REV2 Chromium {width}px: R01b rest pair both directions, no unequal flight pair; max. 3 quick cues on 12 species; R02c Havik flight photo retired (open, back, reopen); R03b GBS/Slechtvalk comparisons by keyboard, back, reopen")
             with browser.new_context(viewport={"width": 390, "height": 844},
                                      is_mobile=True, has_touch=True, reduced_motion="reduce") as context:
                 page = context.new_page()

@@ -86,7 +86,10 @@
     "sp007",
     "sp008",
     "sp009",
-    "sp016"
+    "sp016",
+    "sp017",
+    "sp018",
+    "sp019"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -4870,6 +4873,134 @@
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
         "https://www.vogelbescherming.nl/actueel/bericht/havik-vs-sperwer"
+      ]
+    },
+    {
+      "id": "LK-109",
+      "focus": [
+        "sp017"
+      ],
+      "birds": [
+        "sp017",
+        "sp020"
+      ],
+      "risk": "Beide bonte spechten met rood op de kruin.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R04: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "Rollabel van de Middelste-foto toont de paartitel; geen gelabelde rijen; Middelste Bonte Specht-kaart (sp020) nog niet in de tweede ronde."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Rug en schouder",
+          "values": [
+            "Dwarsgestreepte rug zonder grote witte schoudervlekken",
+            "Witte schoudervlekken"
+          ]
+        },
+        {
+          "label": "Onderstaart en formaat",
+          "values": [
+            "Geen rode of roze onderstaart; musformaat",
+            "Roze onderstaart; beduidend groter"
+          ]
+        }
+      ],
+      "caution": "Een rood petje komt bij beide voor; controleer schouder en onderstaart.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-bonte-specht",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/middelste-bonte-specht"
+      ]
+    },
+    {
+      "id": "LK-110",
+      "focus": [
+        "sp018",
+        "sp019"
+      ],
+      "birds": [
+        "sp018",
+        "sp019"
+      ],
+      "risk": "Grote spechten; in slecht licht kan Groene Specht donker lijken.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R04: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "Paar zonder gelabelde rijen."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kleur",
+          "values": [
+            "Vrijwel geheel zwart met lichte snavel",
+            "Groene bovendelen en geelgroene stuit"
+          ]
+        },
+        {
+          "label": "Vlucht",
+          "values": [
+            "Rechte, flapperende slagvlucht",
+            "Diep golvende vlucht"
+          ]
+        }
+      ],
+      "caution": "Tegenlicht kan kleuren wegvallen; combineer kleur, stuit en vluchtbeweging.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-specht",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht"
+      ]
+    },
+    {
+      "id": "LK-111",
+      "focus": [
+        "sp018",
+        "sp019"
+      ],
+      "birds": [
+        "sp018",
+        "sp019"
+      ],
+      "risk": "Vliegende grote spechten in slecht licht.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "F3-REV2-R04: kaart beoordeeld, eigenaarspoort open; onafhankelijke review open.",
+        "Vluchtpaar zonder gelabelde rijen; de vluchtwijze beoordeel je pas over een langer traject."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kleur in vlucht",
+          "values": [
+            "Vrijwel geheel zwart; rood op de kop",
+            "Groene bovendelen; geelgroene stuit"
+          ]
+        },
+        {
+          "label": "Vluchtwijze",
+          "values": [
+            "Rechter slagvlucht",
+            "Duidelijke golven in doorvlucht"
+          ]
+        }
+      ],
+      "caution": "Een korte vluchtfase toont zelden de echte vluchtwijze; kijk naar de stuit.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-specht",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht"
       ]
     }
   ],
