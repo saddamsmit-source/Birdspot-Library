@@ -45,7 +45,11 @@ export function openSpeciesPicker(onSelect) {
 
   renderOpts(ov, '');
 
+  let focusTimer = 0;
   const close = () => {
+    // R2B H8: de uitgestelde focus mag nooit meer naar een kiezer gaan die al sluit;
+    // anders verliest het volgende veld (bijv. Locatie) zijn focus en getypte tekst.
+    clearTimeout(focusTimer);
     ov.classList.remove('open');
     setTimeout(() => ov.remove(), 300);
   };
@@ -68,7 +72,7 @@ export function openSpeciesPicker(onSelect) {
   });
 
   // Focus zoekbalk na animatie
-  setTimeout(() => ov.querySelector('#spPickerSearch')?.focus(), 120);
+  focusTimer = setTimeout(() => ov.querySelector('#spPickerSearch')?.focus(), 120);
 }
 
 function renderOpts(ov, query) {
