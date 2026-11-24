@@ -57,4 +57,18 @@ assert oc.inat_rights(FakeInat("cc-by-nc", "(c) Paul Lewis, some rights reserved
 assert oc.inat_rights(FakeInat("cc-by", "(c) Someone Else, some rights reserved (CC BY)"), item)["rightsMatch"] is False, "author must match"
 assert oc.inat_rights(FakeInat("cc-by-sa", "(c) Paul Lewis"), item)["rightsMatch"] is False, "licence must equal the register"
 assert oc.inat_rights(DownInat(), item)["rightsMatch"] is None, "unreachable API claims nothing"
+# F3-REV2-R03b: v1 404 -> v2 of de .json-route van de fotopagina; route en waarnemingscontext vastgelegd.
+class V1Gone:
+    def __init__(self, photo): self.photo, self.urls = photo, []
+    def get(self, url):
+        self.urls.append(url)
+        if url.startswith("https://api.inaturalist.org/v1/photos/"): raise RuntimeError("HTTP Error 404: Not Found")
+        if url.startswith("https://api.inaturalist.org/v2/photos/"): raise RuntimeError("HTTP Error 422")
+        if url.startswith("https://api.inaturalist.org/v1/observations/"): return {"results": [{"id": 7, "place_guess": "Utrecht, NL", "observed_on": "2020-05-01", "taxon": {"name": "Falco peregrinus"}}]}
+        return self.photo
+g = V1Gone({"license_code": "cc-by", "attribution": "(c) Paul Lewis, some rights reserved (CC BY)", "observations": [{"id": 7}]})
+r = oc.inat_rights(g, item)
+assert r["rightsMatch"] is True and r["inat"]["route"].endswith("/photos/725640198.json") and r["inat"]["observation"]["placeGuess"] == "Utrecht, NL", r
+assert len(r["inat"]["triedFirst"]) == 2, r
+assert oc.inat_rights(V1Gone({"id": 1}), item)["rightsMatch"] is None, "a page without licence data claims nothing"
 print("ORIGCHECK PASS: same shot (full and crop) accepted; other and mirrored image clearly worse", full, crop, diff)

@@ -112,17 +112,49 @@ def audio_record(e: dict, info: dict | None, norm) -> dict:
 INAT_LICENSES = {"cc0": "CC0", "cc-by": "CC BY 4.0", "cc-by-sa": "CC BY-SA 4.0"}
 
 
+INAT_ROUTES = (  # F3-REV2-R03b: openbare routes in volgorde; de gebruikte route wordt vastgelegd
+    "https://api.inaturalist.org/v1/photos/{id}",
+    "https://api.inaturalist.org/v2/photos/{id}?fields=all",
+    "https://www.inaturalist.org/photos/{id}.json",
+)
+
+
+def _inat_photo(res):
+    """Pak de foto uit een API- of paginaresultaat (v1/v2: results[0]; .json: het object zelf)."""
+    if isinstance(res, dict) and isinstance(res.get("results"), list):
+        return res["results"][0] if res["results"] else None
+    return res if isinstance(res, dict) else None
+
+
 def inat_rights(ci, e: dict) -> dict:
-    """F3-REV2-R02: licentie en naamsvermelding van een iNaturalist-foto via de officiële API (api.inaturalist.org/v1).
-    Alleen CC0 / CC BY / CC BY-SA tellen; NC/ND of onbekend geeft rightsMatch False. Auteur moet in de attributie staan."""
-    try:
-        res = ci.get(f"https://api.inaturalist.org/v1/photos/{int(e['inatPhotoId'])}")["results"][0]
-    except Exception as err:  # API onbereikbaar: niets claimen
-        return {"inat": {"error": str(err)[:160]}, "rightsMatch": None}
-    code, attribution = res.get("license_code") or "", res.get("attribution") or ""
-    lic = INAT_LICENSES.get(code)
-    same = bool(lic) and lic == e.get("license") and (e.get("author") or "").casefold() in attribution.casefold()
-    return {"inat": {"licenseCode": code, "license": lic, "attribution": attribution[:200]}, "rightsMatch": same}
+    """F3-REV2-R02/R03b: licentie en naamsvermelding van een iNaturalist-foto via openbare routes.
+    Alleen CC0 / CC BY / CC BY-SA tellen; NC/ND of onbekend geeft rightsMatch False. Auteur moet in de attributie staan.
+    Waarnemingscontext (plaats, datum, taxon) wordt alleen gelezen, nooit als rechtenbewijs gebruikt."""
+    pid, errors = int(e["inatPhotoId"]), []
+    for route in INAT_ROUTES:
+        url = route.format(id=pid)
+        try:
+            photo = _inat_photo(ci.get(url))
+        except Exception as err:  # route onbereikbaar: volgende proberen, niets claimen
+            errors.append(f"{url.split('?')[0]}: {str(err)[:80]}"); continue
+        if not photo or not (photo.get("license_code") or photo.get("attribution")):
+            errors.append(f"{url.split('?')[0]}: geen licentiegegevens"); continue
+        code, attribution = photo.get("license_code") or "", photo.get("attribution") or ""
+        lic = INAT_LICENSES.get(code)
+        same = bool(lic) and lic == e.get("license") and (e.get("author") or "").casefold() in attribution.casefold()
+        out = {"inat": {"route": url.split("?")[0], "licenseCode": code, "license": lic, "attribution": attribution[:200]}, "rightsMatch": same}
+        obs = [o.get("id") if isinstance(o, dict) else o for o in (photo.get("observations") or photo.get("observation_ids") or [])]
+        if obs and obs[0]:
+            try:
+                o = ci.get(f"https://api.inaturalist.org/v1/observations/{int(obs[0])}")["results"][0]
+                out["inat"]["observation"] = {"id": o.get("id"), "placeGuess": o.get("place_guess"), "observedOn": o.get("observed_on"),
+                                              "taxon": (o.get("taxon") or {}).get("name"), "qualityGrade": o.get("quality_grade")}
+            except Exception as err:
+                out["inat"]["observationError"] = str(err)[:120]
+        if errors:
+            out["inat"]["triedFirst"] = errors
+        return out
+    return {"inat": {"error": "; ".join(errors)[:300]}, "rightsMatch": None}
 
 
 def run(manifest: Path, out: Path) -> None:
