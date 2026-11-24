@@ -5994,9 +5994,10 @@ const DATA = {
     1
    ],
    "caution": {
-    "text": "Een bruine kop en gebandeerde staart wijzen niet automatisch op een vrouwtje; het kleed van jonge vogels is in de geraadpleegde bron niet beschreven.",
+    "text": "Een bruine kop en gebandeerde staart wijzen niet automatisch op een vrouwtje: jonge vogels lijken sterk op volwassen vrouwtjes. Bij goed zicht helpen vers ogende veren en brede lichte toppen aan de binnenste slagpennen; kop of staart alleen geeft op afstand weinig zekerheid.",
     "sources": [
-     "VB_TOREN"
+     "VB_TOREN",
+     "BZ_TOREN"
     ]
    },
    "critical": [
@@ -6021,7 +6022,7 @@ const DATA = {
      "feature": "Silhouet en jachtgedrag",
      "where": "Hele vogel in vlucht",
      "this": "Lange staart, minder spitse vleugelpunten; bidt veel",
-     "other": "Boomvalk heeft langere, spitsere vleugelpunten en een relatief korte staart. Smelleken oogt compact en volgt zijn prooi vaak laag en snel.",
+     "other": "Boomvalk heeft langere, spitsere vleugelpunten en een relatief korte staart; volwassen vogels hebben roodbruine broekveren. Smelleken oogt compact met een brede vleugelbasis en volgt zijn prooi vaak laag en snel; volwassen mannetjes zijn blauwgrijs op de rug.",
      "vs": [
       "sp261",
       "sp260"
@@ -6035,21 +6036,59 @@ const DATA = {
       "VB_BOOMVALK",
       "VB_SMELLEKEN"
      ]
+    },
+    {
+     "feature": "Jachtwijze, vleugels en borsttekening",
+     "where": "Hele vogel in vlucht en de onderzijde",
+     "this": "Bidt veel en hangt stil boven open terrein; relatief puntige vleugels; jonge vogels met lengtestrepen op de borst",
+     "other": "Sperwer: korte, brede vleugels; jaagt laag langs heggen met een paar snelle slagen en een glijvlucht; onderzijde dwars gebandeerd, ook bij jonge vogels",
+     "vs": [
+      "sp006"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vogel enige tijd volgen of de onderzijde goed zien",
+     "exceptions": "Een lange staart hebben beide soorten. Een Sperwer kan ook cirkelen op thermiek; één korte waarneming is onvoldoende.",
+     "supporting": "Staartvorm en poten: Sperwer heeft lange, dunne gele poten",
+     "sources": [
+      "VB_TOREN",
+      "VB_SPERWER",
+      "VB_HVS"
+     ]
+    },
+    {
+     "feature": "Bouw, kop en staart",
+     "where": "Silhouet en kop",
+     "this": "Slank gebouwd met lange staart; mannetje met grijze kop, vrouwtje en jonge vogels met bruine kop",
+     "other": "Slechtvalk: zware borst, zwarte kopkap met brede baardstreep, spitse vleugels met brede basis en een vrij korte staart",
+     "vs": [
+      "sp009"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Silhouet of kop goed zichtbaar",
+     "exceptions": "Jonge vogels van beide soorten zijn bruin en in de lengte gestreept; de streping onderscheidt ze niet. Vleugels kunnen in verschillende vluchtfasen smaller lijken.",
+     "supporting": "Jachtwijze: Torenvalk bidt, Slechtvalk jaagt met een stootduik of achtervolging",
+     "sources": [
+      "VB_TOREN",
+      "VB_SLECHT"
+     ]
     }
    ],
    "similar": [
     {
      "id": "sp006",
-     "why": "Door de bron genoemd; bestaande vlucht- en kleedvergelijking in Birdspot",
+     "why": "Sperwer heeft korte, brede vleugels, jaagt laag langs heggen en is ook als jonge vogel dwars gebandeerd; Torenvalk bidt en heeft een lange staart.",
      "sources": [
-      "VB_TOREN"
+      "VB_TOREN",
+      "VB_SPERWER",
+      "VB_HVS"
      ]
     },
     {
      "id": "sp009",
-     "why": "Door de bron genoemd; bestaande vergelijking in Birdspot",
+     "why": "Slechtvalk is zwaarder gebouwd, met brede donkere baardstreep, spitse vleugels met brede basis en een vrij korte staart.",
      "sources": [
-      "VB_TOREN"
+      "VB_TOREN",
+      "VB_SLECHT"
      ]
     },
     {
@@ -8321,7 +8360,7 @@ const DATA = {
      "feature": "Bouw en kopkap",
      "where": "Silhouet en kop",
      "this": "Zwaar gebouwd; brede zwarte baardstreep met kopkap",
-     "other": "Boomvalk: slankere bouw. Bij volwassen vogels valt het roodbruin rond de poten op.",
+     "other": "Boomvalk: kleiner en slanker gebouwd, met lange spitse vleugels. Bij volwassen vogels valt het roodbruin rond de poten op.",
      "vs": [
       "sp261"
      ],
@@ -8332,6 +8371,58 @@ const DATA = {
      "sources": [
       "VB_SLECHT",
       "VB_BOOMVALK"
+     ]
+    },
+    {
+     "feature": "Kop, vleugels en staart (tegenover Havik)",
+     "where": "Kop en silhouet",
+     "this": "Zwarte kopkap met brede donkere baardstreep; spitse vleugels met brede basis en een vrij korte staart",
+     "other": "Havik: duidelijke lichte wenkbrauwstreep, kop steekt ver uit, brede 'heupen' en een langere staart met afgeronde punt",
+     "vs": [
+      "sp007"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Kop of silhouet goed zichtbaar",
+     "exceptions": "Jonge vogels van beide soorten zijn bruin en in de lengte gestreept; de streping onderscheidt ze niet. Formaat zonder referentie is lastig.",
+     "supporting": "Jachtwijze: stootduik of volhardende achtervolging; Havik vliegt langzamer en krachtiger, behalve tijdens een achtervolging",
+     "sources": [
+      "VB_SLECHT",
+      "VB_HAVIK",
+      "VB_HVS"
+     ]
+    },
+    {
+     "feature": "Bouw en staart (tegenover Torenvalk)",
+     "where": "Silhouet en kop",
+     "this": "Zware borst, brede baardstreep met kopkap, vrij korte staart",
+     "other": "Torenvalk: slanker, lange staart; bidt veel boven open terrein",
+     "vs": [
+      "sp008"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Silhouet of kop goed zichtbaar",
+     "exceptions": "Jonge vogels van beide soorten zijn bruin en gestreept. Formaat zonder referentie misleidt.",
+     "supporting": "Jachtwijze: Torenvalk bidt veel; Slechtvalk jaagt met een stootduik of een volhardende achtervolging",
+     "sources": [
+      "VB_SLECHT",
+      "VB_TOREN"
+     ]
+    },
+    {
+     "feature": "Formaat, staart en vleugelpunten (tegenover Smelleken)",
+     "where": "Silhouet",
+     "this": "Groter en zwaarder; spitse vleugels met brede basis; vrij korte staart",
+     "other": "Smelleken: kleiner, met een relatief lange staart en minder spitse vleugelpunten; volgt zijn prooi vaak laag en snel",
+     "vs": [
+      "sp260"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Vliegende vogel, liefst met vergelijkingsmateriaal",
+     "exceptions": "Formaat zonder referentie is onbetrouwbaar; combineer met staartlengte en vleugelpunten.",
+     "supporting": "Kopkap en baardstreep bij volwassen Slechtvalk",
+     "sources": [
+      "VB_SLECHT",
+      "VB_SMELLEKEN"
      ]
     }
    ],
@@ -8346,9 +8437,10 @@ const DATA = {
     },
     {
      "id": "sp008",
-     "why": "Door de bron genoemd",
+     "why": "Torenvalk is slanker, met lange staart, en bidt veel; Slechtvalk heeft een zware borst, brede baardstreep en een vrij korte staart.",
      "sources": [
-      "VB_SLECHT"
+      "VB_SLECHT",
+      "VB_TOREN"
      ]
     },
     {
@@ -8361,9 +8453,11 @@ const DATA = {
     },
     {
      "id": "sp007",
-     "why": "Door de bron genoemd",
+     "why": "Havik heeft een lichte wenkbrauwstreep, een kop die ver uitsteekt en een langere, afgeronde staart.",
      "sources": [
-      "VB_SLECHT"
+      "VB_SLECHT",
+      "VB_HAVIK",
+      "VB_HVS"
      ]
     }
    ],
@@ -8552,7 +8646,7 @@ const DATA = {
      ],
      "reliability": "ondersteunend",
      "conditions": "Kop van opzij goed zichtbaar",
-     "exceptions": "Bron noemt volwassen vogels 'normaal gesproken' makkelijk; juvenielen lastiger",
+     "exceptions": "Bij volwassen vogels is het koppatroon meestal goed te zien; bij jonge vogels met rood petje is het onderscheid lastiger.",
      "supporting": "Middelste meer gestreept op flanken en buik; roep",
      "sources": [
       "VB_GBS_MBS"
@@ -8562,32 +8656,75 @@ const DATA = {
      "feature": "Grootte en rug",
      "where": "Rug en totaalindruk",
      "this": "Grote witte schoudervlekken",
-     "other": "Kleine Bonte Specht: veel kleiner, rug zwart-wit gestreept",
+     "other": "Kleine Bonte Specht: veel kleiner (musformaat), rug zwart-wit dwarsgestreept zonder grote witte schoudervelden",
      "vs": [
       "sp017"
      ],
      "reliability": "ondersteunend",
      "conditions": "Goed zicht op de rug",
-     "exceptions": "—",
+     "exceptions": "Formaat zonder referentie is onbetrouwbaar; gebruik het rugpatroon.",
      "supporting": "Roffel",
      "sources": [
-      "VB_GBS_MBS"
+      "VB_GBS_MBS",
+      "VB_KLEINE_BONTE_SPECHT"
+     ]
+    },
+    {
+     "feature": "Onderstaart en flanken",
+     "where": "Onderzijde van opzij of van onderen",
+     "this": "Rode onderstaart; flanken minder gestreept dan bij Middelste Bonte Specht",
+     "other": "Middelste Bonte Specht: roze onderstaart en fijne flankstrepen. Kleine Bonte Specht: geen rode onderstaartdekkers",
+     "vs": [
+      "sp020",
+      "sp017"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Onderzijde goed zichtbaar, voldoende licht",
+     "exceptions": "Bij tegenlicht of een ongunstige hoek vallen flankstrepen en de kleur van de onderstaart weg.",
+     "supporting": "Koppatroon en rugtekening",
+     "sources": [
+      "VB_GBS",
+      "VB_GBS_MBS",
+      "VB_MBS",
+      "VB_KLEINE_BONTE_SPECHT"
+     ]
+    },
+    {
+     "feature": "Rood op de kop (geslacht en leeftijd)",
+     "where": "Kruin en achterhoofd",
+     "this": "Mannetje: rode nekvlek op het achterhoofd, zwarte kruin. Vrouwtje: geen rood op de kop. Juveniel: rode kruin met zwarte rand",
+     "other": "Middelste Bonte Specht: rode kruin in alle kleden, doorgaans zonder zwarte onderrand. Kleine Bonte Specht: volwassen mannetje met rode kruin, vrouwtje zonder rood",
+     "vs": [
+      "sp020",
+      "sp017"
+     ],
+     "reliability": "ondersteunend",
+     "conditions": "Kop van opzij of van achteren zichtbaar",
+     "exceptions": "Rood op de kruin alleen bewijst niets: jonge Grote Bonte Spechten, Middelste Bonte Spechten en mannetjes Kleine Bonte Specht hebben het allemaal.",
+     "supporting": "Nekstreep en onderstaart",
+     "sources": [
+      "VB_GBS",
+      "VB_GBS_MBS",
+      "VB_MBS",
+      "VB_KLEINE_BONTE_SPECHT"
      ]
     }
    ],
    "similar": [
     {
      "id": "sp020",
-     "why": "Juveniel met rood petje lijkt erop; koppatroon beslist",
+     "why": "Een jonge Grote Bonte Specht met rood petje lijkt erop; het koppatroon, de onderstaart en de flanken beslissen.",
      "sources": [
-      "VB_GBS_MBS"
+      "VB_GBS_MBS",
+      "VB_MBS"
      ]
     },
     {
      "id": "sp017",
-     "why": "Veel kleiner, gestreepte rug",
+     "why": "Kleine Bonte Specht is veel kleiner, heeft een dwarsgestreepte rug zonder grote witte schoudervlekken en geen rode onderstaart.",
      "sources": [
-      "VB_GBS_MBS"
+      "VB_GBS_MBS",
+      "VB_KLEINE_BONTE_SPECHT"
      ]
     }
    ],

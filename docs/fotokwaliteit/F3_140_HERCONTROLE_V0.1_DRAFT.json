@@ -2082,7 +2082,7 @@
           "base": "ad514b0f298a9143586311a9c079bc26370b71aa",
           "pr": 353,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED (R03b) / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R03_VALKEN_SPECHT_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -2238,7 +2238,7 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - quickPrimary [bidden, lange staart] onder het doorslaggevende geslachtskenmerk; man/vrouw-kenmerken onder Meer kenmerken (niets verwijderd). \"Let op\" zegt dat het jeugdkleed in de bron niet beschreven is, terwijl de kaart een juveniel toont en de leeftijdsdetail het jeugdkleed beschrijft (tegenstrijdig)",
             "herkenning": "PARTIALLY TESTED - verenkleed man/vrouw/juveniel consistent met foto's; brontekst VB niet herlezen",
-            "lijktOp": "PARTIALLY TESTED - fotoparen met Slechtvalk (juveniel, vlucht), Sperwer (juveniel, vlucht, gelabelde rijen) en Havik (vlucht, gelabelde rijen); Slechtvalk-paren zonder gelabelde rijen; Boomvalk en Smelleken alleen tekst (geen gidsfoto's); kritische kaarten 2 (geslacht; silhouet vs. Boomvalk/Smelleken), geen kritische kaart vs. Sperwer of Slechtvalk"
+            "lijktOp": "PARTIALLY TESTED - fotoparen met Slechtvalk (juveniel, vlucht), Sperwer (juveniel, vlucht, gelabelde rijen) en Havik (vlucht, gelabelde rijen); Slechtvalk-paren zonder gelabelde rijen; Boomvalk en Smelleken alleen tekst (geen gidsfoto's); kritische kaarten 2 (geslacht; silhouet vs. Boomvalk/Smelleken), geen kritische kaart vs. Sperwer of Slechtvalk R03b: zie resolvedInR03b."
           },
           "lookalikes": [
             {
@@ -2297,25 +2297,45 @@
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
             "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
-            "G3 \"Let op\"-tekst over jeugdkleed tegenstrijdig met getoonde juveniel en leeftijdsdetail",
-            "G4 Geen kritische kaart vs. Sperwer en Slechtvalk; Slechtvalk-paren zonder gelabelde rijen",
             "G5 Audio niet menselijk beluisterd",
             "G6 Boomvalk/Smelleken alleen tekst (geen gidsfoto's)",
             "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null,
-            "date": null,
-            "reference": null,
-            "options": [
-              "A - verder onderzoeken",
-              "B - gericht verbeteren",
-              "C - voorlopig doorgaan (alleen met expliciet besluit)"
-            ]
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit B F3-REV2-R03b (chat 24-11-2026 07:39 CET) voor sp008, sp009, sp016; uitgevoerd in PR #353",
+            "executionStatus": "UITGEVOERD (R03b) - open punten blijven",
+            "remainingOpen": [
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED (hostprompt 24-11 07:45 onbeantwoord)",
+              "Audio PARTIALLY TESTED (niet menselijk beluisterd)",
+              "Boomvalk en Smelleken zonder gidsfoto: alleen tekst",
+              "Volwassen rustpaar Torenvalk-Sperwer ontbreekt (geen gelijkwaardige foto's gekozen)",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; geen nieuwe optie C; geen start R04; ANWB/Vogelbescherming/audio-grenzen blijven"
           },
           "fullPass": false,
-          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit."
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "resolvedInR03b": [
+            "G3 \"Let op\" herschreven: jonge vogels lijken sterk op volwassen vrouwtjes; leeftijdskenmerken en onzekerheid behouden (VB_TOREN, BZ_TOREN)",
+            "G4 kritische kaarten vs. Sperwer (jachtwijze, vleugels, borsttekening) en vs. Slechtvalk (bouw, kop, staart); Boomvalk/Smelleken-kaart aangevuld (broekveren, blauwgrijze rug mannetje Smelleken)",
+            "G4 gelabelde rijen op Torenvalk-Slechtvalk vlucht (bouw en staart, kop, jachtwijze) en juveniel (kop, bovenzijde, bouw en staart)",
+            "Lijkt-op-teksten Sperwer/Slechtvalk inhoudelijk i.p.v. \"door de bron genoemd\""
+          ],
+          "repair": {
+            "round": "F3-REV2-R03b",
+            "date": "2026-11-24",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r03.mjs",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -2479,7 +2499,7 @@
           "base": "ad514b0f298a9143586311a9c079bc26370b71aa",
           "pr": 353,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED (R03b) / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R03_VALKEN_SPECHT_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -2612,7 +2632,7 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - quickPrimary [bouw/vleugels/staart, kleed volwassen/jong] onder kritisch kenmerk bouw en kopkap; kopkap-kenmerk onder Meer kenmerken (zelfde inhoud staat in de kritische kaart)",
             "herkenning": "PARTIALLY TESTED - volwassen/juveniel consistent met foto's; geslacht terecht niet gelabeld; brontekst VB niet herlezen",
-            "lijktOp": "PARTIALLY TESTED - fotoparen met Torenvalk (juveniel, vlucht; vrije tekst) en Havik (juveniel, gelabelde rijen); geen volwassen paar met Havik; Boomvalk en Smelleken alleen tekst; 1 kritische kaart (vs. Boomvalk); geen kritische kaart vs. Havik, Torenvalk of Smelleken"
+            "lijktOp": "PARTIALLY TESTED - fotoparen met Torenvalk (juveniel, vlucht; vrije tekst) en Havik (juveniel, gelabelde rijen); geen volwassen paar met Havik; Boomvalk en Smelleken alleen tekst; 1 kritische kaart (vs. Boomvalk); geen kritische kaart vs. Havik, Torenvalk of Smelleken R03b: zie resolvedInR03b."
           },
           "lookalikes": [
             {
@@ -2657,23 +2677,48 @@
             "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
             "G7 Alle zes foto's niet-Europees of herkomst onbekend (India 2x, Californie, VS/onbekend 3x); juveniel donker Noord-Amerikaans type",
             "G8 Twee iNaturalist-licenties niet herbevestigd (API 404)",
-            "G4 Eén kritische kaart (Boomvalk); geen kritische kaart vs. Havik, Torenvalk, Smelleken; geen volwassen fotopaar met Havik",
             "G5 Audio niet menselijk beluisterd; bron noemt geen roeptype of herkomst",
             "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null,
-            "date": null,
-            "reference": null,
-            "options": [
-              "A - verder onderzoeken",
-              "B - gericht verbeteren",
-              "C - voorlopig doorgaan (alleen met expliciet besluit)"
-            ]
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit B F3-REV2-R03b (chat 24-11-2026 07:39 CET) voor sp008, sp009, sp016; uitgevoerd in PR #353",
+            "executionStatus": "UITGEVOERD (R03b) - open punten blijven",
+            "remainingOpen": [
+              "G7 OPEN: geen aantoonbaar betere Europese hoofdfoto of juveniel gevonden; beste kandidaten voor eigenaarkeuze: volwassen in vlucht San Giuliano Terme, Toscane (Scontardi, CC BY-SA 4.0), juveniel in vlucht Brandon Marsh, Engeland (Jacob Spinks, CC BY 2.0; minder scherp), volwassen op nestkast Noordwijk (Michel Langeveld, CC BY-SA 4.0; klein in beeld)",
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED (hostprompt 24-11 07:45 onbeantwoord)",
+              "Audio PARTIALLY TESTED; bron noemt geen roeptype of herkomst",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; geen nieuwe optie C; geen start R04; ANWB/Vogelbescherming/audio-grenzen blijven"
           },
           "fullPass": false,
-          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit."
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "resolvedInR03b": [
+            "G4 kritische kaarten vs. Havik, Torenvalk en Smelleken; Boomvalk-kaart aangescherpt",
+            "G4 nieuw fotopaar Slechtvalk-Havik volwassen in vlucht met gelabelde rijen (Commons-foto met bevestigde rechten tegen bewezen Havik-mannetje)",
+            "G4 gelabelde rijen op Torenvalk-paren (wederkerig)",
+            "G7 gericht fotoonderzoek uitgevoerd (discover-rev2-r03b, 11 zoekopdrachten): geen kandidaat aantoonbaar beter; niets vervangen of verwijderd",
+            "G8 iNaturalist-rechten via fallbackroutes gecontroleerd (zie foto-regels)",
+            "Lijkt-op-teksten Torenvalk/Havik inhoudelijk"
+          ],
+          "repair": {
+            "round": "F3-REV2-R03b",
+            "date": "2026-11-24",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r03.mjs",
+              "tests/test_f3_rev2_r01_browser.py",
+              "tools/media/orig_check.py",
+              "docs/media-intake/2026-11-24/origcheck-rev2-r03b-inat/origcheck.json",
+              "docs/media-intake/2026-11-24/discover-rev2-r03b/candidates.json"
+            ]
+          }
         }
       }
     },
@@ -2814,7 +2859,7 @@
           "base": "ad514b0f298a9143586311a9c079bc26370b71aa",
           "pr": 353,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED (R03b) / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R03_VALKEN_SPECHT_2026-11-23_DRAFT.md",
           "photos": [
             {
@@ -2922,7 +2967,7 @@
               "license": "CC BY 2.0",
               "visual": "Vliegend met voedsel; vleugels bewegingsonscherp, rode nekvlek en rode onderstaart zichtbaar.",
               "identity": "VERIFIED (soort visueel; Schotland 2021)",
-              "quality": "PARTIALLY TESTED - beperkt: vleugels bewegingsonscherp; bijschrift \"witte schoudervlek ook met uitgespreide vleugels goed zichtbaar\" overschat wat de foto toont",
+              "quality": "VERIFIED - goed: op volle resolutie (1400x933) schoudervlek, vleugelstippen, rode nekvlek en onderstaart scherp; vleugeltoppen licht bewegingsonscherp",
               "roleCheck": "VERIFIED - In vlucht",
               "blobSha": "549ac36b8eed9340e0db99e4e607d808939e9965",
               "rightsREV2": "VERIFIED - Commons-API: auteur en licentie gelijk aan register (exact), origineel SHA-1 a80269d1a0df4346700fa6d5626ae0abb53a2b71, zelfde opname r=1.0",
@@ -2935,7 +2980,8 @@
                   "Dendrocopos major in Scotland",
                   "Dendrocopos major in flight"
                 ]
-              }
+              },
+              "qualityHistory": "F3-REV2-R03 23-11-2026: PARTIALLY TESTED op basis van verkleind beeld; ingetrokken in R03b na beoordeling op volle resolutie"
             }
           ],
           "sources": {
@@ -2947,7 +2993,7 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - quickPrimary [witte schoudervlekken, rode onderkant] onder kritisch kenmerk koppatroon; man/vrouw/juveniel onder Meer kenmerken (niets verwijderd)",
             "herkenning": "VERIFIED (tekstconsistentie) - man/vrouw/juveniel consistent met de vier rustfoto's; brontekst VB niet herlezen",
-            "lijktOp": "PARTIALLY TESTED - fotoparen juveniel vs. Middelste (rollabel Middelste toont paartitel \"Grote of middelste bonte specht?\" i.p.v. kleed), vlucht met Middelste (Kleine zonder vluchtfoto) en mannetjes met Kleine; geen gelabelde rijen; geen vrouwtjespaar met Kleine en geen volwassen paar met Middelste; kritische kaart koppatroon met \"Bron noemt ...\"-formulering in publieke tekst"
+            "lijktOp": "PARTIALLY TESTED - fotoparen juveniel vs. Middelste (rollabel Middelste toont paartitel \"Grote of middelste bonte specht?\" i.p.v. kleed), vlucht met Middelste (Kleine zonder vluchtfoto) en mannetjes met Kleine; geen gelabelde rijen; geen vrouwtjespaar met Kleine en geen volwassen paar met Middelste; kritische kaart koppatroon met \"Bron noemt ...\"-formulering in publieke tekst R03b: zie resolvedInR03b."
           },
           "lookalikes": [
             {
@@ -2994,26 +3040,46 @@
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
             "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
-            "G9 Rollabel Middelste-foto in juveniel-paar toont paartitel i.p.v. kleed",
-            "G10 Vergelijkingen zonder gelabelde rijen; geen volwassen paar met Middelste, geen vrouwtjespaar met Kleine; kritische kaarten missen onderstaart/flanken",
-            "G11 Publieke tekst \"Bron noemt ...\" in kritische kaart",
-            "G12 Vluchtfoto bewegingsonscherp; bijschrift overschat zichtbaarheid schoudervlek",
             "G13 Audio niet menselijk beluisterd; roffel-auteur op Commons met gebruikersnaam",
             "Onafhankelijke biologische/fotoreview open"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null,
-            "date": null,
-            "reference": null,
-            "options": [
-              "A - verder onderzoeken",
-              "B - gericht verbeteren",
-              "C - voorlopig doorgaan (alleen met expliciet besluit)"
-            ]
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "Eigenaarbesluit B F3-REV2-R03b (chat 24-11-2026 07:39 CET) voor sp008, sp009, sp016; uitgevoerd in PR #353",
+            "executionStatus": "UITGEVOERD (R03b) - open punten blijven",
+            "remainingOpen": [
+              "Juvenielenpaar Grote-Middelste blijft juveniel tegen volwassen (geen geverifieerde juveniele Middelste-foto)",
+              "Kleine Bonte Specht zonder vluchtfoto",
+              "ANWB NOT TESTED",
+              "Vogelbescherming NOT TESTED",
+              "Audio PARTIALLY TESTED; roffel-auteur Commons met gebruikersnaam",
+              "Onafhankelijke biologische/fotoreview"
+            ],
+            "notGranted": "Geen FULL PASS; geen nieuwe optie C; geen start R04; ANWB/Vogelbescherming/audio-grenzen blijven"
           },
           "fullPass": false,
-          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit."
+          "comparisonRule": "Harde eigenaarregel 23-11-2026 18:56 en 22:10: vergelijkingen zo uitgebreid mogelijk in tekst en (verdedigbare) foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "resolvedInR03b": [
+            "G9 Middelste-foto in juveniel-paar: plumage adult_m -> label \"Volwassen\" (Commons: male; geslacht niet zichtbaar, dus geen geslachtslabel)",
+            "G10 nieuwe paren: volwassen Grote (mannetje) vs Middelste (volwassen), vrouwtjes Grote vs Kleine; gelabelde rijen op alle vijf de paren incl. vlucht",
+            "G10 kritische kaarten onderstaart/flanken en rood op de kop (geslacht/leeftijd) vs. Middelste en Kleine",
+            "G11 \"Bron noemt ...\" vervangen door zelfstandige herkenningstekst; bron intern",
+            "G12 vluchtfoto op volle resolutie herbeoordeeld: witte schoudervlek, vleugelstippen, rode nekvlek en onderstaart scherp zichtbaar; alleen vleugeltoppen licht bewegingsonscherp. Bijschrift klopt en blijft; R03-oordeel \"overschat\" was gebaseerd op een verkleind beeld en is ingetrokken",
+            "Discover GBS-vlucht: geen beter vrij vluchtbeeld (zelfde opname, Japanse ondersoort, lage resolutie)"
+          ],
+          "repair": {
+            "round": "F3-REV2-R03b",
+            "date": "2026-11-24",
+            "evidence": [
+              "src/features/species/guideComparisons.js",
+              "tools/kennisbaseline/knowledge.json",
+              "docs/fotokwaliteit/SOORTVERWARRING_REGISTER_V0.1_DRAFT.json",
+              "tests/test_f3_rev2_r03.mjs",
+              "tests/test_f3_rev2_r01_browser.py"
+            ]
+          }
         }
       }
     },
@@ -16788,7 +16854,7 @@
           "sp009",
           "sp016"
         ],
-        "status": "REVIEWED / OWNER GATE OPEN",
+        "status": "OWNER DECISION B EXECUTED (R03b) / OPEN POINTS REMAIN",
         "date": "2026-11-23",
         "pr": 353,
         "baseSHA": "ad514b0f298a9143586311a9c079bc26370b71aa",
@@ -16798,8 +16864,8 @@
     "counts": {
       "total": 140,
       "reexamined": 9,
-      "ownerGateOpen": 3,
-      "ownerDecisions": 6,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 9,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -16828,6 +16894,12 @@
         "time": "22:10",
         "batch": "F3-REV2-R02",
         "decision": "R02b-QA geaccepteerd; algemene Havik-vluchtfoto uit de zichtbare gids (origineel bewaard); start R03 na gecontroleerde correctie"
+      },
+      {
+        "date": "2026-11-24",
+        "time": "07:39",
+        "batch": "F3-REV2-R03",
+        "decision": "B voor sp008, sp009, sp016 (gericht verbeteren); Slechtvalk met gericht fotoonderzoek; geen nieuwe C, geen FULL PASS, R04 niet starten"
       }
     ]
   }

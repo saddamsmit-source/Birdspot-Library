@@ -10,6 +10,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
 import { recognitionPanel } from '../src/features/species/detailSections.js';
+import { KNOWLEDGE } from '../src/data/speciesKnowledge.js';
 
 const byId = new Map(SPECIES.map(s => [s.id, s]));
 const similar = id => recognitionPanel(byId.get(id)).match(/<section class="sd-similar"[\s\S]*?<\/section>/)?.[0] || '';
@@ -48,6 +49,34 @@ for (const [id, birds] of Object.entries(want)) {
 }
 assert.deepEqual(lk.focusSpecies.slice(-3), ['sp008', 'sp009', 'sp016']);
 
+// F3-REV2-R03b (eigenaarbesluit B, 24-11-2026): nieuwe paren, gelabelde rijen in beide richtingen,
+// kritische kaarten wederkerig, geen publieke bronverwijzing, geen tegenstrijdige jeugdkleedtekst.
+const NEW_PAIRS = [['sp009', 'sp007', true, ['sp009.webp', 'sp007-male-flight.webp']], ['sp016', 'sp020', false, ['sp016-male.webp', 'sp020-male.webp']],
+  ['sp016', 'sp017', false, ['sp016.webp', 'sp017-female.webp']]];
+for (const [a, b, flight, imgs] of NEW_PAIRS) {
+  assert.ok(panels(a).map(x => JSON.stringify(x)).includes(JSON.stringify([b, flight, imgs])), `R03b: nieuw paar ${a}->${b}`);
+  assert.ok(panels(b).map(x => JSON.stringify(x)).includes(JSON.stringify([a, flight, [...imgs].reverse()])), `R03b: nieuw paar ${b}->${a}`);
+}
+const rowLabels = (a, b) => [...similar(a).split('<div class="sd-cmp-panel"').slice(1).filter(p => p.includes(`data-compare-species="${b}"`)).join('')
+  .matchAll(/<div class="sd-cmp-row"><b>([^<]+)<\/b>/g)].map(m => m[1]);
+for (const [a, b, min] of [['sp008', 'sp009', 6], ['sp009', 'sp008', 6], ['sp009', 'sp007', 6], ['sp007', 'sp009', 6],
+  ['sp016', 'sp020', 9], ['sp020', 'sp016', 9], ['sp016', 'sp017', 6], ['sp017', 'sp016', 6]]) {
+  const labels = rowLabels(a, b);
+  assert.ok(labels.length >= min, `R03b: ${a}->${b} ${labels.length} gelabelde rijen (min ${min})`);
+}
+const K = KNOWLEDGE;
+const critVs = id => (K[id].critical || []).flatMap(c => c.vs);
+for (const [a, list] of Object.entries({ sp008: ['sp006', 'sp009', 'sp260', 'sp261'], sp009: ['sp007', 'sp008', 'sp260', 'sp261'], sp016: ['sp017', 'sp020'] }))
+  for (const b of list) assert.ok(critVs(a).includes(b), `R03b: kritische kaart ${a} vs ${b}`);
+for (const id of ['sp008', 'sp009', 'sp016']) {
+  const publicText = JSON.stringify([K[id].caution, K[id].critical, K[id].similar]);
+  assert.ok(!/\bBron noemt|[Dd]oor de bron genoemd|geraadpleegde bron/.test(publicText), id + ': geen bronverwijzing in publieke tekst');
+}
+assert.ok(/jonge vogels lijken sterk op volwassen vrouwtjes/.test(K.sp008.caution.text) && !/niet beschreven/.test(K.sp008.caution.text), 'G3: jeugdkleed niet meer tegenstrijdig');
+assert.ok(!similar('sp016').includes('Grote of middelste bonte specht?</'), 'G9: paartitel niet meer als rollabel');
+for (const id of ['LK-106', 'LK-107', 'LK-108']) assert.ok(lk.pairs.find(p => p.id === id), id);
+for (let n = 1; n <= 108; n++) assert.ok(lk.pairs.find(p => p.id === `LK-${String(n).padStart(3, '0')}`), `LK-${n} behouden`);
+
 // Register: R03-batch met open eigenaarspoort, geen FULL PASS.
 const reg = JSON.parse(readFileSync(new URL('../docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json', import.meta.url), 'utf8'));
 const r03 = reg.secondReview.batches.find(b => b.round === 'F3-REV2-R03');
@@ -59,4 +88,4 @@ for (const id of r03.species) {
   if (s.ownerDecision.status === 'OPEN') assert.ok(s.materialGaps.length > 0, id + ': open poort zonder benoemde tekortkoming');
 }
 assert.ok(reg.secondReview.counts.reexamined <= 9 || reg.secondReview.batches.length > 3, 'na R03 maximaal 9/140 in de tweede ronde');
-console.log('F3-REV2-R03 PASS: bestaande vergelijkingen en kritische kaarten behouden; LK-100…LK-105 traceerbaar; eigenaarspoort open');
+console.log('F3-REV2-R03/R03b PASS: bestaande vergelijkingen behouden; 3 nieuwe paren wederkerig; gelabelde rijen; kritische kaarten wederkerig; geen publieke bronverwijzing; LK-001…LK-108');

@@ -52,3 +52,20 @@ Registratie: `F3_140_HERCONTROLE_V0.1_DRAFT.json` → `records[sp008, sp009, sp0
 ## Tests
 
 `test_f3_rev2_r01.mjs` (9 records, digest, quickPrimary alleen in gecontroleerde batch), nieuw `test_f3_rev2_r03.mjs` (bestaande paren en kritische kaarten behouden, LK-100…105, poort open), `test_f3_rev2_r02_compare.mjs` (quickPrimary laat alle kenmerken staan — nu ook R03), `test_f3_rev2_r01_browser.py` (9 soorten, 320/360/390 + offline, R02c Havik), lookalike R09–R17, node-suite 53/54 (`test_photo_feedback`: lokaal `sharp` ontbreekt, ook op basis), species_detail, kennisbaseline_browser, mobile_owner_review, plumage_compare_layout PASS. Toestel, preview, productie: NOT TESTED.
+
+## F3-REV2-R03b — eigenaarbesluit B (24-11-2026)
+
+- Eigenaarbesluit: chat 24-11-2026 07:39 CET — B voor sp008, sp009, sp016; Slechtvalk met gericht fotoonderzoek. Geen FULL PASS, geen nieuwe optie C, R04 niet starten.
+- Writer: claim op PR #353 opnieuw ACTIEF (comment 7124166865) vanaf 9c6ecd3; geen nieuwe branch nodig (zelfde concept-PR, geen andere schrijver).
+- Alle nieuwe tekst komt uit bestaande, gebronde claims in `knowledge.json` (VB_TOREN, BZ_TOREN, EB_KES, VB_SPERWER, VB_HVS, VB_SLECHT, VB_HAVIK, VB_BOOMVALK, VB_SMELLEKEN, VB_GBS, VB_GBS_MBS, VB_MBS, VB_KLEINE_BONTE_SPECHT). Die bronnen zijn in REV2 niet herlezen: tekst blijft PARTIALLY TESTED.
+
+| Soort | Uitgevoerd |
+|---|---|
+| Torenvalk | G3 "Let op" herschreven (jongen lijken sterk op vrouwtjes; leeftijdskenmerken en onzekerheid behouden). G4: kritische kaarten vs. Sperwer en vs. Slechtvalk; Boomvalk/Smelleken-kaart aangevuld; gelabelde rijen op beide Slechtvalk-paren; Lijkt-op-teksten inhoudelijk |
+| Slechtvalk | G4: kritische kaarten vs. Havik, Torenvalk, Smelleken; Boomvalk-kaart aangescherpt; nieuw paar Slechtvalk–Havik volwassen in vlucht (Commons-foto met bevestigde rechten tegen bewezen Havik-mannetje) met rijen. G7: gericht onderzoek (11 zoekopdrachten, `docs/media-intake/2026-11-24/discover-rev2-r03b`): geen kandidaat aantoonbaar beter → niets vervangen of verwijderd; beste Europese kandidaten voor eigenaarkeuze (Toscane volwassen vlucht; Brandon Marsh juveniel vlucht; Noordwijk volwassen op nestkast). G8: iNaturalist-controle met openbare fallbackroutes (`orig_check.py`), uitkomst in het register |
+| Grote Bonte Specht | G9: Middelste-foto in juveniel-paar → "Volwassen" (Commons noemt male, geslacht niet zichtbaar). G10: nieuwe paren volwassen Grote–Middelste en vrouwtjes Grote–Kleine; gelabelde rijen op alle paren incl. vlucht; kritische kaarten onderstaart/flanken en rood op de kop. G11: "Bron noemt…" vervangen. G12: vluchtfoto op volle resolutie herbeoordeeld — schoudervlek, vleugelstippen, nekvlek en onderstaart scherp; bijschrift klopt; R03-oordeel (verkleind beeld) ingetrokken |
+
+- Gelabelde rijen vervangen in de weergave de vrije kenmerktekst van een paar; per paar gecontroleerd dat er geen inhoud wegvalt (vleugelvorm, "lijkt op vrouwtje", licht gezicht en de fotonotitie Middelste zijn in rijen of tip opgenomen).
+- Soortverwarring: LK-106 (Grote–Middelste volwassen), LK-107 (Grote–Kleine vrouwtjes), LK-108 (Slechtvalk–Havik volwassen vlucht); LK-100/101/102/105 bijgewerkt; LK-001…LK-105 behouden.
+- Render-diff t.o.v. 9c6ecd3: alleen sp007, sp008, sp009, sp016, sp017, sp020 (partnerkaarten door gedeelde vergelijkingen, bedoeld).
+- Vogelbescherming: hostprompt 24-11 ~07:45 onbeantwoord → NOT TESTED, niet herhaald. ANWB NOT TESTED. Audio niet beluisterd.
