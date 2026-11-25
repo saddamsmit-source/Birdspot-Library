@@ -222,6 +222,8 @@ def run(browser, url, tmp):
     page.locator('#audioAttachList .sighting-audio-item__del[data-audioid]').first.click()
     add_audio(page, [{"name": "extra.wav", "mimeType": "audio/wav", "buffer": wav2}], 1)
     page.locator('#addSheetCancel').click()
+    # UX-01A: gewijzigd formulier vraagt eerst een bewuste keuze; annuleren = wijzigingen verwerpen.
+    page.locator('#sightingLeaveDialog').get_by_role('button', name='Wijzigingen verwerpen').click()
     page.locator('#addSightingSheet').wait_for(state='detached', timeout=8000)
     page.wait_for_timeout(300)
     check('R3-05', 'Annuleren na verwijderen + toevoegen → waarneming en opgeslagen opnamen ongewijzigd',

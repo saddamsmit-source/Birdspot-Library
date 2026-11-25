@@ -45,7 +45,10 @@ def main():
    p.locator('#speciesPickerOverlay').wait_for(state='detached')
    assert p.locator('#addSightingSheet').is_visible()
    assert p.locator('#sightLocation').input_value()=='Terugtest'
-   p.go_back();p.locator('#addSightingSheet').wait_for(state='detached')
+   # UX-01A: Terug op een gewijzigd formulier opent eerst de keuzedialoog; hier bewust verwerpen.
+   p.go_back();p.locator('#sightingLeaveDialog').wait_for()
+   p.locator('#sightingLeaveDialog').get_by_role('button',name='Wijzigingen verwerpen').click()
+   p.locator('#addSightingSheet').wait_for(state='detached')
    assert p.locator('#screen-species').is_visible()
    assert p.locator('#speciesSearch').input_value()=='Winterkoning'
    # Remove only our malformed fixture, not through application code; test valid navigation too.
