@@ -219,7 +219,7 @@ async function renderList(ctx, { keepScroll = true } = {}) {
   const frag = document.createDocumentFragment();
   for (const s of shown) frag.appendChild(buildCard(s, placesById));
   list.appendChild(frag);
-  if (keepScroll && main) main.scrollTop = scrollTop;
+  if (keepScroll && main) main.scrollTo({ top: scrollTop, behavior: 'instant' });   // geen zachte scroll: blijf staan
 
   loadThumbnails(list, shown, () => generation === ctx.generation);
 

@@ -103,7 +103,15 @@ export function navigate(route, { force = false, history: addHistory = true, tar
   if (fab) fab.hidden = !ROUTES[route].fab;
 
   // Scroll naar top
-  main.scrollTo({ top: direct || route === 'species' ? 0 : saved?.scrollTop || 0, behavior: 'instant' });
+  const restoreTop = direct || route === 'species' ? 0 : saved?.scrollTop || 0;
+  main.scrollTo({ top: restoreTop, behavior: 'instant' });
+  // UX-02B: schermen die asynchroon opbouwen (Mijn waarnemingen) krijgen de bewaarde scrollpositie
+  // pas terug als de inhoud er staat; anders zou de browser hem op 0 afkappen.
+  if (restoreTop > 0 && result && typeof result.then === 'function') {
+    result.then(() => {
+      if (screen.isConnected && currentRoute === route && main.scrollTop < restoreTop) main.scrollTo({ top: restoreTop, behavior: 'instant' });
+    }).catch(() => {});
+  }
   if (target.section && route !== 'map') {
     Promise.resolve(result).then(() => {
       if (screen.isConnected) focusSection(screen, target.section);
