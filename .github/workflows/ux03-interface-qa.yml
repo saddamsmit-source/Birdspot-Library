@@ -21,6 +21,10 @@ jobs:
         run: |
           set -o pipefail
           python tests/test_ux03a_navigatie.py 2>&1 | tee ux03a.log
+      - name: UX-03B herkenningsstatus en historische records (V1–V10)
+        run: |
+          set -o pipefail
+          python tests/test_ux03b_verificatie.py 2>&1 | tee ux03b.log
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: ux03-evidence, path: 'ux03*.log'}

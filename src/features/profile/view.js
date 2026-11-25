@@ -453,6 +453,9 @@ export function overviewStats(sightings) {
   return { sightings: sightings.length, species: species.size, places: places.size, photos };
 }
 
+// UX-03B: één uitleg voor de telregel, met dezelfde woorden als de statuslabels.
+const SKIP_REASON = 'zekerheid ‘mogelijk’, een suggestie van BirdNET of Merlin zonder eigen controle, of ‘controle onbekend’';
+
 function renderOverview(sightings) {
   const st = overviewStats(sightings);
   if (!st.sightings) {
@@ -498,7 +501,7 @@ function renderLists(l) {
     return l.skipped
       ? `<section class="profile-section" aria-labelledby="listsHeading">
           <h2 class="profile-section__title" id="listsHeading">Mijn lijsten</h2>
-          <p class="profile-empty">${l.skipped} ${l.skipped === 1 ? 'waarneming is' : 'waarnemingen zijn'} nog onzeker (mogelijk of een niet-gecontroleerde Merlin-suggestie) en ${l.skipped === 1 ? 'telt' : 'tellen'} niet mee.</p>
+          <p class="profile-empty">${l.skipped} onzekere ${l.skipped === 1 ? 'waarneming telt' : 'waarnemingen tellen'} nog niet mee: ${SKIP_REASON}.</p>
         </section>` : '';
   }
   const tile = (n, label) => `<div class="profile-stat"><strong>${n}</strong><span>${label}</span></div>`;
@@ -526,7 +529,7 @@ function renderLists(l) {
       <summary>Alle soorten <span>(${l.list.length})</span></summary>
       <ul class="profile-list"></ul>
     </details>
-    ${l.skipped ? `<p class="profile-note">${l.skipped} onzekere ${l.skipped === 1 ? 'waarneming telt' : 'waarnemingen tellen'} niet mee (mogelijk, of Merlin-suggestie zonder eigen controle).</p>` : ''}
+    ${l.skipped ? `<p class="profile-note" id="profileSkippedNote">${l.skipped} onzekere ${l.skipped === 1 ? 'waarneming telt' : 'waarnemingen tellen'} niet mee: ${SKIP_REASON}. De waarnemingen zelf blijven bewaard.</p>` : ''}
     <button type="button" class="profile-link" data-insights>Meer per jaar in Mijn Inzichten ↗</button>
   </section>`;
 }

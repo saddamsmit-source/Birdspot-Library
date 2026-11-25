@@ -74,7 +74,8 @@ ok(ids(f({ media: ['photo'] })) === 'a', 'met foto');
 ok(ids(f({ media: ['audio'] })) === 'b', 'met geluid');
 ok(ids(f({ source: ['birdnet'] })) === 'deh', 'BirdNET');
 ok(ids(f({ source: ['self'] })) === 'ab', 'eigen herkenning zonder oude BirdNET-suggestie');
-ok(ids(f({ source: ['unknown'] })) === 'fg', 'niet vastgelegd: oud record en oude BirdNET-suggestie');
+ok(ids(f({ source: ['unknown'] })) === 'f', 'controle onbekend: oude BirdNET-suggestie (UX-03B)');
+ok(ids(f({ source: ['unrecorded'] })) === 'g', 'bron niet vastgelegd: oud record zonder bron (UX-03B)');
 ok(ids(f({ source: ['merlin'] })) === 'c', 'Merlin');
 ok(ids(f({ certainty: ['certain'] })) === 'aeg', 'Zeker zonder ongecontroleerde of oude suggesties');
 ok(ids(f({ method: ['heard'], source: ['birdnet'], certainty: ['certain'] })) === 'e', 'combinatie EN');
@@ -82,7 +83,7 @@ ok(ids({ ...f({ method: ['heard'] }), query: 'merel' }) === 'df', 'filter + zoek
 ok(ids({ speciesId: 'sp045' }) === 'adf', 'soortfilter');
 
 // 4. Categorieën en plekken
-eq(['a', 'c', 'd', 'f', 'g'].map(id => sourceCategory(data.find(x => x?.id === id))), ['self', 'merlin', 'birdnet', 'unknown', 'unknown'], 'bron');
+eq(['a', 'c', 'd', 'f', 'g'].map(id => sourceCategory(data.find(x => x?.id === id))), ['self', 'merlin', 'birdnet', 'unknown', 'unrecorded'], 'bron');
 eq(['a', 'b', 'f', 'h'].map(id => certaintyCategory(data.find(x => x?.id === id))), ['certain', 'probable', 'unchecked', 'unchecked'], 'zekerheid');
 eq(['pl_named', 'pl_auto', 'pl_auto_new'].map(id => placeNameKind(placesById.get(id))), ['user', 'auto', 'auto'], 'plekherkomst');
 ok(placeNameKind({ name: 'Plek 9', nameOrigin: 'user' }) === 'user', 'zelf "Plek 9" genoemd blijft benoemd');

@@ -15,7 +15,7 @@ import { SPECIES }         from '../../data/species.js';
 import { openDetailSheet } from '../sightings/detailSheet.js';
 import { openAddSheet } from '../sightings/addSheet.js';
 import { openPinPicker } from '../sightings/pinPicker.js';
-import { methodLabel, sourceLabel, validPin } from '../sightings/evidence.js';
+import { methodLabel, verificationStatus, validPin } from '../sightings/evidence.js';
 import { placeStatus, MAP_STATUS, MAP_ORDER, statusForSighting, filteredSightings, statusCounts, statusCountLabel, clusterGradient } from './visualization.js';
 import { escHtml } from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
@@ -652,7 +652,9 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         const status=statusForSighting(s);
         return '<li><button type="button" data-sighting="'+escHtml(s.id)+'">'+
           '<i class="map-legend__dot map-legend__dot--'+(status==='merlin'?'heard':status)+'"></i>'+
-          '<span><b>'+escHtml(s.speciesName||'Onbekend')+'</b><small>'+escHtml([fmtDate(s.date),methodLabel(s)].filter(Boolean).join(' · '))+'</small></span>'+
+          // UX-03B: zelfde herkenningsstatus als lijst en detail (alleen als er iets te melden is)
+          '<span><b>'+escHtml(s.speciesName||'Onbekend')+'</b><small>'+escHtml([fmtDate(s.date),methodLabel(s),
+            ...(()=>{const v=verificationStatus(s);return v.key==='self'||v.key==='unrecorded'?[]:[v.label];})()].filter(Boolean).join(' · '))+'</small></span>'+
           '<em aria-hidden="true">›</em></button></li>';
       }).join('')+'</ul>'+
       (place.loose?'':'<h4 class="place-h" id="placeEnvHeading">Omgevingsfoto\'s <small class="place-h__note">privé · alleen op dit toestel</small></h4>'+

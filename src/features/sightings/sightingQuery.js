@@ -5,7 +5,7 @@
  * dezelfde normalisatie en dezelfde zoektermen per waarneming gebruiken.
  * Pure functies (geen DOM, geen opslag): direct te testen in node.
  */
-import { uncheckedSuggestion, legacyBirdnetSuggestion, validPin } from './evidence.js';
+import { verificationStatus, validPin } from './evidence.js';
 
 export const normalizeSearch = value => String(value ?? '').toLocaleLowerCase('nl').normalize('NFD')
   .replace(/\p{M}/gu, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
@@ -54,20 +54,22 @@ export function placeNameKind(place) {
   return /^(plek \d+|naamloze plek)$/i.test(String(place?.name || '').trim()) ? 'auto' : 'user';
 }
 
-/** Herkenningsbron voor het filter. Oude records met BirdNET-suggestie maar bron 'self': niet vastgelegd. */
+/**
+ * Herkenning voor het filter, uit dezelfde statusbron als lijst en detail (UX-03B):
+ * self · birdnet · merlin · unknown (controle onbekend: oude BirdNET-suggestie) · unrecorded (bron niet vastgelegd).
+ */
 export function sourceCategory(sighting) {
-  const src = sighting?.identificationSource;
-  if (src === 'merlin' || src === 'birdnet') return src;
-  if (src === 'self' && !legacyBirdnetSuggestion(sighting)) return 'self';
-  return 'unknown';
+  const key = verificationStatus(sighting).key;
+  if (key.startsWith('birdnet')) return 'birdnet';
+  if (key.startsWith('merlin')) return 'merlin';
+  return { self: 'self', 'check-unknown': 'unknown', unrecorded: 'unrecorded' }[key];
 }
 
 /** Zekerheid voor het filter. Een niet zelf gecontroleerde suggestie telt nooit als 'zeker'. */
 export function certaintyCategory(sighting) {
   const c = sighting?.certainty;
-  // Oude records met een BirdNET-suggestie maar bron 'self': of de soort zelf is gecontroleerd, is niet
-  // vastgelegd. Data blijft ongewijzigd; alleen het filter 'Zeker' laat ze niet zien.
-  if (c === 'certain' && (uncheckedSuggestion(sighting) || legacyBirdnetSuggestion(sighting))) return 'unchecked';
+  // Een suggestie zonder eigen controle (ook 'controle onbekend') is nooit 'zeker', wat er ook is opgeslagen.
+  if (c === 'certain' && verificationStatus(sighting).tone === 'warn') return 'unchecked';
   return ['certain', 'probable', 'possible'].includes(c) ? c : 'unknown';
 }
 
@@ -75,7 +77,8 @@ export const FILTER_GROUPS = Object.freeze([
   { key: 'method', label: 'Waarneming', options: [['seen', 'Gezien'], ['heard', 'Gehoord'], ['both', 'Gezien en gehoord']] },
   { key: 'media', label: 'Media', options: [['photo', 'Met foto of video'], ['audio', 'Met geluid']] },
   { key: 'certainty', label: 'Zekerheid', options: [['certain', 'Zeker'], ['probable', 'Waarschijnlijk'], ['possible', 'Mogelijk']] },
-  { key: 'source', label: 'Herkenning', options: [['self', 'Eigen herkenning'], ['birdnet', 'BirdNET'], ['merlin', 'Merlin'], ['unknown', 'Niet vastgelegd']] },
+  { key: 'source', label: 'Herkenning', options: [['self', 'Eigen herkenning'], ['birdnet', 'BirdNET'], ['merlin', 'Merlin'],
+    ['unknown', 'Controle onbekend'], ['unrecorded', 'Bron niet vastgelegd']] },
 ]);
 
 const FILTER_TEST = {

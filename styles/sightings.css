@@ -1138,3 +1138,12 @@
 }
 #speciesOpenSightings { display: inline-flex; align-items: center; gap: 6px; }
 #speciesOpenSightings .ui-icon { width: 16px; height: 16px; }
+
+/* ── UX-03B: één herkenningsstatus, overal dezelfde kleurbetekenis (altijd met tekst en schildicoon) ── */
+.detail-status { display: inline-flex; align-items: center; gap: 6px; min-height: 28px; padding: 0 10px; border-radius: var(--r-pill); font-size: .8125rem; font-weight: 650; }
+.detail-status .ui-icon { width: 15px; height: 15px; }
+.detail-status--neutral { background: var(--surface-2, var(--surface)); color: var(--ink); border: 1px solid var(--line); }
+.detail-status--info { background: var(--accent-soft); color: var(--ink); border: 1px solid var(--accent); }
+.detail-status--warn { background: var(--warn-soft); color: var(--warn-ink); border: 1px solid var(--warn); }
+.sight-card .sighting-status-pill:not(.is-unchecked) { background: var(--accent-soft); color: var(--ink); border-color: var(--accent); }
+.sd-mine-note { margin: 0 0 var(--space-8); font-size: var(--fs-meta); color: var(--muted); }

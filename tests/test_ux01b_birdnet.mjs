@@ -38,15 +38,15 @@ const labels = {
   self: sourceBadge(rec({ identificationSource: 'self' })),
 };
 assert.deepEqual(labels, {
-  birdnetSuggested: 'BirdNET · suggestie', birdnetChecked: 'Zelf gecontroleerd',
+  birdnetSuggested: 'BirdNET · suggestie', birdnetChecked: 'BirdNET · zelf gecontroleerd',
   merlinSuggested: 'Merlin · suggestie', merlinChecked: 'Merlin · zelf gecontroleerd', self: 'Eigen herkenning',
 }); n++;
-ok(sourceBadge({}) === null, 'geen bron = geen label');
+ok(sourceBadge({}) === null, 'geen bron = geen extra label');
 for (const text of [...Object.values(labels), sourceLabel(rec({ identificationSource: 'birdnet', birdnetVerification: 'checked' })), SELF_CHECK_NOTE]) {
   ok(!/bevestigd|✓|✔/i.test(text), `geen bevestigingsclaim in "${text}"`);
 }
 ok(/geen onafhankelijke wetenschappelijke verificatie/.test(SELF_CHECK_NOTE), 'eigen controle ≠ wetenschappelijke verificatie');
-ok(sourceLabel(rec({ identificationSource: 'merlin' })) === 'Merlin Sound ID · suggestie', 'bestaand Merlin-label ongewijzigd');
+ok(sourceLabel(rec({ identificationSource: 'merlin' })) === 'Merlin · suggestie', 'Merlin-label volgens UX-03B-terminologie');
 
 // 3. Telregel: alleen eigen controle telt; tegenstrijdig 'zeker' + niet gecontroleerd telt niet.
 ok(!countsForList(rec({ identificationSource: 'birdnet', birdnetVerification: 'suggested' })), 'suggestie telt niet');
@@ -59,7 +59,7 @@ ok(uncheckedSuggestion(rec({ identificationSource: 'birdnet' })) && !uncheckedSu
 const legacy = { id: 'old', speciesId: 'sp045', certainty: 'certain', observationMethod: 'heard', identificationSource: 'self',
   merlinVerification: null, soundSuggestion: { model: 'BirdNET+ V3.0', score: 0.8, second: 3 } };
 const legacyCopy = structuredClone(legacy);
-ok(legacyBirdnetSuggestion(legacy) && countsForList(legacy), 'oud record: herkend en telt zoals voorheen');
+ok(legacyBirdnetSuggestion(legacy) && !countsForList(legacy) && sourceLabel(legacy) === 'Controle onbekend', 'oud record: herkend, controle onbekend, telt niet mee (UX-03B)');
 assert.deepEqual(legacy, legacyCopy); n++;
 ok(!legacyBirdnetSuggestion({ identificationSource: 'birdnet', soundSuggestion: {} }), 'nieuw record is geen legacy');
 

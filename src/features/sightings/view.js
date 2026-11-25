@@ -15,7 +15,7 @@ import { loadPlaces }       from '../../data/places.js';
 import { getPhoto }         from '../../data/db.js';
 import { getPhotoUrl, revokePhotoUrl } from '../../utils/photoUrl.js';
 import { openDetailSheet }  from './detailSheet.js';
-import { methodLabel, sourceBadge, uncheckedSuggestion, legacyBirdnetSuggestion } from './evidence.js';
+import { methodLabel, verificationStatus } from './evidence.js';
 import { escHtml }          from '../../utils/html.js';
 import {
   FILTER_GROUPS, filterSightings, cleanFilters, emptyFilters, activeFilterCount, placeOf, periodFromQuery,
@@ -263,9 +263,11 @@ function buildCard(s, placesById) {
   const photos = Array.isArray(s.photoIds) ? s.photoIds.length : 0;
   const audio = Array.isArray(s.audioIds) ? s.audioIds.length : 0;
   const method = s.observationMethod ? methodLabel(s) : null;
-  const suggestion = s.identificationSource === 'merlin' || s.identificationSource === 'birdnet';
-  const unchecked = uncheckedSuggestion(s);
-  const legacy = !suggestion && legacyBirdnetSuggestion(s);   // oude BirdNET-suggestie, controle niet vastgelegd
+  // UX-03B: één statusbron. Kaartje toont een statuslabel alleen als er iets te melden is
+  // (suggestie, zelf gecontroleerd of controle onbekend); gewone eigen herkenning blijft rustig.
+  const status = verificationStatus(s);
+  const showStatus = status.key !== 'self' && status.key !== 'unrecorded';
+  const unchecked = status.tone === 'warn';
   const where = placeOf(s, placesById);
   const certainty = CERTAINTY_NL[s.certainty] || null;
   const name = s.speciesName || SPECIES_BY_ID.get(s.speciesId)?.nameNL || 'Onbekende soort';
@@ -288,9 +290,8 @@ function buildCard(s, placesById) {
       </div>
       <div class="sight-card__tags">
         ${method ? `<span class="sighting-observed-pill ${s.observationMethod === 'heard' ? 'is-heard' : ''}">${observationIcon(s.observationMethod)} ${escHtml(method)}</span>` : ''}
-        ${suggestion ? `<span class="sighting-merlin-pill${s.identificationSource === 'birdnet' ? ' sighting-birdnet-pill' : ''}${unchecked ? ' is-unchecked' : ''}">${appIcon('soundwave')} ${escHtml(s.identificationSource === 'birdnet' && !unchecked ? 'BirdNET · zelf gecontroleerd' : sourceBadge(s))}</span>` : ''}
-        ${legacy ? `<span class="sighting-merlin-pill sighting-birdnet-pill is-unchecked">${appIcon('soundwave')} BirdNET · controle onbekend</span>` : ''}
-        ${certainty && !unchecked && !legacy ? `<span class="sight-certainty sight-certainty--${escHtml(s.certainty)}">${escHtml(certainty)}</span>` : ''}
+        ${showStatus ? `<span class="sighting-status-pill sighting-merlin-pill${status.key.startsWith('birdnet') || status.key === 'check-unknown' ? ' sighting-birdnet-pill' : ''}${unchecked ? ' is-unchecked' : ''}" data-status="${status.key}">${appIcon('shield')} ${escHtml(status.label)}</span>` : ''}
+        ${certainty && !unchecked ? `<span class="sight-certainty sight-certainty--${escHtml(s.certainty)}">${escHtml(certainty)}</span>` : ''}
         ${photos ? `<span class="sight-media" aria-label="${photos} ${photos === 1 ? 'foto of video' : 'foto’s of video’s'}">${appIcon('camera')} ${photos}</span>` : ''}
         ${audio ? `<span class="sight-media" aria-label="${audio} ${audio === 1 ? 'geluidsopname' : 'geluidsopnamen'}">${appIcon('note')} ${audio}</span>` : ''}
       </div>
