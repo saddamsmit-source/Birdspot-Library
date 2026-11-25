@@ -10,7 +10,7 @@ V5  profiel en statistiek: suggesties zonder controle en 'controle onbekend' tel
 V6  filter Herkenning gebruikt dezelfde termen (Controle onbekend · Bron niet vastgelegd)
 V7  geen misleidend vinkje: geen ✓/✔ bij een status; geen 'Zeker' bij een ongecontroleerde suggestie (lijst, detail, kaart, soortkaart)
 V8  historische records niet gewijzigd: herkennings- en zekerheidsvelden van alle records gelijk na alle schermen
-    (kaart koppelt alleen-GPS-pins aan een plek: bestaande migratie 2B); CSV toont het oude record zoals voorheen
+    (kaart koppelt alleen-GPS-pins aan een plek: bestaande migratie 2B); CSV markeert het oude record als '(BirdNET, controle onbekend)' (UX-03R)
 V9  oud record herstellen door bewust bewerken (BirdNET + zelf gecontroleerd) → telt weer mee; geen stille omzetting
 V10 donker thema: statuslabels contrast ≥ 4,5:1
 """
@@ -146,8 +146,10 @@ def main():
         csv = page.evaluate("""async () => { const c = await import('/src/features/profile/exportCsv.js');
           return c.sightingsToCsv(JSON.parse(localStorage.getItem('birdspot-sightings')).sightings); }""")
         legacy_line = next(line for line in csv.splitlines() if '2025-05-01' in line)
-        check('V8', 'historische records ongewijzigd: herkennings- en zekerheidsvelden gelijk na alle schermen; CSV toont oud record zoals voorheen',
-              ev(before['s']) == ev(after['s']) and 'Merel' in legacy_line and 'BirdNET' not in legacy_line and not errors, legacy_line)
+        # UX-03R (eigenaarbesluit 7173278596): CSV markeert het oude record in 'waarnemingswijze'; zekerheid blijft de opgeslagen waarde
+        check('V8', 'historische records ongewijzigd: herkennings- en zekerheidsvelden gelijk na alle schermen; CSV markeert controle onbekend',
+              ev(before['s']) == ev(after['s']) and 'Merel' in legacy_line and ',zeker,"gehoord (BirdNET, controle onbekend)",' in legacy_line
+              and not errors, legacy_line)
 
         # ── V9 bewust bewerken ───────────────────────────────────────
         go_sightings(page)

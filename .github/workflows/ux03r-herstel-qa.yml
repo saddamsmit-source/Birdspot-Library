@@ -25,3 +25,7 @@ jobs:
         run: |
           set -o pipefail
           python tests/test_ux03r_b_zelfcontrole.py 2>&1 | tee ux03r_b.log
+      - name: UX-03R-C CSV markeert controle onbekend zonder formaatmigratie (C1–C6)
+        run: |
+          set -o pipefail
+          python tests/test_ux03r_c_csv.py 2>&1 | tee ux03r_c.log

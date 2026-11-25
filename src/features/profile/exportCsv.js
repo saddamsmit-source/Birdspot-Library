@@ -5,7 +5,12 @@
  * Het importformaat van waarneming.nl is niet openbaar gecontroleerd: kolomnamen zijn daarom
  * beschrijvend en volledig, zodat ze bij importeren handmatig te koppelen zijn.
  * UTF-8 met BOM (Excel), komma als scheidingsteken, punt als decimaalteken, RFC 4180-quotes.
+ *
+ * UX-03R (M3): kolommen en volgorde ongewijzigd. 'zekerheid' blijft de opgeslagen waarde. De herkenning staat,
+ * zoals al bij BirdNET en Merlin, tussen haakjes achter 'waarnemingswijze'; een oud record met een bewaarde
+ * BirdNET-suggestie waarvan de eigen controle onbekend is, krijgt '(BirdNET, controle onbekend)'.
  */
+import { verificationStatus } from '../sightings/evidence.js';
 
 export const CSV_COLUMNS = Object.freeze([
   'datum', 'tijd', 'soort', 'wetenschappelijke_naam', 'aantal', 'zekerheid', 'waarnemingswijze',
@@ -37,7 +42,10 @@ export function sightingsToCsv(sightings, { speciesById = new Map(), places = []
       ? `${METHOD[s.observationMethod] || 'gehoord'} (Merlin${s.merlinVerification === 'checked' ? ', zelf gecontroleerd' : ', suggestie'})`
       : s.identificationSource === 'birdnet'
         ? `${METHOD[s.observationMethod] || 'gehoord'} (BirdNET${s.birdnetVerification === 'checked' ? ', zelf gecontroleerd' : ', suggestie'})`
-        : METHOD[s.observationMethod] || '';
+        : verificationStatus(s).key === 'check-unknown'
+          // geen waarnemingswijze verzinnen: zonder vastgelegde wijze alleen de markering
+          ? [METHOD[s.observationMethod], '(BirdNET, controle onbekend)'].filter(Boolean).join(' ')
+          : METHOD[s.observationMethod] || '';
     lines.push([
       s.date || '', s.time || '', sp?.nameNL || s.speciesName || '', sp?.nameSci || '',
       Number.isFinite(s.count) ? s.count : 1, CERTAINTY[s.certainty] || '', method,
