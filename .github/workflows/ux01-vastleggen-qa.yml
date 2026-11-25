@@ -27,6 +27,15 @@ jobs:
         run: |
           set -o pipefail
           python tests/test_ux01b_birdnet.py 2>&1 | tee ux01b.log
+      - name: UX-01C vervolgwaarnemingen en recente soorten (V1–V11, 320/390/430)
+        run: |
+          set -o pipefail
+          python tests/test_ux01c_vervolg.py 2>&1 | tee ux01c.log
+      - name: Regressie sluitroutes en bewijsvelden (r3-audio R3-05, navigatieherstel, Merlin)
+        run: |
+          set -o pipefail
+          python tests/test_navigation_recovery.py 2>&1 | tee ux01-reg-nav.log
+          python tests/test_r4_merlin.py 2>&1 | tee ux01-reg-merlin.log
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: ux01-evidence, path: 'ux01*.log'}

@@ -71,6 +71,7 @@ function freshState(override = {}) {
     merlinVerification:null,
     birdnetVerification:null,   // UX-01B: alleen bij bron 'birdnet' ('suggested' | 'checked')
     hasBirdnetSuggestion:false, // UX-01B: record bevat een BirdNET-suggestie (soundSuggestion)
+    reuse:        null,         // UX-01C: { date: bool, place: string|null } overgenomen van de vorige waarneming
     locationName: '',
     lat:          null,
     lon:          null,
@@ -104,6 +105,8 @@ const ctx_audioInputs = new WeakMap();   // fileInput → audioInput (ronde 3)
  */
 export function openAddSheet({ onSaved, initial = {} } = {}) {
   const hasPin = validPin(initial.lat,initial.lon);
+  // UX-01C: datum van de vorige waarneming mag mee (vervolgwaarneming), alleen als geldige ISO-datum.
+  const reuseDate = initial.reuse && /^\d{4}-\d{2}-\d{2}$/.test(initial.date || '') ? initial.date : null;
   const species = typeof initial.speciesId === 'string'
     ? SPECIES.find(x=>x.id===initial.speciesId) : null;
   const selectedMethod = ['seen','heard','both'].includes(initial.observationMethod)
@@ -122,6 +125,8 @@ export function openAddSheet({ onSaved, initial = {} } = {}) {
     placeId: hasPin && typeof initial.placeId === 'string' ? initial.placeId : null,
     pinAccuracyM: hasPin && Number.isFinite(initial.pinAccuracyM) ? Number(initial.pinAccuracyM) : null,
     locationName: typeof initial.locationName === 'string' ? initial.locationName : '',
+    ...(reuseDate ? { date: reuseDate } : {}),
+    reuse: initial.reuse ? { date: Boolean(reuseDate), place: (hasPin || initial.locationName) ? (initial.locationName || 'vorige pin') : null } : null,
   }), { onSaved });
 }
 
@@ -219,7 +224,9 @@ function _openSightingForm(mode, initialState, { onSaved, editId, baseUpdatedAt 
     loadedAudioIds: [...(initialState.existingAudioIds || [])],
     // UX-01A: concept. Wijzigingen tellen pas na een handeling van de gebruiker (automatische GPS niet).
     draftKey: draftKey(mode, editId), baseUpdatedAt, initialFields: draftFields(initialState),
-    touched: false, resumed: false, draftWritten: false, draftBlocked: false, draftTimer: 0, leaving: false };
+    touched: false, resumed: false, draftWritten: false, draftBlocked: false, draftTimer: 0, leaving: false,
+    // UX-01C: overgenomen plek wint; automatische GPS mag die niet stil vervangen.
+    autoGpsStarted: Boolean(initialState.reuse?.place) };
   const submit = ov.querySelector('#addSheetSubmit');
   ov.querySelector('#addSightingTitle').focus({ preventScroll: true });
 
@@ -406,8 +413,16 @@ async function _offerDraft(ov, ctx, isEdit, close) {
 // ── Form body HTML ─────────────────────────────────────────
 function _renderFormBody() {
   const sp = _state.speciesId ? SPECIES.find(x => x.id === _state.speciesId) : null;
+  const reuse = _state.reuse && (_state.reuse.date || _state.reuse.place) ? `
+    <div class="sighting-reuse-note" id="sightReuseNote" role="note">
+      <span>Overgenomen van vorige waarneming: ${[
+        _state.reuse.date ? 'datum ' + escHtml(_fmtShortDate(_state.date)) : '',
+        _state.reuse.place ? 'plek ' + escHtml(_state.reuse.place) : '',
+      ].filter(Boolean).join(' · ')}</span>
+      ${_state.reuse.place ? '<button type="button" class="btn-text" id="sightReuseClearPlace">Wis plek</button>' : ''}
+    </div>` : '';
 
-  return `
+  return `${reuse}
     <!-- Soort -->
     <div class="form-field">
       <label class="form-label">Soort <span class="form-required">*</span></label>
@@ -815,7 +830,7 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
       _state.speciesName = sp.nameNL;
       ctx.touched = true;
       refresh();
-    });
+    }, { recentIds: _recentSpeciesIds() });
   });
 
   // Seen / heard / both and optional Merlin Sound ID evidence.
@@ -892,6 +907,16 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
         ctx.cancelPinPicker=null;refresh();_decidePlace(ov);
       },
     });
+  });
+  el.querySelector('#sightReuseClearPlace')?.addEventListener('click',()=>{
+    // UX-01C: overgenomen plek bewust wissen; daarna GPS-knop of pin (geen automatische GPS).
+    ctx.locationRevision++;
+    ctx.autoGpsStarted = true;   // gewist = bewust; automatische GPS vult de plek niet stil opnieuw
+    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.pinAccuracyExactM=null;_state.placeId=null;_state.placeOffer=null;
+    _state.locationName='';_state.autoLocationName=null;
+    _state.reuse={..._state.reuse,place:null};
+    refresh();
+    content()?.querySelector('#sightLocation')?.focus({ preventScroll: true });
   });
   el.querySelector('#sightClearPin')?.addEventListener('click',()=>{
     ctx.locationRevision++;
@@ -1151,7 +1176,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
 
   // UX-01A (D): een hervat bewerkconcept mag een intussen gewijzigde waarneming nooit overschrijven.
   if (isEdit && ctx.resumed) {
-    const current = getSightingsSnapshot().find(item => item.id === editId);
+    const current = getSightingsSnapshot().find(item => item?.id === editId);
     if (!current || (current.updatedAt || null) !== ctx.baseUpdatedAt) {
       ctx.persistDraft?.();
       showToast('Waarneming intussen gewijzigd — concept niet opgeslagen. Sluit en open de waarneming opnieuw.');
@@ -1298,8 +1323,76 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   deleteDraft(ctx.draftKey);   // UX-01A: opgeslagen = geen concept meer
   ctx.draftWritten = false;
   close();
-  showToast(isEdit ? 'Waarneming bijgewerkt' : `${savedSighting.speciesName} opgeslagen`);
+  if (isEdit) showToast('Waarneming bijgewerkt');
+  else _showSavedActions(savedSighting, onSaved);
   onSaved?.(savedSighting);
+}
+
+/**
+ * UX-01C: korte bevestiging na opslaan met de twee logische vervolgstappen. Niet modaal, valt niet over
+ * sheets heen, verdwijnt vanzelf (niet zolang de gebruiker erin werkt). Neemt nooit soort, zekerheid,
+ * aantal of media over; datum en plek alleen zichtbaar en wisbaar in het volgende formulier.
+ */
+const SAVED_ACTIONS_MS = 8000;
+const REUSE_MAX_AGE_MS = 30 * 60 * 1000;
+function _showSavedActions(saved, onSaved) {
+  document.getElementById('savedActions')?.remove();
+  const savedAt = Date.now();
+  const bar = document.createElement('div');
+  bar.id = 'savedActions';
+  bar.className = 'saved-actions';
+  bar.setAttribute('role', 'status');
+  bar.setAttribute('aria-live', 'polite');
+  bar.innerHTML = `
+    <span class="saved-actions__text">${escHtml(saved.speciesName)} opgeslagen</span>
+    <span class="saved-actions__buttons">
+      <button type="button" class="btn-secondary saved-actions__btn" data-saved-action="view">Bekijk waarneming</button>
+      <button type="button" class="btn-primary saved-actions__btn" data-saved-action="again">Nog één toevoegen</button>
+      <button type="button" class="saved-actions__close" data-saved-action="close" aria-label="Melding sluiten">×</button>
+    </span>`;
+  // Een oude melding (bijv. een eerdere opslagfout) hoort niet meer zichtbaar of voorleesbaar te zijn.
+  const staleToast = document.querySelector('.toast:not(.app-update)');
+  if (staleToast) { staleToast.classList.remove('show'); staleToast.textContent = ''; }
+  document.body.appendChild(bar);
+  let timer = 0;
+  const hide = () => { clearTimeout(timer); bar.remove(); };
+  const arm = () => { clearTimeout(timer); timer = setTimeout(() => { if (!bar.matches(':hover, :focus-within')) hide(); else arm(); }, SAVED_ACTIONS_MS); };
+  arm();
+  bar.addEventListener('focusout', arm);
+  bar.addEventListener('keydown', e => { if (e.key === 'Escape') { e.stopPropagation(); hide(); } });
+  bar.addEventListener('click', async e => {
+    const action = e.target.closest('[data-saved-action]')?.dataset.savedAction;
+    if (!action) return;
+    hide();
+    if (action === 'again') {
+      const fresh = Date.now() - savedAt < REUSE_MAX_AGE_MS;
+      openAddSheet({ onSaved, initial: fresh ? {
+        reuse: true, date: saved.date,
+        lat: saved.lat, lon: saved.lon, placeId: saved.placeId, pinAccuracyM: saved.pinAccuracyM,
+        locationName: (saved.placeId && loadPlaces().find(p => p.id === saved.placeId)?.name) || saved.locationName || '',
+      } : {} });
+    } else if (action === 'view') {
+      const current = getSightingsSnapshot().find(item => item?.id === saved.id) || saved;
+      const { openDetailSheet } = await import('./detailSheet.js');
+      openDetailSheet(current, { onUpdated: () => onSaved?.(current), onDeleted: () => onSaved?.(current) });
+    }
+  });
+}
+
+/** UX-01C: laatst gekozen soorten (nieuwste eerst), uit de eigen waarnemingen. */
+function _recentSpeciesIds(limit = 6) {
+  const seen = new Set();
+  // Robuust tegen beschadigde records (null of zonder soort): de kiezer moet altijd openen.
+  return getSightingsSnapshot().filter(item => item && typeof item === 'object')
+    .sort((a, b) => String(b.createdAt || b.date || '').localeCompare(String(a.createdAt || a.date || '')))
+    .map(item => item.speciesId)
+    .filter(id => id && !seen.has(id) && seen.add(id) && SPECIES.some(x => x.id === id))
+    .slice(0, limit);
+}
+
+function _fmtShortDate(iso) {
+  const d = new Date(`${iso}T12:00:00`);
+  return Number.isNaN(d.getTime()) ? iso : d.toLocaleDateString('nl-NL', { day: 'numeric', month: 'short' });
 }
 
 // ── GPS ────────────────────────────────────────────────────
