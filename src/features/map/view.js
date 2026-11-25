@@ -627,10 +627,11 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
     screenEl.querySelector('#mapSheetMeta').textContent=
       Number(place.lat).toFixed(6)+', '+Number(place.lon).toFixed(6)+(st?.last?' · laatst '+fmtDate(st.last):'');
 
+    // UX-03R: plekstatistiek is ruwe locatiegegevens (alle registraties, ook suggesties); daarom 'geregistreerd'
     const tile=(n,l)=>'<div class="place-stat"><strong>'+n+'</strong><span>'+l+'</span></div>';
     const sorted=[...rows].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
     body.innerHTML=
-      (st?'<div class="place-stats">'+tile(st.species.length,st.species.length===1?'soort':'soorten')+
+      (st?'<div class="place-stats">'+tile(st.species.length,st.species.length===1?'soort geregistreerd':'soorten geregistreerd')+
         tile(st.visits,st.visits===1?'bezoek':'bezoeken')+tile(st.sightings,st.sightings===1?'waarneming':'waarnemingen')+'</div>':'')+
       (place.loose?'':'<div class="place-actions">'+
         '<button type="button" class="place-action place-action--primary" id="placeAddSighting">+ Waarneming hier</button>'+
@@ -639,7 +640,7 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         '<button type="button" class="place-action place-action--quiet" id="placeRename">Naam wijzigen</button></div>'+
         '<div class="place-rename" id="placeRenameRow" hidden><input type="text" id="placeRenameInput" maxlength="80" value="'+escHtml(place.name)+'" aria-label="Naam van de plek">'+
         '<button type="button" id="placeRenameSave">Bewaar</button></div>')+
-      (st&&st.species.length?'<h4 class="place-h">Soorten hier</h4><div class="place-species">'+st.species.map(sp=>
+      (st&&st.species.length?'<h4 class="place-h">Geregistreerde soorten hier</h4><div class="place-species">'+st.species.map(sp=>
         '<button type="button" class="place-species__chip" data-species="'+escHtml(sp.speciesId||'')+'">'+escHtml(sp.name)+' <b>'+sp.count+'×</b></button>').join('')+'</div>':'')+
       (()=>{
         const hist=monthHistogram(rows),best=bestMonths(hist),max=Math.max(1,...hist);

@@ -46,7 +46,7 @@ export function verificationStatus(sighting) {
   if (sighting?.soundSuggestion) {
     // Oud record (vóór UX-01B): BirdNET-suggestie bewaard, bron 'self' of leeg. Nooit stil omzetten.
     return { key: 'check-unknown', label: 'Controle onbekend', tone: 'warn', counts: false,
-      hint: 'Bij deze oudere waarneming is een BirdNET-suggestie bewaard. Of je die zelf controleerde, is niet vastgelegd. Kies bij Bewerken de juiste herkenning.' };
+      hint: 'Bij deze oudere waarneming is een BirdNET-suggestie bewaard. Of je die zelf controleerde, is niet vastgelegd; daarom telt ze niet mee in je lijsten.' };
   }
   if (src === 'self') return { key: 'self', label: 'Eigen herkenning', tone: 'neutral', counts: true, hint: '' };
   return { key: 'unrecorded', label: 'Bron niet vastgelegd', tone: 'neutral', counts: true,
@@ -60,6 +60,30 @@ export function sourceLabel(sighting) {
 export function sourceBadge(sighting) {
   const st = verificationStatus(sighting);
   return st.key === 'unrecorded' ? null : st.label;
+}
+
+/**
+ * Centrale telregel (UX-03B, centraal gemaakt in UX-03R): telt deze waarneming mee als soort op je lijst?
+ * Niet bij zekerheid 'mogelijk', een suggestie van BirdNET of Merlin zonder eigen controle of 'controle onbekend'
+ * (eigenaarbesluit optie A). Elk getal dat in de app "soorten" heet zonder toevoeging, gebruikt deze regel;
+ * een ruw soortaantal heet altijd "geregistreerd". De opgeslagen waarneming verandert nooit.
+ */
+export function countsForList(s) {
+  if (!s || !s.speciesId) return false;
+  if (s.certainty === 'possible') return false;
+  return verificationStatus(s).counts;
+}
+
+/** Soort-id's in twee groepen: meetellend en alleen geregistreerd (geen enkele meetellende waarneming). */
+export function speciesTally(sightings) {
+  const counting = new Set(), registered = new Set();
+  for (const s of sightings || []) {
+    if (!s || typeof s.speciesId !== 'string' || !s.speciesId) continue;
+    registered.add(s.speciesId);
+    if (countsForList(s)) counting.add(s.speciesId);
+  }
+  const registeredOnly = new Set([...registered].filter(id => !counting.has(id)));
+  return { counting, registered, registeredOnly };
 }
 /** Een suggestie (Merlin of BirdNET) die de gebruiker nog niet zelf heeft gecontroleerd. */
 export function uncheckedSuggestion(sighting) {

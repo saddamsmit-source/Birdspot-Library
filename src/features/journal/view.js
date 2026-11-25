@@ -10,6 +10,7 @@ import { openDetailSheet } from '../sightings/detailSheet.js';
 import { getPhotoUrl,revokePhotoUrl } from '../../utils/photoUrl.js';
 import { escHtml } from '../../utils/html.js';
 import { validDay,availableYears } from '../insights/analytics.js';
+import { speciesTally } from '../sightings/evidence.js';
 
 const safe=x=>escHtml(String(x??''));
 const fmtDay=value=>{
@@ -24,8 +25,6 @@ const fmtShort=value=>{
     day:'numeric',month:'short',year:'numeric',
   }):'Onbekend';
 };
-const identity=row=>typeof row.speciesId==='string'&&row.speciesId?row.speciesId:
-  (typeof row.speciesName==='string'?row.speciesName.toLocaleLowerCase('nl'):'');
 
 export function renderJournal(el) {
   let destroyed=false;
@@ -86,12 +85,13 @@ export function renderJournal(el) {
   }
 
   function updateMilestones(filtered) {
-    const species=new Set(filtered.map(identity).filter(Boolean));
+    // UX-03R: 'Soorten op je lijst' volgt de centrale telregel; waarnemingen blijven ruw
+    const species=speciesTally(filtered).counting;
     const places=new Set(filtered.map(s=>
       typeof s.locationName==='string'?s.locationName.trim().toLocaleLowerCase('nl'):'').filter(Boolean));
     const media=filtered.filter(s=>Array.isArray(s.photoIds)&&s.photoIds.length).length;
     milestones.innerHTML=[
-      [species.size,'Vogelsoorten','bird'],
+      [species.size,'Soorten op je lijst','bird'],
       [filtered.length,'Waarnemingen','observations'],
       [places.size,'Locaties','pin'],
       [media,'Met media','media'],

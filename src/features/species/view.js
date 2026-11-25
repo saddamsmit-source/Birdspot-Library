@@ -21,9 +21,16 @@ import { mountPersonalGuide, personalGuideSlot } from './personalGuide.js';
 import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 
-import { BREEDING_BEHAVIORS, methodLabel, sourceLabel } from '../sightings/evidence.js';
+import { BREEDING_BEHAVIORS, methodLabel, sourceLabel, speciesTally } from '../sightings/evidence.js';
 function guideSightings() { return getSightingsSnapshot().filter(s=>s && typeof s === 'object' && typeof s.speciesId === 'string'); }
-function getObservedIds() { return new Set(guideSightings().map(s=>s.speciesId)); }
+// UX-03R: 'Waargenomen' en de teller volgen de centrale telregel; een soort met alleen suggesties zonder
+// eigen controle, 'controle onbekend' of 'mogelijk' heet 'Geregistreerd, telt niet mee'.
+function getObservedIds() {
+  const t = speciesTally(guideSightings());
+  const ids = t.counting;
+  ids.registeredOnly = t.registeredOnly;
+  return ids;
+}
 
 const ALL = 'alle';
 let _currentCategory = ALL;
@@ -386,6 +393,7 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
 
 function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
   const seen   = seenIds.has(s.id);
+  const registeredOnly = !seen && !!seenIds.registeredOnly?.has(s.id);
   const rarity = getRarity(s);
   const rm     = rarity ? RARITY_MAP[rarity] : null;
   const secondary = s.category !== _currentCategory && s.statusExtra === _currentCategory;
@@ -393,7 +401,7 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
     : rm?.label || CATEGORY_BADGES[s.category] || 'Soort';
 
   return `
-    <div class="species-row${seen ? ' seen' : ''}" data-id="${s.id}" role="listitem">
+    <div class="species-row${seen ? ' seen' : ''}${registeredOnly ? ' registered-only' : ''}" data-id="${s.id}" role="listitem">
       <div class="species-row__thumb" aria-hidden="true">
         <span class="bird-placeholder">${appIcon('bird')}</span>
       </div>
@@ -407,7 +415,7 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
         aria-label="${favorites.has(s.id) ? "Verwijder uit favorieten" : "Voeg toe aan favorieten"}: ${escHtml(s.nameNL)}">
         ${favorites.has(s.id) ? "★" : "☆"}
       </button>
-      <span class="species-observation-status">${seen ? 'Waargenomen' : ''}</span>
+      <span class="species-observation-status">${seen ? 'Waargenomen' : registeredOnly ? 'Geregistreerd, telt niet mee' : ''}</span>
     </div>`;
 }
 

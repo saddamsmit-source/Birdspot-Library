@@ -8,9 +8,9 @@
  * @param {{ onDeleted?: function, onUpdated?: function, isActive?: function }} options
  */
 
-import { deleteSighting }                   from '../../data/sightings.js';
+import { deleteSighting, updateSighting }   from '../../data/sightings.js';
 import { getPhotosBySighting, getPhoto, deletePhoto, isSightingAudio } from '../../data/db.js';
-import { methodLabel, verificationStatus } from './evidence.js';
+import { methodLabel, verificationStatus, normalizeEvidence, observedBySound, countsForList } from './evidence.js';
 import { escHtml }                          from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { showToast }                        from '../../app.js';
@@ -107,6 +107,30 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
     });
   });
 
+  // ── UX-03R (M1): oude BirdNET-waarneming bewust zelf controleren ──────────
+  // Alleen deze expliciete handeling (knop + aangevinkte bevestiging) legt eigen controle vast.
+  // Opslaan via Bewerken zonder die keuze verandert niets. soundSuggestion blijft als bewijs bewaard.
+  ov.querySelector('#detailSelfCheck')?.addEventListener('click', async e => {
+    const trigger = e.currentTarget;
+    const ok = await _confirmSelfCheck(sighting);
+    if (!ok) { trigger.focus(); return; }
+    let updated;
+    try {
+      updated = await updateSighting(sighting.id, {}, { resolve: current => {
+        if (verificationStatus(current).key !== 'check-unknown') throw new Error('Waarneming is intussen gewijzigd');
+        return normalizeEvidence({ observationMethod: current.observationMethod, identificationSource: 'birdnet', birdnetVerification: 'checked' });
+      } });
+    } catch (_) {
+      showToast('Eigen controle kon niet worden opgeslagen; er is niets gewijzigd.', 'error');
+      return;
+    }
+    close();
+    onUpdated?.(updated);
+    showToast(countsForList(updated)
+      ? 'Eigen controle vastgelegd. Deze waarneming telt nu mee in je lijsten.'
+      : 'Eigen controle vastgelegd. Door zekerheid ‘mogelijk’ telt ze nog niet mee.', 'success');
+  });
+
   // ── Verwijder (met bevestiging) ───────────────────────────
   ov.querySelector('#detailDelete').addEventListener('click', async () => {
     const confirmed = await _confirm(
@@ -178,6 +202,7 @@ function _renderDetailBody(s, photos, audio = []) {
         <div class="detail-field detail-field--status" data-status="${st.key}"><div class="detail-field__label">Herkenning</div>
           <div class="detail-field__value"><span class="detail-status detail-status--${st.tone}">${appIcon('shield')} ${escHtml(st.label)}</span></div>
           ${st.hint ? `<p class="detail-field__hint">${escHtml(st.hint)}</p>` : ''}
+          ${st.key === 'check-unknown' ? `<button type="button" class="btn-secondary detail-selfcheck-btn" id="detailSelfCheck">${appIcon('shield')} Identificatie zelf controleren</button>` : ''}
         </div>
         ${st.tone === 'warn' && s.certainty === 'certain' ? `
         <p class="detail-field__hint sighting-evidence-conflict" role="note">Zekerheid staat op ‘zeker’, maar eigen controle is niet vastgelegd. Deze waarneming telt daarom niet mee in je lijsten.</p>` : ''}`;
@@ -367,6 +392,48 @@ function _confirm(title, message) {
     dlg.querySelector('.confirm-cancel').addEventListener('click', () => finish(false));
     dlg.querySelector('.confirm-ok').addEventListener('click',     () => finish(true));
     dlg.addEventListener('click', e => { if (e.target === dlg) finish(false); });
+  });
+}
+
+/**
+ * UX-03R (M1): bevestiging voor eigen controle van een oude BirdNET-suggestie.
+ * 'Eigen controle vastleggen' is pas te kiezen na het aanvinken van de bevestiging. Escape of Annuleer = niets wijzigen.
+ */
+function _confirmSelfCheck(s) {
+  return new Promise(resolve => {
+    const name = escHtml(s.speciesName || 'deze soort');
+    const sug = s.soundSuggestion || {};
+    const score = Number.isFinite(Number(sug.score)) ? ` (score ${Number(sug.score).toFixed(2).replace('.', ',')})` : '';
+    const soundOk = observedBySound({ observationMethod: s.observationMethod });
+    const dlg = document.createElement('div');
+    dlg.className = 'confirm-overlay';
+    dlg.innerHTML = `
+      <div class="confirm-dialog selfcheck-dialog" role="dialog" aria-modal="true"
+        aria-labelledby="selfCheckTitle" aria-describedby="selfCheckBody">
+        <div class="confirm-dialog__title" id="selfCheckTitle">Identificatie zelf controleren</div>
+        <div class="confirm-dialog__body" id="selfCheckBody">
+          <p>BirdNET stelde bij deze waarneming ${name} voor${score}. Of je dat zelf controleerde, is niet vastgelegd; daarom telt ze nu niet mee in je lijsten.</p>
+          ${soundOk ? `
+          <p>Bevestig alleen als je de soort zelf hebt gecontroleerd, bijvoorbeeld met de opname, een foto of je veldnotities. Eigen controle is geen onafhankelijke wetenschappelijke verificatie. De BirdNET-suggestie blijft als bewijs bewaard.</p>
+          <label class="selfcheck-confirm"><input type="checkbox" id="selfCheckConfirm"> <span>Ik heb ${name} zelf gecontroleerd</span></label>` : `
+          <p>Een BirdNET-suggestie hoort bij een gehoorde waarneming. Leg eerst bij Bewerken vast hoe je de vogel waarnam (Gehoord of Gezien en gehoord).</p>`}
+        </div>
+        <div class="confirm-dialog__actions">
+          <button class="btn-secondary confirm-cancel" type="button">${soundOk ? 'Annuleer' : 'Sluiten'}</button>
+          ${soundOk ? '<button class="btn btn--primary confirm-ok" id="selfCheckOk" type="button" disabled>Eigen controle vastleggen</button>' : ''}
+        </div>
+      </div>`;
+    document.body.appendChild(dlg);
+    const box = dlg.querySelector('#selfCheckConfirm');
+    const okBtn = dlg.querySelector('#selfCheckOk');
+    const onKey = ev => { if (ev.key === 'Escape') { ev.stopPropagation(); finish(false); } };
+    const finish = result => { document.removeEventListener('keydown', onKey, true); dlg.remove(); resolve(result); };
+    document.addEventListener('keydown', onKey, true);
+    box?.addEventListener('change', () => { okBtn.disabled = !box.checked; });
+    dlg.querySelector('.confirm-cancel').addEventListener('click', () => finish(false));
+    okBtn?.addEventListener('click', () => { if (box?.checked) finish(true); });
+    dlg.addEventListener('click', ev => { if (ev.target === dlg) finish(false); });
+    (box || dlg.querySelector('.confirm-cancel')).focus();
   });
 }
 

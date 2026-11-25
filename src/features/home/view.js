@@ -22,6 +22,7 @@ import { bindAppSearch, searchMarkup } from '../search/index.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
 import { windMarkup, weatherPlace, weatherPlaceMarkup } from './weatherFormat.js';
 import { loadPlaces } from '../../data/places.js';
+import { speciesTally } from '../sightings/evidence.js';
 
 // ── Constanten ─────────────────────────────────────────────
 const FALLBACK_LAT = 52.3676;
@@ -282,7 +283,8 @@ async function loadStats(el, ctx) {
   try {
     const sightings  = (await getSightings()).filter(Boolean);
     if (ctx.destroyed) return;
-    const speciesSet = new Set(sightings.map(s => s.speciesId));
+    // UX-03R: 'Soorten' = soorten op je lijst (centrale telregel), gelijk aan Profiel › Mijn lijsten
+    const speciesSet = speciesTally(sightings).counting;
     const photoCount = sightings.reduce((n, s) => n + (s.photoIds?.length || 0), 0);
     const locSet     = new Set(sightings.map(s => s.locationName).filter(Boolean));
 

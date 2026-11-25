@@ -445,6 +445,8 @@ async function askController() {
 }
 
 // ── Overzicht: tegels met aantallen; 0-tegels krijgen uitleg (D11) ─────────
+// UX-03R: het overzicht toont ruwe registraties; het soortaantal heet daarom 'geregistreerd'.
+// Soorten die meetellen staan onder Mijn lijsten (centrale telregel).
 export function overviewStats(sightings) {
   const species = new Set(sightings.map(s => s.speciesId).filter(Boolean));
   // Vaste plek (K4) telt op id; zonder vaste plek telt de vrije plaatsnaam (zelfde regel als Topplekken)
@@ -469,7 +471,7 @@ function renderOverview(sightings) {
     <h2 class="profile-section__title" id="overviewHeading">Overzicht</h2>
     <div class="profile-stats">
       ${tile(st.sightings, st.sightings === 1 ? 'waarneming' : 'waarnemingen')}
-      ${tile(st.species, st.species === 1 ? 'soort' : 'soorten')}
+      ${tile(st.species, st.species === 1 ? 'soort geregistreerd' : 'soorten geregistreerd')}
       ${st.places ? tile(st.places, st.places === 1 ? 'plek' : 'plekken') : ''}
       ${st.photos ? tile(st.photos, st.photos === 1 ? 'foto' : "foto's") : ''}
     </div>
@@ -517,7 +519,7 @@ function renderLists(l) {
       <ul class="profile-list">${speciesRows(newRows)}</ul>` : ''}
     ${l.top.length ? `<h3 class="profile-subtitle">Topplekken</h3>
       <ol class="profile-list profile-list--places">${l.top.map(t => {
-        const meta = `${t.sightings} ${t.sightings === 1 ? 'waarneming' : 'waarnemingen'} · ${t.species} ${t.species === 1 ? 'soort' : 'soorten'}`;
+        const meta = `${t.sightings} ${t.sightings === 1 ? 'waarneming' : 'waarnemingen'} · ${t.species} ${t.species === 1 ? 'soort' : 'soorten'} geregistreerd`;
         return t.placeId
           ? `<li><button type="button" class="profile-row" data-open-place="${esc(t.placeId)}"><span class="profile-row__name">${esc(t.name)}</span><span class="profile-row__meta">${meta}</span></button></li>`
           : `<li><div class="profile-row"><span class="profile-row__name">${esc(t.name)}</span><span class="profile-row__meta">${meta}</span></div></li>`;

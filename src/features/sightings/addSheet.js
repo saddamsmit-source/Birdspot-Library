@@ -523,7 +523,7 @@ function _renderFormBody() {
           BirdNET-suggestie</label>` : ''}
       </div>
       ${_state.hasBirdnetSuggestion && _state.identificationSource === 'self' ? `
-        <p class="form-hint sighting-birdnet-legacy">Bij deze waarneming is een BirdNET-suggestie bewaard. Kies BirdNET-suggestie als de soort daarvan kwam.</p>` : ''}
+        <p class="form-hint sighting-birdnet-legacy">Bij deze waarneming is een BirdNET-suggestie bewaard; of je die controleerde, is niet vastgelegd. Alleen opslaan verandert dat niet. Heb je de soort zelf gecontroleerd? Kies BirdNET-suggestie en vink ‘Zelf gecontroleerd’ aan.</p>` : ''}
       ${_state.identificationSource === 'birdnet' ? `
         <div class="sighting-merlin-panel sighting-birdnet-panel">
           <strong>${appIcon('soundwave')} BirdNET-suggestie</strong>

@@ -79,7 +79,7 @@ def main():
             print("B-01 OK — geen dialoog bij openen")
 
             stats = p.eval_on_selector_all("#overviewHeading + .profile-stats .profile-stat", "els => els.map(e => e.innerText.replace(/\\s+/g,' ').trim())")
-            assert stats == ["3 waarnemingen", "2 soorten", "2 plekken", "3 foto's"], stats
+            assert stats == ["3 waarnemingen", "2 soorten geregistreerd", "2 plekken", "3 foto's"], stats   # UX-03R: ruw aantal met label
             print("B-02 OK — overzicht:", stats)
 
             warn = p.locator("#backupStatus .backup-status__warn")
