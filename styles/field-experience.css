@@ -641,3 +641,5 @@
 .phase3-hero-link, .phase3-segments button, .phase3-journal-filters :is(input, select), .phase3-insights-controls select { min-height: 44px; }
 .phase3-journal-feature button { display: inline-flex; align-items: center; min-height: 44px; }
 #speciesPickerOverlay .species-search { height: 44px; }
+/* UX-03C: zonkaart op de donkere Home-achtergrond — coördinaten waren --muted (2,4:1) */
+.ambient-wetland .sun-location { color: #DCCFB6; border-top-color: rgba(226, 203, 156, .3); }

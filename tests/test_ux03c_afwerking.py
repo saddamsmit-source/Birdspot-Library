@@ -2,7 +2,8 @@
 """UX-03C (25-11-2026): kleuren, afwerking en toegankelijkheid — geen herontwerp.
 
 C1 soortkiezer: titel en Sluiten los van de rand, op één regel, Sluiten ≥ 44×44, dialoog en zoekveld benoemd (320/390/430)
-C2 tikdoelen ≥ 44×44 op Home, soortengids, lijst, kaart (legenda, filterpaneel, plekkaartje), detail, formulier, kiezer, profiel
+C2 tikdoelen ≥ 44×44 op Home, soortengids, lijst, kaart (legenda, filterpaneel, plekkaartje), detail, formulier, kiezer, profiel;
+   kaartlegenda zichtbaar compact (K1-01 ≤ 20 %), tikrand 44 via ::after — gemeten met elementFromPoint
 C3 meldingen: één laag met vaste toon (info/succes/waarschuwing/fout), eigen teken per toon, fout als alert,
    tekst loopt door op 320; echte route: 'Kies eerst een soort' = waarschuwing, 'Waarneming bijgewerkt' = succes
 C4 geen dubbele uitleg in het detail: herkenningsuitleg één keer; tegenstrijdige 'zeker' in één zin
@@ -84,6 +85,9 @@ def main():
             ctx = browser.new_context(viewport={'width': width, 'height': 844}, timezone_id='Europe/Amsterdam', is_mobile=True,
                                       has_touch=True, color_scheme='dark' if dark else 'light')
             ctx.add_init_script(LEAFLET_STUB)
+            # zonkaart altijd tonen (SunCalc komt van een CDN): vaste tijden, zelfde rendering als in CI
+            ctx.add_init_script("""window.SunCalc = { getTimes: d => { const t = h => { const x = new Date(d); x.setHours(h, 0, 0, 0); return x; };
+              return { sunrise: t(8), sunset: t(17), goldenHourEnd: t(9), goldenHour: t(16) }; } };""")
             page = ctx.new_page()
             errors = []
             page.on('pageerror', lambda e: errors.append(str(e)))
@@ -129,12 +133,17 @@ def main():
         for r in SCREENS:
             nav(page, r)
             small[r], noname[r], contrast[r] = page.evaluate(SMALL, 'body'), page.evaluate(NONAME, 'body'), page.evaluate(SWEEP, 'body')
+            if r == 'home':
+                page.locator('#sunSection .sun-location').wait_for(timeout=8000)
+                contrast['home-zonkaart'] = page.evaluate(SWEEP, '#sunSection')
         # kaart: filterpaneel en plekkaartje
         nav(page, 'map', 1500)
+        legend = page.evaluate("() => [...document.querySelectorAll('.map-legend button')].map(b => b.textContent.trim())")
+        legend_hit = page.evaluate("""() => [...document.querySelectorAll('.map-legend button')].every(b => { const r = b.getBoundingClientRect(), x = r.left + r.width / 2;
+          const at = y => document.elementFromPoint(x, y)?.closest('.map-legend button') === b; return r.width >= 44 && at(r.top - 5) && at(r.bottom + 5); })""")
         page.locator('#mapFilterBtn').click()
         page.wait_for_timeout(400)
         small['kaartfilter'], noname['kaartfilter'] = page.evaluate(SMALL, '#mapFilterPanel'), page.evaluate(NONAME, '#mapFilterPanel')
-        legend = page.evaluate("() => [...document.querySelectorAll('.map-legend button')].map(b => b.textContent.trim())")
         page.evaluate("async () => { sessionStorage.setItem('birdspot-map-place', 'pl_named'); const a = await import('/src/app.js'); a.navigate('map', { force: true }); }")
         page.locator('#mapSheetBody .place-sightings').wait_for(timeout=15000)
         small['plekkaartje'], noname['plekkaartje'] = page.evaluate(SMALL, '#mapDetailSheet'), page.evaluate(NONAME, '#mapDetailSheet')
@@ -187,7 +196,8 @@ def main():
         ctx.close()
 
         bad_small = {k: v for k, v in small.items() if v}
-        check('C2', 'tikdoelen ≥ 44×44 op alle schermen, kaartfilter, plekkaartje, detail, formulier en kiezer', not bad_small, bad_small or f'{len(small)} gebieden')
+        check('C2', 'tikdoelen ≥ 44×44 op alle schermen, kaartfilter, plekkaartje, detail, formulier en kiezer; kaartlegenda raakt ook 5 px boven/onder',
+              not bad_small and legend_hit, bad_small or f'{len(small)} gebieden, legenda-tikrand {legend_hit}')
 
         # ── C3 + C5 meldingen en contrast, licht en donker ───────────
         tones = {}
@@ -236,7 +246,7 @@ def main():
         bad_contrast = {k: v for k, v in contrast.items() if v}
         bad_contrast.update(toast_low)
         check('C5', 'contrast ≥ 4,5:1 (groot ≥ 3:1) licht en donker: 7 schermen, soortkaart, detail, formulier, kiezer, meldingen',
-              not bad_contrast and len(contrast) >= 18, bad_contrast or f'{len(contrast)} gebieden + 8 meldingen')
+              not bad_contrast and len(contrast) >= 19, bad_contrast or f'{len(contrast)} gebieden + 8 meldingen')
 
         bad_names = {k: v for k, v in noname.items() if v}
         check('C6', 'schermlezer: elke zichtbare knop, link en invoer heeft een naam', not bad_names, bad_names or f'{len(noname)} gebieden')

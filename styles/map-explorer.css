@@ -246,9 +246,13 @@
 .map-screen .map-legend { padding: 0 4px; gap: 2px; }
 .map-screen .map-legend[hidden] { display: none; }
 .map-screen .map-legend button {
-  display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; min-width: 44px; padding: 0 8px;
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 32px; min-width: 44px; padding: 0 8px;
   border-radius: 999px; color: inherit; font: inherit; white-space: nowrap;
 }
+/* UX-03C: tikdoel 44 hoog via een onzichtbare rand van 6 px boven en onder; zichtbaar blijft het compact (K1-01: ≤ 20 % van de kaart).
+   De rijen staan 12 px uit elkaar, zodat de randen van boven- en onderrij elkaar niet overlappen. */
+.map-screen .map-legend button::after { content: ''; position: absolute; inset: -6px 0; }
+.map-screen .map-meta { row-gap: 12px; }
 .map-screen .map-legend button[aria-pressed="true"] { background: rgba(245, 205, 136, .22); box-shadow: inset 0 0 0 1px var(--map-gold); }
 .map-legend__cloud { width: 12px; height: 12px; border-radius: 50%; filter: blur(1.2px); box-shadow: 0 0 6px currentColor; }
 .season-cloud { filter: blur(12px); pointer-events: none; }
