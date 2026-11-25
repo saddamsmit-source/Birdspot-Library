@@ -4,6 +4,8 @@ import { loadPlaces } from '../../data/places.js';
 import { getMediaMetadata } from '../../data/db.js';
 import { getCollectionIds } from '../../storage/collections.js';
 import { validPin } from '../sightings/evidence.js';
+// UX-02A: dezelfde normalisatie en zoektermen als de lijst Mijn waarnemingen (één zoeklogica).
+import { normalizeSearch, sightingTerms } from '../sightings/sightingQuery.js';
 
 const shortcuts = [
   ['Home', 'Dashboard en recente waarnemingen', 'home', 'start overzicht dashboard'],
@@ -27,8 +29,7 @@ const shortcuts = [
   ['Waarnemingen per maand', 'Bekijk de maandgrafiek op Home', 'home', 'maand grafiek trend waarnemingen', 'monthlySection'],
 ];
 const speciesById = new Map(SPECIES.map(species => [species.id, species]));
-const normalize = value => String(value ?? '').toLocaleLowerCase('nl').normalize('NFD')
-  .replace(/\p{M}/gu, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+const normalize = normalizeSearch;
 
 function entry(title, detail, target, ...terms) {
   return { title, detail, target, name: normalize(title), haystack: normalize([title, detail, ...terms].join(' ')) };
@@ -54,8 +55,8 @@ function localEntries(sightings, places) {
     const species = speciesById.get(speciesId);
     const placeName = placesById.get(placeId)?.name || locationName;
     const name = speciesName || species?.nameNL || 'Onbekende soort';
-    const terms = [name, species?.nameSci, species?.nameEN, placeName, locationName, date, notes,
-      sighting.habitat, sighting.behavior, sighting.weather, sighting.observationMethod, sighting.identificationSource];
+    const terms = sightingTerms(sighting, { species, placeName: placesById.get(placeId)?.name || '' });
+    if (!sighting.speciesName && !species) terms[0] = name;
     const detail = [placeName, date].filter(Boolean).join(' · ');
     observations.push(entry(name, detail || 'Mijn waarneming', { route: 'sightings', sightingId: id }, ...terms));
     const related = { name, placeName, terms };

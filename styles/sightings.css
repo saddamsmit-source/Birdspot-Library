@@ -967,3 +967,151 @@
   min-height: 44px; padding: 0 14px; border-radius: 999px;
   border: 1px solid var(--line, rgba(0,0,0,.15)); background: var(--surface); color: var(--ink); cursor: pointer;
 }
+
+/* ── UX-02: Mijn waarnemingen — zoeken, filters, kaartjes ──────────────── */
+.sightings-tools {
+  display: grid;
+  gap: var(--space-8);
+  padding: 0 max(var(--space-12), env(safe-area-inset-right, 0px)) var(--space-8) max(var(--space-12), env(safe-area-inset-left, 0px));
+}
+.sightings-tools[hidden] { display: none; }
+.sightings-search { position: relative; margin: 0; }
+.sightings-search__icon {
+  position: absolute; left: 12px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%);
+  color: var(--muted); pointer-events: none;
+}
+.sightings-search input {
+  width: 100%; min-height: 44px; box-sizing: border-box; padding: 0 12px 0 38px;
+  border: 1px solid var(--field-border); border-radius: var(--r-pill);
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 1rem;
+}
+.sightings-search input:focus-visible { outline: 3px solid var(--brand-light); outline-offset: 1px; }
+.sightings-filterbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-8); }
+.sightings-filter-btn {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px;
+  border: 1px solid var(--field-border); border-radius: var(--r-pill);
+  background: var(--surface); color: var(--ink); font: inherit; font-weight: 650; cursor: pointer;
+}
+.sightings-filter-btn svg { width: 18px; height: 18px; }
+.sightings-filter-btn[aria-expanded="true"] { background: var(--field-selected); border-color: var(--brand-mid); color: var(--brand); }
+.sightings-filter-btn__count {
+  min-width: 20px; height: 20px; padding: 0 6px; border-radius: var(--r-pill); box-sizing: border-box;
+  background: var(--brand); color: var(--on-brand); font-size: .75rem; line-height: 20px; text-align: center;
+}
+.sightings-filter-btn__count[hidden] { display: none; }
+.sightings-chips { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+.sightings-chip {
+  display: inline-flex; align-items: center; gap: 6px; max-width: 100%; min-height: 44px; padding: 0 12px;
+  border: 1px solid var(--brand-mid); border-radius: var(--r-pill);
+  background: var(--field-selected); color: var(--brand); font: inherit; font-size: .875rem; font-weight: 600; cursor: pointer;
+}
+.sightings-chip > span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sightings-chip--clear { background: transparent; color: var(--ink); border-color: var(--field-border); }
+.sightings-filter-panel {
+  display: grid; gap: var(--space-12); padding: var(--space-12);
+  border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface);
+}
+.sightings-filter-panel[hidden] { display: none; }
+.sightings-filter-group { margin: 0; padding: 0; border: 0; min-width: 0; }
+.sightings-filter-group legend { padding: 0; margin-bottom: 6px; font-size: var(--fs-label); font-weight: 700; color: var(--muted); }
+.sightings-filter-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.sightings-filter-option {
+  min-height: 44px; padding: 0 14px; border: 1px solid var(--field-border); border-radius: var(--r-pill);
+  background: var(--surface); color: var(--ink); font: inherit; font-size: .875rem; cursor: pointer;
+}
+.sightings-filter-option[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--on-brand); font-weight: 650; }
+.sightings-filter-option[aria-pressed="true"]::before { content: '✓ '; }
+.sightings-filter-note { margin: 0; font-size: var(--fs-label); color: var(--muted); }
+.sightings-result { margin: 0; font-size: var(--fs-meta); color: var(--muted); }
+.sightings-result:empty { display: none; }
+.sightings-noresult { display: grid; justify-items: center; gap: 6px; margin: 40px 16px; text-align: center; }
+.sightings-noresult p { margin: 0; color: var(--muted); }
+.sightings-noresult .sightings-noresult__title { color: var(--ink); font-weight: 650; }
+.sightings-noresult .btn-secondary { margin-top: var(--space-8); min-height: 44px; padding: 0 18px; width: auto; }
+.sightings-empty__icon { width: 40px; height: 40px; opacity: .45; }
+
+.sight-card:focus-visible { outline: 3px solid var(--brand-light); outline-offset: -3px; }
+.sight-card__placeholder { display: grid; place-items: center; width: 100%; height: 100%; color: var(--muted); opacity: .6; }
+.sight-card__placeholder .ui-icon { width: 26px; height: 26px; }
+.sight-card__count { font-size: var(--fs-meta); font-weight: 600; color: var(--muted); }
+.sight-card__meta .ui-icon { width: 13px; height: 13px; flex-shrink: 0; }
+.sight-card__date, .sight-card__place { display: inline-flex; align-items: center; gap: 4px; min-width: 0; }
+.sight-card__place { max-width: 100%; }
+.sight-card__place-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sight-card__place--auto, .sight-card__place--gps { font-style: italic; }
+.sight-card__tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.sight-card__tags .ui-icon { width: 13px; height: 13px; }
+/* Informatie = blauw; onzekerheid en ongecontroleerde suggestie = amber; zeker = groen. Altijd met tekst. */
+.sight-card .sighting-observed-pill, .sight-card .sighting-observed-pill.is-heard {
+  background: var(--accent-soft); color: var(--ink); border: 1px solid var(--line);
+}
+.sight-card .sighting-merlin-pill.is-unchecked { background: var(--warn-soft); color: var(--warn-ink); border-color: var(--warn); }
+.sight-certainty, .sight-media {
+  display: inline-flex; align-items: center; gap: 4px; min-height: 24px; padding: 0 8px; border-radius: var(--r-pill);
+  font-size: .75rem; font-weight: 650; line-height: 1;
+}
+.sight-certainty--certain { background: var(--info-soft); color: var(--info-ink); border: 1px solid var(--brand-light); }
+.sight-certainty--probable, .sight-certainty--possible { background: var(--warn-soft); color: var(--warn-ink); border: 1px solid var(--warn); }
+.sight-media { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+.sight-card .sighting-observed-pill, .sight-card .sighting-merlin-pill { font-size: .75rem; min-height: 24px; padding: 0 8px; box-sizing: border-box; }
+.sight-card .sighting-merlin-pill:not(.is-unchecked) { background: var(--info-soft); color: var(--info-ink); border-color: var(--line); }
+
+/* ── UX-02B: detailkop en samenvatting ─────────────────────────────────── */
+.detail-header .sheet__title { min-width: 0; overflow-wrap: anywhere; }
+.detail-header .detail-header-actions { flex-shrink: 0; }
+.detail-close-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-width: 44px; min-height: 44px; padding: 0 12px; box-sizing: border-box;
+  border: 1px solid var(--line); border-radius: var(--r-pill);
+  background: var(--surface); color: var(--ink); font: inherit; font-size: var(--fs-meta); font-weight: 600; cursor: pointer;
+}
+.detail-close-btn svg { width: 18px; height: 18px; }
+.detail-close-btn:focus-visible, .detail-edit-btn:focus-visible { outline: 3px solid var(--brand-light); outline-offset: 2px; }
+.detail-summary {
+  display: grid; gap: 8px; margin: var(--space-12) 0 var(--space-16); padding: var(--space-12);
+  border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface);
+}
+.detail-summary__row { display: flex; align-items: flex-start; gap: 10px; min-width: 0; }
+.detail-summary dt { display: flex; flex-shrink: 0; padding-top: 2px; color: var(--icon-ink); }
+.detail-summary dt .ui-icon { width: 18px; height: 18px; }
+.detail-summary dd { margin: 0; min-width: 0; color: var(--ink); line-height: 1.4; overflow-wrap: anywhere; }
+.detail-summary__hint { display: inline; color: var(--muted); font-size: var(--fs-meta); }
+.detail-sure { display: inline-flex; align-items: center; min-height: 24px; padding: 0 10px; border-radius: var(--r-pill); font-size: .8125rem; font-weight: 650; }
+.detail-sure--certain { background: var(--info-soft); color: var(--info-ink); border: 1px solid var(--brand-light); }
+.detail-sure--probable, .detail-sure--possible, .detail-sure--unchecked { background: var(--warn-soft); color: var(--warn-ink); border: 1px solid var(--warn); }
+/* Detailsheet had geen eigen randen of kopopmaak (ook op b0acce0): zelfde maat als het formulier. */
+#detailSightingSheet .sheet__header {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px;
+  padding: 10px max(15px, env(safe-area-inset-right)) 10px max(15px, env(safe-area-inset-left));
+  border-bottom: 1px solid var(--line); background: var(--surface);
+}
+#detailSightingSheet .sheet__title {
+  flex: 1 1 12ch; min-width: 0; color: var(--ink);
+  font: 700 1.25rem/1.2 var(--font-display, Georgia, serif);
+}
+#detailSightingSheet .sheet__content { padding: 0 max(15px, env(safe-area-inset-right)) 16px max(15px, env(safe-area-inset-left)); }
+#detailSightingSheet .detail-footer { padding: 12px max(15px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(15px, env(safe-area-inset-left)); }
+/* UX-02C: automatische plek benoemen */
+.detail-place-rename {
+  display: inline-flex; align-items: center; min-height: 44px; margin-left: 4px; padding: 0 12px;
+  border: 1px solid var(--icon-ink); border-radius: var(--r-pill); background: transparent; color: var(--icon-ink);
+  font: inherit; font-size: var(--fs-meta); font-weight: 650; cursor: pointer;
+}
+.detail-place-rename[hidden], .detail-place-form[hidden] { display: none; }
+.detail-place-form { display: grid; gap: 6px; margin-top: 8px; }
+.detail-place-form label { font-size: var(--fs-label); font-weight: 700; color: var(--muted); }
+.detail-place-form input {
+  min-height: 44px; padding: 0 12px; border: 1px solid var(--field-border); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 1rem; box-sizing: border-box; width: 100%;
+}
+.detail-place-form__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.detail-place-form__actions button { min-height: 44px; width: auto; padding: 0 16px; }
+.detail-place-form__hint { font-size: var(--fs-label); color: var(--muted); }
+/* UX-02C: profiel- en soortkaartingang naar Mijn waarnemingen */
+.profile-row--sightings { width: 100%; margin-top: var(--space-12); min-height: 52px; border: 1px solid var(--icon-ink); border-radius: var(--r-card); }
+.profile-row--sightings .profile-row__name { font-weight: 700; color: var(--ink); }
+.sd-all-sightings {
+  display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; margin-top: var(--space-12);
+  border: 1px solid var(--icon-ink); border-radius: var(--r-pill); background: transparent; color: var(--icon-ink);
+  font: inherit; font-weight: 650; cursor: pointer;
+}

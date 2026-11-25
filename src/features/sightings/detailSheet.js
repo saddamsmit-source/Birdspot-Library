@@ -16,6 +16,9 @@ import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { showToast }                        from '../../app.js';
 import { openEditSheet }                    from './addSheet.js';
 import { releaseSightingAudio }             from '../../data/sightingAudio.js';
+import { loadPlaces, renamePlace }         from '../../data/places.js';
+import { placeOf }                          from './sightingQuery.js';
+import { appIcon }                          from '../../utils/icons.js';
 
 const CERTAINTY_NL = {
   certain:  'Zeker',
@@ -23,7 +26,7 @@ const CERTAINTY_NL = {
   possible: 'Mogelijk',
 };
 
-export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive = () => true } = {}) {
+export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceRenamed, isActive = () => true } = {}) {
   // Laad media uit IndexedDB
   // Ronde 3: eigen geluidsopnamen apart houden (nooit in de foto-/videogalerij).
   const photos = (await getPhotosBySighting(sighting.id).catch(() => [])).filter(p => !isSightingAudio(p));
@@ -47,13 +50,16 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
     <div class="sheet" role="dialog" aria-modal="true"
       aria-label="${escHtml(sighting.speciesName)}">
       <div class="sheet__handle"></div>
-      <div class="sheet__header">
+      <div class="sheet__header detail-header">
         <span class="sheet__title">${escHtml(sighting.speciesName)}</span>
         <div class="detail-header-actions">
           <button class="btn-secondary detail-edit-btn" id="detailEdit" type="button">
             Bewerken
           </button>
-          <button class="btn-close" id="detailClose" type="button">Sluiten</button>
+          <button class="btn-close detail-close-btn" id="detailClose" type="button" aria-label="Sluiten en terug naar de lijst">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            <span>Sluiten</span>
+          </button>
         </div>
       </div>
       <div class="sheet__content" id="detailSheetContent">
@@ -127,6 +133,9 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
     onDeleted?.(sighting);
   });
 
+  // ── UX-02C: automatisch benoemde plek een eigen naam geven ─
+  _bindPlaceRename(ov, sighting, onPlaceRenamed);
+
   // ── Lightbox op mediabestanden ────────────────────────────
   ov.querySelectorAll('.detail-media__item[data-url]').forEach(trigger => {
     trigger.addEventListener('click', () => {
@@ -148,28 +157,13 @@ function _renderDetailBody(s, photos, audio = []) {
   const dateStr = fmtDate(s.date) + (s.time ? ` · ${s.time}` : '');
 
   return `
+    ${_renderSummary(s, dateStr, photos, audio)}
     <div class="detail-field-group">
 
-      <!-- Datum + tijd -->
+      <!-- Aantal (zekerheid staat in de samenvatting bovenaan) -->
       <div class="detail-field">
-        <div class="detail-field__label">Datum</div>
-        <div class="detail-field__value">${escHtml(dateStr)}</div>
-      </div>
-
-      <!-- Aantal + zekerheid naast elkaar -->
-      <div class="detail-field detail-field--row">
-        <div class="detail-field detail-field--half">
-          <div class="detail-field__label">Aantal</div>
-          <div class="detail-field__value">${s.count ?? 1}</div>
-        </div>
-        <div class="detail-field detail-field--half">
-          <div class="detail-field__label">Zekerheid</div>
-          <div class="detail-field__value">
-            <span class="certainty-badge certainty-badge--${escHtml(s.certainty || 'certain')}">
-              ${escHtml(CERTAINTY_NL[s.certainty] || 'Zeker')}
-            </span>
-          </div>
-        </div>
+        <div class="detail-field__label">Aantal</div>
+        <div class="detail-field__value">${s.count ?? 1}</div>
       </div>
 
       <!-- Waarnemingswijze en identificatiebron -->
@@ -198,14 +192,11 @@ function _renderDetailBody(s, photos, audio = []) {
           <p class="detail-field__hint sighting-birdnet-legacy">Bij deze oudere waarneming is ook een BirdNET-suggestie bewaard. Of je die zelf controleerde, is toen niet vastgelegd.</p>
         </div>` : ''}
 
-      <!-- Locatie -->
-      ${s.locationName || (s.lat != null && s.lon != null) ? `
+      <!-- GPS-pin (de plek zelf staat in de samenvatting bovenaan) -->
+      ${s.lat != null && s.lon != null ? `
       <div class="detail-field">
-        <div class="detail-field__label">Locatie</div>
-        <div class="detail-field__value">
-          ${s.locationName ? escHtml(s.locationName) : ''}
-          ${s.lat != null && s.lon != null ? `<div class="detail-field__hint">📍 ${Number(s.lat).toFixed(5)}, ${Number(s.lon).toFixed(5)}</div>` : ''}
-        </div>
+        <div class="detail-field__label">GPS-pin</div>
+        <div class="detail-field__value detail-field__value--coords">${Number(s.lat).toFixed(5)}, ${Number(s.lon).toFixed(5)}</div>
       </div>` : ''}
 
       <!-- Habitat, gedrag, weer als chips (alleen tonen als ingevuld) -->
@@ -261,6 +252,90 @@ function _renderDetailBody(s, photos, audio = []) {
         </div>`;
       }).join('')}
     </div>` : ''}`;
+}
+
+/**
+ * UX-02B: in één oogopslag wat, wanneer, waar, hoe zeker en welk bewijs. Kleur is nooit de enige aanwijzing.
+ */
+function _renderSummary(s, dateStr, photos, audio) {
+  const places = new Map(loadPlaces().filter(place => place?.id).map(place => [place.id, place]));
+  const where = placeOf(s, places);
+  const whereText = {
+    named: escHtml(where.name),
+    auto: `<span class="detail-place-name">${escHtml(where.name)}</span> <span class="detail-summary__hint">automatische naam</span>
+      <button type="button" class="detail-place-rename" id="detailPlaceRename" data-place-id="${escHtml(where.place?.id || '')}">Geef een naam</button>
+      <form class="detail-place-form" id="detailPlaceForm" hidden>
+        <label for="detailPlaceInput">Naam voor deze plek</label>
+        <input id="detailPlaceInput" maxlength="80" autocomplete="off" placeholder="Bijv. Kijkhut Zuid" enterkeyhint="done">
+        <span class="detail-place-form__actions">
+          <button type="submit" class="btn-primary">Bewaar</button>
+          <button type="button" class="btn-secondary" id="detailPlaceCancel">Annuleer</button>
+        </span>
+        <span class="detail-place-form__hint">Geldt voor alle waarnemingen op deze plek.</span>
+      </form>`,
+    'text-pin': `${escHtml(where.name)} <span class="detail-summary__hint">met GPS-pin</span>`,
+    text: `${escHtml(where.name)} <span class="detail-summary__hint">zonder pin</span>`,
+    gps: `Alleen GPS-coördinaten <span class="detail-summary__hint">${escHtml(where.name)}</span>`,
+    none: 'Geen plek vastgelegd',
+  }[where.kind];
+  const unchecked = uncheckedSuggestion(s);
+  const legacy = s.identificationSource !== 'birdnet' && s.identificationSource !== 'merlin' && legacyBirdnetSuggestion(s);
+  const sure = unchecked
+    ? `<span class="detail-sure detail-sure--unchecked">${escHtml(sourceBadge(s))} · niet zelf gecontroleerd</span>`
+    : legacy
+      ? '<span class="detail-sure detail-sure--unchecked">Oude BirdNET-suggestie · controle niet vastgelegd</span>'
+      : `<span class="detail-sure detail-sure--${escHtml(s.certainty || 'certain')}">${escHtml(CERTAINTY_NL[s.certainty] || 'Zeker')}</span>
+         ${s.identificationSource === 'birdnet' || s.identificationSource === 'merlin' ? `<span class="detail-summary__hint">${escHtml(sourceLabel(s))}</span>` : ''}`;
+  const evidence = [
+    photos.length ? `${photos.length} ${photos.length === 1 ? 'foto of video' : 'foto’s of video’s'}` : '',
+    audio.length ? `${audio.length} ${audio.length === 1 ? 'geluidsopname' : 'geluidsopnamen'}` : '',
+    s.soundSuggestion ? 'BirdNET-suggestie bewaard' : '',
+  ].filter(Boolean);
+  return `
+    <dl class="detail-summary" aria-label="Samenvatting">
+      <div class="detail-summary__row"><dt>${appIcon('calendar')}<span class="visually-hidden">Wanneer</span></dt>
+        <dd>${escHtml(dateStr || 'Geen datum')}</dd></div>
+      <div class="detail-summary__row detail-summary__row--where" data-place-kind="${where.kind}"><dt>${appIcon('pin')}<span class="visually-hidden">Waar</span></dt>
+        <dd>${whereText}</dd></div>
+      <div class="detail-summary__row"><dt>${appIcon('shield')}<span class="visually-hidden">Hoe zeker</span></dt>
+        <dd>${sure}</dd></div>
+      <div class="detail-summary__row"><dt>${appIcon('camera')}<span class="visually-hidden">Bewijs</span></dt>
+        <dd>${evidence.length ? escHtml(evidence.join(' · ')) : 'Geen foto’s of geluid'}</dd></div>
+    </dl>`;
+}
+
+function _bindPlaceRename(ov, sighting, onPlaceRenamed) {
+  const btn = ov.querySelector('#detailPlaceRename');
+  const form = ov.querySelector('#detailPlaceForm');
+  if (!btn || !form) return;
+  const input = form.querySelector('#detailPlaceInput');
+  const toggle = open => {
+    form.hidden = !open;
+    btn.hidden = open;
+    if (open) input.focus(); else btn.focus();
+  };
+  btn.addEventListener('click', () => toggle(true));
+  form.querySelector('#detailPlaceCancel').addEventListener('click', () => toggle(false));
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name = input.value.trim();
+    if (!name) { showToast('Vul een naam in voor deze plek'); input.focus(); return; }
+    const save = form.querySelector('[type="submit"]');
+    save.disabled = true;
+    try {
+      // Alleen de naam van precies deze gekoppelde plek; geen andere koppeling of coördinaat verandert.
+      const place = await renamePlace(btn.dataset.placeId, name);
+      if (!place) throw new Error('plek niet gevonden');
+      const row = ov.querySelector('.detail-summary__row--where dd');
+      row.innerHTML = `${escHtml(place.name)}`;
+      row.closest('.detail-summary__row').dataset.placeKind = 'named';
+      showToast(`Plek heet nu ${place.name}`);
+      onPlaceRenamed?.(place, sighting);
+    } catch (_) {
+      save.disabled = false;
+      showToast('Naam opslaan mislukt; er is niets gewijzigd');
+    }
+  });
 }
 
 // ── Lightbox ───────────────────────────────────────────────

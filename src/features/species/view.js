@@ -925,6 +925,13 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
           '<span><strong>'+escHtml(fmtDate(item.date))+'</strong><small>'+escHtml(loadPlaces().find(p=>p.id===item.placeId)?.name || item.locationName || (Number.isFinite(item.lat)&&Number.isFinite(item.lon)?item.lat.toFixed(5)+', '+item.lon.toFixed(5):'Locatie niet vastgelegd'))+'</small><small>'+escHtml(methodLabel(item))+' · '+escHtml(sourceLabel(item))+'</small>' +
           (BREEDING_BEHAVIORS.includes(item.behavior) ? '<small class="sd-breeding-observation">'+escHtml(item.behavior)+'</small>' : '') +
           '</span><span aria-hidden="true">↗</span></button>').join('');
+        // UX-02C: alle eigen waarnemingen van deze soort in Mijn waarnemingen (zoeken, filteren, beheren).
+        rows.insertAdjacentHTML('beforeend','<button type="button" class="sd-all-sightings" id="sdAllSightings">'+
+          'Bekijk in Mijn waarnemingen ('+matches.length+')</button>');
+        rows.querySelector('#sdAllSightings').addEventListener('click',()=>{
+          close(false);
+          import('../../app.js').then(({navigate})=>navigate('sightings',{force:true,target:{speciesId:s.id}}));
+        });
         rows.addEventListener('click',e=>{
           const btn=e.target.closest('[data-sighting-id]');
           const record=matches.find(item=>item.id===btn?.dataset.sightingId);

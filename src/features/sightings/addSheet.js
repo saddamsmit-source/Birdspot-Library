@@ -41,6 +41,7 @@ import { changePhotos, getPhoto, SIGHTING_AUDIO_KIND, sightingAudioType } from '
 import { openMediaPreview } from '../../utils/validateMedia.js';
 import { audioBytesProblem, releaseSightingAudio, resolveSightingAudio } from '../../data/sightingAudio.js';
 import { openSpeciesPicker }     from './speciesPicker.js';
+import { placeNameKind }         from './sightingQuery.js';
 import { escHtml }               from '../../utils/html.js';
 import { showToast }             from '../../app.js';
 
@@ -695,9 +696,12 @@ function _coordsHintText() {
       ? ` <button type="button" class="link-btn" data-place-separate>Aparte spot</button>` +
         (offer.mode === 'choose' ? ` <button type="button" class="link-btn" data-place-change>Andere plek</button>` : '')
       : '';
-    return `${coords} · <span data-place-state="linked">Bekende plek: ${escHtml(place.name)}${dist(place.id)}</span>${undo}`;
+    const auto = placeNameKind(place) === 'auto' ? ' (automatische naam)' : '';
+    return `${coords} · <span data-place-state="linked">Bekende plek: ${escHtml(place.name)}${auto}${dist(place.id)}</span>${undo}`;
   }
-  if (!offer || offer.mode === 'new') return `${coords} · <span data-place-state="new">Nieuwe plek</span>`;
+  // UX-02C: zonder plaatsnaam maakt de app bij opslaan een plek als "Plek n"; zeg dat vooraf.
+  const autoName = String(_state.locationName || '').trim() ? '' : ' · krijgt een automatische naam; vul Locatie in voor een eigen naam';
+  if (!offer || offer.mode === 'new') return `${coords} · <span data-place-state="new">Nieuwe plek${autoName}</span>`;
   if (offer.separate) {
     return `${coords} · <span data-place-state="separate">Aparte spot (nieuwe plek)</span>` +
       ` <button type="button" class="link-btn" data-place-change>Toch bekende plek kiezen</button>`;
