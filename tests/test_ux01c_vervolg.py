@@ -13,6 +13,7 @@ V8  dubbelklik op Opslaan: precies één record en één bevestiging
 V9  trage opslag: knop 'Opslaan…' en geblokkeerd, geen dubbel record; daarna bevestiging
 V10 offline: vervolg toevoegen en opslaan werkt
 V11 320/390/430 px: bevestiging en overnamemelding binnen beeld, knoppen ≥ 44 px, geen horizontale overloop
+V12 de melding blokkeert niets: tik elders werkt direct en sluit haar
 """
 import sys
 import threading
@@ -33,7 +34,7 @@ HOLD = """(() => {
   IDBDatabase.prototype.transaction = function (...args) {
     const tx = origTx.apply(this, args);
     const stores = [].concat(args[0]);
-    if (window.__holdPhotosMs && stores.includes('photos') && args[1] === 'readwrite') {
+    if (window.__holdPhotosMs && args[1] === 'readwrite') {   // trage opslag: elke schrijftransactie later klaar
       let handler = null;
       Object.defineProperty(tx, 'oncomplete', { configurable: true, get: () => handler,
         set: fn => { handler = fn; tx.addEventListener('complete', e => setTimeout(() => fn && fn.call(tx, e), window.__holdPhotosMs)); } });
@@ -213,12 +214,13 @@ def main():
         page.locator('#addSheetSubmit').click()
         page.wait_for_timeout(200)
         busy = page.locator('#addSheetSubmit').evaluate("b => ({ disabled: b.disabled, text: b.textContent.trim() })")
-        page.locator('#addSheetSubmit').click(force=True)
+        busy2 = page.locator('#addSheetSubmit').evaluate("b => b.disabled")
+        page.locator('#addSheetSubmit').click(force=True)   # tweede tik tijdens het opslaan
         page.locator('#addSightingSheet').wait_for(state='detached', timeout=15000)
         page.locator('#savedActions').wait_for(timeout=5000)
         page.evaluate('window.__holdPhotosMs = 0')
         check('V9', 'trage opslag: Opslaan… en geblokkeerd, geen dubbel record, daarna bevestiging',
-              busy == {'disabled': True, 'text': 'Opslaan…'} and len(rows(page)) == n + 2, busy)
+              busy == {'disabled': True, 'text': 'Opslaan…'} and busy2 and len(rows(page)) == n + 2, busy)
 
         # ── V7 terug/annuleren/hervatten in vervolgformulier ─────────
         again(page)
@@ -251,6 +253,11 @@ def main():
         save(page)
         check('V10', 'offline: vervolg toevoegen en opslaan', rows(page)[-1]['speciesName'] == 'Koolmees'
               and rows(page)[-1]['placeId'] == rows(page)[-2]['placeId'] and not errors)
+        # V12: de melding blokkeert de bediening niet: één tik elders gaat door én sluit de melding
+        page.locator('.nav-item[data-route="species"]').click(timeout=3000)
+        page.wait_for_timeout(300)
+        check('V12', 'tik elders (navigatie) werkt direct en sluit de melding',
+              page.locator('#savedActions').count() == 0 and page.locator('.nav-item.active').get_attribute('data-route') == 'species')
         ctx.close()
 
         # ── V6 geen GPS ──────────────────────────────────────────────
@@ -294,7 +301,7 @@ def main():
     server.shutdown()
     failed = [c for c, ok in RESULTS if not ok]
     print(f"UX-01C: {len(RESULTS) - len(failed)}/{len(RESULTS)} PASS{' — FAIL: ' + ', '.join(failed) if failed else ''}")
-    sys.exit(1 if failed or len(RESULTS) < 11 else 0)
+    sys.exit(1 if failed or len(RESULTS) < 12 else 0)
 
 
 if __name__ == '__main__':

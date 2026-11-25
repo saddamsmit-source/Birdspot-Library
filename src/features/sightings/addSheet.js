@@ -1355,9 +1355,13 @@ function _showSavedActions(saved, onSaved) {
   if (staleToast) { staleToast.classList.remove('show'); staleToast.textContent = ''; }
   document.body.appendChild(bar);
   let timer = 0;
-  const hide = () => { clearTimeout(timer); bar.remove(); };
-  const arm = () => { clearTimeout(timer); timer = setTimeout(() => { if (!bar.matches(':hover, :focus-within')) hide(); else arm(); }, SAVED_ACTIONS_MS); };
+  // Elke tik buiten de melding = de gebruiker gaat verder: melding weg (gedraagt zich als snackbar,
+  // blokkeert nooit de bediening eronder). Alleen toetsenbordfocus houdt haar langer open.
+  const onOutside = event => { if (!bar.contains(event.target)) hide(); };
+  const hide = () => { clearTimeout(timer); document.removeEventListener('pointerdown', onOutside, true); bar.remove(); };
+  const arm = () => { clearTimeout(timer); timer = setTimeout(() => { if (!bar.matches(':focus-within')) hide(); else arm(); }, SAVED_ACTIONS_MS); };
   arm();
+  setTimeout(() => { if (bar.isConnected) document.addEventListener('pointerdown', onOutside, true); }, 0);
   bar.addEventListener('focusout', arm);
   bar.addEventListener('keydown', e => { if (e.key === 'Escape') { e.stopPropagation(); hide(); } });
   bar.addEventListener('click', async e => {

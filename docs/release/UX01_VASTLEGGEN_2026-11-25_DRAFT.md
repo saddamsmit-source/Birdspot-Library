@@ -46,14 +46,18 @@ bewerken, oude records, ZIP export→import, offline, tegenstrijdig).
 
 | Onderdeel | Uitvoering |
 |---|---|
-| Na opslaan | Niet-modale melding bovenaan: "<soort> opgeslagen" · **Bekijk waarneming** · **Nog één toevoegen** · sluiten. Verdwijnt na 8 s (niet zolang erin gewerkt wordt); ligt onder elke sheet. Bewerken houdt de bestaande toast. |
+| Na opslaan | Niet-modale melding bovenaan: "<soort> opgeslagen" · **Bekijk waarneming** · **Nog één toevoegen** · sluiten. Verdwijnt na 8 s (langer alleen bij toetsenbordfocus) en bij elke tik elders; ligt onder elke sheet. Bewerken houdt de bestaande toast. |
 | Overname | Alleen datum en plek (pin, plek-ID, plaatsnaam), zichtbaar: "Overgenomen van vorige waarneming: datum · plek" met **Wis plek**. Nooit soort, tijd, aantal, zekerheid, bron of media. Alleen binnen 30 min na opslaan. |
 | Locatie | Overgenomen plek wint: geen automatische GPS. Na *Wis plek* ook geen automatische GPS (bewuste keuze; GPS-knop blijft). |
 | Recente soorten | Tot 6 chips bovenaan de bestaande kiezer, nieuwste eerst; verborgen tijdens zoeken. Zoeken NL/EN/wetenschappelijk ongewijzigd. |
 | Rust | Geen nieuwe velden in het formulier; extra opties blijven achter *Meer details*. |
 
-Bewijs: `test_ux01c_vervolg.py` V1–V11 **11/11 PASS** (1 en 3 vogels, recent, zelfde plek, andere plek, geen GPS,
-terug/annuleren/hervatten, dubbelklik, trage opslag, offline, 320/390/430).
+Bewijs: `test_ux01c_vervolg.py` V1–V12 **12/12 PASS** (1 en 3 vogels, recent, zelfde plek, andere plek, geen GPS,
+terug/annuleren/hervatten, dubbelklik, trage opslag, offline, 320/390/430, melding blokkeert niets).
+
+CI-bevinding en herstel (`43daf2a`): `r3_zip_herstel` Z2 faalde omdat de melding de kaartknop *Waarnemingen*
+afdekte en bij muisaanwijzer bleef staan. Herstel: tik elders sluit de melding, pauze alleen bij toetsenbordfocus,
+tekstvlak laat tikken door (V12). Daarna lokaal Z1–Z6 PASS.
 
 ### Meting voor/na (zelfde meetmethode als UX-00, lokaal Chromium 390 px, vers profiel)
 
@@ -67,7 +71,7 @@ Winst komt uit *Nog één toevoegen* (vervangt + en keuze) en recente soorten (v
 
 ## Regressie
 
-Lokaal PASS: navigation_recovery, r3_audio (12/12), r3_leesfout, r3_vervolg, r3_restpunten, r3_zip_herstel,
+Lokaal PASS (na laatste wijziging opnieuw: ux01a/b/c, r3_audio, r3_zip_herstel, r2b_places_env_zip, navigation_recovery): navigation_recovery, r3_audio (12/12), r3_leesfout, r3_vervolg, r3_restpunten, r3_zip_herstel,
 r4_merlin, quick_add_merlin, sighting_merlin_pins, r05_gps_race, r2b_qa_herstel, r2b_places_env_zip,
 pilot_offline_new_sighting, pilot_cross_profile_zip, android_media_preflight, map_k1k2, map_k4, map_k6,
 mobile_editorial, explorer_species_cluster, profile_k7, species_groups_az, app_search, signature_phase2,

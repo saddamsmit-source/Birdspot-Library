@@ -944,6 +944,7 @@
   box-shadow: var(--shadow-float);
 }
 .saved-actions__text { flex: 1 1 140px; font-weight: 650; overflow-wrap: anywhere; }
+.saved-actions__text { pointer-events: none; }
 .saved-actions__buttons { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .saved-actions__btn { min-height: 44px; width: auto; padding: 0 16px; border-radius: 999px; border: 1px solid; font-weight: 650; }
 .saved-actions .btn-secondary { background: transparent; color: var(--focus-light); border-color: currentColor; }
