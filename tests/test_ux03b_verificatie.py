@@ -86,7 +86,8 @@ def main():
         check('V2', 'detail: zelfde label + toelichting; eigen controle ≠ wetenschappelijke verificatie; tegenstrijdig gemeld',
               all(details[k]['status'] == label_of(k) for k in EXPECT)
               and 'geen onafhankelijke wetenschappelijke verificatie' in details['s05']['text'] and 'geen onafhankelijke wetenschappelijke verificatie' in details['m2']['text']
-              and 'Of je die zelf controleerde, is niet vastgelegd' in details['s06']['text'] and 'eigen controle niet vastgelegd' in details['s06']['summary']
+              and 'Of je die zelf controleerde, is niet vastgelegd' in details['s06']['text'] and details['s06']['text'].count('niet vastgelegd') == 2
+              and details['s04']['text'].count('eigen controle is nog niet vastgelegd') == 1
               and 'telt daarom niet mee' in details['s08']['text'] and all('Zeker' not in details[k]['summary'] for k in WARN),
               {k: v['status'] for k, v in details.items()})
 

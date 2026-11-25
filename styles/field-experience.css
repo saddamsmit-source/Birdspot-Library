@@ -392,6 +392,7 @@
 #screen-species .species-row__name {
   display: block;
   min-height: var(--hit-field);
+  min-width: 44px;
   max-width: 100%;
   margin-bottom: -.3em;
   text-align: start;
@@ -612,3 +613,31 @@
   margin-inline: auto;
   pointer-events: auto;
 }
+
+/* UX-03C: meldingen met één vaste vorm per toon. Teken + kleur, nooit kleur alleen.
+   Info neutraal · succes bosgroen met ✓ (alleen na een geslaagde actie) · waarschuwing amber met ! · fout rood met ×. */
+.toast:not(.app-update) {
+  display: flex; align-items: flex-start; gap: 8px; line-height: 1.35;
+  border: 1px solid transparent; white-space: normal; overflow-wrap: anywhere;
+}
+.toast:not(.app-update)::before {
+  flex: none; display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%;
+  font: 800 13px/1 var(--font-body, system-ui);
+}
+.toast:not(.app-update)[data-tone="info"] { background: var(--ink); color: var(--bg); }
+.toast:not(.app-update)[data-tone="info"]::before { content: "i" / ""; border: 1.5px solid currentColor; font-style: italic; }
+.toast:not(.app-update)[data-tone="success"] { background: var(--brand); color: var(--focus-light); }
+.toast:not(.app-update)[data-tone="success"]::before { content: "✓" / ""; background: var(--positive); color: var(--brand); }
+.toast:not(.app-update)[data-tone="warn"] { background: var(--warn-soft); color: var(--warn-ink); border-color: var(--warn); }
+.toast:not(.app-update)[data-tone="warn"]::before { content: "!" / ""; background: var(--warn); color: #2B1A05; }
+.toast:not(.app-update)[data-tone="error"] { background: #8C2A17; color: #FFFFFF; border-color: #FFB4A3; }
+.toast:not(.app-update)[data-tone="error"]::before { content: "×" / ""; background: #FFFFFF; color: #8C2A17; font-size: 16px; }
+
+/* UX-03C: goudkleurige labels in Dagboek en Inzichten haalden op licht 2,3–3,0:1. Zelfde tint, donkerder op licht. */
+.signature-section-head .signature-eyebrow, .phase3-panel .signature-eyebrow, .phase3-top-rank,
+.phase3-journal-entry .signature-journal-arrow, .phase3-journal-intro .signature-eyebrow,
+.phase3-insights-controls .signature-eyebrow { color: var(--gold-ink); }
+/* UX-03C: tikdoelen ≥ 44×44 in Dagboek, Inzichten en de soortkiezer */
+.phase3-hero-link, .phase3-segments button, .phase3-journal-filters :is(input, select), .phase3-insights-controls select { min-height: 44px; }
+.phase3-journal-feature button { display: inline-flex; align-items: center; min-height: 44px; }
+#speciesPickerOverlay .species-search { height: 44px; }

@@ -313,9 +313,9 @@ function _openSightingForm(mode, initialState, { onSaved, editId, baseUpdatedAt 
     ctx.leaving = false;
     if (ctx.destroyed) return;
     if (choice === 'draft') {
-      if (!persistDraft()) { showToast('Concept kon niet worden bewaard — je invoer staat nog klaar'); return; }
+      if (!persistDraft()) { showToast('Concept kon niet worden bewaard — je invoer staat nog klaar', 'error'); return; }
       close();
-      showToast(hasPendingMedia() ? 'Concept bewaard — zonder de nieuw gekozen media' : 'Concept bewaard');
+      showToast(hasPendingMedia() ? 'Concept bewaard — zonder de nieuw gekozen media' : 'Concept bewaard', 'success');
     } else if (choice === 'discard') {
       deleteDraft(ctx.draftKey);
       ctx.draftWritten = false;
@@ -1158,7 +1158,7 @@ async function _loadExistingThumbs(containerEl) {
 
 // ── Opslaan ────────────────────────────────────────────────
 async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
-  if (!_state.speciesId) { showToast('Kies eerst een soort'); return; }
+  if (!_state.speciesId) { showToast('Kies eerst een soort', 'warn'); return; }
   const dateInput = ov.querySelector('#sightDate');
   if (!dateInput.validity.valid) {
     dateInput.reportValidity();
@@ -1167,15 +1167,15 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   }
   let evidence;
   try { evidence=normalizeEvidence(_state); }
-  catch(err){ showToast(err.message); return; }
+  catch(err){ showToast(err.message, 'warn'); return; }
   if ((_state.lat !== null || _state.lon !== null) && !validPin(_state.lat,_state.lon)) {
-    showToast('Kies een geldige pin, of verwijder de coördinaten');return;
+    showToast('Kies een geldige pin, of verwijder de coördinaten', 'warn');return;
   }
   if(evidence.identificationSource==='merlin' && evidence.merlinVerification!=='checked' && _state.certainty==='certain') {
-    showToast('Een Merlin-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.');return;
+    showToast('Een Merlin-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.', 'warn');return;
   }
   if(evidence.identificationSource==='birdnet' && evidence.birdnetVerification!=='checked' && _state.certainty==='certain') {
-    showToast('Een BirdNET-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.');return;
+    showToast('Een BirdNET-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.', 'warn');return;
   }
 
   // UX-01A (D): een hervat bewerkconcept mag een intussen gewijzigde waarneming nooit overschrijven.
@@ -1183,7 +1183,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
     const current = getSightingsSnapshot().find(item => item?.id === editId);
     if (!current || (current.updatedAt || null) !== ctx.baseUpdatedAt) {
       ctx.persistDraft?.();
-      showToast('Waarneming intussen gewijzigd — concept niet opgeslagen. Sluit en open de waarneming opnieuw.');
+      showToast('Waarneming intussen gewijzigd — concept niet opgeslagen. Sluit en open de waarneming opnieuw.', 'error');
       return;
     }
   }
@@ -1300,7 +1300,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       }
       const status = ov.querySelector('#sightingAudioStatus');
       if (status) status.textContent = error.message;
-      showToast('Opnamen intussen gewijzigd — controleer en sla opnieuw op');
+      showToast('Opnamen intussen gewijzigd — controleer en sla opnieuw op', 'warn');
       return;
     }
     if (error?.name === 'AudioReadError') {
@@ -1308,10 +1308,10 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
       ctx.audioMessage = error.message;
       const status = ov.querySelector('#sightingAudioStatus');
       if (status) status.textContent = error.message;
-      showToast('Opnamen konden niet worden gelezen — niets opgeslagen, probeer opnieuw');
+      showToast('Opnamen konden niet worden gelezen — niets opgeslagen, probeer opnieuw', 'error');
       return;
     }
-    showToast('Opslaan mislukt — je invoer staat nog klaar');
+    showToast('Opslaan mislukt — je invoer staat nog klaar', 'error');
     return;
   }
 
@@ -1327,7 +1327,7 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   deleteDraft(ctx.draftKey);   // UX-01A: opgeslagen = geen concept meer
   ctx.draftWritten = false;
   close();
-  if (isEdit) showToast('Waarneming bijgewerkt');
+  if (isEdit) showToast('Waarneming bijgewerkt', 'success');
   else _showSavedActions(savedSighting, onSaved);
   onSaved?.(savedSighting);
 }
@@ -1424,7 +1424,7 @@ async function _autoGPS(ov, ctx) {
 }
 
 function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
-  if (!navigator.geolocation) { if (!silent) showToast('GPS niet beschikbaar'); return; }
+  if (!navigator.geolocation) { if (!silent) showToast('GPS niet beschikbaar', 'warn'); return; }
   const btn  = ov.querySelector('#sightGpsBtn');
   if (!btn) return;
   // Automatisch: blijf op het intent-token (verhoog niet), zodat iedere handmatige handeling wint.
@@ -1457,7 +1457,7 @@ function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
     () => {
       if (ctx.destroyed || revision !== ctx.locationRevision) return;
       _resetGPSButton(ov);
-      if (!silent) showToast('GPS niet beschikbaar — vul locatie handmatig in');
+      if (!silent) showToast('GPS niet beschikbaar — vul locatie handmatig in', 'warn');
     },
     { timeout: 10000, maximumAge: 60000 }
   );

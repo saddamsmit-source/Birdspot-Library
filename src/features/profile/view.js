@@ -231,7 +231,7 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   el.querySelector('#btnCsv')?.addEventListener('click', () => {
     try {
       const r = downloadCsv(sightings, { speciesById: SPECIES_BY_ID, places });
-      showToast(`CSV opgeslagen: ${r.count} ${r.count === 1 ? 'waarneming' : 'waarnemingen'}`);
+      showToast(`CSV opgeslagen: ${r.count} ${r.count === 1 ? 'waarneming' : 'waarnemingen'}`, 'success');
     } catch (e) {
       showToast(`CSV maken mislukt: ${e.message}`, 'error');
     }
@@ -241,7 +241,7 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   el.querySelectorAll('[data-layer]').forEach(btn => btn.addEventListener('click', () => {
     saveLayer(btn.dataset.layer);
     el.querySelectorAll('[data-layer]').forEach(b => b.setAttribute('aria-checked', String(b === btn)));
-    showToast(`Kaart opent voortaan met ${btn.textContent.toLowerCase()}`);
+    showToast(`Kaart opent voortaan met ${btn.textContent.toLowerCase()}`, 'success');
   }));
   el.querySelectorAll('[data-reminder]').forEach(btn => btn.addEventListener('click', () => {
     const days = Number(btn.dataset.reminder);
@@ -253,7 +253,7 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   el.querySelectorAll('[data-place-radius]').forEach(btn => btn.addEventListener('click', () => {
     saveSetting('placeRadiusM', Number(btn.dataset.placeRadius));
     el.querySelectorAll('[data-place-radius]').forEach(b => b.setAttribute('aria-checked', String(b === btn)));
-    showToast(`Bekende vogelspot: binnen ${btn.dataset.placeRadius} m`);
+    showToast(`Bekende vogelspot: binnen ${btn.dataset.placeRadius} m`, 'success');
   }));
 
   el.querySelector('[data-insights]')?.addEventListener('click', () =>
@@ -302,7 +302,7 @@ async function handleExport(el) {
   try {
     const result = await exportBackup();
     updateStatus(el, getBackupStatus(), getBackupStatus()?.sightingCount ?? 0);
-    showToast(`Back-up opgeslagen: ${result.sightingCount} waarnemingen, ${result.photoCount} foto's`);
+    showToast(`Back-up opgeslagen: ${result.sightingCount} waarnemingen, ${result.photoCount} foto's`, 'success');
   } catch (e) {
     showToast(`Back-up mislukt: ${e.message}`, 'error');
   } finally {
@@ -345,7 +345,7 @@ async function handleImport(el, file) {
     const restoreCard = el.querySelector('#restoreCard');
     restoreCard?.classList.toggle('profile-card--hidden', !hasSafetyCopy());
 
-    showToast(`Hersteld: ${result.merged} waarnemingen in je bibliotheek`);
+    showToast(`Hersteld: ${result.merged} waarnemingen in je bibliotheek`, 'success');
 
     // Herlaad data na korte vertraging zodat toast zichtbaar is
     setTimeout(() => {
@@ -372,7 +372,7 @@ async function handleRestore(el) {
 
   try {
     await restoreFromSafetyCopy();
-    showToast('Teruggezet naar vorige toestand');
+    showToast('Teruggezet naar vorige toestand', 'success');
 
     // Terugzetten-knop verbergen
     const restoreCard = el.querySelector('#restoreCard');

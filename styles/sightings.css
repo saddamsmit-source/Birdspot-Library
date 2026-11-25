@@ -406,6 +406,7 @@
 
 /* ── Verwijder-knop ────────────────────────────────────── */
 .btn-danger {
+  min-height:    44px;
   padding:       6px 14px;
   border-radius: var(--r-pill);
   border:        1.5px solid var(--danger);
@@ -1147,3 +1148,21 @@
 .detail-status--warn { background: var(--warn-soft); color: var(--warn-ink); border: 1px solid var(--warn); }
 .sight-card .sighting-status-pill:not(.is-unchecked) { background: var(--accent-soft); color: var(--ink); border-color: var(--accent); }
 .sd-mine-note { margin: 0 0 var(--space-8); font-size: var(--fs-meta); color: var(--muted); }
+/* UX-03C: soortkiezer — titel en sluitknop los van de rand, zelfde kop als detail en formulier */
+#speciesPickerOverlay .sheet__header {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 8px max(15px, env(safe-area-inset-right)) 10px max(15px, env(safe-area-inset-left));
+  border-bottom: 1px solid var(--line); background: var(--surface);
+}
+#speciesPickerOverlay .sheet__title {
+  flex: 1 1 auto; min-width: 0; margin: 0; color: var(--ink);
+  font: 700 1.25rem/1.2 var(--font-display, Georgia, serif);
+}
+/* UX-03C: contrast. Verwijderknoppen met rode tekst die op licht én donker ≥ 4,5:1 haalt (was 3,0:1 op licht). */
+.btn-danger { color: var(--danger-ink); border-color: var(--danger-ink); }
+.btn-danger:is(:hover, :focus-visible) { color: var(--on-brand); background: var(--danger-ink); }
+:root[data-theme="dark"] .btn-danger:is(:hover, :focus-visible) { color: var(--bg); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-danger:is(:hover, :focus-visible) { color: var(--bg); } }
+/* UX-03C: tekst in middengroen had in het donkere thema 2,6:1; --icon-ink is licht gelijk en donker leesbaar. */
+.species-show-all, .sd-guide-action, .sd-plumage-more > summary, .sd-audio-credits > summary, .sd-audio-info-symbol { color: var(--icon-ink); }
+.species-show-all:focus-visible { outline-color: var(--icon-ink); }

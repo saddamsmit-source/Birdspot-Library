@@ -25,6 +25,14 @@ jobs:
         run: |
           set -o pipefail
           python tests/test_ux03b_verificatie.py 2>&1 | tee ux03b.log
+      - name: UX-03C kleur, afwerking en toegankelijkheid (C1–C8)
+        run: |
+          set -o pipefail
+          python tests/test_ux03c_afwerking.py 2>&1 | tee ux03c.log
+      - name: UX-03 kernroute (K1–K9)
+        run: |
+          set -o pipefail
+          python tests/test_ux03_kernroute.py 2>&1 | tee ux03k.log
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: ux03-evidence, path: 'ux03*.log'}

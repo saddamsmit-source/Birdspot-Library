@@ -20,11 +20,14 @@ export function openSpeciesPicker(onSelect, { recentIds = [] } = {}) {
   ov.style.zIndex = '2500';
   ov.id = 'speciesPickerOverlay';
   ov.innerHTML = `
-    <div class="sheet" role="dialog" aria-modal="true" aria-label="Kies soort">
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="spPickerTitle">
       <div class="sheet__handle"></div>
       <div class="sheet__header">
-        <span class="sheet__title">Kies soort</span>
-        <button class="btn-close" id="spPickerClose">Sluiten</button>
+        <h2 class="sheet__title" id="spPickerTitle">Kies soort</h2>
+        <button class="btn-close detail-close-btn" id="spPickerClose" type="button" aria-label="Soortkeuze sluiten">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          <span>Sluiten</span>
+        </button>
       </div>
       <div class="sheet__content">
         <div style="padding-top:var(--space-12)">
@@ -34,7 +37,7 @@ export function openSpeciesPicker(onSelect, { recentIds = [] } = {}) {
               <circle cx="11" cy="11" r="8"/>
               <line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
-            <input type="search" id="spPickerSearch" class="species-search"
+            <input type="search" id="spPickerSearch" class="species-search" aria-label="Zoek soort"
               placeholder="Zoek soort of wetenschappelijke naam…"
               autocomplete="off" inputmode="search">
           </div>

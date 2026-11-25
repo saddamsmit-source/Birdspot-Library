@@ -135,7 +135,7 @@ def main():
         close_detail(page)
         check('W2', 'detail: wanneer, waar, hoe zeker, bewijs; sluitknop ≥ 44×44, Bewerken zichtbaar',
               'Bosrand' in summary and '1 foto of video' in summary and '1 geluidsopname' in summary and 'Zeker' in summary
-              and 'niet zelf gecontroleerd' in summary_boom and 'Plek 3' in summary_boom and 'automatische naam' in summary_boom
+              and 'BirdNET · suggestie' in summary_boom and 'Zeker' not in summary_boom and 'Plek 3' in summary_boom and 'automatische naam' in summary_boom
               and round(close_box['width']) >= 44 and round(close_box['height']) >= 44 and round(edit_box['height']) >= 44,
               {'close': (close_box['width'], close_box['height']), 'boom': summary_boom.replace('\n', ' | ')})
 

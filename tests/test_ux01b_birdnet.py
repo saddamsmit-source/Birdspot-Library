@@ -202,7 +202,7 @@ def run(browser, url, tmp):
           and 'Controle onbekend' in t_legacy and legacy_radio and 'BirdNET-suggestie bewaard' in legacy_form
           and counts.get('Merel|acy-1') is False and not errors, f"tellen={counts}")
     check('N10', 'tegenstrijdig: suggestie+Zeker gemeld en niet geteld; BirdNET bij alleen gezien niet opslaanbaar; niets stil gewijzigd',
-          'niet zelf gecontroleerd' in t_conf and counts.get('Merel|ict-1') is False and conflict_refused and unchanged,
+          'eigen controle is niet vastgelegd' in t_conf and 'telt daarom niet mee' in t_conf and counts.get('Merel|ict-1') is False and conflict_refused and unchanged,
           f"tellen={counts}")
     ctx.close()
 

@@ -115,7 +115,7 @@ export function navigate(route, { force = false, history: addHistory = true, tar
   if (target.section && route !== 'map') {
     Promise.resolve(result).then(() => {
       if (screen.isConnected) focusSection(screen, target.section);
-    }).catch(() => showToast('Dit onderdeel kon niet worden geopend.'));
+    }).catch(() => showToast('Dit onderdeel kon niet worden geopend.', 'error'));
   }
 }
 
@@ -161,50 +161,60 @@ document.getElementById('fab').addEventListener('click', () => {
     onSoundSaved: sightings => {
       if (!sightings.length) {
         navigate('species', { force: true });
-        showToast('Eigen opname bij Mijn soortgeluiden bewaard');
+        showToast('Eigen opname bij Mijn soortgeluiden bewaard', 'success');
         return;
       }
       navigate('map', { force: true, target: { sightingId: sightings[0].id } });
       const count = sightings.length;
-      showToast(count === 1 ? 'Waarneming gepind' : `${count} waarnemingen gepind`);
+      showToast(count === 1 ? 'Waarneming gepind' : `${count} waarnemingen gepind`, 'success');
     },
   });
 });
 
 // ── Toast utility ─────────────────────────────────────────
+// UX-03C: één meldingslaag met een toon. Kleur is nooit het enige signaal: elke toon heeft
+// een eigen teken en een fout wordt als 'alert' voorgelezen. Succesgroen alleen na een bewezen geslaagde actie.
+// showToast(msg) · showToast(msg, 6000) · showToast(msg, 'error') · showToast(msg, 'warn', 6000)
 let toastTimer = null;
-export function showToast(msg, duration = 2800) {
+const TOAST_TONES = { info: 2800, success: 2800, warn: 5000, error: 6000 };
+export function showToast(msg, opt, maybeDuration) {
+  const tone = typeof opt === 'string' && opt in TOAST_TONES ? opt : 'info';
+  const duration = typeof opt === 'number' ? opt : (maybeDuration || TOAST_TONES[tone]);
   let toast = document.querySelector('.toast:not(.app-update)');
   if (!toast) {
     toast = document.createElement('div');
     toast.className = 'toast';
-    toast.setAttribute('role', 'status');
-    toast.setAttribute('aria-live', 'polite');
     document.body.appendChild(toast);
   }
+  toast.setAttribute('role', tone === 'error' ? 'alert' : 'status');
+  toast.setAttribute('aria-live', tone === 'error' ? 'assertive' : 'polite');
+  toast.dataset.tone = tone;
   toast.textContent = msg;
   toast.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('show'), duration);
 }
+// Profiel en kaart riepen window.__birdspot.toast aan, maar die bestond niet: een mislukte plekhernoeming
+// op de kaart bleef daardoor stil. Nu één gedeelde laag.
+window.__birdspot = Object.assign(window.__birdspot || {}, { toast: showToast });
 
 // ── Start ─────────────────────────────────────────────────
 const initialRoute = installNavigation({navigate,current:()=>currentRoute,currentEntry:()=>currentEntry,toast:showToast});
 // Ronde 2B-afronding: plekken uit IndexedDB laden (en migreren) vóór de eerste weergave.
 // Hangt de database (bijv. een oudere versie in een ander tabblad blokkeert de upgrade), dan na
 // 1,5 s toch starten; schrijven wacht dan op IndexedDB en verliest niets.
-addEventListener('birdspot-db-blocked', () => showToast('Sluit andere Birdspot-tabbladen om de update af te ronden', 6000));
+addEventListener('birdspot-db-blocked', () => showToast('Sluit andere Birdspot-tabbladen om de update af te ronden', 'warn', 6000));
 // Herstelronde 2B (P1): een import of Terugzetten die door een weggevallen tabblad niet afkwam, eerst
 // afronden (terug- of doorrollen) onder de datalock — dus na een lopende bewerking in een ander tabblad.
 // Staat de markering, dan wacht de app daar volledig op vóór hij gegevens gebruikt of wijzigt.
 const recovery = withDataLock(() => recoverOperations()).catch(error => {
   console.error('[journaal] herstel', error);
-  showToast('Een onderbroken herstelactie kon niet worden afgerond. Herlaad Birdspot.', 8000);
+  showToast('Een onderbroken herstelactie kon niet worden afgerond. Herlaad Birdspot.', 'error', 8000);
 });
 // Een schrijver die op een halve herstelstand stuitte (favorieten e.d.): melden en het herstel afronden.
 let recoveryNotice = null;
 addEventListener('birdspot-recovery-pending', () => {
-  showToast('Een onderbroken herstelactie wordt eerst afgerond. Er is niets gewijzigd; probeer het zo opnieuw.', 6000);
+  showToast('Een onderbroken herstelactie wordt eerst afgerond. Er is niets gewijzigd; probeer het zo opnieuw.', 'warn', 6000);
   recoveryNotice ??= withDataLock(() => recoverOperations()).catch(error => console.error('[journaal] herstel', error)).finally(() => { recoveryNotice = null; });
 });
 if (hasPendingMarker()) await recovery;

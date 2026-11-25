@@ -718,11 +718,11 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         }
         if (closed) return;
         await changePhotos({ put: accepted });
-        if (rejected.length) showToast('Kan niet worden geopend: ' + rejected.join(', '));
-        else if (accepted.length) showToast('Media bij de plek opgeslagen');
+        if (rejected.length) showToast('Kan niet worden geopend: ' + rejected.join(', '), 'error');
+        else if (accepted.length) showToast('Media bij de plek opgeslagen', 'success');
         drawMedia();
       } catch (_) {
-        showToast('Media bij de plek opslaan mislukt');
+        showToast('Media bij de plek opslaan mislukt', 'error');
       } finally {
         addMedia.disabled = false;
       }
@@ -752,7 +752,7 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         const gone=error?.name==='PlaceGoneError';
         const pending=error?.name==='PlaceMigrationPendingError';
         envStatus(gone||pending?error.message:'Opslaan mislukt — er is niets gewijzigd.');
-        showToast(gone?'Plek bestaat niet meer — foto niet opgeslagen':pending?'Plekken worden nog bijgewerkt — foto niet opgeslagen':'Omgevingsfoto opslaan mislukt');
+        showToast(gone?'Plek bestaat niet meer — foto niet opgeslagen':pending?'Plekken worden nog bijgewerkt — foto niet opgeslagen':'Omgevingsfoto opslaan mislukt','error');
       }finally{
         add.disabled=false;
         if(!closed)drawEnv();

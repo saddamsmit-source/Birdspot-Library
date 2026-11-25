@@ -119,7 +119,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
     try {
       await deleteSighting(sighting.id);
     } catch (_) {
-      showToast('Verwijderen mislukt. De waarneming en foto’s zijn behouden.');
+      showToast('Verwijderen mislukt. De waarneming en foto’s zijn behouden.', 'error');
       return;
     }
     // Pas na succesvolle recordopslag verwijderbare media opruimen (foto's, video's en eigen opnamen).
@@ -129,7 +129,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
     // Opnamen alleen echt weg als de veiligheidskopie ze niet meer nodig heeft (Terugzetten).
     await releaseSightingAudio(audioIds).catch(() => {});
     close();
-    showToast('Waarneming verwijderd');
+    showToast('Waarneming verwijderd', 'success');
     onDeleted?.(sighting);
   });
 
@@ -180,7 +180,7 @@ function _renderDetailBody(s, photos, audio = []) {
           ${st.hint ? `<p class="detail-field__hint">${escHtml(st.hint)}</p>` : ''}
         </div>
         ${st.tone === 'warn' && s.certainty === 'certain' ? `
-        <p class="detail-field__hint sighting-evidence-conflict" role="note">Zekerheid staat op ‘zeker’, maar de herkenning is niet zelf gecontroleerd. Deze waarneming telt daarom niet mee in je lijsten.</p>` : ''}`;
+        <p class="detail-field__hint sighting-evidence-conflict" role="note">Zekerheid staat op ‘zeker’, maar eigen controle is niet vastgelegd. Deze waarneming telt daarom niet mee in je lijsten.</p>` : ''}`;
       })()}
 
       <!-- GPS-pin (de plek zelf staat in de samenvatting bovenaan) -->
@@ -272,7 +272,7 @@ function _renderSummary(s, dateStr, photos, audio) {
   // UX-03B: een suggestie zonder eigen controle (of met onbekende controle) is nooit 'Zeker'.
   const st = verificationStatus(s);
   const sure = st.tone === 'warn'
-    ? `<span class="detail-sure detail-sure--unchecked">${escHtml(st.label)}</span> <span class="detail-summary__hint">${st.key === 'check-unknown' ? 'eigen controle niet vastgelegd' : 'niet zelf gecontroleerd'}</span>`
+    ? `<span class="detail-sure detail-sure--unchecked">${escHtml(st.label)}</span>`   // UX-03C: uitleg alleen bij Herkenning, niet dubbel
     : `<span class="detail-sure detail-sure--${escHtml(s.certainty || 'certain')}">${escHtml(CERTAINTY_NL[s.certainty] || 'Zeker')}</span>
        ${st.key !== 'self' ? `<span class="detail-summary__hint">${escHtml(st.label)}</span>` : ''}`;
   const evidence = [
@@ -308,7 +308,7 @@ function _bindPlaceRename(ov, sighting, onPlaceRenamed) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const name = input.value.trim();
-    if (!name) { showToast('Vul een naam in voor deze plek'); input.focus(); return; }
+    if (!name) { showToast('Vul een naam in voor deze plek', 'warn'); input.focus(); return; }
     const save = form.querySelector('[type="submit"]');
     save.disabled = true;
     try {
@@ -318,11 +318,11 @@ function _bindPlaceRename(ov, sighting, onPlaceRenamed) {
       const row = ov.querySelector('.detail-summary__row--where dd');
       row.innerHTML = `${escHtml(place.name)}`;
       row.closest('.detail-summary__row').dataset.placeKind = 'named';
-      showToast(`Plek heet nu ${place.name}`);
+      showToast(`Plek heet nu ${place.name}`, 'success');
       onPlaceRenamed?.(place, sighting);
     } catch (_) {
       save.disabled = false;
-      showToast('Naam opslaan mislukt; er is niets gewijzigd');
+      showToast('Naam opslaan mislukt; er is niets gewijzigd', 'error');
     }
   });
 }

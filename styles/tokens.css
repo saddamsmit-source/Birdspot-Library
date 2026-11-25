@@ -36,6 +36,8 @@
   --warn-soft:    #F5E8D1;
   --warn-ink:     #55370E;
   --danger:       #E76F51;
+  --danger-ink:   #A8361B;   /* UX-03C: rode tekst op licht vlak, ≥ 4,5:1 */
+  --gold-ink:     #7E5A2B;   /* UX-03C: goudkleurige labels als tekst, ≥ 4,5:1 */
   --positive:     #52B788;
 
   /* ── Soortgids: maandbalk ──────────────────────────── */
@@ -112,6 +114,8 @@
     --icon-ink: #B7E4C7;
     --warn-soft: #382C1F;
     --warn-ink: #F3DBAB;
+    --danger-ink: #F4A08A;
+    --gold-ink: #D9B77E;
     --guide-month-breed: #FF5548;
     --field-border: #8CA998;
     --field-cta: var(--field-selected);
@@ -133,6 +137,8 @@
   --icon-ink: #B7E4C7;
   --warn-soft: #382C1F;
   --warn-ink: #F3DBAB;
+  --danger-ink: #F4A08A;
+  --gold-ink: #D9B77E;
   --guide-month-breed: #FF5548;
   --field-border: #8CA998;
   --field-cta: var(--field-selected);
