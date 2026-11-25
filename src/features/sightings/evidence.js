@@ -46,7 +46,7 @@ export function verificationStatus(sighting) {
   if (sighting?.soundSuggestion) {
     // Oud record (vóór UX-01B): BirdNET-suggestie bewaard, bron 'self' of leeg. Nooit stil omzetten.
     return { key: 'check-unknown', label: 'Controle onbekend', tone: 'warn', counts: false,
-      hint: 'Bij deze oudere waarneming is een BirdNET-suggestie bewaard. Of je die zelf controleerde, is niet vastgelegd. Kies bij Bewerken de juiste herkenning.' };
+      hint: 'Bij deze oudere waarneming is een BirdNET-suggestie bewaard. Of je die zelf controleerde, is niet vastgelegd; daarom telt ze niet mee in je lijsten.' };
   }
   if (src === 'self') return { key: 'self', label: 'Eigen herkenning', tone: 'neutral', counts: true, hint: '' };
   return { key: 'unrecorded', label: 'Bron niet vastgelegd', tone: 'neutral', counts: true,

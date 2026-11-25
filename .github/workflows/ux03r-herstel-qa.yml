@@ -21,3 +21,7 @@ jobs:
         run: |
           set -o pipefail
           python tests/test_ux03r_a_tellingen.py 2>&1 | tee ux03r_a.log
+      - name: UX-03R-B oude BirdNET-waarneming bewust zelf controleren (B1–B9)
+        run: |
+          set -o pipefail
+          python tests/test_ux03r_b_zelfcontrole.py 2>&1 | tee ux03r_b.log

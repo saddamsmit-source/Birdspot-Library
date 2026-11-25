@@ -1166,3 +1166,13 @@
 /* UX-03C: tekst in middengroen had in het donkere thema 2,6:1; --icon-ink is licht gelijk en donker leesbaar. */
 .species-show-all, .sd-guide-action, .sd-plumage-more > summary, .sd-audio-credits > summary, .sd-audio-info-symbol { color: var(--icon-ink); }
 .species-show-all:focus-visible { outline-color: var(--icon-ink); }
+/* UX-03R (M1): eigen controle van een oude BirdNET-suggestie */
+.detail-selfcheck-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 10px; padding: 0 14px; }
+.detail-selfcheck-btn svg { width: 18px; height: 18px; }
+.selfcheck-dialog .confirm-dialog__body p { margin: 0 0 10px; }
+.selfcheck-confirm { display: flex; align-items: flex-start; gap: 10px; min-height: 44px; padding: 10px 0 2px; font-weight: 600; color: var(--ink); cursor: pointer; }
+.selfcheck-confirm input { flex: none; width: 22px; height: 22px; margin: 0; accent-color: var(--brand); }
+.selfcheck-dialog .confirm-ok:disabled { opacity: .5; cursor: not-allowed; }
+.selfcheck-dialog { max-height: calc(100dvh - 32px); overflow-y: auto; }
+.selfcheck-dialog .confirm-dialog__actions { flex-wrap: wrap; }
+.selfcheck-dialog .confirm-dialog__actions > button { flex: 1 1 auto; min-height: 44px; }
