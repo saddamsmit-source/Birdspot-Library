@@ -1,0 +1,23 @@
+name: Birdspot UX-03R herstel QA
+on:
+  pull_request:
+    paths: ['.github/workflows/ux03r-herstel-qa.yml', 'src/**', 'styles/**', 'sw.js', 'index.html', 'tests/test_ux03r*', 'tests/ux02_fixtures.py']
+permissions:
+  contents: read
+jobs:
+  ux03r:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: UX-03R-A soorttellingen overal gelijk (A1–A9)
+        run: |
+          set -o pipefail
+          python tests/test_ux03r_a_tellingen.py 2>&1 | tee ux03r_a.log

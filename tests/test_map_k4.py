@@ -107,7 +107,7 @@ def main():
             p.locator(".place-stats").wait_for(timeout=5000)
             assert p.locator("#mapSheetName").inner_text() == "Kijkhut Lauwersmeer"
             stats = p.eval_on_selector_all(".place-stat", "els => els.map(e => e.innerText.replace(/\\s+/g,' ').trim())")
-            assert stats == ["2 soorten", "2 bezoeken", "2 waarnemingen"], stats
+            assert stats == ["2 soorten geregistreerd", "2 bezoeken", "2 waarnemingen"], stats   # UX-03R: ruwe plekgegevens met label
             names = p.eval_on_selector_all(".place-sightings b", "els => els.map(e => e.innerText)")
             assert names == ["Roerdomp", "Rietgors"], names
             p.screenshot(path=str(SHOTS / "map_k4_place_sheet_390.png"))

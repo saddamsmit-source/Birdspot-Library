@@ -4,7 +4,12 @@
  * No persistent analytics cache: data is recomputed from canonical sightings.
  * No assumptions about a species' rarity, location or missing habitat.
  * Dates must be real YYYY-MM-DD calendar dates; do not interpret UTC offsets.
+ *
+ * UX-03R: soortcijfers (aantal, cumulatieve lijn, top 5) volgen de centrale telregel countsForList, net als
+ * de jaarlijst in Profiel. Waarnemingen, locaties, media en leefgebieden blijven ruwe registraties.
+ * registeredSpeciesCount/uncountedSpeciesCount maken het verschil zichtbaar met een eigen label.
  */
+import { countsForList } from '../sightings/evidence.js';
 
 const MONTHS = Object.freeze([
   'jan','feb','mrt','apr','mei','jun',
@@ -61,7 +66,8 @@ export function calculateInsights(records, requestedYear) {
   const habitats = new Map();
   const locations = new Set();
   const byDay = new Map();
-  const uniqueSpecies = new Set();
+  const uniqueSpecies = new Set();      // meetellende soorten (telregel)
+  const registeredSpecies = new Set();  // alle geregistreerde soorten (ruw)
   let photographed = 0;
   let videoCount = 0;
   let individuals = 0;
@@ -73,7 +79,8 @@ export function calculateInsights(records, requestedYear) {
     byDay.set(date,(byDay.get(date)||0)+1);
 
     const key = speciesKey(row);
-    if (key) {
+    if (key) registeredSpecies.add(key);
+    if (key && countsForList(row)) {
       uniqueSpecies.add(key);
       monthlySpecies[month].add(key);
       const prev = species.get(key);
@@ -112,6 +119,8 @@ export function calculateInsights(records, requestedYear) {
 
   return {
     year:selectedYear,years, total:filtered.length, speciesCount:uniqueSpecies.size,
+    registeredSpeciesCount:registeredSpecies.size,
+    uncountedSpeciesCount:[...registeredSpecies].filter(k=>!uniqueSpecies.has(k)).length,
     locationsCount:locations.size, photographed, videoCount, individuals,
     months, topMonth:topMonth.count?topMonth:null,topSpecies,habitats:habitatData,
     habitatTotal:[...habitats.values()].reduce((a,b)=>a+b,0),

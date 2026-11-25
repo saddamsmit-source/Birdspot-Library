@@ -6,19 +6,10 @@
  * worden apart geteld, zodat de app kan uitleggen waarom een soort (nog) niet op de lijst staat.
  */
 
-import { verificationStatus } from '../sightings/evidence.js';
+import { countsForList } from '../sightings/evidence.js';
 
-/**
- * Telt deze waarneming mee voor de lijsten?
- * UX-03B: dezelfde statusbron als lijst, detail en filter. Een suggestie zonder eigen controle telt niet,
- * ook niet een oud record met een BirdNET-suggestie waarvan de controle onbekend is. De opgeslagen
- * waarneming verandert daarbij niet; na 'Bewerken' met de juiste herkenning telt ze weer mee.
- */
-export function countsForList(s) {
-  if (!s || !s.speciesId) return false;
-  if (s.certainty === 'possible') return false;
-  return verificationStatus(s).counts;
-}
+// Telregel staat centraal in sightings/evidence.js (UX-03R); hier doorgegeven voor bestaande aanroepers.
+export { countsForList };
 
 const yearOf = date => (/^(\d{4})-\d{2}-\d{2}/.exec(String(date || '')) || [])[1] || null;
 
@@ -66,6 +57,7 @@ export function newSpeciesInYear(list, year) {
 /**
  * Topplekken: vaste plekken (placeId) eerst op naam uit de plekkenlijst, anders de vrije plaatsnaam.
  * Telt alle waarnemingen (ook onzekere): het gaat om waar je kijkt, niet om je lijst.
+ * UX-03R: ruwe locatiegegevens; het soortaantal heet in de interface daarom 'soorten geregistreerd'.
  */
 export function topPlaces(sightings, places = [], limit = 5) {
   const names = new Map((places || []).map(p => [p.id, p.name]));

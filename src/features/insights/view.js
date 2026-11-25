@@ -36,7 +36,7 @@ function chartSvg(stats,mode) {
       '<text x="344" y="'+(y-5)+'" text-anchor="end" class="phase3-chart-grid-label">'+number+'</text>';
   }).join('');
   return '<svg class="phase3-chart-svg" viewBox="0 0 '+width+' '+height+'" '+
-    'role="img" aria-label="'+(mode==='species'?'Unieke soorten, cumulatief per maand':'Waarnemingen per maand')+' in '+stats.year+'">'+
+    'role="img" aria-label="'+(mode==='species'?'Soorten op je jaarlijst, cumulatief per maand':'Waarnemingen per maand')+' in '+stats.year+'">'+
     guides+segments+'</svg>';
 }
 
@@ -59,7 +59,9 @@ function habitatChart(stats) {
 }
 
 function topSpeciesMarkup(stats) {
-  if (!stats.topSpecies.length) return '<div class="phase3-empty-small">Nog geen soorten geregistreerd voor dit jaar.</div>';
+  if (!stats.topSpecies.length) return '<div class="phase3-empty-small">'+(stats.registeredSpeciesCount
+    ? 'Nog geen soorten op je jaarlijst. Geregistreerde suggesties en onzekere waarnemingen tellen niet mee.'
+    : 'Nog geen soorten geregistreerd voor dit jaar.')+'</div>';
   const peak=Math.max(1,stats.topSpecies[0].count);
   return '<ol class="phase3-top-species">'+stats.topSpecies.map((s,i)=>
     '<li><span class="phase3-top-rank">'+String(i+1).padStart(2,'0')+'</span>'+
@@ -110,20 +112,25 @@ export function renderInsights(el) {
     }
     body.innerHTML=
       '<div class="phase3-kpi-grid">'+[
-        ['bird',stats.speciesCount,'Vogelsoorten'],
+        ['bird',stats.speciesCount,'Soorten op jaarlijst'],
         ['observations',stats.total,'Waarnemingen'],
         ['pin',stats.locationsCount,'Locaties'],
         ['media',stats.photographed,'Met media'],
       ].map(([icon,count,name])=>
         '<article class="phase3-kpi"><span aria-hidden="true">'+appIcon(icon)+'</span><strong>'+count+'</strong>'+
         '<small>'+safe(name)+'</small></article>').join('')+'</div>'+
+      // UX-03R: ruw verschil altijd met eigen label, nooit stil meegeteld
+      (stats.uncountedSpeciesCount?'<p class="phase3-count-note" id="insightsUncounted">'+stats.uncountedSpeciesCount+' '+
+        (stats.uncountedSpeciesCount===1?'soort is':'soorten zijn')+' alleen geregistreerd als suggestie zonder eigen controle, '+
+        '‘controle onbekend’ of ‘mogelijk’ en '+(stats.uncountedSpeciesCount===1?'telt':'tellen')+' niet mee. '+
+        'Geregistreerde soorten in '+stats.year+': '+stats.registeredSpeciesCount+'.</p>':'')+
       '<section class="phase3-panel phase3-month-panel">'+
         '<div class="phase3-panel-head"><div><span class="signature-eyebrow">THE YEAR IN FLIGHT</span>'+
           '<h3>Jaaroverzicht</h3></div>'+
           '<div class="phase3-segments" role="group" aria-label="Kies grafiektype">'+
           '<button type="button" data-chart-mode="observations" aria-pressed="'+(mode==='observations')+'">Waarnemingen</button>'+
           '<button type="button" data-chart-mode="species" aria-pressed="'+(mode==='species')+'">Soorten</button></div></div>'+
-        '<p class="phase3-panel-sub">'+(mode==='species'?'Cumulatief aantal verschillende vogelsoorten':'Aantal geregistreerde waarnemingen per maand')+'</p>'+
+        '<p class="phase3-panel-sub">'+(mode==='species'?'Cumulatief aantal soorten op je jaarlijst':'Aantal geregistreerde waarnemingen per maand')+'</p>'+
         '<div class="phase3-chart-wrap">'+chartSvg(stats,mode)+'</div>'+
       '</section>'+
       '<section class="phase3-panel"><div class="phase3-panel-head"><div>'+
@@ -132,6 +139,7 @@ export function renderInsights(el) {
         habitatChart(stats)+'</section>'+
       '<section class="phase3-panel"><div class="phase3-panel-head"><div>'+
         '<span class="signature-eyebrow">YOUR MOST ENCOUNTERED</span><h3>Top 5 vogelsoorten</h3></div></div>'+
+        '<p class="phase3-panel-sub">Alleen soorten op je jaarlijst; aantal = meetellende waarnemingen.</p>'+
         topSpeciesMarkup(stats)+'</section>'+
       '<section class="phase3-panel"><div class="phase3-panel-head"><div>'+
         '<span class="signature-eyebrow">YOUR PERSONAL MILESTONES</span><h3>Bijzondere momenten</h3></div></div>'+

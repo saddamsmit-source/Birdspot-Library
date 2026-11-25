@@ -643,3 +643,6 @@
 #speciesPickerOverlay .species-search { height: 44px; }
 /* UX-03C: zonkaart op de donkere Home-achtergrond — coördinaten waren --muted (2,4:1) */
 .ambient-wetland .sun-location { color: #DCCFB6; border-top-color: rgba(226, 203, 156, .3); }
+
+/* UX-03R: uitleg onder de Inzichten-tegels als niet elke geregistreerde soort meetelt */
+.phase3-count-note { margin: 10px 2px 4px; font-size: .8rem; line-height: 1.45; color: var(--ink-2, var(--muted)); }
