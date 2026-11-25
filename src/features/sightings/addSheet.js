@@ -428,7 +428,7 @@ function _renderFormBody() {
     <div class="form-field">
       <label class="form-label">Soort <span class="form-required">*</span></label>
       <button class="species-picker-btn" id="speciesPickerBtn" type="button">
-        <div class="species-picker-btn__icon">${sp ? sp.icon : _svgBird()}</div>
+        <div class="species-picker-btn__icon" aria-hidden="true">${_svgBird()}</div>
         <div class="species-picker-btn__text">
           ${sp
             ? `<span class="species-picker-btn__name">${escHtml(sp.nameNL)}</span>

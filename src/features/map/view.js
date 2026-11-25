@@ -132,7 +132,7 @@ export function renderMap(el, target = {}) {
           <button type="button" class="map-sheet-dismiss" id="mapSheetDismiss" aria-label="Sluit pininformatie">×</button>
         </div>
         <div class="sheet-header" id="mapSheetHeader">
-          <div class="sheet-header__icon" id="mapSheetIcon">🐦</div>
+          <div class="sheet-header__icon" id="mapSheetIcon" aria-hidden="true">${appIcon('bird')}</div>
           <div>
             <div class="sheet-header__name" id="mapSheetName">—</div>
             <div class="sheet-header__meta" id="mapSheetMeta">—</div>

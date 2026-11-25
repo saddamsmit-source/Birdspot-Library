@@ -57,6 +57,12 @@ export async function renderProfile(el) {
         </div>
       </div>
 
+      <!-- UX-03A: back-up, herstel en instellingen direct bereikbaar (geen zoeken door het hele profiel) -->
+      <nav class="profile-jump" aria-label="Snel naar">
+        <button type="button" data-profile-jump="backupHeading">Back-up &amp; herstel</button>
+        <button type="button" data-profile-jump="settingsHeading">Instellingen</button>
+      </nav>
+
       ${renderOverview(sightings)}
 
       ${renderLists(lists)}
@@ -252,6 +258,14 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
 
   el.querySelector('[data-insights]')?.addEventListener('click', () =>
     import('../../app.js').then(({ navigate }) => navigate('insights')));
+
+  el.querySelectorAll('[data-profile-jump]').forEach(btn => btn.addEventListener('click', () => {
+    const target = el.querySelector('#' + btn.dataset.profileJump);
+    if (!target) return;
+    target.tabIndex = -1;
+    target.scrollIntoView({ block: 'start' });
+    target.focus({ preventScroll: true });
+  }));
 
   // UX-02C: duidelijke ingang naar Mijn waarnemingen
   el.querySelector('#profileOpenSightings')?.addEventListener('click', () =>

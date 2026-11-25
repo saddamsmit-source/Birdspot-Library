@@ -54,6 +54,8 @@ const P = {
   heard: '<path d="M16 14c1.5-1 2-3 2-5a6 6 0 0 0-12 0m10 5c-2 1-2 2-2 3a3 3 0 0 1-6 0m1-8a3 3 0 0 1 6 0c0 1.5-.5 2-2 3"/>',
   both: '<path d="M1.5 12s3-5 7.5-5 7.5 5 7.5 5-3 5-7.5 5-7.5-5-7.5-5zM19 5v9l3-1"/><circle cx="9" cy="12" r="1.8"/><circle cx="18" cy="15" r="1.6"/>',
   soundwave: '<path d="M3 12h2l2-5 3 10 3-12 3 9 2-2h3"/>',
+  binoculars: '<path d="m7 6-2 3-2 8h7l1-8-2-3H7Zm10 0 2 3 2 8h-7l-1-8 2-3h2Z"/><path d="M10 12h4M7 6V4m10 2V4"/><circle cx="6.5" cy="17" r="2.5"/><circle cx="17.5" cy="17" r="2.5"/>',
+  search: '<circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/>',
 };
 
 export function appIcon(name, className = 'ui-icon') {

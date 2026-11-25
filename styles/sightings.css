@@ -1115,3 +1115,26 @@
   border: 1px solid var(--icon-ink); border-radius: var(--r-pill); background: transparent; color: var(--icon-ink);
   font: inherit; font-weight: 650; cursor: pointer;
 }
+
+/* ── UX-03A: kernactiviteiten, consistente vogelplaceholder, snelkoppelingen ─────── */
+.home-core-actions {
+  grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px;
+}
+.home-core-action {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 52px; padding: 4px 2px;
+  border: 1px solid rgba(255,255,255,.35); border-radius: var(--r-card);
+  background: rgba(255,255,255,.12); color: #fff; font: inherit; font-size: .875rem; font-weight: 650; cursor: pointer;
+}
+.home-core-action .ui-icon { width: 18px; height: 18px; flex-shrink: 0; }
+.home-core-action span { font-size: .78rem; line-height: 1.15; text-align: center; }
+.home-core-action--primary { background: var(--selected-gold); border-color: var(--selected-gold); color: var(--brand); }
+.home-core-action:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.bird-placeholder { display: inline-grid; place-items: center; color: var(--muted); opacity: .7; }
+.bird-placeholder .ui-icon { width: 24px; height: 24px; }
+.profile-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: var(--space-12) 0 0; }
+.profile-jump button {
+  min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: var(--r-pill);
+  background: var(--surface); color: var(--ink); font: inherit; font-size: var(--fs-meta); font-weight: 650; cursor: pointer;
+}
+#speciesOpenSightings { display: inline-flex; align-items: center; gap: 6px; }
+#speciesOpenSightings .ui-icon { width: 16px; height: 16px; }

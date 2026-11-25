@@ -6,6 +6,7 @@
 
 import { SPECIES } from '../../data/species.js';
 import { escHtml } from '../../utils/html.js';
+import { appIcon } from '../../utils/icons.js';
 
 /**
  * @param {function(species): void} onSelect
@@ -119,7 +120,7 @@ function renderOpts(ov, query) {
       <div class="species-group__label">${escHtml(fam)}</div>
       ${[...birds].sort((a, b) => a.nameNL.localeCompare(b.nameNL, 'nl')).map(s => `
         <div class="species-row" data-id="${s.id}" role="option" tabindex="0">
-          <div class="species-row__icon" aria-hidden="true">${s.icon}</div>
+          <div class="species-row__icon bird-placeholder" aria-hidden="true">${appIcon('bird')}</div>
           <div class="species-row__body">
             <div class="species-row__name">${escHtml(s.nameNL)}</div>
             <div class="species-row__sci">${escHtml(s.nameSci)}</div>

@@ -60,6 +60,8 @@ export function renderHome(el, { onSearchSelect } = {}) {
     onSearchSelect?.({ route: button.dataset.signatureRoute });
   };
   el.addEventListener('click', onSignatureClick);
+  // UX-03A: 'Waarnemen' opent dezelfde keuze als de centrale + (één route, geen tweede formulier).
+  el.querySelector('#homeCoreObserve')?.addEventListener('click', () => document.getElementById('fab')?.click());
   const disposeSearch = bindAppSearch(el, onSearchSelect);
   const disposeFeatured = initFeaturedCarousel(el,ctx);
   const disposeHabitat = initAmbientBackdrop(el,ctx);
@@ -109,6 +111,12 @@ function buildSkeleton() {
         </svg>
       </button>
       ${searchMarkup()}
+      <!-- UX-03A: de drie kernactiviteiten, met icoon én woord, via bestaande routes -->
+      <nav class="home-core-actions" aria-label="Wat wil je doen?">
+        <button type="button" class="home-core-action" data-signature-route="species">${appIcon('bird')}<span>Ontdekken</span></button>
+        <button type="button" class="home-core-action home-core-action--primary" id="homeCoreObserve">${appIcon('binoculars')}<span>Waarnemen</span></button>
+        <button type="button" class="home-core-action" data-signature-route="sightings">${appIcon('observations')}<span>Mijn collectie</span></button>
+      </nav>
     </header>
 
     <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
@@ -585,7 +593,7 @@ async function buildRecentItem(s) {
 
   const thumbContent = thumbHtml
     ? thumbHtml
-    : `<span style="font-size:22px" aria-hidden="true">🐦</span>`;
+    : `<span class="bird-placeholder" aria-hidden="true">${appIcon('bird')}</span>`;
 
   const thumbClass = thumbHtml
     ? 'recent-item__thumb'
