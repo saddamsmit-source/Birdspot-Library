@@ -176,8 +176,8 @@ function buildSkeleton() {
     <section class="dash-section" id="recentSection">
       <div class="section-head">
         <span class="section-head__title">Mijn waarnemingen</span>
-        <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen" data-signature-route="sightings">
-          Alles
+        <button class="section-head__link" id="allSightingsBtn" aria-label="Alle waarnemingen: zoeken en filteren" data-signature-route="sightings">
+          Alle waarnemingen
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
             <polyline points="9 18 15 12 9 6"/>
           </svg>

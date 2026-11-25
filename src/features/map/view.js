@@ -57,8 +57,9 @@ export function renderMap(el, target = {}) {
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
           <span class="map-filter-dot" id="mapFilterDot" hidden></span>
         </button>
-        <button type="button" class="map-icon-btn" id="explorerSightingsBtn" aria-label="Mijn waarnemingen als lijst">
+        <button type="button" class="map-icon-btn map-icon-btn--labeled" id="explorerSightingsBtn" aria-label="Mijn waarnemingen als lijst">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg>
+          <span class="map-icon-btn__label" aria-hidden="true">Lijst</span>
         </button>
       </header>
       <div class="map-meta">

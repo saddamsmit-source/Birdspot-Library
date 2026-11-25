@@ -253,6 +253,10 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   el.querySelector('[data-insights]')?.addEventListener('click', () =>
     import('../../app.js').then(({ navigate }) => navigate('insights')));
 
+  // UX-02C: duidelijke ingang naar Mijn waarnemingen
+  el.querySelector('#profileOpenSightings')?.addEventListener('click', () =>
+    import('../../app.js').then(({ navigate }) => navigate('sightings')));
+
   // K7: van lijst naar soort of plek
   el.addEventListener('click', e => {
     const sp = e.target.closest('[data-open-species]');
@@ -452,6 +456,10 @@ function renderOverview(sightings) {
       ${st.places ? tile(st.places, st.places === 1 ? 'plek' : 'plekken') : ''}
       ${st.photos ? tile(st.photos, st.photos === 1 ? 'foto' : "foto's") : ''}
     </div>
+    <button type="button" class="profile-row profile-row--sightings" id="profileOpenSightings">
+      <span class="profile-row__name">Mijn waarnemingen</span>
+      <span class="profile-row__meta">Zoeken, filteren en beheren ›</span>
+    </button>
   </section>`;
 }
 

@@ -1091,3 +1091,27 @@
 }
 #detailSightingSheet .sheet__content { padding: 0 max(15px, env(safe-area-inset-right)) 16px max(15px, env(safe-area-inset-left)); }
 #detailSightingSheet .detail-footer { padding: 12px max(15px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(15px, env(safe-area-inset-left)); }
+/* UX-02C: automatische plek benoemen */
+.detail-place-rename {
+  display: inline-flex; align-items: center; min-height: 44px; margin-left: 4px; padding: 0 12px;
+  border: 1px solid var(--icon-ink); border-radius: var(--r-pill); background: transparent; color: var(--icon-ink);
+  font: inherit; font-size: var(--fs-meta); font-weight: 650; cursor: pointer;
+}
+.detail-place-rename[hidden], .detail-place-form[hidden] { display: none; }
+.detail-place-form { display: grid; gap: 6px; margin-top: 8px; }
+.detail-place-form label { font-size: var(--fs-label); font-weight: 700; color: var(--muted); }
+.detail-place-form input {
+  min-height: 44px; padding: 0 12px; border: 1px solid var(--field-border); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 1rem; box-sizing: border-box; width: 100%;
+}
+.detail-place-form__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.detail-place-form__actions button { min-height: 44px; width: auto; padding: 0 16px; }
+.detail-place-form__hint { font-size: var(--fs-label); color: var(--muted); }
+/* UX-02C: profiel- en soortkaartingang naar Mijn waarnemingen */
+.profile-row--sightings { width: 100%; margin-top: var(--space-12); min-height: 52px; border: 1px solid var(--icon-ink); border-radius: var(--r-card); }
+.profile-row--sightings .profile-row__name { font-weight: 700; color: var(--ink); }
+.sd-all-sightings {
+  display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; margin-top: var(--space-12);
+  border: 1px solid var(--icon-ink); border-radius: var(--r-pill); background: transparent; color: var(--icon-ink);
+  font: inherit; font-weight: 650; cursor: pointer;
+}

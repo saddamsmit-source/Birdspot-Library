@@ -253,6 +253,7 @@ function openSighting(ctx, sighting) {
       // Terug op dezelfde plek in de lijst: focus op het bewerkte kaartje (als het nog in de selectie zit).
       ctx.el.querySelector(`.sight-card[data-id="${CSS.escape(sighting.id)}"]`)?.focus({ preventScroll: true });
     },
+    onPlaceRenamed: refresh,
     isActive: () => ctx.el.isConnected,
   });
 }

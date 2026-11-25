@@ -370,8 +370,16 @@ export async function initPlaces() {
 /** Wacht op een eventueel lopende additieve migratie (tests, opslaan). */
 export function placesSettled() { return unionBusy || Promise.resolve(); }
 
-export function makePlace({ name, lat, lon }, now = new Date().toISOString()) {
-  return { id: newId(), name: String(name || '').trim() || 'Naamloze plek', lat: Number(lat), lon: Number(lon), createdAt: now, updatedAt: now };
+/**
+ * UX-02C: nameOrigin 'auto' (door de app gekozen, zoals "Plek 3") of 'user' (zelf ingevuld of hernoemd).
+ * Alleen nieuwe plekken krijgen het veld; oudere plekken worden nooit stil aangepast.
+ */
+export function makePlace({ name, lat, lon, nameOrigin = null }, now = new Date().toISOString()) {
+  const clean = String(name || '').trim();
+  const place = { id: newId(), name: clean || 'Naamloze plek', lat: Number(lat), lon: Number(lon), createdAt: now, updatedAt: now };
+  const origin = !clean ? 'auto' : nameOrigin;
+  if (origin === 'auto' || origin === 'user') place.nameOrigin = origin;
+  return place;
 }
 
 /** Standaardnaam: ingevulde locatienaam, anders 'Plek n'. */
@@ -395,7 +403,8 @@ export function planMigration(sightings, places) {
     const key = coordKey(s.lat, s.lon);
     let place = byKey.get(key);
     if (!place) {
-      place = makePlace({ name: defaultPlaceName(out, s.locationName), lat: s.lat, lon: s.lon }, s.createdAt || new Date().toISOString());
+      place = makePlace({ name: defaultPlaceName(out, s.locationName), lat: s.lat, lon: s.lon,
+        nameOrigin: String(s.locationName || '').trim() ? 'user' : 'auto' }, s.createdAt || new Date().toISOString());
       out.push(place); byKey.set(key, place); known.add(place.id);
     }
     assign.set(s.id, place.id);
@@ -452,7 +461,7 @@ export async function renamePlace(id, name) {
   return withPlacesTx(({ places }) => {
     const place = places.find(x => x.id === id);
     if (!place) return { result: null };
-    const next = { ...place, name: clean.slice(0, 80), updatedAt: new Date().toISOString() };
+    const next = { ...place, name: clean.slice(0, 80), nameOrigin: 'user', updatedAt: new Date().toISOString() };
     return { put: [next], result: next };
   });
 }
@@ -469,7 +478,7 @@ export async function resolvePlaceForSave({ placeId, name, lat, lon }) {
     if (placeId && !migrationsDone(meta)) throw new PlaceMigrationPendingError();
     const existing = placeId && !tombstones.has(placeId) ? places.find(place => place.id === placeId) : null;
     if (existing) return { result: { place: existing, created: false } };
-    const place = makePlace({ name: defaultPlaceName(places, name), lat, lon });
+    const place = makePlace({ name: defaultPlaceName(places, name), lat, lon, nameOrigin: String(name || '').trim() ? 'user' : 'auto' });
     return { put: [place], result: { place, created: true } };
   }, ['meta'], { readMeta: PLACE_MIGRATIONS });
 }

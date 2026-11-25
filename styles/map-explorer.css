@@ -272,3 +272,11 @@
 .place-month.is-best i { background: var(--brand-mid); }
 .place-month.is-best b { color: var(--ink); }
 .place-months__caption { margin: 4px 0 0; font-size: 12px; color: var(--ink-2); }
+/* UX-02C: lijstknop met zichtbare tekst (zelfde knop, duidelijkere ingang naar Mijn waarnemingen) */
+.map-screen .map-icon-btn--labeled { padding: 0 12px 0 10px; }
+.map-screen .map-icon-btn__label { font-size: 13px; font-weight: 700; }
+@media (max-width: 359px) {
+  /* 320 px: zoekveld houdt voorrang; de knop blijft herkenbaar aan icoon en schermlezerlabel. */
+  .map-screen .map-icon-btn__label { display: none; }
+  .map-screen .map-icon-btn--labeled { padding: 0 12px; }
+}

@@ -16,7 +16,7 @@ import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { showToast }                        from '../../app.js';
 import { openEditSheet }                    from './addSheet.js';
 import { releaseSightingAudio }             from '../../data/sightingAudio.js';
-import { loadPlaces }                       from '../../data/places.js';
+import { loadPlaces, renamePlace }         from '../../data/places.js';
 import { placeOf }                          from './sightingQuery.js';
 import { appIcon }                          from '../../utils/icons.js';
 
@@ -26,7 +26,7 @@ const CERTAINTY_NL = {
   possible: 'Mogelijk',
 };
 
-export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive = () => true } = {}) {
+export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceRenamed, isActive = () => true } = {}) {
   // Laad media uit IndexedDB
   // Ronde 3: eigen geluidsopnamen apart houden (nooit in de foto-/videogalerij).
   const photos = (await getPhotosBySighting(sighting.id).catch(() => [])).filter(p => !isSightingAudio(p));
@@ -132,6 +132,9 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, isActive
     showToast('Waarneming verwijderd');
     onDeleted?.(sighting);
   });
+
+  // ── UX-02C: automatisch benoemde plek een eigen naam geven ─
+  _bindPlaceRename(ov, sighting, onPlaceRenamed);
 
   // ── Lightbox op mediabestanden ────────────────────────────
   ov.querySelectorAll('.detail-media__item[data-url]').forEach(trigger => {
@@ -259,7 +262,17 @@ function _renderSummary(s, dateStr, photos, audio) {
   const where = placeOf(s, places);
   const whereText = {
     named: escHtml(where.name),
-    auto: `${escHtml(where.name)} <span class="detail-summary__hint">automatische naam</span>`,
+    auto: `<span class="detail-place-name">${escHtml(where.name)}</span> <span class="detail-summary__hint">automatische naam</span>
+      <button type="button" class="detail-place-rename" id="detailPlaceRename" data-place-id="${escHtml(where.place?.id || '')}">Geef een naam</button>
+      <form class="detail-place-form" id="detailPlaceForm" hidden>
+        <label for="detailPlaceInput">Naam voor deze plek</label>
+        <input id="detailPlaceInput" maxlength="80" autocomplete="off" placeholder="Bijv. Kijkhut Zuid" enterkeyhint="done">
+        <span class="detail-place-form__actions">
+          <button type="submit" class="btn-primary">Bewaar</button>
+          <button type="button" class="btn-secondary" id="detailPlaceCancel">Annuleer</button>
+        </span>
+        <span class="detail-place-form__hint">Geldt voor alle waarnemingen op deze plek.</span>
+      </form>`,
     'text-pin': `${escHtml(where.name)} <span class="detail-summary__hint">met GPS-pin</span>`,
     text: `${escHtml(where.name)} <span class="detail-summary__hint">zonder pin</span>`,
     gps: `Alleen GPS-coördinaten <span class="detail-summary__hint">${escHtml(where.name)}</span>`,
@@ -289,6 +302,40 @@ function _renderSummary(s, dateStr, photos, audio) {
       <div class="detail-summary__row"><dt>${appIcon('camera')}<span class="visually-hidden">Bewijs</span></dt>
         <dd>${evidence.length ? escHtml(evidence.join(' · ')) : 'Geen foto’s of geluid'}</dd></div>
     </dl>`;
+}
+
+function _bindPlaceRename(ov, sighting, onPlaceRenamed) {
+  const btn = ov.querySelector('#detailPlaceRename');
+  const form = ov.querySelector('#detailPlaceForm');
+  if (!btn || !form) return;
+  const input = form.querySelector('#detailPlaceInput');
+  const toggle = open => {
+    form.hidden = !open;
+    btn.hidden = open;
+    if (open) input.focus(); else btn.focus();
+  };
+  btn.addEventListener('click', () => toggle(true));
+  form.querySelector('#detailPlaceCancel').addEventListener('click', () => toggle(false));
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name = input.value.trim();
+    if (!name) { showToast('Vul een naam in voor deze plek'); input.focus(); return; }
+    const save = form.querySelector('[type="submit"]');
+    save.disabled = true;
+    try {
+      // Alleen de naam van precies deze gekoppelde plek; geen andere koppeling of coördinaat verandert.
+      const place = await renamePlace(btn.dataset.placeId, name);
+      if (!place) throw new Error('plek niet gevonden');
+      const row = ov.querySelector('.detail-summary__row--where dd');
+      row.innerHTML = `${escHtml(place.name)}`;
+      row.closest('.detail-summary__row').dataset.placeKind = 'named';
+      showToast(`Plek heet nu ${place.name}`);
+      onPlaceRenamed?.(place, sighting);
+    } catch (_) {
+      save.disabled = false;
+      showToast('Naam opslaan mislukt; er is niets gewijzigd');
+    }
+  });
 }
 
 // ── Lightbox ───────────────────────────────────────────────
