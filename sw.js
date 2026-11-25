@@ -87,6 +87,7 @@ const PRECACHE_PATHS = [
   'src/features/sightings/addSheet.js',
   'src/features/sightings/sightingDraft.js',
   'src/features/sightings/choiceDialog.js',
+  'src/features/sightings/sightingQuery.js',
   'src/features/sightings/quickAdd.js',
   'src/features/sightings/soundSession.js',
   'src/features/sightings/soundDraft.js',
