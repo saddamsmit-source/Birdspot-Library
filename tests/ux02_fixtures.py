@@ -93,4 +93,4 @@ def stored_places(page):
     return page.evaluate("() => JSON.parse(localStorage.getItem('birdspot-places') || '{\"places\":[]}').places")
 
 
-__all__ = ['PLACES', 'SIGHTINGS', 'start_server', 'seed', 'go_sightings', 'shown_ids', 'rows', 'boot', 'stored_places']
+__all__ = ['PLACES', 'SIGHTINGS', 'rec', 'start_server', 'seed', 'go_sightings', 'shown_ids', 'rows', 'boot', 'stored_places']

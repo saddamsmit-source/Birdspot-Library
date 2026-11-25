@@ -222,7 +222,7 @@
 #addSightingSheet .sighting-pin-actions {align-items:center;}
 #addSightingSheet .media-attach-row {max-width:100%;}
 #addSightingSheet .chip-row {max-width:100%;overflow-x:auto;scrollbar-width:thin;}
-#addSightingSheet .chip {min-height:35px;}
+#addSightingSheet .chip {min-height:44px;}
 @media(max-width:360px){
   #addSightingSheet .sheet {max-height:100dvh;border-radius:18px 18px 0 0;}
   #addSightingSheet .sheet__header {padding-left:13px;padding-right:13px;}

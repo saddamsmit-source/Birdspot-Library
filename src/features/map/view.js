@@ -15,7 +15,7 @@ import { SPECIES }         from '../../data/species.js';
 import { openDetailSheet } from '../sightings/detailSheet.js';
 import { openAddSheet } from '../sightings/addSheet.js';
 import { openPinPicker } from '../sightings/pinPicker.js';
-import { methodLabel, sourceLabel, validPin } from '../sightings/evidence.js';
+import { methodLabel, verificationStatus, validPin } from '../sightings/evidence.js';
 import { placeStatus, MAP_STATUS, MAP_ORDER, statusForSighting, filteredSightings, statusCounts, statusCountLabel, clusterGradient } from './visualization.js';
 import { escHtml } from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
@@ -132,7 +132,7 @@ export function renderMap(el, target = {}) {
           <button type="button" class="map-sheet-dismiss" id="mapSheetDismiss" aria-label="Sluit pininformatie">×</button>
         </div>
         <div class="sheet-header" id="mapSheetHeader">
-          <div class="sheet-header__icon" id="mapSheetIcon">🐦</div>
+          <div class="sheet-header__icon" id="mapSheetIcon" aria-hidden="true">${appIcon('bird')}</div>
           <div>
             <div class="sheet-header__name" id="mapSheetName">—</div>
             <div class="sheet-header__meta" id="mapSheetMeta">—</div>
@@ -652,7 +652,9 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         const status=statusForSighting(s);
         return '<li><button type="button" data-sighting="'+escHtml(s.id)+'">'+
           '<i class="map-legend__dot map-legend__dot--'+(status==='merlin'?'heard':status)+'"></i>'+
-          '<span><b>'+escHtml(s.speciesName||'Onbekend')+'</b><small>'+escHtml([fmtDate(s.date),methodLabel(s)].filter(Boolean).join(' · '))+'</small></span>'+
+          // UX-03B: zelfde herkenningsstatus als lijst en detail (alleen als er iets te melden is)
+          '<span><b>'+escHtml(s.speciesName||'Onbekend')+'</b><small>'+escHtml([fmtDate(s.date),methodLabel(s),
+            ...(()=>{const v=verificationStatus(s);return v.key==='self'||v.key==='unrecorded'?[]:[v.label];})()].filter(Boolean).join(' · '))+'</small></span>'+
           '<em aria-hidden="true">›</em></button></li>';
       }).join('')+'</ul>'+
       (place.loose?'':'<h4 class="place-h" id="placeEnvHeading">Omgevingsfoto\'s <small class="place-h__note">privé · alleen op dit toestel</small></h4>'+
@@ -716,11 +718,11 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         }
         if (closed) return;
         await changePhotos({ put: accepted });
-        if (rejected.length) showToast('Kan niet worden geopend: ' + rejected.join(', '));
-        else if (accepted.length) showToast('Media bij de plek opgeslagen');
+        if (rejected.length) showToast('Kan niet worden geopend: ' + rejected.join(', '), 'error');
+        else if (accepted.length) showToast('Media bij de plek opgeslagen', 'success');
         drawMedia();
       } catch (_) {
-        showToast('Media bij de plek opslaan mislukt');
+        showToast('Media bij de plek opslaan mislukt', 'error');
       } finally {
         addMedia.disabled = false;
       }
@@ -750,7 +752,7 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         const gone=error?.name==='PlaceGoneError';
         const pending=error?.name==='PlaceMigrationPendingError';
         envStatus(gone||pending?error.message:'Opslaan mislukt — er is niets gewijzigd.');
-        showToast(gone?'Plek bestaat niet meer — foto niet opgeslagen':pending?'Plekken worden nog bijgewerkt — foto niet opgeslagen':'Omgevingsfoto opslaan mislukt');
+        showToast(gone?'Plek bestaat niet meer — foto niet opgeslagen':pending?'Plekken worden nog bijgewerkt — foto niet opgeslagen':'Omgevingsfoto opslaan mislukt','error');
       }finally{
         add.disabled=false;
         if(!closed)drawEnv();

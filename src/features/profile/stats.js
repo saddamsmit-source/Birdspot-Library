@@ -6,14 +6,18 @@
  * worden apart geteld, zodat de app kan uitleggen waarom een soort (nog) niet op de lijst staat.
  */
 
-/** Telt deze waarneming mee voor de lijsten? */
+import { verificationStatus } from '../sightings/evidence.js';
+
+/**
+ * Telt deze waarneming mee voor de lijsten?
+ * UX-03B: dezelfde statusbron als lijst, detail en filter. Een suggestie zonder eigen controle telt niet,
+ * ook niet een oud record met een BirdNET-suggestie waarvan de controle onbekend is. De opgeslagen
+ * waarneming verandert daarbij niet; na 'Bewerken' met de juiste herkenning telt ze weer mee.
+ */
 export function countsForList(s) {
   if (!s || !s.speciesId) return false;
   if (s.certainty === 'possible') return false;
-  if (s.identificationSource === 'merlin' && s.merlinVerification !== 'checked') return false;
-  // UX-01B: zelfde regel voor een niet zelf gecontroleerde BirdNET-suggestie.
-  if (s.identificationSource === 'birdnet' && s.birdnetVerification !== 'checked') return false;
-  return true;
+  return verificationStatus(s).counts;
 }
 
 const yearOf = date => (/^(\d{4})-\d{2}-\d{2}/.exec(String(date || '')) || [])[1] || null;

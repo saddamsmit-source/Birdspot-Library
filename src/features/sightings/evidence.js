@@ -17,31 +17,49 @@ export const BREEDING_BEHAVIORS = Object.freeze([
 export function methodLabel(sighting) {
   return OBSERVATION_METHODS[sighting?.observationMethod]||'Waarnemingswijze niet vastgelegd';
 }
-export function sourceLabel(sighting) {
-  if(sighting?.identificationSource==='merlin'){
-    return sighting?.merlinVerification==='checked'
-      ? 'Merlin Sound ID · zelf gecontroleerd'
-      : 'Merlin Sound ID · suggestie';
-  }
-  if(sighting?.identificationSource==='birdnet'){
-    return sighting?.birdnetVerification==='checked'
-      ? 'BirdNET-suggestie · zelf gecontroleerd'
-      : 'BirdNET · suggestie';
-  }
-  if(sighting?.identificationSource==='self')return 'Eigen herkenning';
-  return 'Herkenningsbron niet vastgelegd';
-}
 /**
- * UX-01B: korte bronlabels voor lijst, kaart en detail. Bron en controle blijven gescheiden velden;
- * geen label zegt dat BirdNET of Merlin een soort heeft bevestigd.
- * @returns {string|null} null = geen label (eigen herkenning zonder suggestie, of niet vastgelegd)
+ * UX-03B (25-11-2026): één bron voor de herkenningsstatus van een eigen waarneming, overal gelijk
+ * (lijst, detail, kaart, soortkaart, profiel, filter). BirdNET en Merlin doen suggesties; zij bevestigen
+ * nooit zelf een soort. 'Zelf gecontroleerd' is een eigen controle, geen wetenschappelijke verificatie.
+ * Staat los van brongeverifieerde gidsinformatie over de soort.
+ *
+ * key   : self | birdnet-suggested | birdnet-checked | merlin-suggested | merlin-checked | check-unknown | unrecorded
+ * tone  : neutral (gewoon) | info (zelf gecontroleerd) | warn (suggestie of controle onbekend)
+ * counts: telt mee voor soortenlijsten (los van zekerheid 'mogelijk', zie stats.js)
  */
+export function verificationStatus(sighting) {
+  const src = sighting?.identificationSource;
+  if (src === 'merlin') {
+    return sighting?.merlinVerification === 'checked'
+      ? { key: 'merlin-checked', label: 'Merlin · zelf gecontroleerd', tone: 'info', counts: true,
+          hint: 'Merlin stelde de soort voor; je hebt die zelf gecontroleerd. ' + SELF_CHECK_NOTE }
+      : { key: 'merlin-suggested', label: 'Merlin · suggestie', tone: 'warn', counts: false,
+          hint: 'Merlin stelde deze soort voor; eigen controle is nog niet vastgelegd.' };
+  }
+  if (src === 'birdnet') {
+    return sighting?.birdnetVerification === 'checked'
+      ? { key: 'birdnet-checked', label: 'BirdNET · zelf gecontroleerd', tone: 'info', counts: true,
+          hint: 'BirdNET stelde de soort voor; je hebt die zelf gecontroleerd. ' + SELF_CHECK_NOTE }
+      : { key: 'birdnet-suggested', label: 'BirdNET · suggestie', tone: 'warn', counts: false,
+          hint: 'BirdNET stelde deze soort voor; eigen controle is nog niet vastgelegd.' };
+  }
+  if (sighting?.soundSuggestion) {
+    // Oud record (vóór UX-01B): BirdNET-suggestie bewaard, bron 'self' of leeg. Nooit stil omzetten.
+    return { key: 'check-unknown', label: 'Controle onbekend', tone: 'warn', counts: false,
+      hint: 'Bij deze oudere waarneming is een BirdNET-suggestie bewaard. Of je die zelf controleerde, is niet vastgelegd. Kies bij Bewerken de juiste herkenning.' };
+  }
+  if (src === 'self') return { key: 'self', label: 'Eigen herkenning', tone: 'neutral', counts: true, hint: '' };
+  return { key: 'unrecorded', label: 'Bron niet vastgelegd', tone: 'neutral', counts: true,
+    hint: 'Bij deze oudere waarneming is niet vastgelegd hoe de soort is herkend.' };
+}
+/** Statuslabel (compatibele naam; zelfde tekst als verificationStatus). */
+export function sourceLabel(sighting) {
+  return verificationStatus(sighting).label;
+}
+/** Kort label; null bij gewone eigen herkenning of niet vastgelegd (geen extra label op een kaartje). */
 export function sourceBadge(sighting) {
-  const src=sighting?.identificationSource;
-  if(src==='merlin')return sighting?.merlinVerification==='checked'?'Merlin · zelf gecontroleerd':'Merlin · suggestie';
-  if(src==='birdnet')return sighting?.birdnetVerification==='checked'?'Zelf gecontroleerd':'BirdNET · suggestie';
-  if(src==='self')return 'Eigen herkenning';
-  return null;
+  const st = verificationStatus(sighting);
+  return st.key === 'unrecorded' ? null : st.label;
 }
 /** Een suggestie (Merlin of BirdNET) die de gebruiker nog niet zelf heeft gecontroleerd. */
 export function uncheckedSuggestion(sighting) {

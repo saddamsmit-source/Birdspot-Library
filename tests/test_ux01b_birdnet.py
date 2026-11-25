@@ -10,7 +10,7 @@ N4  geen suggestie (alleen zelf gekozen) → eigen herkenning, Zeker, geen sound
 N5  Merlin: suggestie en zelfcontrole; Merlin heeft voorrang op BirdNET bij dezelfde soort; BirdNET-controle verborgen
 N6  opslaan/heropenen/bewerken: formulier toont bron en controle; controle aan → zeker; naar eigen herkenning →
     birdnetVerification weg, soundSuggestion blijft; suggestie + Zeker wordt geweigerd
-N7  oude records (bron self + soundSuggestion): niet omgezet, detail legt het eerlijk uit, telregel ongewijzigd
+N7  oude records (bron self + soundSuggestion): niet omgezet, detail 'Controle onbekend' met uitleg; telt sinds UX-03B niet mee
 N8  export/import ZIP: bron, controle, zekerheid en suggestiedata identiek in een nieuw profiel
 N9  offline: BirdNET-suggestie opslaan werkt zonder netwerk met dezelfde status
 N10 tegenstrijdige combinaties (birdnet+zeker+niet gecontroleerd; birdnet+alleen gezien): zichtbaar gemeld,
@@ -89,7 +89,7 @@ def run(browser, url, tmp):
     check('N2', 'BirdNET met eigen controle: birdnet/checked/Zeker, detail zegt geen wetenschappelijke verificatie, telt mee',
           keyset(rood) == {'identificationSource': 'birdnet', 'birdnetVerification': 'checked', 'merlinVerification': None,
                            'certainty': 'certain', 'observationMethod': 'heard'}
-          and 'Zelf gecontroleerd' in text_r and 'geen onafhankelijke wetenschappelijke verificatie' in text_r
+          and 'BirdNET · zelf gecontroleerd' in text_r and 'geen onafhankelijke wetenschappelijke verificatie' in text_r
           and counts.get('Roodborst|' + rood['id'][-5:]) is True, keyset(rood))
     check('N3', 'meerdere kandidaten: eigen status per soort',
           merel.get('birdnetVerification') == 'suggested' and rood.get('birdnetVerification') == 'checked' and len(r) == 3)
@@ -197,12 +197,12 @@ def run(browser, url, tmp):
     p.locator('#addSightingSheet').wait_for(state='detached', timeout=8000)
     stored_after = {x['id']: x for x in rows(p)}
     unchanged = all(json.dumps(stored_after[i], sort_keys=True) == json.dumps(stored_before[i], sort_keys=True) for i in stored_before)
-    check('N7', 'oud record (self + BirdNET-suggestie): niet omgezet, eerlijke uitleg in detail en formulier, telt zoals voorheen',
+    check('N7', 'oud record (self + BirdNET-suggestie): niet omgezet, Controle onbekend met uitleg in detail en formulier, telt niet mee (UX-03B)',
           unchanged and stored_after['legacy-1']['identificationSource'] == 'self' and 'oudere waarneming' in t_legacy
-          and 'Eigen herkenning' in t_legacy and legacy_radio and 'BirdNET-suggestie bewaard' in legacy_form
-          and counts.get('Merel|acy-1') is True and not errors, f"tellen={counts}")
+          and 'Controle onbekend' in t_legacy and legacy_radio and 'BirdNET-suggestie bewaard' in legacy_form
+          and counts.get('Merel|acy-1') is False and not errors, f"tellen={counts}")
     check('N10', 'tegenstrijdig: suggestie+Zeker gemeld en niet geteld; BirdNET bij alleen gezien niet opslaanbaar; niets stil gewijzigd',
-          'niet zelf gecontroleerd' in t_conf and counts.get('Merel|ict-1') is False and conflict_refused and unchanged,
+          'eigen controle is niet vastgelegd' in t_conf and 'telt daarom niet mee' in t_conf and counts.get('Merel|ict-1') is False and conflict_refused and unchanged,
           f"tellen={counts}")
     ctx.close()
 

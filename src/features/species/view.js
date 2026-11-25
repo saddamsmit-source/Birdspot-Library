@@ -13,6 +13,7 @@ import { getSightings, getSightingsSnapshot }                 from '../../data/s
 import { loadPlaces }                   from '../../data/places.js';
 import { getPhotoUrl, revokePhotoUrl }  from '../../utils/photoUrl.js';
 import { assetUrl } from '../../utils/assetUrl.js';
+import { appIcon } from '../../utils/icons.js';
 import { getCollectionIds, toggleCollectionItem } from '../../storage/collections.js';
 
 import { GUIDE_PHOTOS } from './guidePhotos.js';
@@ -234,6 +235,7 @@ export function renderSpecies(el, { speciesId } = {}) {
         <button id="speciesOnlyFavorites" type="button" aria-pressed="${_onlyFavorites}" class="${_onlyFavorites ? "is-selected" : ""}">★ Alleen mijn favorieten</button>
       </div>
       <div class="signature-species-hero-actions">
+        <button id="speciesOpenSightings" type="button">${appIcon('observations')} Mijn waarnemingen</button>
         <button id="speciesOpenMedia" type="button">Mijn fotocollectie <span aria-hidden="true">↗</span></button>
         <span id="speciesFavoriteCount">★ ${getCollectionIds("species").size} favorieten</span>
       </div>
@@ -250,7 +252,7 @@ export function renderSpecies(el, { speciesId } = {}) {
           if (!s) return '';
           return `<button type="button" class="species-recent-chip" data-id="${s.id}">
             <span class="species-recent-chip__thumb" id="rthumb-${s.id}" aria-hidden="true">
-              <span>${s.icon}</span>
+              <span class="bird-placeholder">${appIcon('bird')}</span>
             </span>
             <span class="species-recent-chip__name">${escHtml(s.nameNL)}</span>
           </button>`;
@@ -393,7 +395,7 @@ function speciesRow(s, seenIds, favorites = getCollectionIds("species")) {
   return `
     <div class="species-row${seen ? ' seen' : ''}" data-id="${s.id}" role="listitem">
       <div class="species-row__thumb" aria-hidden="true">
-        <span>${s.icon}</span>
+        <span class="bird-placeholder">${appIcon('bird')}</span>
       </div>
       <div class="species-row__body">
         <button class="species-row__name" type="button">${escHtml(s.nameNL)}</button>
@@ -438,6 +440,9 @@ function bindEvents(el, ctx = _speciesCtx) {
     }
   }
 
+  // UX-03A: persoonlijke waarnemingen direct vanuit de gids (bestaande route, met zoeken en filters)
+  el.querySelector('#speciesOpenSightings')?.addEventListener('click', () =>
+    import('../../app.js').then(({ navigate }) => navigate('sightings')));
   el.querySelector('#speciesOpenMedia')?.addEventListener('click', () => {
     import('../../app.js').then(({navigate}) => navigate('media'));
   });
@@ -589,7 +594,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
             ' data-guide-image="' + escHtml(assetUrl(photo.image)) + '" data-alt="' + escHtml(photo.alt || s.nameNL) + '"' +
             ' data-photo-label="' + escHtml(guidePhotoRole(photo) || 'Hoofdfoto ' + (i + 2)) + '">' + photoInfoMarkup(photo) + '</div>').join('')
         : '')
-    : '<span aria-hidden="true">' + escHtml(s.icon) + '</span>';
+    : '<span class="bird-placeholder" aria-hidden="true">' + appIcon('bird') + '</span>';
 
   const sheet = document.createElement('div');
   sheet.className = 'sheet-overlay signature-species-detail-overlay';
@@ -626,6 +631,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
         '<div class="sd-panel" id="sdPanel-status" role="tabpanel" aria-labelledby="sdTab-status" hidden>' + statusPanel(s) + '</div>' +
         '<div class="sd-panel" id="sdPanel-waar" role="tabpanel" aria-labelledby="sdTab-waar" hidden>' + wherePanel(s) + '</div>' +
         '<div class="sd-panel" id="sdPanel-mijn" role="tabpanel" aria-labelledby="sdTab-mijn" hidden>' +
+          '<p class="sd-mine-note">Je eigen waarnemingen. Hun herkenningsstatus staat los van de gidsinformatie over deze soort.</p>' +
           '<div id="sdMineStats"></div>' +
           '<div id="speciesDetailSightings" class="detail-sightings-list">' +
             '<div class="detail-photos-loading"><span class="spinner" aria-hidden="true"></span></div></div>' +

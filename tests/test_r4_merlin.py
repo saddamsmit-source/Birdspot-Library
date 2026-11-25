@@ -232,7 +232,7 @@ def run(browser, url, tmp):
           and s.get('speciesName') == 'Merel' and s.get('observationMethod') == 'heard' and s.get('identificationSource') == 'merlin'
           and s.get('merlinVerification') == 'suggested' and s.get('certainty') == 'possible'
           and s.get('date') == '2026-11-15' and s.get('time') == '14:42' and s.get('lat') == 51.9244 and s.get('lon') == 4.4777
-          and not s.get('audioIds') and 'Merlin Sound ID · suggestie' in text and 'Gehoord' in text
+          and not s.get('audioIds') and 'Merlin · suggestie' in text and 'Gehoord' in text
           and restored == '' and places == 1 and not errors,
           f"keuzes={len(choices)} deel={call and {k: call[k] for k in ('keys', 'name', 'type', 'size')}} concept_bij_delen={call and call['draft']} "
           f"terug='{back[:40]}' vergelijking='{compare}' opgeslagen={ {k: s.get(k) for k in ('observationMethod', 'identificationSource', 'merlinVerification', 'certainty', 'date', 'time')} } "
@@ -373,7 +373,7 @@ def run(browser, url, tmp):
     after = rows(p)
     ctx.close()
     check('M7', 'offline: opnemen, delen, opslaan en offline heropenen in de app; daarna bewaard na herladen',
-          len(r) == 1 and r[0]['identificationSource'] == 'merlin' and 'Merlin Sound ID · suggestie' in text and len(after) == 1 and not errors,
+          len(r) == 1 and r[0]['identificationSource'] == 'merlin' and 'Merlin · suggestie' in text and len(after) == 1 and not errors,
           f"rijen={len(r)} detail_offline={'Merlin' in text} na_herladen={len(after)} fouten={errors[:1]}")
 
     # ── M8: microfoon en GPS geweigerd ──────────────────────────────────────

@@ -110,13 +110,15 @@ def main():
         toggle(page, 'certain')
         unknown = toggle(page, 'unknown')
         toggle(page, 'unknown')
+        unrecorded = toggle(page, 'unrecorded')
+        toggle(page, 'unrecorded')
         own = toggle(page, 'self')
         toggle(page, 'self')
         legacy_card = page.locator('.sight-card[data-id="s06"]').inner_text()
         contra_card = page.locator('.sight-card[data-id="s08"]').inner_text()
         check('Z3', "verificatie: 'Zeker' zonder ongecontroleerde/oude suggesties; oude records onder 'Niet vastgelegd'",
-              certain == ['s01', 's05', 's07', 's09'] and unknown == ['s06', 's07'] and own == ['s01', 's02', 's09']
-              and 'controle onbekend' in legacy_card and 'Zeker' not in legacy_card
+              certain == ['s01', 's05', 's07', 's09'] and unknown == ['s06'] and unrecorded == ['s07'] and own == ['s01', 's02', 's09']
+              and 'Controle onbekend' in legacy_card and 'Zeker' not in legacy_card
               and 'BirdNET · suggestie' in contra_card and 'Zeker' not in contra_card, [certain, unknown, own])
 
         # ── Z4 media ─────────────────────────────────────────────────

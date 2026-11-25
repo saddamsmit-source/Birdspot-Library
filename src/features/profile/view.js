@@ -57,6 +57,12 @@ export async function renderProfile(el) {
         </div>
       </div>
 
+      <!-- UX-03A: back-up, herstel en instellingen direct bereikbaar (geen zoeken door het hele profiel) -->
+      <nav class="profile-jump" aria-label="Snel naar">
+        <button type="button" data-profile-jump="backupHeading">Back-up &amp; herstel</button>
+        <button type="button" data-profile-jump="settingsHeading">Instellingen</button>
+      </nav>
+
       ${renderOverview(sightings)}
 
       ${renderLists(lists)}
@@ -225,7 +231,7 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   el.querySelector('#btnCsv')?.addEventListener('click', () => {
     try {
       const r = downloadCsv(sightings, { speciesById: SPECIES_BY_ID, places });
-      showToast(`CSV opgeslagen: ${r.count} ${r.count === 1 ? 'waarneming' : 'waarnemingen'}`);
+      showToast(`CSV opgeslagen: ${r.count} ${r.count === 1 ? 'waarneming' : 'waarnemingen'}`, 'success');
     } catch (e) {
       showToast(`CSV maken mislukt: ${e.message}`, 'error');
     }
@@ -235,7 +241,7 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   el.querySelectorAll('[data-layer]').forEach(btn => btn.addEventListener('click', () => {
     saveLayer(btn.dataset.layer);
     el.querySelectorAll('[data-layer]').forEach(b => b.setAttribute('aria-checked', String(b === btn)));
-    showToast(`Kaart opent voortaan met ${btn.textContent.toLowerCase()}`);
+    showToast(`Kaart opent voortaan met ${btn.textContent.toLowerCase()}`, 'success');
   }));
   el.querySelectorAll('[data-reminder]').forEach(btn => btn.addEventListener('click', () => {
     const days = Number(btn.dataset.reminder);
@@ -247,11 +253,19 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   el.querySelectorAll('[data-place-radius]').forEach(btn => btn.addEventListener('click', () => {
     saveSetting('placeRadiusM', Number(btn.dataset.placeRadius));
     el.querySelectorAll('[data-place-radius]').forEach(b => b.setAttribute('aria-checked', String(b === btn)));
-    showToast(`Bekende vogelspot: binnen ${btn.dataset.placeRadius} m`);
+    showToast(`Bekende vogelspot: binnen ${btn.dataset.placeRadius} m`, 'success');
   }));
 
   el.querySelector('[data-insights]')?.addEventListener('click', () =>
     import('../../app.js').then(({ navigate }) => navigate('insights')));
+
+  el.querySelectorAll('[data-profile-jump]').forEach(btn => btn.addEventListener('click', () => {
+    const target = el.querySelector('#' + btn.dataset.profileJump);
+    if (!target) return;
+    target.tabIndex = -1;
+    target.scrollIntoView({ block: 'start' });
+    target.focus({ preventScroll: true });
+  }));
 
   // UX-02C: duidelijke ingang naar Mijn waarnemingen
   el.querySelector('#profileOpenSightings')?.addEventListener('click', () =>
@@ -288,7 +302,7 @@ async function handleExport(el) {
   try {
     const result = await exportBackup();
     updateStatus(el, getBackupStatus(), getBackupStatus()?.sightingCount ?? 0);
-    showToast(`Back-up opgeslagen: ${result.sightingCount} waarnemingen, ${result.photoCount} foto's`);
+    showToast(`Back-up opgeslagen: ${result.sightingCount} waarnemingen, ${result.photoCount} foto's`, 'success');
   } catch (e) {
     showToast(`Back-up mislukt: ${e.message}`, 'error');
   } finally {
@@ -331,7 +345,7 @@ async function handleImport(el, file) {
     const restoreCard = el.querySelector('#restoreCard');
     restoreCard?.classList.toggle('profile-card--hidden', !hasSafetyCopy());
 
-    showToast(`Hersteld: ${result.merged} waarnemingen in je bibliotheek`);
+    showToast(`Hersteld: ${result.merged} waarnemingen in je bibliotheek`, 'success');
 
     // Herlaad data na korte vertraging zodat toast zichtbaar is
     setTimeout(() => {
@@ -358,7 +372,7 @@ async function handleRestore(el) {
 
   try {
     await restoreFromSafetyCopy();
-    showToast('Teruggezet naar vorige toestand');
+    showToast('Teruggezet naar vorige toestand', 'success');
 
     // Terugzetten-knop verbergen
     const restoreCard = el.querySelector('#restoreCard');
@@ -439,6 +453,9 @@ export function overviewStats(sightings) {
   return { sightings: sightings.length, species: species.size, places: places.size, photos };
 }
 
+// UX-03B: één uitleg voor de telregel, met dezelfde woorden als de statuslabels.
+const SKIP_REASON = 'zekerheid ‘mogelijk’, een suggestie van BirdNET of Merlin zonder eigen controle, of ‘controle onbekend’';
+
 function renderOverview(sightings) {
   const st = overviewStats(sightings);
   if (!st.sightings) {
@@ -484,7 +501,7 @@ function renderLists(l) {
     return l.skipped
       ? `<section class="profile-section" aria-labelledby="listsHeading">
           <h2 class="profile-section__title" id="listsHeading">Mijn lijsten</h2>
-          <p class="profile-empty">${l.skipped} ${l.skipped === 1 ? 'waarneming is' : 'waarnemingen zijn'} nog onzeker (mogelijk of een niet-gecontroleerde Merlin-suggestie) en ${l.skipped === 1 ? 'telt' : 'tellen'} niet mee.</p>
+          <p class="profile-empty">${l.skipped} onzekere ${l.skipped === 1 ? 'waarneming telt' : 'waarnemingen tellen'} nog niet mee: ${SKIP_REASON}.</p>
         </section>` : '';
   }
   const tile = (n, label) => `<div class="profile-stat"><strong>${n}</strong><span>${label}</span></div>`;
@@ -512,7 +529,7 @@ function renderLists(l) {
       <summary>Alle soorten <span>(${l.list.length})</span></summary>
       <ul class="profile-list"></ul>
     </details>
-    ${l.skipped ? `<p class="profile-note">${l.skipped} onzekere ${l.skipped === 1 ? 'waarneming telt' : 'waarnemingen tellen'} niet mee (mogelijk, of Merlin-suggestie zonder eigen controle).</p>` : ''}
+    ${l.skipped ? `<p class="profile-note" id="profileSkippedNote">${l.skipped} onzekere ${l.skipped === 1 ? 'waarneming telt' : 'waarnemingen tellen'} niet mee: ${SKIP_REASON}. De waarnemingen zelf blijven bewaard.</p>` : ''}
     <button type="button" class="profile-link" data-insights>Meer per jaar in Mijn Inzichten ↗</button>
   </section>`;
 }

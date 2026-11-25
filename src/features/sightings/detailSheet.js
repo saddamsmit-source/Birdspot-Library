@@ -10,7 +10,7 @@
 
 import { deleteSighting }                   from '../../data/sightings.js';
 import { getPhotosBySighting, getPhoto, deletePhoto, isSightingAudio } from '../../data/db.js';
-import { methodLabel, sourceLabel, sourceBadge, legacyBirdnetSuggestion, uncheckedSuggestion, SELF_CHECK_NOTE } from './evidence.js';
+import { methodLabel, verificationStatus } from './evidence.js';
 import { escHtml }                          from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { showToast }                        from '../../app.js';
@@ -119,7 +119,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
     try {
       await deleteSighting(sighting.id);
     } catch (_) {
-      showToast('Verwijderen mislukt. De waarneming en foto’s zijn behouden.');
+      showToast('Verwijderen mislukt. De waarneming en foto’s zijn behouden.', 'error');
       return;
     }
     // Pas na succesvolle recordopslag verwijderbare media opruimen (foto's, video's en eigen opnamen).
@@ -129,7 +129,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
     // Opnamen alleen echt weg als de veiligheidskopie ze niet meer nodig heeft (Terugzetten).
     await releaseSightingAudio(audioIds).catch(() => {});
     close();
-    showToast('Waarneming verwijderd');
+    showToast('Waarneming verwijderd', 'success');
     onDeleted?.(sighting);
   });
 
@@ -171,26 +171,17 @@ function _renderDetailBody(s, photos, audio = []) {
         <div class="detail-field__label">Waargenomen via</div>
         <div class="detail-field__value"><span class="sighting-evidence-detail">${escHtml(methodLabel(s))}</span></div>
       </div>
-      ${s.identificationSource === 'merlin' ? `
-        <div class="detail-field"><div class="detail-field__label">Herkenning</div>
-          <div class="detail-field__value"><span class="sighting-merlin-detail">${escHtml(sourceLabel(s))}</span></div>
-          ${s.merlinVerification !== 'checked' ? '<p class="detail-field__hint">Dit is een Merlin-suggestie; eigen controle is nog niet vastgelegd.</p>' : `<p class="detail-field__hint">${escHtml(SELF_CHECK_NOTE)}</p>`}
-        </div>` : ''}
-      ${s.identificationSource === 'birdnet' ? `
-        <div class="detail-field"><div class="detail-field__label">Herkenning</div>
-          <div class="detail-field__value"><span class="sighting-merlin-detail sighting-birdnet-detail">BirdNET · suggestie</span>
-            ${s.birdnetVerification === 'checked' ? `<span class="sighting-merlin-detail sighting-birdnet-detail">${escHtml(sourceBadge(s))}</span>` : ''}</div>
-          <p class="detail-field__hint">${s.birdnetVerification === 'checked'
-            ? escHtml('Zelf gecontroleerd na de BirdNET-suggestie. ' + SELF_CHECK_NOTE)
-            : 'BirdNET stelde deze soort voor; eigen controle is nog niet vastgelegd.'}</p>
-        </div>` : ''}
-      ${uncheckedSuggestion(s) && s.certainty === 'certain' ? `
-        <p class="detail-field__hint sighting-evidence-conflict" role="note">Zekerheid staat op ‘zeker’, maar de suggestie is niet zelf gecontroleerd. Deze waarneming telt daarom niet mee in je lijsten.</p>` : ''}
-      ${legacyBirdnetSuggestion(s) && s.identificationSource !== 'merlin' ? `
-        <div class="detail-field"><div class="detail-field__label">Herkenning</div>
-          <div class="detail-field__value"><span class="sighting-evidence-detail">${escHtml(sourceLabel(s))}</span></div>
-          <p class="detail-field__hint sighting-birdnet-legacy">Bij deze oudere waarneming is ook een BirdNET-suggestie bewaard. Of je die zelf controleerde, is toen niet vastgelegd.</p>
-        </div>` : ''}
+      ${(() => {
+        // UX-03B: één statusbron; dezelfde tekst als lijst, kaart, soortkaart en filter.
+        const st = verificationStatus(s);
+        return `
+        <div class="detail-field detail-field--status" data-status="${st.key}"><div class="detail-field__label">Herkenning</div>
+          <div class="detail-field__value"><span class="detail-status detail-status--${st.tone}">${appIcon('shield')} ${escHtml(st.label)}</span></div>
+          ${st.hint ? `<p class="detail-field__hint">${escHtml(st.hint)}</p>` : ''}
+        </div>
+        ${st.tone === 'warn' && s.certainty === 'certain' ? `
+        <p class="detail-field__hint sighting-evidence-conflict" role="note">Zekerheid staat op ‘zeker’, maar eigen controle is niet vastgelegd. Deze waarneming telt daarom niet mee in je lijsten.</p>` : ''}`;
+      })()}
 
       <!-- GPS-pin (de plek zelf staat in de samenvatting bovenaan) -->
       ${s.lat != null && s.lon != null ? `
@@ -278,14 +269,12 @@ function _renderSummary(s, dateStr, photos, audio) {
     gps: `Alleen GPS-coördinaten <span class="detail-summary__hint">${escHtml(where.name)}</span>`,
     none: 'Geen plek vastgelegd',
   }[where.kind];
-  const unchecked = uncheckedSuggestion(s);
-  const legacy = s.identificationSource !== 'birdnet' && s.identificationSource !== 'merlin' && legacyBirdnetSuggestion(s);
-  const sure = unchecked
-    ? `<span class="detail-sure detail-sure--unchecked">${escHtml(sourceBadge(s))} · niet zelf gecontroleerd</span>`
-    : legacy
-      ? '<span class="detail-sure detail-sure--unchecked">Oude BirdNET-suggestie · controle niet vastgelegd</span>'
-      : `<span class="detail-sure detail-sure--${escHtml(s.certainty || 'certain')}">${escHtml(CERTAINTY_NL[s.certainty] || 'Zeker')}</span>
-         ${s.identificationSource === 'birdnet' || s.identificationSource === 'merlin' ? `<span class="detail-summary__hint">${escHtml(sourceLabel(s))}</span>` : ''}`;
+  // UX-03B: een suggestie zonder eigen controle (of met onbekende controle) is nooit 'Zeker'.
+  const st = verificationStatus(s);
+  const sure = st.tone === 'warn'
+    ? `<span class="detail-sure detail-sure--unchecked">${escHtml(st.label)}</span>`   // UX-03C: uitleg alleen bij Herkenning, niet dubbel
+    : `<span class="detail-sure detail-sure--${escHtml(s.certainty || 'certain')}">${escHtml(CERTAINTY_NL[s.certainty] || 'Zeker')}</span>
+       ${st.key !== 'self' ? `<span class="detail-summary__hint">${escHtml(st.label)}</span>` : ''}`;
   const evidence = [
     photos.length ? `${photos.length} ${photos.length === 1 ? 'foto of video' : 'foto’s of video’s'}` : '',
     audio.length ? `${audio.length} ${audio.length === 1 ? 'geluidsopname' : 'geluidsopnamen'}` : '',
@@ -319,7 +308,7 @@ function _bindPlaceRename(ov, sighting, onPlaceRenamed) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
     const name = input.value.trim();
-    if (!name) { showToast('Vul een naam in voor deze plek'); input.focus(); return; }
+    if (!name) { showToast('Vul een naam in voor deze plek', 'warn'); input.focus(); return; }
     const save = form.querySelector('[type="submit"]');
     save.disabled = true;
     try {
@@ -329,11 +318,11 @@ function _bindPlaceRename(ov, sighting, onPlaceRenamed) {
       const row = ov.querySelector('.detail-summary__row--where dd');
       row.innerHTML = `${escHtml(place.name)}`;
       row.closest('.detail-summary__row').dataset.placeKind = 'named';
-      showToast(`Plek heet nu ${place.name}`);
+      showToast(`Plek heet nu ${place.name}`, 'success');
       onPlaceRenamed?.(place, sighting);
     } catch (_) {
       save.disabled = false;
-      showToast('Naam opslaan mislukt; er is niets gewijzigd');
+      showToast('Naam opslaan mislukt; er is niets gewijzigd', 'error');
     }
   });
 }
