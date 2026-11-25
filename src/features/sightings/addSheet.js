@@ -32,7 +32,7 @@
 import { appIcon, observationIcon } from '../../utils/icons.js';
 import { SPECIES } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
-import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
+import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS, SELF_CHECK_NOTE } from './evidence.js';
 import { addSighting, updateSighting, getSightingsSnapshot } from '../../data/sightings.js';
 import { draftKey, draftFields, sameFields, loadDraft, saveDraft, deleteDraft, draftIsStale } from './sightingDraft.js';
 import { choiceDialog } from './choiceDialog.js';
@@ -69,6 +69,8 @@ function freshState(override = {}) {
     observationMethod:'seen',
     identificationSource:'self',
     merlinVerification:null,
+    birdnetVerification:null,   // UX-01B: alleen bij bron 'birdnet' ('suggested' | 'checked')
+    hasBirdnetSuggestion:false, // UX-01B: record bevat een BirdNET-suggestie (soundSuggestion)
     locationName: '',
     lat:          null,
     lon:          null,
@@ -138,6 +140,8 @@ export function openEditSheet(sighting, { onSaved } = {}) {
     observationMethod: sighting.observationMethod || null,
     identificationSource: sighting.identificationSource || null,
     merlinVerification: sighting.merlinVerification || null,
+    birdnetVerification: sighting.birdnetVerification || null,
+    hasBirdnetSuggestion: Boolean(sighting.soundSuggestion) || sighting.identificationSource === 'birdnet',
     locationName:     sighting.locationName || '',
     lat:              sighting.lat          ?? null,
     lon:              sighting.lon          ?? null,
@@ -497,7 +501,22 @@ function _renderFormBody() {
         <label class="sighting-source-choice${_state.identificationSource === 'merlin' ? ' is-selected' : ''}">
           <input type="radio" name="identificationSource" value="merlin" ${_state.identificationSource === 'merlin' ? 'checked' : ''}>
           Merlin Sound ID</label>
+        ${_state.hasBirdnetSuggestion ? `
+        <label class="sighting-source-choice${_state.identificationSource === 'birdnet' ? ' is-selected' : ''}">
+          <input type="radio" name="identificationSource" value="birdnet" ${_state.identificationSource === 'birdnet' ? 'checked' : ''}>
+          BirdNET-suggestie</label>` : ''}
       </div>
+      ${_state.hasBirdnetSuggestion && _state.identificationSource === 'self' ? `
+        <p class="form-hint sighting-birdnet-legacy">Bij deze waarneming is een BirdNET-suggestie bewaard. Kies BirdNET-suggestie als de soort daarvan kwam.</p>` : ''}
+      ${_state.identificationSource === 'birdnet' ? `
+        <div class="sighting-merlin-panel sighting-birdnet-panel">
+          <strong>${appIcon('soundwave')} BirdNET-suggestie</strong>
+          <p>BirdNET stelt een soort voor; dat is geen bevestiging. Vink alleen aan als je de soort zelf hebt gecontroleerd. ${escHtml(SELF_CHECK_NOTE)}</p>
+          <label class="sighting-merlin-reviewed">
+            <input id="sightBirdnetChecked" type="checkbox" ${_state.birdnetVerification === 'checked' ? 'checked' : ''}>
+            Zelf gecontroleerd
+          </label>
+        </div>` : ''}
       ${_state.identificationSource === 'merlin' ? `
         <div class="sighting-merlin-panel">
           <strong>${appIcon('soundwave')} Merlin Sound ID</strong>
@@ -781,7 +800,7 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
   if (!el) return;
 
   const details = el.querySelector('#sightingMore');
-  details.open = ctx.detailsOpen || _state.identificationSource === 'merlin';
+  details.open = ctx.detailsOpen || _state.identificationSource === 'merlin' || _state.identificationSource === 'birdnet';
   details.addEventListener('toggle', () => { if (details.isConnected) ctx.detailsOpen = details.open; });
   const mediaStatus = el.querySelector('#sightingMediaStatus');
   mediaStatus.textContent = ctx.mediaMessage || '';
@@ -807,6 +826,9 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     if(_state.identificationSource==='merlin'&&e.target.value==='seen'){
       _state.identificationSource='self';_state.merlinVerification=null;
     }
+    if(_state.identificationSource==='birdnet'&&e.target.value==='seen'){
+      _state.identificationSource='self';_state.birdnetVerification=null;
+    }
     refresh();
   });
   el.querySelector('#sightSourceGroup')?.addEventListener('change', e => {
@@ -817,10 +839,19 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
       _state.merlinVerification='suggested';
       if(_state.certainty==='certain')_state.certainty='possible';
     } else _state.merlinVerification=null;
+    // UX-01B: BirdNET als bron = suggestie, standaard 'mogelijk' tot de gebruiker zelf controleert.
+    if(e.target.value==='birdnet'){
+      if(_state.observationMethod==='seen'||!_state.observationMethod)_state.observationMethod='heard';
+      _state.birdnetVerification='suggested';
+      if(_state.certainty==='certain')_state.certainty='possible';
+    } else _state.birdnetVerification=null;
     refresh();
   });
   el.querySelector('#sightMerlinChecked')?.addEventListener('change',e => {
     _state.merlinVerification=e.target.checked?'checked':'suggested';
+  });
+  el.querySelector('#sightBirdnetChecked')?.addEventListener('change',e => {
+    _state.birdnetVerification=e.target.checked?'checked':'suggested';
   });
   // Datum
   el.querySelector('#sightDate')?.addEventListener('change', e => {
@@ -1113,6 +1144,9 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   }
   if(evidence.identificationSource==='merlin' && evidence.merlinVerification!=='checked' && _state.certainty==='certain') {
     showToast('Een Merlin-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.');return;
+  }
+  if(evidence.identificationSource==='birdnet' && evidence.birdnetVerification!=='checked' && _state.certainty==='certain') {
+    showToast('Een BirdNET-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.');return;
   }
 
   // UX-01A (D): een hervat bewerkconcept mag een intussen gewijzigde waarneming nooit overschrijven.

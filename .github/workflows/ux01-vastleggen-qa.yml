@@ -17,10 +17,16 @@ jobs:
       - run: |
           python -m pip install -r tests/requirements.txt
           python -m playwright install --with-deps chromium
+      - name: UX-01B regressie BirdNET-bron (faalt op b0acce0)
+        run: node tests/test_ux01b_birdnet.mjs
       - name: UX-01A concept en sluitroutes (D1–D10)
         run: |
           set -o pipefail
           python tests/test_ux01a_concept.py 2>&1 | tee ux01a.log
+      - name: UX-01B BirdNET-suggestie en eigen controle (N1–N10)
+        run: |
+          set -o pipefail
+          python tests/test_ux01b_birdnet.py 2>&1 | tee ux01b.log
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: ux01-evidence, path: 'ux01*.log'}

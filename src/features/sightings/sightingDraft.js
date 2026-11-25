@@ -14,7 +14,7 @@ export const DRAFT_STORAGE_KEY = 'birdspot-sighting-drafts';
 
 export const DRAFT_FIELDS = Object.freeze([
   'speciesId', 'speciesName', 'date', 'time', 'count', 'certainty',
-  'observationMethod', 'identificationSource', 'merlinVerification', 'birdnetVerification',
+  'observationMethod', 'identificationSource', 'merlinVerification', 'birdnetVerification', 'hasBirdnetSuggestion',
   'locationName', 'lat', 'lon', 'placeId', 'pinAccuracyM', 'pinAccuracyExactM', 'autoLocationName',
   'habitat', 'behavior', 'weather', 'notes',
   'existingPhotoIds', 'deletedPhotoIds', 'existingAudioIds', 'deletedAudioIds',

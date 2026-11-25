@@ -35,7 +35,9 @@ export function sightingsToCsv(sightings, { speciesById = new Map(), places = []
     const sp = speciesById.get(s.speciesId);
     const method = s.identificationSource === 'merlin'
       ? `${METHOD[s.observationMethod] || 'gehoord'} (Merlin${s.merlinVerification === 'checked' ? ', zelf gecontroleerd' : ', suggestie'})`
-      : METHOD[s.observationMethod] || '';
+      : s.identificationSource === 'birdnet'
+        ? `${METHOD[s.observationMethod] || 'gehoord'} (BirdNET${s.birdnetVerification === 'checked' ? ', zelf gecontroleerd' : ', suggestie'})`
+        : METHOD[s.observationMethod] || '';
     lines.push([
       s.date || '', s.time || '', sp?.nameNL || s.speciesName || '', sp?.nameSci || '',
       Number.isFinite(s.count) ? s.count : 1, CERTAINTY[s.certainty] || '', method,

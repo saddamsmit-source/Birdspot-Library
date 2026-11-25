@@ -210,16 +210,22 @@ export function mountSoundSession(root, onSaved) {
     stopMonitoring();
   }
 
-  function addCandidate(id, match = null, checked = !match, { merlin = false, seen = false, verified = false } = {}) {
+  function addCandidate(id, match = null, checked = !match, { merlin = false, seen = false, verified = false, birdnetChecked = false } = {}) {
     if (candidates.has(id) || !speciesById.has(id)) return false;
-    const entry = { checked, match, merlin: Boolean(merlin), seen: Boolean(seen), verified: Boolean(merlin && verified) };
+    // UX-01B: birdnetChecked = gebruiker heeft de BirdNET-suggestie zelf gecontroleerd (standaard niet).
+    const entry = { checked, match, merlin: Boolean(merlin), seen: Boolean(seen), verified: Boolean(merlin && verified),
+      birdnetChecked: Boolean(match && birdnetChecked) };
     candidates.set(id, entry);
     const name = escHtml(speciesById.get(id).nameNL);
     const suggestion = match ? `<small>BirdNET-suggestie · ${elapsedLabel(match.second)}</small>` : '';
+    const birdnetCheck = match ? `<label class="sound-extra__birdnet"><input type="checkbox" data-sound-birdnet-verified="${id}"
+        aria-label="${name}: BirdNET-suggestie zelf gecontroleerd" ${entry.birdnetChecked ? 'checked' : ''}> Zelf gecontroleerd
+        <small>eigen controle, geen wetenschappelijke verificatie</small></label>` : '';
     selection.insertAdjacentHTML('beforeend', `<li><label class="sound-pick"><input type="checkbox" value="${id}" ${checked ? 'checked' : ''}>
       <span>${name}${suggestion}</span></label>
       <div class="sound-extra">
         <label><input type="checkbox" data-sound-seen="${id}" aria-label="${name}: ook gezien" ${seen ? 'checked' : ''}> Ook gezien</label>
+        ${birdnetCheck}
         <label class="sound-extra__merlin"><input type="checkbox" data-sound-merlin="${id}" aria-label="${name}: Merlin gaf deze soort" ${merlin ? 'checked' : ''}> Merlin gaf deze soort</label>
         <label class="sound-extra__merlin sound-extra__merlin-verified"><input type="checkbox" data-sound-merlin-verified="${id}" aria-label="${name}: Merlin-suggestie zelf gecontroleerd" ${entry.verified ? 'checked' : ''}> Zelf gecontroleerd</label>
       </div></li>`);
@@ -551,6 +557,7 @@ export function mountSoundSession(root, onSaved) {
     const target = event.target;
     if (target.dataset.soundSeen) candidates.get(target.dataset.soundSeen).seen = target.checked;
     else if (target.dataset.soundMerlinVerified) candidates.get(target.dataset.soundMerlinVerified).verified = target.checked;
+    else if (target.dataset.soundBirdnetVerified) candidates.get(target.dataset.soundBirdnetVerified).birdnetChecked = target.checked;
     else if (target.dataset.soundMerlin) {
       const entry = candidates.get(target.dataset.soundMerlin);
       entry.merlin = target.checked;
@@ -684,13 +691,18 @@ export function mountSoundSession(root, onSaved) {
         const entry = candidates.get(id);
         // Ronde 4: Merlin alleen als bron wanneer de gebruiker Merlin gebruikte én deze soort aanvinkte.
         const viaMerlin = merlinUsed && entry.merlin;
+        // UX-01B: een gekozen BirdNET-suggestie (zonder Merlin) is bron 'birdnet', standaard 'mogelijk';
+        // alleen een expliciete eigen controle maakt haar 'zeker'. Zelf toegevoegde soorten blijven eigen herkenning.
+        const viaBirdnet = !viaMerlin && Boolean(entry.match);
         const evidence = normalizeEvidence({
           observationMethod: entry.seen ? 'both' : 'heard',
-          identificationSource: viaMerlin ? 'merlin' : 'self',
+          identificationSource: viaMerlin ? 'merlin' : viaBirdnet ? 'birdnet' : 'self',
           merlinVerification: viaMerlin && entry.verified ? 'checked' : 'suggested',
+          birdnetVerification: viaBirdnet && entry.birdnetChecked ? 'checked' : 'suggested',
         });
+        const unchecked = (viaMerlin && !entry.verified) || (viaBirdnet && !entry.birdnetChecked);
         return {
-          ...shared, ...evidence, certainty: viaMerlin && !entry.verified ? 'possible' : 'certain',
+          ...shared, ...evidence, certainty: unchecked ? 'possible' : 'certain',
           id: `${sessionId}-${id}`, speciesId: id, speciesName: speciesById.get(id).nameNL,
           ...(entry.match ? { soundSuggestion: { model: 'BirdNET+ V3.0', ...entry.match } } : {}),
         };
