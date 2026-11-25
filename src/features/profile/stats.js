@@ -11,6 +11,8 @@ export function countsForList(s) {
   if (!s || !s.speciesId) return false;
   if (s.certainty === 'possible') return false;
   if (s.identificationSource === 'merlin' && s.merlinVerification !== 'checked') return false;
+  // UX-01B: zelfde regel voor een niet zelf gecontroleerde BirdNET-suggestie.
+  if (s.identificationSource === 'birdnet' && s.birdnetVerification !== 'checked') return false;
   return true;
 }
 

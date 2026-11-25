@@ -9,8 +9,10 @@ import { escHtml } from '../../utils/html.js';
 
 /**
  * @param {function(species): void} onSelect
+ * @param {{ recentIds?: string[] }} [options] UX-01C: recent gekozen soorten bovenaan (verborgen tijdens zoeken)
  */
-export function openSpeciesPicker(onSelect) {
+export function openSpeciesPicker(onSelect, { recentIds = [] } = {}) {
+  const recent = [...new Set(recentIds)].map(id => SPECIES.find(x => x.id === id)).filter(Boolean).slice(0, 6);
   const ov = document.createElement('div');
   ov.className = 'sheet-overlay';
   // Always above the sighting form and its sticky header in mobile stacking contexts.
@@ -35,6 +37,10 @@ export function openSpeciesPicker(onSelect) {
               placeholder="Zoek soort of wetenschappelijke naam…"
               autocomplete="off" inputmode="search">
           </div>
+          ${recent.length ? `<div id="spPickerRecent" class="sp-recent" role="group" aria-label="Recent gekozen soorten">
+            <span class="sp-recent__label">Recent</span>
+            ${recent.map(sp => `<button type="button" class="sp-recent__chip" data-recent-id="${sp.id}">${escHtml(sp.nameNL)}</button>`).join('')}
+          </div>` : ''}
           <div id="spPickerList" class="species-list"></div>
         </div>
       </div>
@@ -60,6 +66,14 @@ export function openSpeciesPicker(onSelect) {
 
   ov.querySelector('#spPickerSearch').addEventListener('input', e => {
     renderOpts(ov, e.target.value);
+    const recentBox = ov.querySelector('#spPickerRecent');
+    if (recentBox) recentBox.hidden = Boolean(e.target.value.trim());
+  });
+  ov.querySelector('#spPickerRecent')?.addEventListener('click', e => {
+    const sp = SPECIES.find(x => x.id === e.target.closest('[data-recent-id]')?.dataset.recentId);
+    if (!sp) return;
+    close();
+    onSelect(sp);
   });
 
   ov.querySelector('#spPickerList').addEventListener('click', e => {

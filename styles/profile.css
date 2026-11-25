@@ -278,6 +278,24 @@
   margin-top:      var(--space-8);
 }
 
+/* UX-01A: keuzedialoog met drie gelijkwaardige uitgangen, gestapeld voor 320 px en duim */
+.choice-dialog__actions {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-8);
+  margin-top:     var(--space-8);
+}
+.choice-dialog__actions > button {
+  width:      100%;
+  min-height: 44px;
+  justify-content: center;
+}
+.choice-dialog__note {
+  margin:      var(--space-8) 0 0;
+  font-size:   var(--fs-meta);
+  color:       var(--ink-2);
+}
+
 /* ── Toegankelijkheidshelper ────────────────────────────── */
 .visually-hidden {
   position:    absolute;

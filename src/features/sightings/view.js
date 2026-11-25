@@ -14,7 +14,7 @@ import { SPECIES }          from '../../data/species.js';
 import { getPhoto }         from '../../data/db.js';
 import { getPhotoUrl, revokePhotoUrl } from '../../utils/photoUrl.js';
 import { openDetailSheet }  from './detailSheet.js';
-import { methodLabel, sourceLabel } from './evidence.js';
+import { methodLabel, sourceLabel, sourceBadge } from './evidence.js';
 import { escHtml }          from '../../utils/html.js';
 
 // ── Entry point ────────────────────────────────────────────
@@ -95,6 +95,7 @@ function buildCard(s, thumbUrl) {
   const hasMedia = s.photoIds?.length > 0;
   const method = s.observationMethod ? methodLabel(s) : null;
   const merlin = s.identificationSource === 'merlin';
+  const birdnet = s.identificationSource === 'birdnet';
 
   const card = document.createElement('div');
   card.className = 'sight-card';
@@ -113,7 +114,8 @@ function buildCard(s, thumbUrl) {
           ? `<span class="sight-card__sep">·</span>${svgPin()} ${escHtml(s.locationName)}`
           : ''}
         ${method ? `<span class="sighting-observed-pill ${s.observationMethod === 'heard' ? 'is-heard' : ''}">${observationIcon(s.observationMethod)} ${escHtml(method)}</span>` : ''}
-        ${merlin ? `<span class="sighting-merlin-pill">${appIcon('soundwave')} Merlin${s.merlinVerification !== 'checked' ? ' · suggestie' : ''}</span>` : ''}
+        ${merlin ? `<span class="sighting-merlin-pill">${appIcon('soundwave')} ${escHtml(sourceBadge(s))}</span>` : ''}
+        ${birdnet ? `<span class="sighting-merlin-pill sighting-birdnet-pill">${appIcon('soundwave')} ${escHtml(s.birdnetVerification === 'checked' ? 'BirdNET · zelf gecontroleerd' : sourceBadge(s))}</span>` : ''}
         ${hasMedia
           ? `<span class="sight-card__sep">·</span>
              ${svgPhoto()}

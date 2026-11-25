@@ -1,0 +1,41 @@
+name: Birdspot UX-01 vastleggen QA
+on:
+  pull_request:
+    paths: ['.github/workflows/ux01-vastleggen-qa.yml', 'src/**', 'styles/**', 'sw.js', 'index.html', 'tests/test_ux01*.py', 'tests/test_ux01*.mjs']
+permissions:
+  contents: read
+jobs:
+  ux01:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: UX-01B regressie BirdNET-bron (faalt op b0acce0)
+        run: node tests/test_ux01b_birdnet.mjs
+      - name: UX-01A concept en sluitroutes (D1–D10)
+        run: |
+          set -o pipefail
+          python tests/test_ux01a_concept.py 2>&1 | tee ux01a.log
+      - name: UX-01B BirdNET-suggestie en eigen controle (N1–N10)
+        run: |
+          set -o pipefail
+          python tests/test_ux01b_birdnet.py 2>&1 | tee ux01b.log
+      - name: UX-01C vervolgwaarnemingen en recente soorten (V1–V11, 320/390/430)
+        run: |
+          set -o pipefail
+          python tests/test_ux01c_vervolg.py 2>&1 | tee ux01c.log
+      - name: Regressie sluitroutes en bewijsvelden (r3-audio R3-05, navigatieherstel, Merlin)
+        run: |
+          set -o pipefail
+          python tests/test_navigation_recovery.py 2>&1 | tee ux01-reg-nav.log
+          python tests/test_r4_merlin.py 2>&1 | tee ux01-reg-merlin.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: ux01-evidence, path: 'ux01*.log'}

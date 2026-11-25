@@ -10,7 +10,7 @@
 
 import { deleteSighting }                   from '../../data/sightings.js';
 import { getPhotosBySighting, getPhoto, deletePhoto, isSightingAudio } from '../../data/db.js';
-import { methodLabel, sourceLabel } from './evidence.js';
+import { methodLabel, sourceLabel, sourceBadge, legacyBirdnetSuggestion, uncheckedSuggestion, SELF_CHECK_NOTE } from './evidence.js';
 import { escHtml }                          from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { showToast }                        from '../../app.js';
@@ -180,7 +180,22 @@ function _renderDetailBody(s, photos, audio = []) {
       ${s.identificationSource === 'merlin' ? `
         <div class="detail-field"><div class="detail-field__label">Herkenning</div>
           <div class="detail-field__value"><span class="sighting-merlin-detail">${escHtml(sourceLabel(s))}</span></div>
-          ${s.merlinVerification !== 'checked' ? '<p class="detail-field__hint">Dit is een Merlin-suggestie; eigen controle is nog niet vastgelegd.</p>' : ''}
+          ${s.merlinVerification !== 'checked' ? '<p class="detail-field__hint">Dit is een Merlin-suggestie; eigen controle is nog niet vastgelegd.</p>' : `<p class="detail-field__hint">${escHtml(SELF_CHECK_NOTE)}</p>`}
+        </div>` : ''}
+      ${s.identificationSource === 'birdnet' ? `
+        <div class="detail-field"><div class="detail-field__label">Herkenning</div>
+          <div class="detail-field__value"><span class="sighting-merlin-detail sighting-birdnet-detail">BirdNET · suggestie</span>
+            ${s.birdnetVerification === 'checked' ? `<span class="sighting-merlin-detail sighting-birdnet-detail">${escHtml(sourceBadge(s))}</span>` : ''}</div>
+          <p class="detail-field__hint">${s.birdnetVerification === 'checked'
+            ? escHtml('Zelf gecontroleerd na de BirdNET-suggestie. ' + SELF_CHECK_NOTE)
+            : 'BirdNET stelde deze soort voor; eigen controle is nog niet vastgelegd.'}</p>
+        </div>` : ''}
+      ${uncheckedSuggestion(s) && s.certainty === 'certain' ? `
+        <p class="detail-field__hint sighting-evidence-conflict" role="note">Zekerheid staat op ‘zeker’, maar de suggestie is niet zelf gecontroleerd. Deze waarneming telt daarom niet mee in je lijsten.</p>` : ''}
+      ${legacyBirdnetSuggestion(s) && s.identificationSource !== 'merlin' ? `
+        <div class="detail-field"><div class="detail-field__label">Herkenning</div>
+          <div class="detail-field__value"><span class="sighting-evidence-detail">${escHtml(sourceLabel(s))}</span></div>
+          <p class="detail-field__hint sighting-birdnet-legacy">Bij deze oudere waarneming is ook een BirdNET-suggestie bewaard. Of je die zelf controleerde, is toen niet vastgelegd.</p>
         </div>` : ''}
 
       <!-- Locatie -->

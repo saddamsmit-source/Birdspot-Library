@@ -913,6 +913,9 @@
 #soundSelection li:not(:has(.sound-pick input:checked)) .sound-extra,
 #soundSelection li:not(:has([data-sound-merlin]:checked)) .sound-extra__merlin-verified,
 #soundSelection.sound-merlin-off .sound-extra__merlin { display: none; }
+/* UX-01B: eigen controle van een BirdNET-suggestie; vervalt als Merlin de bron is (Merlin heeft voorrang). */
+#soundSelection .sound-extra__birdnet small { display: block; font-size: .75rem; color: var(--ink-2); }
+#soundSelection:not(.sound-merlin-off) li:has([data-sound-merlin]:checked) .sound-extra__birdnet { display: none; }
 
 /* Expliciet bewaarbeleid: opnemen creëert alleen een vluchtig luisterconcept. */
 .sound-exit-prompt[hidden] { display: none; }
@@ -920,3 +923,47 @@
 .sound-exit-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .sound-exit-actions button, #soundSaveDraft { min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--r-sm); color: var(--ink); background: var(--surface); }
 #soundExitState:empty { display: none; }
+
+/* ── UX-01C: vervolgstap na opslaan, overgenomen gegevens, recente soorten ── */
+.saved-actions {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  left: max(12px, env(safe-area-inset-left, 0px));
+  right: max(12px, env(safe-area-inset-right, 0px));
+  z-index: 140;                     /* onder sheets (150): een nieuw venster dekt de melding af */
+  max-width: 480px;
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 10px 12px;
+  border-radius: var(--r-card);
+  background: var(--brand);
+  color: var(--focus-light);
+  box-shadow: var(--shadow-float);
+}
+.saved-actions__text { flex: 1 1 140px; font-weight: 650; overflow-wrap: anywhere; }
+.saved-actions__text { pointer-events: none; }
+.saved-actions__buttons { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.saved-actions__btn { min-height: 44px; width: auto; padding: 0 16px; border-radius: 999px; border: 1px solid; font-weight: 650; }
+.saved-actions .btn-secondary { background: transparent; color: var(--focus-light); border-color: currentColor; }
+.saved-actions .btn-primary { background: var(--focus-light); color: var(--brand); border-color: var(--focus-light); }
+.saved-actions__close {
+  min-width: 44px; min-height: 44px; border: 0; border-radius: 50%;
+  background: transparent; color: inherit; font-size: 1.4rem; line-height: 1; cursor: pointer;
+}
+.sighting-reuse-note {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px;
+  margin: var(--space-12) 0 0; padding: 10px 12px;
+  border: 1px solid rgba(49,157,151,.35); border-radius: var(--r-card);
+  background: rgba(49,157,151,.08); color: var(--ink); font-size: .875rem; line-height: 1.4;
+}
+.sighting-reuse-note .btn-text { min-height: 44px; padding-inline: 4px; font-weight: 650; color: var(--brand-mid); background: none; border: 0; cursor: pointer; }
+.sp-recent { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: var(--space-12) var(--space-12) var(--space-4); }
+.sp-recent[hidden] { display: none; }
+.sp-recent__label { font-size: .8125rem; font-weight: 650; color: var(--ink-2); }
+.sp-recent__chip {
+  min-height: 44px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid var(--line, rgba(0,0,0,.15)); background: var(--surface); color: var(--ink); cursor: pointer;
+}

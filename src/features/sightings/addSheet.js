@@ -32,8 +32,10 @@
 import { appIcon, observationIcon } from '../../utils/icons.js';
 import { SPECIES } from '../../data/species.js';
 import { openPinPicker } from './pinPicker.js';
-import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS } from './evidence.js';
-import { addSighting, updateSighting } from '../../data/sightings.js';
+import { normalizeEvidence, validPin, OBSERVATION_METHODS, BREEDING_BEHAVIORS, SELF_CHECK_NOTE } from './evidence.js';
+import { addSighting, updateSighting, getSightingsSnapshot } from '../../data/sightings.js';
+import { draftKey, draftFields, sameFields, loadDraft, saveDraft, deleteDraft, draftIsStale } from './sightingDraft.js';
+import { choiceDialog } from './choiceDialog.js';
 import { loadPlaces, placeDecision, reuseRadiusM, resolvePlaceForSave, removeCreatedPlace } from '../../data/places.js';
 import { changePhotos, getPhoto, SIGHTING_AUDIO_KIND, sightingAudioType } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
@@ -67,6 +69,9 @@ function freshState(override = {}) {
     observationMethod:'seen',
     identificationSource:'self',
     merlinVerification:null,
+    birdnetVerification:null,   // UX-01B: alleen bij bron 'birdnet' ('suggested' | 'checked')
+    hasBirdnetSuggestion:false, // UX-01B: record bevat een BirdNET-suggestie (soundSuggestion)
+    reuse:        null,         // UX-01C: { date: bool, place: string|null } overgenomen van de vorige waarneming
     locationName: '',
     lat:          null,
     lon:          null,
@@ -100,6 +105,8 @@ const ctx_audioInputs = new WeakMap();   // fileInput → audioInput (ronde 3)
  */
 export function openAddSheet({ onSaved, initial = {} } = {}) {
   const hasPin = validPin(initial.lat,initial.lon);
+  // UX-01C: datum van de vorige waarneming mag mee (vervolgwaarneming), alleen als geldige ISO-datum.
+  const reuseDate = initial.reuse && /^\d{4}-\d{2}-\d{2}$/.test(initial.date || '') ? initial.date : null;
   const species = typeof initial.speciesId === 'string'
     ? SPECIES.find(x=>x.id===initial.speciesId) : null;
   const selectedMethod = ['seen','heard','both'].includes(initial.observationMethod)
@@ -118,6 +125,8 @@ export function openAddSheet({ onSaved, initial = {} } = {}) {
     placeId: hasPin && typeof initial.placeId === 'string' ? initial.placeId : null,
     pinAccuracyM: hasPin && Number.isFinite(initial.pinAccuracyM) ? Number(initial.pinAccuracyM) : null,
     locationName: typeof initial.locationName === 'string' ? initial.locationName : '',
+    ...(reuseDate ? { date: reuseDate } : {}),
+    reuse: initial.reuse ? { date: Boolean(reuseDate), place: (hasPin || initial.locationName) ? (initial.locationName || 'vorige pin') : null } : null,
   }), { onSaved });
 }
 
@@ -136,6 +145,8 @@ export function openEditSheet(sighting, { onSaved } = {}) {
     observationMethod: sighting.observationMethod || null,
     identificationSource: sighting.identificationSource || null,
     merlinVerification: sighting.merlinVerification || null,
+    birdnetVerification: sighting.birdnetVerification || null,
+    hasBirdnetSuggestion: Boolean(sighting.soundSuggestion) || sighting.identificationSource === 'birdnet',
     locationName:     sighting.locationName || '',
     lat:              sighting.lat          ?? null,
     lon:              sighting.lon          ?? null,
@@ -147,11 +158,11 @@ export function openEditSheet(sighting, { onSaved } = {}) {
     notes:            sighting.notes        || '',
     existingPhotoIds: Array.isArray(sighting.photoIds) ? [...sighting.photoIds] : [],
     existingAudioIds: Array.isArray(sighting.audioIds) ? [...sighting.audioIds] : [],
-  }), { onSaved, editId: sighting.id });
+  }), { onSaved, editId: sighting.id, baseUpdatedAt: sighting.updatedAt || null });
 }
 
 // ── Interne implementatie ─────────────────────────────────
-function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
+function _openSightingForm(mode, initialState, { onSaved, editId, baseUpdatedAt = null } = {}) {
   // An already closed sheet lingers for 300ms for its exit animation.
   // Allow immediate reopening; never let a stale overlay silently drop the new route.
   const previous = document.getElementById('addSightingSheet');
@@ -210,13 +221,22 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
 
   const ctx = { destroyed: false, cancelPinPicker: null, locationRevision: 0, mediaChecking: false, detailsOpen: isEdit,
     // Vervolgcorrectie R08: de opnamen zoals ze waren toen het formulier opende (conflictdetectie).
-    loadedAudioIds: [...(initialState.existingAudioIds || [])] };
+    loadedAudioIds: [...(initialState.existingAudioIds || [])],
+    // UX-01A: concept. Wijzigingen tellen pas na een handeling van de gebruiker (automatische GPS niet).
+    draftKey: draftKey(mode, editId), baseUpdatedAt, initialFields: draftFields(initialState),
+    touched: false, resumed: false, draftWritten: false, draftBlocked: false, draftTimer: 0, leaving: false,
+    // UX-01C: overgenomen plek wint; automatische GPS mag die niet stil vervangen.
+    autoGpsStarted: Boolean(initialState.reuse?.place) };
   const submit = ov.querySelector('#addSheetSubmit');
   ov.querySelector('#addSightingTitle').focus({ preventScroll: true });
 
   const close = () => {
     if (ctx.destroyed || ctx.saving) return;
     ctx.destroyed = true;
+    clearTimeout(ctx.draftTimer);
+    document.removeEventListener('visibilitychange', onHidden);
+    window.removeEventListener('pagehide', onPageHide);
+    document.getElementById('sightingLeaveDialog')?.remove();
     ctx.cancelPinPicker?.();
     ov.classList.remove('open');
     ov.inert = true;
@@ -227,26 +247,182 @@ function _openSightingForm(mode, initialState, { onSaved, editId } = {}) {
     releaseExistingPreviews(ov);
   };
 
+  // ── UX-01A: concept bewaren, bewust afsluiten, hervatten ──────────────────
+  const hasPendingMedia = () => _state.mediaFiles.length > 0 || _state.audioFiles.length > 0;
+  const isDirty = () => ctx.touched && (ctx.resumed || hasPendingMedia() || !sameFields(_state, ctx.initialFields));
+  const persistDraft = () => {
+    clearTimeout(ctx.draftTimer);
+    ctx.draftTimer = 0;
+    if (ctx.destroyed || ctx.saving || ctx.draftBlocked) return true;
+    if (!isDirty()) {
+      if (ctx.draftWritten) { deleteDraft(ctx.draftKey); ctx.draftWritten = false; }
+      return true;
+    }
+    const ok = saveDraft(ctx.draftKey, { fields: _state, baseUpdatedAt: ctx.baseUpdatedAt,
+      pendingPhotos: _state.mediaFiles.length, pendingAudio: _state.audioFiles.length });
+    if (ok) ctx.draftWritten = true;
+    return ok;
+  };
+  const scheduleSave = () => {
+    if (!ctx.touched || ctx.destroyed) return;
+    clearTimeout(ctx.draftTimer);
+    ctx.draftTimer = setTimeout(persistDraft, 400);
+  };
+  ctx.markTouched = () => { ctx.touched = true; scheduleSave(); };
+  ctx.scheduleSave = scheduleSave;
+  ctx.persistDraft = persistDraft;
+  const onHidden = () => { if (document.visibilityState === 'hidden' && ctx.touched) persistDraft(); };
+  const onPageHide = () => { if (ctx.touched) persistDraft(); };
+  document.addEventListener('visibilitychange', onHidden);
+  window.addEventListener('pagehide', onPageHide);
+  // Elke gebruikersinvoer in het formulier telt; programmatische waarden (automatische GPS) vuren geen events.
+  const formContent = ov.querySelector('#addSheetContent');
+  formContent.addEventListener('input', () => ctx.markTouched(), true);
+  formContent.addEventListener('change', () => ctx.markTouched(), true);
+  formContent.addEventListener('click', event => {
+    if (event.target.closest('button, label, input, select, textarea, summary')) setTimeout(() => ctx.markTouched(), 0);
+  }, true);
+
+  const pendingNote = () => {
+    const parts = [];
+    if (_state.mediaFiles.length) parts.push(`${_state.mediaFiles.length} foto/video`);
+    if (_state.audioFiles.length) parts.push(`${_state.audioFiles.length} opname${_state.audioFiles.length === 1 ? '' : 'n'}`);
+    return parts.length ? `Let op: nieuw gekozen media (${parts.join(' en ')}) gaan niet mee in een concept; die kies je later opnieuw.` : '';
+  };
+  /** Alle sluitroutes (Annuleer, tik ernaast, greep, Escape, browser-/Android-terug) komen hier. */
+  const requestClose = async () => {
+    if (ctx.destroyed || ctx.saving || ctx.leaving || ctx.draftBlocked) return;
+    if (!isDirty()) {
+      if (ctx.draftWritten) { deleteDraft(ctx.draftKey); ctx.draftWritten = false; }
+      close();
+      return;
+    }
+    ctx.leaving = true;
+    const choice = await choiceDialog({
+      id: 'sightingLeaveDialog',
+      title: 'Nog niet opgeslagen',
+      body: isEdit ? 'Je wijzigingen aan deze waarneming zijn nog niet opgeslagen.' : 'Deze waarneming is nog niet opgeslagen.',
+      note: pendingNote(),
+      choices: [
+        { value: 'keep', label: 'Verder bewerken', kind: 'primary', cancel: true },
+        { value: 'draft', label: 'Concept bewaren en sluiten', kind: 'secondary' },
+        { value: 'discard', label: 'Wijzigingen verwerpen', kind: 'danger' },
+      ],
+    });
+    ctx.leaving = false;
+    if (ctx.destroyed) return;
+    if (choice === 'draft') {
+      if (!persistDraft()) { showToast('Concept kon niet worden bewaard — je invoer staat nog klaar'); return; }
+      close();
+      showToast(hasPendingMedia() ? 'Concept bewaard — zonder de nieuw gekozen media' : 'Concept bewaard');
+    } else if (choice === 'discard') {
+      deleteDraft(ctx.draftKey);
+      ctx.draftWritten = false;
+      close();
+    } else {
+      ov.querySelector('#addSightingTitle')?.focus({ preventScroll: true });
+    }
+  };
+  ctx.requestClose = requestClose;
+  // Een gekozen foto of opname is een wijziging, ook als het bestand buiten de knop om binnenkomt.
+  fileInput.addEventListener('change', () => ctx.markTouched());
+  audioInput.addEventListener('change', () => ctx.markTouched());
+
   const onEscape = event => {
     if (event.key !== 'Escape' || ov.inert || !ov.contains(document.activeElement)) return;
     event.preventDefault();
-    close();
+    requestClose();
   };
   document.addEventListener('keydown', onEscape);
   submit.addEventListener('click', () => _submitForm(ov, close, onSaved, { isEdit, editId, ctx }));
-  ov.addEventListener('click', e => { if (e.target === ov) close(); });
-  ov.querySelector('.sheet__handle').addEventListener('click', close);
-  ov.querySelector('#addSheetCancel').addEventListener('click', close);
+  ov.addEventListener('click', e => { if (e.target === ov) requestClose(); });
+  ov.querySelector('.sheet__handle').addEventListener('click', requestClose);
+  ov.querySelector('#addSheetCancel').addEventListener('click', requestClose);
 
   _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx });
   if (!isEdit) _decidePlace(ov);
+  _offerDraft(ov, ctx, isEdit, close);
+}
+
+/** UX-01A (C): bestaand concept voor dit doel? Eerst bewust kiezen; een concept wordt nooit stil overschreven. */
+async function _offerDraft(ov, ctx, isEdit, close) {
+  const draft = loadDraft(ctx.draftKey);
+  if (!draft) return;
+  ctx.draftBlocked = true;
+  const when = new Date(draft.savedAt || '');
+  const stamp = Number.isNaN(when.getTime()) ? '' : when.toLocaleString('nl-NL', { weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+  const label = [draft.fields.speciesName || 'Nog geen soort', draft.fields.date || ''].filter(Boolean).join(' · ');
+  const stale = isEdit && draftIsStale(draft, { updatedAt: ctx.baseUpdatedAt });
+  const choice = stale
+    ? await choiceDialog({
+      id: 'sightingDraftDialog', title: 'Verouderd concept',
+      body: `Deze waarneming is gewijzigd nadat het concept${stamp ? ` (${stamp})` : ''} werd bewaard. Het concept wordt daarom niet toegepast.`,
+      choices: [
+        { value: 'delete', label: 'Concept verwijderen en bewerken', kind: 'primary' },
+        { value: 'later', label: 'Sluiten, concept bewaren', kind: 'secondary', cancel: true },
+      ],
+    })
+    : await choiceDialog({
+      id: 'sightingDraftDialog', title: 'Onbewaard concept',
+      body: `${label}${stamp ? ` — bewaard ${stamp}` : ''}.`,
+      note: draft.pendingPhotos || draft.pendingAudio
+        ? 'Foto’s, video’s en opnamen die je toen koos, zitten niet in het concept.' : '',
+      choices: [
+        { value: 'resume', label: 'Concept hervatten', kind: 'primary' },
+        { value: 'delete', label: isEdit ? 'Concept verwijderen' : 'Concept verwijderen, nieuw beginnen', kind: 'danger' },
+        { value: 'later', label: 'Sluiten, concept bewaren', kind: 'secondary', cancel: true },
+      ],
+    });
+  ctx.draftBlocked = false;
+  if (ctx.destroyed) return;
+  if (choice === 'later') {
+    // Er is nog niets nieuws ingevuld; het concept blijft ongewijzigd bewaard.
+    ctx.touched = false;
+    close();
+    return;
+  }
+  if (choice === 'delete') {
+    deleteDraft(ctx.draftKey);
+    ctx.scheduleSave?.();   // wat er intussen al is ingevuld, wordt het nieuwe concept
+    return;
+  }
+  // Hervatten: alleen gegevensvelden; een lopende automatische GPS mag de bewaarde plek niet meer wijzigen.
+  ctx.locationRevision++;
+  ctx.autoGpsStarted = true;
+  _resetGPSButton(ov);
+  const fields = draft.fields;
+  const list = (value, fallback) => (Array.isArray(value) ? value.filter(id => typeof id === 'string') : fallback);
+  _releaseObjectUrls();
+  _state = freshState({ ...fields,
+    existingPhotoIds: list(fields.existingPhotoIds, _state.existingPhotoIds),
+    deletedPhotoIds: list(fields.deletedPhotoIds, []),
+    existingAudioIds: list(fields.existingAudioIds, _state.existingAudioIds),
+    deletedAudioIds: list(fields.deletedAudioIds, []),
+    mediaFiles: [], audioFiles: [], placeOffer: null });
+  if (isEdit) ctx.detailsOpen = true;
+  ctx.resumed = true;
+  ctx.touched = true;
+  ctx.draftWritten = true;
+  if (draft.pendingPhotos || draft.pendingAudio) {
+    ctx.mediaMessage = 'Concept hervat. Kies de foto’s, video’s of opnamen van toen opnieuw; die zaten niet in het concept.';
+  }
+  ctx.refresh?.();
+  ov.querySelector('#addSightingTitle')?.focus({ preventScroll: true });
 }
 
 // ── Form body HTML ─────────────────────────────────────────
 function _renderFormBody() {
   const sp = _state.speciesId ? SPECIES.find(x => x.id === _state.speciesId) : null;
+  const reuse = _state.reuse && (_state.reuse.date || _state.reuse.place) ? `
+    <div class="sighting-reuse-note" id="sightReuseNote" role="note">
+      <span>Overgenomen van vorige waarneming: ${[
+        _state.reuse.date ? 'datum ' + escHtml(_fmtShortDate(_state.date)) : '',
+        _state.reuse.place ? 'plek ' + escHtml(_state.reuse.place) : '',
+      ].filter(Boolean).join(' · ')}</span>
+      ${_state.reuse.place ? '<button type="button" class="btn-text" id="sightReuseClearPlace">Wis plek</button>' : ''}
+    </div>` : '';
 
-  return `
+  return `${reuse}
     <!-- Soort -->
     <div class="form-field">
       <label class="form-label">Soort <span class="form-required">*</span></label>
@@ -340,7 +516,22 @@ function _renderFormBody() {
         <label class="sighting-source-choice${_state.identificationSource === 'merlin' ? ' is-selected' : ''}">
           <input type="radio" name="identificationSource" value="merlin" ${_state.identificationSource === 'merlin' ? 'checked' : ''}>
           Merlin Sound ID</label>
+        ${_state.hasBirdnetSuggestion ? `
+        <label class="sighting-source-choice${_state.identificationSource === 'birdnet' ? ' is-selected' : ''}">
+          <input type="radio" name="identificationSource" value="birdnet" ${_state.identificationSource === 'birdnet' ? 'checked' : ''}>
+          BirdNET-suggestie</label>` : ''}
       </div>
+      ${_state.hasBirdnetSuggestion && _state.identificationSource === 'self' ? `
+        <p class="form-hint sighting-birdnet-legacy">Bij deze waarneming is een BirdNET-suggestie bewaard. Kies BirdNET-suggestie als de soort daarvan kwam.</p>` : ''}
+      ${_state.identificationSource === 'birdnet' ? `
+        <div class="sighting-merlin-panel sighting-birdnet-panel">
+          <strong>${appIcon('soundwave')} BirdNET-suggestie</strong>
+          <p>BirdNET stelt een soort voor; dat is geen bevestiging. Vink alleen aan als je de soort zelf hebt gecontroleerd. ${escHtml(SELF_CHECK_NOTE)}</p>
+          <label class="sighting-merlin-reviewed">
+            <input id="sightBirdnetChecked" type="checkbox" ${_state.birdnetVerification === 'checked' ? 'checked' : ''}>
+            Zelf gecontroleerd
+          </label>
+        </div>` : ''}
       ${_state.identificationSource === 'merlin' ? `
         <div class="sighting-merlin-panel">
           <strong>${appIcon('soundwave')} Merlin Sound ID</strong>
@@ -616,13 +807,15 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx });
     el.scrollTop = top;
     if (activeId) el.querySelector('#' + CSS.escape(activeId))?.focus({ preventScroll: true });
+    ctx.scheduleSave?.();   // UX-01A: state-wijziging buiten een invoerveld (soort, pin, media) gaat mee in het concept
   };
+  ctx.refresh = refresh;
 
   const el = content();
   if (!el) return;
 
   const details = el.querySelector('#sightingMore');
-  details.open = ctx.detailsOpen || _state.identificationSource === 'merlin';
+  details.open = ctx.detailsOpen || _state.identificationSource === 'merlin' || _state.identificationSource === 'birdnet';
   details.addEventListener('toggle', () => { if (details.isConnected) ctx.detailsOpen = details.open; });
   const mediaStatus = el.querySelector('#sightingMediaStatus');
   mediaStatus.textContent = ctx.mediaMessage || '';
@@ -635,8 +828,9 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     openSpeciesPicker(sp => {
       _state.speciesId   = sp.id;
       _state.speciesName = sp.nameNL;
+      ctx.touched = true;
       refresh();
-    });
+    }, { recentIds: _recentSpeciesIds() });
   });
 
   // Seen / heard / both and optional Merlin Sound ID evidence.
@@ -646,6 +840,9 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     // Merlin Sound ID only makes sense for an audible encounter.
     if(_state.identificationSource==='merlin'&&e.target.value==='seen'){
       _state.identificationSource='self';_state.merlinVerification=null;
+    }
+    if(_state.identificationSource==='birdnet'&&e.target.value==='seen'){
+      _state.identificationSource='self';_state.birdnetVerification=null;
     }
     refresh();
   });
@@ -657,10 +854,19 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
       _state.merlinVerification='suggested';
       if(_state.certainty==='certain')_state.certainty='possible';
     } else _state.merlinVerification=null;
+    // UX-01B: BirdNET als bron = suggestie, standaard 'mogelijk' tot de gebruiker zelf controleert.
+    if(e.target.value==='birdnet'){
+      if(_state.observationMethod==='seen'||!_state.observationMethod)_state.observationMethod='heard';
+      _state.birdnetVerification='suggested';
+      if(_state.certainty==='certain')_state.certainty='possible';
+    } else _state.birdnetVerification=null;
     refresh();
   });
   el.querySelector('#sightMerlinChecked')?.addEventListener('change',e => {
     _state.merlinVerification=e.target.checked?'checked':'suggested';
+  });
+  el.querySelector('#sightBirdnetChecked')?.addEventListener('change',e => {
+    _state.birdnetVerification=e.target.checked?'checked':'suggested';
   });
   // Datum
   el.querySelector('#sightDate')?.addEventListener('change', e => {
@@ -701,6 +907,16 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
         ctx.cancelPinPicker=null;refresh();_decidePlace(ov);
       },
     });
+  });
+  el.querySelector('#sightReuseClearPlace')?.addEventListener('click',()=>{
+    // UX-01C: overgenomen plek bewust wissen; daarna GPS-knop of pin (geen automatische GPS).
+    ctx.locationRevision++;
+    ctx.autoGpsStarted = true;   // gewist = bewust; automatische GPS vult de plek niet stil opnieuw
+    _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.pinAccuracyExactM=null;_state.placeId=null;_state.placeOffer=null;
+    _state.locationName='';_state.autoLocationName=null;
+    _state.reuse={..._state.reuse,place:null};
+    refresh();
+    content()?.querySelector('#sightLocation')?.focus({ preventScroll: true });
   });
   el.querySelector('#sightClearPin')?.addEventListener('click',()=>{
     ctx.locationRevision++;
@@ -954,7 +1170,19 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   if(evidence.identificationSource==='merlin' && evidence.merlinVerification!=='checked' && _state.certainty==='certain') {
     showToast('Een Merlin-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.');return;
   }
+  if(evidence.identificationSource==='birdnet' && evidence.birdnetVerification!=='checked' && _state.certainty==='certain') {
+    showToast('Een BirdNET-suggestie is niet automatisch zeker. Kies Mogelijk/Waarschijnlijk of controleer de soort zelf.');return;
+  }
 
+  // UX-01A (D): een hervat bewerkconcept mag een intussen gewijzigde waarneming nooit overschrijven.
+  if (isEdit && ctx.resumed) {
+    const current = getSightingsSnapshot().find(item => item?.id === editId);
+    if (!current || (current.updatedAt || null) !== ctx.baseUpdatedAt) {
+      ctx.persistDraft?.();
+      showToast('Waarneming intussen gewijzigd — concept niet opgeslagen. Sluit en open de waarneming opnieuw.');
+      return;
+    }
+  }
   const btn = ov.querySelector('#addSheetSubmit');
   if (!btn || btn.disabled || ctx.mediaChecking || ctx.saving) return;   // guard: voorkomt dubbele submit
   btn.disabled = true;
@@ -1051,6 +1279,8 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
     cancel.disabled = false;
     btn.disabled = false;
     btn.textContent = 'Opslaan';
+    ctx.touched = true;
+    ctx.persistDraft?.();   // UX-01A: na een opslagfout staat de invoer ook na herladen nog klaar
     if (error?.name === 'AudioChangedError') {
       // Formulier bijwerken naar de actuele opnamen; nieuwe opnamen en andere invoer blijven staan.
       const currentIds = error.currentIds || [];
@@ -1089,9 +1319,84 @@ async function _submitForm(ov, close, onSaved, { isEdit, editId, ctx }) {
   try { await releaseSightingAudio(_state.deletedAudioIds); }
   catch (error) { console.error('[sightingForm] detached audio cleanup', error); }
   ctx.saving = false;
+  clearTimeout(ctx.draftTimer);
+  deleteDraft(ctx.draftKey);   // UX-01A: opgeslagen = geen concept meer
+  ctx.draftWritten = false;
   close();
-  showToast(isEdit ? 'Waarneming bijgewerkt' : `${savedSighting.speciesName} opgeslagen`);
+  if (isEdit) showToast('Waarneming bijgewerkt');
+  else _showSavedActions(savedSighting, onSaved);
   onSaved?.(savedSighting);
+}
+
+/**
+ * UX-01C: korte bevestiging na opslaan met de twee logische vervolgstappen. Niet modaal, valt niet over
+ * sheets heen, verdwijnt vanzelf (niet zolang de gebruiker erin werkt). Neemt nooit soort, zekerheid,
+ * aantal of media over; datum en plek alleen zichtbaar en wisbaar in het volgende formulier.
+ */
+const SAVED_ACTIONS_MS = 8000;
+const REUSE_MAX_AGE_MS = 30 * 60 * 1000;
+function _showSavedActions(saved, onSaved) {
+  document.getElementById('savedActions')?.remove();
+  const savedAt = Date.now();
+  const bar = document.createElement('div');
+  bar.id = 'savedActions';
+  bar.className = 'saved-actions';
+  bar.setAttribute('role', 'status');
+  bar.setAttribute('aria-live', 'polite');
+  bar.innerHTML = `
+    <span class="saved-actions__text">${escHtml(saved.speciesName)} opgeslagen</span>
+    <span class="saved-actions__buttons">
+      <button type="button" class="btn-secondary saved-actions__btn" data-saved-action="view">Bekijk waarneming</button>
+      <button type="button" class="btn-primary saved-actions__btn" data-saved-action="again">Nog één toevoegen</button>
+      <button type="button" class="saved-actions__close" data-saved-action="close" aria-label="Melding sluiten">×</button>
+    </span>`;
+  // Een oude melding (bijv. een eerdere opslagfout) hoort niet meer zichtbaar of voorleesbaar te zijn.
+  const staleToast = document.querySelector('.toast:not(.app-update)');
+  if (staleToast) { staleToast.classList.remove('show'); staleToast.textContent = ''; }
+  document.body.appendChild(bar);
+  let timer = 0;
+  // Elke tik buiten de melding = de gebruiker gaat verder: melding weg (gedraagt zich als snackbar,
+  // blokkeert nooit de bediening eronder). Alleen toetsenbordfocus houdt haar langer open.
+  const onOutside = event => { if (!bar.contains(event.target)) hide(); };
+  const hide = () => { clearTimeout(timer); document.removeEventListener('pointerdown', onOutside, true); bar.remove(); };
+  const arm = () => { clearTimeout(timer); timer = setTimeout(() => { if (!bar.matches(':focus-within')) hide(); else arm(); }, SAVED_ACTIONS_MS); };
+  arm();
+  setTimeout(() => { if (bar.isConnected) document.addEventListener('pointerdown', onOutside, true); }, 0);
+  bar.addEventListener('focusout', arm);
+  bar.addEventListener('keydown', e => { if (e.key === 'Escape') { e.stopPropagation(); hide(); } });
+  bar.addEventListener('click', async e => {
+    const action = e.target.closest('[data-saved-action]')?.dataset.savedAction;
+    if (!action) return;
+    hide();
+    if (action === 'again') {
+      const fresh = Date.now() - savedAt < REUSE_MAX_AGE_MS;
+      openAddSheet({ onSaved, initial: fresh ? {
+        reuse: true, date: saved.date,
+        lat: saved.lat, lon: saved.lon, placeId: saved.placeId, pinAccuracyM: saved.pinAccuracyM,
+        locationName: (saved.placeId && loadPlaces().find(p => p.id === saved.placeId)?.name) || saved.locationName || '',
+      } : {} });
+    } else if (action === 'view') {
+      const current = getSightingsSnapshot().find(item => item?.id === saved.id) || saved;
+      const { openDetailSheet } = await import('./detailSheet.js');
+      openDetailSheet(current, { onUpdated: () => onSaved?.(current), onDeleted: () => onSaved?.(current) });
+    }
+  });
+}
+
+/** UX-01C: laatst gekozen soorten (nieuwste eerst), uit de eigen waarnemingen. */
+function _recentSpeciesIds(limit = 6) {
+  const seen = new Set();
+  // Robuust tegen beschadigde records (null of zonder soort): de kiezer moet altijd openen.
+  return getSightingsSnapshot().filter(item => item && typeof item === 'object')
+    .sort((a, b) => String(b.createdAt || b.date || '').localeCompare(String(a.createdAt || a.date || '')))
+    .map(item => item.speciesId)
+    .filter(id => id && !seen.has(id) && seen.add(id) && SPECIES.some(x => x.id === id))
+    .slice(0, limit);
+}
+
+function _fmtShortDate(iso) {
+  const d = new Date(`${iso}T12:00:00`);
+  return Number.isNaN(d.getTime()) ? iso : d.toLocaleDateString('nl-NL', { day: 'numeric', month: 'short' });
 }
 
 // ── GPS ────────────────────────────────────────────────────
@@ -1127,6 +1432,7 @@ function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
     pos => {
       if (ctx.destroyed || ctx.saving || revision !== ctx.locationRevision) return;
       if (silent && (ctx.cancelPinPicker || _state.lat != null)) { _resetGPSButton(ov); return; }
+      const before = silent ? draftFields(_state) : null;
       _state.lat = pos.coords.latitude;
       _state.lon = pos.coords.longitude;
       _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;
@@ -1135,6 +1441,14 @@ function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
       _resetGPSButton(ov)?.classList.add('gps-btn--active');
       // R05 + ronde 2B: nooit een venster; een bekende plek binnen de straal wordt inline aangeboden.
       _decidePlace(ov);
+      // UX-01A: een automatisch gevulde locatie is geen wijziging van de gebruiker (geen sluitvraag).
+      // Alleen velden die de gebruiker zelf nog niet had aangepast, schuiven mee in de beginstand.
+      if (before && ctx.initialFields) {
+        for (const key of ['lat', 'lon', 'pinAccuracyM', 'pinAccuracyExactM', 'placeId', 'locationName', 'autoLocationName']) {
+          if (before[key] === ctx.initialFields[key]) ctx.initialFields[key] = _state[key] ?? null;
+        }
+      }
+      ctx.scheduleSave?.();
     },
     () => {
       if (ctx.destroyed || revision !== ctx.locationRevision) return;
