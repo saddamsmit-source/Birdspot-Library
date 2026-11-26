@@ -6,18 +6,17 @@ from playwright.sync_api import expect, sync_playwright
 from test_species_detail import LEAFLET_STUB, Quiet, Server, SHOTS
 
 
-def contrast(node, background=None, text_edge=False):
-    return node.evaluate(r"""(el, {background, text_edge}) => {
+def contrast(node, background=None):
+    return node.evaluate(r"""(el, background) => {
       const luminance = color => {
         const rgb = color.match(/[\d.]+/g).slice(0, 3).map(n => Number(n) / 255);
         return rgb.map(n => n <= 0.04045 ? n / 12.92 : ((n + 0.055) / 1.055) ** 2.4)
           .reduce((sum, n, i) => sum + n * [0.2126, 0.7152, 0.0722][i], 0);
       };
       const a = luminance(getComputedStyle(el).color);
-      const b = luminance(text_edge ? getComputedStyle(el).webkitTextStrokeColor
-        : getComputedStyle(background ? el.closest(background) : el).backgroundColor);
+      const b = luminance(getComputedStyle(background ? el.closest(background) : el).backgroundColor);
       return (Math.max(a,b) + 0.05) / (Math.min(a,b) + 0.05);
-    }""", {'background': background, 'text_edge': text_edge})
+    }""", background)
 
 
 def open_species(page, name, sid):
@@ -165,17 +164,22 @@ def main():
               const media = photo.parentElement;
               const navTop = document.getElementById('app-nav').getBoundingClientRect().top;
               const statsTop = document.getElementById('statsRow').getBoundingClientRect().top;
+              const visiblePhoto = Math.min(rect.bottom, navTop) - Math.max(0, rect.top);
+              const scrollToStats = Math.max(0, statsTop - navTop);
               return {
-                halfScreenPhoto: rect.height >= innerHeight / 2 - 1 &&
-                  Math.min(rect.bottom, navTop) - Math.max(0, rect.top) >= innerHeight / 2 - 1,
-                controlsBelowPhoto: caption.getBoundingClientRect().top >= rect.bottom - 1,
-                statsNearPhoto: statsTop >= rect.bottom && statsTop - navTop < innerHeight / 4,
-                noPhotoFilter: getComputedStyle(photo).filter === 'none' && getComputedStyle(photo).maskImage === 'none',
-                noPhotoShade: ['::before', '::after'].every(part => getComputedStyle(media, part).content === 'none'),
-                noPageOverflow: document.documentElement.scrollWidth <= innerWidth + 1,
+                visiblePhoto,
+                scrollToStats,
+                checks: {
+                  halfScreenPhoto: visiblePhoto >= innerHeight / 2 - 1,
+                  controlsBelowPhoto: caption.getBoundingClientRect().top >= rect.bottom - 1,
+                  statsNearPhoto: statsTop >= rect.bottom && scrollToStats < innerHeight / 4,
+                  noPhotoFilter: getComputedStyle(photo).filter === 'none' && getComputedStyle(photo).maskImage === 'none',
+                  noPhotoShade: ['::before', '::after'].every(part => getComputedStyle(media, part).content === 'none'),
+                  noPageOverflow: document.documentElement.scrollWidth <= innerWidth + 1,
+                },
               };
             }""")
-            assert all(result.values()), (width, height, result)
+            assert all(result['checks'].values()), (width, height, result)
             assert contrast(cta) >= 4.5
             assert contrast(hero.locator('h2'), background='#slideshow') >= 4.5
             if width == 390:
