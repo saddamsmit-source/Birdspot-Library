@@ -43,7 +43,7 @@ export const WEATHER_PLACE_RADIUS_M = 3000;
  * aanduiding eerlijk wat er wordt gebruikt (laatst bekende positie met tijd, of een zelf gekozen plek);
  * zonder bruikbare positie geeft de functie null en toont de app geen weer voor een verzonnen plek.
  * `source` blijft als alias voor oudere aanroepen ('gps' = actueel; al het andere = geen positie). */
-export function weatherPlace({state, source, lat, lon, at = null, places = []}) {
+export function weatherPlace({state, source, lat, lon, at = null, places = [], temporary = false}) {
   const kind = state || (source === 'gps' ? 'gps' : 'none');
   if (!['gps', 'last', 'manual'].includes(kind) || !Number.isFinite(Number(lat)) || !Number.isFinite(Number(lon))) return null;
   let best = null;
@@ -53,7 +53,10 @@ export function weatherPlace({state, source, lat, lon, at = null, places = []}) 
     if (d <= WEATHER_PLACE_RADIUS_M && (!best || d < best.d)) best = {name: String(place.name), d};
   }
   if (kind === 'gps') return best ? {text: `Bij ${best.name}`, hint: 'eigen plek', kind} : {text: 'Je huidige omgeving', hint: 'GPS', kind};
-  if (kind === 'manual') return {text: best ? `Bij ${best.name}` : 'Zelf gekozen plek', hint: 'zelf gekozen, geen GPS', kind};
+  if (kind === 'manual') {
+    const hint = temporary ? 'zelf gekozen · alleen deze sessie' : 'zelf gekozen, geen GPS';
+    return {text: best ? `Bij ${best.name}` : 'Zelf gekozen plek', hint, kind};
+  }
   const when = Number.isFinite(Number(at)) ? new Date(Number(at)).toLocaleTimeString('nl-NL', {hour: '2-digit', minute: '2-digit'}) : null;
   return {text: best ? `Bij ${best.name}` : 'Laatst bekende locatie', hint: `niet actueel${when ? ` · GPS van ${when}` : ''}`, kind};
 }

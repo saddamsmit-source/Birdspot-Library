@@ -36,7 +36,7 @@ jobs:
         run: node tests/test_f3_rev2_r02_compare.mjs
       - name: R03 - existing comparisons and critical cards kept; LK-100..105 traceable; owner gate open
         run: node tests/test_f3_rev2_r03.mjs
-      - name: R04 - woodpecker comparisons kept; LK-109..111 traceable; owner gate open
+      - name: R04b - woodpecker comparisons and open evidence; LK-109..111 traceable
         run: node tests/test_f3_rev2_r04.mjs
       - name: First-round 140 cohort, media and gates unchanged
         run: node tests/test_f3_140_unified_rebaseline.mjs

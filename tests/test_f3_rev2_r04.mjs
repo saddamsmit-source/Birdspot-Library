@@ -1,7 +1,7 @@
 /** F3-REV2-R04 — Kleine Bonte Specht, Zwarte Specht, Groene Specht (eigenaarbesluit 24-11-2026 12:16).
  *
  * Borgt: bestaande fotoparen en kritische kaarten blijven; quickPrimary laat alle kenmerken staan;
- * LK-109…LK-111 traceerbaar in beide richtingen; R04-records met open eigenaarspoort, geen FULL PASS;
+ * LK-109…LK-111 met gelabelde kenmerken in beide richtingen; eigenaarbesluit B met open bewijs, geen FULL PASS;
  * besluiten en records van R01–R03 onaangetast; tweede ronde 12/140.
  */
 import assert from 'node:assert/strict';
@@ -46,12 +46,25 @@ assert.deepEqual(b.species, ['sp017', 'sp018', 'sp019']);
 for (const id of b.species) {
   const s = reg.records.find(r => r.id === id).F3.secondReview;
   assert.equal(s.round, 'F3-REV2-R04'); assert.equal(s.fullPass, false);
-  if (s.ownerDecision.status === 'OPEN') assert.ok(s.ownerDecision.decision === null && s.materialGaps.length > 0, id);
-  assert.ok(s.sources.vogelbescherming.startsWith('NOT TESTED') && s.sources.anwb.startsWith('NOT TESTED'), `${id}: ongelezen bron niet als gelezen`);
+  assert.equal(s.ownerDecision.status, 'DECIDED');
+  assert.match(s.ownerDecision.decision, /^B\b/);
+  assert.match(s.ownerDecision.reference, /issuecomment-7134854859$/);
+  assert.ok(s.materialGaps.length > 0);
+  assert.equal(s.sources.vogelbescherming.status, 'PARTIALLY TESTED');
+  assert.match(s.sources.vogelbescherming.url, /^https:\/\/www\.vogelbescherming\.nl\//);
+  assert.ok(s.sources.vogelbescherming.readDate && s.sources.vogelbescherming.findings);
+  assert.match(s.sources.anwb, /^NOT TESTED/);
   for (const a of s.audio.files) assert.equal(a.listenedBy, null);
 }
 for (const id of ['sp002', 'sp003', 'sp004', 'sp005', 'sp006', 'sp007', 'sp008', 'sp009', 'sp016'])
   assert.equal(reg.records.find(r => r.id === id).F3.secondReview.ownerDecision.status, 'DECIDED', `${id}: eerder besluit behouden`);
 assert.equal(reg.secondReview.counts.fullF3Pass, 0);
-assert.ok(reg.secondReview.counts.reexamined >= 12);
-console.log('F3-REV2-R04 PASS: bestaande paren en kritische kaarten behouden; quickPrimary compact; LK-109…LK-111 wederkerig; eigenaarspoort open; eerdere besluiten intact');
+assert.equal(reg.secondReview.counts.reexamined, 12);
+assert.equal(reg.secondReview.counts.ownerDecisions, 12);
+assert.equal(reg.secondReview.counts.ownerGateOpen, 0);
+assert.equal(reg.secondReview.counts.secondReviewClosed, 0);
+const tuscany = reg.records.find(r => r.id === 'sp009').F3.secondReview.candidatesR03c.proposalR03d;
+assert.equal(tuscany.ownerDecisionR04b.decision, 'NEE');
+assert.match(tuscany.status, /^AFGEWEZEN/);
+assert.match(recognitionPanel(byId.get('sp019')), /kb-caution[^]*?<strong>Let op<\/strong>/);
+console.log('F3-REV2-R04 PASS: bestaande paren en kritische kaarten behouden; quickPrimary compact; LK-109…LK-111 wederkerig; eigenaarbesluit B verwerkt; bewijsgrenzen en eerdere besluiten blijven');

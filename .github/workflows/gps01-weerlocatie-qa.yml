@@ -18,7 +18,7 @@ jobs:
       - run: |
           python -m pip install -r tests/requirements.txt
           python -m playwright install --with-deps chromium
-      - name: GPS-01 live GPS voor weer en zon, geen standaardstad (G1–G14; G3/G4 simulatie)
+      - name: GPS-01 live GPS voor weer en zon, geen standaardstad (G1–G16; GPS- en foutpaden gesimuleerd)
         run: |
           set -o pipefail
           python tests/test_gps01_weerlocatie.py 2>&1 | tee gps01.log

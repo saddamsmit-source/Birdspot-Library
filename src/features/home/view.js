@@ -87,7 +87,7 @@ export function renderHome(el, { onSearchSelect } = {}) {
       lat: ctx.location?.lat ?? null, lon: ctx.location?.lon ?? null,
       title: 'Kies een plek voor weer en zon', ariaLabel: 'Kies een plek voor weer en zon',
       intro: 'Gebruikt zolang je locatie niet beschikbaar is. Met GPS aan volgt Birdspot weer je actuele positie.',
-      tip: 'Alleen op dit toestel bewaard, afgerond op ongeveer 1 km. Je waarnemingen veranderen niet.',
+      tip: 'Birdspot rondt de gekozen plek af op ongeveer 1 km. Je waarnemingen veranderen niet.',
       confirmLabel: 'Gebruik deze plek', showClear: false,
       onConfirm: ({ lat, lon }) => { if (setManualLocation(lat, lon) && !ctx.destroyed) refreshLocationCards(el, ctx); },
     });
@@ -457,8 +457,9 @@ async function loadWeather(el, ctx, located) {
 
   const loader = section.querySelector('.dash-section__loading');
 
+  let location;
   try {
-    const location = await located;
+    location = await located;
     if (ctx.destroyed) return;
     if (location.state === 'none') {
       // GPS-01: geen weer voor een verzonnen plek; eerlijke reden en een handmatige keuze.
@@ -518,7 +519,8 @@ async function loadWeather(el, ctx, located) {
     }
   } catch (_) {
     if (ctx.destroyed) return;
-    if (loader) loader.outerHTML = `<div class="dash-section__error">Weer niet beschikbaar</div>`;
+    if (loader) loader.outerHTML = `<div class="dash-section__error" role="status">Weer niet beschikbaar</div>
+      ${location?.state === 'gps' ? '' : LOCATION_ACTIONS}`;
   }
 }
 

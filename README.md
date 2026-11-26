@@ -5,7 +5,14 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
-## Werkstand Birdspot — releasekandidaat 1.27.34 (26 november 2026)
+## Werkstand Birdspot — geïntegreerde kandidaat 1.27.35 (26 november 2026)
+
+**Release HOLD.** Concept-PR [#370](https://github.com/saddamsmit-source/Birdspot-Library/pull/370) bundelt GPS-herstel en F3-REV2-R04b op de vastgelegde basis van #369. De kandidaat krijgt een eigen app-cache. Een handmatig gekozen weerlocatie blijft bij volle opslag voor de sessie bruikbaar. Bij uitval van de weerservice blijven de locatieknoppen beschikbaar als GPS ontbreekt. [GPS-dossier](docs/release/GPS01_WEERLOCATIE_2026-11-26_DRAFT.md)
+
+- Lokale QA op de kandidaat dekt GPS, opslag en heropening, vergelijkingskaarten op mobiel en offline en de upgrade vanaf het 1.27.34-codecheckpoint. Een beveiligde preview op deze commit, echte GPS op Samsung en opslaan na herkenning van een echte vogel staan open.
+- F3 staat op 140/140 inhoudelijk bekeken, 12/140 herbeoordeeld en 0 volledige F3-PASS. Het besluit voor de drie spechten is verwerkt. R05 wacht op een afzonderlijk eigenaarbesluit. [R04b-dossier](docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md) · [F3-register](docs/fotokwaliteit/F3_140_HERCONTROLE_V0.1_DRAFT.json)
+
+## Historisch checkpoint 1.27.34 (26 november 2026)
 
 **Peildatum** 26 november 2026. **Appcode-kandidaat `e438bfc449f70ac2965ed581d6843927146a68b1`** (versie **1.27.34**), concept-PR #367 op de keten #354 → … → #365 (1.27.33, `3a03c84`) → #366 (AS-01, `ca9e388`). Deze README en de releasenotities horen bij PR #367 en wijzigen geen appcode. `main` blijft op Release 1.14.0 (`5bf6704`); GitHub Pages toont nog de openbare reviewversie 1.27.31 (`0f9f631`). **Release HOLD.** [Releasenotities 1.27.34](docs/release/RELEASE_1.27.33_CANDIDATE.md)
 

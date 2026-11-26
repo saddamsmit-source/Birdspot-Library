@@ -258,7 +258,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOUT, VB_HVH, VB_5D).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/houtduif",
+              "readDate": "2026-11-26",
+              "findings": "Witte vleugelbaan, witte halsvlek bij volwassen vogels.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOUT, VB_HVH, VB_5D)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron. Eigenaarbesluit C (23-11-2026 16:56): alleen werkvolgorde.",
             "additional": "Repo-geregistreerd: Cornell CL_WP, BTO_DUIVEN, British Garden Birds GB_SD (eerste ronde); in REV2 niet hergelezen.",
             "independence": "NOT VERIFIED - technische QA ChatGPT op 3dd7bad door eigenaar geaccepteerd; onafhankelijke biologische/fotoreview niet vastgelegd"
@@ -294,7 +301,6 @@
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet hergelezen (toestemming)",
             "G7 geen lokaal gidsaudio",
             "Onafhankelijke biologische/fotoreview open"
           ],
@@ -509,7 +515,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOLEN, VB_HVH, VB_5D).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/holenduif",
+              "readDate": "2026-11-26",
+              "findings": "Geen witte vleugelbaan, groen glanzende hals en donkere eindband.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_HOLEN, VB_HVH, VB_5D)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron. Eigenaarbesluit C (23-11-2026 16:56): alleen werkvolgorde.",
             "additional": "Repo-geregistreerd: RSPB_SD, BTO_DUIVEN, GB_SD (eerste ronde); in REV2 niet hergelezen. Sovon-referentie sp003 nog open uit F3-R01.",
             "independence": "NOT VERIFIED - technische QA ChatGPT op 3dd7bad door eigenaar geaccepteerd; onafhankelijke biologische/fotoreview niet vastgelegd"
@@ -545,7 +558,6 @@
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet hergelezen (toestemming)",
             "G5b geen gelijkwaardige vrije-vluchtfoto (vluchtpaar met Houtduif verborgen)",
             "G7 geen lokaal gidsaudio",
             "Onafhankelijke biologische/fotoreview open"
@@ -763,7 +775,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_TT, VB_ZT, VB_5D).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/turkse-tortel",
+              "readDate": "2026-11-26",
+              "findings": "Donkere nekband en lichte buitenste staartpennen.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - directe soortpagina niet opnieuw gelezen: WebFetch-toestemming twee keer gevraagd (23-11-2026 ~13:30 en ~15:40 CET) en niet beantwoord; geen omweg gebruikt. Eerste-rondelezing 10-11-2026 blijft traceerbaar in knowledge.json _sources (VB_TT, VB_ZT, VB_5D)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterstrom; Kosmos, 3e herziene druk 2023; ISBN 9789043930253) in deze sessie; pagina en soortpassage niet gelezen. Geen vervanging door andere bron. Eigenaarbesluit C (23-11-2026 16:56): alleen werkvolgorde.",
             "additional": "Repo-geregistreerd: Blasco-Zumeta BZ_CD, eBird EB_ETD, birdspot.co.uk BS_TD, Cornell CL_TURKSETORTEL/CL_DUIVEN, LICG_LACHDUIF, Oiseaux.net ON_CD, ELO_CD (eerste ronde); in REV2 niet hergelezen.",
             "independence": "NOT VERIFIED - technische QA ChatGPT op 3dd7bad door eigenaar geaccepteerd; onafhankelijke biologische/fotoreview niet vastgelegd"
@@ -799,7 +818,6 @@
           "privacy": "VERIFIED - geen locatie-/privacygevoelige gegevens in kaarttekst of fotobijschriften (EXIF/GPS verwijderd volgens modifications)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet hergelezen (toestemming)",
             "G7 geen lokaal gidsaudio",
             "Onafhankelijke biologische/fotoreview open"
           ],
@@ -1084,7 +1102,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_BUIZ).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/buizerd",
+              "readDate": "2026-11-26",
+              "findings": "Variabel kleed, brede vleugel en korte ronde staart.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_BUIZ)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -1155,7 +1180,6 @@
           "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
-            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
             "G5 audio niet menselijk beluisterd; alarmclip 0,84 s; xeno-canto-rechten niet hercontroleerd (beperkt C)",
             "G7 iNaturalist-licenties 4 foto's niet herbevestigd (API 404)",
             "Vluchtfoto van onderen is klein in beeld (bruikbaar, geen topkwaliteit)",
@@ -1455,7 +1479,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_SPERWER, VB_SPERWER_MV, VB_HVS).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/sperwer",
+              "readDate": "2026-11-26",
+              "findings": "Weinig uitstekende kop, lange hoekige staart en dwarsbandering.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_SPERWER, VB_SPERWER_MV, VB_HVS)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -1509,7 +1540,6 @@
           "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
-            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
             "G5 audio niet menselijk beluisterd (beperkt C)",
             "Rustfotopaar volwassen vrouwtjes ontbreekt",
             "Onafhankelijke biologische/fotoreview open"
@@ -1828,7 +1858,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_HAVIK, VB_HVS).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/havik",
+              "readDate": "2026-11-26",
+              "findings": "Uitstekende kop, ronde staartpunt en lengtestrepen bij jonge vogels.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - directe soortpagina niet gelezen: WebFetch-toestemming 23-11-2026 ~17:05 CET gevraagd (eigenaar staat bronlezing toe, besluit 16:56) maar de hostprompt werd niet beantwoord; geen omweg. Eerste-rondelezing blijft traceerbaar in knowledge.json _sources (VB_HAVIK, VB_HVS)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -1899,7 +1936,6 @@
           "quickPrimary": "VERIFIED (code/render) - toegepast volgens eigenaarbesluit C 23-11-2026 16:56",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED (beperkt C)",
-            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
             "G5 audio niet menselijk beluisterd (beperkt C)",
             "G7 iNaturalist-licenties 2 foto's; herkomst vrouwtje-vluchtfoto",
             "Onafhankelijke biologische/fotoreview open"
@@ -2277,7 +2313,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_TOREN).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/torenvalk",
+              "readDate": "2026-11-26",
+              "findings": "Roodbruine rug, lange staart en vaak bidden.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_TOREN)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -2343,7 +2386,6 @@
           "quickPrimary": "VERIFIED (code/render) - quickPrimary [0,1] volgens eigenaarbesluit 23-11-2026 22:10 (alleen R03-soorten)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
             "G5 Audio niet menselijk beluisterd",
             "G6 Boomvalk/Smelleken alleen tekst (geen gidsfoto's)",
             "Onafhankelijke biologische/fotoreview open"
@@ -2675,7 +2717,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_SLECHT).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/slechtvalk",
+              "readDate": "2026-11-26",
+              "findings": "Bij volwassen vogels zwarte kap en baardstreep, zware borst en spitse vleugels.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_SLECHT)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -2725,7 +2774,6 @@
           "quickPrimary": "VERIFIED (code/render) - quickPrimary [1,2] volgens eigenaarbesluit 23-11-2026 22:10 (alleen R03-soorten)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
             "G7 Alle zes foto's niet-Europees of herkomst onbekend (India 2x, Californie, VS/onbekend 3x); juveniel donker Noord-Amerikaans type",
             "G8 Twee iNaturalist-licenties niet herbevestigd (API 404)",
             "G5 Audio niet menselijk beluisterd; bron noemt geen roeptype of herkomst",
@@ -2863,7 +2911,7 @@
             "proposalR03d": {
               "date": "2026-11-24",
               "reference": "Eigenaarbesluit R03c-QA (chat 24-11-2026 12:16 CET), uitgevoerd als F3-REV2-R03d in PR #353",
-              "status": "VOORSTEL - wacht op afzonderlijk definitief eigenaarbesluit; niet geïmporteerd, niet actief, geen FULL PASS",
+              "status": "AFGEWEZEN - eigenaarbesluit NEE van 24-11-2026; auditbewijs behouden, nooit als gidsfoto geïmporteerd.",
               "replaces": "/assets/species/plumage/sp009-male-flight.webp (In vlucht, volwassen; ook in paar Torenvalk–Slechtvalk volwassen in vlucht)",
               "candidate": {
                 "title": "File:Falco peregrinus - San Giuliano Terme (Toscana).jpg",
@@ -2914,7 +2962,14 @@
                 "ondersoort onbekend",
                 "onafhankelijke foto-/soortreview open"
               ],
-              "ifApproved": "kleine import van één foto (geen batch) met zes-puntscontrole, oude foto naar retired met historie en credits, vluchtcontrole/soortaudit bijwerken, render-diff"
+              "ifApproved": "kleine import van één foto (geen batch) met zes-puntscontrole, oude foto naar retired met historie en credits, vluchtcontrole/soortaudit bijwerken, render-diff",
+              "ownerDecisionR04b": {
+                "decision": "NEE",
+                "date": "2026-11-24",
+                "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/354#issuecomment-7134854859",
+                "result": "Afgewezen voor gidsgebruik. Historische bronaudit blijft beschikbaar."
+              },
+              "previousStatus": "VOORSTEL - wacht op afzonderlijk definitief eigenaarbesluit; niet geïmporteerd, niet actief, geen FULL PASS"
             }
           },
           "resolvedInR03c": [
@@ -3273,7 +3328,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_GBS, VB_GBS_MBS).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/grote-bonte-specht",
+              "readDate": "2026-11-26",
+              "findings": "Grote witte schoudervlekken, rode onderstaart en mogelijk een rode kruin bij juvenielen.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - WebFetch-toestemming 23-11-2026 ~23:00 CET gevraagd (eigenaar staat bronlezing toe), hostprompt onbeantwoord; niet opnieuw geprobeerd, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_GBS, VB_GBS_MBS)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -3327,7 +3389,6 @@
           "quickPrimary": "VERIFIED (code/render) - quickPrimary [0,1] volgens eigenaarbesluit 23-11-2026 22:10 (alleen R03-soorten)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
             "G13 Audio niet menselijk beluisterd; roffel-auteur op Commons met gebruikersnaam",
             "Onafhankelijke biologische/fotoreview open"
           ],
@@ -3507,7 +3568,7 @@
           "base": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
           "pr": 354,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "REVIEWED / OWNER DECISION B EXECUTED LOCALLY / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
           "photos": [
             {
@@ -3581,7 +3642,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_KLEINE_BONTE_SPECHT, RSPB_KLEINE_BONTE_SPECHT, WT_KLEINE_BONTE_SPECHT).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kleine-bonte-specht",
+              "readDate": "2026-11-26",
+              "findings": "Dwarsbandering, geen rode onderstaart, rode kruin bij volwassen mannetjes.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_KLEINE_BONTE_SPECHT, RSPB_KLEINE_BONTE_SPECHT, WT_KLEINE_BONTE_SPECHT)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -3589,7 +3657,7 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - quickPrimary [geen rode onderstaart, rode kruin mannetje] onder het kritische kenmerk rugbandering; formaat onder Meer kenmerken (niet als enig kenmerk)",
             "herkenning": "PARTIALLY TESTED - mannetje/vrouwtje consistent met foto's; juveniel alleen tekst (geen foto); brontekst VB niet herlezen",
-            "lijktOp": "PARTIALLY TESTED - fotoparen met Grote Bonte Specht (mannetjes, vrouwtjes; gelabelde rijen uit R03b) en Middelste Bonte Specht (zonder rijen; rollabel Middelste toont paartitel \"Kleine of middelste bonte specht?\"); vlucht alleen via GBS-paar (Kleine zonder vluchtfoto); 2 kritische kaarten (GBS, Middelste)"
+            "lijktOp": "PARTIALLY TESTED - R04b: gelabelde vergelijkingsrijen toegevoegd en in beide richtingen getest; definitieve onafhankelijke beoordeling open."
           },
           "lookalikes": [
             {
@@ -3602,7 +3670,7 @@
               "pair": "sp017<->sp020 Kleine-Middelste Bonte Specht",
               "bothDirections": "VERIFIED",
               "photoEquivalence": "PARTIALLY TESTED - Kleine-mannetje tegen Middelste zonder kleedlabel; rollabel onjuist",
-              "diagnosticText": "PARTIALLY TESTED - vrije tekst zonder gelabelde rijen; kritische kaart formaat en onderstaart"
+              "diagnosticText": "PARTIALLY TESTED - R04b: gebronde gelabelde rijen in beide richtingen; onafhankelijke eindbeoordeling open."
             }
           ],
           "lookalikeRegister": "LK-102, LK-107 (Grote) en LK-109 (Middelste) in SOORTVERWARRING_REGISTER (F3-REV2-R04)",
@@ -3635,26 +3703,52 @@
           "quickPrimary": "VERIFIED (code/render) - quickPrimary [2,3] volgens eigenaarbesluit 24-11-2026 12:16 (alleen R04-soorten)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet gelezen (hostprompt onbeantwoord)",
-            "G14 Hoofdfoto: scherp maar sterk versleten/bevlekt kleed met warme tinten; dwarsgestreepte rug nauwelijks zichtbaar - weinig representatief als eerste beeld",
-            "G15 Geen juveniele foto en geen echte vrije-vluchtfoto",
-            "G16 Paar Kleine-Middelste: rollabel toont paartitel, geen gelabelde rijen",
             "G5 Audio niet menselijk beluisterd",
-            "Onafhankelijke biologische/fotoreview open"
+            "Onafhankelijke biologische/fotoreview open",
+            "G14 Originele foto met zichtbare rugbandering beoordeeld als kandidaat. Scherpte en pasvorm van de hoofdfoto blijven open.",
+            "G15 Juvenielbeeld en aantoonbaar vrije vlucht ontbreken.",
+            "G16 Gelabelde rijen en kleedlabel hersteld. Gelijkwaardigheid en onafhankelijk fotobewijs blijven open."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null,
-            "date": null,
-            "reference": null,
-            "options": [
-              "A - verder onderzoeken",
-              "B - gericht verbeteren",
-              "C - voorlopig doorgaan (alleen met expliciet besluit)"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/354#issuecomment-7134854859",
+            "remainingOpen": [
+              "G1 ANWB-soortpassage NOT TESTED",
+              "G5 Audio niet menselijk beluisterd",
+              "Onafhankelijke biologische/fotoreview open",
+              "G14 Originele foto met zichtbare rugbandering beoordeeld als kandidaat. Scherpte en pasvorm van de hoofdfoto blijven open.",
+              "G15 Juvenielbeeld en aantoonbaar vrije vlucht ontbreken.",
+              "G16 Gelabelde rijen en kleedlabel hersteld. Gelijkwaardigheid en onafhankelijk fotobewijs blijven open."
             ]
           },
           "fullPass": false,
-          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit."
+          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "r04bDossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md#r04b--uitvoering-eigenaarbesluit",
+          "headPhotoCandidateR04b": {
+            "status": "OPEN - kandidaat beoordeeld aan origineel; rugbandering onvoldoende zichtbaar voor de beoogde hoofdfotorol.",
+            "source": "https://commons.wikimedia.org/wiki/File:Lesser_spotted_woodpecker_(50274168577).jpg",
+            "attributionOnSource": "hedera.baltica from Wrocław, Poland (EXIF: Pawel Wiecek)",
+            "licenseOnSource": "CC BY-SA 2.0",
+            "identityOnSource": "Mannetje op een tak, Polen. Bronbeeld 1300 × 1149.",
+            "originalSha1Observed": "bddcac20bfc1bc086d82c1769a7e09aa38ab23b4",
+            "visualReview": "Origineel vergeleken met bestaande hoofdfoto: neutralere kleur, rode kruin en gevouwen vleugel goed zichtbaar. De zijwaartse houding verbergt de rugbandering grotendeels. Geen vervanging."
+          },
+          "r04bSourceFollowup": {
+            "date": "2026-11-26",
+            "status": "PARTIALLY TESTED",
+            "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
+            "photo": {
+              "status": "OPEN - bronbestand beoordeeld als kandidaat",
+              "source": "https://commons.wikimedia.org/wiki/File:Dryobates_minor_%28Kleinspecht%29_2023-04-07_%2801%29.jpg",
+              "creator": "Simon Mannweiler",
+              "licenseOnSource": "CC BY-SA 4.0",
+              "sha256": "a035107faef78daa6d6cd41cdd8135462c23012a996465735bd6a7c0349589a2",
+              "role": "Rugbandering mannetje",
+              "assessment": "Origineel met rode kruin en duidelijkere dwarsbandering op de rug. Zacht op originele grootte. Kandidaat voor rugkenmerk, hoofdfotorol open."
+            }
+          }
         }
       }
     },
@@ -3867,7 +3961,7 @@
           "base": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
           "pr": 354,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "REVIEWED / OWNER DECISION B EXECUTED LOCALLY / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
           "photos": [
             {
@@ -3950,13 +4044,14 @@
               "author": "Philippe Kurlapski",
               "license": "CC BY 1.0",
               "visual": "Kopdetail met matte rode kruin, lichte snavel, donkere oogpartij; geen volledig vogelportret.",
-              "identity": "PARTIALLY TESTED (soort visueel; leeftijd volgens eerdere Commons-beschrijving \"pic noir juvénile\" (09-11-2026); de Commons-API geeft nu geen beschrijving of auteur terug)",
+              "identity": "PARTIALLY TESTED - de bron noemt expliciet juveniel en de soort is visueel herkenbaar. Zelfstandige controle van leeftijd op dit kopdetail blijft open.",
               "quality": "VERIFIED - scherp kopdetail",
               "roleCheck": "PARTIALLY TESTED - juveniel volgens bron; uit het kopdetail alleen niet te bewijzen",
               "blobSha": "1ea547cee352fd1ed80ad838dfb0e712f388c8f3",
-              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json",
-              "rightsREV2": "PARTIALLY TESTED - licentie CC BY 1.0 gelijk en zelfde opname (r=1.0, SHA-1 d0d3ff3ba4e7905e88b00a44dae51cc259bdedca), maar de Commons-API geeft geen auteur of beschrijving (commons-author-empty); registerauteur Philippe Kurlapski uit de eerdere controle van 09-11-2026 blijft",
-              "openRights": "Auteur op Commons-API leeg; naamsvermelding niet opnieuw bevestigd"
+              "rightsEvidence": "docs/media-intake/2026-11-24/origcheck-rev2-r04/origcheck.json + https://commons.wikimedia.org/wiki/File:Dryocopus_martius_03.jpg",
+              "rightsREV2": "VERIFIED - 26-11: maker en CC BY 1.0 bevestigd op de openbare Commons-bestandspagina en app-credit gecontroleerd; origineel en match vastgelegd in het R04-dossier.",
+              "openRights": "Auteur op Commons-API leeg; naamsvermelding niet opnieuw bevestigd",
+              "sourceSha1": "d0d3ff3ba4e7905e88b00a44dae51cc259bdedca"
             },
             {
               "role": "In vlucht (geslacht onbekend)",
@@ -3985,7 +4080,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_ZWARTE_SPECHT, NAT_ZWARTE_SPECHT, JENNI_ZWARTE_SPECHT).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-specht",
+              "readDate": "2026-11-26",
+              "findings": "Verschil in kruinrood bij man en vrouw, relatief rechte vlucht, vluchtroep en roffel.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_ZWARTE_SPECHT, NAT_ZWARTE_SPECHT, JENNI_ZWARTE_SPECHT)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -3993,14 +4095,14 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - quickPrimary [geheel zwart en groot, rood op de kop man/vrouw] onder kritisch kenmerk zwart tegenover Groene Specht; snavel en vlucht onder Meer kenmerken",
             "herkenning": "PARTIALLY TESTED - mannetje (2 foto's), vrouwtje en juveniel-kopdetail consistent; jaarling alleen tekst; brontekst VB niet herlezen",
-            "lijktOp": "PARTIALLY TESTED - fotoparen met Groene Specht (mannetjes in rust, vlucht) zonder gelabelde rijen; 1 kritische kaart (Groene Specht); geen andere verwarringssoorten in het profiel"
+            "lijktOp": "PARTIALLY TESTED - R04b: gelabelde vergelijkingsrijen toegevoegd en in beide richtingen getest; definitieve onafhankelijke beoordeling open."
           },
           "lookalikes": [
             {
               "pair": "sp018<->sp019 Zwarte-Groene Specht",
               "bothDirections": "VERIFIED",
               "photoEquivalence": "VERIFIED - rust (mannetjes) en vlucht aanwezig",
-              "diagnosticText": "PARTIALLY TESTED - vrije tekst zonder gelabelde rijen; kritische kaart in beide richtingen"
+              "diagnosticText": "PARTIALLY TESTED - R04b: gebronde gelabelde rijen in beide richtingen; onafhankelijke eindbeoordeling open."
             }
           ],
           "lookalikeRegister": "LK-110 (rust) en LK-111 (vlucht) met Groene Specht in SOORTVERWARRING_REGISTER (F3-REV2-R04)",
@@ -4013,9 +4115,10 @@
                 "source": "https://commons.wikimedia.org/wiki/File:Black_woodpecker_Dryocopus_martius,_flying_call.ogg",
                 "author": "Alexander Kürthy",
                 "license": "CC BY-SA 4.0",
-                "rights": "PARTIALLY TESTED - licentie gelijk (CC BY-SA 4.0); Commons-auteur 'SanoAK: Alexander Kürthy' voegt gebruikersnaam toe aan registernaam 'Alexander Kürthy'; SHA-1 4c00212ce9468a7e40744f8e37d75d3f5779bdba",
+                "rights": "VERIFIED - 26-11: maker SanoAK: Alexander Kürthy en CC BY-SA 4.0 op bestandspagina; bijbehorende maker, licentie en MP3-conversie vermeld in Birdspot.",
                 "status": "PARTIALLY TESTED - bestand aanwezig (7.0 s) en bron geregistreerd; soort en geluidstype niet door een mens beluisterd",
-                "listenedBy": null
+                "listenedBy": null,
+                "sourceDateNote": "2012 in datumveld en Slowaakse omschrijving, 2015 in Engelse omschrijving. Onafhankelijke luistercontrole staat open."
               },
               {
                 "path": "/assets/species/audio/sp018-sit-call-app.mp3",
@@ -4033,26 +4136,48 @@
           "quickPrimary": "VERIFIED (code/render) - quickPrimary [0,2] volgens eigenaarbesluit 24-11-2026 12:16 (alleen R04-soorten)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet gelezen",
-            "G17 Juveniel alleen als kopdetail; leeftijd volgt de bron; Commons-API geeft nu geen auteur of beschrijving (rechten PARTIALLY TESTED)",
-            "G18 Geen roffel-opname (alleen tekst); vluchtroep-auteur op Commons met gebruikersnaam",
-            "G19 Paren met Groene Specht zonder gelabelde rijen; geen andere verwarringssoort onderzocht",
             "G5 Audio niet menselijk beluisterd",
-            "Onafhankelijke biologische/fotoreview open"
+            "Onafhankelijke biologische/fotoreview open",
+            "G17 Commons toont Philippe Kurlapski, CC BY 1.0 en de omschrijving juveniel. De zelfstandige leeftijdsbepaling bij dit kopdetail blijft open.",
+            "G18 Roffelkandidaat met broncredit en werkende decoder. Menselijke luistercontrole en opname in de gids blijven open. Jaarconflict bij de bestaande vluchtroep blijft geregistreerd.",
+            "G19 Gelabelde rijen met Groene Specht hersteld. Definitieve onafhankelijke beoordeling blijft open."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null,
-            "date": null,
-            "reference": null,
-            "options": [
-              "A - verder onderzoeken",
-              "B - gericht verbeteren",
-              "C - voorlopig doorgaan (alleen met expliciet besluit)"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/354#issuecomment-7134854859",
+            "remainingOpen": [
+              "G1 ANWB-soortpassage NOT TESTED",
+              "G5 Audio niet menselijk beluisterd",
+              "Onafhankelijke biologische/fotoreview open",
+              "G17 Commons toont Philippe Kurlapski, CC BY 1.0 en de omschrijving juveniel. De zelfstandige leeftijdsbepaling bij dit kopdetail blijft open.",
+              "G18 Roffelkandidaat met broncredit en werkende decoder. Menselijke luistercontrole en opname in de gids blijven open. Jaarconflict bij de bestaande vluchtroep blijft geregistreerd.",
+              "G19 Gelabelde rijen met Groene Specht hersteld. Definitieve onafhankelijke beoordeling blijft open."
             ]
           },
           "fullPass": false,
-          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit."
+          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "r04bDossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md#r04b--uitvoering-eigenaarbesluit",
+          "r04bSourceFollowup": {
+            "date": "2026-11-26",
+            "status": "PARTIALLY TESTED",
+            "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
+            "age": {
+              "status": "PARTIALLY TESTED",
+              "source": "https://blascozumeta.wimbitek.com/specie_files/08630_ENG_Dryocopus_martius_aranzadi.pdf",
+              "assessment": "De soortbron draagt doffer kleed als steun. De sterkere leeftijdsinformatie uit de buitenste handpen ontbreekt op het kopdetail."
+            },
+            "audio": {
+              "status": "OPEN - bronbestand beoordeeld als kandidaat",
+              "source": "https://commons.wikimedia.org/wiki/File:Black_woodpecker_Dryocopus_martius_female_drumming.ogg",
+              "creator": "SanoAK: Alexander Kürthy",
+              "licenseOnSource": "CC BY-SA 4.0",
+              "sha256": "39a773323052b89c5dfecc175edbe4e4ac4c68e4acd4b48af0adbf17578babfb",
+              "role": "Roffel volgens bron",
+              "assessment": "Originele 4,18 s Ogg helemaal gedecodeerd. Menselijke soort- en geluidsbeoordeling en hoorkwaliteit staan open."
+            }
+          }
         }
       }
     },
@@ -4265,7 +4390,7 @@
           "base": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
           "pr": 354,
           "reviewer": "Claude (Opus 5.5, Claude Code cloud) - eigen beoordeling, geen onafhankelijke review",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "REVIEWED / OWNER DECISION B EXECUTED LOCALLY / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
           "photos": [
             {
@@ -4386,7 +4511,14 @@
             }
           ],
           "sources": {
-            "vogelbescherming": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_GROENE_SPECHT).",
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht",
+              "readDate": "2026-11-26",
+              "findings": "Oogmasker en baardstreep, gevlekt jeugdkleed en golvende vlucht.",
+              "scope": "Herkenningspassage gelezen en aan de bestaande voornaamste herkenningskenmerken gekoppeld. Andere deelclaims houden hun eigen bewijsstatus.",
+              "previousAssessment": "NOT TESTED in REV2 - WebFetch-toestemming 24-11-2026 ~12:50 CET gevraagd (Kleine Bonte Specht), hostprompt onbeantwoord; niet herhaald, geen omweg. Eerste-rondelezing traceerbaar in knowledge.json _sources (VB_GROENE_SPECHT)."
+            },
             "anwb": "NOT TESTED - geen rechtmatig toegankelijk exemplaar van ANWB Vogelgids van Europa (Svensson, Mullarney, Zetterström; Kosmos, 3e herziene druk 2023; ISBN 9789043930253); pagina niet gelezen.",
             "additional": "Repo-geregistreerde eerste-rondebronnen in knowledge.json _sources; in REV2 niet hergelezen. Commons-beschrijvingen/categorieën per foto gelezen via origcheck.",
             "independence": "NOT VERIFIED - geen onafhankelijke review; Claude-herinspectie telt niet als onafhankelijk"
@@ -4394,14 +4526,15 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - quickPrimary [olijfgroene rug en rode kruin, oogmasker en baardstreep] onder kritisch kenmerk stuit en vlucht; juveniel en vlucht onder Meer kenmerken",
             "herkenning": "VERIFIED (tekstconsistentie) - mannetje (rode kern baardstreep op volle resolutie), vrouwtje (zwarte baardstreep), juveniel (gevlekt) en vrouwtje in vlucht consistent; brontekst VB niet herlezen",
-            "lijktOp": "PARTIALLY TESTED - fotoparen met Zwarte Specht (rust, vlucht) zonder rijen; Wielewaal alleen tekst; Grijskopspecht (sp482, dwaalgast zonder profiel en foto's) niet vergeleken; 1 kritische kaart; kennisprofiel zonder \"Let op\" en zonder similar-lijst"
+            "lijktOp": "PARTIALLY TESTED - R04b: gelabelde vergelijkingsrijen toegevoegd en in beide richtingen getest; definitieve onafhankelijke beoordeling open.",
+            "letOp": "PARTIALLY TESTED - gebronde Let op voor juveniel, geslacht en tegenlicht lokaal getoetst."
           },
           "lookalikes": [
             {
               "pair": "sp019<->sp018 Groene-Zwarte Specht",
               "bothDirections": "VERIFIED",
               "photoEquivalence": "VERIFIED - rust (mannetjes) en vlucht",
-              "diagnosticText": "PARTIALLY TESTED - vrije tekst zonder gelabelde rijen"
+              "diagnosticText": "PARTIALLY TESTED - R04b: gebronde gelabelde rijen in beide richtingen; onafhankelijke eindbeoordeling open."
             },
             {
               "pair": "sp019<->sp113 Groene Specht-Wielewaal",
@@ -4413,7 +4546,7 @@
               "pair": "sp019<->sp482 Groene Specht-Grijskopspecht",
               "bothDirections": "NOT TESTED",
               "photoEquivalence": "BLOCKED - geen kaartinhoud of foto's voor sp482",
-              "diagnosticText": "NOT TESTED - geen gebronde claim in het profiel"
+              "diagnosticText": "PARTIALLY TESTED - Naturalis onderbouwt de grijze kop zonder breed zwart masker bij Grijskopspecht. Volledige tekst- en beeldvergelijking in Birdspot staat open."
             }
           ],
           "lookalikeRegister": "LK-060 (Wielewaal), LK-110 en LK-111 (Zwarte Specht) in SOORTVERWARRING_REGISTER",
@@ -4446,25 +4579,45 @@
           "quickPrimary": "VERIFIED (code/render) - quickPrimary [0,1] volgens eigenaarbesluit 24-11-2026 12:16 (alleen R04-soorten)",
           "materialGaps": [
             "G1 ANWB-soortpassage NOT TESTED",
-            "G2 Vogelbescherming niet gelezen",
-            "G20 Grijskopspecht niet vergeleken (geen bron, profiel of foto's)",
-            "G21 Paren met Zwarte Specht zonder gelabelde rijen; 1 kritische kaart; geen \"Let op\"-tekst (bv. vrouwtje/juveniel, tegenlicht)",
             "G5 Audio niet menselijk beluisterd",
-            "Onafhankelijke biologische/fotoreview open"
+            "Onafhankelijke biologische/fotoreview open",
+            "G20 Volwassen mannetjes brontechnisch vergeleken. Europees referentiebeeld gevonden. Foto-equivalentie en de volledige gidsvergelijking blijven open.",
+            "G21 Gelabelde rijen en Let op toegevoegd. Definitieve onafhankelijke beoordeling blijft open."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null,
-            "date": null,
-            "reference": null,
-            "options": [
-              "A - verder onderzoeken",
-              "B - gericht verbeteren",
-              "C - voorlopig doorgaan (alleen met expliciet besluit)"
+            "status": "DECIDED",
+            "decision": "B - gericht verbeteren",
+            "date": "2026-11-24",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/354#issuecomment-7134854859",
+            "remainingOpen": [
+              "G1 ANWB-soortpassage NOT TESTED",
+              "G5 Audio niet menselijk beluisterd",
+              "Onafhankelijke biologische/fotoreview open",
+              "G20 Volwassen mannetjes brontechnisch vergeleken. Europees referentiebeeld gevonden. Foto-equivalentie en de volledige gidsvergelijking blijven open.",
+              "G21 Gelabelde rijen en Let op toegevoegd. Definitieve onafhankelijke beoordeling blijft open."
             ]
           },
           "fullPass": false,
-          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit."
+          "comparisonRule": "Harde eigenaarregel (23-11 en 24-11-2026): vergelijkingen zo uitgebreid mogelijk in tekst en verdedigbare foto; quickPrimary vervangt de volledige vergelijking nooit.",
+          "r04bDossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md#r04b--uitvoering-eigenaarbesluit",
+          "r04bSourceFollowup": {
+            "date": "2026-11-26",
+            "status": "PARTIALLY TESTED",
+            "dossier": "docs/fotokwaliteit/F3_REV2_R04_SPECHTEN_2026-11-24_DRAFT.md",
+            "photo": {
+              "status": "OPEN - bronbestand beoordeeld als kandidaat",
+              "source": "https://commons.wikimedia.org/wiki/File:Grauspecht_HB-01.jpg",
+              "creator": "Boschfoto",
+              "licenseOnSource": "CC BY-SA 3.0",
+              "sha256": "c3ba09cba98edbd2b00b9cf9800658a051bf1817154f4a815a9bee9fd72dcbbb",
+              "role": "Grijskopspecht mannetje in rust",
+              "assessment": "Europees zijaanzicht bij een voederplek met zicht op grijze kop en rode voorhoofdvlek. Gelijkwaardigheid en gidscontrole blijven open."
+            },
+            "identificationSources": [
+              "https://birds-europe.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/nsr_taxon.php?cat=TAB_DESCRIPTION&id=130774",
+              "https://www.umweltbundesamt.at/fileadmin/site/themen/naturschutz/band_1_vogelarten.pdf"
+            ]
+          }
         }
       }
     },
@@ -17733,7 +17886,7 @@
           "sp018",
           "sp019"
         ],
-        "status": "REVIEWED / OWNER GATE OPEN",
+        "status": "OWNER DECISION B EXECUTED LOCALLY / OPEN POINTS REMAIN",
         "date": "2026-11-24",
         "pr": 354,
         "baseSHA": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
@@ -17743,8 +17896,8 @@
     "counts": {
       "total": 140,
       "reexamined": 12,
-      "ownerGateOpen": 3,
-      "ownerDecisions": 9,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 12,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -17791,6 +17944,12 @@
         "time": "12:16",
         "batch": "F3-REV2-R03",
         "decision": "R03c-QA geaccepteerd; GBS-auditstatus consistent; Toscane-kandidaat voorbereiden zonder import; G8 open zonder retries; start R04 (sp017, sp018, sp019) na geslaagd R03d-checkpoint"
+      },
+      {
+        "date": "2026-11-24",
+        "batch": "F3-REV2-R04",
+        "decision": "B voor sp017, sp018 en sp019. Toscane-kandidaat NEE. R05 niet starten.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/354#issuecomment-7134854859"
       }
     ]
   }
