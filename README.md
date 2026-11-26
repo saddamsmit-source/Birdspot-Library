@@ -1,4 +1,7 @@
-# Birdspot Library
+# Aviandra — nieuwe merkidentiteit (huidige implementatie: Birdspot Library)
+
+**Eigenaarbesluit 26-11-2026:** de toekomstige zichtbare appnaam is **Aviandra**; goedgekeurd zijn het A-vleugellogo met gouden ster, de bestaande natuurkleuren en de exacte Home-indeling van de eigenaarreferentie. De uitwerking staat in [AVI-01A merk-/implementatiebrief](docs/branding/AVIANDRA_BRAND_IMPLEMENTATIE_2026-11-26_DRAFT.md). **Branding nog niet in de huidige app geïmplementeerd; release HOLD.** Huidige GitHub-repository, gebruikersdata, caches, navigatie en historische Birdspot-bronnen blijven ongewijzigd. Voor daadwerkelijke app- en documentactivering geldt een afzonderlijk werkspoor en QA.
+
 
 Persoonlijke bibliotheek van vogelwaarnemingen — App 002 in Kevins App Development
 Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
