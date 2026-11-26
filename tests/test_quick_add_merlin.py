@@ -63,8 +63,10 @@ def check(page, width):
     # Nieuwe eigenaarregel: een opname kan niet stil verdwijnen of automatisch blijvend worden opgeslagen.
     sheet.get_by_role('button', name='Sluiten').click()
     expect(sheet).to_be_visible()
-    expect(sheet.locator('#soundCaptureState')).to_contain_text('Stop eerst de opname')
-    sheet.get_by_role('button', name='Stop opname').click()
+    # AS-01: sluiten tijdens opname toont een zichtbare sluitvraag (opname loopt door tot de gebruiker kiest).
+    expect(sheet.locator('#soundExitTitle')).to_have_text('De opname loopt nog')
+    sheet.locator('[data-sound-exit="resume"]').click()
+    sheet.locator('#soundRecord').click()
     expect(sheet.locator('#soundPlayback')).to_be_visible()
     sheet.get_by_role('button', name='Sluiten').click()
     expect(sheet.locator('#soundExitPrompt')).to_be_visible()

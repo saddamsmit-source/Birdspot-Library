@@ -922,6 +922,11 @@
 .sound-exit-prompt[hidden] { display: none; }
 .sound-exit-prompt { display: grid; gap: 10px; padding: 14px; border: 2px solid var(--brand-mid); border-radius: var(--r-card); background: var(--surface); }
 .sound-exit-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.sound-exit-actions[hidden] { display: none; }
+.sound-exit-prompt:focus { outline: none; }
+/* AS-01: bij scrollen naar de sluitvraag niet achter de vaste kop of de vaste opnamebalk vallen. */
+.sound-exit-prompt { scroll-margin-block: 76px calc(96px + env(safe-area-inset-bottom, 0px)); }
+.sound-exit-actions [data-sound-exit="stop"] { background: var(--focus-ink); color: var(--focus-light); border-color: transparent; font-weight: 720; }
 .sound-exit-actions button, #soundSaveDraft { min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: var(--r-sm); color: var(--ink); background: var(--surface); }
 #soundExitState:empty { display: none; }
 

@@ -1,0 +1,36 @@
+name: Birdspot AS-01 audio-sluiten QA
+on:
+  pull_request:
+    paths: ['.github/workflows/as01-audiosluiten-qa.yml', 'src/**', 'styles/**', 'sw.js', 'index.html', 'tests/test_as01*', 'tests/test_quick_add_merlin.py']
+permissions:
+  contents: read
+jobs:
+  as01:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: AS-01 geluidsopnamemenu veilig afsluitbaar (T1–T8; T3–T5 simulatie)
+        run: |
+          set -o pipefail
+          python tests/test_as01_audiosluiten.py 2>&1 | tee as01.log
+      - name: Tegenproef — dezelfde test faalt op 3a03c84 (1.27.33 vóór AS-01)
+        run: |
+          mkdir -p /tmp/base && git archive 3a03c84b98de4d5e6c3709a5202273e3bd775e65 | tar -x -C /tmp/base
+          cp tests/test_as01_audiosluiten.py /tmp/base/tests/ && mkdir -p /tmp/base/tests/screenshots
+          cd /tmp/base
+          if python tests/test_as01_audiosluiten.py > base.log 2>&1; then
+            echo "Tegenproef FAIL: test slaagt ook op 3a03c84"; cat base.log; exit 1
+          fi
+          grep -q "Locator expected to be visible" base.log && echo "Tegenproef PASS: T1 faalt op 3a03c84 (geen zichtbare sluitvraag tijdens opname)"
+      - name: Bestaande geluidsroute (Merlin, concept, terug naar keuzes)
+        run: |
+          set -o pipefail
+          python tests/test_quick_add_merlin.py 2>&1 | tee quick_add.log
+          python tests/test_owner_sound_choices.py 2>&1 | tee owner_sound.log
