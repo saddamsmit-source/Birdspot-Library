@@ -20,8 +20,8 @@ def main():
   with sync_playwright() as pw:
    browser=pw.chromium.launch(headless=True)
    for width in (390,1365):
-    ctx=browser.new_context(viewport={'width':width,'height':844},service_workers='block')
-    p=ctx.new_page();p.goto(url);p.locator('#birdspotSplashSkip').click()
+    ctx=browser.new_context(viewport={'width':width,'height':844},service_workers='block',reduced_motion='reduce')
+    p=ctx.new_page();p.goto(url,wait_until='domcontentloaded');p.locator('#birdspotSplashSkip').click()
     p.locator('[data-nav="species"]').click() if p.locator('[data-nav="species"]').count() else p.get_by_role('button',name='Soorten',exact=True).click()
     assert p.locator('#speciesFilters [data-cat="alle"]').get_attribute('aria-pressed') == 'true'
     for sid,photo in pictured_species.items():
@@ -105,7 +105,7 @@ def main():
 
    # A first installation must also boot and open a guide photo after an offline reload.
    p.reload(wait_until='domcontentloaded')
-   p.locator('#birdspotSplashSkip').click()
+   expect(p.locator('#birdspotSplash')).to_have_count(0)
    p.get_by_role('button',name='Soorten',exact=True).click()
    assert p.locator('#speciesFilters [data-cat="alle"]').get_attribute('aria-pressed') == 'true'
    sid='sp057'  # Fitis heeft zowel een lokale gidsfoto als een soortkaart.

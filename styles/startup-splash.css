@@ -1,7 +1,4 @@
-/* Aviandra — cinematic 9:16 kingfisher opening.
- * Keep the owner-supplied artwork and display the current wordmark over it.
- * Fixed overlay does not alter the application's navigation/data state.
- */
+/* Aviandra — cinematic 9:16 kingfisher opening. */
 .birdspot-splash {
   position:fixed;
   inset:0;
@@ -16,7 +13,7 @@
   isolation:isolate;
   opacity:1;
   visibility:visible;
-  transition:opacity .48s ease,visibility .48s ease;
+  transition:opacity .32s ease,visibility .32s ease;
 }
 .birdspot-splash::before {
   content:"";position:absolute;inset:-28px;
@@ -30,10 +27,32 @@
 }
 .birdspot-splash__frame {
   position:relative;
+  z-index:2;
   width:min(100vw,56.25vh);
   width:min(100vw,56.25dvh);
   aspect-ratio:9 / 16;
   container-type:inline-size;
+}
+.birdspot-splash__video {
+  position:absolute;
+  z-index:1;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+}
+.birdspot-splash.is-video-playing .birdspot-splash__video {
+  opacity:1;
+  animation:aviandra-intro-push 5s ease-out both;
+}
+@keyframes aviandra-intro-push {
+  from {transform:scale(1);}
+  to {transform:scale(1.06);}
+}
+.birdspot-splash.is-video-playing .birdspot-splash__art {opacity:0;}
+@media (orientation:landscape) {
+  .birdspot-splash__video {object-fit:contain;}
 }
 .birdspot-splash__art {
   position:relative;z-index:1;
@@ -58,13 +77,18 @@
     linear-gradient(180deg,transparent,#000 12%,#000 94%,transparent);
   mask-composite:intersect;
 }
-.birdspot-splash.image-unavailable .birdspot-splash__frame {visibility:hidden;}
+.birdspot-splash.is-video-playing .birdspot-splash__wordmark {
+  text-shadow:0 2px 14px #071f18,0 1px 3px #071f18;
+}
+.birdspot-splash.is-video-playing .birdspot-splash__wordmark::before {display:none;}
+.birdspot-splash.image-unavailable:not(.is-video-playing) .birdspot-splash__frame {visibility:hidden;}
+.birdspot-splash.is-video-playing .birdspot-splash__fallback {display:none;}
 .birdspot-splash__skip {
   position:absolute;z-index:4;
   top:max(17px,env(safe-area-inset-top,0px));
   right:max(16px,env(safe-area-inset-right,0px));
   display:grid;place-items:center;
-  min-height:42px;padding:8px 17px;
+  min-height:44px;padding:8px 17px;
   border:1px solid rgba(248,227,183,.56);
   background:rgba(7,30,23,.58);
   color:#f5e8d0;
@@ -102,4 +126,5 @@
 .birdspot-splash__loading-note:empty {display:none;}
 @media(prefers-reduced-motion:reduce){
   .birdspot-splash {transition:none!important;}
+  .birdspot-splash.is-video-playing .birdspot-splash__video {animation:none;}
 }

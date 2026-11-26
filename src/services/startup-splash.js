@@ -1,75 +1,95 @@
-/**
- * Birdspot Library · five-second cinematic welcome splash.
- *
- * Runs before the app's module graph. The home route initializes underneath
- * and emits "birdspot:ready". Intro closes at five seconds, never before the
- * app is ready. Alleen de lokale introvoorkeur wordt bewaard.
- */
+/** De app start onder de welkomstvideo. Alleen de introvoorkeur wordt bewaard. */
 (() => {
   'use strict';
-  const splash=document.getElementById('birdspotSplash');
-  if(!splash)return;
-  const key = 'birdspot-welcome-seen';
+  const splash = document.getElementById('birdspotSplash');
+  if (!splash) return;
+
+  const key = 'aviandra-welcome-video-seen';
+  if (!navigator.onLine) {
+    splash.remove();
+    return;
+  }
   try {
     if (localStorage.getItem(key) === '1') {
       splash.remove();
       return;
     }
   } catch (_) { /* Privéprofiel zonder opslag blijft bruikbaar. */ }
-  const skip=splash.querySelector('#birdspotSplashSkip');
-  const image=splash.querySelector('.birdspot-splash__art');
-  const DURATION_MS=5000;
-  let ready=false,elapsed=false,skipRequested=false,closing=false,removed=false;
-  let dismissTimeout=null;
-  const startedAt=performance.now();
+  const skip = splash.querySelector('#birdspotSplashSkip');
+  const image = splash.querySelector('.birdspot-splash__art');
+  const video = splash.querySelector('.birdspot-splash__video');
+  const note = splash.querySelector('.birdspot-splash__loading-note');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const startedAt = performance.now();
+  let ready = false;
+  let elapsed = false;
+  let skipRequested = false;
+  let closing = false;
+  let introTimeout = setTimeout(endIntro, 5000);
 
-  function finish(){
-    if(removed)return;
-    removed=true;
+  function finish() {
+    if (video.hasAttribute('src')) {
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+    }
     try { localStorage.setItem(key, '1'); } catch (_) {}
     splash.remove();
-    window.dispatchEvent(new CustomEvent('birdspot:splash-hidden',{
-      detail:{elapsedMs:Math.round(performance.now()-startedAt)}
+    window.dispatchEvent(new CustomEvent('birdspot:splash-hidden', {
+      detail: { elapsedMs: Math.round(performance.now() - startedAt) }
     }));
   }
-  function maybeHide(){
-    if(closing||!ready||(!elapsed&&!skipRequested))return;
-    closing=true;
+
+  function maybeHide() {
+    if (closing || !ready || (!elapsed && !skipRequested)) return;
+    closing = true;
+    clearTimeout(introTimeout);
+    if (skipRequested || reducedMotion) {
+      finish();
+      return;
+    }
     splash.classList.add('is-exiting');
-    splash.setAttribute('aria-hidden','true');
-    skip?.setAttribute('disabled','');
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) finish();
-    else dismissTimeout=setTimeout(finish,550);
+    splash.setAttribute('aria-hidden', 'true');
+    skip.disabled = true;
+    setTimeout(finish, 350);
   }
-  window.addEventListener('birdspot:ready',()=>{
-    ready=true;
+
+  function endIntro() {
+    elapsed = true;
     maybeHide();
-  },{once:true});
-  skip?.addEventListener('click',()=>{
-    if(!ready) {
-      skipRequested=true;
-      if(skip)skip.textContent='Opstarten…';
-    } else skipRequested=true;
+  }
+
+  window.addEventListener('birdspot:ready', () => {
+    ready = true;
+    maybeHide();
+  }, { once: true });
+  skip.addEventListener('click', () => {
+    skipRequested = true;
+    if (!ready) note.textContent = 'Aviandra wordt geopend…';
     maybeHide();
   });
-  image?.addEventListener('error',()=>{
+  image.addEventListener('error', () => {
     splash.classList.add('image-unavailable');
     splash.querySelector('.birdspot-splash__fallback')?.removeAttribute('hidden');
-  },{once:true});
-  window.setTimeout(()=>{
-    elapsed=true;
-    maybeHide();
-  },DURATION_MS);
+  }, { once: true });
 
-  // If the application module fails, avoid an endless frozen splash.
-  // Expose the failure without claiming that loading finished successfully.
-  window.setTimeout(()=>{
-    if(ready||removed)return;
-    const note=splash.querySelector('.birdspot-splash__loading-note');
-    if(note)note.textContent='Opstarten duurt langer dan normaal. Controleer je verbinding.';
-    if(skip) {
-      skip.textContent='Opnieuw laden';
-      skip.addEventListener('click',()=>window.location.reload(),{once:true});
-    }
-  },12000);
+  if (!reducedMotion) {
+    video.addEventListener('playing', () => {
+      if (elapsed || skipRequested) return;
+      splash.classList.add('is-video-playing');
+      clearTimeout(introTimeout);
+      // Geef de korte clip tijd om af te spelen, ook bij een trage start.
+      introTimeout = setTimeout(endIntro, Math.max(0, 6500 - (performance.now() - startedAt)));
+    }, { once: true });
+    video.addEventListener('ended', endIntro, { once: true });
+    video.src = video.dataset.src;
+    video.play().catch(() => { /* De stilstaande foto blijft beschikbaar. */ });
+  }
+
+  setTimeout(() => {
+    if (ready || closing) return;
+    note.textContent = 'Opstarten duurt langer dan normaal. Controleer je verbinding.';
+    skip.textContent = 'Opnieuw laden';
+    skip.addEventListener('click', () => window.location.reload(), { once: true });
+  }, 12000);
 })();

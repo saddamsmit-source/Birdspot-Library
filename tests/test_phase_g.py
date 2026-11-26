@@ -225,11 +225,8 @@ def test_g03_zero_media_downloads_on_update(server):
 # ── G-04: Update-toast "Nieuwe versie · Nu laden" ─────────────────────────────
 def test_g04_update_toast_visible(server):
     """
-    sw-register.js toont de toast via de echte SW-levenscyclus (updatefound →
-    installing → reg.waiting → controllerchange), niet via een eigen
-    message-protocol. Simuleert dus een echte release: APP_VERSION in sw.js
-    op schijf ophogen, reg.update() aanroepen, en controleren dat de toast
-    via die échte weg verschijnt (bestand wordt na de test teruggezet).
+    De open app vindt zelf een nieuw serviceworker-bestand zodra de verbinding
+    terugkomt. De test herlaadt de pagina niet en roept reg.update() niet aan.
     """
     sw_path = ROOT / "sw.js"
     original = sw_path.read_text(encoding="utf-8")
@@ -241,23 +238,20 @@ def test_g04_update_toast_visible(server):
         )
         page = open_fresh_page(ctx)
         wait_for_sw(page, 12_000)
+        update = page.locator('#appUpdate')
+        update.wait_for(state='attached')
+        assert update.is_hidden()
 
         try:
+            ctx.set_offline(True)
+            page.wait_for_function('() => !navigator.onLine')
             bumped = re.sub(r"const APP_VERSION = '[^']+'", "const APP_VERSION = 'test-g04-update'", original, count=1)
             assert bumped != original, "APP_VERSION niet gevonden in sw.js"
             sw_path.write_text(bumped, encoding="utf-8")
-
-            page.evaluate("""async () => {
-                const reg = await navigator.serviceWorker.getRegistration();
-                await reg.update();
-            }""")
-
-            # Toast moet zichtbaar worden (tekst "Nieuwe versie") via reg.waiting
-            page.wait_for_selector(
-                "#appUpdate:not([hidden])",
-                timeout=8_000,
-                state="visible",
-            )
+            assert update.is_hidden()
+            ctx.set_offline(False)
+            update.wait_for(state='visible', timeout=15_000)
+            assert update.inner_text() == 'Nieuwe versie · Nu laden'
         finally:
             sw_path.write_text(original, encoding="utf-8")
 
