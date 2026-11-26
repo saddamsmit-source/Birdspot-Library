@@ -1,0 +1,23 @@
+name: Birdspot RB-01 releasebundel QA
+on:
+  pull_request:
+    paths: ['.github/workflows/rb01-releasebundel-qa.yml', 'sw.js', 'src/**', 'styles/**', 'index.html', 'tests/test_rb01*', 'tests/ux02_fixtures.py']
+permissions:
+  contents: read
+jobs:
+  rb01:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: RB-01A upgrade 1.27.32 (521fba8) → kandidaat op dezelfde origin + schone installatie (U1–U9)
+        run: |
+          set -o pipefail
+          python tests/test_rb01_upgrade.py --base 521fba8 2>&1 | tee rb01_upgrade.log
