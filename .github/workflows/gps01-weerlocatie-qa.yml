@@ -1,0 +1,37 @@
+name: Birdspot GPS-01 weerlocatie QA
+on:
+  pull_request:
+    paths: ['.github/workflows/gps01-weerlocatie-qa.yml', 'src/**', 'styles/**', 'sw.js', 'index.html', 'tests/test_gps01*', 'tests/test_fot_wee*', 'tests/test_cinematic_wetland.py']
+permissions:
+  contents: read
+jobs:
+  gps01:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: GPS-01 live GPS voor weer en zon, geen standaardstad (G1–G14; G3/G4 simulatie)
+        run: |
+          set -o pipefail
+          python tests/test_gps01_weerlocatie.py 2>&1 | tee gps01.log
+      - name: Tegenproef — dezelfde test faalt op 3644487 (1.27.34 vóór GPS-01)
+        run: |
+          mkdir -p /tmp/base && git archive 36444874c744c16bc007da919c5c4b61c6292d63 | tar -x -C /tmp/base
+          cp tests/test_gps01_weerlocatie.py /tmp/base/tests/ && mkdir -p /tmp/base/tests/screenshots
+          cd /tmp/base
+          if python tests/test_gps01_weerlocatie.py > base.log 2>&1; then echo "Tegenproef FAIL: test slaagt ook op 3644487"; cat base.log; exit 1; fi
+          grep -q "^G2 .* FAIL" base.log && grep -q "^G1 .* FAIL" base.log && echo "Tegenproef PASS: G1 (coördinaten in zonkaart) en G2 (Amsterdam) falen op 3644487"
+      - name: Bestaande weer-/zon-suites (WEE-01, eenheden, wetland)
+        run: |
+          set -o pipefail
+          node tests/test_fot_wee_units.mjs 2>&1 | tee wee_units.log
+          python tests/test_fot_wee_ux.py 2>&1 | tee wee_ux.log
+          python tests/test_cinematic_wetland.py 2>&1 | tee wetland.log

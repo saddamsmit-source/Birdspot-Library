@@ -19,7 +19,12 @@ assert.equal(WEATHER_PLACE_RADIUS_M, 3000);
 const plek = [{name: 'Kralingse Plas', lat: 51.9285, lon: 4.511}];
 assert.equal(weatherPlace({source: 'gps', lat: 51.92, lon: 4.47, places: plek}).text, 'Bij Kralingse Plas');
 assert.equal(weatherPlace({source: 'gps', lat: 52.09, lon: 5.12, places: plek}).text, 'Je huidige omgeving');
-assert.equal(weatherPlace({source: 'fallback', lat: 52.37, lon: 4.9, places: plek}).text, 'Amsterdam (standaardlocatie)');
+// GPS-01 (26-11-2026): nooit een standaardstad; zonder positie geen plaatsaanduiding (bewuste testwijziging).
+assert.equal(weatherPlace({source: 'fallback', lat: 52.37, lon: 4.9, places: plek}), null);
+assert.equal(weatherPlace({state: 'none', lat: null, lon: null}), null);
+assert.equal(weatherPlace({state: 'manual', lat: 51.92, lon: 4.47, places: plek}).text, 'Bij Kralingse Plas');
+assert.equal(weatherPlace({state: 'manual', lat: 52.09, lon: 5.12}).hint, 'zelf gekozen, geen GPS');
+assert.match(weatherPlace({state: 'last', lat: 52.09, lon: 5.12, at: Date.UTC(2026, 10, 26, 13, 5)}).hint, /^niet actueel · GPS van \d\d:\d\d$/);
 assert.equal(weatherPlace({source: 'gps', lat: 51.92, lon: 4.47, places: [{name: 'x', lat: 'nope', lon: 1}, null]}).text, 'Je huidige omgeving');
 for (const p of [weatherPlace({source: 'gps', lat: 51.92, lon: 4.47, places: plek}), weatherPlace({source: 'gps', lat: 52.09, lon: 5.12})])
   assert.doesNotMatch(p.text + p.hint, /\d+[.,]\d+/);

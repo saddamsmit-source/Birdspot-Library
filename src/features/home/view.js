@@ -20,13 +20,17 @@ import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
 import { bindAppSearch, searchMarkup } from '../search/index.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
-import { windMarkup, weatherPlace, weatherPlaceMarkup } from './weatherFormat.js';
+import { windMarkup, weatherPlace, weatherPlaceMarkup, noLocationText } from './weatherFormat.js';
+import { resolveLocation, setManualLocation } from '../../services/location.js';
+import { openPinPicker } from '../sightings/pinPicker.js';
 import { loadPlaces } from '../../data/places.js';
 import { speciesTally } from '../sightings/evidence.js';
 
 // ── Constanten ─────────────────────────────────────────────
-const FALLBACK_LAT = 52.3676;
-const FALLBACK_LON = 4.9041;
+// GPS-01: geen standaardstad meer (was Amsterdam). Weer en zon gebruiken één gedeelde locatiebepaling.
+const WEATHER_TTL_MS = 15 * 60 * 1000;     // zelfde ± 1 km-cel binnen 15 min: geen nieuw weerverzoek
+const RELOCATE_AFTER_MS = 10 * 60 * 1000;  // na hervatten van de app: locatie en weer opnieuw controleren
+let weatherCache = null;                   // { key, at, data } — alleen in geheugen
 
 // ── Hoofd-render ───────────────────────────────────────────
 /**
@@ -67,8 +71,28 @@ export function renderHome(el, { onSearchSelect } = {}) {
   const disposeFeatured = initFeaturedCarousel(el,ctx);
   const disposeHabitat = initAmbientBackdrop(el,ctx);
   loadStats(el, ctx);
-  loadSunInfo(el, ctx);
-  loadWeather(el, ctx);
+  loadLocationCards(el, ctx);
+  // GPS-01: bij hervatten na ≥ 10 min opnieuw locatie bepalen (geen tracking, geen achtergrondlocatie).
+  const onResume = () => {
+    if (document.visibilityState === 'visible' && !ctx.destroyed && Date.now() - (ctx.locationAt || 0) >= RELOCATE_AFTER_MS) {
+      refreshLocationCards(el, ctx, { fresh: true });
+    }
+  };
+  document.addEventListener('visibilitychange', onResume);
+  const onLocationAction = event => {
+    const action = event.target.closest('[data-location-action]')?.dataset.locationAction;
+    if (!action || ctx.destroyed) return;
+    if (action === 'retry') { refreshLocationCards(el, ctx, { fresh: true }); return; }
+    openPinPicker({
+      lat: ctx.location?.lat ?? null, lon: ctx.location?.lon ?? null,
+      title: 'Kies een plek voor weer en zon', ariaLabel: 'Kies een plek voor weer en zon',
+      intro: 'Gebruikt zolang je locatie niet beschikbaar is. Met GPS aan volgt Birdspot weer je actuele positie.',
+      tip: 'Alleen op dit toestel bewaard, afgerond op ongeveer 1 km. Je waarnemingen veranderen niet.',
+      confirmLabel: 'Gebruik deze plek', showClear: false,
+      onConfirm: ({ lat, lon }) => { if (setManualLocation(lat, lon) && !ctx.destroyed) refreshLocationCards(el, ctx); },
+    });
+  };
+  el.addEventListener('click', onLocationAction);
   loadRecentSightings(el, ctx);
   loadMonthlyChart(el, ctx);
   loadHotspotsMap(el, ctx, onSearchSelect);
@@ -76,6 +100,8 @@ export function renderHome(el, { onSearchSelect } = {}) {
   return function cleanup() {
     ctx.destroyed = true;
     el.removeEventListener('click', onSignatureClick);
+    el.removeEventListener('click', onLocationAction);
+    document.removeEventListener('visibilitychange', onResume);
     disposeSearch();
     disposeFeatured();
     disposeHabitat();
@@ -324,12 +350,21 @@ function getSunCalc() {
   });
 }
 
-async function loadSunInfo(el, ctx) {
+async function loadSunInfo(el, ctx, located) {
   const section = el.querySelector('#sunSection');
   if (!section) return;
 
-  const [{ lat, lon }, SC] = await Promise.all([getLocation(), getSunCalc()]);
+  const [location, SC] = await Promise.all([located, getSunCalc()]);
   if (ctx.destroyed) return;
+  if (location.state === 'none') {
+    section.querySelector('.dash-section__loading')?.replaceWith(Object.assign(document.createElement('div'), {
+      className: 'dash-section__error sun-nolocation', textContent: 'Zonstijden volgen zodra je locatie bekend is (zie Weercondities).' }));
+    return;
+  }
+  const { lat, lon } = location;
+  let places = [];
+  try { places = loadPlaces(); } catch (_) { /* plekken niet leesbaar: algemene omschrijving */ }
+  const place = weatherPlace({ ...location, places });
   const now = new Date();
 
   if (!SC) {
@@ -379,7 +414,7 @@ async function loadSunInfo(el, ctx) {
           </div>
         </div>
         ${isGoldenNow ? `<div class="golden-now">✨ Golden hour nu actief — perfecte lichtomstandigheden</div>` : ''}
-        <div class="sun-location">📍 ${lat.toFixed(2)}°N, ${lon.toFixed(2)}°E</div>
+        <div class="sun-location" data-location-kind="${escHtml(place.kind)}">📍 ${escHtml(place.text)}${place.kind === 'gps' ? '' : ` · ${escHtml(place.hint)}`}</div>
       </div>
     `;
   }
@@ -412,29 +447,46 @@ const WMO_ICON = {
   95:'⛈', 96:'⛈', 99:'⛈',
 };
 
-async function loadWeather(el, ctx) {
+const LOCATION_ACTIONS = `<div class="location-actions">
+  <button type="button" class="location-action" data-location-action="retry">GPS opnieuw proberen</button>
+  <button type="button" class="location-action" data-location-action="pick">Kies zelf een plek</button></div>`;
+
+async function loadWeather(el, ctx, located) {
   const section = el.querySelector('#weatherSection');
   if (!section) return;
 
   const loader = section.querySelector('.dash-section__loading');
 
   try {
-    const { lat, lon, source } = await getLocation();
+    const location = await located;
     if (ctx.destroyed) return;
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
-      `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m,relative_humidity_2m,is_day` +
-      `&wind_speed_unit=ms&timezone=auto`;
-
-    const res  = await fetch(url);
-    if (!res.ok) throw new Error('Weerdata niet beschikbaar');
-    const data = await res.json();
+    if (location.state === 'none') {
+      // GPS-01: geen weer voor een verzonnen plek; eerlijke reden en een handmatige keuze.
+      if (loader) loader.outerHTML = `<div class="weather-card weather-card--nolocation" role="status">
+        <p class="weather-nolocation" data-location-reason="${escHtml(location.reason || 'unavailable')}">${escHtml(noLocationText(location.reason))}</p>
+        ${LOCATION_ACTIONS}</div>`;
+      return;
+    }
+    const { lat, lon } = location;
+    // ± 1 km-cel: binnen 15 min hetzelfde weer hergebruiken (minder verzoeken, minder batterij).
+    const key = `${lat.toFixed(2)},${lon.toFixed(2)}`;
+    let data = weatherCache?.key === key && Date.now() - weatherCache.at < WEATHER_TTL_MS ? weatherCache.data : null;
+    if (!data) {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat.toFixed(2)}&longitude=${lon.toFixed(2)}` +
+        `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,wind_direction_10m,relative_humidity_2m,is_day` +
+        `&wind_speed_unit=ms&timezone=auto`;
+      const res  = await fetch(url);
+      if (!res.ok) throw new Error('Weerdata niet beschikbaar');
+      data = await res.json();
+      weatherCache = { key, at: Date.now(), data };
+    }
     if (ctx.destroyed) return;
     const c    = data.current || {};
     const code = c.weather_code;
     // WEE-01: plaats zonder coördinaten (eigen plek binnen 3 km, anders "je huidige omgeving").
     let places = [];
     try { places = loadPlaces(); } catch (_) { /* plekken niet leesbaar: algemene omschrijving */ }
-    const place = weatherPlace({ source, lat, lon, places });
+    const place = weatherPlace({ ...location, places });
     const degrees = value => Number.isFinite(Number(value)) && value !== null ? `${Math.round(value)}°C` : '—';
     const icon = (code === 0 || code === 1) && c.is_day === 0 ? '🌙' : WMO_ICON[code] || '🌡';
     const desc = WMO_CODES[code] || 'Onbekend';
@@ -460,6 +512,7 @@ async function loadWeather(el, ctx) {
             <strong><span aria-hidden="true">${appIcon('bird')}</span>${summary}</strong>
             ${tips.length ? `<ul>${tips.map(tip => `<li>${tip}</li>`).join('')}</ul>` : ''}
           </div>
+          ${place.kind === 'gps' ? '' : LOCATION_ACTIONS}
         </div>
       `;
     }
@@ -864,17 +917,23 @@ async function loadHotspotsMap(el, ctx, onSearchSelect) {
 // ══════════════════════════════════════════════════════════
 // HELPERS
 // ══════════════════════════════════════════════════════════
-function getLocation() {
-  return new Promise(resolve => {
-    if (!navigator.geolocation) {
-      return resolve({ lat: FALLBACK_LAT, lon: FALLBACK_LON, source: 'fallback' });
-    }
-    navigator.geolocation.getCurrentPosition(
-      pos => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude, source: 'gps' }),
-      _   => resolve({ lat: FALLBACK_LAT, lon: FALLBACK_LON, source: 'fallback' }),
-      { timeout: 5000 }
-    );
-  });
+/** GPS-01: één gedeelde locatiebepaling voor zon en weer. */
+function loadLocationCards(el, ctx, { fresh = false } = {}) {
+  ctx.locationAt = Date.now();
+  const located = resolveLocation({ fresh }).then(location => { if (!ctx.destroyed) ctx.location = location; return location; });
+  loadSunInfo(el, ctx, located);
+  loadWeather(el, ctx, located);
+}
+
+function refreshLocationCards(el, ctx, options) {
+  const loaders = { sunSection: 'Zonsinformatie laden…', weatherSection: 'Weer laden…' };
+  for (const [id, text] of Object.entries(loaders)) {
+    const section = el.querySelector('#' + id);
+    if (!section) continue;
+    [...section.children].filter(child => !child.classList.contains('section-head')).forEach(child => child.remove());
+    section.insertAdjacentHTML('beforeend', `<div class="dash-section__loading"><span class="spinner" aria-hidden="true"></span> ${text}</div>`);
+  }
+  loadLocationCards(el, ctx, options);
 }
 
 function fmtTime(date) {
