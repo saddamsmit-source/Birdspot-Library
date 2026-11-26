@@ -1,11 +1,11 @@
 """Bouwt src/data/speciesKnowledge.js uit tools/kennisbaseline/knowledge.json en weigert ongeldige profielen.
 
 Validatie (contract v0.1):
-- elke soortsleutel bestaat als Birdspot-ID in src/data/species.js;
+- elke soortsleutel bestaat als Aviandra-ID in src/data/species.js;
 - elke bewering (summary, keyMarks, caution, critical, similar, detail, voice, basis.size, habitat,
   status, life, discrepancies) heeft een niet-lege tekst en alleen bestaande bronsleutels;
 - inhoudelijke beweringen hebben minstens één bron (uitzondering: 'similar' die naar een bestaande
-  Birdspot-vergelijking verwijst mag leeg zijn en wordt dan als zodanig getoond);
+  Aviandra-vergelijking verwijst mag leeg zijn en wordt dan als zodanig getoond);
 - betrouwbaarheid is doorslaggevend | ondersteunend | onbetrouwbaar-alleen;
 - vs- en similar-ID's bestaan en verwijzen niet naar de soort zelf;
 - keyMarks 3–5 stuks; optioneel quickPrimary = 1–2 keyMarks-indexen (v1.10: max. 3 primaire punten);
@@ -107,7 +107,7 @@ def validate(data, ids, sizes=None):
         if sid.startswith("_"):
             continue
         if sid not in ids:
-            errors.append(f"{sid}: onbekend Birdspot-ID")
+            errors.append(f"{sid}: onbekend Aviandra-ID")
             continue
         claim(sid, "summary", k.get("summary"))
         marks = k.get("keyMarks", [])
@@ -183,7 +183,7 @@ def main():
         sys.exit(1)
     profiles = {sid: k for sid, k in data.items() if not sid.startswith("_")}
     payload = {"sources": data["_sources"], "profiles": profiles}
-    js = ("/**\n * Birdspot Library — kennisprofielen per soort (contract v0.1, proef).\n"
+    js = ("/**\n * Aviandra — kennisprofielen per soort (contract v0.1, proef).\n"
           " * GEGENEREERD door tools/kennisbaseline/build_knowledge.py uit tools/kennisbaseline/knowledge.json — niet met de hand wijzigen.\n */\n"
           f"const DATA = {json.dumps(payload, ensure_ascii=False, indent=1)};\n"
           "export const KNOWLEDGE_SOURCES = Object.freeze(DATA.sources);\n"

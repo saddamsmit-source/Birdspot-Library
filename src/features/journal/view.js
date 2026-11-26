@@ -1,5 +1,5 @@
 /**
- * Birdspot Signature — Personal Birding Journal Phase 3
+ * Aviandra Signature — Personal Birding Journal Phase 3
  * The user's existing sightings are the one source of truth.
  * All photo links are to IndexedDB media, never stock/AI imagery.
  */
@@ -34,7 +34,7 @@ export function renderJournal(el) {
 
   el.classList.add('signature-screen','signature-journal','phase3-journal-screen');
   el.innerHTML='<header class="signature-page-hero signature-page-hero--journal phase3-journal-hero">' +
-    '<span class="signature-kicker">BIRDSPOT / THE FIELD JOURNAL</span>' +
+    '<span class="signature-kicker">AVIANDRA / THE FIELD JOURNAL</span>' +
     '<h1>Mijn Birding Journal</h1>' +
     '<p>Alle ontmoetingen met vogels vertellen samen jouw eigen verhaal. Van het eerste moment tot de meest recente ontdekking.</p>' +
     '<div class="signature-orbit" aria-hidden="true"></div>' +

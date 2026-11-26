@@ -1,5 +1,5 @@
-/* Birdspot Signature — cinematic 9:16 kingfisher opening.
- * Art supplied by the Project Owner; keep words/branding in the image.
+/* Aviandra — cinematic 9:16 kingfisher opening.
+ * Keep the owner-supplied artwork and display the current wordmark over it.
  * Fixed overlay does not alter the application's navigation/data state.
  */
 .birdspot-splash {
@@ -28,6 +28,13 @@
   content:"";position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(4,20,15,.23),transparent 20%,transparent 70%,rgba(3,18,12,.18));
 }
+.birdspot-splash__frame {
+  position:relative;
+  width:min(100vw,56.25vh);
+  width:min(100vw,56.25dvh);
+  aspect-ratio:9 / 16;
+  container-type:inline-size;
+}
 .birdspot-splash__art {
   position:relative;z-index:1;
   display:block;width:100%;height:100%;
@@ -36,6 +43,22 @@
   user-select:none;-webkit-user-select:none;
   -webkit-user-drag:none;
 }
+.birdspot-splash__wordmark {
+  position:absolute;z-index:2;
+  inset:16.5% 17.5% 68%;
+  display:grid;place-items:center;
+  color:#f5ebd7;
+  font:700 clamp(20px,12cqw,58px)/1 Georgia,serif;
+  isolation:isolate;
+}
+.birdspot-splash__wordmark::before {
+  content:"";position:absolute;z-index:-1;inset:0;
+  background:linear-gradient(110deg,#092719,#153b28);
+  mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent),
+    linear-gradient(180deg,transparent,#000 12%,#000 94%,transparent);
+  mask-composite:intersect;
+}
+.birdspot-splash.image-unavailable .birdspot-splash__frame {visibility:hidden;}
 .birdspot-splash__skip {
   position:absolute;z-index:4;
   top:max(17px,env(safe-area-inset-top,0px));

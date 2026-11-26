@@ -246,7 +246,7 @@ export function mountPersonalGuide(sheet, species) {
     const url = URL.createObjectURL(new Blob([JSON.stringify(draft)], {type: 'application/json'}));
     const link = document.createElement('a');
     link.href = url;
-    link.download = `birdspot-fotovoorstel-${species.id}.json`;
+    link.download = `aviandra-fotovoorstel-${species.id}.json`;
     link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   });

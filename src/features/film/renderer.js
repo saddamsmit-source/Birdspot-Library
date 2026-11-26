@@ -1,5 +1,5 @@
 /**
- * Birdspot Film Studio · device-local film exporter
+ * Aviandra Film Studio · device-local film exporter
  *
  * Frames are composed entirely from the user's IndexedDB photographs and clips.
  * CaptureStream + MediaRecorder are feature-detected. No uploads, external APIs,
@@ -65,7 +65,7 @@ function titleScreen(ctx,w,h,title,sub,progress) {
   ctx.globalAlpha=1;
   const f=Math.max(12,Math.round(w*.021));
   ctx.fillStyle='#d9b77e';ctx.font='700 '+f+'px system-ui,sans-serif';
-  ctx.fillText('BIRDSPOT  /  WILDLIFE EXPEDITION',w*.085,h*.3,w*.84);
+  ctx.fillText('AVIANDRA  /  WILDLIFE EXPEDITION',w*.085,h*.3,w*.84);
   ctx.fillStyle='#f6efe2';
   ctx.font='700 '+Math.round(w*.057)+'px Georgia,serif';
   const t=safeWords(title,65);
@@ -99,7 +99,7 @@ function frame(ctx,w,h,source,clip,progress,kind) {
   g.addColorStop(0,'rgba(2,14,12,0)');g.addColorStop(1,'rgba(4,16,13,.84)');
   ctx.fillStyle=g;ctx.fillRect(0,h*.58,w,h*.42);
   ctx.font='750 '+Math.round(w*.017)+'px system-ui,sans-serif';
-  ctx.fillStyle='#d6b581';ctx.fillText('BIRDSPOT  /  MY WILDLIFE',w*.06,h*.91,w*.88);
+  ctx.fillStyle='#d6b581';ctx.fillText('AVIANDRA  /  MY WILDLIFE',w*.06,h*.91,w*.88);
   ctx.fillStyle='#fff8e8';ctx.font='700 '+Math.round(w*.045)+'px Georgia,serif';
   ctx.fillText(safeWords(clip.name||'Vogelmoment',45),w*.06,h*.84,w*.88);
   ctx.fillStyle='#dce6d9';ctx.font=Math.round(w*.021)+'px system-ui,sans-serif';
@@ -217,7 +217,7 @@ export async function renderFilm({clips,options={},signal,onProgress=()=>{}}) {
     }
     guard(signal);
     onProgress({done:clips.length+1,total:clips.length+2,label:'Afsluiting'});
-    await sleepFrame((_,p)=>titleScreen(ctx,w,h,'BIRDSPOT','Your wildlife. Your discoveries.',p),1500,signal);
+    await sleepFrame((_,p)=>titleScreen(ctx,w,h,'AVIANDRA','Your wildlife. Your discoveries.',p),1500,signal);
     guard(signal);
     rec.stop();
     await Promise.race([

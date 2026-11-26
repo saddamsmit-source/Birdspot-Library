@@ -1,20 +1,20 @@
-# Birdspot — toekomstige eigenaarapp (hoofdapp) | visie en kandidaten
+# Aviandra — toekomstige eigenaarapp (hoofdapp) | visie en kandidaten
 
 | Veld | Waarde |
 |---|---|
 | Versie | v0.1 DRAFT |
 | Datum | 15 november 2026 |
 | Status | Eigenaarbesluit voor volgorde/basis; concrete beheerfuncties **CANDIDATE / FUTURE**, niet gebouwd |
-| Bron | Birdspot eigenaaropdracht 15-11-2026 (verduidelijking: pas na stabilisatie Birdspot, eerst kopiëren, nu niet koppelen) |
-| Gezag | Birdspot app-README bepaalt requirements; dit document is een gekoppelde toekomstige uitwerking, geen tweede algemene norm |
-| Starttrigger | **Pas als de huidige Birdspot-gebruikersapp redelijk af, stabiel en door eigenaar klaar bevonden is** |
+| Bron | Aviandra eigenaaropdracht 15-11-2026 (verduidelijking: pas na stabilisatie Aviandra, eerst kopiëren, nu niet koppelen) |
+| Gezag | Aviandra app-README bepaalt requirements; dit document is een gekoppelde toekomstige uitwerking, geen tweede algemene norm |
+| Starttrigger | **Pas als de huidige Aviandra-gebruikersapp redelijk af, stabiel en door eigenaar klaar bevonden is** |
 | Implementatie | **NOT STARTED / NOT TESTED** — geen extra app, geen koppeling, geen backend, geen accounts, geen betalingen |
 
 ## 1. Gelockte richting en grenzen
 
-De eigenaar wil **eerst de bestaande Birdspot-gebruikersapp afwerken**. De nieuwe eigenaarapp wordt **nu niet gestart, gekoppeld, uitgerold of van accounts voorzien**. Een bestaand pilot- of reviewproces mag niet hierdoor worden vertraagd.
+De eigenaar wil **eerst de bestaande Aviandra-gebruikersapp afwerken**. De nieuwe eigenaarapp wordt **nu niet gestart, gekoppeld, uitgerold of van accounts voorzien**. Een bestaand pilot- of reviewproces mag niet hierdoor worden vertraagd.
 
-**Later, na een expliciete startopdracht:** neem één dan geldige, geteste Birdspot-release als exacte, versieerbare basis en maak daarvan een **kopie voor de eigenaar**. De eigenaarapp behoudt **alle functies die gebruikers dan hebben**, inclusief dezelfde navigatie/uitstraling, vogelgids, zoeken, herkennen, foto-/kleedvergelijkingen, kaarten, eigen waarnemingen, media, collecties, favorieten, offline werking, back-up/herstel en de andere dan geldige gebruikersfuncties. **Niet alleen een dashboard met beheerfuncties.** Voeg afzonderlijke, duidelijk afgeschermde eigenaarschermen toe. Geen huidige basisfuncties schrappen zonder eigenaarsbesluit.
+**Later, na een expliciete startopdracht:** neem één dan geldige, geteste Aviandra-release als exacte, versieerbare basis en maak daarvan een **kopie voor de eigenaar**. De eigenaarapp behoudt **alle functies die gebruikers dan hebben**, inclusief dezelfde navigatie/uitstraling, vogelgids, zoeken, herkennen, foto-/kleedvergelijkingen, kaarten, eigen waarnemingen, media, collecties, favorieten, offline werking, back-up/herstel en de andere dan geldige gebruikersfuncties. **Niet alleen een dashboard met beheerfuncties.** Voeg afzonderlijke, duidelijk afgeschermde eigenaarschermen toe. Geen huidige basisfuncties schrappen zonder eigenaarsbesluit.
 
 Het woord 'kopie' beschrijft het gewenste volledige functionele en visuele uitgangspunt. De precieze technische route (apart project, gedeelde kernmodules, centraal platform, data- en updatecontract) is **OPEN** tot de latere kickoff. Vermijd dan ongewenste drift: nieuwe gebruikersverbeteringen moeten ook in de eigenaarapp kunnen terugkomen zonder alles dubbel te onderhouden. Maar **nu geen code-/appkoppeling voorbereiden of bouwen**.
 
@@ -43,7 +43,7 @@ Dit is een **voorlopige kandidatenlijst**, geen verplichting om alles tegelijk t
 ## 3. Eerst bouwen: één kleine beheerroute (na startbesluit)
 
 **Gebruiker:** producteigenaar / beheerder.  
-**Probleem:** feedback uit een publiek gebruikte Birdspot-app niet betrouwbaar en traceerbaar kunnen verwerken.  
+**Probleem:** feedback uit een publiek gebruikte Aviandra-app niet betrouwbaar en traceerbaar kunnen verwerken.
 **Kernroute:** klant dient feedback in → eigenaar ziet ticket in persoonlijke eigenaarapp → groepeert/markeert prioriteit → koppelt soort of functie → volgt fix/test/versie → sluit/heropent met historie.  
 **Non-goals eerste beheerpilot:** geen volledig commercieel dashboard, geen betaalprovider, geen geautomatiseerde moderatiebesluiten, geen massale push, geen onbeperkte CRM-data.  
 **Fout/herstel:** offline/onbereikbare dienst mag geen dubbele tickets of verloren invoer maken; bij wijziging blijft het oorspronkelijke bericht en auditspoor bewaard.  
@@ -54,13 +54,13 @@ Daarna alleen op bewijs van behoefte en beheerbaarheid uitbreiden naar community
 
 ### Nieuwe kandidaat: fotobijdragen en beloningen (15 november 2026)
 
-**Pas na start van de eigenaarapp** kan de eigenaar in dezelfde app, naast alle normale Birdspot-functies, een afgeschermde wachtrij beheren voor vrijwillig aangeboden gebruikersfoto's, waaronder ontbrekende hoofdfoto's, man/vrouw, juveniel, vlucht en betere vervangingskandidaten. Maak visuele soort-/rol-/rechtencontrole, goedkeuren/afwijzen, credits, status, communicatie en log zichtbaar. Voeg pas later, bij een afzonderlijk beloningsbesluit, puntenmutaties, afgewezen/gedupliceerde bijdragen, tegoeden, toegekende kortingen of gratis pakketten toe. De eigenaar beheert **geen** privéfoto's die een gebruiker slechts als eigen gidsfoto heeft ingesteld. Persoonlijke foto-override blijft lokaal/privé totdat afzonderlijk bewust een inzending is verstuurd.
+**Pas na start van de eigenaarapp** kan de eigenaar in dezelfde app, naast alle normale Aviandra-functies, een afgeschermde wachtrij beheren voor vrijwillig aangeboden gebruikersfoto's, waaronder ontbrekende hoofdfoto's, man/vrouw, juveniel, vlucht en betere vervangingskandidaten. Maak visuele soort-/rol-/rechtencontrole, goedkeuren/afwijzen, credits, status, communicatie en log zichtbaar. Voeg pas later, bij een afzonderlijk beloningsbesluit, puntenmutaties, afgewezen/gedupliceerde bijdragen, tegoeden, toegekende kortingen of gratis pakketten toe. De eigenaar beheert **geen** privéfoto's die een gebruiker slechts als eigen gidsfoto heeft ingesteld. Persoonlijke foto-override blijft lokaal/privé totdat afzonderlijk bewust een inzending is verstuurd.
 
-De kandidaat-functies voor betaalde Media Studio, film-/diashowtemplates en geïntegreerde vogelgeluidsherkenning zijn uitvoerings-/betaalonderdelen van de gebruikersapp, **geen** aanleiding om de eigenaarapp nu eerder te starten. De toekomstige eigenaarapp kan later wel overzichten van deze aankopen, uitgiften, restituties en kosten tonen, mits rechten/gegevensuitwisseling goed zijn getest. Zie [Birdspot eigen foto's, bijdrages, beloningen en Media/Sound Plus v0.1](BIRDSPOT_EIGEN_FOTOS_BIJDRAGEN_BELONINGEN_MEDIA_PLUS_V0.1_DRAFT.md).
+De kandidaat-functies voor betaalde Media Studio, film-/diashowtemplates en geïntegreerde vogelgeluidsherkenning zijn uitvoerings-/betaalonderdelen van de gebruikersapp, **geen** aanleiding om de eigenaarapp nu eerder te starten. De toekomstige eigenaarapp kan later wel overzichten van deze aankopen, uitgiften, restituties en kosten tonen, mits rechten/gegevensuitwisseling goed zijn getest. Zie [Aviandra eigen foto's, bijdrages, beloningen en Media/Sound Plus v0.1](BIRDSPOT_EIGEN_FOTOS_BIJDRAGEN_BELONINGEN_MEDIA_PLUS_V0.1_DRAFT.md).
 
 ## 4. Architectuurkeuzes — uitgesteld
 
-- **Nu:** Birdspot S1 alleen ontwikkelen/reviewen; geen extra eigenaarapp of verbinding.
+- **Nu:** Aviandra S1 alleen ontwikkelen/reviewen; geen extra eigenaarapp of verbinding.
 - **Later:** exacte stabiele basisrelease/SHA bevriezen; volledige gebruikersfunctionele pariteit vaststellen; eigen designbrief; pas dan bepalen waar beide interfaces naast elkaar draaien.
 - **Na aparte beslissingen:** identiteit, rollen/autorisaties, serverdata, sync, community, betalingen en notificaties. Niet aannemen dat bestaande lokale PWA-data vanzelf in een gedeelde omgeving aanwezig is.
 - Eén veiligheidsprincipe staat voorop: de eigenaar mag publieke/community-items beheren en supportcases behandelen, maar dat is **geen** generiek recht om persoonlijke foto's, GPS of lokale waarnemingen van klanten te bekijken.
@@ -68,8 +68,8 @@ De kandidaat-functies voor betaalde Media Studio, film-/diashowtemplates en geï
 
 ## 5. Volgorde en gates
 
-1. **Huidige fase:** Birdspot als gebruikersapp afwerken, vogels en functies in kleine reviewrondes, werkende afgeschermde preview naar eigenaar, vervolgens passende pilot/releasechecks.
-2. **Startgate eigenaarapp:** gebruiker geeft expliciet aan dat Birdspot *redelijk af* is en zegt **begin met mijn eigenaarapp**. Geen automatische start op basis van 140 soorten, aantal rondes of gebruikers.
+1. **Huidige fase:** Aviandra als gebruikersapp afwerken, vogels en functies in kleine reviewrondes, werkende afgeschermde preview naar eigenaar, vervolgens passende pilot/releasechecks.
+2. **Startgate eigenaarapp:** gebruiker geeft expliciet aan dat Aviandra *redelijk af* is en zegt **begin met mijn eigenaarapp**. Geen automatische start op basis van 140 soorten, aantal rondes of gebruikers.
 3. **Kickoff eigenaarapp:** kopie van geteste gebruikersapp met volledige functiepariteit; aparte ontwerp-/privacy-/kostenbrief en terugvalpunt; daadwerkelijke tools/capabilities toetsen.
 4. **Eigenaarapp S0/S1:** eerste feedback- en issuebeheerroute, zonder noodzakeloze complexiteit.
 5. **Latere fasen:** community en accounts alleen na A/B-rechten- en privacygate; betaalde landenpakketten/financiële functies pas na afzonderlijke eigenaarbeslissing, kostentoets en compliance; promo/push later.

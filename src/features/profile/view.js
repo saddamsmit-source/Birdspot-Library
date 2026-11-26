@@ -165,7 +165,7 @@ export async function renderProfile(el) {
         <h2 class="profile-section__title" id="infoHeading">Over de app</h2>
         <div class="profile-card profile-card--info">
           <div class="profile-card__info">
-            <div class="profile-card__label">Birdspot Library</div>
+            <div class="profile-card__label">Aviandra</div>
             <div class="profile-card__desc" id="appVersion">versie ophalen…</div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
-  "name": "Birdspot Library",
-  "short_name": "Birdspot",
+  "name": "Aviandra",
+  "short_name": "Aviandra",
   "description": "Persoonlijke vogelwaarnemingen bibliotheek",
   "start_url": "./",
   "display": "standalone",

@@ -1,5 +1,5 @@
 /**
- * BIRDSPOT LIBRARY — App bootstrap & router
+ * AVIANDRA — App bootstrap & router
  * src/app.js
  *
  * Verantwoordelijk voor:
@@ -27,7 +27,7 @@ import { holdTabPresence, withDataLock } from './data/dataLock.js';
 import { recoverOperations, hasPendingMarker } from './data/opJournal.js';
 import { initPlaces }        from './data/places.js';
 
-// Herstel 2B (import met oude tabbladstand): elk open Birdspot-tabblad meldt zich aan.
+// Herstel 2B (import met oude tabbladstand): elk open Aviandra-tabblad meldt zich aan.
 holdTabPresence();
 
 // ── Routes ────────────────────────────────────────────────
@@ -84,7 +84,7 @@ export function navigate(route, { force = false, history: addHistory = true, tar
   let result;
   try { result = ROUTES[route].render(screen, { ...target, onSearchSelect: selectSearchResult }); }
   catch (error) {
-    console.error('[Birdspot] Scherm openen mislukt:', route, error);
+    console.error('[Aviandra] Scherm openen mislukt:', route, error);
     screen.innerHTML = '<section class="route-recovery"><h1>Dit scherm kon niet worden geopend</h1><p>Je gegevens zijn niet verwijderd. Probeer het scherm opnieuw te openen.</p><button type="button">Opnieuw proberen</button></section>';
     screen.querySelector('button').addEventListener('click',()=>navigate(route,{force:true,history:false}));
   }
@@ -203,13 +203,13 @@ const initialRoute = installNavigation({navigate,current:()=>currentRoute,curren
 // Ronde 2B-afronding: plekken uit IndexedDB laden (en migreren) vóór de eerste weergave.
 // Hangt de database (bijv. een oudere versie in een ander tabblad blokkeert de upgrade), dan na
 // 1,5 s toch starten; schrijven wacht dan op IndexedDB en verliest niets.
-addEventListener('birdspot-db-blocked', () => showToast('Sluit andere Birdspot-tabbladen om de update af te ronden', 'warn', 6000));
+addEventListener('birdspot-db-blocked', () => showToast('Sluit andere Aviandra-tabbladen om de update af te ronden', 'warn', 6000));
 // Herstelronde 2B (P1): een import of Terugzetten die door een weggevallen tabblad niet afkwam, eerst
 // afronden (terug- of doorrollen) onder de datalock — dus na een lopende bewerking in een ander tabblad.
 // Staat de markering, dan wacht de app daar volledig op vóór hij gegevens gebruikt of wijzigt.
 const recovery = withDataLock(() => recoverOperations()).catch(error => {
   console.error('[journaal] herstel', error);
-  showToast('Een onderbroken herstelactie kon niet worden afgerond. Herlaad Birdspot.', 'error', 8000);
+  showToast('Een onderbroken herstelactie kon niet worden afgerond. Herlaad Aviandra.', 'error', 8000);
 });
 // Een schrijver die op een halve herstelstand stuitte (favorieten e.d.): melden en het herstel afronden.
 let recoveryNotice = null;

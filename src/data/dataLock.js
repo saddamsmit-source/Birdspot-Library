@@ -1,5 +1,5 @@
 /**
- * Birdspot — coördinatie van plek-/mediarelaties (herstel 2B; slot P1, 18-11-2026).
+ * Aviandra — coördinatie van plek-/mediarelaties (herstel 2B; slot P1, 18-11-2026).
  *
  * Regels:
  *  1. Met Web Locks: één exclusieve lock (ook over tabbladen) voor ZIP-import, 'Terugzetten' en de
@@ -51,7 +51,7 @@ export class ImportUnsafeError extends Error {
 
 /**
  * Importeren schrijft de volledige plekkenlijst. Dat mag alleen met een aantoonbaar actuele stand:
- * Web Locks aanwezig, dit tabblad aangemeld en geen enkel ander Birdspot-tabblad of -venster open.
+ * Web Locks aanwezig, dit tabblad aangemeld en geen enkel ander Aviandra-tabblad of -venster open.
  * Anders stopt de import vóór de eerste wijziging.
  */
 export async function assertImportSafe() {
@@ -68,8 +68,8 @@ export async function assertImportSafe() {
     holders = Infinity;
   }
   if (!presenceHeld || holders !== 1) {
-    throw new ImportUnsafeError('Sluit eerst andere Birdspot-tabbladen of -vensters en probeer het opnieuw. ' +
-      'Importeren terwijl Birdspot elders open is, kan plekken van dat tabblad overschrijven. Er is niets gewijzigd.');
+    throw new ImportUnsafeError('Sluit eerst andere Aviandra-tabbladen of -vensters en probeer het opnieuw. ' +
+      'Importeren terwijl Aviandra elders open is, kan plekken van dat tabblad overschrijven. Er is niets gewijzigd.');
   }
 }
 

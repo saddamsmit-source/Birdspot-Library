@@ -106,7 +106,7 @@ export function createFeedbackHandler({store, ownerKey, enabled}) {
         })).filter(item => safeId.test(item.id)).sort((a, b) => new Date(b.receivedAt) - new Date(a.receivedAt))});
       }
       if (req.method !== 'POST') return result({error: 'Ongeldige handeling.'}, 405);
-      if (req.headers.get('origin') !== url.origin) return result({error: 'Open Birdspot en probeer opnieuw.'}, 403);
+      if (req.headers.get('origin') !== url.origin) return result({error: 'Open Aviandra en probeer opnieuw.'}, 403);
 
       let entry;
       try {
