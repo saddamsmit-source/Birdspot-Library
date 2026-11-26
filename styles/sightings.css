@@ -1031,7 +1031,7 @@
   background: var(--surface); color: var(--ink); font: 600 .875rem var(--font-body, system-ui);
 }
 .sightings-primary-filters select:focus-visible { outline: 3px solid var(--brand-light); outline-offset: 1px; }
-@media (max-width: 359px) {
+@media (max-width: 383px) {
   .sightings-primary-filters { grid-template-columns: minmax(0, 1fr); }
 }
 .sightings-filter-group { margin: 0; padding: 0; border: 0; min-width: 0; }

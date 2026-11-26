@@ -8,7 +8,7 @@ Z4  media: met foto of video / met geluid
 Z5  lege uitkomst: duidelijke melding + Wis filters herstelt alles
 Z6  oude records (zonder methode/bron, oude BirdNET-suggestie) tonen zonder fout en zonder verzonnen status
 Z7  grote lijst (1500 records): eerste weergave en filteren snel genoeg, juiste telling
-Z8  320/390/430: geen horizontale overloop, aanraakdoelen ≥ 44 px, lange namen netjes afgekapt
+Z8  320/360/390/430: geen horizontale overloop, aanraakdoelen ≥ 44 px, periode volledig leesbaar
 Z9  toetsenbord en schermlezer: Tab naar kaartje, Enter opent; resultaat in role=status; filterknop aria-expanded
 Z10 donker thema: tekstcontrast van zoekveld, chips en statuslabels ≥ 4,5:1
 Z11 globale zoekfunctie gebruikt dezelfde logica: vindt waarneming op plek en datum
@@ -230,10 +230,11 @@ def main():
 
         # ── Z8 breedtes ──────────────────────────────────────────────
         layout = {}
-        for width in (320, 390, 430):
+        for width in (320, 360, 390, 430):
             ctx, page, errors = context(width=width)
             page.locator('#sightingsFilterBtn').click()
             page.locator('.sightings-filter-option[data-value="heard"]').click()
+            page.get_by_label('Periode', exact=True).select_option('6m')
             page.locator('#sightingsSearch').fill('natuurgebied')
             page.wait_for_timeout(350)
             page.screenshot(path=f'/tmp/ux02a_{width}.png', full_page=False)
@@ -241,13 +242,21 @@ def main():
               const tooSmall = [...document.querySelectorAll('#sightingsTools button, #sightingsTools select, #sightingsSearch, .sight-card')]
                 .filter(e => e.offsetParent).map(e => e.getBoundingClientRect()).filter(r => r.height < 44 || r.width < 44).length;
               const place = document.querySelector('.sight-card__place-name');
+              const period = document.getElementById('sightingsFilter-period');
+              const style = getComputedStyle(period);
+              const canvas = document.createElement('canvas').getContext('2d');
+              canvas.font = style.font;
+              const periodFits = canvas.measureText(period.selectedOptions[0].text).width <=
+                period.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) - 20;
               return { overflow: document.documentElement.scrollWidth > innerWidth, tooSmall,
+                periodFits,
                 ellipsis: place ? place.scrollWidth > place.clientWidth && getComputedStyle(place).textOverflow === 'ellipsis' : null,
                 inView: [...document.querySelectorAll('#sightingsTools *')].filter(e => e.offsetParent).every(e => e.getBoundingClientRect().right <= innerWidth + .5) };
             }""")
             ctx.close()
-        check('Z8', '320/390/430: geen overloop, aanraakdoelen ≥ 44 px, lange plaatsnaam afgekapt',
-              all(not v['overflow'] and v['tooSmall'] == 0 and v['inView'] and v['ellipsis'] for v in layout.values()), layout)
+        check('Z8', '320/360/390/430: periode leesbaar, geen overloop, aanraakdoelen ≥ 44 px',
+              all(not v['overflow'] and v['tooSmall'] == 0 and v['inView'] and v['ellipsis'] and v['periodFits']
+                  for v in layout.values()), layout)
 
         # ── Z10 donker thema ─────────────────────────────────────────
         ctx, page, errors = context(dark=True)
