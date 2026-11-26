@@ -18,6 +18,8 @@
 2. Voorpagina: chatbijlage `36036.jpg`, feitelijk WEBP, 753 × 1536 px, SHA-256 `5c5814e37e0277eb71d3e06e0a7027e4c78abeb6eca2ada58f3ebdfe63f126ec`.
 3. Eerdere onafhankelijke schermproef: `Aviandra_Concept_V0.1.zip`, SHA-256 `395946fab710c5e372f25dc8ff6066f54dfbb7cb72f879ca8e6a53787efa8970`; uitsluitend **demo**, geen bron van waarnemingen of functies.
 
+**Duurzame bronkopieën in persoonlijke Library:** `/Aviandra_Logo_GOEDGEKEURD_2026-11-26.webp` (22.696 bytes; gelijk aan logo-SHA hierboven) en `/Aviandra_Home_GOEDGEKEURD_2026-11-26.webp` (41.962 bytes; gelijk aan Home-SHA hierboven). Deze goedgekeurde referenties blijven als brondesign bewaard, maar zijn geen runtime-appiconen en nog niet in GitHub opgenomen.
+
 **Assetstatus:** eigenaarreferenties zijn in het gesprek beschikbaar; **nog niet als runtime- of GitHub-binaire assets geïntegreerd**. Voor implementatie eerst de echte bronbestanden onder versiebeheer brengen, correct benoemen met hun werkelijke bestandsformaat en logo getrouw als schaalbaar/vector/maskable asset afwerken. Een mockup of screenshot is niet automatisch een gebruiksgerechtigde vogelgidsfoto.
 
 ## 2. Kleuren en typografie — bestaande app is leidend
