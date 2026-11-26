@@ -225,7 +225,7 @@ def run(browser, url, tmp):
     check('M1', '+ twee keuzes → opnemen → WAV delen (concept eerst bewaard) → terug → Merlin-soort → Gehoord · Merlin-suggestie · Mogelijk; terug te vinden',
           choices == ['Waarneming toevoegen\nKies een soort en plaats een pin', 'Geluid herkennen\nNeem op, BirdNET stelt voor, optioneel Merlin']
           and birdnet_ui and collapsed and 'alleen het geluid' in note
-          and call and call['keys'] == ['files'] and call['name'] == 'birdspot-opname.wav' and call['type'] == 'audio/wav'
+          and call and call['keys'] == ['files'] and call['name'] == 'aviandra-opname.wav' and call['type'] == 'audio/wav'
           and wav_header_ok(call['head'], call['size'])
           and call['draft'] == {'date': '2026-11-15', 'time': '14:42', 'coordinates': {'lat': 51.9244, 'lon': 4.4777, 'pinAccuracyM': 8, 'accuracyExactM': 8}, 'clip': True}
           and 'Terug uit Merlin' in back and compare == 'BirdNET had geen suggestie. Merlin: Merel.'

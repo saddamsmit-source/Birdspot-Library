@@ -282,7 +282,8 @@ def test_g05_manifest_valid(server):
         }""")
 
         assert manifest is not None, "Manifest niet beschikbaar of fout bij parsen"
-        assert manifest.get("name") == "Birdspot Library"
+        assert manifest.get("name") == "Aviandra"
+        assert manifest.get("short_name") == "Aviandra"
         assert manifest.get("display") == "standalone"
         # Relatief (i.p.v. vast "/") zodat de manifest ook onder een subpad
         # (bv. een GitHub Pages-projectpagina) naar de juiste scope wijst.

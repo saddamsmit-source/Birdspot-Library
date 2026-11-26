@@ -1,11 +1,19 @@
-# Birdspot Library
+# Aviandra
 
 Persoonlijke bibliotheek van vogelwaarnemingen — App 002 in Kevins App Development
 Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
-## Werkstand Birdspot — geïntegreerde kandidaat 1.27.35 (26 november 2026)
+## Aviandra fase 1 — naamswijziging (26 november 2026)
+
+Aviandra is de nieuwe naam van App 002, voorheen Birdspot Library. Kandidaat **1.27.36** bouwt op GPS-herstel en F3 R04b in [#370](https://github.com/saddamsmit-source/Birdspot-Library/pull/370). De naam is zichtbaar in de app, op het installatiekaartje en bij nieuwe exports. De door de eigenaar gekozen referentielayout, het logo en het kleurenpalet horen bij fase 2.
+
+De app blijft op de bestaande adressen werken. De repositoryslug draagt de oude naam omdat de actieve [GitHub Pages-reviewversie](https://saddamsmit-source.github.io/Birdspot-Library/) dit pad gebruikt. De opslag, ZIP- en feedbackformaten en PWA-identiteit gebruiken hun bestaande technische sleutels, zodat een update op hetzelfde adres bestaande gegevens kan blijven gebruiken. De kandidaat heeft een nieuwe versie van de app-cache.
+
+**Release HOLD.** De kandidaat is bestemd voor beoordeling op GitHub. Samsung, een beveiligde preview en de openbare versies volgen de bestaande vrijgaveprocedure.
+
+## Geïntegreerde kandidaat 1.27.35 (26 november 2026)
 
 **Release HOLD.** Concept-PR [#370](https://github.com/saddamsmit-source/Birdspot-Library/pull/370) bundelt GPS-herstel en F3-REV2-R04b op de vastgelegde basis van #369. De kandidaat krijgt een eigen app-cache. Een handmatig gekozen weerlocatie blijft bij volle opslag voor de sessie bruikbaar. Bij uitval van de weerservice blijven de locatieknoppen beschikbaar als GPS ontbreekt. [GPS-dossier](docs/release/GPS01_WEERLOCATIE_2026-11-26_DRAFT.md)
 
@@ -48,7 +56,7 @@ baseline alsnog klopt met de werkelijke stand van de app.
 
 ## Identiteit
 
-- **App**: Birdspot Library (App 002)
+- **App**: Aviandra (App 002, voorheen Birdspot Library)
 - **Repository**: `saddamsmit-source/Birdspot-Library`
 - **Eigenaar**: Kevin Smit (Project Owner)
 - **Status**: in actieve ontwikkeling. `main` staat op Release 1.14.0 (zoeken op

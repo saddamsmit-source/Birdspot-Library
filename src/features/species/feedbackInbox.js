@@ -20,7 +20,7 @@ function renderEntry(target, entry) {
   if (!names.has(entry?.speciesId) || typeof entry.slot !== 'string' || !slotLabel(entry.slot) ||
     entry.consent !== true || typeof entry.photo !== 'string' || entry.photo.length > 2100000 ||
     !/^data:image\/jpeg;base64,[a-zA-Z0-9+/]+={0,2}$/.test(entry.photo)) {
-    throw new Error('Dit bestand is geen geldig Birdspot-fotovoorstel.');
+    throw new Error('Dit bestand is geen geldig Aviandra-fotovoorstel.');
   }
   const card = document.createElement('article');
   const title = document.createElement('h2');
@@ -94,7 +94,7 @@ document.querySelector('#feedbackFile').addEventListener('change', async event =
   try {
     if (file.size > 2100000) throw new Error('Dit fotovoorstel is te groot.');
     const entry = JSON.parse(await file.text());
-    if (entry.format !== 'birdspot-photo-feedback') throw new Error('Kies een Birdspot-fotovoorstel.');
+    if (entry.format !== 'birdspot-photo-feedback') throw new Error('Kies een Aviandra-fotovoorstel.');
     renderEntry(document.querySelector('#manualItems'), entry);
     status.textContent = '';
   } catch {

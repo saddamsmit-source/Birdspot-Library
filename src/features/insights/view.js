@@ -1,5 +1,5 @@
 /**
- * Birdspot Signature — Insights, Phase 3
+ * Aviandra Signature — Insights, Phase 3
  * Calculations run locally against canonical sightings; read-only, no API.
  */
 import { appIcon } from '../../utils/icons.js';
@@ -86,7 +86,7 @@ export function renderInsights(el) {
   let destroyed=false,items=[],year=null,mode='observations';
   el.classList.add('signature-screen','phase3-insights-screen');
   el.innerHTML='<header class="signature-page-hero phase3-insights-hero">' +
-    '<span class="signature-kicker">BIRDSPOT / FIELD INTELLIGENCE</span>' +
+    '<span class="signature-kicker">AVIANDRA / FIELD INTELLIGENCE</span>' +
     '<h1>Mijn Inzichten</h1>' +
     '<p>Jouw ontdekkingstocht, zichtbaar gemaakt in cijfers, leefgebieden en bijzondere momenten.</p>' +
     '<div class="signature-orbit" aria-hidden="true"></div>' +

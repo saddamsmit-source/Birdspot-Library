@@ -180,7 +180,7 @@ def main():
             assert len(downloads) == 1, len(downloads)
             raw = Path(dl.value.path()).read_bytes()
             assert raw.startswith(b"\xef\xbb\xbf"), raw[:5]
-            assert dl.value.suggested_filename.startswith("birdspot-waarnemingen-") and dl.value.suggested_filename.endswith(".csv")
+            assert dl.value.suggested_filename.startswith("aviandra-waarnemingen-") and dl.value.suggested_filename.endswith(".csv")
             rows = list(csv.reader(io.StringIO(raw[3:].decode("utf-8"))))
             assert rows[0][:5] == ["datum", "tijd", "soort", "wetenschappelijke_naam", "aantal"], rows[0]
             assert len(rows) == 1 + len(ROWS), len(rows)

@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Aviandra">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#17382C">
   <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
-  <title>Birdspot Library</title>
+  <title>Aviandra</title>
 
   <!-- Tokens -->
   <link rel="stylesheet" href="styles/tokens.css">
@@ -49,14 +50,16 @@
 </head>
 <body>
 
-  <!-- Premium 9:16 opening visual, image already contains its own brand identity. -->
+  <!-- Opening photo with the current name over the previous wordmark. -->
   <div id="birdspotSplash" class="birdspot-splash" role="dialog" aria-modal="true"
-       aria-label="Birdspot Library wordt geopend">
-    <img class="birdspot-splash__art" src="assets/birdspot-ijsvogel-splash.avif"
-         alt="Birdspot Library, ijsvogel in een groen bos"
-         fetchpriority="high" decoding="async">
+       aria-label="Aviandra wordt geopend">
+    <div class="birdspot-splash__frame">
+      <img class="birdspot-splash__art" src="assets/birdspot-ijsvogel-splash.avif"
+           alt="IJsvogel in een groen bos" fetchpriority="high" decoding="async">
+      <span class="birdspot-splash__wordmark" aria-hidden="true">Aviandra</span>
+    </div>
     <div class="birdspot-splash__fallback" hidden aria-hidden="true">
-      <div><strong>Birdspot Library</strong><span>ONTDEK · REGISTREER · BELEEF</span></div>
+      <div><strong>Aviandra</strong><span>ONTDEK · REGISTREER · BELEEF</span></div>
     </div>
     <button type="button" id="birdspotSplashSkip" class="birdspot-splash__skip"
             aria-label="Sla het openingsscherm over">Overslaan</button>
@@ -79,7 +82,7 @@
             <path d="M26 24 Q30 26 34 22 Q32 28 26 30Z"
                   fill="#2D6A4F"/>
           </svg>
-          <span>Birdspot Library</span>
+          <span>Aviandra</span>
         </div>
       </div>
     </main>

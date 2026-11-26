@@ -1,5 +1,5 @@
 /**
- * Birdspot Film Studio — premium client-only movie editor.
+ * Aviandra Film Studio — premium client-only movie editor.
  * Uses existing Phase 2 film selection; exports a silent movie locally where
  * the browser implements Canvas.captureStream + MediaRecorder.
  */
@@ -14,8 +14,8 @@ import { FILM_LIMIT,chooseMovieFormat,movieEstimate,renderFilm } from './rendere
 
 const safe=x=>escHtml(String(x??''));
 const typeOf=p=>p?.blob?.type||p?.type||'';
-const slug=x=>String(x||'birdspot-film').normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
-  .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,45)||'birdspot-film';
+const slug=x=>String(x||'aviandra-film').normalize('NFKD').replace(/[\u0300-\u036f]/g,'')
+  .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,45)||'aviandra-film';
 const shorten=(v,n=75)=>String(v||'').trim().slice(0,n);
 
 export function renderFilmStudio(el) {
@@ -25,7 +25,7 @@ export function renderFilmStudio(el) {
   const state={aspect:'landscape',seconds:3,title:'My Birding Story'};
   el.classList.add('signature-screen','film-studio-screen');
   el.innerHTML =
-    '<header class="film-studio-hero"><span class="signature-kicker">BIRDSPOT / THE CREATIVE STUDIO</span>' +
+    '<header class="film-studio-hero"><span class="signature-kicker">AVIANDRA / THE CREATIVE STUDIO</span>' +
       '<div class="film-studio-orbit" aria-hidden="true"></div>' +
       '<h1>Wildlife Film Studio</h1>' +
       '<p>Van jouw vogelmomenten naar een persoonlijk, filmisch verhaal.</p>' +
@@ -82,7 +82,7 @@ export function renderFilmStudio(el) {
         '<section class="film-studio-panel film-studio-panel--export">' +
           '<div class="film-studio-panel-heading"><div><span class="signature-eyebrow">04 / CREATE</span>' +
             '<h3>Maak jouw film</h3></div></div>' +
-          '<p class="film-studio-export-copy">Een filmische intro, jouw eigen foto’s en video’s in de gekozen volgorde, en een afsluitende Birdspot-titelkaart.</p>' +
+          '<p class="film-studio-export-copy">Een filmische intro, jouw eigen foto’s en video’s in de gekozen volgorde, en een afsluitende Aviandra-titelkaart.</p>' +
           '<button type="button" id="filmExport" class="film-studio-primary">'+appIcon('film')+' <span id="filmExportLabel">Film maken op dit apparaat</span></button>' +
           '<button type="button" id="filmCancel" class="film-studio-cancel" hidden>Stop filmexport</button>' +
           '<div class="film-studio-progress" id="filmProgress" hidden role="status" aria-live="polite">' +
@@ -140,7 +140,7 @@ export function renderFilmStudio(el) {
     if(!item){out.innerHTML='<div class="film-studio-preview-empty">Geen geselecteerd beeld</div>';return;}
     const url=urls.get(item.id);
     if(!url)return;
-    const caption='<div class="film-studio-preview-caption"><span>BIRDSPOT / MY WILDLIFE</span>' +
+    const caption='<div class="film-studio-preview-caption"><span>AVIANDRA / MY WILDLIFE</span>' +
       '<strong>'+safe(item.name)+'</strong><small>'+safe(item.where||'')+'</small></div>';
     const media=item.kind==='video'
       ? '<video controls muted playsinline preload="metadata" src="'+url+'" aria-label="Voorbeeld: '+safe(item.name)+'"></video>'

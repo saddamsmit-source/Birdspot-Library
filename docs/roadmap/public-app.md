@@ -1,4 +1,4 @@
-# Birdspot — openbare app en vervolgstappen
+# Aviandra — openbare app en vervolgstappen
 
 Status: voorstel / gedeeltelijk voorbereid, 2026-11-05. Eigenaar vraagt gefaseerde uitvoering en preview na iedere wijziging. Kaart blijft bij Claude (PR #34). Basis: main 5bf67043.
 

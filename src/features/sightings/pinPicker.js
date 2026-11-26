@@ -21,7 +21,7 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}
   host.innerHTML=
     '<div class="manual-pin-backdrop"></div>'+
     '<div class="manual-pin-sheet" role="dialog" aria-modal="true" aria-label="'+escAttr(ariaLabel)+'">'+
-      '<header class="manual-pin-header"><div><span class="signature-kicker">BIRDSPOT / BIRD EXPLORER</span>'+
+      '<header class="manual-pin-header"><div><span class="signature-kicker">AVIANDRA / BIRD EXPLORER</span>'+
         '<h2>'+escAttr(title)+'</h2>'+
         '<p>'+escAttr(intro)+'</p></div>'+
         '<button id="pinCancel" type="button" aria-label="Sluit kaartkiezer">×</button></header>'+

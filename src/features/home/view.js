@@ -86,8 +86,8 @@ export function renderHome(el, { onSearchSelect } = {}) {
     openPinPicker({
       lat: ctx.location?.lat ?? null, lon: ctx.location?.lon ?? null,
       title: 'Kies een plek voor weer en zon', ariaLabel: 'Kies een plek voor weer en zon',
-      intro: 'Gebruikt zolang je locatie niet beschikbaar is. Met GPS aan volgt Birdspot weer je actuele positie.',
-      tip: 'Birdspot rondt de gekozen plek af op ongeveer 1 km. Je waarnemingen veranderen niet.',
+      intro: 'Gebruikt zolang je locatie niet beschikbaar is. Met GPS aan volgt Aviandra weer je actuele positie.',
+      tip: 'Aviandra rondt de gekozen plek af op ongeveer 1 km. Je waarnemingen veranderen niet.',
       confirmLabel: 'Gebruik deze plek', showClear: false,
       onConfirm: ({ lat, lon }) => { if (setManualLocation(lat, lon) && !ctx.destroyed) refreshLocationCards(el, ctx); },
     });
@@ -128,7 +128,7 @@ function buildSkeleton() {
           <path d="M22 22 Q26 24 30 20 Q28 26 22 28Z"
                 fill="rgba(255,255,255,.6)"/>
         </svg>
-        <span class="app-header__title">Birdspot Library</span>
+        <span class="app-header__title">Aviandra</span>
       </div>
 
       <button type="button" class="app-header__avatar" aria-label="Profiel" data-signature-route="profile">

@@ -4,7 +4,7 @@
  * De WAV bevat alleen geluid: geen metadata, geen locatie, geen extra blokken.
  */
 export const MERLIN_WAV_RATE = 44100;
-export const MERLIN_WAV_NAME = 'birdspot-opname.wav';
+export const MERLIN_WAV_NAME = 'aviandra-opname.wav';
 
 export async function clipToWav(clip) {
   const Offline = window.OfflineAudioContext || window.webkitOfflineAudioContext;

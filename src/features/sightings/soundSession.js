@@ -20,7 +20,7 @@ const catalogue = SPECIES.map(species => ({
 }));
 const pad = value => String(value).padStart(2, '0');
 let pendingFinalization = Promise.resolve();
-// AS-01: blijft het stop-event van MediaRecorder uit, dan rondt Birdspot na deze tijd zelf af (geen permanente blokkade).
+// AS-01: blijft het stop-event van MediaRecorder uit, dan rondt Aviandra na deze tijd zelf af (geen permanente blokkade).
 const STOP_TIMEOUT_MS = 5000;
 
 export function mountSoundSession(root, onSaved) {
@@ -50,7 +50,7 @@ export function mountSoundSession(root, onSaved) {
       <details id="soundMerlin">
         <summary><span id="soundMerlinTitle">Controleer met Merlin</span> <small>optioneel</small></summary>
         <p>BirdNET hierboven doet alleen suggesties. Merlin Bird ID is een aparte, gratis app van Cornell Lab.
-          Birdspot krijgt geen uitslag van Merlin terug: jij kiest en bevestigt de soort zelf.</p>
+          Aviandra krijgt geen uitslag van Merlin terug: jij kiest en bevestigt de soort zelf.</p>
         <button type="button" id="soundMerlinShare" hidden>Deel met Merlin (bewaar tijdelijk concept)</button>
         <p id="soundMerlinShareNote" role="status"></p>
         <details class="sound-merlin__manual">
@@ -58,10 +58,10 @@ export function mountSoundSession(root, onSaved) {
           <ol>
             <li>Kies eerst 'Bewaar concept voor later of Merlin' om je sessie op dit toestel te bewaren.</li>
             <li>Open Merlin Bird ID → Sound ID. Neem daar op, of importeer de gedeelde opname.</li>
-            <li>Kom terug naar Birdspot. Is dit scherm dicht? Kies + → Geluid herkennen: de sessie opent weer.</li>
+            <li>Kom terug naar Aviandra. Is dit scherm dicht? Kies + → Geluid herkennen: de sessie opent weer.</li>
             <li>Vink hieronder aan wat Merlin gaf en kies zelf de soort.</li>
           </ol>
-          <p>Geen Merlin, geen netwerk of afgebroken? Ga gewoon verder in Birdspot. Merlin is gratis te installeren via de app-winkel.</p>
+          <p>Geen Merlin, geen netwerk of afgebroken? Ga gewoon verder in Aviandra. Merlin is gratis te installeren via de app-winkel.</p>
         </details>
         <label class="sound-merlin__used"><input type="checkbox" id="soundMerlinUsed"> Ik heb Merlin gebruikt voor deze vogels</label>
         <div id="soundMerlinResult" hidden>
@@ -141,7 +141,7 @@ export function mountSoundSession(root, onSaved) {
   let persistWork = Promise.resolve();
   let draftRevision = 0;
   let dateEdited = false, timeEdited = false;
-  // Ronde 4: Merlin-dubbelcheck (alles lokaal; Birdspot ontvangt niets van Merlin).
+  // Ronde 4: Merlin-dubbelcheck (alles lokaal; Aviandra ontvangt niets van Merlin).
   const merlinShare = find('soundMerlinShare'), merlinNote = find('soundMerlinShareNote');
   const merlinUsedBox = find('soundMerlinUsed');
   const merlinStatus = find('soundMerlinState'), attachBox = find('soundAttach');
@@ -650,12 +650,12 @@ export function mountSoundSession(root, onSaved) {
       await navigator.share({ files: [file] });
       if (closed || root.inert || wavFile !== file) return;
       merlinShared = true;
-      merlinStatus.textContent = 'Opname gedeeld. Kom na Merlin terug naar Birdspot en vink hieronder aan wat Merlin gaf.';
+      merlinStatus.textContent = 'Opname gedeeld. Kom na Merlin terug naar Aviandra en vink hieronder aan wat Merlin gaf.';
       persistDraft();
     } catch (error) {
       merlinStatus.textContent = error?.name === 'AbortError'
         ? 'Delen geannuleerd. Je sessie staat nog klaar.'
-        : 'Delen lukte niet. Open Merlin zelf of ga verder in Birdspot; je sessie staat nog klaar.';
+        : 'Delen lukte niet. Open Merlin zelf of ga verder in Aviandra; je sessie staat nog klaar.';
     } finally {
       merlinShare.disabled = false;
     }

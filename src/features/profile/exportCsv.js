@@ -59,7 +59,7 @@ export function sightingsToCsv(sightings, { speciesById = new Map(), places = []
 /** Start de download van het CSV-bestand; geeft bestandsnaam en aantal terug. */
 export function downloadCsv(sightings, opts = {}) {
   const text = sightingsToCsv(sightings, opts);
-  const filename = `birdspot-waarnemingen-${new Date().toISOString().slice(0, 10)}.csv`;
+  const filename = `aviandra-waarnemingen-${new Date().toISOString().slice(0, 10)}.csv`;
   const blob = new Blob(['﻿', text], { type: 'text/csv;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');

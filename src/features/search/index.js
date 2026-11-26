@@ -102,15 +102,15 @@ const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
 export function searchMarkup() {
   return `
     <button class="app-header__search app-search-trigger" id="homeSearchTrigger" type="button" aria-haspopup="dialog">
-      ${icon}<span>Zoek in Birdspot</span>
+      ${icon}<span>Zoek in Aviandra</span>
     </button>
     <dialog class="app-search-dialog" id="appSearchDialog" aria-labelledby="appSearchTitle">
       <div class="app-search-head">
-        <div class="app-search-heading"><h1 id="appSearchTitle">Zoek in Birdspot</h1>
+        <div class="app-search-heading"><h1 id="appSearchTitle">Zoek in Aviandra</h1>
           <button class="app-search-close" type="button" aria-label="Zoeken sluiten">×</button>
         </div>
         <form class="app-search-form" role="search">
-          <label class="visually-hidden" for="homeSearch">Zoek in Birdspot</label>
+          <label class="visually-hidden" for="homeSearch">Zoek in Aviandra</label>
           <input type="search" id="homeSearch" placeholder="Soort, plek, functie…" autocomplete="off"
             enterkeyhint="search" maxlength="160" autofocus>
           <button type="submit" aria-label="Zoeken">${icon}</button>

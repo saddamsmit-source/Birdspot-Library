@@ -1,14 +1,14 @@
-# Birdspot — inhouds- en fotokwaliteitsnorm
+# Aviandra — inhouds- en fotokwaliteitsnorm
 
 | | |
 |---|---|
 | Versie | **1.10 FINAL · 22-11-2026** · eigenaarbesluit bronverificatie |
 | Status | **FINAL als documentuitgave** na Final QA en eigenaaropdracht van 22-11-2026. Gebaseerd op v1.7 FINAL, met volledige behoudshistorie. v1.8 (#282) en v1.9 (#315) waren afzonderlijke concepten, geen eerdere FINAL. GitHub-merge, hostactivering, inhoudelijke soort-PASS en apprelease zijn **NIET** door deze documentvrijgave uitgevoerd. |
 | Herkomst | Eigenaaropdracht "Nieuwe eigenaarbesluiten, livegang en batch M3" (10-11-2026) en het vastgelegde besluit op PR #127 ([comment 6779875047](https://github.com/saddamsmit-source/Birdspot-Library/pull/127#issuecomment-6779875047)) |
-| Geldt voor | Alle soortkaarten van Birdspot Library: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
-| Gezag | Dit document is de enige Birdspot-normhouder voor inhoudelijke determinatie, media- en fotokwaliteit en bronverificatie; andere bronnen verwijzen hiernaar en creëren geen parallelle normen. |
+| Geldt voor | Alle soortkaarten van Aviandra: soortdata (`src/data/species.js`), kennisprofielen (`tools/kennisbaseline/knowledge.json`), gidsfoto's en soortaudit |
+| Gezag | Dit document is de enige Aviandra-normhouder voor inhoudelijke determinatie, media- en fotokwaliteit en bronverificatie; andere bronnen verwijzen hiernaar en creëren geen parallelle normen. |
 
-De regels gelden alleen voor Birdspot. Het algemene App Development Handbook verandert hierdoor niet.
+De regels gelden alleen voor Aviandra. Het algemene App Development Handbook verandert hierdoor niet.
 
 Doel: een vogelgids die vogelkenners kunnen vertrouwen. Herkenningsinformatie moet aantoonbaar juist zijn en foto's moeten geverifieerd zijn. Kleine, natuurlijke afwijkingen in maten mogen het werk niet blokkeren.
 
@@ -16,7 +16,7 @@ Doel: een vogelgids die vogelkenners kunnen vertrouwen. Herkenningsinformatie mo
 
 ## 1. Lengte, spanwijdte en gewicht (biometrie)
 
-Vogels verschillen van nature in grootte. Bronnen noemen daarom vaak net andere maten. Voor gewone maatgegevens toont Birdspot een afgeronde, indicatieve band met het woord **"ca."**. Het is geen biologisch minimum en maximum.
+Vogels verschillen van nature in grootte. Bronnen noemen daarom vaak net andere maten. Voor gewone maatgegevens toont Aviandra een afgeronde, indicatieve band met het woord **"ca."**. Het is geen biologisch minimum en maximum.
 
 ### 1.1 Werkwijze
 
@@ -39,7 +39,7 @@ Vogels verschillen van nature in grootte. Bronnen noemen daarom vaak net andere 
 8. **Uitschieters.** Is een bronwaarde duidelijk een typefout of onverenigbaar met de andere bronnen? Leg haar vast onder `excluded` met de reden en reken zonder haar. Er moeten dan nog steeds twee uitgevers overblijven.
 9. **Niet blokkeren.** Een klein, verklaarbaar meetverschil is geen reden om een batch te blokkeren.
 
-Gaat het om één bron of één uitgever? Dan blijft de bestaande Birdspot-waarde staan en wordt het verschil vastgelegd in `discrepancies`.
+Gaat het om één bron of één uitgever? Dan blijft de bestaande Aviandra-waarde staan en wordt het verschil vastgelegd in `discrepancies`.
 
 **Grens.** Deze tolerantie geldt alleen voor gewone maatgegevens. Ze geldt niet voor kritische determinatiekenmerken, soortidentiteit, juridische beschermingsstatus of andere gegevens waarbij een afwijking de betekenis verandert. Een circa-band is nooit een doorslaggevend herkenningskenmerk.
 
@@ -113,7 +113,7 @@ Verder geldt:
 
 ### 2.1 Voorkeursbronnen voor soortherkenning en de beoordeling van gevonden foto's (eigenaarbesluit 14-11-2026)
 
-**Start met Vogelbescherming Nederland en de ANWB-vogelgids als voorkeursreferenties voor de inhoud.** Dit betreft het **verifiëren van vogelkenmerken en uitleg**, niet het verplicht overnemen van afbeeldingen van deze bronnen. Bij de beoordeling van foto's die Birdspot elders heeft gevonden, geldt:
+**Start met Vogelbescherming Nederland en de ANWB-vogelgids als voorkeursreferenties voor de inhoud.** Dit betreft het **verifiëren van vogelkenmerken en uitleg**, niet het verplicht overnemen van afbeeldingen van deze bronnen. Bij de beoordeling van foto's die Aviandra elders heeft gevonden, geldt:
 
 1. **Per soort raadplegen.** Lees eerst de toegankelijke, toepasselijke soortbeschrijving van [Vogelbescherming Nederland](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids) en de soortpassage uit een passende **ANWB-vogelgids** wanneer die inhoud daadwerkelijk kan worden ingezien. Vergelijk wetenschappelijke naam/ondersoort, uiterlijke herkenning, soortverschillen, mannetje/vrouwtje, juveniel/volwassen, seizoen, levensgebied en waar relevant gedrag en geluid. Leg de directe soortlink of voor ANWB de boektitel, auteur, editie en paginanummer vast. Een ANWB-webwinkelpagina **bewijst alleen het bestaan van de gids**, niet wat er over een concrete soort in staat.
 2. **Eigen gevonden foto beoordelen, niet bronfoto kopiëren.** Open het *oorspronkelijke bestand* van de kandidaatfoto en vergelijk de zichtbare kop, snavel, vleugel, staart, kleuren, lichaamsbouw en houding met de genoemde soortkenmerken. Beoordeel afzonderlijk wat het beeld echt toont en welke leeftijd/sekse/ondersoort daaruit wel of niet volgt. Ook een voorbeeldfoto bij een betrouwbare gids is geen automatische determinatie van **een andere** foto.
@@ -129,7 +129,7 @@ Verder geldt:
 - Gebruik [De Visdief en de gespecialiseerde naslagwerken](bronnen/VISDIEF_VOGELGIDSEN_BRONNOTITIE_2026-11-19.md) om gericht te zoeken naar een vergelijking, kleed, gedrag, roep of kijkgebied. Geef inhoudelijk bewijsgewicht aan de feitelijk geraadpleegde passage binnen haar toepassingsgebied. Een recensie, inhoudsopgave of boekcatalogus helpt de passage vinden. Leg bij een gelezen boek het werk, de auteur, editie, zo nodig het deel en de pagina vast. Een praktijkwaarneming ondersteunt de beschreven situatie. Onderbouw een algemene soortclaim met passend aanvullend bewijs.
 - Achterhaal bij kritieke kenmerken per bron op welk oorspronkelijk bewijs de bewering rust. Een overgenomen waarneming, foto, meetreeks of boekpassage telt per claim één keer, ook bij verschillende websites, edities, vertalingen of uitgevers. Bewaar die relatie en eventueel bronverschil in het bestaande brondossier. Laat een verschil in regio, periode, kleed of methode zichtbaar in de onderbouwing. Geef een kenmerk bij resterende twijfel de toepasselijke status volgens §2.
 - Leg in de bestaande soortaudit vast welke passage, kenmerken en omstandigheden zijn gecontroleerd. Benoem in de veldtekst waar je kijkt of naar luistert, welk verschil bruikbaar is en wanneer het ontbreekt. Habitat, één losse roep of een modeluitkomst geven op zichzelf onvoldoende houvast bij een onzeker soortpaar. Registreer de uitkomst in het bestaande openpunten- of vergelijkingsregister.
-- Gebruik Sovon en de betreffende landelijke of regionale bronhouder voor verspreiding, trend en formele status. Gebruik voor een openbare kijktip de gebiedsbeheerder voor toegang, openingstijden en afsluitingen. Leg land of regio, periode en de datum van controle vast. Volg voor kwetsbare locaties de bestaande Birdspot-privacyregels.
+- Gebruik Sovon en de betreffende landelijke of regionale bronhouder voor verspreiding, trend en formele status. Gebruik voor een openbare kijktip de gebiedsbeheerder voor toegang, openingstijden en afsluitingen. Leg land of regio, periode en de datum van controle vast. Volg voor kwetsbare locaties de bestaande Aviandra-privacyregels.
 
 ---
 
@@ -142,7 +142,7 @@ Verder geldt:
 - **Geen stilzwijgende kopie:** Vogelbescherming Nederland en ANWB blijven voorkeursbronnen voor inhoudelijke verificatie volgens §2.1; hun illustraties en teksten worden niet automatisch vrij herbruikbaar.
 - **Herstel en QA:** tests verifiëren dat optionele bronlabels en -links verdwijnen uit soort- en kennispanelen **en** dat attributies voor daadwerkelijk gebruikte media en kaartdata intact blijven. De uitgebreide bronlijst blijft uitsluitend in de controlebestanden.
 
-Deze afspraak gaat over Birdspot en laat eventuele wettelijke informatieverplichtingen elders in de app onverlet.
+Deze afspraak gaat over Aviandra en laat eventuele wettelijke informatieverplichtingen elders in de app onverlet.
 
 ---
 
@@ -167,7 +167,7 @@ Deze afspraak gaat over Birdspot en laat eventuele wettelijke informatieverplich
 **Bronautoriteit is onderwerpgebonden, geen onvoorwaardelijke '100%-juist'-stempel.** Noteer per afzonderlijke claim werkelijk gelezen inhoud, toepasselijk kleed/regio/jaar en onderlinge bronafhankelijkheid. Deze drie ingangen veranderen de regel niet dat de uitgever van een foto/audio afzonderlijk gebruiksrechten moet verlenen. Beelden en tekst van derden niet kopiëren zonder toegestane licentie. Bij ontbrekende of conflicterende hoofdbronnen gaat de lacune naar de eigenaarspoort hieronder, zonder automatisch een lagere bewijsdrempel te kiezen.
 
 **B. Foto en onafhankelijke herkenningstekst per soort.**
-1. Bekijk de werkelijk getoonde Birdspot-foto op relevante resolutie, het bronorigineel en de rol waarvoor het beeld bedoeld is. Beoordeel visuele herkenbaarheid, soort, sekse/leeftijd, rust/vlucht, kleden, zichtbare kritieke kenmerken en beelduitdrukking voor snelle veldherkenning. De zes verplichte controles uit §3.2 inclusief fotoherkomst, bronrechten en publicatie blijven onverkort van kracht. Een werkende URL, ingevuld slot of overeenkomende hash is geen biologische PASS.
+1. Bekijk de werkelijk getoonde Aviandra-foto op relevante resolutie, het bronorigineel en de rol waarvoor het beeld bedoeld is. Beoordeel visuele herkenbaarheid, soort, sekse/leeftijd, rust/vlucht, kleden, zichtbare kritieke kenmerken en beelduitdrukking voor snelle veldherkenning. De zes verplichte controles uit §3.2 inclusief fotoherkomst, bronrechten en publicatie blijven onverkort van kracht. Een werkende URL, ingevuld slot of overeenkomende hash is geen biologische PASS.
 2. Benoem expliciet welke voor de determinatie belangrijke kenmerken een foto **wel of niet** toont. Een onvoldoende, verkeerd gedetermineerd of niet correct gelicenseerd beeld mag niet als geverifieerd worden getoond. Zoek een betere foto wanneer de eigenaar daartoe beslist; dwing geen vlucht- of juvenielbeeld af alleen om een vak te vullen (§3.3/§3.5).
 3. Bij zwakke of ontbrekende foto's: bied onder **Snel herkennen** en bij relevante soortparen **Lijkt op** nauwkeurige, begrijpelijke en brongedragen tekst. Noem in maximaal drie primaire aanknopingspunten *waarop je kijkt of luistert*, *welk verschil zichtbaar/hoorbaar is*, *welke leeftijd, kleed, hoek, licht of seizoen daarvoor nodig is*, en *wanneer het kenmerk onvoldoende zekerheid geeft*. Test dubbelgangers in beide richtingen (§3.4). Bij een onvolledig fotopaar verberg je uitsluitend het incomplete beeldpaneel; de herkenningswaarschuwing en uitleg blijven in de gewone soorttekst beschikbaar.
 4. Controleer daadwerkelijk gebruikte audio op soortidentiteit, zang/roep/vluchtroep, herkomst, hoorbaarheid, credits en herpublicatierechten. Een gelijk audiobestand of bronlabel bewijst niet op zichzelf de biologische betekenis. Ontbrekende audiodekking blijft herkenbaar OPEN.
@@ -242,7 +242,7 @@ Leg bij ieder nieuw of herbeoordeeld bestand afzonderlijk vast wat zichtbaar of 
 
 ### 3.4 Kritieke dubbelgangers: overtuigend verschil in echte foto's én tekst (eigenaarbesluit 16-11-2026)
 
-**Verplichte Birdspot-regel voor alle huidige en toekomstige F3-soortcontroles:** soorten die sterk op elkaar lijken, krijgen een **symmetrische, brongedragen determinatievergelijking**. Zowel de foto's als de begrijpelijke korte tekst moeten de gebruiker helpen daadwerkelijk het verschil te herkennen. De regel is soortspecifiek, niet een algemene vrijstelling of garantie dat ieder vergelijkingskenmerk altijd zichtbaar is.
+**Verplichte Aviandra-regel voor alle huidige en toekomstige F3-soortcontroles:** soorten die sterk op elkaar lijken, krijgen een **symmetrische, brongedragen determinatievergelijking**. Zowel de foto's als de begrijpelijke korte tekst moeten de gebruiker helpen daadwerkelijk het verschil te herkennen. De regel is soortspecifiek, niet een algemene vrijstelling of garantie dat ieder vergelijkingskenmerk altijd zichtbaar is.
 
 1. **Identificeer de verwarringssoort(en).** Noteer per soort welke concrete andere soort/ondersoort erop lijkt, de wetenschappelijke namen en de risicokleden (mannetje, vrouwtje, juveniel, winter/eclips, voor zover relevant). Een afwijkende koptekening binnen dezelfde soort mag nooit automatisch als afzonderlijke soort worden geclaimd.
 2. **Maak onderscheid in eigen woorden.** Toon bij ten minste het kritischste paar maximaal drie werkelijk onderscheidende, brongedragen punten met *beide* soorten naast elkaar: kijkpunt (kop, snavel, vleugel, stuit, roep), zichtbare verschillen, toepasselijke kleed/leeftijd/hoek en uitzonderingen. Rangschik betrouwbare aanwijzingen boven zwakke kleur-, grootte- of gedragsindrukken. Geen enkel overlappend kenmerk presenteren als 'doorslaggevend'. Bij twijfel blijft 'niet zeker' mogelijk.
@@ -299,5 +299,7 @@ Voortbouwend op niet-gemergd voorstel v1.8 (#282), onder de eigenaarspoort voor 
 | 1.8 concept | 16/17-11-2026 | Niet-gemergd voorstel in PR #282: fotoprioriteit per vogelgroep; bron-/rechtenregels van v1.7 behouden. In v1.10 op nieuw eigenaarbesluit verduidelijkt met verplichte lacunemelding en keuze eigenaar. |
 | 1.9 concept | 20-11-2026 | Niet-gemergd voorstel in PR #315: De Visdief-bronroute en bewijs per media-item; als inhoudelijk relevant concept geïntegreerd, niet stilzwijgend als eerdere FINAL geclaimd. |
 | 1.10 FINAL | 22-11-2026 | Eigenaarbesluit: leidende daadwerkelijk gelezen ANWB/Vogelbescherming, foto als snelle check, precieze tekst bij beeldgebrek, eigenaar beslist per materiële lacune, F3 eerst alle 140 inhoudelijk en daarna tweede onafhankelijke/eigenaar-fotoreview. Geen gate-/mediarechtenversoepeling. |
+
+**Naamupdate 26 november 2026.** Aviandra is de nieuwe naam van App 002. Versie v1.10 en de kwaliteitscriteria blijven van kracht.
 
 **EINDMARKERING — BIRDSPOT KWALITEITSNORM v1.10 FINAL · BRONVERIFICATIE · EIGENAARBESLUIT · DOCUMENT-QA PASS · GEEN LIVE**

@@ -1,5 +1,5 @@
 /**
- * Back-up & herstel — Birdspot Library
+ * Back-up & herstel — Aviandra
  *
  * Exporteert: ZIP met gegevens.json (localStorage) + alle IDB-foto's.
  * Importeert: validatie → bevestiging (caller) → veiligheidskopie → samenvoegen → herladen.
@@ -12,7 +12,7 @@
  *   - Veiligheidskopie vóór herstellen
  *   - "Terugzetten" naar de stand vóór de laatste import
  *   - Ongeldig bestand verandert niets
- *   - Format: ZIP met datum in de naam (birdspot-YYYY-MM-DD.zip)
+ *   - Format: ZIP met datum in de naam (aviandra-YYYY-MM-DD.zip)
  *   - Ronde 2B (backupVersion 2): plekken + privé-omgevingsfoto's (kind 'place-env', placeId,
  *     toelichting) gaan mee. Oude ZIP's (zonder backupVersion/kind) blijven werken.
  *   - Eigenaarreview (backupVersion 3): persoonlijke soortopnamen kunnen via
@@ -33,7 +33,7 @@ import { prepareOperation, markCommitted, dropInTx, finishOperation, recoverOper
 
 /**
  * Minimale ZIP-builder in pure JS.
- * Birdspot gebruikt stored (method 0).
+ * Aviandra gebruikt stored (method 0).
  */
 async function buildZip(files) {
   // files: Array<{ name: string, data: Uint8Array }>
@@ -331,7 +331,7 @@ export async function exportBackup() {
 
   // Datum in bestandsnaam
   const dateStr  = new Date().toISOString().slice(0, 10);
-  const filename = `birdspot-${dateStr}.zip`;
+  const filename = `aviandra-${dateStr}.zip`;
 
   // Download
   const url = URL.createObjectURL(blob);
@@ -388,7 +388,7 @@ async function readBackup(file) {
   if (!metadata) throw new Error('Geen gegevens.json gevonden in het ZIP-bestand.');
   const data = JSON.parse(new TextDecoder().decode(metadata));
   if (data?.format !== 'birdspot-backup' || !Array.isArray(data.sightings)) {
-    throw new Error('Ongeldig Birdspot-back-upbestand.');
+    throw new Error('Ongeldig Aviandra-back-upbestand.');
   }
   const validId = id => typeof id === 'string' && id.trim().length > 0;
   if (data.sightings.some(s => !validId(s?.id) ||
@@ -403,7 +403,7 @@ async function readBackup(file) {
     throw new Error('Onbekende back-upversie.');
   }
   if (Number.isInteger(data.backupVersion) && data.backupVersion > BACKUP_VERSION) {
-    throw new Error('Deze back-up komt uit een nieuwere Birdspot-versie. Werk de app eerst bij.');
+    throw new Error('Deze back-up komt uit een nieuwere Aviandra-versie. Werk de app eerst bij.');
   }
   if (data.places != null && (!Array.isArray(data.places) ||
     data.places.some(place => !validId(place?.id) || !validCoordPair(place.lat, place.lon) ||
@@ -787,7 +787,7 @@ export function restoreFromSafetyCopy() {
   });
 }
 
-// Birdspot exporteert ZIP-items zonder compressie. Controleer grenzen en CRC
+// Aviandra exporteert ZIP-items zonder compressie. Controleer grenzen en CRC
 // voordat een item als bibliotheekdata of media wordt gebruikt.
 function readZip(bytes) {
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);

@@ -1,5 +1,5 @@
 /**
- * Birdspot Library — kennisprofielen per soort (contract v0.1, proef).
+ * Aviandra — kennisprofielen per soort (contract v0.1, proef).
  * GEGENEREERD door tools/kennisbaseline/build_knowledge.py uit tools/kennisbaseline/knowledge.json — niet met de hand wijzigen.
  */
 const DATA = {
@@ -354,7 +354,7 @@ const DATA = {
    "confirms": "zwart-wit gestreepte halsvlek; juvenielen doffer en zonder halsvlek; kastanjebruine bovenvleugel met geschubd patroon",
    "checked": "2026-11-10",
    "certainty": "middel",
-   "publisher": "birdspot.co.uk (los van Birdspot Library)"
+   "publisher": "birdspot.co.uk (los van Aviandra)"
   },
   "VB_HAVIK": {
    "register": "NL07",
@@ -5875,7 +5875,7 @@ const DATA = {
     },
     {
      "id": "sp065",
-     "why": "Bestaande Birdspot-vergelijking (eveneens stamklimmer)",
+     "why": "Bestaande Aviandra-vergelijking (eveneens stamklimmer)",
      "sources": []
     }
    ],
@@ -6359,7 +6359,7 @@ const DATA = {
     },
     {
      "id": "sp095",
-     "why": "Formaat en tertials bij eerstejaars; bestaande vergelijking in Birdspot",
+     "why": "Formaat en tertials bij eerstejaars; bestaande vergelijking in Aviandra",
      "sources": [
       "VB_ZILV"
      ]
@@ -6373,7 +6373,7 @@ const DATA = {
     },
     {
      "id": "sp096",
-     "why": "Bestaande Birdspot-vergelijking",
+     "why": "Bestaande Aviandra-vergelijking",
      "sources": []
     }
    ],
@@ -6656,7 +6656,7 @@ const DATA = {
    "similar": [
     {
      "id": "sp007",
-     "why": "Grootste verwarringsrisico; bestaande vergelijkingen in Birdspot",
+     "why": "Grootste verwarringsrisico; bestaande vergelijkingen in Aviandra",
      "sources": [
       "VB_HVS",
       "VB_SPERWER"
@@ -6664,7 +6664,7 @@ const DATA = {
     },
     {
      "id": "sp008",
-     "why": "Door de bron genoemd; bestaande vluchtvergelijking in Birdspot",
+     "why": "Door de bron genoemd; bestaande vluchtvergelijking in Aviandra",
      "sources": [
       "VB_SPERWER"
      ]
@@ -7301,7 +7301,7 @@ const DATA = {
     },
     {
      "id": "sp004",
-     "why": "Bestaande vluchtvergelijking in Birdspot",
+     "why": "Bestaande vluchtvergelijking in Aviandra",
      "sources": []
     }
    ],
@@ -7323,7 +7323,7 @@ const DATA = {
     },
     {
      "topic": "geslacht",
-     "text": "Mannetje en vrouwtje zijn in de geraadpleegde bronnen niet op kleed te onderscheiden; Birdspot toont daarom geen geslachtsfoto's.",
+     "text": "Mannetje en vrouwtje zijn in de geraadpleegde bronnen niet op kleed te onderscheiden; Aviandra toont daarom geen geslachtsfoto's.",
      "sources": [
       "VB_HOUT"
      ]
@@ -7551,7 +7551,7 @@ const DATA = {
     },
     {
      "id": "sp004",
-     "why": "Bestaande vluchtvergelijking in Birdspot",
+     "why": "Bestaande vluchtvergelijking in Aviandra",
      "sources": []
     }
    ],
@@ -7566,7 +7566,7 @@ const DATA = {
     },
     {
      "topic": "geslacht",
-     "text": "Geslachten worden in de geraadpleegde bronnen niet op kleed onderscheiden; Birdspot toont geen geslachtsfoto's.",
+     "text": "Geslachten worden in de geraadpleegde bronnen niet op kleed onderscheiden; Aviandra toont geen geslachtsfoto's.",
      "sources": [
       "VB_HOLEN"
      ]
@@ -7819,7 +7819,7 @@ const DATA = {
     },
     {
      "topic": "geslacht",
-     "text": "Kleine verschillen in kop- en nekkleur, maar veel vogels zijn op kleed niet te sexen; Birdspot toont geen geslachtsfoto's.",
+     "text": "Kleine verschillen in kop- en nekkleur, maar veel vogels zijn op kleed niet te sexen; Aviandra toont geen geslachtsfoto's.",
      "sources": [
       "BZ_CD"
      ]
@@ -8475,7 +8475,7 @@ const DATA = {
    "detail": [
     {
      "topic": "geslacht",
-     "text": "Het vrouwtje is forser dan het mannetje; geen kleurverschil beschreven. Birdspot toont geen geslachtslabels.",
+     "text": "Het vrouwtje is forser dan het mannetje; geen kleurverschil beschreven. Aviandra toont geen geslachtslabels.",
      "sources": [
       "VB_SLECHT"
      ]
@@ -9106,7 +9106,7 @@ const DATA = {
    "detail": [
     {
      "topic": "geslacht",
-     "text": "Mannetje in de broedtijd feller gekleurd; geen verdere uitwerking in de bron. Birdspot toont geen geslachtslabels.",
+     "text": "Mannetje in de broedtijd feller gekleurd; geen verdere uitwerking in de bron. Aviandra toont geen geslachtslabels.",
      "sources": [
       "VB_KLEVER"
      ]
@@ -9317,7 +9317,7 @@ const DATA = {
     },
     {
      "topic": "geslacht",
-     "text": "Geslachten gelijk; Birdspot toont geen geslachtslabels.",
+     "text": "Geslachten gelijk; Aviandra toont geen geslachtslabels.",
      "sources": [
       "VB_TAIGA"
      ]
@@ -9567,7 +9567,7 @@ const DATA = {
         "max": 150
        }
       ],
-      "note": "Afgeronde middenband, niet de volledige variatie. De bronnen liggen ver uiteen; de oude Birdspot-waarde 117–134 cm had geen vastgelegde bron."
+      "note": "Afgeronde middenband, niet de volledige variatie. De bronnen liggen ver uiteen; de oude Aviandra-waarde 117–134 cm had geen vastgelegde bron."
      }
     ]
    },
@@ -9620,7 +9620,7 @@ const DATA = {
     }
    ],
    "open": [
-    "Spanwijdte in de bron lijkt onvolledig; tweede bron nodig voordat de Birdspot-waarde wordt aangepast.",
+    "Spanwijdte in de bron lijkt onvolledig; tweede bron nodig voordat de Aviandra-waarde wordt aangepast.",
     "Geen foto's van onvolwassen kleden."
    ]
   },
@@ -10318,7 +10318,7 @@ const DATA = {
     },
     {
      "topic": "geslacht",
-     "text": "De bron werkt kop- en oogkleur per geslacht niet uit; Birdspot-labels Mannetje/Vrouwtje steunen op de iNaturalist-annotaties.",
+     "text": "De bron werkt kop- en oogkleur per geslacht niet uit; Aviandra-labels Mannetje/Vrouwtje steunen op de iNaturalist-annotaties.",
      "sources": [
       "VB_WD"
      ]
