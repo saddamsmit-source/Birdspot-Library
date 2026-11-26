@@ -20,6 +20,8 @@ const catalogue = SPECIES.map(species => ({
 }));
 const pad = value => String(value).padStart(2, '0');
 let pendingFinalization = Promise.resolve();
+// AS-01: blijft het stop-event van MediaRecorder uit, dan rondt Birdspot na deze tijd zelf af (geen permanente blokkade).
+const STOP_TIMEOUT_MS = 5000;
 
 export function mountSoundSession(root, onSaved) {
   root.innerHTML = `
@@ -99,10 +101,14 @@ export function mountSoundSession(root, onSaved) {
       <p id="soundSaveState" role="status"></p>
       <button class="btn-primary" id="soundSave" type="submit">Pin je waarneming</button>
     </form>
-    <div id="soundExitPrompt" class="sound-exit-prompt" role="alertdialog" aria-label="Opname verlaten" hidden>
-      <strong>Wat wil je met deze opname doen?</strong>
-      <p>De opname is nog niet definitief opgeslagen.</p>
-      <div class="sound-exit-actions">
+    <div id="soundExitPrompt" class="sound-exit-prompt" role="alertdialog" aria-label="Opname verlaten" tabindex="-1" hidden>
+      <strong id="soundExitTitle">Wat wil je met deze opname doen?</strong>
+      <p id="soundExitText">De opname is nog niet definitief opgeslagen.</p>
+      <div class="sound-exit-actions" data-sound-exit-mode="recording" hidden>
+        <button type="button" data-sound-exit="stop">Stop opname</button>
+        <button type="button" data-sound-exit="resume">Doorgaan met opnemen</button>
+      </div>
+      <div class="sound-exit-actions" data-sound-exit-mode="choice">
         <button type="button" data-sound-exit="continue">Verder bewerken</button>
         <button type="button" data-sound-exit="keep">Bewaar concept</button>
         <button type="button" data-sound-exit="discard">Verwijder opname</button>
@@ -131,7 +137,7 @@ export function mountSoundSession(root, onSaved) {
   let coordinates, gpsRequest = 0, closePicker, closed = false;
   let positionOrigin, placeChoice, matchedPlace, locationPending = false, needsPlaceChoice = false;
   let stream, recorder, starting = false, finishing = false, timer, started = 0, playbackUrl;
-  let stopMonitor, recognition, wakeLock, completion, completeCapture;
+  let stopMonitor, recognition, wakeLock, completion, completeCapture, finalizeCapture, stopWatchdog;
   let persistWork = Promise.resolve();
   let draftRevision = 0;
   let dateEdited = false, timeEdited = false;
@@ -205,9 +211,18 @@ export function mountSoundSession(root, onSaved) {
     record.disabled = true;
     save.disabled = true;
     pendingFinalization = completion;
+    captureStatus.textContent = 'Opname wordt afgerond…';
     recorder.stop();
     stopTracks();
     stopMonitoring();
+    armStopWatchdog();
+    if (exitContinuation) awaitFinishForExit();
+  }
+
+  function armStopWatchdog() {
+    clearTimeout(stopWatchdog);
+    const finalize = finalizeCapture;
+    stopWatchdog = setTimeout(() => finalize?.({ timedOut: true }), STOP_TIMEOUT_MS);
   }
 
   function addCandidate(id, match = null, checked = !match, { merlin = false, seen = false, verified = false, birdnetChecked = false } = {}) {
@@ -455,21 +470,27 @@ export function mountSoundSession(root, onSaved) {
       active.addEventListener('dataavailable', event => {
         if (event.data.size) chunks.push(event.data);
       });
-      active.addEventListener('error', () => {
-        stopTracks();
-        captureStatus.textContent = 'De opname is onderbroken.';
-      });
-      active.addEventListener('stop', () => {
+      // AS-01: één afrondroute voor stop-event, fout en watchdog, zodat 'finishing' nooit blijft hangen.
+      // Komt het echte stop-event na de watchdog alsnog met geluid, dan wordt die opname alsnog getoond.
+      let settled = false, settledEmpty = false;
+      const finalize = ({ timedOut = false } = {}) => {
+        const late = settled;
+        if (late && !(settledEmpty && !timedOut && chunks.length && !closed && recorder === active)) return;
+        settled = true;
+        clearTimeout(stopWatchdog);
         clearInterval(timer);
         stopTracks();
         stopMonitoring();
-        updateElapsed();
+        if (!late) updateElapsed();
         const audio = new Blob(chunks, { type: active.mimeType || chunks[0]?.type });
+        settledEmpty = !audio.size;
         if (audio.size) {
           clip = audio;
           if (!closed) setPlayback(audio);
           captureStatus.textContent = 'Opname klaar. Luister terug en kies zelf waar je haar bewaart.';
-        } else captureStatus.textContent = 'Er is geen geluid opgenomen. Je kunt opnieuw proberen.';
+        } else captureStatus.textContent = timedOut
+          ? 'De opname kon niet worden afgerond. Probeer het opnieuw.'
+          : 'Er is geen geluid opgenomen. Je kunt opnieuw proberen.';
         finishing = false;
         record.disabled = Boolean(clip);
         record.textContent = clip ? 'Opname gestopt' : 'Start opname';
@@ -478,8 +499,25 @@ export function mountSoundSession(root, onSaved) {
         updateSelection();
         prepareWav();
         saveDraftButton.hidden = false;
+        // De uitgeschakelde opnameknop verliest focus; houd die in het menu zodat Escape/Terug blijven werken.
+        if (!closed && [record, document.body].includes(document.activeElement)) focusAfterPrompt();
         persistDraft().finally(completeCapture);
+        // Stopte de opname vanzelf terwijl de sluitvraag openstond, ga dan door naar de keuze.
+        if (exitContinuation && !exitPrompt.hidden && exitPrompt.dataset.mode === 'recording') awaitFinishForExit();
+      };
+      finalizeCapture = finalize;
+      active.addEventListener('error', () => {
+        stopTracks();
+        captureStatus.textContent = 'De opname is onderbroken.';
+        if (settled || finishing) return;
+        finishing = true;
+        record.disabled = save.disabled = true;
+        pendingFinalization = completion;
+        stopMonitoring();
+        armStopWatchdog();
+        if (exitContinuation) awaitFinishForExit();
       });
+      active.addEventListener('stop', () => finalize());
       active.start();
       clearPlayback();
       setMoment();
@@ -848,26 +886,75 @@ export function mountSoundSession(root, onSaved) {
 
   updateSelection();
   const exitPrompt = find('soundExitPrompt');
+  // AS-01: sluiten tijdens opnemen/afronden toont altijd een zichtbare keuze binnen het menu, nooit alleen een statusregel.
+  const EXIT_COPY = {
+    recording: ['De opname loopt nog', 'Stop de opname; daarna kies je of je haar bewaart of verwijdert.'],
+    finishing: ['Opname wordt afgerond…', 'Even geduld; daarna kies je wat je met de opname doet.'],
+    choice: ['Wat wil je met deze opname doen?', 'De opname is nog niet definitief opgeslagen.'],
+  };
+  function showExitPrompt(mode) {
+    exitPrompt.dataset.mode = mode;
+    [find('soundExitTitle').textContent, find('soundExitText').textContent] = EXIT_COPY[mode];
+    exitPrompt.querySelectorAll('[data-sound-exit-mode]').forEach(group => {
+      group.hidden = group.dataset.soundExitMode !== mode;
+    });
+    find('soundExitState').textContent = '';
+    exitPrompt.hidden = false;
+    const target = mode === 'recording' ? '[data-sound-exit="stop"]' : mode === 'choice' ? '[data-sound-exit="continue"]' : null;
+    (target ? exitPrompt.querySelector(target) : exitPrompt).focus();
+    exitPrompt.scrollIntoView?.({ block: 'nearest' });
+  }
+  function hideExitPrompt() {
+    exitContinuation = null;
+    exitPrompt.hidden = true;
+  }
+  function focusAfterPrompt() {
+    // De opnameknop is na een gestopte opname uitgeschakeld; focus blijft dan in het menu (Escape blijft werken).
+    const target = !record.disabled ? record : !playback.hidden ? playback
+      : root.closest('[role="dialog"]')?.querySelector('h2[tabindex]');
+    target?.focus({ preventScroll: true });
+  }
+  function awaitFinishForExit() {
+    showExitPrompt('finishing');
+    const waiting = completion;
+    waiting.then(() => {
+      if (closed || !exitContinuation || waiting !== completion) return;
+      if (clip) { showExitPrompt('choice'); return; }
+      const done = exitContinuation;
+      hideExitPrompt();
+      done();
+    });
+  }
   function requestExit(next) {
     if (sessionCommitted) return false;
-    if (recorder?.state === 'recording' || starting || finishing) {
-      captureStatus.textContent = 'Stop eerst de opname met de knop onderin.';
-      record.focus();
+    // Microfoon nog niet gestart: niets opgenomen, dus sluiten is veilig; een late microfoon wordt direct vrijgegeven.
+    if (starting && recorder?.state !== 'recording') return false;
+    if (recorder?.state === 'recording') {
+      exitContinuation = next;
+      showExitPrompt('recording');
+      return true;
+    }
+    if (finishing) {
+      exitContinuation = next;
+      if (exitPrompt.hidden || exitPrompt.dataset.mode !== 'finishing') awaitFinishForExit();
+      else exitPrompt.focus();
       return true;
     }
     if (!clip) return false;
     exitContinuation = next;
-    exitPrompt.hidden = false;
-    exitPrompt.querySelector('[data-sound-exit="continue"]').focus();
+    showExitPrompt('choice');
     return true;
   }
   exitPrompt.addEventListener('click', async event => {
     const action = event.target.closest('[data-sound-exit]')?.dataset.soundExit;
     if (!action) return;
-    if (action === 'continue') {
-      exitContinuation = null;
-      exitPrompt.hidden = true;
-      record.focus();
+    if (action === 'stop') {
+      stopRecording();
+      return;
+    }
+    if (action === 'continue' || action === 'resume') {
+      hideExitPrompt();
+      focusAfterPrompt();
       return;
     }
     exitPrompt.querySelectorAll('button').forEach(button => { button.disabled = true; });
