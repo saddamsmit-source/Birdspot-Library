@@ -1,4 +1,7 @@
-/** Registratie en handmatig toepassen van een beschikbare Birdspot-update. */
+/** Controleer automatisch op updates. De gebruiker kiest wanneer de app herlaadt. */
+
+const UPDATE_INTERVAL_MS = 5 * 60_000;
+const UPDATE_COOLDOWN_MS = 30_000;
 
 function hasActiveInput() {
   return Boolean(document.querySelector(
@@ -16,6 +19,8 @@ if ('serviceWorker' in navigator) {
     let controller = serviceWorker.controller;
     let reloadRequested = false;
     let reloadAvailable = false;
+    let checkingUpdate = false;
+    let lastUpdateCheck = -Infinity;
     const button = document.createElement('button');
     button.id = 'appUpdate';
     button.type = 'button';
@@ -60,9 +65,33 @@ if ('serviceWorker' in navigator) {
     function watchInstalling() {
       reg.installing?.addEventListener('statechange', showAvailableUpdate);
     }
+
+    async function checkForUpdate(reconnected = false) {
+      showAvailableUpdate();
+      const now = performance.now();
+      if (!reg.active || reg.installing || reg.waiting || reloadAvailable || checkingUpdate ||
+          !navigator.onLine || document.visibilityState !== 'visible' ||
+          (!reconnected && now - lastUpdateCheck < UPDATE_COOLDOWN_MS)) return;
+
+      checkingUpdate = true;
+      lastUpdateCheck = now;
+      try {
+        await reg.update();
+      } catch {
+        // Een verbroken verbinding of verlopen sessie laat de huidige versie gewoon werken.
+      } finally {
+        checkingUpdate = false;
+        showAvailableUpdate();
+      }
+    }
+
     reg.addEventListener('updatefound', watchInstalling);
     watchInstalling();
-    showAvailableUpdate();
+    window.addEventListener('online', () => checkForUpdate(true));
+    window.addEventListener('focus', () => checkForUpdate());
+    document.addEventListener('visibilitychange', () => checkForUpdate());
+    window.setInterval(() => checkForUpdate(), UPDATE_INTERVAL_MS);
+    checkForUpdate();
   }).catch(err => {
     console.warn('[SW] Registratie mislukt:', err.message);
   });
