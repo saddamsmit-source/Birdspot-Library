@@ -20,6 +20,8 @@ G10 weer-API offline: bestaande melding, zon blijft werken
 G11 320/390/430 px: melding en knoppen zonder overloop, knoppen ≥ 44 px
 G15 handmatige locatie blijft voor weer en zon beschikbaar als de opslag vol is
 G16 bij uitval van de weerservice blijven de locatieknoppen werken en herstelt weer na GPS-retry
+G17 toetsenbordfocus blijft in de kaartkiezer; browser-Terug laat de onopgeslagen keuze vervallen
+G18 een routewissel ruimt de kaartkiezer op; een late bevestiging kan de weerlocatie niet opslaan
 G13 kaart 'mijn locatie' zonder toestemming: melding in plaats van stil falen
 G14 offline: elke vanuit src/app.js geïmporteerde module (statisch en dynamisch) staat in de app-shell van sw.js
 G12 privacy: nergens coördinaten in weer/zon; weerverzoek met afgeronde coördinaten; opslag afgerond op 2 decimalen
@@ -215,6 +217,55 @@ def check_manual_location_recovery(browser, url):
         context.close()
 
 
+def check_manual_location_navigation(browser, url):
+    context, page = home(browser, url)
+    try:
+        pick = page.locator('[data-location-action="pick"]')
+        pick.click()
+        dialog = page.get_by_role('dialog', name='Kies een plek voor weer en zon')
+        cancel = dialog.locator('#pinCancel')
+        lat = dialog.locator('#pinLat')
+        lon = dialog.locator('#pinLon')
+        confirm = dialog.locator('#pinConfirm')
+        expect(cancel).to_be_focused()
+        page.keyboard.press('Shift+Tab')
+        wraps_with_empty_input = lon.evaluate('(el) => el === document.activeElement')
+        lat.fill('52.15612')
+        lon.fill('5.38763')
+        expect(confirm).to_be_enabled()
+        confirm.focus()
+        page.keyboard.press('Tab')
+        wraps_forward = cancel.evaluate('(el) => el === document.activeElement')
+        cancel.focus()
+        page.keyboard.press('Shift+Tab')
+        wraps_backward = confirm.evaluate('(el) => el === document.activeElement')
+        page.evaluate('history.back()')
+        expect(dialog).to_have_count(0)
+        expect(page.locator('#screen-home')).to_be_visible()
+        check('G17', 'Tab en Shift+Tab blijven in de kiezer; Terug sluit zonder opslag',
+              wraps_with_empty_input and wraps_forward and wraps_backward
+              and pick.evaluate('(el) => el === document.activeElement')
+              and info(page)['manual'] is None and not page.weather_requests,
+              (wraps_with_empty_input, wraps_forward, wraps_backward))
+
+        pick.click()
+        lat.fill('52.15612')
+        lon.fill('5.38763')
+        expect(confirm).to_be_enabled()
+        was_removed = confirm.evaluate("""async (button) => {
+            const { navigate } = await import('/src/app.js');
+            navigate('species');
+            button.click();
+            return !button.isConnected;
+        }""")
+        expect(page.locator('#screen-species')).to_be_visible()
+        check('G18', 'routewissel ruimt kaartkiezer op; late bevestiging schrijft geen weerlocatie',
+              was_removed and dialog.count() == 0 and page.evaluate("localStorage.getItem('birdspot-weather-location')") is None
+              and not page.weather_requests)
+    finally:
+        context.close()
+
+
 def run():
     modules, missing = shell_coverage()
     check('G14', 'offline: alle vanuit src/app.js geïmporteerde modules staan in de app-shell van sw.js', modules > 40 and not missing,
@@ -350,6 +401,7 @@ def run():
 
             check('G12', 'privacy: geen coördinaten in weer/zon, weerverzoek en opslag afgerond, geen paginafouten', g12a and not g12_errors, g12_errors)
             check_manual_location_recovery(b, url)
+            check_manual_location_navigation(b, url)
             b.close()
     failed = [c for c, ok in RESULTS if not ok]
     print(f"GPS-01: {len(RESULTS) - len(failed)}/{len(RESULTS)} PASS{' — FAIL ' + str(failed) if failed else ''}")

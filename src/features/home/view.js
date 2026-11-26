@@ -42,6 +42,7 @@ let weatherCache = null;                   // { key, at, data } — alleen in ge
 export function renderHome(el, { onSearchSelect } = {}) {
   // Gedeelde destroyed-vlag: alle async functies checken deze vóór DOM-mutaties.
   const ctx = { destroyed: false };
+  let closeLocationPicker = null;
 
   el.innerHTML = buildSkeleton();
   // New signature shortcuts use existing router; no parallel navigation state.
@@ -83,13 +84,15 @@ export function renderHome(el, { onSearchSelect } = {}) {
     const action = event.target.closest('[data-location-action]')?.dataset.locationAction;
     if (!action || ctx.destroyed) return;
     if (action === 'retry') { refreshLocationCards(el, ctx, { fresh: true }); return; }
-    openPinPicker({
+    if (closeLocationPicker) return;
+    closeLocationPicker = openPinPicker({
       lat: ctx.location?.lat ?? null, lon: ctx.location?.lon ?? null,
       title: 'Kies een plek voor weer en zon', ariaLabel: 'Kies een plek voor weer en zon',
       intro: 'Gebruikt zolang je locatie niet beschikbaar is. Met GPS aan volgt Birdspot weer je actuele positie.',
       tip: 'Birdspot rondt de gekozen plek af op ongeveer 1 km. Je waarnemingen veranderen niet.',
       confirmLabel: 'Gebruik deze plek', showClear: false,
-      onConfirm: ({ lat, lon }) => { if (setManualLocation(lat, lon) && !ctx.destroyed) refreshLocationCards(el, ctx); },
+      onClose: () => { closeLocationPicker = null; },
+      onConfirm: ({ lat, lon }) => { if (!ctx.destroyed && setManualLocation(lat, lon)) refreshLocationCards(el, ctx); },
     });
   };
   el.addEventListener('click', onLocationAction);
@@ -99,6 +102,7 @@ export function renderHome(el, { onSearchSelect } = {}) {
 
   return function cleanup() {
     ctx.destroyed = true;
+    closeLocationPicker?.();
     el.removeEventListener('click', onSignatureClick);
     el.removeEventListener('click', onLocationAction);
     document.removeEventListener('visibilitychange', onResume);
