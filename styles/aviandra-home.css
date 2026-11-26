@@ -1,1 +1,238 @@
 /* Aviandra Home — eigenaarreferentie van 26 november 2026. */
+#screen-home {
+  --home-gutter: 12px;
+  --home-hero-radius: 22px;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+#screen-home .app-header {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 10px;
+  padding: 15px max(18px, env(safe-area-inset-right)) 18px max(18px, env(safe-area-inset-left));
+  background: var(--brand);
+}
+
+#screen-home .app-header__logo { gap: 9px; }
+#screen-home .app-header__logo-icon { width: 32px; height: 32px; object-fit: contain; }
+#screen-home .app-header__title {
+  color: var(--focus-light);
+  font-size: clamp(1.125rem, 5.4vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+#screen-home .app-header__avatar { background: #244a3b; border: 1px solid #719689; }
+#screen-home .app-search-trigger {
+  min-height: 46px;
+  background: var(--focus-light);
+  border: 1px solid #bcccbb;
+  color: #42574b;
+  font-size: .875rem;
+}
+
+#screen-home .home-core-actions { margin-top: 0; }
+#screen-home .home-core-action {
+  gap: 7px;
+  min-height: clamp(67px, 19vw, 88px);
+  padding: 8px 4px;
+  border-color: #e4e9db;
+  border-radius: 15px;
+  background: var(--focus-light);
+  color: var(--brand);
+  font-weight: 750;
+}
+#screen-home .home-core-action .ui-icon { width: 22px; height: 22px; }
+#screen-home .home-core-action span { font-size: .8125rem; overflow-wrap: anywhere; }
+#screen-home .home-core-action--primary { background: var(--brand-light); border-color: #a9d8ba; }
+
+#screen-home #slideshow.featured-birds {
+  display: grid;
+  align-items: end;
+  width: auto;
+  height: auto;
+  min-height: clamp(234px, calc((100vw - 24px) / 1.28), 470px);
+  aspect-ratio: auto;
+  margin: var(--home-gutter) var(--home-gutter) 0;
+  padding: clamp(70px, 22vw, 190px) 0 0;
+  border: 0;
+  border-radius: var(--home-hero-radius);
+  box-shadow: var(--shadow-card);
+  --featured-photo-height: 100%;
+}
+
+#screen-home .featured-birds__media::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 26%, rgb(9 31 23 / .63) 64%, rgb(9 31 23 / .95));
+  pointer-events: none;
+}
+#screen-home #slideshow .featured-birds__caption {
+  inset: auto;
+  padding: 0 clamp(14px, 4.6vw, 26px) 14px;
+  pointer-events: none;
+}
+#screen-home .featured-birds__identification { padding: 0; }
+#screen-home #slideshow .featured-birds__caption h2 {
+  font-size: clamp(1.625rem, 7.7vw, 3.25rem);
+  line-height: 1.04;
+}
+#screen-home #slideshow .featured-birds__caption .field-eyebrow {
+  margin-bottom: 2px;
+  color: #d0ead6;
+  font-size: .6875rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+#screen-home #slideshow .featured-birds__group { font-size: .6875rem; padding: 0; }
+#screen-home .field-featured-actions { gap: 6px; }
+#screen-home .field-featured-actions > * { pointer-events: auto; }
+#screen-home .field-featured-actions > .field-action {
+  background: var(--brand-mid);
+  border-color: #a6cbb7;
+  border-radius: var(--r-pill);
+  font-size: .8125rem;
+  padding-inline: 10px;
+}
+#screen-home .field-featured-notes { border-radius: var(--r-pill); }
+#screen-home .field-featured-notes[open] { border-radius: var(--r-card); }
+#screen-home .field-featured-notes summary { font-size: .75rem; padding-inline: 8px; }
+
+.home-featured-progress {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  right: 48px;
+  display: flex;
+  gap: 5px;
+  pointer-events: none;
+}
+.home-featured-progress span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / .52);
+  box-shadow: 0 0 2px #17382c;
+}
+.home-featured-progress span.is-current { background: #fff; }
+
+#screen-home #featuredBirdMotion {
+  top: 42px;
+  right: 3px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+}
+#screen-home #featuredBirdMotion svg {
+  box-sizing: content-box;
+  width: 16px;
+  height: 16px;
+  padding: 4px;
+  border: 1px solid #b6cebf;
+  border-radius: 50%;
+  background: #102d23;
+}
+#screen-home #featuredBirdMotion[aria-pressed="true"] svg { background: var(--selected-gold); }
+
+#screen-home #statsRow {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(7px, 2.4vw, 12px);
+  padding: var(--home-gutter);
+  background: transparent;
+}
+#screen-home #statsRow .stat-tile {
+  min-height: clamp(77px, 22vw, 101px);
+  gap: 4px;
+  padding: 9px 3px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  color: var(--ink);
+}
+#screen-home #statsRow .stat-tile:hover { transform: none; }
+#screen-home #statsRow .stat-tile__value { color: var(--ink); font-size: 1.25rem; }
+#screen-home #statsRow .stat-tile__label {
+  color: var(--ink);
+  font-size: .6875rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.stat-tile__description {
+  color: var(--ink-2);
+  font-size: .625rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.home-weather {
+  margin: 0 var(--home-gutter) 16px;
+  padding: 0 10px 12px;
+  border-radius: var(--home-hero-radius);
+  background: linear-gradient(120deg, var(--brand), #245346);
+  color: var(--focus-light);
+}
+.home-weather__jump {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-height: var(--hit-field);
+  padding-inline: 4px;
+  color: inherit;
+  font: 750 1rem/1.2 var(--font-body);
+  text-align: start;
+}
+.home-weather__jump span:last-child { margin-inline-start: auto; }
+.home-weather__location {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 0 4px 8px;
+  color: #d0e5d7;
+  font-size: .8125rem;
+  overflow-wrap: anywhere;
+}
+.home-weather .dash-section { margin: 0; padding-block: 3px; }
+.home-weather .section-head__title { color: var(--focus-light); }
+.home-weather .dash-section__loading,
+.home-weather .dash-section__error { color: var(--focus-light); }
+
+.home-media-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: calc(100% - 2 * var(--home-gutter));
+  min-height: var(--hit-field);
+  margin: 0 var(--home-gutter) var(--space-16);
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  color: var(--ink);
+  font: 700 .875rem/1.3 var(--font-body);
+}
+.home-media-link .stat-tile__value { margin-inline-start: auto; font-size: 1rem; color: inherit; }
+
+#app:has(#screen-home) .app-nav { border-top: 0; background: var(--brand); }
+#app:has(#screen-home) .app-nav .nav-fab-slot { flex-grow: 1.2; }
+#app:has(#screen-home) .app-nav .fab-nav {
+  margin-top: -23px;
+  border: 0;
+  background: var(--brand-light);
+  color: var(--brand);
+  box-shadow: 0 3px 12px rgb(10 37 27 / .42);
+}
+#app:has(#screen-home) .app-nav .nav-item.active { color: var(--focus-light); text-shadow: none; }
+#app:has(#screen-home) .app-nav .nav-item.active svg { filter: none; }
+#app:has(#screen-home) .app-nav .nav-fab-label { font-size: .6875rem; }
+
+@media (min-width: 650px) {
+  #screen-home { --home-gutter: 22px; }
+  #screen-home #slideshow.featured-birds { min-height: clamp(320px, 39vw, 450px); }
+}

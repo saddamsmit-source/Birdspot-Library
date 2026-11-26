@@ -37,7 +37,7 @@ def main():
         logo = page.locator('.app-header__logo')
         header = page.locator('.app-header')
         bar, branding, frame = trigger.bounding_box(), logo.bounding_box(), header.bounding_box()
-        assert abs(bar['height'] - 38) < .5 and bar['width'] >= frame['width'] - 36, (bar, branding, frame)
+        assert bar['height'] >= 44 and bar['width'] >= frame['width'] - 36, (bar, branding, frame)
         assert bar['y'] > branding['y'] + branding['height']
 
         field = run_search(page)

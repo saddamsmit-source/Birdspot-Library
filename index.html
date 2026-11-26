@@ -2,12 +2,14 @@
 <html lang="nl" data-theme="">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Aviandra">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#17382C">
   <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <title>Aviandra</title>
 
   <!-- Tokens -->
@@ -37,6 +39,7 @@
   <!-- Kaart K1/K2: volledig scherm en vaste pin; als laatste geladen -->
   <link rel="stylesheet" href="styles/map-explorer.css">
   <link rel="stylesheet" href="styles/field-experience.css">
+  <link rel="stylesheet" href="styles/aviandra-home.css">
   <link rel="preload" as="image" type="image/avif" href="assets/birdspot-ijsvogel-splash.avif" fetchpriority="high">
 
   <!-- SunCalc (offline-capable sunrise/sunset/golden hour) -->
@@ -75,13 +78,7 @@
       <!-- placeholder terwijl JS laadt -->
       <div id="boot-screen">
         <div class="boot-logo">
-          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-            <circle cx="26" cy="26" r="26" fill="#1A3A2A"/>
-            <path d="M10 34 Q18 22 26 24 Q32 20 42 16 Q38 26 30 28 Q24 30 20 38Z"
-                  fill="#52B788" opacity=".95"/>
-            <path d="M26 24 Q30 26 34 22 Q32 28 26 30Z"
-                  fill="#2D6A4F"/>
-          </svg>
+          <img src="icons/icon-192.png" alt="" width="52" height="52">
           <span>Aviandra</span>
         </div>
       </div>

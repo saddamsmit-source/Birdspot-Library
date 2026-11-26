@@ -70,6 +70,7 @@ export function initFeaturedCarousel(el, ctx) {
   ].map(([id, key]) => [stage.querySelector('#' + id), key]);
   const credit = stage.querySelector('#featuredBirdCredit');
   const toggle = stage.querySelector('#featuredBirdMotion');
+  const progress = [...stage.querySelectorAll('.home-featured-progress span')];
   const speciesButton = stage.querySelector('[data-featured-species]');
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -85,6 +86,8 @@ export function initFeaturedCarousel(el, ctx) {
     if (pos.index === shownIndex) return;
     shownIndex = pos.index;
     const bird = FEATURED_BIRDS[pos.index];
+    const part = Math.floor(pos.index * progress.length / FEATURED_BIRDS.length);
+    progress.forEach((dot, index) => dot.classList.toggle('is-current', index === part));
     const info = birdInfo(bird);
     stage.dataset.birdId = bird.id;
     const hasSpeciesCard = byId.has(bird.id);

@@ -102,7 +102,7 @@ const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
 export function searchMarkup() {
   return `
     <button class="app-header__search app-search-trigger" id="homeSearchTrigger" type="button" aria-haspopup="dialog">
-      ${icon}<span>Zoek in Aviandra</span>
+      ${icon}<span>Zoek een vogel, geluid of plek…</span>
     </button>
     <dialog class="app-search-dialog" id="appSearchDialog" aria-labelledby="appSearchTitle">
       <div class="app-search-head">

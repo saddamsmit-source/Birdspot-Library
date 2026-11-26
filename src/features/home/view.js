@@ -1,8 +1,7 @@
 /**
  * Home / Dashboard — view
- * UI conform mockup: app-header (logo + zoekbalk + avatar),
- * diashow, 4 stat tiles, zon, weer, recente waarnemingen met
- * foto-thumbnail + certainty badge.
+ * Home: zoeken en kernacties, uitgelichte vogel, je tellingen,
+ * weer en zon, recente waarnemingen en hotspots.
  *
  * Externe deps (CDN, geladen via index.html):
  *   - SunCalc  → window.SunCalc
@@ -17,6 +16,7 @@ import { ensureLeaflet } from '../map/view.js';
 import { LAYERS } from '../map/centerPin.js';
 import { escHtml } from '../../utils/html.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
+import { assetUrl } from '../../utils/assetUrl.js';
 import { initFeaturedCarousel } from './featuredCarousel.js';
 import { bindAppSearch, searchMarkup } from '../search/index.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
@@ -67,6 +67,11 @@ export function renderHome(el, { onSearchSelect } = {}) {
   el.addEventListener('click', onSignatureClick);
   // UX-03A: 'Waarnemen' opent dezelfde keuze als de centrale + (één route, geen tweede formulier).
   el.querySelector('#homeCoreObserve')?.addEventListener('click', () => document.getElementById('fab')?.click());
+  el.querySelector('.home-weather__jump').addEventListener('click', () => {
+    const details = el.querySelector('#weatherSection');
+    details.scrollIntoView({ block: 'start' });
+    details.focus({ preventScroll: true });
+  });
   const disposeSearch = bindAppSearch(el, onSearchSelect);
   const disposeFeatured = initFeaturedCarousel(el,ctx);
   const disposeHabitat = initAmbientBackdrop(el,ctx);
@@ -121,13 +126,7 @@ function buildSkeleton() {
     <!-- App-header: logo + zoekbalk + avatar -->
     <header class="app-header">
       <div class="app-header__logo">
-        <svg class="app-header__logo-icon" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-          <circle cx="22" cy="22" r="22" fill="rgba(255,255,255,.15)"/>
-          <path d="M8 32 Q14 20 22 22 Q28 18 38 14 Q34 25 26 27 Q20 29 17 36Z"
-                fill="#52B788" opacity=".95"/>
-          <path d="M22 22 Q26 24 30 20 Q28 26 22 28Z"
-                fill="rgba(255,255,255,.6)"/>
-        </svg>
+        <img class="app-header__logo-icon" src="${assetUrl('/icons/aviandra-mark.svg')}" alt="" width="32" height="32">
         <span class="app-header__title">Aviandra</span>
       </div>
 
@@ -140,8 +139,8 @@ function buildSkeleton() {
       ${searchMarkup()}
       <!-- UX-03A: de drie kernactiviteiten, met icoon én woord, via bestaande routes -->
       <nav class="home-core-actions" aria-label="Wat wil je doen?">
-        <button type="button" class="home-core-action" data-signature-route="species">${appIcon('bird')}<span>Ontdekken</span></button>
-        <button type="button" class="home-core-action home-core-action--primary" id="homeCoreObserve">${appIcon('binoculars')}<span>Waarnemen</span></button>
+        <button type="button" class="home-core-action" data-signature-route="species">${appIcon('binoculars')}<span>Ontdekken</span></button>
+        <button type="button" class="home-core-action home-core-action--primary" id="homeCoreObserve">${appIcon('eye')}<span>Waarnemen</span></button>
         <button type="button" class="home-core-action" data-signature-route="sightings">${appIcon('observations')}<span>Mijn collectie</span></button>
       </nav>
     </header>
@@ -154,6 +153,9 @@ function buildSkeleton() {
       </div>
       <button type="button" id="featuredBirdZoom" aria-label="Vergroot foto"></button>
       <span class="field-photo-label">Gidsfoto</span>
+      <div class="home-featured-progress" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
       <button type="button" id="featuredBirdMotion" aria-label="Diashow pauzeren" aria-pressed="false">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path class="featured-motion-pause" d="M6 4h4v16H6z M14 4h4v16h-4z"/>
@@ -199,13 +201,39 @@ function buildSkeleton() {
       </div>
     </section>
 
-    <!-- Stat tiles — 4 kolommen -->
     <div class="stats-row" id="statsRow">
-      ${statTile('stat-species', '—', 'Soorten',     appIcon('bird'))}
-      ${statTile('stat-total',   '—', 'Waarnemingen', appIcon('observations'))}
-      ${statTile('stat-photos',  '—', "Media",        appIcon('media'))}
-      ${statTile('stat-hotspot', '—', 'Hotspots',    appIcon('pin'))}
+      ${statTile('stat-species', 'Soorten', 'Jouw lijst', 'species')}
+      ${statTile('stat-total', 'Waarnemingen', 'Jouw dagboek', 'sightings')}
+      ${statTile('stat-hotspot', 'Hotspots', 'Jouw plekken', 'map')}
     </div>
+
+    <section class="home-weather" aria-labelledby="homeWeatherTitle">
+      <h2 id="homeWeatherTitle">
+        <button class="home-weather__jump" type="button" aria-controls="weatherSection">
+          <svg class="ui-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M6 18h12a4 4 0 0 0 .7-7.9 6 6 0 0 0-11.4.6A3.7 3.7 0 0 0 6 18Z"/>
+          </svg>
+          <span>Weer &amp; gouden uur</span><span aria-hidden="true">›</span>
+        </button>
+      </h2>
+      <p class="home-weather__location">${appIcon('pin')}<span id="homeWeatherLocation">Locatie bepalen…</span></p>
+      <section class="dash-section" id="weatherSection" tabindex="-1" aria-labelledby="homeWeatherDetailsTitle">
+        <div class="section-head">
+          <span class="section-head__title" id="homeWeatherDetailsTitle">Weercondities</span>
+        </div>
+        <div class="dash-section__loading">
+          <span class="spinner" aria-hidden="true"></span> Weer laden…
+        </div>
+      </section>
+      <section class="dash-section" id="sunSection">
+        <div class="section-head">
+          <span class="section-head__title">Gouden uur</span>
+        </div>
+        <div class="dash-section__loading">
+          <span class="spinner" aria-hidden="true"></span> Zonsinformatie laden…
+        </div>
+      </section>
+    </section>
 
     <!-- Recente waarnemingen -->
     <section class="dash-section" id="recentSection">
@@ -224,6 +252,10 @@ function buildSkeleton() {
         </div>
       </div>
     </section>
+
+    <button class="home-media-link" id="stat-photos" type="button" data-signature-route="media" aria-label="Open Media">
+      ${appIcon('media')} <span>Media</span> <span class="stat-tile__value">—</span><span aria-hidden="true">›</span>
+    </button>
 
     <!-- Accessible secondary features: stays collapsed beneath recent sightings. -->
     <details class="signature-home-intro signature-quick-access" id="homeMoreFeatures">
@@ -244,26 +276,6 @@ function buildSkeleton() {
     <section class="ambient-wetland" id="ambientWetland" aria-label="Rustige bewegende natuurachtergrond">
       ${buildAmbientBackdrop()}
       <div class="ambient-wetland__content">
-        <!-- Zon & golden hour -->
-        <section class="dash-section" id="sunSection">
-      <div class="section-head">
-        <span class="section-head__title">Gouden uur</span>
-      </div>
-      <div class="dash-section__loading">
-        <span class="spinner" aria-hidden="true"></span> Zonsinformatie laden…
-      </div>
-    </section>
-
-    <!-- Weer -->
-    <section class="dash-section" id="weatherSection">
-      <div class="section-head">
-        <span class="section-head__title">Weercondities</span>
-      </div>
-      <div class="dash-section__loading">
-        <span class="spinner" aria-hidden="true"></span> Weer laden…
-      </div>
-    </section>
-
     <!-- Maandgrafiek -->
     <section class="dash-section" id="monthlySection">
       <div class="section-head">
@@ -922,7 +934,15 @@ async function loadHotspotsMap(el, ctx, onSearchSelect) {
 /** GPS-01: één gedeelde locatiebepaling voor zon en weer. */
 function loadLocationCards(el, ctx, { fresh = false } = {}) {
   ctx.locationAt = Date.now();
-  const located = resolveLocation({ fresh }).then(location => { if (!ctx.destroyed) ctx.location = location; return location; });
+  const status = el.querySelector('#homeWeatherLocation');
+  status.textContent = 'Locatie bepalen…';
+  const located = resolveLocation({ fresh }).then(location => {
+    if (ctx.destroyed) return location;
+    ctx.location = location;
+    const place = weatherPlace(location);
+    status.textContent = place ? `${place.text} · ${place.hint}` : 'Locatie niet beschikbaar';
+    return location;
+  });
   loadSunInfo(el, ctx, located);
   loadWeather(el, ctx, located);
 }
@@ -957,15 +977,13 @@ function txGet(store, key) {
 }
 
 // ── SVG icon helpers ───────────────────────────────────────
-function statTile(id, value, label, iconSvg) {
-  const route = { 'stat-species':'species','stat-total':'sightings',
-    'stat-photos':'media','stat-hotspot':'map' }[id] || 'home';
+function statTile(id, label, description, route) {
   return `
     <button class="stat-tile" id="${id}" type="button" data-signature-route="${route}"
       aria-label="Open ${label}">
-      <div class="stat-tile__icon">${iconSvg}</div>
-      <div class="stat-tile__value">${value}</div>
+      <div class="stat-tile__value">—</div>
       <div class="stat-tile__label">${label}</div>
+      <div class="stat-tile__description">${description}</div>
     </button>
   `;
 }

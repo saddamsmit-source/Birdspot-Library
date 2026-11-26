@@ -5,6 +5,12 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra fase 2 — Home en logo (26 november 2026)
+
+Kandidaat **1.27.37** in [#374](https://github.com/saddamsmit-source/Birdspot-Library/pull/374) volgt het door de eigenaar bevestigde mobiele ontwerp uit [#372](https://github.com/saddamsmit-source/Birdspot-Library/pull/372). De bovenbalk, zoekknop, drie kernacties, vogelkaart, persoonlijke tellingen en weerkaart volgen de volgorde uit de referentie. De bestaande diashow levert de vogel en fotocredits. De weerkaart gebruikt de bestaande gedeelde locatie voor weer en zon. Media telt mee en is bereikbaar via de eigen knop op Home onder Mijn waarnemingen.
+
+De installatie-iconen gebruiken de aangeleverde merkafbeelding. De bovenbalk gebruikt de lichte variant van hetzelfde beeldmerk. De app-shell heeft een nieuwe cacheversie voor de opmaak en iconen. De PWA-identiteit en gebruikersopslag gebruiken de bestaande sleutels en paden. **Release HOLD.**
+
 ## Aviandra fase 1 — naamswijziging (26 november 2026)
 
 Aviandra is de nieuwe naam van App 002, voorheen Birdspot Library. Kandidaat **1.27.36** bouwt op GPS-herstel en F3 R04b in [#370](https://github.com/saddamsmit-source/Birdspot-Library/pull/370). De naam is zichtbaar in de app, op het installatiekaartje en bij nieuwe exports. De door de eigenaar gekozen referentielayout, het logo en het kleurenpalet horen bij fase 2.

@@ -43,7 +43,12 @@ def main():
         assert p.evaluate("""() => {
           const box = id => document.getElementById(id).getBoundingClientRect();
           const header = document.querySelector('#screen-home .app-header').getBoundingClientRect();
-          return Math.abs(box('slideshow').top - header.bottom) <= 1 &&
+          const notes = document.querySelector('.field-featured-notes summary').getBoundingClientRect();
+          const gap = box('slideshow').top - header.bottom;
+          return gap >= 10 && gap <= 24 &&
+                 box('slideshow').bottom <= box('statsRow').top + 1 &&
+                 box('statsRow').bottom <= document.querySelector('.home-weather').getBoundingClientRect().top + 1 &&
+                 notes.bottom <= box('slideshow').bottom &&
                  box('homeMoreFeatures').top - box('recentList').bottom >= 15;
         }""")
 
@@ -76,8 +81,12 @@ def main():
       assert p.locator("#habitatMotionSection").count()==0
       assert p.locator("#ambientWetland").count()==1
       assert p.locator("#ambientWetlandVideo").count()==1
-      assert p.locator("#ambientWetland .dash-section").count()==4
-      assert p.locator("#statsRow button.stat-tile").count()==4
+      assert p.locator("#ambientWetland .dash-section").count()==2
+      assert p.locator("#statsRow button.stat-tile").count()==3
+      assert p.locator("#stat-photos").is_visible()
+      p.locator('.home-weather__jump').focus()
+      p.keyboard.press('Enter')
+      assert p.locator('#weatherSection').evaluate('(el) => el === document.activeElement')
       p.locator("#ambientWetland").scroll_into_view_if_needed()
       assert p.locator("#ambientWetland .ambient-wetland__illustration").count()==1
       p.locator("#ambientWetlandToggle").click()
