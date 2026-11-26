@@ -266,6 +266,8 @@ self.addEventListener('fetch', event => {
   if (request.method !== 'GET') return;
   if (url.origin !== self.location.origin) return;
   if (url.pathname.startsWith(atScope('api/'))) return;
+  // De optionele intro mag byte-ranges rechtstreeks bij de host ophalen.
+  if (url.pathname === atScope('assets/aviandra-intro.webm')) return;
 
   if (url.pathname.startsWith(atScope('assets/species/audio/'))) {
     event.respondWith(guideAudioResponse(request));
