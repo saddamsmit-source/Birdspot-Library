@@ -165,6 +165,51 @@ def check_r03b(page):
     close_sheet(page)
 
 
+def check_r04b(page):
+    _PAGE[0] = page
+    for own, other in (("sp017", "sp020"), ("sp020", "sp017"), ("sp018", "sp019"), ("sp019", "sp018")):
+        name = "Middelste Bonte Specht" if own == "sp020" else NAMES[own]
+        open_species(page, name, own)
+        panel = page.locator("#sdPanel-herkenning")
+        card = cmp_card(panel, other)
+
+        def rows(expected):
+            visible = card.locator(".sd-cmp-panel:visible")
+            expect(visible).to_have_count(1)
+            expect(visible.locator(".sd-cmp-row b")).to_have_text(expected)
+            photos = visible.locator("img")
+            expect(photos).to_have_count(2)
+            assert photos.evaluate_all("""async images => {
+                for (const image of images) {
+                    image.loading = 'eager';
+                    await image.decode();
+                }
+                return images.every(image => image.naturalWidth > 0);
+            }""")
+            assert visible.evaluate("el => el.scrollWidth <= el.clientWidth + 2")
+            return visible
+
+        if {own, other} == {"sp017", "sp020"}:
+            visible = rows(["Rug en schouder", "Veren onder de staart", "Rood op de kop"])
+            expected_roles = ["Mannetje", "Volwassen"] if own == "sp017" else ["Volwassen", "Mannetje"]
+            expect(visible.locator(".sd-cmp-who small")).to_have_text(expected_roles)
+        else:
+            visible = rows(["Verenkleed", "Koptekening", "Roep"])
+            text_columns = visible.locator(".sd-cmp-row").first.locator("span")
+            expected_colors = ["Vrijwel geheel zwart", "Olijfgroene bovenzijde en lichtere onderzijde"]
+            expect(text_columns).to_have_text(expected_colors if own == "sp018" else expected_colors[::-1])
+            flight = card.locator(".sd-cmp-tab").nth(1)
+            flight.focus()
+            page.keyboard.press("Enter")
+            expect(flight).to_have_attribute("aria-selected", "true")
+            expect(rows(["Rug en stuit", "Vluchtwijze"])).to_have_attribute("data-cmp-flight", "")
+            if own == "sp019":
+                expect(panel.locator(".kb-caution")).to_contain_text("Jonge Groene Spechten zijn sterk gevlekt")
+                expect(panel.locator(".sd-cmp-panel [data-compare-species=sp482]")).to_have_count(0)
+        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 2")
+        close_sheet(page)
+
+
 def smoke(page):
     for own, other in (("sp002", "sp003"), ("sp003", "sp002")):
         open_species(page, NAMES[own], own)
@@ -182,6 +227,7 @@ def smoke(page):
         close_sheet(page)
     check_havik_r02c(page)
     check_r03b(page)
+    check_r04b(page)
     for species_id in ("sp004", "sp005", "sp006", "sp007", "sp008", "sp009", "sp016", "sp017", "sp018", "sp019"):
         open_species(page, NAMES[species_id], species_id)
         check_quick(page, species_id)
@@ -215,7 +261,7 @@ def main():
                     page.on("pageerror", lambda error: errors.append(str(error)))
                     boot(page, url)
                     smoke(page)
-                    print(f"F3-REV2 Chromium {width}px: R01b rest pair both directions, no unequal flight pair; max. 3 quick cues on 12 species; R02c Havik flight photo retired (open, back, reopen); R03b GBS/Slechtvalk comparisons by keyboard, back, reopen")
+                    print(f"F3-REV2 Chromium {width}px: R01b rest pair both directions, no unequal flight pair; max. 3 quick cues on 12 species; R02c Havik flight photo retired (open, back, reopen); R03b GBS/Slechtvalk by keyboard; R04b woodpecker pairs reciprocal")
             with browser.new_context(viewport={"width": 390, "height": 844},
                                      is_mobile=True, has_touch=True, reduced_motion="reduce") as context:
                 page = context.new_page()
@@ -228,7 +274,7 @@ def main():
                 boot(page, url)
                 assert page.evaluate("!navigator.onLine && !!navigator.serviceWorker.controller")
                 smoke(page)
-                print("F3-REV2 Chromium 390px offline: cached heroes, rest pair, quick panels and R02c Havik card")
+                print("F3-REV2 Chromium 390px offline: cached heroes and R04b comparison images; earlier guide regressions")
         server.shutdown()
     assert not errors, errors
 

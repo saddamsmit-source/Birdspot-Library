@@ -799,7 +799,7 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bij vrouwtjes valt het rood op de kop als kenmerk weg. Kijk naar de rug en de onderstaart.',
   },
   {
-    "label": "Kleine of middelste bonte specht?",
+    "label": "Kleine en Middelste Bonte Specht · volwassen",
     "birds": [
       {
         "id": "sp017",
@@ -812,10 +812,15 @@ export const GUIDE_COMPARISONS = [
         "marks": "Middelste: witte schoudervlekken, roze onderstaart en licht gezicht."
       }
     ],
-    "tip": "Een rood petje komt bij beide voor; controleer schouder en onderstaart."
+    rows: [
+      {label: 'Rug en schouder', values: ['Zwart-wit dwarsgestreepte rug', 'Grote witte schoudervlekken']},
+      {label: 'Veren onder de staart', values: ['Geen roze of rood', 'Zalmroze']},
+      {label: 'Rood op de kop', values: ['Volwassen mannetje heeft een rood petje; vrouwtje mist rood', 'Rode kruin bij beide geslachten']},
+    ],
+    "tip": "Kijk eerst naar de rug en schouder. Een rood petje komt bij beide voor. Gebruik formaat alleen wanneer je een referentie hebt."
   },
   {
-    "label": "Zwarte of groene specht?",
+    "label": "Zwarte en Groene Specht · volwassen",
     "birds": [
       {
         "id": "sp018",
@@ -828,7 +833,12 @@ export const GUIDE_COMPARISONS = [
         "marks": "Groene: groen met gele stuit; diep golvende vlucht en vaak foeragerend op gras."
       }
     ],
-    "tip": "Beide kunnen lachen. Combineer geluid met kleur en vlucht."
+    rows: [
+      {label: 'Verenkleed', values: ['Vrijwel geheel zwart', 'Olijfgroene bovenzijde en lichtere onderzijde']},
+      {label: 'Koptekening', values: ['Mannetje met geheel rode kruin; vrouwtje met rood achter op de kop', 'Rode kruin en zwart oogmasker bij volwassen vogels']},
+      {label: 'Roep', values: ['In zit een langgerekte klaagroep; ook een baltsroep die op lachen lijkt', 'Een reeks lachende, hinnikende klanken']},
+    ],
+    "tip": "Bij beide kun je een lachende roep horen. Controleer bij voldoende licht ook de koptekening en de kleur van het lichaam."
   },
   {
     "tabLabel": "Volwassen",
@@ -1581,7 +1591,11 @@ export const GUIDE_COMPARISONS = [
       {id: 'sp019', source: 'groene-specht', marks: 'Groene bovendelen en een geelgroene stuit. In doorvlucht maakt de soort duidelijke golven.'},
       {id: 'sp018', source: 'zwarte-specht', marks: 'Vrijwel geheel zwart met rood op de kop en een lichte snavel. De slagvlucht is rechter.'},
     ],
-    tip: 'Vergelijk op de foto’s het zijaanzicht en de stuitkleur. Beoordeel een rechte of golvende vlucht pas als je de vogel langer ziet vliegen.',
+    rows: [
+      {label: 'Rug en stuit', values: ['Groene rug en opvallend geelgroene stuit', 'Vrijwel geheel zwart, ook op de stuit']},
+      {label: 'Vluchtwijze', values: ['Duidelijk golvend in doorvlucht', 'Rechtere slagvlucht']},
+    ],
+    tip: 'Kijk naar de stuit zodra de vogel draait. Bij tegenlicht valt kleur vaak weg. Beoordeel de vluchtwijze over meerdere vleugelslagen.',
   },
   {
     label: 'Zwarte Kraai en Kauw · in rust',

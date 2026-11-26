@@ -58,3 +58,12 @@ Bewuste testwijzigingen (eigenaareis vervangt WEE-01 C3):
 - `test_ux03c_afwerking.py` en `test_cinematic_wetland.py` krijgen een vaste testpositie met toestemming.
 
 Regressievangst: `test_r2b_places_env_zip.py` Z5 (offline na herstel) faalde eerst. Oorzaak: de nieuwe module ontbrak in de app-shell. Hersteld; G14 bewaakt dit voortaan voor de hele modulegraaf.
+
+## Integratie 1.27.35 · 26 november 2026
+
+[Concept-PR #370](https://github.com/saddamsmit-source/Birdspot-Library/pull/370), basis `f857bfda41b4b2f1134e7dd1dd407b606e0b909a`. De inhoud hierboven beschrijft GPS-01 op #368.
+
+- G15 toont dat een handmatig gekozen plaats bij volle opslag voor de sessie beschikbaar blijft voor weer en zon. De UI vermeldt tijdens die sessie dat de plek tijdelijk is.
+- G16 toont dat kies/annuleer en GPS-herstel werken als Open-Meteo onbereikbaar is en GPS ontbreekt. Beide tests falen op #368 en slagen op de geïntegreerde kandidaat.
+- De kaartkiezer gebruikt bij online gebruik externe kaarttegels. Het bestaande Open-Meteo-verzoek blijft afgerond op twee decimalen.
+- De lokale Chromium-upgrade vanaf het 1.27.34-codecheckpoint slaagt 9/9. De geladen bytes van Home, locatie, vergelijkingen en soortkennis zijn gecontroleerd na de updateknop en bij offline heropening. Samsung en livebewijs staan open. Release HOLD.

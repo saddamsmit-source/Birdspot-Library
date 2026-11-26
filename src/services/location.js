@@ -16,6 +16,7 @@ export const FIX_TIMEOUT_MS = 15000;
 export const LAST_VALID_MS = 24 * 60 * 60 * 1000;
 
 let inflight = null;
+let temporaryManualLocation = null;
 
 const round2 = value => Math.round(Number(value) * 100) / 100;
 const validPoint = point => point && Number.isFinite(Number(point.lat)) && Number.isFinite(Number(point.lon))
@@ -30,15 +31,21 @@ function read(key) {
 
 function write(key, lat, lon) {
   const value = { lat: round2(lat), lon: round2(lon), at: Date.now() };
-  try { localStorage.setItem(key, JSON.stringify(value)); } catch (_) { /* opslag vol of geblokkeerd: alleen dit moment */ }
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch (_) {
+    value.temporary = true;
+  }
   return value;
 }
 
-export function manualLocation() { return read(MANUAL_KEY); }
+export function manualLocation() { return temporaryManualLocation ?? read(MANUAL_KEY); }
 
 export function setManualLocation(lat, lon) {
   if (!validPoint({ lat: Number(lat), lon: Number(lon) })) return null;
-  return write(MANUAL_KEY, Number(lat), Number(lon));
+  const location = write(MANUAL_KEY, Number(lat), Number(lon));
+  temporaryManualLocation = location.temporary ? location : null;
+  return location;
 }
 
 function lastKnown(now = Date.now()) {

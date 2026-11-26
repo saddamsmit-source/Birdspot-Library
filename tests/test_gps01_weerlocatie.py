@@ -18,6 +18,8 @@ G8  GPS weer beschikbaar na handmatige plek: 'GPS opnieuw proberen' → actuele 
 G9  weer-cache: terug naar Home binnen 15 min = geen nieuw weerverzoek; hervatten na ≥ 10 min en verplaatst → nieuwe positie en weer
 G10 weer-API offline: bestaande melding, zon blijft werken
 G11 320/390/430 px: melding en knoppen zonder overloop, knoppen ≥ 44 px
+G15 handmatige locatie blijft voor weer en zon beschikbaar als de opslag vol is
+G16 bij uitval van de weerservice blijven de locatieknoppen werken en herstelt weer na GPS-retry
 G13 kaart 'mijn locatie' zonder toestemming: melding in plaats van stil falen
 G14 offline: elke vanuit src/app.js geïmporteerde module (statisch en dynamisch) staat in de app-shell van sw.js
 G12 privacy: nergens coördinaten in weer/zon; weerverzoek met afgeronde coördinaten; opslag afgerond op 2 decimalen
@@ -140,6 +142,77 @@ def shell_coverage():
                 missing.append(f'{target} (uit {rel})')
             stack.append(target)
     return len(seen), sorted(set(missing))
+
+
+def choose_manual_location(page):
+    page.locator('[data-location-action="pick"]').click()
+    dialog = page.get_by_role('dialog', name='Kies een plek voor weer en zon')
+    dialog.locator('#pinLat').fill('52.15612')
+    dialog.locator('#pinLon').fill('5.38763')
+    dialog.locator('#pinConfirm').click()
+    expect(dialog).to_have_count(0)
+    settle(page)
+
+
+def check_manual_location_recovery(browser, url):
+    context, page = home(browser, url)
+    try:
+        page.evaluate("""() => {
+            const save = Storage.prototype.setItem;
+            Storage.prototype.setItem = function (key, value) {
+                if (key === 'birdspot-weather-location') {
+                    throw new DOMException('Quota exceeded', 'QuotaExceededError');
+                }
+                return save.call(this, key, value);
+            };
+        }""")
+        choose_manual_location(page)
+        current = info(page)
+        check(
+            'G15', 'handmatige plek werkt in de sessie bij volle opslag',
+            current['kind'] == current['sunKind'] == 'manual'
+            and 'alleen deze sessie' in (current['place'] or '')
+            and 'alleen deze sessie' in (current['sunPlace'] or '')
+            and current['manual'] is None
+            and bool(page.weather_requests) and latlon(page.weather_requests[-1]) == (52.16, 5.39),
+            (current['place'], current['sunPlace'], current['manual']),
+        )
+    finally:
+        context.close()
+
+    context, page = home(browser, url)
+    try:
+        page.weather_down = True
+        choose_manual_location(page)
+        failure = info(page)
+        controls = [button['a'] for button in failure['buttons']]
+        usable = (
+            failure['error'] == 'Weer niet beschikbaar'
+            and failure['sunKind'] == 'manual'
+            and controls == ['retry', 'pick']
+        )
+        if usable:
+            page.locator('[data-location-action="pick"]').click()
+            dialog = page.get_by_role('dialog', name='Kies een plek voor weer en zon')
+            expect(dialog).to_be_visible()
+            page.keyboard.press('Escape')
+            expect(dialog).to_have_count(0)
+            assert info(page)['manual'] == failure['manual']
+            context.set_geolocation(GPS)
+            context.grant_permissions(['geolocation'])
+            page.weather_down = False
+            page.locator('[data-location-action="retry"]').click()
+            settle(page)
+            current = info(page)
+            usable = (
+                current['kind'] == current['sunKind'] == 'gps'
+                and not current['buttons']
+                and latlon(page.weather_requests[-1]) == (51.92, 4.47)
+            )
+        check('G16', 'locatiekeuze, annuleren en GPS-herstel na uitval van de weerservice',
+              usable, (failure['error'], failure['sunKind'], controls))
+    finally:
+        context.close()
 
 
 def run():
@@ -276,6 +349,7 @@ def run():
                   all(o <= 1 and all(h >= 44 for h in hs) and inside for o, hs, inside in sizes.values()), sizes)
 
             check('G12', 'privacy: geen coördinaten in weer/zon, weerverzoek en opslag afgerond, geen paginafouten', g12a and not g12_errors, g12_errors)
+            check_manual_location_recovery(b, url)
             b.close()
     failed = [c for c, ok in RESULTS if not ok]
     print(f"GPS-01: {len(RESULTS) - len(failed)}/{len(RESULTS)} PASS{' — FAIL ' + str(failed) if failed else ''}")

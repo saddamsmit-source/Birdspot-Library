@@ -117,7 +117,7 @@ for (const c of cands) {
   const a16 = audit['/assets/species/plumage/sp016-flight.webp'];
   assert.ok(/2026-11-10: goedgekeurd/.test(a16.verdictHistory) && /2026-11-10: voldoende/.test(a16.qualityHistory), 'R03d: oorspronkelijk besluit in de historie');
   const prop = rec('sp009').candidatesR03c.proposalR03d;
-  assert.ok(prop.status.startsWith('VOORSTEL') && prop.candidate.sha1 === '4c8acd03833975f48873d1a81be94a6756b607fd' && prop.candidate.sha1Verified === true, 'R03d: Toscane-voorstel met SHA-1');
+  assert.ok((prop.previousStatus ?? prop.status).startsWith('VOORSTEL') && prop.candidate.sha1 === '4c8acd03833975f48873d1a81be94a6756b607fd' && prop.candidate.sha1Verified === true, 'R03d: Toscane-voorstel met SHA-1');
   assert.ok(!JSON.stringify(fgm).includes('San Giuliano') && !JSON.stringify(fgm).includes('4c8acd0383'), 'R03d: Toscane-kandidaat niet als gidsfoto');
   assert.ok(fgm.poses.sp009.some(p => p.image.endsWith('/sp009-male-flight.webp')), 'R03d: huidige vluchtfoto blijft');
   for (const [id, n] of [['sp009', 2], ['sp007', 1]]) {
@@ -141,4 +141,4 @@ for (const id of r03.species) {
   if (s.ownerDecision.status === 'OPEN') assert.ok(s.materialGaps.length > 0, id + ': open poort zonder benoemde tekortkoming');
 }
 assert.ok(reg.secondReview.counts.reexamined <= 9 || reg.secondReview.batches.length > 3, 'na R03 maximaal 9/140 in de tweede ronde');
-console.log('F3-REV2-R03/R03b PASS: bestaande vergelijkingen behouden; 3 nieuwe paren wederkerig; gelabelde rijen; kritische kaarten wederkerig; geen publieke bronverwijzing; LK-001…LK-108; R03c GBS-vluchtfoto voorlopig, 3 kandidaten niet geïmporteerd, iNaturalist niet VERIFIED; R03d audit = vluchtcontrole, Toscane alleen voorstel, G8 open');
+console.log('F3-REV2-R03/R03b PASS: bestaande vergelijkingen behouden; 3 nieuwe paren wederkerig; gelabelde rijen; kritische kaarten wederkerig; geen publieke bronverwijzing; LK-001…LK-108; R03c GBS-vluchtfoto voorlopig, 3 kandidaten niet geïmporteerd, iNaturalist niet VERIFIED; R03d audit = vluchtcontrole, Toscane-audithistorie behouden, G8 open');

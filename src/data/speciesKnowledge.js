@@ -24040,7 +24040,14 @@ const DATA = {
       "VB_GROENE_SPECHT"
      ]
     }
-   ]
+   ],
+   "caution": {
+    "text": "Jonge Groene Spechten zijn sterk gevlekt. Het rood in de baardstreep zie je bij het volwassen mannetje; bij het volwassen vrouwtje is die streep zwart. In tegenlicht kunnen groen en geel wegvallen. Wacht dan op een beter zicht op de stuit of volg de vogel over meerdere vleugelslagen.",
+    "sources": [
+     "VB_GROENE_SPECHT",
+     "VB_ZWARTE_SPECHT"
+    ]
+   }
   },
   "sp020": {
    "summary": {
