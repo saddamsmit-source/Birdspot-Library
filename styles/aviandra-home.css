@@ -245,6 +245,14 @@
   #screen-home { --home-gutter: 22px; }
 }
 
+@media (max-width: 400px) {
+  #screen-home .field-featured-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #screen-home .field-featured-notes[open] { grid-column: 1 / -1; }
+}
+
 @media (max-height: 600px) and (max-width: 600px) {
   #screen-home .app-header { row-gap: 6px; padding-block: 7px; }
   #screen-home .home-core-action { min-height: 58px; }

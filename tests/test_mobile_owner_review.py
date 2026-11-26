@@ -169,6 +169,11 @@ def main():
               return {
                 visiblePhoto,
                 scrollToStats,
+                photoTop: rect.top,
+                photoHeight: rect.height,
+                captionHeight: caption.getBoundingClientRect().height,
+                actionsHeight: el.querySelector('.field-featured-actions').getBoundingClientRect().height,
+                navTop,
                 checks: {
                   halfScreenPhoto: visiblePhoto >= innerHeight / 2 - 1,
                   controlsBelowPhoto: caption.getBoundingClientRect().top >= rect.bottom - 1,
