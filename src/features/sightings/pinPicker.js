@@ -39,6 +39,7 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}
   document.body.appendChild(host);
   const inputLat=host.querySelector('#pinLat'),inputLon=host.querySelector('#pinLon');
   const confirm=host.querySelector('#pinConfirm'),status=host.querySelector('#pinMapStatus');
+  const cancel=host.querySelector('#pinCancel'),clear=host.querySelector('#pinClear');
   function place(a,b,fromMap=false){
     const ok=valid(a,b);
     chosenLat=ok?a:null;chosenLon=ok?b:null;
@@ -72,6 +73,13 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}
   };
   inputLat.addEventListener('input',onInputs);inputLon.addEventListener('input',onInputs);
   const onKey=e=>{if(e.key==='Escape')close();};
+  host.addEventListener('keydown',e=>{
+    if(e.key!=='Tab')return;
+    const last=confirm.disabled?(clear.hidden?inputLon:clear):confirm;
+    if(document.activeElement!==(e.shiftKey?cancel:last))return;
+    e.preventDefault();
+    (e.shiftKey?last:cancel).focus();
+  });
   function close(){
     if(destroyed)return;
     destroyed=true;
@@ -82,13 +90,13 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}
   }
   document.addEventListener('keydown',onKey);
   host.querySelector('.manual-pin-backdrop').addEventListener('click',close);
-  host.querySelector('#pinCancel').addEventListener('click',close);
-  host.querySelector('#pinClear').addEventListener('click',()=>{
+  cancel.addEventListener('click',close);
+  clear.addEventListener('click',()=>{
     inputLat.value='';inputLon.value='';place(NaN,NaN);
     status.textContent='Pin verwijderd. Kies opnieuw op de kaart of vul coördinaten in.';
   });
   confirm.addEventListener('click',()=>{
-    if(!valid(chosenLat,chosenLon))return;
+    if(destroyed||!valid(chosenLat,chosenLon))return;
     const coords={lat:chosenLat,lon:chosenLon,accuracyM:typed?null:accuracyM};
     close();onConfirm(coords);
   });
@@ -120,6 +128,6 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}
       if(!destroyed)status.textContent='Kaart niet beschikbaar. Coördinaten handmatig invullen werkt ook offline.';
     }
   })();
-  host.querySelector('#pinCancel').focus();
+  cancel.focus();
   return close;
 }
