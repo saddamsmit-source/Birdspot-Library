@@ -34,7 +34,7 @@ def main():
                       wait_until="domcontentloaded")
             page.locator("#featuredBirdName").wait_for(timeout=12000)
             assert page.locator("#featuredBirdName").inner_text().strip() != ""
-            assert page.locator("#statsRow .stat-tile").count()==4
+            assert page.locator("#statsRow .stat-tile__label").all_text_contents() == ['Soorten', 'Waarnemingen', 'Hotspots']
             page.screenshot(path=str(SHOTS / "signature_home_390.png"), full_page=True)
 
             page.locator("#stat-photos").click()

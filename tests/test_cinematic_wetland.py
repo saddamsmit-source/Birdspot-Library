@@ -38,9 +38,11 @@ def main():
    assert video.count()==1
    assert video.evaluate("(v)=>v.muted && v.loop && v.playsInline")
    assert page.locator('#ambientWetland .ambient-wetland__illustration').count()==1
-   assert page.locator('#ambientWetland .dash-section').count()==4
+   assert page.locator('#ambientWetland .dash-section').count()==2
    assert page.locator('#ambientWetland .living-habitat').count()==0
-   assert page.locator('#statsRow button').count()==4
+   assert page.locator('#statsRow button').count()==3
+   assert page.locator('.home-weather .dash-section').count()==2
+   assert page.locator('#stat-photos').is_visible()
    weather_tip = page.locator('.weather-tip')
    weather_tip.get_by_text('Bewolking dempt licht · Auto ISO').wait_for()
    assert weather_tip.locator('li').count()==2

@@ -71,7 +71,7 @@ def main():
         c390 = layout[390][0]
         check('N1', 'Home: Ontdekken · Waarnemen · Mijn collectie boven de vouw, icoon + woord, ≥ 44 px, niet afgekapt',
               all([c['text'] for c in v[0]] == ['Ontdekken', 'Waarnemen', 'Mijn collectie'] and all(c['h'] >= 44 and c['bottom'] < 300 and not c['clipped'] for c in v[0])
-                  for v in layout.values()) and [c['icon'] for c in c390] == ['bird', 'binoculars', 'observations'],
+                  for v in layout.values()) and [c['icon'] for c in c390] == ['binoculars', 'eye', 'observations'],
               {w: [(c['text'], c['h'], c['bottom'], c['clipped']) for c in v[0]] for w, v in layout.items()})
         check('N10', '320/390/430: geen horizontale overloop op 5 schermen; navigatie en + ≥ 44 px',
               all(not any(v[1].values()) and min(v[2]) >= 44 for v in layout.values()), {w: (v[1], v[2]) for w, v in layout.items()})

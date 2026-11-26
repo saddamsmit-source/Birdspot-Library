@@ -90,6 +90,10 @@ def main():
             # zonkaart altijd tonen (SunCalc komt van een CDN): vaste tijden, zelfde rendering als in CI
             ctx.add_init_script("""window.SunCalc = { getTimes: d => { const t = h => { const x = new Date(d); x.setHours(h, 0, 0, 0); return x; };
               return { sunrise: t(8), sunset: t(17), goldenHourEnd: t(9), goldenHour: t(16) }; } };""")
+            ctx.route('https://api.open-meteo.com/v1/forecast?*', lambda route: route.fulfill(json={'current': {
+                'weather_code': 3, 'temperature_2m': 6, 'apparent_temperature': 4, 'is_day': 1,
+                'wind_speed_10m': 2.3, 'wind_direction_10m': 45, 'relative_humidity_2m': 88,
+            }}))
             page = ctx.new_page()
             errors = []
             page.on('pageerror', lambda e: errors.append(str(e)))
@@ -137,7 +141,9 @@ def main():
             small[r], noname[r], contrast[r] = page.evaluate(SMALL, 'body'), page.evaluate(NONAME, 'body'), page.evaluate(SWEEP, 'body')
             if r == 'home':
                 page.locator('#sunSection .sun-location').wait_for(timeout=8000)
+                page.locator('#weatherSection .weather-main').wait_for(timeout=8000)
                 contrast['home-zonkaart'] = page.evaluate(SWEEP, '#sunSection')
+                contrast['home-weerkaart'] = page.evaluate(SWEEP, '#weatherSection')
         # kaart: filterpaneel en plekkaartje
         nav(page, 'map', 1500)
         legend = page.evaluate("() => [...document.querySelectorAll('.map-legend button')].map(b => b.textContent.trim())")
@@ -217,6 +223,9 @@ def main():
                 for r in SCREENS:
                     nav(page, r)
                     contrast[f'donker-{r}'] = page.evaluate(SWEEP, 'body')
+                    if r == 'home':
+                        page.locator('#weatherSection .weather-main').wait_for(timeout=8000)
+                        contrast['donker-weerkaart'] = page.evaluate(SWEEP, '#weatherSection')
                 go_sightings(page)
                 page.locator('.sight-card[data-id="s06"]').click()
                 page.locator('#detailSightingSheet.open').wait_for(timeout=8000)
