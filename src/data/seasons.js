@@ -22,6 +22,44 @@ export const SEASONS = {
 };
 export const SEASON_ORDER = ['winter', 'lente', 'zomer', 'herfst'];
 
+export const SIGHTING_PERIODS = [
+  ['all', 'Alles'],
+  ['year', 'Dit jaar'],
+  ['6m', 'Afgelopen 6 maanden'],
+];
+
+export function monthOf(date) {
+  const month = Number(/^\d{4}-(\d{2})-\d{2}/.exec(String(date ?? ''))?.[1]) - 1;
+  return month >= 0 && month <= 11 ? month : null;
+}
+
+export function seasonOf(date) {
+  const month = monthOf(date);
+  return SEASON_ORDER.find(key => SEASONS[key].months.includes(month)) ?? null;
+}
+
+const localDate = date => {
+  const pad = number => String(number).padStart(2, '0');
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+};
+
+/** Inclusief vandaag. Bij een kortere maand telt de laatste dag van die maand als grens. */
+export function sightingDateRange(period, today = new Date()) {
+  const year = today.getFullYear();
+  const end = localDate(today);
+  if (period === 'year') return [`${year}-01-01`, end];
+  if (period !== '6m' && period !== '12m') return null;
+  const month = today.getMonth() - (period === '6m' ? 6 : 12);
+  const lastDay = new Date(year, month + 1, 0).getDate();
+  return [localDate(new Date(year, month, Math.min(today.getDate(), lastDay))), end];
+}
+
+export function dateInRange(date, range) {
+  if (!range) return true;
+  const day = String(date ?? '').slice(0, 10);
+  return /^\d{4}-\d{2}-\d{2}$/.test(day) && day >= range[0] && day <= range[1];
+}
+
 /** Zijn twee seizoenen buren in de jaarcyclus (ook herfst + winter)? */
 export function areAdjacent(a, b) {
   const i = SEASON_ORDER.indexOf(a), j = SEASON_ORDER.indexOf(b);

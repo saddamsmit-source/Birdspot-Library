@@ -12,7 +12,9 @@ Z8  320/390/430: geen horizontale overloop, aanraakdoelen ≥ 44 px, lange namen
 Z9  toetsenbord en schermlezer: Tab naar kaartje, Enter opent; resultaat in role=status; filterknop aria-expanded
 Z10 donker thema: tekstcontrast van zoekveld, chips en statuslabels ≥ 4,5:1
 Z11 globale zoekfunctie gebruikt dezelfde logica: vindt waarneming op plek en datum
+Z12 plek, soort, halfjaar en seizoen combineren, onthouden en wissen
 """
+from datetime import datetime
 import sys
 import time
 from pathlib import Path
@@ -67,6 +69,7 @@ def main():
             ctx = browser.new_context(viewport={'width': width, 'height': 844}, timezone_id='Europe/Amsterdam',
                                       is_mobile=True, has_touch=True, color_scheme='dark' if dark else 'light')
             page = ctx.new_page()
+            page.clock.set_fixed_time(datetime.fromisoformat('2026-11-27T12:00:00+01:00'))
             errors = []
             page.on('pageerror', lambda e: errors.append(str(e)))
             boot(page, base)
@@ -104,6 +107,22 @@ def main():
               and page.locator('#sightingsFilterBtn').get_attribute('aria-label') == 'Filters, 2 actief', chips)
         page.locator('#sightingsClearAll').click()
         page.wait_for_timeout(250)
+
+        # ── Z12 primaire filters ────────────────────────────────────
+        primary = {'Plek': 'place:pl_named', 'Vogelsoort': 'sp045', 'Periode': '6m', 'Seizoen': 'herfst'}
+        for label, value in primary.items():
+            page.get_by_label(label, exact=True).select_option(value)
+        filtered = sorted(shown_ids(page))
+        badge = page.locator('#sightingsFilterCount').inner_text()
+        go_sightings(page)
+        restored = {label: page.get_by_label(label, exact=True).input_value() for label in primary}
+        page.get_by_label('Seizoen', exact=True).select_option('winter')
+        empty_primary = 'Geen waarnemingen gevonden' in page.locator('#sightingsList').inner_text()
+        page.locator('#sightingsList #sightingsClearAll').click()
+        check('Z12', 'plek, vogelsoort, halfjaar en seizoen combineren, onthouden en wissen',
+              filtered == ['s01'] and badge == '4' and restored == primary and empty_primary
+              and sorted(shown_ids(page)) == ALL
+              and all(page.get_by_label(label, exact=True).input_value() == '' for label in primary))
 
         # ── Z3 verificatie ───────────────────────────────────────────
         certain = toggle(page, 'certain')
@@ -219,7 +238,7 @@ def main():
             page.wait_for_timeout(350)
             page.screenshot(path=f'/tmp/ux02a_{width}.png', full_page=False)
             layout[width] = page.evaluate("""() => {
-              const tooSmall = [...document.querySelectorAll('#sightingsTools button, #sightingsSearch, .sight-card')]
+              const tooSmall = [...document.querySelectorAll('#sightingsTools button, #sightingsTools select, #sightingsSearch, .sight-card')]
                 .filter(e => e.offsetParent).map(e => e.getBoundingClientRect()).filter(r => r.height < 44 || r.width < 44).length;
               const place = document.querySelector('.sight-card__place-name');
               return { overflow: document.documentElement.scrollWidth > innerWidth, tooSmall,
@@ -246,7 +265,7 @@ def main():
     server.shutdown()
     failed = [c for c, ok in RESULTS if not ok]
     print(f"UX-02A: {len(RESULTS) - len(failed)}/{len(RESULTS)} PASS{' — FAIL: ' + ', '.join(failed) if failed else ''}")
-    sys.exit(1 if failed or len(RESULTS) < 11 else 0)
+    sys.exit(1 if failed or len(RESULTS) < 12 else 0)
 
 
 if __name__ == '__main__':

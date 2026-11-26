@@ -71,6 +71,7 @@
 .map-screen .bird-map-filters {
   top: 64px; left: auto; right: 10px; width: min(330px, calc(100% - 20px));
   padding: 12px 12px 10px; border-radius: 17px;
+  max-height: calc(100% - 76px); overflow-y: auto; overscroll-behavior: contain;
 }
 .map-screen .bird-map-filters .bird-map-dropdown-label { margin: 0; }
 
@@ -269,6 +270,16 @@
   color: #fff8e8; border: 1px solid rgba(230, 234, 219, .28); font: 600 13px var(--font-body, system-ui);
 }
 .map-period select option { color: #152c26; background: #fcf7eb; }
+.map-season-filter { min-width: 0; margin: 0; padding: 0; border: 0; color: #eef2e8; }
+.map-season-filter legend { padding: 0 0 4px; font-size: 13px; }
+.map-season-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.map-season-options button {
+  min-height: 44px; padding-inline: 8px; border-radius: 10px; cursor: pointer;
+  background: rgba(240, 248, 237, .1); color: #fff8e8;
+  border: 1px solid rgba(230, 234, 219, .28); font: 600 13px var(--font-body, system-ui);
+}
+.map-season-options button[aria-pressed="true"] { background: #e2bd7f; color: #152c26; }
+.map-season-options button[aria-pressed="true"]::before { content: '✓ '; }
 .place-months { display: grid; grid-template-columns: repeat(12, 1fr); gap: 3px; align-items: end; height: 70px; }
 .place-month { display: grid; justify-items: center; align-content: end; gap: 3px; height: 100%; }
 .place-month i { display: block; width: 100%; border-radius: 4px 4px 2px 2px; background: var(--line); }

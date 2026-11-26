@@ -190,9 +190,13 @@ def main():
         page.locator('#screen-sightings #sightingsList').wait_for(timeout=8000)
         page.wait_for_timeout(400)
         empty = page.locator('#sightingsList').inner_text()
-        tools_hidden = page.locator('#sightingsTools').is_hidden()
-        check('N9', 'lege toestand: kernacties zichtbaar; Mijn collectie toont lege staat met + uitleg, geen lege filterbalk',
-              core == 3 and 'Nog geen waarnemingen' in empty and '+' in empty and tools_hidden and not errors, empty.replace('\n', ' '))
+        filters_visible = page.locator('#sightingsFilterBtn').is_visible()
+        page.locator('#sightingsFilterBtn').click()
+        empty_selects = page.locator('#sightingsFilterPanel [data-primary-filter]').evaluate_all(
+            'nodes => nodes.map(node => [node.value, node.options.length])')
+        check('N9', 'lege toestand: Mijn waarnemingen toont + uitleg en de filterknop',
+              core == 3 and 'Nog geen waarnemingen' in empty and '+' in empty and filters_visible
+              and empty_selects == [['', 1], ['', 1], ['', 3], ['', 5]] and not errors, empty.replace('\n', ' '))
 
         # ── N11 toetsenbord ──────────────────────────────────────────
         nav(page, 'home')
