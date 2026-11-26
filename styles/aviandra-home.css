@@ -91,7 +91,7 @@
 #screen-home .field-featured-actions { gap: 6px; }
 #screen-home .field-featured-actions > * { pointer-events: auto; }
 #screen-home .field-featured-actions > .field-action {
-  background: var(--brand-mid);
+  background: rgb(45 106 79 / .46);
   border-color: #a6cbb7;
   border-radius: var(--r-pill);
   font-size: .8125rem;
