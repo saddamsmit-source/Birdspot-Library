@@ -202,6 +202,7 @@
 .home-weather .section-head__title { color: var(--focus-light); }
 .home-weather .dash-section__loading,
 .home-weather .dash-section__error { color: var(--focus-light); }
+.home-weather :is(.sun-card, .weather-card) { color: var(--ink); }
 .home-weather .sun-sub.golden { color: var(--gold-ink); }
 
 .home-media-link {
