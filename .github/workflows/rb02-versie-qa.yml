@@ -1,0 +1,29 @@
+name: Birdspot RB-02 versie 1.27.34 QA
+on:
+  pull_request:
+    paths: ['.github/workflows/rb02-versie-qa.yml', 'sw.js', 'src/**', 'styles/**', 'index.html', 'tests/test_rb01*', 'tests/test_as01*', 'tests/ux02_fixtures.py']
+permissions:
+  contents: read
+jobs:
+  rb02:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: |
+          python -m pip install -r tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Versiebron is 1.27.34
+        run: grep -q "const APP_VERSION = '1.27.34';" sw.js
+      - name: Upgrade 1.27.33 (3a03c84, vorige preview) → kandidaat op dezelfde origin + schone installatie (U1–U9)
+        run: |
+          set -o pipefail
+          python tests/test_rb01_upgrade.py --base 3a03c84 2>&1 | tee rb02_upgrade.log
+      - name: AS-01 geluidsopnamemenu veilig afsluitbaar op de kandidaat (T1–T8)
+        run: |
+          set -o pipefail
+          python tests/test_as01_audiosluiten.py 2>&1 | tee rb02_as01.log
