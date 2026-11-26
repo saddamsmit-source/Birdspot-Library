@@ -19,7 +19,7 @@ FOT-02 meerdere hoofdfoto's
 WEE-01 windrichting en locatie
   C1  windrichting uit API (45° → "wind uit NO (45°)"), aanvraag bevat wind_direction_10m, pijl verborgen voor schermlezer
   C2  locatie: eigen plek binnen 3 km → "Bij <plek>"; anders "Je huidige omgeving"; nooit coördinaten
-  C3  geen GPS-toestemming → "Amsterdam (standaardlocatie)"
+  C3  geen GPS-toestemming → geen standaardstad, eerlijke melding (GPS-01, 26-11-2026; was "Amsterdam (standaardlocatie)")
   C4  ontbrekende richting/velden: geen verzonnen richting, "—" en "Wind onbekend"
   C5  Open-Meteo onbereikbaar of offline: bestaande foutmelding
   C6  grenswaarden 0/11/12/349/359/360 via de app-module
@@ -336,8 +336,10 @@ def wee01(browser, url):
           a['place'] and 'Bij Kralingse Plas' in a['place'] and 'actueel weer' in a['place'] and far['place'] and 'Je huidige omgeving' in far['place']
           and not coord and not re.search(r'\d{1,2}[.,]\d{2,}', (a['place'] or '') + (far['place'] or '')), (a['place'], far['place']))
     no_gps = home_weather(browser, url, geo=None, places=plas, payload=full)
-    check('C3', 'geen GPS-toestemming → "Amsterdam (standaardlocatie)"', no_gps['place'] and 'Amsterdam (standaardlocatie)' in no_gps['place']
-          and 'geen locatietoestemming' in no_gps['place'], no_gps['place'])
+    # GPS-01 (26-11-2026, eigenaareis live GPS): bewuste testwijziging — geen weer voor een standaardstad.
+    check('C3', 'geen GPS-toestemming → geen standaardstad, melding "geen toegang tot je locatie", geen weerverzoek',
+          no_gps['place'] is None and 'Amsterdam' not in (no_gps['text'] or '') and 'geen toegang tot je locatie' in (no_gps['text'] or '')
+          and not no_gps['requests'], (no_gps['place'], (no_gps['text'] or '')[:120]))
     missing_dir = home_weather(browser, url, geo=geo, places=[], payload={'current': {**full['current'], 'wind_direction_10m': None}})
     missing_all = home_weather(browser, url, geo=geo, places=[], payload={'current': {'weather_code': 2}})
     check('C4', 'ontbrekende richting/velden: geen verzonnen richting; "—" en "Wind onbekend"',

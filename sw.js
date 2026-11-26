@@ -63,6 +63,7 @@ const PRECACHE_PATHS = [
   // JS — app root
   'src/app.js',
   'src/services/navigation.js',
+  'src/services/location.js',
   'src/services/gestures.js',
   'src/services/startup-splash.js',
 

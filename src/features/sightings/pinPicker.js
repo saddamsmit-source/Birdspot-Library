@@ -5,9 +5,14 @@
  */
 import { ensureLeaflet } from '../map/view.js';
 import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, MAX_PIN_ACCURACY_M, LAYERS } from '../map/centerPin.js';
+import { escHtml as escAttr } from '../../utils/html.js';
 
 const valid=(a,b)=>Number.isFinite(a)&&a>=-90&&a<=90&&Number.isFinite(b)&&b>=-180&&b<=180;
-export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}}={}) {
+// GPS-01: optionele teksten zodat dezelfde kaartkiezer ook een plek voor weer en zon kan kiezen.
+export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{},title='Pin je waarneming',ariaLabel='Pin een vogelwaarneming',
+  intro='Schuif en zoom de kaart tot de pin goed staat, of vul coördinaten in.',
+  tip='Persoonlijke pin, geen publiek gedeelde locatie. Plaats de pin waar je de vogel zag of hoorde.',
+  confirmLabel='Gebruik deze plek',showClear=true}={}) {
   let destroyed=false,map=null,accuracyM=null,typed=false;
   let chosenLat=lat===null?null:Number(lat),chosenLon=lon===null?null:Number(lon);
   const previousFocus=document.activeElement;
@@ -15,10 +20,10 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}
   host.className='manual-pin-dialog';
   host.innerHTML=
     '<div class="manual-pin-backdrop"></div>'+
-    '<div class="manual-pin-sheet" role="dialog" aria-modal="true" aria-label="Pin een vogelwaarneming">'+
+    '<div class="manual-pin-sheet" role="dialog" aria-modal="true" aria-label="'+escAttr(ariaLabel)+'">'+
       '<header class="manual-pin-header"><div><span class="signature-kicker">BIRDSPOT / BIRD EXPLORER</span>'+
-        '<h2>Pin je waarneming</h2>'+
-        '<p>Schuif en zoom de kaart tot de pin goed staat, of vul coördinaten in.</p></div>'+
+        '<h2>'+escAttr(title)+'</h2>'+
+        '<p>'+escAttr(intro)+'</p></div>'+
         '<button id="pinCancel" type="button" aria-label="Sluit kaartkiezer">×</button></header>'+
       '<div class="manual-pin-mapwrap"><div id="pinLocationMap" class="manual-pin-map" aria-label="Kaart; de pin in het midden is de gekozen plek"></div>'+
         centerPinMarkup('pinCenterPin')+
@@ -28,9 +33,9 @@ export function openPinPicker({lat=null,lon=null,onConfirm=()=>{},onClose=()=>{}
         '<label>Breedtegraad<input id="pinLat" type="number" step="any" min="-90" max="90" inputmode="decimal" placeholder="bijv. 51.59"></label>'+
         '<label>Lengtegraad<input id="pinLon" type="number" step="any" min="-180" max="180" inputmode="decimal" placeholder="bijv. 5.09"></label>'+
       '</div>'+
-      '<p class="manual-pin-tip">Persoonlijke pin, geen publiek gedeelde locatie. Plaats de pin waar je de vogel zag of hoorde.</p>'+
-      '<footer class="manual-pin-actions"><button id="pinClear" type="button">Verwijder pin</button>'+
-        '<button id="pinConfirm" type="button" disabled>Gebruik deze plek</button></footer></div>';
+      '<p class="manual-pin-tip">'+escAttr(tip)+'</p>'+
+      '<footer class="manual-pin-actions"><button id="pinClear" type="button"'+(showClear?'':' hidden')+'>Verwijder pin</button>'+
+        '<button id="pinConfirm" type="button" disabled>'+escAttr(confirmLabel)+'</button></footer></div>';
   document.body.appendChild(host);
   const inputLat=host.querySelector('#pinLat'),inputLon=host.querySelector('#pinLon');
   const confirm=host.querySelector('#pinConfirm'),status=host.querySelector('#pinMapStatus');

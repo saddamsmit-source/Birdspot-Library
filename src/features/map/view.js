@@ -935,15 +935,20 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
 
 // ── Locatie ────────────────────────────────────────────────────
 function centerOnUser(map, btn) {
-  if (!navigator.geolocation) return;
+  // GPS-01: een mislukte locatie wordt gemeld in plaats van stil te falen; de kaart blijft waar hij was.
+  if (!navigator.geolocation) { showToast('Deze browser geeft geen locatie door.', 'warn'); return; }
   btn.classList.add('map-locate-btn--loading');
   navigator.geolocation.getCurrentPosition(
     pos => {
       btn.classList.remove('map-locate-btn--loading');
       map.flyTo([pos.coords.latitude, pos.coords.longitude], 17, { duration: 1 });
     },
-    () => btn.classList.remove('map-locate-btn--loading'),
-    { timeout: 10000, maximumAge: 60000 },
+    error => {
+      btn.classList.remove('map-locate-btn--loading');
+      showToast(error?.code === 1 ? 'Geen toegang tot je locatie. Sta locatie toe in je browser.'
+        : 'Je locatie is nu niet te bepalen (geen GPS-signaal). Probeer het opnieuw.', 'warn');
+    },
+    { timeout: 15000, maximumAge: 60000 },
   );
 }
 

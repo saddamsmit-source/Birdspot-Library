@@ -82,8 +82,10 @@ def main():
         browser = pw.chromium.launch(headless=True)
 
         def context(width=390, dark=False):
+            # GPS-01: zonkaart toont alleen met een echte positie; vaste testpositie met toestemming (bewuste testwijziging).
             ctx = browser.new_context(viewport={'width': width, 'height': 844}, timezone_id='Europe/Amsterdam', is_mobile=True,
-                                      has_touch=True, color_scheme='dark' if dark else 'light')
+                                      has_touch=True, color_scheme='dark' if dark else 'light',
+                                      geolocation={'latitude': 51.92, 'longitude': 4.47}, permissions=['geolocation'])
             ctx.add_init_script(LEAFLET_STUB)
             # zonkaart altijd tonen (SunCalc komt van een CDN): vaste tijden, zelfde rendering als in CI
             ctx.add_init_script("""window.SunCalc = { getTimes: d => { const t = h => { const x = new Date(d); x.setHours(h, 0, 0, 0); return x; };

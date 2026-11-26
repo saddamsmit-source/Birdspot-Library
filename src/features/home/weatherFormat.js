@@ -39,19 +39,33 @@ export function windMarkup(speed, direction) {
 export const WEATHER_PLACE_RADIUS_M = 3000;
 
 /** Privacyveilige plaatsaanduiding: nooit coördinaten. Eigen opgeslagen plek binnen 3 km, anders
- * "je huidige omgeving"; zonder locatietoestemming de vaste standaardlocatie, eerlijk benoemd. */
-export function weatherPlace({source, lat, lon, places = []}) {
-  if (source !== 'gps') return {text: 'Amsterdam (standaardlocatie)', hint: 'geen locatietoestemming'};
+ * "je huidige omgeving". GPS-01 (26-11-2026): nooit een standaardstad. Zonder actuele GPS benoemt de
+ * aanduiding eerlijk wat er wordt gebruikt (laatst bekende positie met tijd, of een zelf gekozen plek);
+ * zonder bruikbare positie geeft de functie null en toont de app geen weer voor een verzonnen plek.
+ * `source` blijft als alias voor oudere aanroepen ('gps' = actueel; al het andere = geen positie). */
+export function weatherPlace({state, source, lat, lon, at = null, places = []}) {
+  const kind = state || (source === 'gps' ? 'gps' : 'none');
+  if (!['gps', 'last', 'manual'].includes(kind) || !Number.isFinite(Number(lat)) || !Number.isFinite(Number(lon))) return null;
   let best = null;
   for (const place of places || []) {
     if (!place?.name || !Number.isFinite(Number(place.lat)) || !Number.isFinite(Number(place.lon))) continue;
-    const d = distanceM(lat, lon, Number(place.lat), Number(place.lon));
+    const d = distanceM(Number(lat), Number(lon), Number(place.lat), Number(place.lon));
     if (d <= WEATHER_PLACE_RADIUS_M && (!best || d < best.d)) best = {name: String(place.name), d};
   }
-  return best ? {text: `Bij ${best.name}`, hint: 'eigen plek'} : {text: 'Je huidige omgeving', hint: 'GPS'};
+  if (kind === 'gps') return best ? {text: `Bij ${best.name}`, hint: 'eigen plek', kind} : {text: 'Je huidige omgeving', hint: 'GPS', kind};
+  if (kind === 'manual') return {text: best ? `Bij ${best.name}` : 'Zelf gekozen plek', hint: 'zelf gekozen, geen GPS', kind};
+  const when = Number.isFinite(Number(at)) ? new Date(Number(at)).toLocaleTimeString('nl-NL', {hour: '2-digit', minute: '2-digit'}) : null;
+  return {text: best ? `Bij ${best.name}` : 'Laatst bekende locatie', hint: `niet actueel${when ? ` · GPS van ${when}` : ''}`, kind};
+}
+
+/** Melding zonder bruikbare positie (GPS-01): eerlijke reden, geen standaardstad. */
+export function noLocationText(reason) {
+  if (reason === 'denied') return 'Birdspot heeft geen toegang tot je locatie. Sta locatie toe in je browser of kies zelf een plek.';
+  if (reason === 'unsupported') return 'Deze browser geeft geen locatie door. Kies zelf een plek.';
+  return 'Je locatie is nu niet te bepalen (geen GPS-signaal). Probeer het opnieuw of kies zelf een plek.';
 }
 
 export function weatherPlaceMarkup(place) {
-  return `<div class="weather-place"><span aria-hidden="true">📍</span> <span class="weather-place__name">${escHtml(place.text)}</span>` +
-    ` <span class="weather-place__note">— actueel weer${place.hint ? ` · ${escHtml(place.hint)}` : ''}</span></div>`;
+  return `<div class="weather-place" data-location-kind="${escHtml(place.kind || 'gps')}"><span aria-hidden="true">📍</span> <span class="weather-place__name">${escHtml(place.text)}</span>` +
+    ` <span class="weather-place__note">— ${place.kind && place.kind !== 'gps' ? 'weer voor deze plek' : 'actueel weer'}${place.hint ? ` · ${escHtml(place.hint)}` : ''}</span></div>`;
 }

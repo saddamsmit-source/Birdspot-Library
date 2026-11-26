@@ -20,8 +20,10 @@ def main():
   threading.Thread(target=srv.serve_forever,daemon=True).start()
   with sync_playwright() as pw:
    browser=pw.chromium.launch(headless=True,args=["--autoplay-policy=no-user-gesture-required"])
+   # GPS-01 (26-11-2026): weer alleen voor een echte positie; vaste testpositie met toestemming (bewuste testwijziging).
    ctx=browser.new_context(viewport={"width":390,"height":844},
-                           reduced_motion="no-preference",service_workers="block")
+                           reduced_motion="no-preference",service_workers="block",
+                           geolocation={"latitude":51.92,"longitude":4.47},permissions=["geolocation"])
    page=ctx.new_page()
    errors=[]
    page.on("pageerror",lambda e:errors.append(str(e)))

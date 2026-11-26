@@ -698,3 +698,14 @@
   .slideshow__slide { transition: none; }
   .spinner { animation: none; border-top-color: var(--brand-light); }
 }
+
+/* GPS-01: geen standaardstad; eerlijke melding en handmatige keuze (knoppen ≥ 44 px). */
+.weather-nolocation { margin: 0 0 var(--space-12); color: var(--ink-2); font-size: var(--fs-meta); line-height: 1.45; }
+.location-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--space-12); }
+.location-action {
+  min-height: 44px; padding: 8px 12px; border-radius: var(--r-sm); border: 1px solid var(--line);
+  background: var(--surface-2); color: var(--ink); font: inherit; font-size: var(--fs-meta); font-weight: 650; cursor: pointer;
+}
+.location-action:focus-visible { outline: 3px solid var(--brand-light); outline-offset: 2px; }
+.ambient-wetland .weather-nolocation { color: #f2e9d6 !important; }
+.ambient-wetland .location-action { color: #fff8e7; background: rgba(40, 107, 81, .42); border-color: rgba(226, 203, 156, .46); }
