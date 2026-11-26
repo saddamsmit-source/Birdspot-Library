@@ -1,7 +1,7 @@
 """Bouwt src/data/speciesKnowledge.js uit tools/kennisbaseline/knowledge.json en weigert ongeldige profielen.
 
 Validatie (contract v0.1):
-- elke soortsleutel bestaat als Aviandra-ID in src/data/species.js;
+- elke soortsleutel bestaat als Birdspot-ID in src/data/species.js;
 - elke bewering (summary, keyMarks, caution, critical, similar, detail, voice, basis.size, habitat,
   status, life, discrepancies) heeft een niet-lege tekst en alleen bestaande bronsleutels;
 - inhoudelijke beweringen hebben minstens één bron (uitzondering: 'similar' die naar een bestaande
@@ -107,7 +107,7 @@ def validate(data, ids, sizes=None):
         if sid.startswith("_"):
             continue
         if sid not in ids:
-            errors.append(f"{sid}: onbekend Aviandra-ID")
+            errors.append(f"{sid}: onbekend Birdspot-ID")
             continue
         claim(sid, "summary", k.get("summary"))
         marks = k.get("keyMarks", [])
