@@ -48,7 +48,7 @@ const pre = sw.match(/const PRECACHE_PATHS = \[([\s\S]*?)\];/)[1];
 for (const [, p] of pre.matchAll(/'([^']*)'/g)) need(p || 'index.html', 'sw.js');
 for (const [, p] of sw.matchAll(/atScope\('([^']+\.[a-z0-9]+)'\)/g)) need(p, 'sw.js'); // prefixen als 'photos/' en 'api/' zijn routes, geen bestanden
 // 3. Manifesticonen
-for (const icon of JSON.parse(readFileSync(join(ROOT, 'manifest.webmanifest'), 'utf8')).icons || []) need(icon.src, 'manifest');
+for (const icon of JSON.parse(readFileSync(join(ROOT, 'manifest.webmanifest'), 'utf8')).icons || []) need(icon.src.split(/[?#]/, 1)[0], 'manifest');
 // 4. JS-imports (statisch en dynamisch) in src en api
 for (const file of [...walk('src'), ...walk('api')].filter(f => /\.m?js$/.test(f))) {
   const s = readFileSync(join(ROOT, file), 'utf8');

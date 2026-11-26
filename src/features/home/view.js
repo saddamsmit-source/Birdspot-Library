@@ -147,22 +147,24 @@ function buildSkeleton() {
 
     <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
     <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
-      <div class="featured-birds__media">
-        <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true"><span>✦</span></div>
-        <img id="featuredBirdImage" class="featured-birds__photo" alt="" decoding="async">
+      <div class="featured-birds__visual">
+        <div class="featured-birds__media">
+          <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true"><span>✦</span></div>
+          <img id="featuredBirdImage" class="featured-birds__photo" alt="" decoding="async">
+        </div>
+        <button type="button" id="featuredBirdZoom" aria-label="Vergroot foto"></button>
+        <span class="field-photo-label">Gidsfoto</span>
+        <div class="home-featured-progress" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <button type="button" id="featuredBirdMotion" aria-label="Diashow pauzeren" aria-pressed="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path class="featured-motion-pause" d="M6 4h4v16H6z M14 4h4v16h-4z"/>
+            <path class="featured-motion-play" d="M8 4v16l12-8z"/>
+          </svg>
+        </button>
+        <div id="featuredBirdCredit" class="featured-photo-info"></div>
       </div>
-      <button type="button" id="featuredBirdZoom" aria-label="Vergroot foto"></button>
-      <span class="field-photo-label">Gidsfoto</span>
-      <div class="home-featured-progress" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
-      <button type="button" id="featuredBirdMotion" aria-label="Diashow pauzeren" aria-pressed="false">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path class="featured-motion-pause" d="M6 4h4v16H6z M14 4h4v16h-4z"/>
-          <path class="featured-motion-play" d="M8 4v16l12-8z"/>
-        </svg>
-      </button>
-      <div id="featuredBirdCredit" class="featured-photo-info"></div>
       <div class="featured-birds__caption">
         <div class="featured-birds__identification">
           <p class="field-eyebrow">Vandaag in beeld</p>

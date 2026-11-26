@@ -154,39 +154,30 @@ def main():
         hero.locator('img').evaluate('img => img.decode()')
         cta = hero.get_by_role('button', name='Bekijk soortkaart', exact=False)
 
-        for width in (320, 360, 390, 430, 1280):
-            page.set_viewport_size({'width': width, 'height': 844})
-            result = hero.evaluate("""el => {
+        for width, height in ((320, 568), (360, 640), (390, 844), (430, 900), (1280, 844)):
+            page.set_viewport_size({'width': width, 'height': height})
+            page.locator('#main-view').evaluate("el => el.scrollTo({top: 0, behavior: 'instant'})")
+            result = hero.evaluate("""async el => {
+              await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
               const caption = el.querySelector('.featured-birds__caption');
-              const identification = el.querySelector('.featured-birds__identification');
               const photo = el.querySelector('#featuredBirdImage');
               const rect = photo.getBoundingClientRect();
-              const action = el.querySelector('[data-featured-species]');
-              const actionRect = action.getBoundingClientRect();
-              const notes = el.querySelector('.field-featured-notes');
-              const translucent = node => {
-                const alpha = Number(getComputedStyle(node).backgroundColor.split(',')[3]?.trim().replace(')', ''));
-                return alpha > 0 && alpha < .5;
-              };
+              const media = photo.parentElement;
+              const navTop = document.getElementById('app-nav').getBoundingClientRect().top;
+              const statsTop = document.getElementById('statsRow').getBoundingClientRect().top;
               return {
-                photoBehindAction: rect.bottom >= actionRect.bottom && rect.left <= actionRect.left &&
-                  rect.right >= actionRect.right && rect.bottom >= notes.getBoundingClientRect().bottom,
-                transparentCaption: getComputedStyle(caption).backgroundColor === 'rgba(0, 0, 0, 0)',
-                transparentIdentification: [identification, identification.querySelector('.featured-birds__group')]
-                  .every(node => getComputedStyle(node).backgroundColor === 'rgba(0, 0, 0, 0)'),
-                transparentControls: translucent(action) && translucent(notes),
-                readableEdges: [identification.querySelector('h2'), action, notes.querySelector('summary')]
-                  .every(node => parseFloat(getComputedStyle(node).webkitTextStrokeWidth) > 0),
+                halfScreenPhoto: rect.height >= innerHeight / 2 - 1 &&
+                  Math.min(rect.bottom, navTop) - Math.max(0, rect.top) >= innerHeight / 2 - 1,
+                controlsBelowPhoto: caption.getBoundingClientRect().top >= rect.bottom - 1,
+                statsNearPhoto: statsTop >= rect.bottom && statsTop - navTop < innerHeight / 4,
                 noPhotoFilter: getComputedStyle(photo).filter === 'none' && getComputedStyle(photo).maskImage === 'none',
-                noCaptionShade: getComputedStyle(caption, '::before').content === 'none' &&
-                  getComputedStyle(caption).backgroundImage === 'none' &&
-                  getComputedStyle(photo.parentElement, '::before').content === 'none',
+                noPhotoShade: ['::before', '::after'].every(part => getComputedStyle(media, part).content === 'none'),
                 noPageOverflow: document.documentElement.scrollWidth <= innerWidth + 1,
               };
             }""")
-            assert all(result.values()), (width, result)
-            assert contrast(cta, text_edge=True) >= 4.5
-            assert contrast(hero.locator('h2'), text_edge=True) >= 4.5
+            assert all(result.values()), (width, height, result)
+            assert contrast(cta) >= 4.5
+            assert contrast(hero.locator('h2'), background='#slideshow') >= 4.5
             if width == 390:
                 hero.screenshot(path=str(SHOTS / 'mobile_owner_hero_390.png'))
 
@@ -222,7 +213,7 @@ def main():
             assert spacing['titleHeight'] >= 44 and 6 <= spacing['titleGap'] <= 14, (width, spacing)
             assert spacing['rows'] >= 3 and spacing['icons'] == spacing['rows'], (width, spacing)
             assert all(0 <= gap <= 16 for gap in spacing['gaps']) and spacing['bottom'] >= 12, (width, spacing)
-            assert contrast(hero.locator('#featuredBirdWhere'), text_edge=True) >= 4.5
+            assert contrast(hero.locator('#featuredBirdWhere'), background='#slideshow') >= 4.5
             if width == 390:
                 notes.screenshot(path=str(SHOTS / 'mobile_owner_fieldnotes_390.png'))
         page.set_viewport_size({'width': 390, 'height': 844})
