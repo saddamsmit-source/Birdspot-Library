@@ -1610,10 +1610,10 @@ export const GUIDE_COMPARISONS = [
     label: 'Zwarte Kraai en Kauw · in vlucht',
     flight: true,
     birds: [
-      {id: 'sp022', source: 'zwarte-kraai', marks: 'Geheel zwart, met een stevige snavel en brede vleugels met gespreide punten.'},
-      {id: 'sp025', source: 'kauw', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
+      {id: 'sp022', source: 'zwarte-kraai', marks: 'Fors silhouet met een stevige snavel en brede vleugels.'},
+      {id: 'sp025', source: 'kauw', marks: 'Compacter silhouet met een relatief korte snavel.'},
     ],
-    tip: 'Vergelijk kop en snavel. Tegen fel tegenlicht kan de grijze nek van de Kauw donker lijken.',
+    tip: 'Vergelijk bouw en snavel bij een goede kijkhoek. In tegenlicht zijn de lichte iris en grijze nek van de Kauw moeilijk te zien.',
   },
   {
     label: 'Gaai en Ekster · in vlucht',
@@ -1630,7 +1630,26 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk eerst naar staartlengte en vleugeltekening. De witte stuit van de Gaai is het best van achteren te zien.',
   },
   {
+    label: 'Gaai en Pestvogel · kop en vleugel',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp026', source: 'gaai', textOnly: true, marks: 'Blauw-zwart gebandeerd vleugelveld en een donkere baardstreep.'},
+      {id: 'sp287', source: 'pestvogel', textOnly: true, marks: 'Kuif, zwart oogmasker en gele staartpunt.'},
+    ],
+    tip: 'Kijk naar het oogmasker, het vleugelveld en de staartpunt bij goed licht.',
+  },
+  {
+    label: 'Gaai en Hop · snavel en vleugel',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp026', source: 'gaai', textOnly: true, marks: 'Stevige snavel en een blauw-zwart gebandeerd vleugelveld.'},
+      {id: 'sp256', source: 'hop', textOnly: true, marks: 'Lange, licht neergebogen snavel, opvallende kuif en zwart-wit gebandeerde vleugels.'},
+    ],
+    tip: 'Vergelijk de snavel en vleugeltekening. De kuif van de Hop kan plat liggen.',
+  },
+  {
     label: 'Koolmees en Pimpelmees · in vlucht',
+    pairHidden: 'F3-REV2-R06b 27-11-2026 (eigenaarbesluit B): Koolmees van onderen, Pimpelmees vooral van boven; buikstreep niet vergelijkbaar',
     flight: true,
     birds: [
       {id: 'sp029', source: 'koolmees', marks: 'Zwarte kop met witte wangen. Op de gele onderzijde loopt een donkere middenstreep.'},
