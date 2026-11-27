@@ -157,6 +157,29 @@ export function renderMap(el, target = {}) {
     import("../../app.js").then(({ navigate }) => navigate("sightings"));
   });
 
+  const locateButton = el.querySelector('#mapLocateBtn');
+  let userMarker = null;
+  locateButton.addEventListener('click', () => {
+    findUserPosition(locateButton, ({ latitude, longitude }) => {
+      const map = _mapInstance;
+      if (!map) {
+        showToast('Locatie gevonden. De kaartlaag is nu niet beschikbaar.', 'warn');
+        return;
+      }
+      const position = [latitude, longitude];
+      userMarker?.remove();
+      userMarker = window.L.marker(position, {
+        icon: window.L.divIcon({ className: 'map-current-location', iconSize: [18, 18] }),
+        interactive: false,
+        keyboard: false,
+        title: 'Je huidige locatie',
+      }).addTo(map);
+      el.querySelector('.map-no-gps')?.remove();
+      map.flyTo(position, 17, { duration: 1 });
+      showToast('Locatie gevonden op de kaart.');
+    });
+  });
+
   // De kaart blijft functioneel bij traag/offline CDN; geen oneindige spinner.
   // Synchronisch cleanup-contract voor de bestaande router.
   let destroyed = false;
@@ -406,9 +429,6 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   // Lege state — altijd tonen als er geen GPS-waarnemingen zijn
   if (!geoSightings.length) showNoGpsState(screenEl);
 
-  // Locatie-knop — ook zonder kaart tonen
-  const locBtn = screenEl.querySelector('#mapLocateBtn');
-
   let map = null;
   let restoringView = Boolean(mapView);
   // K5: bij zoeken komen alle plekken met die vogel (of met die naam) naar voren
@@ -605,10 +625,6 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
     openAddSheet({ initial: { lat: c.lat, lon: c.lng, pinAccuracyM: acc },
       onSaved: () => import('../../app.js').then(({ navigate }) => navigate('map', { force: true })) });
   });
-  // Locatie-knop koppelen
-  if (locBtn) {
-    locBtn.addEventListener('click', () => centerOnUser(map, locBtn));
-  }
 }
 
 // ── K4: plekkaartje ───────────────────────────────────────────
@@ -944,22 +960,37 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
 }
 
 // ── Locatie ────────────────────────────────────────────────────
-function centerOnUser(map, btn) {
-  // GPS-01: een mislukte locatie wordt gemeld in plaats van stil te falen; de kaart blijft waar hij was.
-  if (!navigator.geolocation) { showToast('Deze browser geeft geen locatie door.', 'warn'); return; }
+function findUserPosition(btn, onLocated) {
+  if (btn.getAttribute('aria-busy') === 'true') return;
+  if (!navigator.geolocation?.getCurrentPosition) {
+    showToast('Deze browser geeft geen locatie door.', 'warn');
+    return;
+  }
   btn.classList.add('map-locate-btn--loading');
-  navigator.geolocation.getCurrentPosition(
-    pos => {
-      btn.classList.remove('map-locate-btn--loading');
-      map.flyTo([pos.coords.latitude, pos.coords.longitude], 17, { duration: 1 });
-    },
-    error => {
-      btn.classList.remove('map-locate-btn--loading');
-      showToast(error?.code === 1 ? 'Geen toegang tot je locatie. Sta locatie toe in je browser.'
-        : 'Je locatie is nu niet te bepalen (geen GPS-signaal). Probeer het opnieuw.', 'warn');
-    },
-    { timeout: 15000, maximumAge: 60000 },
-  );
+  btn.setAttribute('aria-busy', 'true');
+  const finish = () => {
+    btn.classList.remove('map-locate-btn--loading');
+    btn.removeAttribute('aria-busy');
+    return btn.isConnected;
+  };
+  const failed = error => {
+    if (!finish()) return;
+    const message = error?.code === 1 ? 'Geen toegang tot je locatie. Zet Locatie aan op je telefoon en sta locatie toe in je browser.'
+      : error?.code === 3 ? 'Locatie bepalen duurt te lang. Probeer het opnieuw.'
+        : 'Je locatie is nu niet beschikbaar. Controleer of Locatie aanstaat en probeer het opnieuw.';
+    showToast(message, 'warn');
+  };
+  try {
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        if (finish()) onLocated(coords);
+      },
+      failed,
+      { timeout: 15000, maximumAge: 60000 },
+    );
+  } catch (error) {
+    failed(error);
+  }
 }
 
 // ── Lege state (geen GPS) ──────────────────────────────────────

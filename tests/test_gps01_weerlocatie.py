@@ -20,6 +20,8 @@ G10 weer-API offline: bestaande melding, zon blijft werken
 G11 320/390/430 px: melding en knoppen zonder overloop, knoppen ≥ 44 px
 G15 handmatige locatie blijft voor weer en zon beschikbaar als de opslag vol is
 G16 bij uitval van de weerservice blijven de locatieknoppen werken en herstelt weer na GPS-retry
+G17 locatieknop vraagt ook GPS op zonder kaartbibliotheek, met afzonderlijke kaartmelding
+G18 locatieknop centreert de geladen kaart en toont een eigen locatiemarkering
 G13 kaart 'mijn locatie' zonder toestemming: melding in plaats van stil falen
 G14 offline: elke vanuit src/app.js geïmporteerde module (statisch en dynamisch) staat in de app-shell van sw.js
 G12 privacy: nergens coördinaten in weer/zon; weerverzoek met afgeronde coördinaten; opslag afgerond op 2 decimalen
@@ -215,6 +217,48 @@ def check_manual_location_recovery(browser, url):
         context.close()
 
 
+def check_map_location(browser, url):
+    context = browser.new_context(geolocation=GPS, permissions=['geolocation'],
+                                  service_workers='block', reduced_motion='reduce')
+    context.add_init_script(GEO)
+    context.route('https://cdnjs.cloudflare.com/ajax/libs/**', lambda route: route.abort())
+    try:
+        page = context.new_page()
+        boot(page, url)
+        page.locator('.nav-item[data-route="map"]').click()
+        page.locator('.map-offline-notice').wait_for()
+        calls_before = page.evaluate('window.__geo.calls.length')
+        page.locator('#mapLocateBtn').click()
+        toast = page.locator('.toast.show:not(.app-update)')
+        expect(toast).to_contain_text('Locatie gevonden. De kaartlaag is nu niet beschikbaar.')
+        check('G17', 'GPS werkt ook zonder kaartbibliotheek en meldt kaartuitval afzonderlijk',
+              page.evaluate('window.__geo.calls.length') == calls_before + 1)
+    finally:
+        context.close()
+
+    context, page = home(browser, url, geo=GPS)
+    try:
+        page.locator('.nav-item[data-route="map"]').click()
+        page.wait_for_function('window.__birdspotMapTest.map')
+        page.evaluate("""() => {
+            const marker = window.L.marker;
+            window.L.marker = (position, options) => {
+                if (options.icon?.className === 'map-current-location') {
+                    window.__gpsMapMarker = position;
+                }
+                return marker(position, options);
+            };
+        }""")
+        page.locator('#mapLocateBtn').click()
+        expect(page.locator('.toast.show:not(.app-update)')).to_contain_text('Locatie gevonden op de kaart.')
+        position = [GPS['latitude'], GPS['longitude']]
+        center = page.evaluate('window.__birdspotMapTest.map.getCenter()')
+        check('G18', 'GPS centreert de geladen kaart en maakt een eigen locatiemarkering',
+              [center['lat'], center['lng']] == position and page.evaluate('window.__gpsMapMarker') == position)
+    finally:
+        context.close()
+
+
 def run():
     modules, missing = shell_coverage()
     check('G14', 'offline: alle vanuit src/app.js geïmporteerde modules staan in de app-shell van sw.js', modules > 40 and not missing,
@@ -350,6 +394,7 @@ def run():
 
             check('G12', 'privacy: geen coördinaten in weer/zon, weerverzoek en opslag afgerond, geen paginafouten', g12a and not g12_errors, g12_errors)
             check_manual_location_recovery(b, url)
+            check_map_location(b, url)
             b.close()
     failed = [c for c, ok in RESULTS if not ok]
     print(f"GPS-01: {len(RESULTS) - len(failed)}/{len(RESULTS)} PASS{' — FAIL ' + str(failed) if failed else ''}")
