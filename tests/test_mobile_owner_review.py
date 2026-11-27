@@ -161,6 +161,7 @@ def main():
               const caption = el.querySelector('.featured-birds__caption');
               const photo = el.querySelector('#featuredBirdImage');
               const rect = photo.getBoundingClientRect();
+              const label = el.querySelector('.featured-birds__identification').getBoundingClientRect();
               const media = photo.parentElement;
               const navTop = document.getElementById('app-nav').getBoundingClientRect().top;
               const statsTop = document.getElementById('statsRow').getBoundingClientRect().top;
@@ -176,6 +177,9 @@ def main():
                 navTop,
                 checks: {
                   halfScreenPhoto: visiblePhoto >= innerHeight / 2 - 1,
+                  largerPhoto: rect.height >= innerHeight * .6 - 1,
+                  identificationOverPhoto: label.left >= rect.left && label.right <= rect.right &&
+                    label.top >= rect.top && label.bottom <= rect.bottom,
                   controlsBelowPhoto: caption.getBoundingClientRect().top >= rect.bottom - 1,
                   statsNearPhoto: statsTop >= rect.bottom && scrollToStats < innerHeight / 4,
                   noPhotoFilter: getComputedStyle(photo).filter === 'none' && getComputedStyle(photo).maskImage === 'none',
@@ -186,7 +190,7 @@ def main():
             }""")
             assert all(result['checks'].values()), (width, height, result)
             assert contrast(cta) >= 4.5
-            assert contrast(hero.locator('h2'), background='#slideshow') >= 4.5
+            assert contrast(hero.locator('h2'), background='.featured-birds__identification') >= 4.5
             if width == 390:
                 hero.screenshot(path=str(SHOTS / 'mobile_owner_hero_390.png'))
 

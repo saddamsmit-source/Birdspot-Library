@@ -164,14 +164,14 @@ function buildSkeleton() {
           </svg>
         </button>
         <div id="featuredBirdCredit" class="featured-photo-info"></div>
-      </div>
-      <div class="featured-birds__caption">
         <div class="featured-birds__identification">
           <p class="field-eyebrow">Vandaag in beeld</p>
           <span class="featured-birds__group" id="featuredBirdGroup"></span>
           <h2 id="featuredBirdName"></h2>
           <em id="featuredBirdLatin"></em>
         </div>
+      </div>
+      <div class="featured-birds__caption">
         <div class="field-featured-actions">
           <button type="button" class="field-action" data-featured-species><span data-featured-label>Bekijk soortkaart</span> <span aria-hidden="true">›</span></button>
           <details class="field-featured-notes">

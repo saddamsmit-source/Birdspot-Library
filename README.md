@@ -5,6 +5,12 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.40 · intro en gidsfoto (27 november 2026)
+
+De korte ijsvogelintro gebruikt een mobiele MP4 en gaat na afspelen of overslaan direct weg. Als de video uitvalt, sluit de intro vanzelf. Bij verminderde beweging toont Aviandra kort de welkomstfoto. Offline opent de app direct. Na de update kan de herstelde clip één keer worden getoond, ook als de vorige intro al was gezien.
+
+Op Home staat de soortnaam met de wetenschappelijke naam onderin de grotere gidsfoto. Alleen achter de tekst staat een donker vlak voor contrast. Soortkaart en uitklapbare veldkenmerken staan onder de foto. **Release HOLD.**
+
 ## Aviandra fase 2 — Home en logo (26 november 2026)
 
 Kandidaat **1.27.37** in [#374](https://github.com/saddamsmit-source/Birdspot-Library/pull/374) volgt het door de eigenaar bevestigde mobiele ontwerp uit [#372](https://github.com/saddamsmit-source/Birdspot-Library/pull/372). De bovenbalk, zoekknop, drie kernacties, vogelkaart, persoonlijke tellingen en weerkaart volgen de volgorde uit de referentie. De bestaande diashow levert de vogel en fotocredits. De weerkaart gebruikt de bestaande gedeelde locatie voor weer en zon. Media telt mee en is bereikbaar via de eigen knop op Home onder Mijn waarnemingen.

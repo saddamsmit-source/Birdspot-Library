@@ -1,7 +1,7 @@
 """Aviandra one-time kingfisher welcome QA.
 
-Checks 4K playback, the still for reduced motion, the offline opening and
-the direct-open button while the flight is still loading.
+Checks mobile playback, playback failure, the reduced-motion still, offline
+opening and direct open while the app and welcome video are both loading.
 """
 from __future__ import annotations
 import hashlib
@@ -13,8 +13,9 @@ from playwright.sync_api import sync_playwright
 
 ROOT=Path(__file__).resolve().parents[1]
 IMAGE=ROOT/"assets"/"birdspot-ijsvogel-splash.avif"
-VIDEO="assets/aviandra-intro.webm"
+VIDEO="assets/aviandra-intro.mp4"
 WELCOME_KEY="aviandra-welcome-video-seen"
+WELCOME_REVISION="2"
 SHOTS=ROOT/"tests"/"screenshots"
 SHOTS.mkdir(parents=True,exist_ok=True)
 
@@ -68,10 +69,7 @@ def main():
             assert page.locator("#birdspotSplash").get_attribute("aria-modal")=="true"
             assert not page.locator('.birdspot-splash__video').get_attribute('src')
             page.screenshot(path=str(SHOTS/"birdspot_startup_splash_390.png"),animations="disabled")
-            # The splash must not disappear after only one or two seconds.
-            page.wait_for_timeout(2300)
-            assert page.locator("#birdspotSplash").is_visible()
-            page.locator("#birdspotSplash").wait_for(state="detached",timeout=6000)
+            page.locator("#birdspotSplash").wait_for(state="detached",timeout=2500)
             assert page.locator("#screen-home").is_visible()
             assert not errors, errors
 
@@ -91,17 +89,20 @@ def main():
             page.reload(wait_until="domcontentloaded")
             page.get_by_role('button', name='Direct openen').click()
             page.locator("#birdspotSplash").wait_for(state="detached",timeout=2400)
-            assert page.evaluate('key => localStorage.getItem(key)', WELCOME_KEY)=="1"
+            assert page.evaluate('key => localStorage.getItem(key)', WELCOME_KEY)==WELCOME_REVISION
             page.locator(".nav-item[data-route='map']").click()
             assert page.locator("#mapScreen").count()==1
             assert page.locator("#birdspotSplash").count()==0
             assert not errors, errors
-            print("PASS: exact image, app-ready, five-second welcome, fast return, skip and data preservation")
+            print("PASS: exact image, brief reduced-motion welcome, fast return, skip and data preservation")
             context.close()
 
             motion = browser.new_context(viewport={'width': 412, 'height': 892}, service_workers='block')
-            # Een eerdere installatie heeft alleen de sleutel van de oude welkomstfoto.
-            motion.add_init_script("localStorage.setItem('birdspot-welcome-seen', '1')")
+            # Een eerdere installatie heeft de oude intro al gezien.
+            motion.add_init_script(f"""if (!sessionStorage.getItem('welcome-test-seeded')) {{
+                localStorage.setItem('{WELCOME_KEY}', '1');
+                sessionStorage.setItem('welcome-test-seeded', '1');
+            }}""")
             animated = motion.new_page()
             animated.on('pageerror', lambda error: errors.append(str(error)))
             animated.goto(start, wait_until='domcontentloaded')
@@ -110,26 +111,41 @@ def main():
             playback = animated.locator('.birdspot-splash__video').evaluate('video => ({'
                 'width: video.videoWidth, height: video.videoHeight, duration: video.duration, '
                 'muted: video.muted, inline: video.playsInline, loop: video.loop})')
-            assert playback['width'] >= 2160 and playback['height'] >= 3840, playback
+            assert (playback['width'], playback['height']) == (720, 1280), playback
             assert abs(playback['duration'] - 5) <= .1, playback
             assert playback['muted'] and playback['inline'] and not playback['loop'], playback
             animated.screenshot(path=str(SHOTS/'birdspot_startup_splash_video_412.png'))
             animated.locator('#birdspotSplash').wait_for(state='detached', timeout=7000)
-            assert animated.evaluate("localStorage.getItem('birdspot-welcome-seen')") == '1'
+            assert animated.evaluate('key => localStorage.getItem(key)', WELCOME_KEY)==WELCOME_REVISION
 
-            animated.evaluate('key => localStorage.removeItem(key)', WELCOME_KEY)
-            pending_video = []
-            animated.route('**/' + VIDEO, lambda route: pending_video.append(route))
             animated.reload(wait_until='domcontentloaded')
-            animated.locator('#screen-home').wait_for(timeout=4000)
-            assert pending_video, 'The video should be downloading when Direct openen is pressed'
-            animated.get_by_role('button', name='Direct openen').click()
+            assert animated.locator('#birdspotSplash').count()==0
+            animated.evaluate('key => localStorage.removeItem(key)', WELCOME_KEY)
+            animated.route('**/' + VIDEO, lambda route: route.abort())
+            animated.reload(wait_until='domcontentloaded')
+            animated.locator('#birdspotSplash').wait_for(state='detached', timeout=2300)
+            assert animated.evaluate('key => localStorage.getItem(key)', WELCOME_KEY) is None
+            animated.unroute('**/' + VIDEO)
+
+            pending_video = []
+            pending_app = []
+            animated.route('**/' + VIDEO, lambda route: pending_video.append(route))
+            animated.route('**/src/app.js', lambda route: pending_app.append(route))
+            animated.reload(wait_until='commit')
+            skip = animated.get_by_role('button', name='Direct openen')
+            assert skip.evaluate("el => document.activeElement === el && document.getElementById('app').inert")
+            skip.press('Escape')
             animated.locator('#birdspotSplash').wait_for(state='detached', timeout=1500)
+            assert animated.locator('#screen-home').count()==0
+            assert animated.evaluate("!document.getElementById('app').inert")
             for route in pending_video:
                 route.abort()
+            for route in pending_app:
+                route.continue_()
+            animated.locator('#screen-home').wait_for(timeout=5000)
             animated.unroute_all(behavior='wait')
             assert not errors, errors
-            print(f"PASS: 4K intro {playback}, new for existing installs, direct open during a slow download")
+            print(f"PASS: mobile intro {playback}, replay once after update, fallback and escape before app load")
             motion.close()
             browser.close()
         server.shutdown()

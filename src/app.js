@@ -221,6 +221,6 @@ if (hasPendingMarker()) await recovery;
 else await Promise.race([recovery, new Promise(resolve => setTimeout(resolve, 1500))]);
 await Promise.race([initPlaces().catch(error => console.error('[places] init', error)), new Promise(resolve => setTimeout(resolve, 1500))]);
 navigate(ROUTES[initialRoute] ? initialRoute : 'home',{history:false});
-// Splash waits until the application home route is actually initialized.
+// Signal that the first route has been initialized.
 window.dispatchEvent(new Event('birdspot:ready'));
 
