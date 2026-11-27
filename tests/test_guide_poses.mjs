@@ -437,12 +437,15 @@ for (const bird of [kauw, crow]) {
   const pair = html.match(/<div class="sd-cmp-panel" data-cmp-panel data-cmp-flight[^>]*>[\s\S]*?<div class="sd-cmp-foot">/)?.[0];
   assert.ok(pair?.includes('sp025-flight-free.webp') && pair.includes('sp022-flight.webp'));
   assert.doesNotMatch(pair, /sp025-flight\.webp/);
+  assert.match(pair, /Compacter silhouet met een relatief korte snavel/);
+  assert.match(pair, /In tegenlicht zijn de lichte iris en grijze nek van de Kauw moeilijk te zien/);
 }
 const kauwCard = recognitionPanel(kauw);
 const flightSection = kauwCard.match(/<section class="sd-flight"[^>]*>[\s\S]*?<\/section>/)?.[0];
 assert.match(flightSection, /sp025-flight-free\.webp/);
 assert.doesNotMatch(flightSection, /sp025-flight\.webp/);
 assert.ok(kauwCard.includes('Landend tussen takken'));
+assert.match(kauwCard, /alt="Kauw nadert een landingsplek tussen takken/);
 
 // F3-R07: the fledgling comparison must show the two actual juvenile photographs in both directions.
 for (const id of ['sp029','sp030']) {
@@ -451,8 +454,22 @@ for (const id of ['sp029','sp030']) {
  const panels = html.split('data-cmp-panel').slice(1);
  assert.ok(panels.some(panel => panel.includes('sp029-juv.webp') && panel.includes('sp030-juv2.webp')));
  assert.match(html, /data-cmp-tab aria-selected="false">Juveniel<\/button>/);
+ const ownFlight = html.match(/<section class="sd-flight"[^>]*>[\s\S]*?<\/section>/)?.[0];
+ assert.ok(ownFlight?.includes(`${id}-flight.webp`));
+ assert.doesNotMatch(html.split('<section class="sd-similar"')[1], /sp029-flight\.webp|sp030-flight\.webp/);
+ assert.match(html, /in vlucht alleen/);
 }
 
+// F3-REV2-R06b: meaningful text links between Jay, Waxwing and Hoopoe in both directions.
+const jay = recognitionPanel(species.get('sp026'));
+assert.match(jay, /zwart oogmasker en een gele staartpunt/);
+assert.match(jay, /lange, licht neergebogen snavel/);
+assert.doesNotMatch(jay, /Door de bron genoemd/);
+for (const id of ['sp287', 'sp256']) {
+  const text = recognitionPanel(species.get(id));
+  assert.match(text, /Blauw-zwart gebandeerd|blauw-zwart gebandeerd/);
+  assert.match(text, /data-compare-species="sp026"/);
+}
 
 // Birdspot identification QA — Kuifeend and Topper (15-11-2026)
 const tufted = species.get('sp092'), greaterScaup = species.get('sp133');

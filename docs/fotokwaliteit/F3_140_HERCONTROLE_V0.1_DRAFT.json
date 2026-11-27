@@ -5741,7 +5741,7 @@
           "date": "2026-11-27",
           "base": "e7092409e9bebc8f907533171971c37881d03422",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md",
           "photos": [
             {
@@ -5767,14 +5767,14 @@
               "source": "https://commons.wikimedia.org/wiki/File:Jackdaw_(48142024622).jpg",
               "author": "hedera.baltica",
               "license": "CC BY-SA 2.0",
-              "visual": "Frontale landingsnadering met gespreide staart tussen takken; ogen en nek lichter. De galerij noemt landen, de alt-tekst noemt frontale vlucht.",
+              "visual": "Frontale landingsnadering met gespreide staart tussen takken. De alt-tekst benoemt de landing.",
               "blobSha": "672651f3100780942e5bd536908d5a3bc78a69da",
               "sourceSha1": "b09866162bf84dd40ae936a4745ee566f5511c67",
               "sourceSha256": "a66aaf8bd2ae58a85ae77efd8ffe126fb86872ff0bceb720d80ae7d787ca7f5e",
               "localSha256": "5cce535c6af01a4b53af760625487c75c6c28e4b5557ee073f5a3aed57c92715",
               "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
               "quality": "VERIFIED - beeldkenmerken zichtbaar",
-              "roleCheck": "PARTIALLY TESTED - rol bij overige foto’s juist, alt-tekst onvoldoende specifiek",
+              "roleCheck": "VERIFIED - landingsnadering met overeenkomend galerijlabel en alt-tekst",
               "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
               "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
             },
@@ -5834,7 +5834,7 @@
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - kernmerken getoetst aan gelezen passage",
-            "herkenning": "PARTIALLY TESTED - specifieke tekst- en beeldpunten ter beslissing",
+            "herkenning": "PARTIALLY TESTED - vluchttekst legt nadruk op silhouet en snavel; oogkleur en grijze nek beperkt in tegenlicht",
             "voorstel": "B — maak de alt-tekst van de landingsfoto eenduidig. Leg bij het bestaande vluchtpaar de nadruk op silhouet en snavel, met een waarschuwing voor oogkleur en nek in tegenlicht."
           },
           "lookalikes": [
@@ -5848,7 +5848,7 @@
               "pair": "sp025 ↔ sp022 Kauw/Zwarte Kraai · vlucht",
               "bothDirections": "VERIFIED - twee beelden en vluchtlabel in beide richtingen",
               "photoEquivalence": "PARTIALLY TESTED - beide in vrije vlucht; verschillende hoek en vleugelstand, tegenlicht bij Kauw",
-              "diagnosticText": "PARTIALLY TESTED - de korte snavel en vorm zijn bruikbaarder in deze foto’s dan iris en nek; voorstel om de tekst daarop aan te sluiten"
+              "diagnosticText": "PARTIALLY TESTED - silhouet en snavel vergeleken in beide richtingen, tegenlichtadvies zichtbaar"
             }
           ],
           "audio": {
@@ -5884,17 +5884,22 @@
             ],
             "photoCount": 4,
             "audioCount": 1,
-            "device": "NOT TESTED"
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium 320/360/390 px en 390 px offline: wijzigingen en vergelijkingen in beide richtingen gecontroleerd"
           },
           "materialGaps": [
             "ANWB-soortpassage niet ingezien",
-            "Onafhankelijke menselijke beluistering ontbreekt",
-            "Alt-tekst van de landingsfoto noemt frontale vlucht.",
-            "Het vluchtpaar met Zwarte Kraai geeft beperkt zicht op iris en grijze nek. De tekst verwijst toch naar het lichte oog."
+            "Onafhankelijke menselijke beluistering ontbreekt"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — maak de alt-tekst van de landingsfoto eenduidig. Leg bij het bestaande vluchtpaar de nadruk op silhouet en snavel, met een waarschuwing voor oogkleur en nek in tegenlicht.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt"
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -6063,7 +6068,7 @@
           "date": "2026-11-27",
           "base": "e7092409e9bebc8f907533171971c37881d03422",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md",
           "photos": [
             {
@@ -6141,7 +6146,7 @@
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - kernmerken getoetst aan gelezen passage",
-            "herkenning": "PARTIALLY TESTED - specifieke tekst- en beeldpunten ter beslissing",
+            "herkenning": "PARTIALLY TESTED - herkenningsverschillen Hop en Pestvogel in bestaande tekst, wederzijdse links en tekst getest",
             "voorstel": "B — vervang de algemene links bij Hop en Pestvogel door concrete tekst over kuif, oogmasker, gele staartpunt, snavel en vleugelpatroon. Behoud de tekstvergelijking met Ekster."
           },
           "lookalikes": [
@@ -6152,10 +6157,10 @@
               "diagnosticText": "PARTIALLY TESTED - blauw vleugelveld, staartlengte en witte delen zijn in de wederzijdse tekst te vergelijken"
             },
             {
-              "pair": "sp026 → sp256 Gaai/Hop en sp026 → sp287 Gaai/Pestvogel",
-              "bothDirections": "PARTIALLY TESTED - links zichtbaar vanaf Gaai, wederzijdse bruikbare vergelijking open",
-              "photoEquivalence": "N/A - tekstlinks zonder fotopaneel",
-              "diagnosticText": "PARTIALLY TESTED - huidige tekst noemt alleen dat de bron de soort noemt; toets concreet kenmerkverschil"
+              "pair": "sp026 ↔ sp256 Gaai/Hop en sp026 ↔ sp287 Gaai/Pestvogel",
+              "bothDirections": "VERIFIED - tekst en soortlinks in beide richtingen",
+              "photoEquivalence": "N/A - tekstvergelijkingen",
+              "diagnosticText": "PARTIALLY TESTED - snavel, kuif, vleugeltekening, oogmasker en staartpunt getoetst aan VBN"
             }
           ],
           "audio": {
@@ -6197,17 +6202,24 @@
             ],
             "photoCount": 3,
             "audioCount": 1,
-            "device": "NOT TESTED"
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium 320/360/390 px en 390 px offline: wijzigingen en vergelijkingen in beide richtingen gecontroleerd"
           },
           "materialGaps": [
             "ANWB-soortpassage niet ingezien",
             "Onafhankelijke menselijke beluistering ontbreekt",
-            "De Hop- en Pestvogel-links tonen alleen ‘Door de bron genoemd’. De kritische herkenningskaart geeft geen daadwerkelijk onderscheid.",
             "De gelijkwaardige vrije-vluchtfoto van Ekster voor het paar Gaai/Ekster ontbreekt. Het tekstpaar is toegankelijk onder Lijkt op."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — vervang de algemene links bij Hop en Pestvogel door concrete tekst over kuif, oogmasker, gele staartpunt, snavel en vleugelpatroon. Behoud de tekstvergelijking met Ekster.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "De gelijkwaardige vrije-vluchtfoto van Ekster voor het paar Gaai/Ekster ontbreekt. Het tekstpaar is toegankelijk onder Lijkt op."
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -6436,7 +6448,7 @@
           "date": "2026-11-27",
           "base": "e7092409e9bebc8f907533171971c37881d03422",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md",
           "photos": [
             {
@@ -6547,7 +6559,7 @@
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - kernmerken getoetst aan gelezen passage",
-            "herkenning": "PARTIALLY TESTED - specifieke tekst- en beeldpunten ter beslissing",
+            "herkenning": "PARTIALLY TESTED - bestaande kenmerken op beide kaarten zichtbaar; buikstreep in vlucht alleen bij vrij zicht",
             "voorstel": "B — toon het vluchtpaneel met Pimpelmees pas weer zodra er foto’s zijn met vergelijkbaar zicht op kop en onderzijde. Behoud de afzonderlijke vluchtfoto’s, de herkenningstekst en beide rustvergelijkingen."
           },
           "lookalikes": [
@@ -6559,9 +6571,9 @@
             },
             {
               "pair": "sp029 ↔ sp030 Koolmees/Pimpelmees · vlucht",
-              "bothDirections": "VERIFIED - fotopaneel in beide richtingen geopend",
-              "photoEquivalence": "PARTIALLY TESTED - het ene beeld toont vooral de onderzijde, het andere de rug en bovenvleugel",
-              "diagnosticText": "PARTIALLY TESTED - buikrij onvoldoende vergelijkbaar met de gekozen hoek; voorstel voor tekstbehoud en paneel uit zicht"
+              "bothDirections": "VERIFIED - vluchtpaneel uit zicht in beide richtingen; rustparen en eigen vluchtfoto’s bereikbaar",
+              "photoEquivalence": "N/A - verschillende kijkhoeken; gelijkwaardige onderzijde nog open",
+              "diagnosticText": "PARTIALLY TESTED - koptekening en buikstreep blijven beschikbaar in bestaande herkenningstekst"
             },
             {
               "pair": "sp029 ↔ sp174 Koolmees/Zwarte Mees",
@@ -6625,16 +6637,24 @@
             ],
             "photoCount": 5,
             "audioCount": 2,
-            "device": "NOT TESTED"
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium 320/360/390 px en 390 px offline: wijzigingen en vergelijkingen in beide richtingen gecontroleerd"
           },
           "materialGaps": [
             "ANWB-soortpassage niet ingezien",
             "Onafhankelijke menselijke beluistering ontbreekt",
-            "Koolmees/Pimpelmees in vlucht toont onderaanzicht van Koolmees en vooral rug/bovenaanzicht van Pimpelmees. De buikrij kan niet op beide beelden worden gecontroleerd."
+            "Gelijkwaardig vluchtpaar Koolmees/Pimpelmees met zichtbaar profiel en onderzijde ontbreekt."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — toon het vluchtpaneel met Pimpelmees pas weer zodra er foto’s zijn met vergelijkbaar zicht op kop en onderzijde. Behoud de afzonderlijke vluchtfoto’s, de herkenningstekst en beide rustvergelijkingen.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "Gelijkwaardig vluchtpaar Koolmees/Pimpelmees met zichtbaar profiel en onderzijde ontbreekt."
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -18905,7 +18925,7 @@
           "sp026",
           "sp029"
         ],
-        "status": "REVIEWED / OWNER GATE OPEN",
+        "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
         "date": "2026-11-27",
         "baseSHA": "e7092409e9bebc8f907533171971c37881d03422",
         "ownerStart": "27-11-2026: eigenaar vraagt Volgende in het Aviandra-gesprek",
@@ -18916,8 +18936,8 @@
     "counts": {
       "total": 140,
       "reexamined": 18,
-      "ownerGateOpen": 3,
-      "ownerDecisions": 15,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 18,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -18976,6 +18996,12 @@
         "batch": "F3-REV2-R05",
         "decision": "B voor Middelste Bonte Specht, Ekster en Zwarte Kraai. Akkoord in het Aviandra-gesprek.",
         "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381"
+      },
+      {
+        "date": "2026-11-27",
+        "batch": "F3-REV2-R06",
+        "decision": "B voor Kauw, Gaai en Koolmees. Eigenaar vroeg in het Aviandra-gesprek verder te gaan na het advies B.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383"
       }
     ]
   }

@@ -64,3 +64,15 @@ De vier individuele geluidsbestanden zijn opgehaald en vergeleken met de appopna
 A = verder onderzoeken. B = gerichte wijzigingen uitvoeren. C = per soort met geregistreerde open punten verder. ANWB-soortpassages vragen een rechtmatig toegankelijk exemplaar. De akoestische beoordeling staat afzonderlijk open.
 
 **Teller** 18/140 herbeoordeeld, 15 eigenaarbesluiten vastgelegd, 3 open en 0 volledige F3-PASS. Release HOLD.
+
+## R06b · uitvoering eigenaarbesluit B
+
+De eigenaar gaf op 27 november opdracht verder te gaan na het advies voor optie B. Bij **Kauw** noemt de alt-tekst de landingsnadering. De vluchtvergelijking met Zwarte Kraai gebruikt silhouet en snavel en benoemt de beperkingen van iris en nek in tegenlicht. De leeftijdswaarschuwing bij het rustpaneel blijft zichtbaar.
+
+Bij **Gaai** staan nu concrete verschillen met Hop en Pestvogel. De tekst en soortlinks werken ook vanaf beide andere kaarten. Het bestaande wederzijdse tekstpaar Gaai/Ekster blijft beschikbaar. [Gaai](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gaai) · [Hop](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/hop) · [Pestvogel](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Pestvogel)
+
+Bij **Koolmees en Pimpelmees** is het vluchtpaneel in beide richtingen verborgen. De afzonderlijke vluchtfoto’s, beide rustparen en de verschillen in koptekening en onderzijde zijn bereikbaar. De tekst noemt vrij zicht op de buik als voorwaarde om deze in vlucht te vergelijken.
+
+**Chromium VERIFIED** op 320/360/390 px. Drie fotoparen met tien panelen per breedte in beide richtingen, inclusief zoom en terugkeer. Wederzijdse teksten voor Gaai/Ekster, Gaai/Hop en Gaai/Pestvogel getest. Bij 390 px met afgesloten server decodeerden alle twaalf eigen foto's en vier opnamen en bleven de vergelijkingen bereikbaar.
+
+**Teller na B** 18/140 herbeoordeeld, 18 besluiten geregistreerd, nul volledige F3-PASS. ANWB, onafhankelijke luistercontrole en fysieke Samsung blijven open. Een vergelijkbaar vluchtpaar Ekster/Gaai en Koolmees/Pimpelmees ontbreekt. Release HOLD.
