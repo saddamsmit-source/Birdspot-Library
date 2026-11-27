@@ -1,11 +1,83 @@
 {
- "sp009": {
-  "file": "Falco peregrinus in flight (17659253649).jpg",
-  "author": "john581",
+ "sp005": {
+  "file": "Common Buzzard - Buteo buteo.jpg",
+  "author": "caroline legg",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_in_flight_(17659253649).jpg",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_Buzzard_-_Buteo_buteo.jpg",
+  "width": 960,
+  "height": 724,
+  "image": "/assets/showcase/sp005.webp",
+  "sha1": "addf7015c864b15aa7da6e1d6f0273c7f0f14599",
+  "sha256": "0fe3a75b45f64b2a8adc2db155f0bf76039e22a4a382b6806cddf2f96e4fa99b",
+  "sourceSize": [
+   3098,
+   2335
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Common_Buzzard_-_Buteo_buteo.jpg/960px-Common_Buzzard_-_Buteo_buteo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Bruintekening en haaksnavel zichtbaar; waakzame houding in het gras."
+ },
+ "sp006": {
+  "file": "Accipiter nisus - Accnis.jpg",
+  "author": "Pierre Dalous",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Accipiter_nisus_-_Accnis.jpg",
+  "width": 960,
+  "height": 639,
+  "image": "/assets/showcase/sp006.webp",
+  "sha1": "604e9d774667830f8b6e53115b9c04a3b1e07583",
+  "sha256": "0f8072bb8bda303a7083ce5ab452c8dc0ca26b158241aa1e6d809b41c6854f4f",
+  "sourceSize": [
+   2397,
+   1596
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Accipiter_nisus_-_Accnis.jpg/960px-Accipiter_nisus_-_Accnis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Gele iris, donkere gestreepte onderzijde en slanke haaksnavel."
+ },
+ "sp008": {
+  "file": "Common kestrel taking off.jpg",
+  "author": "Alexis Lours",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_kestrel_taking_off.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp008.webp",
+  "sha1": "4a51aac3da018c8ce7b51cba008eed911ce86429",
+  "sha256": "358d8a3c820e85e19954cb1a71f663df3057a995bac8420eafb7aa38f58cab47",
+  "sourceSize": [
+   5472,
+   3648
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Common_kestrel_taking_off.jpg/960px-Common_kestrel_taking_off.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Gevlekte bruine vleugels, lange staart en slanke vorm; natuurlijke beweging met poten vrij."
+ },
+ "sp009": {
+  "file": "Falco peregrinus 143426659.jpg",
+  "author": "Vladimir Kharuk",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Falco_peregrinus_143426659.jpg",
   "width": 1600,
-  "height": 1277
+  "height": 984,
+  "image": "/assets/showcase/sp009-home.webp",
+  "sha1": "31659a870d30019ca52cd6da719554011420e29d",
+  "sha256": "fb9cfa3afa331a1b27f4fe6872abaeea4ca4d7dcefe9e14e2eb8c45c28afc8cf",
+  "sourceSize": [
+   2048,
+   1259
+  ],
+  "sourceRendition": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Falco_peregrinus_143426659.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Korte haaksnavel, donkere wangstreep en donker oog in een scherp portret."
  },
  "sp010": {
   "file": "Milvus milvus (2011-04-17 Switzerland Kanton Schaffhausen Gennersbrunn 2).jpg",
@@ -15,13 +87,105 @@
   "width": 1600,
   "height": 1143
  },
+ "sp012": {
+  "file": "Barn Owl - Tyto alba (50357299072).jpg",
+  "author": "caroline legg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Barn_Owl_-_Tyto_alba_(50357299072).jpg",
+  "width": 1280,
+  "height": 1234,
+  "image": "/assets/showcase/sp012.webp",
+  "sha1": "1dbdc4e6566ac767965f51e7246ded403da8cc68",
+  "sha256": "a7e2fcf4cb2dbc28d88511d6d56d618852382888fbd7239f0d2efa6960d17cad",
+  "sourceSize": [
+   4156,
+   4008
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Barn_Owl_-_Tyto_alba_%2850357299072%29.jpg/1280px-Barn_Owl_-_Tyto_alba_%2850357299072%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Hartvormige lichte gezichtssluier en gespikkelde goudbruine bovendelen, op een houten rand."
+ },
+ "sp014": {
+  "file": "Little owl (Athene noctua).jpg",
+  "author": "Artemy Voikhansky",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Little_owl_(Athene_noctua).jpg",
+  "width": 1280,
+  "height": 960,
+  "image": "/assets/showcase/sp014.webp",
+  "sha1": "f505e50777907302e1fbe19d3f8590a5aa2e1d6e",
+  "sha256": "f73b63c590b7fc04cf50a702a62bd7c2a24be0bb213dbb69b66b947a376cd70b",
+  "sourceSize": [
+   4000,
+   3000
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Little_owl_%28Athene_noctua%29.jpg/1280px-Little_owl_%28Athene_noctua%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Frontale blik, gele ogen, afgeplatte kop en gestreepte borst op een tak."
+ },
+ "sp016": {
+  "file": "Dendrocopos major (52920274701).jpg",
+  "author": "caroline legg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_(52920274701).jpg",
+  "width": 960,
+  "height": 1315,
+  "image": "/assets/showcase/sp016.webp",
+  "sha1": "fa993a7e9452132f2b00560e371029367d7bdce1",
+  "sha256": "ecca88283abe4b2c26d90d6d1429faf6b3acbdeced10d1802950711267335951",
+  "sourceSize": [
+   2371,
+   3247
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Dendrocopos_major_%2852920274701%29.jpg/960px-Dendrocopos_major_%2852920274701%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Zwart-witte kop, lichte schoudervlek en rode onderstaart langs een stam."
+ },
+ "sp017": {
+  "file": "Dryobates minor 448155670.jpg",
+  "author": "Сергей Неклюдов",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Dryobates_minor_448155670.jpg",
+  "width": 960,
+  "height": 720,
+  "image": "/assets/showcase/sp017.webp",
+  "sha1": "5d1be11397ead23d906c5a9547a15c3061096f8a",
+  "sha256": "3ba10e577f9e6ad6e7c5e1e0710064f51a99829eac5b931c7776f232adfef86b",
+  "sourceSize": [
+   2048,
+   1536
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Dryobates_minor_448155670.jpg/960px-Dryobates_minor_448155670.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Kleine specht met fijne horizontale rugbanden en lichte onderzijde."
+ },
  "sp018": {
-  "file": "Dryocopus martius, Perersberg, Brasov, Romania 0 (cropped).jpg",
-  "author": "xulescu_g",
-  "license": "CC BY-SA 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius,_Perersberg,_Brasov,_Romania_0_(cropped).jpg",
-  "width": 1211,
-  "height": 1600
+  "file": "Dryocopus martius ssp. martius.jpg",
+  "author": "ITÔ, Hiroki",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Dryocopus_martius_ssp._martius.jpg",
+  "width": 960,
+  "height": 1280,
+  "image": "/assets/showcase/sp018-home.webp",
+  "sha1": "85d0f4507b0c85b54b19ce0a9ec8f9537dfbcde5",
+  "sha256": "6a1cee894fd04bca98b3cd02ccaddb703c5c7d9ff7dd6aa59852c55c35f17f42",
+  "sourceSize": [
+   1536,
+   2048
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Dryocopus_martius_ssp._martius.jpg/960px-Dryocopus_martius_ssp._martius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Grote zwarte specht met lichte snavel, rode koptekening en lange steunstaart."
  },
  "sp020": {
   "file": "Placey (Doubs) Pic mar hdsr 1DMkIII 2018 03 18 9999 27.jpg",
@@ -31,37 +195,565 @@
   "width": 1600,
   "height": 1200
  },
- "sp042": {
-  "file": "Carpodacus erythrinus 303190528.jpg",
-  "author": "Поляков Александр",
+ "sp029": {
+  "file": "Great tit side-on.jpg",
+  "author": "© Francis C. Franklin / CC-BY-SA-3.0",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Great_tit_side-on.jpg",
+  "width": 960,
+  "height": 670,
+  "image": "/assets/showcase/sp029.webp",
+  "sha1": "36c9322c5c83fb46948463b2f6613e1d2d17ed53",
+  "sha256": "794349d9bddbb8641e7ae6e2a794e5a1c6174cdc58cee0d427375ab769c1f1b0",
+  "sourceSize": [
+   2948,
+   2057
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Great_tit_side-on.jpg/960px-Great_tit_side-on.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Zwarte kop, witte wangen, gele buik en zwarte middenstreep."
+ },
+ "sp033": {
+  "file": "Lophophanes cristatus Luc Viatour 5.jpg",
+  "author": "I, Luc Viatour",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Lophophanes_cristatus_Luc_Viatour_5.jpg",
+  "width": 960,
+  "height": 960,
+  "image": "/assets/showcase/sp033.webp",
+  "sha1": "aa8842e4453b975646ab7f5936bf77c029f2bce4",
+  "sha256": "90c61120553fe76176e495f23bb5ab659ef3bb971a1662d072363f0d9cdd688d",
+  "sourceSize": [
+   1472,
+   1472
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Lophophanes_cristatus_Luc_Viatour_5.jpg/960px-Lophophanes_cristatus_Luc_Viatour_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Spitse kuif en zwarte lijn rond de wang; één vogel op een tak."
+ },
+ "sp037": {
+  "file": "European goldfinch (Carduelis carduelis) 2025.jpg",
+  "author": "TRinaud",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Carpodacus_erythrinus_303190528.jpg",
-  "width": 1600,
-  "height": 1068
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:European_goldfinch_(Carduelis_carduelis)_2025.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp037.webp",
+  "sha1": "d7481ecae4ee5c2763522fe104d9efb7a795a751",
+  "sha256": "912da537af30ad00ef10c25855d3bab3347dd38aea2cf222870849aa1db3ba91",
+  "sourceSize": [
+   5568,
+   3712
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/European_goldfinch_%28Carduelis_carduelis%29_2025.jpg/960px-European_goldfinch_%28Carduelis_carduelis%29_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Rood gezicht, witte wang en brede gele vleugelband."
+ },
+ "sp040": {
+  "file": "Pyrrhula pyrrhula.JPG",
+  "author": "Arnstein Rønning",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula.JPG",
+  "width": 960,
+  "height": 776,
+  "image": "/assets/showcase/sp040.webp",
+  "sha1": "4c916ed323af63e1309618a6e946eb64158b58b8",
+  "sha256": "a754762b26a139775a0debdfc04890cc5418388ef36f9dc55ce6ab8fc2075f43",
+  "sourceSize": [
+   1325,
+   1071
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Pyrrhula_pyrrhula.JPG/960px-Pyrrhula_pyrrhula.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donkere kap, dikke zwarte snavel en oranjerode borst."
+ },
+ "sp042": {
+  "file": "Dziwonia(Carpodacus erythrinus).jpg",
+  "author": "Piotr Matyga",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Dziwonia(Carpodacus_erythrinus).jpg",
+  "width": 960,
+  "height": 1283,
+  "image": "/assets/showcase/sp042-home.webp",
+  "sha1": "9b7ca7f6fe2c1f56b651c33f5ddf9344bf846f6e",
+  "sha256": "0f683a2ebd97675f389f5d309748425b6a6d7f8f2e37217a30afc99bcf1395cb",
+  "sourceSize": [
+   1432,
+   1914
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Dziwonia%28Carpodacus_erythrinus%29.jpg/960px-Dziwonia%28Carpodacus_erythrinus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Rode kruin en borst, stevige snavel en bruine vleugels."
+ },
+ "sp043": {
+  "file": "House Sparrow, England - May 09.jpg",
+  "author": "Diliff",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:House_Sparrow,_England_-_May_09.jpg",
+  "width": 960,
+  "height": 807,
+  "image": "/assets/showcase/sp043.webp",
+  "sha1": "d8b8bef5339f12532e1a6c0e4e4d92f4c38132f9",
+  "sha256": "88f1ede4ce9851429cfbe00f3c0821fc64bbe71d1a18fefaabd2dfff95ce4a7f",
+  "sourceSize": [
+   2285,
+   1921
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/House_Sparrow%2C_England_-_May_09.jpg/960px-House_Sparrow%2C_England_-_May_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Dikke kegelsnavel, bruin gestreepte rug en lichte wenkbrauw."
+ },
+ "sp045": {
+  "file": "Merle noir male.jpg",
+  "author": "Annick Bregain",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Merle_noir_male.jpg",
+  "width": 960,
+  "height": 1200,
+  "image": "/assets/showcase/sp045.webp",
+  "sha1": "2c1479e297748f38af30e840c89c04363699ebee",
+  "sha256": "d25dabb86e3352f21e7c856157c3d239100cdffce084f3f16efc8c520a6acfd9",
+  "sourceSize": [
+   2870,
+   3588
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Merle_noir_male.jpg/960px-Merle_noir_male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donker verenkleed met warme gele snavel en oogring."
+ },
+ "sp050": {
+  "file": "European Robin 2026 01 06 05.jpg",
+  "author": "Alexis Lours",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:European_Robin_2026_01_06_05.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp050.webp",
+  "sha1": "ef1c9fd350f738087da8a72e6ec89d9d38324deb",
+  "sha256": "7159a3a5aec6248debc2ee6d95bfd248412c0e51a6eae769415bedfc4d48ec63",
+  "sourceSize": [
+   4924,
+   3283
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/European_Robin_2026_01_06_05.jpg/960px-European_Robin_2026_01_06_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Oranje gezicht en borst, ronde houding en fijne snavel."
+ },
+ "sp064": {
+  "file": "Common firecrest Franconville 02.jpg",
+  "author": "Alexis Lours",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_firecrest_Franconville_02.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp064.webp",
+  "sha1": "a7e00630c175987fc736ddd6d18100b9539d306a",
+  "sha256": "6bd94f641e8c1c668dba93faf5c6af80ebd9193cbe38addd627815f87662b02a",
+  "sourceSize": [
+   3865,
+   2577
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Common_firecrest_Franconville_02.jpg/960px-Common_firecrest_Franconville_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Opvallende witte wenkbrauw, donkere oogstreep en felle kruin."
+ },
+ "sp069": {
+  "file": "Western yellow wagtail (Motacilla flava feldegg) male.jpg",
+  "author": "Charles J. Sharp",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Western_yellow_wagtail_(Motacilla_flava_feldegg)_male.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp069.webp",
+  "sha1": "362a6ed91099987b3e3af02ca98aab5c5ce3c08f",
+  "sha256": "8af406e8a7a36a69fabf103f889c7c06acb95d5e006de2ecbe4853e7251ca319",
+  "sourceSize": [
+   2572,
+   1715
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Western_yellow_wagtail_%28Motacilla_flava_feldegg%29_male.jpg/960px-Western_yellow_wagtail_%28Motacilla_flava_feldegg%29_male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Gele buik, blauwgrijze kop en lange staart."
+ },
+ "sp070": {
+  "file": "Skylark - Alauda arvensis.jpg",
+  "author": "caroline legg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Skylark_-_Alauda_arvensis.jpg",
+  "width": 960,
+  "height": 1294,
+  "image": "/assets/showcase/sp070.webp",
+  "sha1": "8d210e7625662aaa314e0cf46e34da30ce9cbd7b",
+  "sha256": "c2223a36d5069a62ec98c17da2a2f048531a1d5477b86b6a869dca55e00fbd43",
+  "sourceSize": [
+   1504,
+   2027
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Skylark_-_Alauda_arvensis.jpg/960px-Skylark_-_Alauda_arvensis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Gestreepte rug en borst, kleine kuif en lichte wenkbrauw op een paaltje."
  },
  "sp075": {
-  "file": "Common Kingfisher Alcedo atthis.jpg",
-  "author": "Andreas Trepte",
-  "license": "CC BY-SA 2.5",
-  "source": "https://commons.wikimedia.org/wiki/File:Common_Kingfisher_Alcedo_atthis.jpg",
-  "width": 1600,
-  "height": 1600
+  "file": "Back of common kingfisher (Alcedo atthis).jpg",
+  "author": "Alexis Lours",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Back_of_common_kingfisher_(Alcedo_atthis).jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp075-home.webp",
+  "sha1": "3c84585a5345b03ea6cabbcc1f9c0860623aedb7",
+  "sha256": "91d1fcabc1af440650ea6e4260baa0e39614fe263011c845ff3e1bcef76f068b",
+  "sourceSize": [
+   4105,
+   2737
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Back_of_common_kingfisher_%28Alcedo_atthis%29.jpg/960px-Back_of_common_kingfisher_%28Alcedo_atthis%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Blauwe en turkooizen bovendelen, oranje wang en lange rechte snavel."
+ },
+ "sp077": {
+  "file": "Podiceps cristatus (Domaine des oiseaux).jpg",
+  "author": "PierreG_09",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Podiceps_cristatus_(Domaine_des_oiseaux).jpg",
+  "width": 960,
+  "height": 639,
+  "image": "/assets/showcase/sp077.webp",
+  "sha1": "7e4625c7996187f5398ede817d83630ca10cf33e",
+  "sha256": "fffb33dea25c23d4559a35e064b8f49a3b939308038ce534164748a24f413637",
+  "sourceSize": [
+   1600,
+   1065
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Podiceps_cristatus_%28Domaine_des_oiseaux%29.jpg/960px-Podiceps_cristatus_%28Domaine_des_oiseaux%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donkere dubbele kuif, rossige halskraag en spitse snavel op open water."
+ },
+ "sp078": {
+  "file": "Blässhuhn - Eurasian coot - Fulica atra.jpg",
+  "author": "NorbertNagel",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bl%C3%A4sshuhn_-_Eurasian_coot_-_Fulica_atra.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp078.webp",
+  "sha1": "b8a764bb33bf61d4d1800bd319a57e582a37b33f",
+  "sha256": "dd493447ad69ddc651f8e1cd2809fd95626be081d042a456eb323e89c878af8c",
+  "sourceSize": [
+   4000,
+   2667
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Bl%C3%A4sshuhn_-_Eurasian_coot_-_Fulica_atra.jpg/960px-Bl%C3%A4sshuhn_-_Eurasian_coot_-_Fulica_atra.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donkere watervogel met opvallend wit voorhoofdschild en witte snavel."
+ },
+ "sp079": {
+  "file": "Gallinula chloropus (Rallidae) - (adult), Otterlo, the Netherlands.jpg",
+  "author": "This image is created by user B. Schoenmakers at Waarneming.nl , a source of nature observations in the Netherlands.",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Gallinula_chloropus_(Rallidae)_-_(adult),_Otterlo,_the_Netherlands.jpg",
+  "width": 1000,
+  "height": 750,
+  "image": "/assets/showcase/sp079.webp",
+  "sha1": "5f137570d8382d4da27aefe2bc3ade0ec0673f4d",
+  "sha256": "c2e8cb96f003cc9e33c94c90dbcf6cec7bb6e790810190bdfbf5b684241afac3",
+  "sourceSize": [
+   1000,
+   750
+  ],
+  "sourceRendition": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Gallinula_chloropus_%28Rallidae%29_-_%28adult%29%2C_Otterlo%2C_the_Netherlands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Rode snavel met gele punt, lange tenen en witte flankstreep."
+ },
+ "sp081": {
+  "file": "Ardea cinerea qtl3.jpg",
+  "author": "Quartl",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Ardea_cinerea_qtl3.jpg",
+  "width": 960,
+  "height": 713,
+  "image": "/assets/showcase/sp081.webp",
+  "sha1": "05dd869528e1e4838ba8f51ddeb30ebaee35bdb0",
+  "sha256": "83689cac5c584a90f9b0ad795a551521bdcddf42e789eee1d3ee460467028251",
+  "sourceSize": [
+   3656,
+   2716
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Ardea_cinerea_qtl3.jpg/960px-Ardea_cinerea_qtl3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Lange poten, lichtgrijze vleugels en donkere oogstreep bij het water."
+ },
+ "sp082": {
+  "file": "Egretta garzetta R01.jpg",
+  "author": "Marc Ryckaert",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Egretta_garzetta_R01.jpg",
+  "width": 960,
+  "height": 1545,
+  "image": "/assets/showcase/sp082.webp",
+  "sha1": "a580d22d397492adc9ad5a94cff484f3a0434ec1",
+  "sha256": "56f5cb11b2fefe6a3fc68e7133cf2b52b6fe491f5bc95eefb6fdea31d69dff28",
+  "sourceSize": [
+   1382,
+   2224
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Egretta_garzetta_R01.jpg/960px-Egretta_garzetta_R01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Slanke witte reiger met donkere snavel en fijne sierveren."
+ },
+ "sp083": {
+  "file": "Grote Zilverreiger, Great Egret, Ardea Alba.jpg",
+  "author": "WHK1949",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Grote_Zilverreiger,_Great_Egret,_Ardea_Alba.jpg",
+  "width": 960,
+  "height": 1440,
+  "image": "/assets/showcase/sp083.webp",
+  "sha1": "e602e0f7e71560dafd0641065c54b72706a3a16b",
+  "sha256": "50739abe890c017b594058fb0650c7606c50d42e3880df0f4c6f7d5cea11998d",
+  "sourceSize": [
+   3712,
+   5568
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Grote_Zilverreiger%2C_Great_Egret%2C_Ardea_Alba.jpg/960px-Grote_Zilverreiger%2C_Great_Egret%2C_Ardea_Alba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Grote witte reiger met lange hals en gele dolksnavel, inclusief weerspiegeling."
  },
  "sp084": {
-  "file": "Purple heron in Zimbabwe.jpg",
-  "author": "Bernard Gagnon",
+  "file": "Purpurreiher (Ardea purpurea) beim Nestbau im NSG Wagbachniederung (1).jpg",
+  "author": "Stephan Sprinz",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Purple_heron_in_Zimbabwe.jpg",
-  "width": 1600,
-  "height": 1067
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Purpurreiher_(Ardea_purpurea)_beim_Nestbau_im_NSG_Wagbachniederung_(1).jpg",
+  "width": 960,
+  "height": 1440,
+  "image": "/assets/showcase/sp084-home.webp",
+  "sha1": "60c1c1b5dc0ba78205707627149482705d8537e5",
+  "sha256": "345b184a356f719345410b685c6427de0381be3a655eb16f91f581273d737969",
+  "sourceSize": [
+   2150,
+   3225
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Purpurreiher_%28Ardea_purpurea%29_beim_Nestbau_im_NSG_Wagbachniederung_%281%29.jpg/960px-Purpurreiher_%28Ardea_purpurea%29_beim_Nestbau_im_NSG_Wagbachniederung_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Warm roodbruine halzen en donkere lengtestrepen van de twee vogels in het riet."
  },
  "sp085": {
-  "file": "Nycticorax nycticorax 5.jpg",
-  "author": "Mike & Chris",
-  "license": "CC BY-SA 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Nycticorax_nycticorax_5.jpg",
-  "width": 1600,
-  "height": 1598
+  "file": "Nycticoraxnycticorax.jpg",
+  "author": "Stickpen",
+  "license": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/File:Nycticoraxnycticorax.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Nycticoraxnycticorax.jpg",
+  "width": 960,
+  "height": 1428,
+  "image": "/assets/showcase/sp085-home.webp",
+  "sha1": "c10da4d00ee572be00e5c38bde98cd463a3584f3",
+  "sha256": "037070394956dc56c64270cae377d0054ef50f78d7a9ee3352083584656885ba",
+  "sourceSize": [
+   2211,
+   3289
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Nycticoraxnycticorax.jpg/960px-Nycticoraxnycticorax.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donkere kruin en mantel, bleek onderlichaam, stevig profiel en lichtgekleurde sierveren."
+ },
+ "sp086": {
+  "file": "Anser anser Chorzów.jpg",
+  "author": "Adrian Tync",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Anser_anser_Chorz%C3%B3w.jpg",
+  "width": 960,
+  "height": 960,
+  "image": "/assets/showcase/sp086.webp",
+  "sha1": "dc710a77efc4c171e4b298e5bc0219371de0fa23",
+  "sha256": "af4a9d52f4e5c2afe131e55ab18ab204b8eeee0c632a6d8ce4319df6d4056ceb",
+  "sourceSize": [
+   3276,
+   3276
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Anser_anser_Chorz%C3%B3w.jpg/960px-Anser_anser_Chorz%C3%B3w.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Grijze gans met oranje snavel en roze poten."
+ },
+ "sp090": {
+  "file": "Northern shoveler female.jpg",
+  "author": "Nosferattus",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_shoveler_female.jpg",
+  "width": 1000,
+  "height": 750,
+  "image": "/assets/showcase/sp090.webp",
+  "sha1": "e1c19e20e0ff67d06ad164152943680d6533e112",
+  "sha256": "6068f356ac988b31b73cbbe7e23fffd7b357763fbe991839d73d3912fc4ba1e3",
+  "sourceSize": [
+   1000,
+   750
+  ],
+  "sourceRendition": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Northern_shoveler_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Breed uitlopende platte snavel en gemêleerd bruin verenkleed op het water."
+ },
+ "sp091": {
+  "file": "Green-winged Teal by Tisha Mukherjee 03.jpg",
+  "author": "Tisha Mukherjee",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Green-winged_Teal_by_Tisha_Mukherjee_03.jpg",
+  "width": 960,
+  "height": 1344,
+  "image": "/assets/showcase/sp091.webp",
+  "sha1": "0dfd21c5ac7f5e55133c1626d5e294c0b5185082",
+  "sha256": "e6eeaa208be037972f9dac61f3b8c60ae8de922eace9fbacd62e68fa94f5838e",
+  "sourceSize": [
+   2252,
+   3152
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Green-winged_Teal_by_Tisha_Mukherjee_03.jpg/960px-Green-winged_Teal_by_Tisha_Mukherjee_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Kleine eend met kastanjebruine kop, groene oogvlek en gele onderstaart."
+ },
+ "sp095": {
+  "file": "Larus fuscus - Bremerhaven 01.jpg",
+  "author": "H. Zell",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Larus_fuscus_-_Bremerhaven_01.jpg",
+  "width": 960,
+  "height": 984,
+  "image": "/assets/showcase/sp095.webp",
+  "sha1": "2fd667fa35b0d23a5fb13f7a406e8a98cd0b6af9",
+  "sha256": "0c1b98f2f886732930ae9647a4646208f0cac3a8a8d24f959c6582bd03bab748",
+  "sourceSize": [
+   3405,
+   3490
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Larus_fuscus_-_Bremerhaven_01.jpg/960px-Larus_fuscus_-_Bremerhaven_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donkere mantel, gele poten en gele snavel met rode vlek."
+ },
+ "sp096": {
+  "file": "Larus canus.jpg",
+  "author": "Ilari Stenroth",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Larus_canus.jpg",
+  "width": 960,
+  "height": 768,
+  "image": "/assets/showcase/sp096.webp",
+  "sha1": "c200a696e7495f63c9b15ce164f013d0faebfdbe",
+  "sha256": "e02629626cf25411d3cdadd5ea24dff57fbf644beebc3ec3b6dd7cc05cfd8a88",
+  "sourceSize": [
+   2000,
+   1600
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Larus_canus.jpg/960px-Larus_canus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Zachte grijze mantel en slanke geelgroene snavel; vrij zicht op bouw en poten."
+ },
+ "sp098": {
+  "file": "Haematopus ostralegus (flapping).jpg",
+  "author": "© Hans Hillewaert",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Haematopus_ostralegus_(flapping).jpg",
+  "width": 960,
+  "height": 720,
+  "image": "/assets/showcase/sp098.webp",
+  "sha1": "eee3a054772271d5227830020cab8694f6a2e049",
+  "sha256": "5d9cb1bfb48039da113aa201d02409deefac3da77f9240245d81bcaee8e274e5",
+  "sourceSize": [
+   4165,
+   3123
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Haematopus_ostralegus_%28flapping%29.jpg/960px-Haematopus_ostralegus_%28flapping%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Zwart-witte steltloper met oranjerode snavel en rode poten; vleugelstrek op de grond."
+ },
+ "sp099": {
+  "file": "Lapwing - Vanellus vanellus.jpg",
+  "author": "caroline legg",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Lapwing_-_Vanellus_vanellus.jpg",
+  "width": 960,
+  "height": 653,
+  "image": "/assets/showcase/sp099.webp",
+  "sha1": "02fc298788c7dda04edf88ff8faca639b42964fd",
+  "sha256": "a79fd1d56a401c8141180a4d21dd02293b28d0a5a13ad08bad82cb8a71500cb2",
+  "sourceSize": [
+   2365,
+   1609
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Lapwing_-_Vanellus_vanellus.jpg/960px-Lapwing_-_Vanellus_vanellus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Lange kuif, groenige bovendelen en witte wang in open gras."
+ },
+ "sp100": {
+  "file": "Eurasian Curlew - (Numenius arquata) (55563568612).jpg",
+  "author": "caroline legg",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Curlew_-_(Numenius_arquata)_(55563568612).jpg",
+  "width": 960,
+  "height": 674,
+  "image": "/assets/showcase/sp100.webp",
+  "sha1": "d7006f2d005d621f28f9b7e0c01f7a1df715e606",
+  "sha256": "4475417d4e37ab4c8f580261530af97e34a602c0f32d9a1feb91928b22b65998",
+  "sourceSize": [
+   3851,
+   2704
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Eurasian_Curlew_-_%28Numenius_arquata%29_%2855563568612%29.jpg/960px-Eurasian_Curlew_-_%28Numenius_arquata%29_%2855563568612%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Lange neergebogen snavel, lange hals en gestreept bruin kleed."
  },
  "sp101": {
   "file": "Limosa limosa (calling).jpg",
@@ -71,21 +763,165 @@
   "width": 1600,
   "height": 1200
  },
- "sp108": {
-  "file": "Очеретянка велика (англ. Great Reed Warbler; лат. Acrocephalus arundinaceus).jpg",
-  "author": "Eugene Stolyarov",
+ "sp102": {
+  "file": "Common redshank - (Tringa totanus).jpg",
+  "author": "Shino jacob koottanad",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:%D0%9E%D1%87%D0%B5%D1%80%D0%B5%D1%82%D1%8F%D0%BD%D0%BA%D0%B0_%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0_(%D0%B0%D0%BD%D0%B3%D0%BB._Great_Reed_Warbler;_%D0%BB%D0%B0%D1%82._Acrocephalus_arundinaceus).jpg",
-  "width": 1600,
-  "height": 1067
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_redshank_-_(Tringa_totanus).jpg",
+  "width": 960,
+  "height": 671,
+  "image": "/assets/showcase/sp102.webp",
+  "sha1": "09dec5de97ae487bd5f81b5f3dece48ad625c952",
+  "sha256": "60a1a2003eef416cd7531afd7bc0a16d0370f9bb9bc70333b219dfb8c9616c50",
+  "sourceSize": [
+   1355,
+   947
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Common_redshank_-_%28Tringa_totanus%29.jpg/960px-Common_redshank_-_%28Tringa_totanus%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Oranjerode poten, slanke snavel en lichte onderzijde, wadend in ondiep water."
+ },
+ "sp106": {
+  "file": "Grey Partridge Perdix perdix, Netherlands 1.jpg",
+  "author": "Bernard Stam",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Grey_Partridge_Perdix_perdix,_Netherlands_1.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp106.webp",
+  "sha1": "02a34512a047f093c65d74df32c6c8a03766abf0",
+  "sha256": "38f33e5155f324663079537511945bf32f285248eccd371d5d458496b6667ec0",
+  "sourceSize": [
+   3369,
+   2246
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Grey_Partridge_Perdix_perdix%2C_Netherlands_1.jpg/960px-Grey_Partridge_Perdix_perdix%2C_Netherlands_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Oranjebruin gezicht, gedempte grijze borst en getekende flanken tussen kort gras."
+ },
+ "sp108": {
+  "file": "Acrocephalus arundinaceus, Nederlands.jpg",
+  "author": "Dirk-Jan Kraan",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Acrocephalus_arundinaceus,_Nederlands.jpg",
+  "width": 1072,
+  "height": 715,
+  "image": "/assets/showcase/sp108-home.webp",
+  "sha1": "c6cd9338691e90e208b0941788fcebb56ad2ad74",
+  "sha256": "0b09423adbd9ba6e02fb53f06af7031e9018cdc3e695efb2c2bb085bed2501c4",
+  "sourceSize": [
+   1072,
+   715
+  ],
+  "sourceRendition": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Acrocephalus_arundinaceus%2C_Nederlands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Stevige snavel, lichte keel en wenkbrauwstreep op een stengel."
+ },
+ "sp110": {
+  "file": "Sedge Warbler Acrocephalus schoenobaenus.jpg",
+  "author": "Outwivcamera",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Sedge_Warbler_Acrocephalus_schoenobaenus.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp110.webp",
+  "sha1": "5e5570c22c4bc276e11961faec431394bc2631fa",
+  "sha256": "a04e2a5c72ec249754a0b988ff2824c71b6a54affdf1d45a7c5dc27cc8b696d8",
+  "sourceSize": [
+   6960,
+   4640
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Sedge_Warbler_Acrocephalus_schoenobaenus.jpg/960px-Sedge_Warbler_Acrocephalus_schoenobaenus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Duidelijke lichte wenkbrauw, donkere kruin en gestreepte rug, met insect in de snavel."
  },
  "sp113": {
-  "file": "Oriolus oriolus from behind looking right.jpg",
+  "file": "Oriolus oriolus from behind cleaning itself 01.jpg",
   "author": "dog_funtom",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_from_behind_looking_right.jpg",
-  "width": 1600,
-  "height": 1200
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Oriolus_oriolus_from_behind_cleaning_itself_01.jpg",
+  "width": 960,
+  "height": 720,
+  "image": "/assets/showcase/sp113-home.webp",
+  "sha1": "7fe237a9efa5d48bf21792189dcebd225130f940",
+  "sha256": "1c218bec38f88a88d87415b59cf9b89394f1eca678456601422f8cdd72097c9b",
+  "sourceSize": [
+   5152,
+   3864
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Oriolus_oriolus_from_behind_cleaning_itself_01.jpg/960px-Oriolus_oriolus_from_behind_cleaning_itself_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Gele vogel met zwarte vleugels aan een tak, tijdens het poetsen."
+ },
+ "sp117": {
+  "file": "Yellowhammer (Emberiza citrinella) male.jpg",
+  "author": "Charles J. Sharp",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Yellowhammer_(Emberiza_citrinella)_male.jpg",
+  "width": 960,
+  "height": 960,
+  "image": "/assets/showcase/sp117.webp",
+  "sha1": "bbf3e6c286c52c096b4634082871754dd5351101",
+  "sha256": "20e464900dca4beb3f06c65ebe594bfe83a21f2dce5f0abea6b42b8eb623c317",
+  "sourceSize": [
+   1559,
+   1559
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Yellowhammer_%28Emberiza_citrinella%29_male.jpg/960px-Yellowhammer_%28Emberiza_citrinella%29_male.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Gele kop en borst met bruin gestreepte vleugel op een tak."
+ },
+ "sp118": {
+  "file": "EmberizaSchoeniclusNaturalHabitat.jpg",
+  "author": "Thermos",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:EmberizaSchoeniclusNaturalHabitat.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp118.webp",
+  "sha1": "21988b793b28113f74630d9f2ffe39f20a572254",
+  "sha256": "ec848fe049c8cc29b28b6f5b324640815b136772dfd7bfd52933d20a3b1a8b53",
+  "sourceSize": [
+   2577,
+   1717
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/EmberizaSchoeniclusNaturalHabitat.jpg/960px-EmberizaSchoeniclusNaturalHabitat.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donkere kastanjebruine vleugel, fijn gestreepte flank en stevige snavel tussen riet."
+ },
+ "sp130": {
+  "file": "Mareca penelope eclipse s2.jpg",
+  "author": "Alpsdake",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Mareca_penelope_eclipse_s2.jpg",
+  "width": 960,
+  "height": 1020,
+  "image": "/assets/showcase/sp130.webp",
+  "sha1": "aec3cfd19b711827f5e5ceaecb561460db453a9f",
+  "sha256": "f9b31e6ca1bf214780ec8611b5c6c0621507219f0531a8a5c82531a6a8b61947",
+  "sourceSize": [
+   2560,
+   2720
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Mareca_penelope_eclipse_s2.jpg/960px-Mareca_penelope_eclipse_s2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Kastanjebruine kop met lichte kruin, korte snavel en eend in zijaanzicht."
  },
  "sp142": {
   "file": "Common crane grus grus.jpg",
@@ -96,12 +932,64 @@
   "height": 1600
  },
  "sp143": {
-  "file": "Avocette élégante060 Thyna.jpg",
-  "author": "El Golli Mohamed",
-  "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Avocette_%C3%A9l%C3%A9gante060_Thyna.jpg",
-  "width": 1600,
-  "height": 1200
+  "file": "Recurvirostra avoseta Marquenterre 20260714.jpg",
+  "author": "Marie-Lan Taÿ Pamart",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Recurvirostra_avoseta_Marquenterre_20260714.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp143-home.webp",
+  "sha1": "bded0aea20115d4b2202e3803447b69c7ce0054a",
+  "sha256": "2c3c2a1cb2e5d32631ad4210895f3c6c8fc8c7e051c8c45410d6333a016b190b",
+  "sourceSize": [
+   5000,
+   3333
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Recurvirostra_avoseta_Marquenterre_20260714.jpg/960px-Recurvirostra_avoseta_Marquenterre_20260714.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Opgewipte snavel, zwart-wit kleed en lange grijzige poten bij weerspiegeling."
+ },
+ "sp152": {
+  "file": "Calidris alba (Scolopacidae) - (adult), Texel, the Netherlands - 2.jpg",
+  "author": "This image is created by user B. Schoenmakers at Waarneming.nl , a source of nature observations in the Netherlands.",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Calidris_alba_(Scolopacidae)_-_(adult),_Texel,_the_Netherlands_-_2.jpg",
+  "width": 1000,
+  "height": 750,
+  "image": "/assets/showcase/sp152.webp",
+  "sha1": "81cf496c2e6a36bef7d2a21f269cf8b30633db22",
+  "sha256": "2f38475c0d98d3a7262b3e6356a188c3c096a63bffc32d28433fb25babd7af68",
+  "sourceSize": [
+   1000,
+   750
+  ],
+  "sourceRendition": "https://upload.wikimedia.org/wikipedia/commons/6/63/Calidris_alba_%28Scolopacidae%29_-_%28adult%29%2C_Texel%2C_the_Netherlands_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Kleine lichte steltloper met korte donkere snavel en donkere poten op strand bij Texel."
+ },
+ "sp160": {
+  "file": "Common guillemot (Uria aalge).jpg",
+  "author": "Hobbyfotowiki",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_guillemot_(Uria_aalge).jpg",
+  "width": 1280,
+  "height": 851,
+  "image": "/assets/showcase/sp160.webp",
+  "sha1": "28509e6c7bfbd63b5fec5048fc1a9dd31b773d62",
+  "sha256": "564488f443a6a55b31a47eec89ffdf46c87b78b0b6536277719a749985cadc6b",
+  "sourceSize": [
+   2912,
+   1936
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Common_guillemot_%28Uria_aalge%29.jpg/1280px-Common_guillemot_%28Uria_aalge%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donkere kop, witte onderzijde en lange puntige snavel op een rots."
  },
  "sp163": {
   "file": "Hydrocoloeus minutus Russia 01.jpg",
@@ -111,13 +999,125 @@
   "width": 1600,
   "height": 1200
  },
- "sp173": {
-  "file": "Männliche Rohrweihe im Flug 04.jpg",
-  "author": "Stephan Sprinz",
+ "sp165": {
+  "file": "Common Tern - Sterna hirundo.jpg",
+  "author": "caroline legg",
   "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:M%C3%A4nnliche_Rohrweihe_im_Flug_04.jpg",
-  "width": 1600,
-  "height": 1067
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Common_Tern_-_Sterna_hirundo.jpg",
+  "width": 960,
+  "height": 1344,
+  "image": "/assets/showcase/sp165.webp",
+  "sha1": "3b02c47b79420c7e9d19ab1437f36d948530593e",
+  "sha256": "7b373cad2fb54fd1df95c123eed32b54042763f8cb21cdfa1f6d03d885f88c46",
+  "sourceSize": [
+   2101,
+   2942
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Common_Tern_-_Sterna_hirundo.jpg/960px-Common_Tern_-_Sterna_hirundo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Slanke stern in neerwaartse vrije vlucht, met zwarte kap en lange vleugels."
+ },
+ "sp171": {
+  "file": "Northern gannet (Morus bassanus) in flight.jpg",
+  "author": "Charles J. Sharp",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_gannet_(Morus_bassanus)_in_flight.jpg",
+  "width": 1280,
+  "height": 853,
+  "image": "/assets/showcase/sp171.webp",
+  "sha1": "e43b451041413e326b5c0c994e1d380064313ed0",
+  "sha256": "cb2d7f0cef1d7f7f84408e10f8d9d7b8a54751eee8d3612936a758ffc1d57d48",
+  "sourceSize": [
+   2816,
+   1877
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Northern_gannet_%28Morus_bassanus%29_in_flight.jpg/1280px-Northern_gannet_%28Morus_bassanus%29_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Over open water, witte romp, geelachtige kop en donkere handpennen."
+ },
+ "sp172": {
+  "file": "Eurasian Spoonbill.jpg",
+  "author": "Andreas Trepte",
+  "license": "CC BY-SA 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+  "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Spoonbill.jpg",
+  "width": 1280,
+  "height": 853,
+  "image": "/assets/showcase/sp172.webp",
+  "sha1": "9ec90c56cbff91a39cc431d53b481a1228f551db",
+  "sha256": "9bf0a98de9a498df073a72f35eba83fac7b81bd9f6c07b5494b2b9b5e061a7ad",
+  "sourceSize": [
+   4896,
+   3264
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Eurasian_Spoonbill.jpg/1280px-Eurasian_Spoonbill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Witte vogel met brede lepelpunt en halskraag, wadend op Texel."
+ },
+ "sp173": {
+  "file": "Circus aeruginosus male flight.jpg",
+  "author": "Gidzy from England",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Circus_aeruginosus_male_flight.jpg",
+  "width": 960,
+  "height": 639,
+  "image": "/assets/showcase/sp173-home.webp",
+  "sha1": "05950877ec28fef0ef4f987667376798762ee7e9",
+  "sha256": "f5b9a5327147b9c461448bb9e1608299b3ab8d8f118f3e42a154415cdf8d1341",
+  "sourceSize": [
+   4592,
+   3056
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Circus_aeruginosus_male_flight.jpg/960px-Circus_aeruginosus_male_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Brede vleugels, getekende ondervleugel en lichte slagpennen met donkere toppen in vrije vlucht."
+ },
+ "sp178": {
+  "file": "Phoenicurus phoenicurus (139589).jpg",
+  "author": "Jens Enemark",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Phoenicurus_phoenicurus_(139589).jpg",
+  "width": 960,
+  "height": 1148,
+  "image": "/assets/showcase/sp178.webp",
+  "sha1": "dd9d32ec19d69e059d82c20ec399a408184116c1",
+  "sha256": "2d31ee00bcc060f1ab5bc8f3133c3cd4ac9a91f99e69267e3a7da2ca97f4879b",
+  "sourceSize": [
+   2390,
+   2858
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Phoenicurus_phoenicurus_%28139589%29.jpg/960px-Phoenicurus_phoenicurus_%28139589%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Oranje borst, lichte voorhoofdsband en donker gezicht op een paaltje."
+ },
+ "sp179": {
+  "file": "Northern wheatear (Oenanthe oenanthe) female.jpg",
+  "author": "Charles J. Sharp",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Northern_wheatear_(Oenanthe_oenanthe)_female.jpg",
+  "width": 1280,
+  "height": 853,
+  "image": "/assets/showcase/sp179.webp",
+  "sha1": "cd27606e91d696a9ad96d15b9d4890ba5c91227e",
+  "sha256": "ce9b4478d526b95fa7f33febd073a013f4ec8e541e5425250e07ea6a0e80f4ad",
+  "sourceSize": [
+   2060,
+   1373
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Northern_wheatear_%28Oenanthe_oenanthe%29_female.jpg/1280px-Northern_wheatear_%28Oenanthe_oenanthe%29_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Tapuit op een steen met lichte wenkbrauw, bruinige borst en lange vleugel."
  },
  "sp186": {
   "file": "Branta ruficollis 94321119.jpg",
@@ -126,6 +1126,26 @@
   "source": "https://commons.wikimedia.org/wiki/File:Branta_ruficollis_94321119.jpg",
   "width": 1600,
   "height": 1068
+ },
+ "sp188": {
+  "file": "Garganey Spatula querquedula 01.jpg",
+  "author": "Dr. Raju Kasambe",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Garganey_Spatula_querquedula_01.jpg",
+  "width": 960,
+  "height": 721,
+  "image": "/assets/showcase/sp188.webp",
+  "sha1": "795f27f9e2bf78fba347f395432fcd1abb55acb0",
+  "sha256": "37967e1428c7e8c24ccebe379677589765b78769adb4f352f90e035e840d35f6",
+  "sourceSize": [
+   3255,
+   2443
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Garganey_Spatula_querquedula_01.jpg/960px-Garganey_Spatula_querquedula_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Witte boog boven het oog, bruine kop en gemêleerd grijze flank."
  },
  "sp189": {
   "file": "Ferruginous Pochard Aythya nyroca Male by Dr. Raju Kasambe DSCN2746 (12).jpg",
@@ -248,20 +1268,64 @@
   "height": 1067
  },
  "sp249": {
-  "file": "Hen Harrier - Male.jpg",
-  "author": "caroline legg",
-  "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Hen_Harrier_-_Male.jpg",
-  "width": 1600,
-  "height": 1068
+  "file": "Circus cyaneus, male, Rautjarvi, South Karelia, Finland.jpg",
+  "author": "Peter von Bagh",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:Circus_cyaneus,_male,_Rautjarvi,_South_Karelia,_Finland.jpg",
+  "width": 960,
+  "height": 670,
+  "image": "/assets/showcase/sp249-home.webp",
+  "sha1": "f4db3e6e0039a6cd9e3e56129e35500e36704607",
+  "sha256": "dc583b13a5d1e2e75713dee1b175ace6e2761f92733b50c42f964d2f93020090",
+  "sourceSize": [
+   1600,
+   1117
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Circus_cyaneus%2C_male%2C_Rautjarvi%2C_South_Karelia%2C_Finland.jpg/960px-Circus_cyaneus%2C_male%2C_Rautjarvi%2C_South_Karelia%2C_Finland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Langvleugelige blauwgrijze vogel met donkere vleugelpunten en lichte stuit boven open terrein."
+ },
+ "sp250": {
+  "file": "Pallid harrier.jpg",
+  "author": "Shiv's fotografia",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Pallid_harrier.jpg",
+  "width": 960,
+  "height": 640,
+  "image": "/assets/showcase/sp250.webp",
+  "sha1": "6cc134e8ba1e26903c9c4aaea0aa374948051d00",
+  "sha256": "84012b40f0c5ea460f6af5d3f2a25a9214418dae06194061f9f52616900e7f80",
+  "sourceSize": [
+   4101,
+   2734
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Pallid_harrier.jpg/960px-Pallid_harrier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Slanke lichtgrijze kiekendief met donkere vleugelpunten en lichte kop."
  },
  "sp251": {
-  "file": "Beautiful Montagu's Harrier in Flight (51042548717).jpg",
-  "author": "Hari K Patibanda",
-  "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Beautiful_Montagu%27s_Harrier_in_Flight_(51042548717).jpg",
-  "width": 1600,
-  "height": 1067
+  "file": "Circus pygargus male flight.jpg",
+  "author": "Donald Macauley from Carshalton, Surrey, UK",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Circus_pygargus_male_flight.jpg",
+  "width": 960,
+  "height": 787,
+  "image": "/assets/showcase/sp251-home.webp",
+  "sha1": "4e6d8bae774af48a4de942bae063701b771f36ab",
+  "sha256": "c67967c7daac97237653c94153416726a8d766ba5cb9df489ff790f6a5e22e19",
+  "sourceSize": [
+   1596,
+   1309
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Circus_pygargus_male_flight.jpg/960px-Circus_pygargus_male_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Smalle vleugels en opvallende donkere vleugelstrepen in vrije vlucht."
  },
  "sp252": {
   "file": "White-tailed eagle (Haliaeetus albicilla) in flight 2.jpg",
@@ -270,6 +1334,26 @@
   "source": "https://commons.wikimedia.org/wiki/File:White-tailed_eagle_(Haliaeetus_albicilla)_in_flight_2.jpg",
   "width": 1600,
   "height": 1067
+ },
+ "sp253": {
+  "file": "Fjellvåk (Buteo lagopus) (Rough-legged Buzzard) (Fjällvråk).jpg",
+  "author": "Marton Berntsen",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Fjellv%C3%A5k_(Buteo_lagopus)_(Rough-legged_Buzzard)_(Fj%C3%A4llvr%C3%A5k).jpg",
+  "width": 1024,
+  "height": 713,
+  "image": "/assets/showcase/sp253.webp",
+  "sha1": "887cc26f47240ac9bf2efaf0823b855c280d4741",
+  "sha256": "2fc07d69df59260a98a8db63c92a948c6869a0d8c8f305e1867aceefec0cb060",
+  "sourceSize": [
+   1024,
+   713
+  ],
+  "sourceRendition": "https://upload.wikimedia.org/wikipedia/commons/6/65/Fjellv%C3%A5k_%28Buteo_lagopus%29_%28Rough-legged_Buzzard%29_%28Fj%C3%A4llvr%C3%A5k%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donkere polsvlekken, brede vleugel en lichte staart met eindband in vrije vlucht."
  },
  "sp254": {
   "file": "Bubo Mafra November 2022-2.jpg",
@@ -328,12 +1412,24 @@
   "height": 1600
  },
  "sp262": {
-  "file": "Lanius collurio соропуд сірий.jpg",
-  "author": "Бусел В.А.",
+  "file": "Neuntöter mit erbeutetem Heupferd im Geo-Naturpark Bergstraße-Odenwald.jpg",
+  "author": "Hwbund",
   "license": "CC BY-SA 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_%D1%81%D0%BE%D1%80%D0%BE%D0%BF%D1%83%D0%B4_%D1%81%D1%96%D1%80%D0%B8%D0%B9.jpg",
-  "width": 1600,
-  "height": 1063
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Neunt%C3%B6ter_mit_erbeutetem_Heupferd_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg",
+  "width": 960,
+  "height": 1440,
+  "image": "/assets/showcase/sp262-home.webp",
+  "sha1": "25c9b2d8fc5575ab8a472df87597f14b3380ddcd",
+  "sha256": "fac5bc743a9bcfe6964c2c502cb736007966963a6897487676c7a007ce23109c",
+  "sourceSize": [
+   3600,
+   5400
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Neunt%C3%B6ter_mit_erbeutetem_Heupferd_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg/960px-Neunt%C3%B6ter_mit_erbeutetem_Heupferd_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Donker oogmasker, grijzige kop en roodbruine mantel, met insect op een tak."
  },
  "sp268": {
   "file": "Bearded reedling (Panurus biarmicus).jpg",
@@ -360,12 +1456,64 @@
   "height": 1600
  },
  "sp282": {
-  "file": "An Adult Rosy Starling Looking for food (50620492117).jpg",
-  "author": "Hari K Patibanda",
+  "file": "Rosy Starling (Pastor roseus) (45885391774).jpg",
+  "author": "Imran Shah from Islamabad, Pakistan",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Rosy_Starling_(Pastor_roseus)_(45885391774).jpg",
+  "width": 960,
+  "height": 1280,
+  "image": "/assets/showcase/sp282-home.webp",
+  "sha1": "bdfefbb127f7001425894c728548eaa5e185c170",
+  "sha256": "afd3a7e0b40e9d6466f8a39ac30be5ade10634f3a8bb4deaf9a3648e14076c45",
+  "sourceSize": [
+   1500,
+   2000
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Rosy_Starling_%28Pastor_roseus%29_%2845885391774%29.jpg/960px-Rosy_Starling_%28Pastor_roseus%29_%2845885391774%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Roze romp, zwarte kop en contrasterend donkere vleugels op een tak."
+ },
+ "sp287": {
+  "file": "Bohemian Waxwing (Bombycilla garrulus) (5634432145).jpg",
+  "author": "David Restivo / GlacierNPS",
   "license": "CC BY 2.0",
-  "source": "https://commons.wikimedia.org/wiki/File:An_Adult_Rosy_Starling_Looking_for_food_(50620492117).jpg",
-  "width": 1600,
-  "height": 1067
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bohemian_Waxwing_(Bombycilla_garrulus)_(5634432145).jpg",
+  "width": 1280,
+  "height": 853,
+  "image": "/assets/showcase/sp287.webp",
+  "sha1": "99f33af89b4f8a55fd141ce2e436b2c897da8dbe",
+  "sha256": "085cd5fbe62c97be8214d16cf7568e69e2acef6aee4fa24adbcfa83794a867fc",
+  "sourceSize": [
+   5184,
+   3456
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Bohemian_Waxwing_%28Bombycilla_garrulus%29_%285634432145%29.jpg/1280px-Bohemian_Waxwing_%28Bombycilla_garrulus%29_%285634432145%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Kuif, donker masker, gekleurde vleugelaccenten en gele staartpunt op een tak."
+ },
+ "sp461": {
+  "file": "Egyptian Vulture in flight 2021.jpg",
+  "author": "Mildeep",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Egyptian_Vulture_in_flight_2021.jpg",
+  "width": 1280,
+  "height": 853,
+  "image": "/assets/showcase/sp461.webp",
+  "sha1": "1ca774b53a150f410653ad20fbccbb89773c7382",
+  "sha256": "e6c1adb4e73e2e20d8f5f7058356020b983440ce1f9012a30a8c8f296f1a5d63",
+  "sourceSize": [
+   4924,
+   3283
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Egyptian_Vulture_in_flight_2021.jpg/1280px-Egyptian_Vulture_in_flight_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "In vrije vlucht, lichte kop en romp, geel gezicht en donkere slagpennen."
  },
  "sp462": {
   "file": "Buitre negro 1.jpg",
@@ -390,6 +1538,26 @@
   "source": "https://commons.wikimedia.org/wiki/File:Short-toed_snake_eagle_(Circaetus_gallicus),_Potokaki_Wetland.jpg",
   "width": 1067,
   "height": 1600
+ },
+ "sp467": {
+  "file": "Booted eagle (Hieraaetus pennatus) light phase in flight.jpg",
+  "author": "Charles J. Sharp",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Booted_eagle_(Hieraaetus_pennatus)_light_phase_in_flight.jpg",
+  "width": 1280,
+  "height": 853,
+  "image": "/assets/showcase/sp467.webp",
+  "sha1": "71bd5108dca8ab4a98c1d5bedafe135cb135b248",
+  "sha256": "2bbe094a1818e02731caf8189f8513ff5eb239c4e16530971ca6eaf84d7b610a",
+  "sourceSize": [
+   1685,
+   1123
+  ],
+  "sourceRendition": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Booted_eagle_%28Hieraaetus_pennatus%29_light_phase_in_flight.jpg/1280px-Booted_eagle_%28Hieraaetus_pennatus%29_light_phase_in_flight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "modifications": "Verkleind waar nodig en omgezet naar WebP, zonder uitsnede of EXIF/GPS/XMP",
+  "reviewed": "2026-11-27",
+  "visualCheck": "Vrije vlucht; brede vleugel en donkere slagpennen contrasteren met de lichte onderdelen."
  },
  "sp481": {
   "file": "Coracias garrulus - European roller 02.jpg",

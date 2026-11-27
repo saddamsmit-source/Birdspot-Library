@@ -1,6 +1,6 @@
 /**
- * Birdspot diashow — 11 groepen × 2 bijzondere Nederlandse soorten (F).
- * Foto's staan lokaal in /assets/showcase (Wikimedia Commons, CC-licentie, maker en bron in credits).
+ * Aviandra-diashow — 100 in Nederland voorkomende vogelsoorten in 15 groepen.
+ * Foto's staan lokaal, met maker, licentie en bron in het fotoregister.
  * Het zijn referentiefoto's, NOOIT eigen waarnemingen.
  *
  * Timer: elke 30 s een andere vogel. Er loopt niets op de achtergrond: de positie (vogel + verstreken tijd)

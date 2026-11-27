@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.27.40';
+const APP_VERSION = '1.27.42';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -205,8 +205,9 @@ async function precacheShowcase() {
   try {
     const media = await caches.open(MEDIA_CACHE);
     const credits = await (await fetch(atScope('assets/showcase/credits.json'), { cache: 'no-cache' })).json();
-    await Promise.allSettled(Object.keys(credits).map(async id => {
-      const url = atScope(`assets/showcase/${id}.webp`);
+    await Promise.allSettled(Object.entries(credits).map(async ([id, credit]) => {
+      const image = credit.image || `/assets/showcase/${id}.webp`;
+      const url = atScope(image.slice(1));
       if (!(await media.match(url))) await media.add(url);
     }));
   } catch (err) {
