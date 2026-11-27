@@ -58,11 +58,17 @@ for (const id of b.species) {
 }
 for (const id of ['sp002', 'sp003', 'sp004', 'sp005', 'sp006', 'sp007', 'sp008', 'sp009', 'sp016'])
   assert.equal(reg.records.find(r => r.id === id).F3.secondReview.ownerDecision.status, 'DECIDED', `${id}: eerder besluit behouden`);
-assert.equal(reg.secondReview.counts.fullF3Pass, 0);
-assert.equal(reg.secondReview.counts.reexamined, 12);
-assert.equal(reg.secondReview.counts.ownerDecisions, 12);
-assert.equal(reg.secondReview.counts.ownerGateOpen, 0);
-assert.equal(reg.secondReview.counts.secondReviewClosed, 0);
+const roundsThroughR04 = reg.secondReview.batches.slice(0, 4);
+assert.equal(roundsThroughR04.at(-1).round, 'F3-REV2-R04');
+const idsThroughR04 = roundsThroughR04.flatMap(round => round.species);
+assert.equal(idsThroughR04.length, 12);
+assert.deepEqual(idsThroughR04, reg.records.slice(0, 12).map(record => record.id));
+for (const record of reg.records.slice(0, 12)) {
+  const review = record.F3.secondReview;
+  assert.equal(review.ownerDecision.status, 'DECIDED', record.id);
+  assert.equal(review.fullPass, false, record.id);
+  assert.notEqual(review.closed, true, record.id);
+}
 const tuscany = reg.records.find(r => r.id === 'sp009').F3.secondReview.candidatesR03c.proposalR03d;
 assert.equal(tuscany.ownerDecisionR04b.decision, 'NEE');
 assert.match(tuscany.status, /^AFGEWEZEN/);
