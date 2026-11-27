@@ -4636,12 +4636,12 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto",
+            "role": "Verenkleed (Volwassen)",
             "path": "/assets/species/plumage/sp020-male.webp",
             "oldRights": "VERIFIED"
           },
           {
-            "role": "Overige herkenningsfoto's",
+            "role": "Hoofdfoto",
             "path": "/assets/species/sp020.webp",
             "oldRights": "VERIFIED"
           },
@@ -4796,11 +4796,11 @@
           "date": "2026-11-27",
           "base": "1cb52274ce39dce19d22b69864063025efe6917d",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
           "photos": [
             {
-              "role": "Hoofdfoto",
+              "role": "Verenkleed (Volwassen)",
               "path": "/assets/species/plumage/sp020-male.webp",
               "source": "https://commons.wikimedia.org/wiki/File:Middle_spotted_woodpecker_(Dendrocoptes_medius_medius)_male.jpg",
               "author": "Charles J. Sharp",
@@ -4812,12 +4812,12 @@
               "localSha256": "a49d4f9a758cc4ad0fb739af1e5841ed43a5766875bf9bb703f9fb7c7f95ab33",
               "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
               "quality": "PARTIALLY TESTED",
-              "roleCheck": "VERIFIED - volwassen hoofdfoto; geen geslachtslabel weergegeven",
+              "roleCheck": "VERIFIED - aanvullende foto van een volwassen vogel, zonder geslachtslabel",
               "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
               "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
             },
             {
-              "role": "Overige herkenningsfoto's",
+              "role": "Hoofdfoto",
               "path": "/assets/species/sp020.webp",
               "source": "https://commons.wikimedia.org/wiki/File:Middle-spotted_woodpecker_(Dendrocopos_medius),_Parc_du_Rouge-Clo%C3%AEtre,_Brussels_(49179578882)_(cropped).jpg",
               "author": "Frank Vassen from Brussels, Belgium",
@@ -4829,7 +4829,7 @@
               "localSha256": "94b688a4100f1f6a5be3a904953faa2dd00a0f2b463fc85bb41ed7cd6bdca510",
               "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
               "quality": "VERIFIED",
-              "roleCheck": "VERIFIED - rust, zijaanzicht",
+              "roleCheck": "VERIFIED - hoofdfoto met zichtbare kruin, lichte kop en flankstrepen",
               "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
               "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
             },
@@ -4886,7 +4886,7 @@
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
-            "herkenning": "PARTIALLY TESTED - wijzigingen volgen eigenaarbesluit",
+            "herkenning": "PARTIALLY TESTED - nieuw eerste beeld en bestaande jeugdwaarschuwing",
             "voorstel": "B — maak het bestaande zijaanzicht van Frank Vassen de eerste foto en behoud de andere opname; laat het ontbrekende jeugdbeeld expliciet open."
           },
           "lookalikes": [
@@ -4936,17 +4936,24 @@
             ],
             "photoCount": 4,
             "audioCount": 1,
-            "device": "NOT TESTED"
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
           },
           "materialGaps": [
             "ANWB-soortpassage niet ingezien",
             "Menselijke beluistering van de opgenomen alarmroep ontbreekt",
-            "Hoofdfoto geeft beperkt zicht op de rode kruin en telt 500 × 750 px; het bestaande zijaanzicht toont de kruin en flanken beter",
             "Juvenielbeeld ontbreekt; een rode kruin alleen onderscheidt de soort niet van een jonge Grote Bonte Specht"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — maak het bestaande zijaanzicht van Frank Vassen de eerste foto en behoud de andere opname; laat het ontbrekende jeugdbeeld expliciet open.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de opgenomen alarmroep ontbreekt",
+              "Juvenielbeeld ontbreekt; een rode kruin alleen onderscheidt de soort niet van een jonge Grote Bonte Specht"
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -4973,7 +4980,7 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "In vlucht",
+            "role": "Overige herkenningsfoto's",
             "path": "/assets/species/plumage/sp021-flight.webp",
             "oldRights": "VERIFIED"
           },
@@ -5108,7 +5115,7 @@
           "date": "2026-11-27",
           "base": "1cb52274ce39dce19d22b69864063025efe6917d",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
           "photos": [
             {
@@ -5129,7 +5136,7 @@
               "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
             },
             {
-              "role": "In vlucht",
+              "role": "Overige herkenningsfoto's",
               "path": "/assets/species/plumage/sp021-flight.webp",
               "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg",
               "author": "Alexis Lours",
@@ -5141,7 +5148,7 @@
               "localSha256": "1eb063f262e540e9c468709c9d367e32504faf7a0ec8adaeaffeffe7d5b07209",
               "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
               "quality": "VERIFIED - herkenningskenmerken zichtbaar",
-              "roleCheck": "PARTIALLY TESTED - afzet/vertrekcontext, niet definitief als representatieve vrije vlucht bevestigd",
+              "roleCheck": "VERIFIED - vertrek vanaf een rots volgens bron, getoond bij overige herkenningsfoto’s",
               "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
               "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
             },
@@ -5181,15 +5188,15 @@
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
-            "herkenning": "PARTIALLY TESTED - wijzigingen volgen eigenaarbesluit",
+            "herkenning": "PARTIALLY TESTED - vertrekfoto met herkenningstekst; Lijkt op blijft in beide richtingen",
             "voorstel": "B — laat de herkenningstekst over witte handvleugel en lange staart zichtbaar; geef de Eksterfoto een duidelijk label voor het vertrek vanaf de rots. Laat het vluchtpaneel alleen staan als gelijkwaardige vluchtbeelden bevestigd zijn."
           },
           "lookalikes": [
             {
               "pair": "sp021 ↔ sp026 Ekster/Gaai",
-              "bothDirections": "VERIFIED - één fotopaneel in beide richtingen",
-              "photoEquivalence": "PARTIALLY TESTED - de gelijke fase van de vlucht is onzeker; Ekster vertrekt van rots",
-              "diagnosticText": "PARTIALLY TESTED - twee rijen met vleugelpatroon en staart. Beigebruine Gaai met witte stuit onderscheiden van het zwart-witte kleed van Ekster"
+              "bothDirections": "VERIFIED - Lijkt op in beide richtingen",
+              "photoEquivalence": "N/A - tekstvergelijking; gelijkwaardige vluchtfase niet vastgesteld",
+              "diagnosticText": "PARTIALLY TESTED - vergelijk witte vleugelvelden, witte stuit en staartlengte"
             }
           ],
           "audio": {
@@ -5225,16 +5232,24 @@
             ],
             "photoCount": 3,
             "audioCount": 1,
-            "device": "NOT TESTED"
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
           },
           "materialGaps": [
             "ANWB-soortpassage niet ingezien",
             "Menselijke beluistering van de geregistreerde roep ontbreekt",
-            "Vluchtfoto toont vertrek vanaf een rots; gelijkwaardigheid met de Gaai in vrije vlucht blijft onzeker"
+            "Gelijkwaardig fotopaar in vrije vlucht voor Ekster en Gaai ontbreekt"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — laat de herkenningstekst over witte handvleugel en lange staart zichtbaar; geef de Eksterfoto een duidelijk label voor het vertrek vanaf de rots. Laat het vluchtpaneel alleen staan als gelijkwaardige vluchtbeelden bevestigd zijn.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de geregistreerde roep ontbreekt",
+              "Gelijkwaardig fotopaar in vrije vlucht voor Ekster en Gaai ontbreekt"
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -5395,7 +5410,7 @@
           "date": "2026-11-27",
           "base": "1cb52274ce39dce19d22b69864063025efe6917d",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
           "photos": [
             {
@@ -5468,7 +5483,7 @@
           },
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
-            "herkenning": "PARTIALLY TESTED - wijzigingen volgen eigenaarbesluit",
+            "herkenning": "PARTIALLY TESTED - staartvorm van Raaf toegevoegd; snavelbasis en jeugdvoorbehoud Roek behouden",
             "voorstel": "B — voeg een korte zin over de wigvormige staart van Raaf toe en behoud de waarschuwing voor jonge Roek. Zoek een gelijkwaardig beeldpaar alleen als aparte vervolgstap."
           },
           "lookalikes": [
@@ -5483,6 +5498,12 @@
               "bothDirections": "PARTIALLY TESTED - tekst op kraaikaart, geen fotopaneel",
               "photoEquivalence": "N/A - geen gelijkwaardig fotopaar getoond",
               "diagnosticText": "PARTIALLY TESTED - leeftijdsvoorbehoud bij Roek zichtbaar"
+            },
+            {
+              "pair": "sp022 → sp027 Zwarte Kraai/Raaf",
+              "bothDirections": "PARTIALLY TESTED - tekst op de kaart van Zwarte Kraai",
+              "photoEquivalence": "N/A - tekstvergelijking",
+              "diagnosticText": "PARTIALLY TESTED - wigvormige staart Raaf bij goed zicht in vlucht, hoekigere staartrand bij Zwarte Kraai"
             }
           ],
           "audio": {
@@ -5518,17 +5539,24 @@
             ],
             "photoCount": 3,
             "audioCount": 1,
-            "device": "NOT TESTED"
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
           },
           "materialGaps": [
             "ANWB-soortpassage niet ingezien",
             "Menselijke beluistering van de geregistreerde roep ontbreekt",
-            "Roek vraagt aanvullende tekst of gelijkwaardige beelden; de bestaande gids waarschuwt terecht voor jonge Roek, geen beeldpaar geregistreerd",
-            "Raaf is herkenningsrelevant volgens Vogelbescherming; korte tekst over staartvorm kan de gids aanvullen"
+            "Gelijkwaardig Roek-beeldpaar ontbreekt; de snavelbasis en leeftijdswaarschuwing blijven in tekst beschikbaar"
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — voeg een korte zin over de wigvormige staart van Raaf toe en behoud de waarschuwing voor jonge Roek. Zoek een gelijkwaardig beeldpaar alleen als aparte vervolgstap.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de geregistreerde roep ontbreekt",
+              "Gelijkwaardig Roek-beeldpaar ontbreekt; de snavelbasis en leeftijdswaarschuwing blijven in tekst beschikbaar"
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -18338,18 +18366,19 @@
           "sp021",
           "sp022"
         ],
-        "status": "REVIEWED / OWNER GATE OPEN",
+        "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
         "date": "2026-11-27",
         "baseSHA": "1cb52274ce39dce19d22b69864063025efe6917d",
         "ownerStart": "27-11-2026: eigenaar vraagt in Aviandra-gesprek de volgende ronde",
-        "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md"
+        "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+        "pr": 381
       }
     ],
     "counts": {
       "total": 140,
       "reexamined": 15,
-      "ownerGateOpen": 3,
-      "ownerDecisions": 12,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 15,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -18402,6 +18431,12 @@
         "batch": "F3-REV2-R04",
         "decision": "B voor sp017, sp018 en sp019. Toscane-kandidaat NEE. R05 niet starten.",
         "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/354#issuecomment-7134854859"
+      },
+      {
+        "date": "2026-11-27",
+        "batch": "F3-REV2-R05",
+        "decision": "B voor Middelste Bonte Specht, Ekster en Zwarte Kraai. Akkoord in het Aviandra-gesprek.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381"
       }
     ]
   }

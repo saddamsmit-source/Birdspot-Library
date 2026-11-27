@@ -1612,7 +1612,7 @@
    "assets": [
     {
      "image": "/assets/species/plumage/sp020-male.webp",
-     "role": "Hoofdfoto",
+     "role": "Verenkleed (Volwassen)",
      "content": "Volwassen vogel tegen stam met lichte kop en roze onderstaart.",
      "sexAge": "Fotograaf noemt een mannetje. Neutraal weergegeven vanwege overlap in verenkleed.",
      "quality": "Bruikbaar, bronminiatuur van 500 px beperkt zoom.",
@@ -1626,7 +1626,7 @@
     },
     {
      "image": "/assets/species/sp020.webp",
-     "role": "Overige herkenningsfoto's",
+     "role": "Hoofdfoto",
      "content": "Zijaanzicht op stronk met rode kruin, wit gezicht en gestreepte flanken.",
      "sexAge": "Leeftijd en geslacht open.",
      "quality": "Goede uitsnede van volledige vogel.",
@@ -1746,11 +1746,11 @@
     },
     {
      "image": "/assets/species/plumage/sp021-flight.webp",
-     "role": "In vlucht",
-     "content": "Vrij in de lucht boven water; gespreide zwart-witte vleugels met witte handvleugel, lange staart. Geen contact met de steen rechtsonder.",
+     "role": "Overige herkenningsfoto's",
+     "content": "Gespreide zwart-witte vleugels met witte handvleugel en lange staart. De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld.",
      "sexAge": "niet vastgesteld",
      "quality": "goed",
-     "verdict": "goedgekeurd",
+     "verdict": "uit-rol",
      "rights": {
       "status": "VERIFIED",
       "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours",
@@ -1762,16 +1762,26 @@
       "nameNL": "Ekster",
       "registry": "GUIDE_POSES[0]",
       "sexLabel": null,
-      "class": "vlucht",
+      "class": "opvliegen",
       "quality": "goed",
-      "decision": "goedgekeurd",
-      "target": null,
-      "newLabel": null,
-      "newNote": null,
-      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+      "decision": "uit-rol",
+      "target": "poses",
+      "newLabel": "Vertrek vanaf een rots",
+      "newNote": "Let op de witte handvleugel en de lange staart.",
+      "reason": "De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld.",
       "airborne": true,
       "rights": "VERIFIED",
-      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0",
+      "previous": [
+       {
+        "class": "vlucht",
+        "decision": "goedgekeurd",
+        "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+        "airborne": true,
+        "date": "2026-11-10"
+       }
+      ],
+      "reviewDate": "2026-11-27"
      }
     },
     {
@@ -1796,7 +1806,8 @@
     "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).",
     "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
     "Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.",
-    "F3-R06: Gedocumenteerd jeugdkleed toegevoegd."
+    "F3-R06: Gedocumenteerd jeugdkleed toegevoegd.",
+    "F3-REV2-R05b: vertrekfoto bij overige herkenningsfoto’s."
    ],
    "missing": [],
    "wishes": [],

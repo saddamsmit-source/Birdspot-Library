@@ -10749,6 +10749,13 @@ const DATA = {
       "VB_KAUW",
       "RSPB_KAUW"
      ]
+    },
+    {
+     "id": "sp027",
+     "why": "Bij goed zicht op de staart in vlucht toont een Raaf een wigvormige staart. Bij de Zwarte Kraai is de staartrand hoekiger.",
+     "sources": [
+      "VB_ZKR"
+     ]
     }
    ],
    "detail": [

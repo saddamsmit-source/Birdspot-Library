@@ -58,3 +58,13 @@ Chromium 320, 360 en 390 CSS-px: drie kaarten, tien beelden, fotocredits, vergro
 Opties per soort: **A** verdiepen of aanvullend zoeken, **B** gerichte rol-, tekst- of beeldverbetering, **C** het open punt vastleggen en voorlopig verder. ANWB-lezing en menselijke luistercontrole blijven afzonderlijk open.
 
 **Teller** 15/140 herbeoordeeld, 3 eigenaarbesluiten open, 0 volledige F3-PASS. De eerste ronde blijft 140/140 bekeken. Release HOLD.
+
+## R05b · uitvoering eigenaarbesluit B
+
+De eigenaar gaf op 27 november akkoord op de drie voorstellen. De hoofdfoto van Middelste Bonte Specht is het bestaande zijaanzicht van Frank Vassen. De vorige hoofdfoto staat onder Volwassen, zonder geslachtslabel. De vergelijkingen met Grote en Kleine Bonte Specht behouden hun eerdere opnamen.
+
+De vertrekfoto van Ekster staat onder Overige herkenningsfoto’s. Bij Ekster en Gaai is de wederzijdse tekst onder Lijkt op bereikbaar. Het vluchtfotopaneel wacht op gelijkwaardige beelden. Bij Zwarte Kraai is de wigvormige staart van Raaf toegevoegd als veldkenmerk bij goed zicht in vlucht. De leeftijdswaarschuwing voor Roek en de fotovergelijkingen met Kauw blijven beschikbaar.
+
+**Chromium VERIFIED:** op 320, 360 en 390 px zijn de drie kaarten, de drie resterende fotoparen in beide richtingen en de tekstvergelijking Ekster/Gaai in beide richtingen gecontroleerd. Met de lokale server afgesloten opende de gids offline en decodeerden alle tien foto’s en drie opnamen.
+
+**Teller na B** 15/140 herbeoordeeld, 15 besluiten vastgelegd, 0 volledige F3-PASS. ANWB, menselijke luistercontrole, juvenielbeeld van Middelste Bonte Specht, gelijkwaardige vluchtfoto voor Ekster/Gaai en fysieke Samsung blijven open. Release HOLD.

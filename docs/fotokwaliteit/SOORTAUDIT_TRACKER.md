@@ -14,8 +14,8 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 4a | Visueel VERIFIED (beeld per foto) | 98 van 101 |
 | 4b | Inhoud (kennisprofiel) VERIFIED | 68 van 101 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 163; plus collectiebrede vluchtcontrole: 18 uit de vluchtrol, 11 gearchiveerd |
-| 6 | Afgekeurde vluchtfoto's | 29 (tabel hieronder) |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 164; plus collectiebrede vluchtcontrole: 19 uit de vluchtrol, 12 gearchiveerd |
+| 6 | Afgekeurde vluchtfoto's | 31 (tabel hieronder) |
 | 7 | Ontbrekende foto-/kennisonderdelen | 60 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 4 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
@@ -796,10 +796,10 @@ Batch M1 · 2026-11-15 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
 | `sp021.webp` | Hoofdfoto | Ekster op tak; zwart-wit kleed, glanzende staart en blauwe vleugelglans. | volwassen-ogend; geslachten gelijk | goed | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
-| `sp021-flight.webp` | In vlucht | Vrij in de lucht boven water; gespreide zwart-witte vleugels met witte handvleugel, lange staart. Geen contact met de steen rechtsonder. | niet vastgesteld | goed | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
+| `sp021-flight.webp` | Overige herkenningsfoto's | Gespreide zwart-witte vleugels met witte handvleugel en lange staart. De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld. | niet vastgesteld | goed | uit-rol | opvliegen · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
 | `sp021-juv-review.webp` | Verenkleed (Juveniel) | Jonge Ekster op de grond, met roze mondhoeken, een korte staart en lichte huid rond het oog. | Juveniel volgens het bijschrift van de fotograaf. Lichte huid rond het oog en korte staart zichtbaar. | De hele vogel blijft in de uitsnede. De mondhoeken en de staart zijn zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 15-11-2026: zelfde opname (Originele JPEG visueel vergeleken. Het WebP is rechtstreeks van dit bestand afgeleid.), CC BY-SA 4.0 · Lystopad |
 
-- **Correcties:** Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).; Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.; Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.; F3-R06: Gedocumenteerd jeugdkleed toegevoegd.
+- **Correcties:** Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).; Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.; Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.; F3-R06: Gedocumenteerd jeugdkleed toegevoegd.; F3-REV2-R05b: vertrekfoto bij overige herkenningsfoto’s.
 - **Ontbreekt:** niets
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Geslachten gelijk; geen geslachtsvakken.
@@ -1532,8 +1532,8 @@ Batch M2 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
-| `sp020-male.webp` | Hoofdfoto | Volwassen vogel tegen stam met lichte kop en roze onderstaart. | Fotograaf noemt een mannetje. Neutraal weergegeven vanwege overlap in verenkleed. | Bruikbaar, bronminiatuur van 500 px beperkt zoom. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp |
-| `sp020.webp` | Overige herkenningsfoto's | Zijaanzicht op stronk met rode kruin, wit gezicht en gestreepte flanken. | Leeftijd en geslacht open. | Goede uitsnede van volledige vogel. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Frank Vassen from Brussels, Belgium |
+| `sp020-male.webp` | Verenkleed (Volwassen) | Volwassen vogel tegen stam met lichte kop en roze onderstaart. | Fotograaf noemt een mannetje. Neutraal weergegeven vanwege overlap in verenkleed. | Bruikbaar, bronminiatuur van 500 px beperkt zoom. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Charles J. Sharp |
+| `sp020.webp` | Hoofdfoto | Zijaanzicht op stronk met rode kruin, wit gezicht en gestreepte flanken. | Leeftijd en geslacht open. | Goede uitsnede van volledige vogel. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 2.0 · Frank Vassen from Brussels, Belgium |
 | `sp020-pose.webp` | Overige herkenningsfoto's | Foerageert op een stam. Flankstrepen en roze onderstaart zichtbaar. | Leeftijd en geslacht open. | Scherpe andere kijkhoek. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 4.0 · Mikes Makro |
 | `sp020-flight.webp` | In vlucht | Vrij in de lucht. Gebandeerde slagpennen, flankstrepen en roze onderstaart zichtbaar. | Leeftijd en geslacht open. | Bruikbaar voor de onderzijde en vleugeltekening, bronbestand 725 × 483 px. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 2.0 · Yves Hoebeke |
 
@@ -2035,7 +2035,9 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp002 Houtduif | `sp002-flight.webp` | archief | vlucht | Vervangen door een zijaanzicht waarop de witte band op de bovenvleugel duidelijker is. De frontale vluchtfoto blijft in het bronarchief. |
 | sp003 Holenduif | `sp003-flight.webp` | archief | opvliegen | Onscherpe afzetfoto van 485 px met weinig herkenningsdetail. Het bronarchief bewaart de opname; een goede vrije vluchtfoto blijft open. |
 | sp005 Buizerd | `sp005-male-flight.webp` | archief | vlucht | Vervangen door een scherpere opname van een donkere Buizerd in vrije vlucht. De eerdere opname en bronvermelding blijven in het archief. |
+| sp007 Havik | `sp007-flight.webp` | archief | vlucht | F3-REV2-R02c eigenaarbesluit 23-11-2026: herkomst (Euraziatisch/Amerikaans) en leeftijd niet bewezen; klein en donker. Uit de zichtbare gids; origineel bewaard. |
 | sp017 Kleine Bonte Specht | `sp017-flight.webp` | uit-rol | opvliegen | Zet af van de stam bij de nestholte; staart nog tegen de bast. |
+| sp021 Ekster | `sp021-flight.webp` | uit-rol | opvliegen | De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld. |
 | sp025 Kauw | `sp025-flight.webp` | uit-rol | landen | Frontale landingsnadering met poten naar voren en gespreide staart. |
 | sp031 Matkop | `sp031-flight.webp` | uit-rol | opvliegen | Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken. |
 | sp032 Glanskop | `sp032-flight.webp` | archief | opvliegen | Zet af van een tak; onscherp, alleen silhouet. Geen bruikbare vervangende rol. |
