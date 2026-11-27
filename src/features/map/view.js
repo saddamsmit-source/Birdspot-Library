@@ -12,6 +12,7 @@
 import { appIcon, observationIcon } from '../../utils/icons.js';
 import { getSightings }    from '../../data/sightings.js';
 import { SPECIES }         from '../../data/species.js';
+import { SEASONS, SIGHTING_PERIODS } from '../../data/seasons.js';
 import { openDetailSheet } from '../sightings/detailSheet.js';
 import { openAddSheet } from '../sightings/addSheet.js';
 import { openPinPicker } from '../sightings/pinPicker.js';
@@ -92,11 +93,18 @@ export function renderMap(el, target = {}) {
           <span class="bird-map-dropdown-chevron" aria-hidden="true">⌄</span>
         </div>
         <div class="map-extra-filters">
+          <div class="map-period">
+            <label for="mapPeriodSelect">Periode</label>
+            <select id="mapPeriodSelect">${SIGHTING_PERIODS.map(([value, label]) =>
+              `<option value="${value}">${label}</option>`).join('')}</select>
+          </div>
+          <fieldset class="map-season-filter">
+            <legend>Seizoen</legend>
+            <div class="map-season-options">${SEASON_ORDER.map(key =>
+              `<button type="button" data-season-filter="${key}" aria-pressed="false">${SEASONS[key].label}</button>`).join('')}</div>
+          </fieldset>
           <label class="map-switch"><input type="checkbox" id="mapCloudsToggle" checked> Seizoenswolken tonen</label>
           <label class="map-switch"><input type="checkbox" id="mapNotableToggle"> <span>★ Alleen bijzondere waarnemingen</span></label>
-          <label class="map-period">Periode
-            <select id="mapPeriodSelect"><option value="all">Alles</option><option value="year">Dit jaar</option><option value="12m">Afgelopen 12 maanden</option></select>
-          </label>
         </div>
         <p class="bird-map-filter-feedback" id="mapFilterFeedback" role="status" aria-live="polite">Alle waarnemingen met een pin</p>
       </section>
@@ -147,6 +155,29 @@ export function renderMap(el, target = {}) {
 
   el.querySelector("#explorerSightingsBtn")?.addEventListener("click", () => {
     import("../../app.js").then(({ navigate }) => navigate("sightings"));
+  });
+
+  const locateButton = el.querySelector('#mapLocateBtn');
+  let userMarker = null;
+  locateButton.addEventListener('click', () => {
+    findUserPosition(locateButton, ({ latitude, longitude }) => {
+      const map = _mapInstance;
+      if (!map) {
+        showToast('Locatie gevonden. De kaartlaag is nu niet beschikbaar.', 'warn');
+        return;
+      }
+      const position = [latitude, longitude];
+      userMarker?.remove();
+      userMarker = window.L.marker(position, {
+        icon: window.L.divIcon({ className: 'map-current-location', iconSize: [18, 18] }),
+        interactive: false,
+        keyboard: false,
+        title: 'Je huidige locatie',
+      }).addTo(map);
+      el.querySelector('.map-no-gps')?.remove();
+      map.flyTo(position, 17, { duration: 1 });
+      showToast('Locatie gevonden op de kaart.');
+    });
   });
 
   // De kaart blijft functioneel bij traag/offline CDN; geen oneindige spinner.
@@ -279,6 +310,8 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   const clearFilters = screenEl.querySelector('#mapClearFilters');
   const feedback = screenEl.querySelector('#mapFilterFeedback');
   const countEl = screenEl.querySelector('#mapCount');
+  const seasonButtons = screenEl.querySelectorAll('[data-season], [data-season-filter]');
+  const seasonKey = button => button.dataset.season || button.dataset.seasonFilter;
   const filterState = {speciesSearch: mapView?.search || '', status: mapView?.status || 'all', legend:null,seasons:new Set(),notableOnly:false,period:'all',clouds:true};
   speciesSearch.value = filterState.speciesSearch;
   const speciesById=new Map(SPECIES.map(x=>[x.id,x]));
@@ -301,23 +334,23 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
     // K6: legenda (kleur/seizoen), bijzonder en periode bovenop zoeken en statusfilter
     const matches=applyLegendFilters(filteredSightings(geoSightings,filterState,SPECIES,placeNames),filterState,speciesById);
     const speciesMatches=filteredSightings(geoSightings,{speciesSearch:filterState.speciesSearch},SPECIES,placeNames);
-    const counts=statusCounts(speciesMatches);
+    const periodMatches=applyLegendFilters(speciesMatches,{...filterState,legend:null},speciesById);
+    const counts=statusCounts(periodMatches);
     const filtered=(filterState.status!=='all'||!!filterState.speciesSearch||extraActive());
     screenEl.querySelector('#mapScreen')?.classList.toggle('has-active-filters',filtered);
     clearFilters.hidden=!filtered;
     const dotEl=screenEl.querySelector('#mapFilterDot');
     if(dotEl)dotEl.hidden=filterState.status==='all'&&!extraActive();
     screenEl.querySelectorAll('[data-legend]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.legend===filterState.legend)));
-    screenEl.querySelectorAll('[data-season]').forEach(b=>b.setAttribute('aria-pressed',String(filterState.seasons.has(b.dataset.season))));
+    seasonButtons.forEach(b=>b.setAttribute('aria-pressed',String(filterState.seasons.has(seasonKey(b)))));
     screenEl.querySelector('.map-legend--seasons')?.toggleAttribute('hidden',!filterState.clouds);
     // One native dropdown avoids horizontal overflow on narrow phones.
-    // Counts are recalculated from the currently searched species, not from
-    // unrelated observations or records without pins.
+    // Tel alleen waarnemingen binnen de zoekopdracht, periode en overige kaartfilters.
     const select=screenEl.querySelector('#mapStatusSelect');
     const dot=screenEl.querySelector('#mapStatusIndicator');
     select.value=filterState.status;
     dot.className='bird-map-dropdown-dot bird-map-dot--'+filterState.status;
-    select.querySelector('option[value="all"]').textContent='Alle waarnemingen ('+speciesMatches.length+')';
+    select.querySelector('option[value="all"]').textContent='Alle waarnemingen ('+periodMatches.length+')';
     const optionSymbols={seen:'●',merlin:'♫',both:'◉',heard:'♪',unknown:'?'};
     for(const key of MAP_ORDER){
       const option=select.querySelector('option[value="'+key+'"]');
@@ -351,8 +384,8 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   screenEl.querySelectorAll('[data-legend]').forEach(b=>b.addEventListener('click',()=>{
     filterState.legend=filterState.legend===b.dataset.legend?null:b.dataset.legend;applyFilters();
   }));
-  screenEl.querySelectorAll('[data-season]').forEach(b=>b.addEventListener('click',()=>{
-    const k=b.dataset.season;
+  seasonButtons.forEach(b=>b.addEventListener('click',()=>{
+    const k=seasonKey(b);
     if(filterState.seasons.has(k))filterState.seasons.delete(k);else filterState.seasons.add(k);
     applyFilters();
   }));
@@ -395,9 +428,6 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
 
   // Lege state — altijd tonen als er geen GPS-waarnemingen zijn
   if (!geoSightings.length) showNoGpsState(screenEl);
-
-  // Locatie-knop — ook zonder kaart tonen
-  const locBtn = screenEl.querySelector('#mapLocateBtn');
 
   let map = null;
   let restoringView = Boolean(mapView);
@@ -595,10 +625,6 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
     openAddSheet({ initial: { lat: c.lat, lon: c.lng, pinAccuracyM: acc },
       onSaved: () => import('../../app.js').then(({ navigate }) => navigate('map', { force: true })) });
   });
-  // Locatie-knop koppelen
-  if (locBtn) {
-    locBtn.addEventListener('click', () => centerOnUser(map, locBtn));
-  }
 }
 
 // ── K4: plekkaartje ───────────────────────────────────────────
@@ -934,22 +960,37 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
 }
 
 // ── Locatie ────────────────────────────────────────────────────
-function centerOnUser(map, btn) {
-  // GPS-01: een mislukte locatie wordt gemeld in plaats van stil te falen; de kaart blijft waar hij was.
-  if (!navigator.geolocation) { showToast('Deze browser geeft geen locatie door.', 'warn'); return; }
+function findUserPosition(btn, onLocated) {
+  if (btn.getAttribute('aria-busy') === 'true') return;
+  if (!navigator.geolocation?.getCurrentPosition) {
+    showToast('Deze browser geeft geen locatie door.', 'warn');
+    return;
+  }
   btn.classList.add('map-locate-btn--loading');
-  navigator.geolocation.getCurrentPosition(
-    pos => {
-      btn.classList.remove('map-locate-btn--loading');
-      map.flyTo([pos.coords.latitude, pos.coords.longitude], 17, { duration: 1 });
-    },
-    error => {
-      btn.classList.remove('map-locate-btn--loading');
-      showToast(error?.code === 1 ? 'Geen toegang tot je locatie. Sta locatie toe in je browser.'
-        : 'Je locatie is nu niet te bepalen (geen GPS-signaal). Probeer het opnieuw.', 'warn');
-    },
-    { timeout: 15000, maximumAge: 60000 },
-  );
+  btn.setAttribute('aria-busy', 'true');
+  const finish = () => {
+    btn.classList.remove('map-locate-btn--loading');
+    btn.removeAttribute('aria-busy');
+    return btn.isConnected;
+  };
+  const failed = error => {
+    if (!finish()) return;
+    const message = error?.code === 1 ? 'Geen toegang tot je locatie. Zet Locatie aan op je telefoon en sta locatie toe in je browser.'
+      : error?.code === 3 ? 'Locatie bepalen duurt te lang. Probeer het opnieuw.'
+        : 'Je locatie is nu niet beschikbaar. Controleer of Locatie aanstaat en probeer het opnieuw.';
+    showToast(message, 'warn');
+  };
+  try {
+    navigator.geolocation.getCurrentPosition(
+      ({ coords }) => {
+        if (finish()) onLocated(coords);
+      },
+      failed,
+      { timeout: 15000, maximumAge: 60000 },
+    );
+  } catch (error) {
+    failed(error);
+  }
 }
 
 // ── Lege state (geen GPS) ──────────────────────────────────────

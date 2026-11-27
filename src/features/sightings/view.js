@@ -2,7 +2,7 @@
  * Mijn waarnemingen — lijst met zoeken en filters (UX-02, 25-11-2026)
  *
  * - Zoeken op soort (NL/EN/wetenschappelijk), plek, plaatsnaam, datum en periodewoorden
- * - Filters: waarneming, media, zekerheid, herkenning (binnen een groep OF, tussen groepen EN)
+ * - Filters: plek, soort, periode, seizoen, waarneming, media, zekerheid en herkenning
  * - Zoekopdracht, filters en scrollpositie blijven bewaard (sessie) bij bekijken, bewerken en terugkeren
  * - Zoek- en filterlogica staat in sightingQuery.js (gedeeld met de globale zoekfunctie)
  * - Kaartje: soort, datum, plek, methode, zekerheid of suggestiestatus, media; neutraal vogelicoon zonder foto
@@ -17,13 +17,22 @@ import { getPhotoUrl, revokePhotoUrl } from '../../utils/photoUrl.js';
 import { openDetailSheet }  from './detailSheet.js';
 import { methodLabel, verificationStatus } from './evidence.js';
 import { escHtml }          from '../../utils/html.js';
+import { SIGHTING_PERIODS, SEASONS, SEASON_ORDER } from '../../data/seasons.js';
 import {
   FILTER_GROUPS, filterSightings, cleanFilters, emptyFilters, activeFilterCount, placeOf, periodFromQuery,
+  sightingPlaceChoice, sightingSpeciesKey,
 } from './sightingQuery.js';
 
 const VIEW_KEY = 'birdspot-sightings-view';
 const SPECIES_BY_ID = new Map(SPECIES.map(sp => [sp.id, sp]));
 const CERTAINTY_NL = { certain: 'Zeker', probable: 'Waarschijnlijk', possible: 'Mogelijk' };
+const PRIMARY_FILTERS = [
+  { key: 'place', label: 'Plek', options: [['', 'Alle plekken']] },
+  { key: 'speciesId', label: 'Vogelsoort', options: [['', 'Alle soorten']] },
+  { key: 'period', label: 'Periode', options: [['', 'Alles'], ...SIGHTING_PERIODS.slice(1)] },
+  { key: 'season', label: 'Seizoen', options: [['', 'Alle seizoenen'], ...SEASON_ORDER.map(key => [key, SEASONS[key].label])] },
+];
+const emptyView = () => ({ query: '', filters: emptyFilters(), place: '', speciesId: '', period: '', season: '', panelOpen: false });
 
 // ── Weergavestand (alleen deze sessie; geen waarnemingsdata) ──────────
 function loadView() {
@@ -32,11 +41,14 @@ function loadView() {
     return {
       query: typeof raw.query === 'string' ? raw.query.slice(0, 120) : '',
       filters: cleanFilters(raw.filters),
-      speciesId: typeof raw.speciesId === 'string' && SPECIES_BY_ID.has(raw.speciesId) ? raw.speciesId : null,
+      place: typeof raw.place === 'string' ? raw.place : '',
+      speciesId: typeof raw.speciesId === 'string' ? raw.speciesId : '',
+      period: SIGHTING_PERIODS.some(([key]) => key === raw.period && key !== 'all') ? raw.period : '',
+      season: SEASON_ORDER.includes(raw.season) ? raw.season : '',
       panelOpen: raw.panelOpen === true,
     };
   } catch (_) {
-    return { query: '', filters: emptyFilters(), speciesId: null, panelOpen: false };
+    return emptyView();
   }
 }
 function saveView(view) {
@@ -48,7 +60,7 @@ export async function renderSightings(el, { sightingId, speciesId } = {}) {
   const view = loadView();
   // UX-02C: vanaf een soortkaart opent de lijst met alleen die soort (andere filters leeg, niets verborgen).
   if (typeof speciesId === 'string' && SPECIES_BY_ID.has(speciesId)) {
-    Object.assign(view, { query: '', filters: emptyFilters(), speciesId, panelOpen: false });
+    Object.assign(view, emptyView(), { speciesId });
     saveView(view);
   }
   const sightings = await getSightings();
@@ -59,7 +71,7 @@ export async function renderSightings(el, { sightingId, speciesId } = {}) {
       <div class="page-header__title">Mijn waarnemingen</div>
       <div class="page-header__sub" id="sightingsCount"></div>
     </div>
-    <div class="sightings-tools" id="sightingsTools" hidden>
+    <div class="sightings-tools" id="sightingsTools">
       <form class="sightings-search" role="search" id="sightingsSearchForm">
         <label class="visually-hidden" for="sightingsSearch">Zoek in je waarnemingen</label>
         <svg class="sightings-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg>
@@ -74,7 +86,16 @@ export async function renderSightings(el, { sightingId, speciesId } = {}) {
         </button>
         <div class="sightings-chips" id="sightingsChips"></div>
       </div>
+      <p class="sightings-result" id="sightingsResult" role="status" aria-live="polite"></p>
       <div class="sightings-filter-panel" id="sightingsFilterPanel" ${view.panelOpen ? '' : 'hidden'}>
+        <div class="sightings-primary-filters">
+          ${PRIMARY_FILTERS.map(({ key, label, options }) => `
+            <div class="sightings-primary-filter">
+              <label for="sightingsFilter-${key}">${label}</label>
+              <select id="sightingsFilter-${key}" data-primary-filter="${key}">${options.map(([value, text]) =>
+                `<option value="${value}">${text}</option>`).join('')}</select>
+            </div>`).join('')}
+        </div>
         ${FILTER_GROUPS.map(group => `
           <fieldset class="sightings-filter-group">
             <legend>${escHtml(group.label)}</legend>
@@ -86,7 +107,6 @@ export async function renderSightings(el, { sightingId, speciesId } = {}) {
           </fieldset>`).join('')}
         <p class="sightings-filter-note">‘Zeker’ toont geen ongecontroleerde suggesties van BirdNET of Merlin.</p>
       </div>
-      <p class="sightings-result" id="sightingsResult" role="status" aria-live="polite"></p>
     </div>
     <div id="sightingsList"></div>`;
 
@@ -125,36 +145,63 @@ function bindTools(ctx) {
     else list.push(option.dataset.value);
     apply();
   });
+  panel.addEventListener('change', e => {
+    const key = e.target.dataset.primaryFilter;
+    if (!key) return;
+    view[key] = e.target.value;
+    apply();
+  });
   el.querySelector('#sightingsChips').addEventListener('click', e => {
     const chip = e.target.closest('[data-chip]');
     if (!chip) return;
     const [kind, value] = chip.dataset.chip.split(':');
     if (kind === 'query') { view.query = ''; input.value = ''; }
-    else if (kind === 'species') view.speciesId = null;
+    else if (kind === 'species') view.speciesId = '';
+    else if (value === undefined) view[kind] = '';
     else view.filters[kind] = view.filters[kind].filter(v => v !== value);
     apply();
     el.querySelector('#sightingsSearch')?.focus({ preventScroll: true });
   });
   el.addEventListener('click', e => {
     if (!e.target.closest('#sightingsClearAll')) return;
-    Object.assign(view, { query: '', filters: emptyFilters(), speciesId: null });
+    Object.assign(view, emptyView(), { panelOpen: view.panelOpen });
     input.value = '';
     apply();
     input.focus({ preventScroll: true });
   });
 }
 
-function renderToolsState(ctx, shown, total) {
+function refreshChoices(select, options, selected, missingLabel) {
+  const current = select.selectedOptions[0];
+  if (selected && !options.has(selected)) {
+    options.set(selected, current?.value === selected ? current.textContent : missingLabel);
+  }
+  const choices = [...options].sort((a, b) => a[1].localeCompare(b[1], 'nl'));
+  select.replaceChildren(select.options[0], ...choices.map(([value, label]) => new Option(label, value)));
+}
+
+function renderToolsState(ctx, shown, sightings, placesById) {
   const { el, view } = ctx;
-  const tools = el.querySelector('#sightingsTools');
-  tools.hidden = total === 0;
+  const total = sightings.length;
+  const select = key => el.querySelector(`[data-primary-filter="${key}"]`);
+  const places = new Map();
+  const species = new Map();
+  for (const sighting of sightings) {
+    const [placeKey, placeLabel] = sightingPlaceChoice(sighting, placesById);
+    const speciesKey = sightingSpeciesKey(sighting);
+    places.set(placeKey, placeLabel || 'Naamloze plek');
+    if (speciesKey) species.set(speciesKey, SPECIES_BY_ID.get(speciesKey)?.nameNL || sighting.speciesName || 'Onbekende vogelsoort');
+  }
+  refreshChoices(select('place'), places, view.place, 'Onbekende plek');
+  refreshChoices(select('speciesId'), species, view.speciesId, SPECIES_BY_ID.get(view.speciesId)?.nameNL || 'Onbekende vogelsoort');
+  for (const { key } of PRIMARY_FILTERS) select(key).value = view[key];
+
   el.querySelector('#sightingsCount').textContent = countLabel(total);
-  const active = activeFilterCount(view.filters) + (view.speciesId ? 1 : 0);
   const countEl = el.querySelector('#sightingsFilterCount');
-  const filterOnly = activeFilterCount(view.filters);
-  countEl.hidden = !filterOnly;
-  countEl.textContent = filterOnly ? String(filterOnly) : '';
-  el.querySelector('#sightingsFilterBtn').setAttribute('aria-label', filterOnly ? `Filters, ${filterOnly} actief` : 'Filters');
+  const active = activeFilterCount(view.filters) + PRIMARY_FILTERS.filter(({ key }) => view[key]).length;
+  countEl.hidden = !active;
+  countEl.textContent = active ? String(active) : '';
+  el.querySelector('#sightingsFilterBtn').setAttribute('aria-label', active ? `Filters, ${active} actief` : 'Filters');
   el.querySelectorAll('.sightings-filter-option').forEach(btn => {
     btn.setAttribute('aria-pressed', String(view.filters[btn.dataset.group].includes(btn.dataset.value)));
   });
@@ -164,7 +211,11 @@ function renderToolsState(ctx, shown, total) {
     const period = periodFromQuery(query);
     chips.push(['query', `“${query}”${period.range ? ` · ${fmtRange(period.range)}` : ''}`]);
   }
-  if (view.speciesId) chips.push(['species', `Soort: ${SPECIES_BY_ID.get(view.speciesId)?.nameNL || 'onbekend'}`]);
+  for (const { key, label } of PRIMARY_FILTERS) {
+    if (!view[key]) continue;
+    const selectedLabel = select(key).selectedOptions[0].textContent;
+    chips.push(key === 'speciesId' ? ['species', `Soort: ${selectedLabel}`] : [key, `${label}: ${selectedLabel}`]);
+  }
   for (const group of FILTER_GROUPS) {
     for (const value of view.filters[group.key]) {
       chips.push([`${group.key}:${value}`, group.options.find(([v]) => v === value)?.[1] || value]);
@@ -173,7 +224,7 @@ function renderToolsState(ctx, shown, total) {
   el.querySelector('#sightingsChips').innerHTML = chips.map(([key, label]) =>
     `<button type="button" class="sightings-chip" data-chip="${escHtml(key)}" aria-label="${escHtml(label)} verwijderen">
       <span>${escHtml(label)}</span><span aria-hidden="true">×</span></button>`).join('')
-    + (chips.length > 1 ? '<button type="button" class="sightings-chip sightings-chip--clear" id="sightingsClearAll">Wis filters</button>' : '');
+    + (chips.length > 1 && (shown || !total) ? '<button type="button" class="sightings-chip sightings-chip--clear" id="sightingsClearAll">Wis filters</button>' : '');
   el.querySelector('#sightingsResult').textContent = !total ? ''
     : (query || active) ? `${shown} van ${total} ${total === 1 ? 'waarneming' : 'waarnemingen'}`
       : `${total} ${total === 1 ? 'waarneming' : 'waarnemingen'}`;
@@ -194,7 +245,7 @@ async function renderList(ctx, { keepScroll = true } = {}) {
     const d = (b.date || '').localeCompare(a.date || '');
     return d !== 0 ? d : (b.createdAt || '').localeCompare(a.createdAt || '');
   });
-  renderToolsState(ctx, shown.length, all.length);
+  renderToolsState(ctx, shown.length, all, placesById);
 
   if (!all.length) {
     wrap.innerHTML = `
