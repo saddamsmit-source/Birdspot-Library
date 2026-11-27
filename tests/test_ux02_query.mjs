@@ -7,6 +7,7 @@ import {
   periodFromQuery, sourceCategory, certaintyCategory, placeOf, placeNameKind, FILTER_GROUPS,
 } from '../src/features/sightings/sightingQuery.js';
 import { SPECIES } from '../src/data/species.js';
+import { sightingDateRange, dateInRange } from '../src/data/seasons.js';
 
 let n = 0;
 const ok = (cond, msg) => { assert.ok(cond, msg); n++; };
@@ -81,6 +82,14 @@ ok(ids(f({ certainty: ['certain'] })) === 'aeg', 'Zeker zonder ongecontroleerde 
 ok(ids(f({ method: ['heard'], source: ['birdnet'], certainty: ['certain'] })) === 'e', 'combinatie EN');
 ok(ids({ ...f({ method: ['heard'] }), query: 'merel' }) === 'df', 'filter + zoeken');
 ok(ids({ speciesId: 'sp045' }) === 'adf', 'soortfilter');
+ok(ids({ place: 'place:pl_named', speciesId: 'sp045', period: '6m', season: 'herfst' }) === 'a', 'plek, soort, halfjaar en seizoen samen');
+ok(ids({ place: 'text:achtertuin' }) === 'c', 'losse plaatsnaam in oudere waarneming');
+ok(ids({ season: 'lente' }) === 'efg', 'seizoen over verschillende jaren');
+eq(sightingDateRange('6m', new Date(2024, 7, 31)), ['2024-02-29', '2024-08-31'], 'halfjaar en schrikkeldag');
+eq(sightingDateRange('6m', new Date(2026, 0, 15)), ['2025-07-15', '2026-01-15'], 'halfjaar over de jaargrens');
+const [start, end] = sightingDateRange('6m', today);
+ok(dateInRange(start, [start, end]) && dateInRange(end, [start, end]), 'grenzen halfjaar inclusief');
+ok(!dateInRange('2026-05-24', [start, end]) && !dateInRange('2026-11-26', [start, end]), 'buiten het halfjaar');
 
 // 4. Categorieën en plekken
 eq(['a', 'c', 'd', 'f', 'g'].map(id => sourceCategory(data.find(x => x?.id === id))), ['self', 'merlin', 'birdnet', 'unknown', 'unrecorded'], 'bron');
