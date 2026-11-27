@@ -3,7 +3,7 @@
  * Geen achtergrondtimer: alleen zichtbare tijd telt. Bij verbergen, sluiten of elke 5 s wordt de positie
  * bewaard; bij openen gaat de diashow verder waar hij was (specialBirds.js).
  * Herkenning en aanwezigheid komen uit Birdspot's eigen soortendatabase.
- * Foto's zijn Wikimedia Commons-referenties met maker en licentie, nooit eigen waarnemingen.
+ * Foto's zijn aparte Wikimedia Commons-referenties met maker en licentie.
  */
 import { FEATURED_BIRDS, advance, loadPosition, savePosition } from './specialBirds.js';
 import { SPECIES, CATEGORY_BADGES } from '../../data/species.js';
@@ -95,6 +95,7 @@ export function initFeaturedCarousel(el, ctx) {
     speciesButton.querySelector('[data-featured-label]').textContent = hasSpeciesCard ? 'Bekijk soortkaart' : 'Open soortengids';
     stage.classList.remove('has-photo');
     photo.alt = bird.nl + (bird.pose === 'vlucht' ? ' in vlucht' : '');
+    photo.style.objectPosition = `${bird.focusX ?? 50}% center`;
     photo.src = assetUrl(bird.image);
     if (group) group.textContent = bird.groupLabel;
     name.textContent = bird.nl;

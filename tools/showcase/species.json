@@ -1,5 +1,5 @@
 {
- "_uitleg": "Diashow: 50 bijzondere Nederlandse vogels in 15 groepen. pose stuurt de fotokeuze: vlucht (roofvogels, gieren, sterns, jagers), tak (kleine vogels), natuurlijk (reigers, steltlopers, hoenders, ganzen in hun leefgebied). queries = extra zoektermen, aliases = andere namen in Commons-titels, info = herkenningstekst als de soortendatabase nog geen beschrijving heeft.",
+ "_uitleg": "Home-diashow: 100 vogelsoorten in 15 groepen met afzonderlijke, gecontroleerde opnamen. De extra reeks volgt op de oorspronkelijke 50.",
  "groups": [
   [
    "zang",
@@ -9,18 +9,20 @@
      "id": "sp113",
      "nl": "Wielewaal",
      "latin": "Oriolus oriolus",
-     "pose": "tak",
+     "pose": "natuurlijk",
      "queries": [
       "\"Oriolus oriolus\" male",
       "\"Eurasian golden oriole\" male",
       "Pirol Männchen"
-     ]
+     ],
+     "focusX": 51
     },
     {
      "id": "sp262",
      "nl": "Grauwe Klauwier",
      "latin": "Lanius collurio",
-     "pose": "tak"
+     "pose": "tak",
+     "focusX": 49
     },
     {
      "id": "sp042",
@@ -29,7 +31,8 @@
      "pose": "tak",
      "queries": [
       "\"Carpodacus erythrinus\" male"
-     ]
+     ],
+     "focusX": 52
     },
     {
      "id": "sp282",
@@ -45,7 +48,8 @@
       "Sturnus roseus",
       "Rosy starling",
       "Rosy Starling"
-     ]
+     ],
+     "focusX": 50
     }
    ]
   ],
@@ -63,7 +67,8 @@
      "id": "sp108",
      "nl": "Grote Karekiet",
      "latin": "Acrocephalus arundinaceus",
-     "pose": "tak"
+     "pose": "tak",
+     "focusX": 62
     },
     {
      "id": "sp274",
@@ -105,7 +110,8 @@
      "id": "sp009",
      "nl": "Slechtvalk",
      "latin": "Falco peregrinus",
-     "pose": "vlucht"
+     "pose": "natuurlijk",
+     "focusX": 52
     },
     {
      "id": "sp261",
@@ -218,7 +224,8 @@
      "id": "sp173",
      "nl": "Bruine Kiekendief",
      "latin": "Circus aeruginosus",
-     "pose": "vlucht"
+     "pose": "vlucht",
+     "focusX": 44
     },
     {
      "id": "sp251",
@@ -232,7 +239,8 @@
      "aliases": [
       "Montagu's harrier",
       "Montagu's Harrier"
-     ]
+     ],
+     "focusX": 51
     },
     {
      "id": "sp249",
@@ -246,7 +254,8 @@
      "aliases": [
       "Hen harrier",
       "Hen Harrier"
-     ]
+     ],
+     "focusX": 50
     },
     {
      "id": "sp248",
@@ -271,13 +280,14 @@
   ],
   [
    "reiger",
-   "Reigers en ooievaars",
+   "Reigers, ooievaars en lepelaars",
    [
     {
      "id": "sp084",
      "nl": "Purperreiger",
      "latin": "Ardea purpurea",
-     "pose": "natuurlijk"
+     "pose": "natuurlijk",
+     "focusX": 48
     },
     {
      "id": "sp243",
@@ -311,7 +321,8 @@
      "aliases": [
       "Black-crowned night heron",
       "Black-crowned Night Heron"
-     ]
+     ],
+     "focusX": 47
     },
     {
      "id": "sp241",
@@ -337,7 +348,8 @@
      "id": "sp143",
      "nl": "Kluut",
      "latin": "Recurvirostra avosetta",
-     "pose": "natuurlijk"
+     "pose": "natuurlijk",
+     "focusX": 39
     },
     {
      "id": "sp101",
@@ -454,7 +466,8 @@
      "id": "sp018",
      "nl": "Zwarte Specht",
      "latin": "Dryocopus martius",
-     "pose": "tak"
+     "pose": "tak",
+     "focusX": 49
     },
     {
      "id": "sp020",
@@ -481,13 +494,14 @@
   ],
   [
    "kleur",
-   "Kleurrijke gasten",
+   "Kleurrijke vogels",
    [
     {
      "id": "sp075",
      "nl": "IJsvogel",
      "latin": "Alcedo atthis",
-     "pose": "tak"
+     "pose": "natuurlijk",
+     "focusX": 51
     },
     {
      "id": "sp257",
@@ -615,7 +629,7 @@
   ],
   [
    "gans",
-   "Ganzen en eenden",
+   "Ganzen, eenden en andere watervogels",
    [
     {
      "id": "sp186",
@@ -647,5 +661,409 @@
     }
    ]
   ]
+ ],
+ "extra": [
+  {
+   "group": "zang",
+   "id": "sp029",
+   "nl": "Koolmees",
+   "latin": "Parus major",
+   "focusX": 30,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "gans",
+   "id": "sp077",
+   "nl": "Fuut",
+   "latin": "Podiceps cristatus",
+   "focusX": 56,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp033",
+   "nl": "Kuifmees",
+   "latin": "Lophophanes cristatus",
+   "focusX": 50,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "stelt",
+   "id": "sp098",
+   "nl": "Scholekster",
+   "latin": "Haematopus ostralegus",
+   "focusX": 69,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp043",
+   "nl": "Huismus",
+   "latin": "Passer domesticus",
+   "focusX": 37,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "gans",
+   "id": "sp086",
+   "nl": "Grauwe Gans",
+   "latin": "Anser anser",
+   "focusX": 51,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp045",
+   "nl": "Merel",
+   "latin": "Turdus merula",
+   "focusX": 47,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "kiekendief",
+   "id": "sp005",
+   "nl": "Buizerd",
+   "latin": "Buteo buteo",
+   "focusX": 47,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp050",
+   "nl": "Roodborst",
+   "latin": "Erithacus rubecula",
+   "focusX": 44,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "reiger",
+   "id": "sp081",
+   "nl": "Blauwe Reiger",
+   "latin": "Ardea cinerea",
+   "focusX": 60,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp064",
+   "nl": "Vuurgoudhaan",
+   "latin": "Regulus ignicapilla",
+   "focusX": 42,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "stelt",
+   "id": "sp099",
+   "nl": "Kievit",
+   "latin": "Vanellus vanellus",
+   "focusX": 53,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp069",
+   "nl": "Gele Kwikstaart",
+   "latin": "Motacilla flava",
+   "focusX": 51,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "gans",
+   "id": "sp090",
+   "nl": "Slobeend",
+   "latin": "Spatula clypeata",
+   "focusX": 26,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp070",
+   "nl": "Veldleeuwerik",
+   "latin": "Alauda arvensis",
+   "focusX": 49,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "kiekendief",
+   "id": "sp006",
+   "nl": "Sperwer",
+   "latin": "Accipiter nisus",
+   "focusX": 49,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp117",
+   "nl": "Geelgors",
+   "latin": "Emberiza citrinella",
+   "focusX": 51,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "reiger",
+   "id": "sp082",
+   "nl": "Kleine Zilverreiger",
+   "latin": "Egretta garzetta",
+   "focusX": 50,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "stelt",
+   "id": "sp100",
+   "nl": "Wulp",
+   "latin": "Numenius arquata",
+   "focusX": 71,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "meeuw",
+   "id": "sp095",
+   "nl": "Kleine Mantelmeeuw",
+   "latin": "Larus fuscus",
+   "focusX": 51,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "kleur",
+   "id": "sp037",
+   "nl": "Putter",
+   "latin": "Carduelis carduelis",
+   "focusX": 46,
+   "pose": "tak"
+  },
+  {
+   "group": "hoen",
+   "id": "sp078",
+   "nl": "Meerkoet",
+   "latin": "Fulica atra",
+   "focusX": 51,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "gans",
+   "id": "sp091",
+   "nl": "Wintertaling",
+   "latin": "Anas crecca",
+   "focusX": 49,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp178",
+   "nl": "Gekraagde Roodstaart",
+   "latin": "Phoenicurus phoenicurus",
+   "focusX": 47,
+   "pose": "tak"
+  },
+  {
+   "group": "riet",
+   "id": "sp110",
+   "nl": "Rietzanger",
+   "latin": "Acrocephalus schoenobaenus",
+   "focusX": 48,
+   "pose": "tak"
+  },
+  {
+   "group": "kiekendief",
+   "id": "sp253",
+   "nl": "Ruigpootbuizerd",
+   "latin": "Buteo lagopus",
+   "focusX": 50,
+   "pose": "vlucht"
+  },
+  {
+   "group": "reiger",
+   "id": "sp083",
+   "nl": "Grote Zilverreiger",
+   "latin": "Ardea alba",
+   "focusX": 48,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "stelt",
+   "id": "sp102",
+   "nl": "Tureluur",
+   "latin": "Tringa totanus",
+   "focusX": 50,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "meeuw",
+   "id": "sp096",
+   "nl": "Stormmeeuw",
+   "latin": "Larus canus",
+   "focusX": 48,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "uil",
+   "id": "sp012",
+   "nl": "Kerkuil",
+   "latin": "Tyto alba",
+   "focusX": 50,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "specht",
+   "id": "sp016",
+   "nl": "Grote Bonte Specht",
+   "latin": "Dendrocopos major",
+   "focusX": 46,
+   "pose": "tak"
+  },
+  {
+   "group": "kleur",
+   "id": "sp040",
+   "nl": "Goudvink",
+   "latin": "Pyrrhula pyrrhula",
+   "focusX": 28,
+   "pose": "tak"
+  },
+  {
+   "group": "hoen",
+   "id": "sp079",
+   "nl": "Waterhoen",
+   "latin": "Gallinula chloropus",
+   "focusX": 54,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zee",
+   "id": "sp160",
+   "nl": "Zeekoet",
+   "latin": "Uria aalge",
+   "focusX": 45,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "gans",
+   "id": "sp130",
+   "nl": "Smient",
+   "latin": "Mareca penelope",
+   "focusX": 46,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zang",
+   "id": "sp179",
+   "nl": "Tapuit",
+   "latin": "Oenanthe oenanthe",
+   "focusX": 49,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "riet",
+   "id": "sp118",
+   "nl": "Rietgors",
+   "latin": "Emberiza schoeniclus",
+   "focusX": 52,
+   "pose": "tak"
+  },
+  {
+   "group": "valk",
+   "id": "sp008",
+   "nl": "Torenvalk",
+   "latin": "Falco tinnunculus",
+   "focusX": 50,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "arend",
+   "id": "sp467",
+   "nl": "Dwergarend",
+   "latin": "Hieraaetus pennatus",
+   "focusX": 50,
+   "pose": "vlucht",
+   "info": "Kleine arend met brede vleugels en een lange staart. In het lichte kleed contrasteren de donkere slagpennen met de lichte onderzijde."
+  },
+  {
+   "group": "gier",
+   "id": "sp461",
+   "nl": "Aasgier",
+   "latin": "Neophron percnopterus",
+   "focusX": 48,
+   "pose": "vlucht",
+   "info": "In vlucht vallen de lichte romp, donkere slagpennen en het puntige staartprofiel op. Uiterst zeldzame dwaalgast."
+  },
+  {
+   "group": "kiekendief",
+   "id": "sp250",
+   "nl": "Steppekiekendief",
+   "latin": "Circus macrourus",
+   "focusX": 45,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "reiger",
+   "id": "sp172",
+   "nl": "Lepelaar",
+   "latin": "Platalea leucorodia",
+   "focusX": 34,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "stelt",
+   "id": "sp152",
+   "nl": "Drieteenstrandloper",
+   "latin": "Calidris alba",
+   "focusX": 49,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "meeuw",
+   "id": "sp165",
+   "nl": "Visdief",
+   "latin": "Sterna hirundo",
+   "focusX": 51,
+   "pose": "vlucht"
+  },
+  {
+   "group": "uil",
+   "id": "sp014",
+   "nl": "Steenuil",
+   "latin": "Athene noctua",
+   "focusX": 42,
+   "pose": "tak"
+  },
+  {
+   "group": "specht",
+   "id": "sp017",
+   "nl": "Kleine Bonte Specht",
+   "latin": "Dryobates minor",
+   "focusX": 49,
+   "pose": "tak"
+  },
+  {
+   "group": "kleur",
+   "id": "sp287",
+   "nl": "Pestvogel",
+   "latin": "Bombycilla garrulus",
+   "focusX": 51,
+   "pose": "tak"
+  },
+  {
+   "group": "hoen",
+   "id": "sp106",
+   "nl": "Patrijs",
+   "latin": "Perdix perdix",
+   "focusX": 63,
+   "pose": "natuurlijk"
+  },
+  {
+   "group": "zee",
+   "id": "sp171",
+   "nl": "Jan-van-gent",
+   "latin": "Morus bassanus",
+   "focusX": 57,
+   "pose": "vlucht"
+  },
+  {
+   "group": "gans",
+   "id": "sp188",
+   "nl": "Zomertaling",
+   "latin": "Spatula querquedula",
+   "focusX": 38,
+   "pose": "natuurlijk"
+  }
  ]
 }

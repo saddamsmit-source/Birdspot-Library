@@ -1,6 +1,6 @@
 """
 Birdspot Library — F: diashow op de startpagina
-  F-01  50 vogels: 15 groepen bijzondere soorten; elke foto lokaal aanwezig met maker, licentie en Commons-bron
+  F-01  100 vogels in 15 groepen; eigen lokale opnamen voor Home met maker, licentie en Commons-bron
   F-02  opeenvolgende vogels komen uit een andere groep
   F-03  advance(): na 30 s de volgende vogel, rest-tijd blijft staan, loopt rond aan het eind
   F-04  hervatten: opgeslagen positie (vogel 6, 20 s) → na 10 s zichtbare tijd vogel 7;
@@ -11,10 +11,12 @@ Birdspot Library — F: diashow op de startpagina
 Starten (vanuit repo-root):  python tests/test_showcase.py
 """
 import http.server
+import hashlib
 import json
 import re
 import threading
 from pathlib import Path
+from urllib.parse import unquote
 
 from playwright.sync_api import sync_playwright
 
@@ -24,6 +26,11 @@ SHOTS.mkdir(parents=True, exist_ok=True)
 SPEC = json.loads((ROOT / "tools" / "showcase" / "species.json").read_text(encoding="utf-8"))
 CREDITS = json.loads((ROOT / "assets" / "showcase" / "credits.json").read_text(encoding="utf-8"))
 LICENSE = re.compile(r"^(CC0|Public domain|CC BY(-SA)? \d(\.\d)?)$")
+
+
+def photo_reference(value):
+    title = unquote(value).split("/wiki/")[-1].replace("_", " ").strip().casefold()
+    return title.removeprefix("file:")
 
 
 class Quiet(http.server.SimpleHTTPRequestHandler):
@@ -60,24 +67,44 @@ def main():
             birds = p.evaluate("async () => (await import('/src/features/home/specialBirds.js')).FEATURED_BIRDS")
             groups = SPEC["groups"]
             assert len(groups) == 15 and all(len(g[2]) >= 2 for g in groups), "F-01 15 groepen, elk minstens 2"
-            assert sum(len(g[2]) for g in groups) == 50 and len(birds) == 50, f"F-01 {len(birds)} vogels met foto"
-            assert len({b["id"] for b in birds}) == 50, "F-01 dubbele soort"
+            assert sum(len(g[2]) for g in groups) == 50 and len(SPEC["extra"]) == 50 and len(birds) == 100
+            assert len({b["id"] for b in birds}) == 100, "F-01 dubbele soort"
+            assert {b["group"] for b in birds[50:]} == {g[0] for g in groups}, "F-01 elke groep heeft aanvullingen"
+            assert len({b["image"] for b in birds}) == 100, "F-01 dubbel fotopad"
+            assert len({photo_reference(b["source"]) for b in birds}) == 100, "F-01 dubbele bronopname"
+            guide = p.evaluate("""async () => {
+              const { GUIDE_PHOTOS } = await import('/src/features/species/guidePhotos.js');
+              const { GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } = await import('/src/features/species/guideMedia.js');
+              return {
+                photos: [...Object.values(GUIDE_PHOTOS), ...Object.values(GUIDE_PLUMAGE).flatMap(Object.values),
+                         ...Object.values(GUIDE_POSES).flat()],
+                heroPaths: Object.values(GUIDE_HEROES)
+              };
+            }""")
+            guide_references = {photo_reference(photo[field]) for photo in guide["photos"]
+                                for field in ("file", "source") if photo.get(field)}
+            guide_paths = {photo["image"] for photo in guide["photos"] if photo.get("image")} | set(guide["heroPaths"])
+            guide_hashes = {hashlib.sha256(path.read_bytes()).digest() for name in guide_paths
+                            if (path := ROOT / name.lstrip("/")).is_file()}
             for b in birds:
                 c = CREDITS[b["id"]]
-                assert (ROOT / b["image"].lstrip("/")).is_file(), b["image"]
+                path = ROOT / b["image"].lstrip("/")
+                assert b["image"].startswith("/assets/showcase/") and path.is_file(), b["image"]
+                assert b["image"] not in guide_paths and hashlib.sha256(path.read_bytes()).digest() not in guide_hashes, b["id"]
+                assert all(photo_reference(b[field]) not in guide_references for field in ("file", "source")), b["id"]
                 assert b["author"] and b["author"] == c["author"] and LICENSE.match(b["license"]), b
-                assert b["source"].startswith("https://commons.wikimedia.org/wiki/File:"), b
+                assert unquote(b["source"]).startswith("https://commons.wikimedia.org/wiki/File:"), b
             compact_ids = set(p.evaluate("async () => (await import('/src/data/species.js')).SPECIES.filter(s => s.compact).map(s => s.id)"))
             for b in birds:
                 assert b["id"] not in compact_ids or b.get("info"), f"F-01 {b['nl']}: dwaalgast zonder herkenningstekst"
-            print("F-01 OK — 50 lokale foto's met maker, licentie en herkenning")
+            print("F-01 OK — 100 eigen Home-foto's met maker, licentie en herkenning, zonder overlap met soortkaarten")
 
             assert all(birds[i]["group"] != birds[(i + 1) % len(birds)]["group"] for i in range(len(birds))), "F-02"
             print("F-02 OK — afwisselende groepen")
 
             adv = p.evaluate("""async () => { const m = await import('/src/features/home/specialBirds.js');
               return [m.advance({index:0,elapsed:0}, 29999), m.advance({index:0,elapsed:0}, 30000),
-                      m.advance({index:3,elapsed:25000}, 10000), m.advance({index:49,elapsed:0}, 30000, 50)]; }""")
+                      m.advance({index:3,elapsed:25000}, 10000), m.advance({index:99,elapsed:0}, 30000)]; }""")
             assert adv == [{"index": 0, "elapsed": 29999}, {"index": 1, "elapsed": 0},
                            {"index": 4, "elapsed": 5000}, {"index": 0, "elapsed": 0}], adv
             print("F-03 OK — advance()")

@@ -140,6 +140,8 @@ def main():
     for _key, _label, birds in spec["groups"]:
         for b in birds:
             sid, nl, latin, pose = b["id"], b["nl"], b["latin"], b["pose"]
+            if credits.get(sid, {}).get("image"):
+                continue  # individuele, gecontroleerde Home-opname uit het fotoregister
             chosen = selection.get(sid)
             if chosen:
                 if credits.get(sid, {}).get("file") != chosen or not (ASSETS / f"{sid}.webp").exists():
