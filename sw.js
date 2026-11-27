@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.27.38';
+const APP_VERSION = '1.27.40';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -267,7 +267,7 @@ self.addEventListener('fetch', event => {
   if (url.origin !== self.location.origin) return;
   if (url.pathname.startsWith(atScope('api/'))) return;
   // De optionele intro mag byte-ranges rechtstreeks bij de host ophalen.
-  if (url.pathname === atScope('assets/aviandra-intro.webm')) return;
+  if (url.pathname === atScope('assets/aviandra-intro.mp4')) return;
 
   if (url.pathname.startsWith(atScope('assets/species/audio/'))) {
     event.respondWith(guideAudioResponse(request));

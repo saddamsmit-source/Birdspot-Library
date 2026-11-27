@@ -54,28 +54,26 @@
 <body>
 
   <!-- Optional welcome video with a still for reduced motion and slow connections. -->
-  <div id="birdspotSplash" class="birdspot-splash" role="dialog" aria-modal="true"
+  <div id="birdspotSplash" class="birdspot-splash" role="dialog" aria-modal="true" hidden
        aria-label="Aviandra wordt geopend">
-    <video class="birdspot-splash__video" data-src="assets/aviandra-intro.webm"
-           muted playsinline preload="none" aria-hidden="true"></video>
     <div class="birdspot-splash__frame">
       <img class="birdspot-splash__art" src="assets/birdspot-ijsvogel-splash.avif"
            alt="IJsvogel in een groen bos" fetchpriority="high" decoding="async">
+      <video class="birdspot-splash__video" data-src="assets/aviandra-intro.mp4"
+             muted playsinline preload="none" aria-hidden="true"></video>
       <span class="birdspot-splash__wordmark" aria-hidden="true">Aviandra</span>
     </div>
     <div class="birdspot-splash__fallback" hidden aria-hidden="true">
       <div><strong>Aviandra</strong><span>ONTDEK · REGISTREER · BELEEF</span></div>
     </div>
     <button type="button" id="birdspotSplashSkip" class="birdspot-splash__skip">Direct openen</button>
-    <p class="birdspot-splash__loading-note" role="status"></p>
   </div>
-  <script src="src/services/startup-splash.js"></script>
 
   <!-- ══ APP ROOT ════════════════════════════════════════ -->
   <div id="app">
 
     <!-- Schermen worden hier ingeladen door de router -->
-    <main id="main-view" role="main" aria-live="polite">
+    <main id="main-view" role="main" aria-live="polite" tabindex="-1">
       <!-- placeholder terwijl JS laadt -->
       <div id="boot-screen">
         <div class="boot-logo">
@@ -134,6 +132,7 @@
     </nav>
 
   </div><!-- /app -->
+  <script src="src/services/startup-splash.js"></script>
 
 </body>
 </html>
