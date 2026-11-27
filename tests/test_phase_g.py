@@ -4,7 +4,7 @@ BIRDSPOT LIBRARY — Fase G tests (PWA / Offline)
 G-01  Service Worker geregistreerd; app laadt offline < 4 s (L-009)
 G-02  Alle verplichte precache-URLs aanwezig na installatie (L-010)
 G-03  0 media-downloads bij release-update; media-cache overleeft (L-052)
-G-04  Update-toast "Nieuwe versie · Nu laden" zichtbaar (L-011)
+G-04  Melding tijdens gebruik en bijwerken op verzoek (L-011)
 G-05  Manifest aanwezig en parseerbaar; juiste velden
 """
 
@@ -18,6 +18,8 @@ import time
 
 import pytest
 from playwright.sync_api import sync_playwright
+
+from test_pilot_offline_new_sighting import IMAGE, NOTE, check_real_photo, stored
 
 # ── Constanten ────────────────────────────────────────────────────────────────
 PORT       = 8806
@@ -222,11 +224,11 @@ def test_g03_zero_media_downloads_on_update(server):
         browser.close()
 
 
-# ── G-04: Update-toast "Nieuwe versie · Nu laden" ─────────────────────────────
+# ── G-04: Updatepop-up ───────────────────────────────────────────────────────
 def test_g04_update_toast_visible(server):
     """
-    De open app vindt zelf een nieuw serviceworker-bestand zodra de verbinding
-    terugkomt. De test herlaadt de pagina niet en roept reg.update() niet aan.
+    De voorgrondcontrole vindt een echte nieuwe serviceworker terwijl de
+    app open blijft. Alleen de knop brengt de pagina naar die versie.
     """
     sw_path = ROOT / "sw.js"
     original = sw_path.read_text(encoding="utf-8")
@@ -235,23 +237,64 @@ def test_g04_update_toast_visible(server):
         ctx = browser.new_context(
             viewport={"width": 390, "height": 844},
             locale="nl-NL",
+            reduced_motion="reduce",
         )
-        page = open_fresh_page(ctx)
-        wait_for_sw(page, 12_000)
+        page = ctx.new_page()
+        page.clock.install()
+        page.goto(BASE_URL, wait_until="domcontentloaded")
+        wait_for_sw(page, 90_000)
+        page.locator("#birdspotSplash").wait_for(state="detached")
         update = page.locator('#appUpdate')
         update.wait_for(state='attached')
         assert update.is_hidden()
 
         try:
-            ctx.set_offline(True)
-            page.wait_for_function('() => !navigator.onLine')
+            page.evaluate("() => window.beforeUpdate = true")
             bumped = re.sub(r"const APP_VERSION = '[^']+'", "const APP_VERSION = 'test-g04-update'", original, count=1)
             assert bumped != original, "APP_VERSION niet gevonden in sw.js"
             sw_path.write_text(bumped, encoding="utf-8")
-            assert update.is_hidden()
-            ctx.set_offline(False)
-            update.wait_for(state='visible', timeout=15_000)
-            assert update.inner_text() == 'Nieuwe versie · Nu laden'
+            page.clock.fast_forward(60_000)
+            update.wait_for(state='visible', timeout=90_000)
+            assert page.evaluate("() => window.beforeUpdate === true")
+            assert page.locator('#appUpdateMessage').inner_text() == 'Nieuwe versie beschikbaar'
+            assert update.inner_text() == 'Nu bijwerken'
+
+            page.locator('#fab').click()
+            page.locator('[data-quick-action="seen"]').click()
+            page.locator("#speciesPickerBtn").click()
+            page.locator("#spPickerSearch").fill("Koolmees")
+            page.locator('#spPickerList .species-row').filter(has_text="Koolmees").first.click()
+            draft = page.locator('#sightLocation')
+            draft.fill('Nog onbewaarde proeflocatie')
+            # De pop-up ligt onder het formulier. Controleer ook een
+            # knopactivatie die vlak vóór het openen zou zijn ingezet.
+            update.evaluate("button => button.click()")
+            assert page.locator('#appUpdateMessage').inner_text().startswith('Sla je invoer op')
+            assert draft.input_value() == 'Nog onbewaarde proeflocatie'
+            assert page.evaluate("() => window.beforeUpdate === true")
+            page.locator("#sightingMore summary").click()
+            page.locator("#sightNotes").fill(NOTE)
+            page.locator("#sightingMediaInput").set_input_files({
+                "name": "update-pilot.png", "mimeType": "image/png", "buffer": IMAGE,
+            })
+            page.wait_for_function("""() => [...document.querySelectorAll(
+                '#addSightingSheet .media-thumb img'
+            )].some(i => i.complete && i.naturalWidth === 24)""")
+            page.locator('#addSheetSubmit').click()
+            page.locator('#addSightingSheet').wait_for(state='detached')
+            before = stored(page)
+            assert len(before) == 1 and len(before[0]["photoIds"]) == 1
+            photo_id = before[0]["photoIds"][0]
+            assert check_real_photo(page, photo_id)["bytes"] == list(IMAGE)
+
+            with page.expect_navigation(wait_until='domcontentloaded', timeout=30_000):
+                update.click()
+            assert page.evaluate("() => window.beforeUpdate === undefined")
+            assert page.evaluate("() => caches.has('birdspot-app-vtest-g04-update')")
+            assert stored(page) == before
+            assert check_real_photo(page, photo_id)["bytes"] == list(IMAGE)
+            page.locator('#appUpdate').wait_for(state='attached')
+            assert page.locator('#appUpdate').is_hidden()
         finally:
             sw_path.write_text(original, encoding="utf-8")
 
