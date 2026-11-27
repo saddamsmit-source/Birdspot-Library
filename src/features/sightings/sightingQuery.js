@@ -6,6 +6,7 @@
  * Pure functies (geen DOM, geen opslag): direct te testen in node.
  */
 import { verificationStatus, validPin } from './evidence.js';
+import { dateInRange, seasonOf, sightingDateRange } from '../../data/seasons.js';
 
 export const normalizeSearch = value => String(value ?? '').toLocaleLowerCase('nl').normalize('NFD')
   .replace(/\p{M}/gu, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
@@ -43,6 +44,19 @@ export function placeOf(sighting, placesById = new Map()) {
   if (text) return { kind: pin ? 'text-pin' : 'text', name: text, place: null };
   if (pin) return { kind: 'gps', name: `${Number(sighting.lat).toFixed(4)}, ${Number(sighting.lon).toFixed(4)}`, place: null };
   return { kind: 'none', name: '', place: null };
+}
+
+/** Sleutel en label voor de lijst, ook bruikbaar voor oude waarnemingen zonder gekoppelde plek. */
+export function sightingPlaceChoice(sighting, placesById) {
+  const { kind, name, place } = placeOf(sighting, placesById);
+  if (place) return [`place:${place.id}`, name];
+  if (kind === 'gps') return ['gps', 'Alleen GPS'];
+  if (kind === 'none') return ['none', 'Zonder plek'];
+  return [`text:${name.toLocaleLowerCase('nl')}`, name];
+}
+
+export function sightingSpeciesKey(sighting) {
+  return sighting.speciesId || (sighting.speciesName ? `name:${normalizeSearch(sighting.speciesName)}` : '');
 }
 
 /**
@@ -153,18 +167,22 @@ export function periodFromQuery(query, today = new Date()) {
  * Filter + zoek. Woorden in de zoekopdracht moeten allemaal voorkomen (EN), filters binnen een groep
  * zijn OF, tussen groepen EN.
  * @param {object[]} sightings
- * @param {{ query?: string, filters?: object, speciesId?: string|null }} state
+ * @param {{ query?: string, filters?: object, speciesId?: string|null, place?: string, period?: string, season?: string }} state
  * @param {{ speciesById?: Map, placesById?: Map, today?: Date }} ctx
  */
 export function filterSightings(sightings, state = {}, ctx = {}) {
   const { speciesById = new Map(), placesById = new Map(), today = new Date() } = ctx;
   const filters = cleanFilters(state.filters);
   const period = periodFromQuery(state.query || '', today);
+  const selectedRange = sightingDateRange(state.period, today);
   const words = period.rest ? period.rest.split(' ') : [];
   const groups = FILTER_GROUPS.filter(group => filters[group.key].length);
   return (sightings || []).filter(s => {
     if (!s || typeof s !== 'object' || typeof s.id !== 'string') return false;
-    if (state.speciesId && s.speciesId !== state.speciesId) return false;
+    if (state.speciesId && sightingSpeciesKey(s) !== state.speciesId) return false;
+    if (state.place && sightingPlaceChoice(s, placesById)[0] !== state.place) return false;
+    if (state.season && seasonOf(s.date) !== state.season) return false;
+    if (!dateInRange(s.date, selectedRange)) return false;
     for (const group of groups) {
       if (!filters[group.key].some(value => FILTER_TEST[group.key](s, value))) return false;
     }

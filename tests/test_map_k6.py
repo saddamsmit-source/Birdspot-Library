@@ -5,7 +5,7 @@ Birdspot Library — Kaart K6: seizoenswolken, klikbare legenda, bijzondere waar
   K6-03  legenda 'Gehoord' is een filter (incl. Merlin); nogmaals tikken zet hem uit
   K6-04  seizoenslegenda filtert pins én wolken; meerdere seizoenen tegelijk
   K6-05  ★ bijzondere waarneming (zeldzaam, dwaalgast, Rode Lijst) op de pin; filter 'alleen bijzonder'
-  K6-06  periode 'dit jaar' en 'Wis filters' zet alles terug
+  K6-06  'Dit jaar', halfjaar en seizoen combineren, ook zonder wolken. 'Wis filters' zet alles terug.
   K6-07  plekkaartje toont beste maanden; geen paginafouten; screenshots 390 px
 
 Starten (vanuit repo-root):  python tests/test_map_k6.py
@@ -30,7 +30,7 @@ PLACES = [
 ROWS = [  # Lauwersmeer: lente 3x (apr 2, mei 1), winter 1x; Achtertuin: zomer 1x, vorig jaar
     {"id": "r1", "speciesId": "sp243", "speciesName": "Roerdomp", "observationMethod": "heard", "placeId": "pl_a", "lat": 53.37, "lon": 6.20, "date": f"{Y}-04-02"},
     {"id": "r2", "speciesId": "sp118", "speciesName": "Rietgors", "observationMethod": "seen", "placeId": "pl_a", "lat": 53.37, "lon": 6.20, "date": f"{Y}-04-20"},
-    {"id": "r3", "speciesId": "sp252", "speciesName": "Zeearend", "observationMethod": "both", "placeId": "pl_a", "lat": 53.37, "lon": 6.20, "date": f"{Y}-05-11"},
+    {"id": "r3", "speciesId": "sp252", "speciesName": "Zeearend", "observationMethod": "both", "placeId": "pl_a", "lat": 53.37, "lon": 6.20, "date": f"{Y}-05-28"},
     {"id": "r4", "speciesId": "sp118", "speciesName": "Rietgors", "observationMethod": "heard", "identificationSource": "merlin", "merlinVerification": "suggested", "placeId": "pl_a", "lat": 53.37, "lon": 6.20, "date": f"{Y}-01-15"},
     {"id": "r5", "speciesId": "sp045", "speciesName": "Merel", "observationMethod": "seen", "placeId": "pl_b", "lat": 52.10, "lon": 5.10, "date": f"{Y - 1}-07-01"},
 ]
@@ -56,6 +56,7 @@ def main():
             ctx = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="reduce", service_workers="block")
             ctx.add_init_script(LEAFLET_STUB)
             p = ctx.new_page()
+            p.clock.set_fixed_time(dt.datetime.fromisoformat(f"{Y}-11-25T12:00:00+01:00"))
             errors = []
             p.on("pageerror", lambda e: errors.append(str(e)))
             p.goto(f"http://127.0.0.1:{server.server_address[1]}/", wait_until="domcontentloaded")
@@ -119,10 +120,20 @@ def main():
 
             p.locator("#mapPeriodSelect").select_option("year")
             assert p.locator("#mapCount").inner_text() == "4 van 5 pins"
+            assert p.locator("#mapPeriodSelect option").all_text_contents() == ["Alles", "Dit jaar", "Afgelopen 6 maanden"]
+            p.locator("#mapPeriodSelect").select_option("6m")
+            assert p.locator("#mapCount").inner_text() == "1 van 5 pins"
+            p.locator("#mapCloudsToggle").uncheck()
+            p.locator('[data-season-filter="winter"]').click()
+            assert p.locator("#mapCount").inner_text() == "0 van 5 pins"
+            p.locator('[data-season-filter="lente"]').click()
+            assert p.locator("#mapCount").inner_text() == "1 van 5 pins"
+            assert p.locator('[data-season="lente"]').get_attribute("aria-pressed") == "true"
+            p.locator("#mapCloudsToggle").check()
             p.locator('[data-legend="seen"]').evaluate("e => e.click()")
             p.locator("#mapClearFilters").click()
             assert p.locator("#mapCount").inner_text() == "5 pins" and p.locator("#mapPeriodSelect").input_value() == "all"
-            assert p.locator('[aria-pressed="true"][data-legend], [aria-pressed="true"][data-season]').count() == 0
+            assert p.locator('[aria-pressed="true"]:is([data-legend], [data-season], [data-season-filter])').count() == 0
             p.locator("#leafletMap").dispatch_event("pointerdown")
             print("K6-06 OK — periode en alles wissen")
 

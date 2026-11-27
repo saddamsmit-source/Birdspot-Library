@@ -4,7 +4,7 @@
  * Seizoenskleuren volgen de vogelgids-conventie (zomer warm, winter koud) en zijn bewust anders dan
  * de pinkleuren gezien (blauw) / gehoord (geel) / beide (oranje).
  */
-import { SEASONS, SEASON_ORDER } from '../../data/seasons.js';
+import { SEASON_ORDER, monthOf, seasonOf, sightingDateRange, dateInRange } from '../../data/seasons.js';
 import { statusForSighting } from './visualization.js';
 
 export const SEASON_COLORS = Object.freeze({
@@ -13,22 +13,9 @@ export const SEASON_COLORS = Object.freeze({
   zomer:  '#E8547A',
   herfst: '#B9844A',
 });
-export { SEASON_ORDER };
+export { SEASON_ORDER, monthOf, seasonOf };
 
 const MONTH_SHORT = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
-
-/** Maand (0–11) van een ISO-datum, of null. */
-export function monthOf(date) {
-  const m = /^\d{4}-(\d{2})-\d{2}/.exec(String(date || ''));
-  const n = m ? Number(m[1]) - 1 : NaN;
-  return n >= 0 && n <= 11 ? n : null;
-}
-
-export function seasonOf(date) {
-  const m = monthOf(date);
-  if (m === null) return null;
-  return SEASON_ORDER.find(k => SEASONS[k].months.includes(m)) || null;
-}
 
 /** Aantal waarnemingen per seizoen. */
 export function seasonCounts(records) {
@@ -69,12 +56,10 @@ export function cloudRadiusPx(n) {
 /**
  * Filters uit de klikbare legenda en het filterpaneel.
  * legend: 'seen' | 'heard' (incl. Merlin) | 'both' | null
- * seasons: Set van seizoenen (leeg = alle) · notableOnly · period: 'all' | 'year' | '12m'
+ * seasons: Set van seizoenen (leeg = alle) · notableOnly · period: 'all' | 'year' | '6m'
  */
 export function applyLegendFilters(rows, { legend = null, seasons = new Set(), notableOnly = false, period = 'all', now = new Date() } = {}, speciesById = new Map()) {
-  const yearStart = `${now.getFullYear()}-01-01`;
-  const back = new Date(now); back.setFullYear(back.getFullYear() - 1);
-  const since12 = back.toISOString().slice(0, 10);
+  const range = sightingDateRange(period, now);
   return (rows || []).filter(r => {
     if (legend) {
       const st = statusForSighting(r);
@@ -82,8 +67,6 @@ export function applyLegendFilters(rows, { legend = null, seasons = new Set(), n
     }
     if (seasons.size && !seasons.has(seasonOf(r.date))) return false;
     if (notableOnly && !isNotable(r, speciesById)) return false;
-    if (period === 'year' && !(String(r.date || '') >= yearStart)) return false;
-    if (period === '12m' && !(String(r.date || '') >= since12)) return false;
-    return true;
+    return dateInRange(r.date, range);
   });
 }
