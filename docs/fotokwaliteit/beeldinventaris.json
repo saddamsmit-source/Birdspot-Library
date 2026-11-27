@@ -622,11 +622,11 @@
     "sp021 GUIDE_POSES[0]"
    ],
    "sha1": "7d5b3ac21495bb81848b0f91a7e41691d22bf584",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "opvliegen",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld."
   },
   "/assets/species/plumage/sp022-flight.webp": {
    "refs": [

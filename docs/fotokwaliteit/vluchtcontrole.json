@@ -1026,16 +1026,26 @@
    "nameNL": "Ekster",
    "registry": "GUIDE_POSES[0]",
    "sexLabel": null,
-   "class": "vlucht",
+   "class": "opvliegen",
    "quality": "goed",
-   "decision": "goedgekeurd",
-   "target": null,
-   "newLabel": null,
-   "newNote": null,
-   "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+   "decision": "uit-rol",
+   "target": "poses",
+   "newLabel": "Vertrek vanaf een rots",
+   "newNote": "Let op de witte handvleugel en de lange staart.",
+   "reason": "De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld.",
    "airborne": true,
    "rights": "VERIFIED",
-   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0"
+   "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 4.0",
+   "previous": [
+    {
+     "class": "vlucht",
+     "decision": "goedgekeurd",
+     "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+     "airborne": true,
+     "date": "2026-11-10"
+    }
+   ],
+   "reviewDate": "2026-11-27"
   },
   "/assets/species/plumage/sp026-flight.webp": {
    "n": 54,

@@ -7186,9 +7186,9 @@
     ],
     "sp021": [
       {
-        "label": "In vlucht",
-        "flight": true,
-        "note": "Let op de brede witte vleugelvelden en de lange staart.",
+        "label": "Vertrek vanaf een rots",
+        "flight": false,
+        "note": "Let op de witte handvleugel en de lange staart.",
         "file": "Eurasian Magpie 2023-10-16 01.jpg",
         "nl": "Ekster",
         "latin": "Pica pica",
@@ -7197,15 +7197,15 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg",
         "showSourceLink": false,
-        "alt": "Ekster in vlucht met gespreide zwart-witte vleugels en een lange staart.",
+        "alt": "Ekster bij vertrek vanaf een rots, met gespreide zwart-witte vleugels en een lange staart.",
         "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-07",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ekster",
-        "visualCheck": "Ekster in vlucht met gespreide zwart-witte vleugels en een lange staart.",
+        "visualCheck": "Witte handvleugel en lange staart zichtbaar. De fotograaf beschrijft vertrek vanaf een rots.",
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp021-flight.webp",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+        "flightReview": "uit-rol 2026-11-27: De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld."
       }
     ],
     "sp022": [
@@ -10506,7 +10506,6 @@
     "sp005": "/assets/species/sp005.webp",
     "sp009": "/assets/species/plumage/sp009-male-rest.webp",
     "sp016": "/assets/species/plumage/sp016-hero-male.webp",
-    "sp020": "/assets/species/plumage/sp020-male.webp",
     "sp043": "/assets/species/plumage/sp043-hero-male.webp",
     "sp091": "/assets/species/plumage/sp091-hero-male.webp",
     "sp116": "/assets/species/plumage/sp116-flight.webp",

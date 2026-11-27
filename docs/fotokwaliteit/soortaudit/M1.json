@@ -333,11 +333,11 @@
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp021-flight.webp": {
-          "role": "In vlucht",
-          "content": "Vrij in de lucht boven water; gespreide zwart-witte vleugels met witte handvleugel, lange staart. Geen contact met de steen rechtsonder.",
+          "role": "Overige herkenningsfoto's",
+          "content": "Gespreide zwart-witte vleugels met witte handvleugel en lange staart. De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld.",
           "sexAge": "niet vastgesteld",
           "quality": "goed",
-          "verdict": "goedgekeurd"
+          "verdict": "uit-rol"
         },
         "/assets/species/plumage/sp021-juv-review.webp": {
           "role": "Verenkleed (Juveniel)",
@@ -352,7 +352,8 @@
         "Lengte 44–46 → 46–50 cm; broedduur 17–18 → 17–24 dagen; nestjongen 24–30 → 22–30 dagen (VB_EKSTER).",
         "Hoofdfoto en vluchtfoto naast de oorspronkelijke bronbestanden bekeken. Neutrale labels behouden.",
         "Lengte en spanwijdte met een tweede uitgever berekend, en vergelijking met Gaai onderbouwd.",
-        "F3-R06: Gedocumenteerd jeugdkleed toegevoegd."
+        "F3-R06: Gedocumenteerd jeugdkleed toegevoegd.",
+        "F3-REV2-R05b: vertrekfoto bij overige herkenningsfoto’s."
       ],
       "missing": [],
       "sexPolicy": "Geslachten gelijk; geen geslachtsvakken.",

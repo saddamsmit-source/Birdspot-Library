@@ -18,11 +18,9 @@ BIRDS = {
     "sp020": {
         "name": "Middelste Bonte Specht",
         "latin": "Dendrocoptes medius",
-        "hero": "/assets/species/plumage/sp020-male.webp",
-        "others": [
-            "/assets/species/sp020.webp",
-            "/assets/species/plumage/sp020-pose.webp",
-        ],
+        "hero": "/assets/species/sp020.webp",
+        "adult": "/assets/species/plumage/sp020-male.webp",
+        "others": ["/assets/species/plumage/sp020-pose.webp"],
         "flight": "/assets/species/plumage/sp020-flight.webp",
         "comparison": "Grote Bonte Specht",
         "registeredUnique": 4,
@@ -147,7 +145,7 @@ def validate_bird_media():
             assert status["audited"] and status["verdict"] == "PARTIALLY TESTED"
             assert sid in knowledge
             assert {asset["image"] for asset in status["assets"]} == {
-                bird["hero"], *bird["others"], bird["flight"],
+                bird["hero"], bird["adult"], *bird["others"], bird["flight"],
             }
         else:
             assert not status["audited"] and status["verdict"] == "NOT TESTED"
@@ -162,16 +160,16 @@ def validate_bird_media():
         assert cr["nl"] == bird["name"] and cr["latin"] == bird["latin"]
 
         if sid == "sp020":
-            # One original asset appears in both credits and one pose.
-            assert media["heroes"][sid] == bird["hero"]
+            # R05b uses the default portrait as hero. The older image remains in the shared adult group.
+            assert not media["heroes"].get(sid) and cr["image"] == bird["hero"]
             assert set(variants.keys()) == {"adult_m"}
             adult = variants["adult_m"]
-            assert adult["image"] == bird["hero"]
+            assert adult["image"] == bird["adult"]
             assert adult.get("sex") not in ("male","female")
             assert "zonder geslachtslabel" in adult["sexNote"]
             assert adult["age"] == "adult"
             assert len(poses) == 3
-            assert sorted(p["image"] for p in poses if not p.get("flight")) == sorted(bird["others"])
+            assert {p["image"] for p in poses if not p.get("flight")} == {bird["hero"], *bird["others"]}
             flight = next(p for p in poses if p.get("flight"))
             assert flight["image"] == bird["flight"] and flight["flightReview"].startswith("goedgekeurd")
             assert cr["image"] == poses[0]["image"] == "/assets/species/sp020.webp"
@@ -206,7 +204,7 @@ def validate_bird_media():
             assert item["source"].startswith("https://")
             assert item["licenseUrl"].startswith("https://creativecommons.org/licenses/")
             if path in unique_files:
-                # Only the sp020 old portrait may be referenced twice.
+                # Only the sp020 hero may be registered as both the default portrait and a pose.
                 assert sid == "sp020" and path == "/assets/species/sp020.webp"
                 assert unique_files[path]["source"] == item["source"]
                 continue
@@ -257,6 +255,10 @@ def mobile_ui():
                             assert h["ok"] and h["alt"] and h["src"].endswith(bird["hero"]), (sid,h)
                             panel = page.locator("#sdPanel-herkenning")
                             expect(panel).to_have_count(1)
+                            if bird.get("adult"):
+                                adult_photo = panel.locator(f'.sd-plumage[data-plumage="adult"] img[src$="{bird["adult"]}"]')
+                                expect(adult_photo).to_have_count(1)
+                                expect(panel.locator('[data-plumage="adult_m"]')).to_have_count(0)
                             others = panel.locator("section.sd-poses .sd-field-photo img")
                             expect(others).to_have_count(len(bird["others"]))
                             for path in bird["others"]:

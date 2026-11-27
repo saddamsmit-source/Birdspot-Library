@@ -809,6 +809,7 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp020",
         "source": "middelste-bonte-specht",
+        "plumage": "adult_m",
         "marks": "Middelste: witte schoudervlekken, roze onderstaart en licht gezicht."
       }
     ],
@@ -1616,10 +1617,11 @@ export const GUIDE_COMPARISONS = [
   },
   {
     label: 'Gaai en Ekster · in vlucht',
+    pairHidden: 'F3-REV2-R05b 27-11-2026 (eigenaarbesluit B): foto van Ekster toont vertrek vanaf een rots; gelijkwaardige vluchtfase niet bevestigd',
     flight: true,
     birds: [
       {id: 'sp026', source: 'gaai', marks: 'Rozegrijs lichaam en blauw-zwart gebandeerd vleugelveld. Van achteren valt de witte stuit op.'},
-      {id: 'sp021', source: 'ekster', marks: 'Zwart-wit met brede witte vleugelvelden en een lange, smalle staart.'},
+      {id: 'sp021', source: 'ekster', photoMissing: 'vluchtcontrole 2026-11-27: vertrekfoto, geen geschikte vrije vluchtfoto', marks: 'Zwart-wit met brede witte vleugelvelden en een lange, smalle staart.'},
     ],
     rows: [
       {label: 'Vleugel', values: ['Klein blauw veld met donkere dwarsbandjes.', 'Breed wit veld in de handvleugel.']},

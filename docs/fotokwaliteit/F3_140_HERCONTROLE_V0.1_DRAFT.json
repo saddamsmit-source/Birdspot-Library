@@ -4636,12 +4636,12 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto",
+            "role": "Verenkleed (Volwassen)",
             "path": "/assets/species/plumage/sp020-male.webp",
             "oldRights": "VERIFIED"
           },
           {
-            "role": "Overige herkenningsfoto's",
+            "role": "Hoofdfoto",
             "path": "/assets/species/sp020.webp",
             "oldRights": "VERIFIED"
           },
@@ -4790,7 +4790,174 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R05",
+          "date": "2026-11-27",
+          "base": "1cb52274ce39dce19d22b69864063025efe6917d",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Verenkleed (Volwassen)",
+              "path": "/assets/species/plumage/sp020-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Middle_spotted_woodpecker_(Dendrocoptes_medius_medius)_male.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Rugzijaanzicht op stam met wit gezicht en roze onderstaart. De kruin valt op deze hoek weinig op. Scherpe vergroting is beperkt tot de gebruikte afgeleide van 500 × 750 px.",
+              "blobSha": "5b97492bdb2cbcb2f0db5d3d82fff2b211b49560",
+              "sourceSha1": "fd8845f994f2b0acd1777dba001feb715aa7dadd",
+              "sourceSha256": "d29ac5c7da77c78177cd4bd2caeef1a19af3f5625c7a2fad0c95ce4d35f74627",
+              "localSha256": "a49d4f9a758cc4ad0fb739af1e5841ed43a5766875bf9bb703f9fb7c7f95ab33",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "PARTIALLY TESTED",
+              "roleCheck": "VERIFIED - aanvullende foto van een volwassen vogel, zonder geslachtslabel",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp020.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Middle-spotted_woodpecker_(Dendrocopos_medius),_Parc_du_Rouge-Clo%C3%AEtre,_Brussels_(49179578882)_(cropped).jpg",
+              "author": "Frank Vassen from Brussels, Belgium",
+              "license": "CC BY 2.0",
+              "visual": "Rode kruin, wit gezicht en fijne flankstrepen direct zichtbaar. 1585 × 1600 px. Alternatief eerste beeld voor de eigenaar.",
+              "blobSha": "5e70acf4b18a5902e6ca1771416c227106a76085",
+              "sourceSha1": "6acceb41c178626702be2f3afba4b05de4dc2f1f",
+              "sourceSha256": "34cad784f244e46deaefd3bd568cde395773a75cb110d79060dfe5d4595fed50",
+              "localSha256": "94b688a4100f1f6a5be3a904953faa2dd00a0f2b463fc85bb41ed7cd6bdca510",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - hoofdfoto met zichtbare kruin, lichte kop en flankstrepen",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/plumage/sp020-pose.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Mittelspecht_bei_der_Nahrungssuche.jpg",
+              "author": "Mikes Makro",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vogel foerageert op een stam. Flankstrepen en roze onderstaart zijn zichtbaar. Kop deels gedraaid.",
+              "blobSha": "04a0bdaf9a5d90f87378bfa36e7d78c19f1fa53f",
+              "sourceSha1": "92db5f376d0e49c5370809ca4d21de764118278b",
+              "sourceSha256": "944fe3ad5e464e1d5bbe91a80c3d7dabdd21a38de15b5212389e4b10ae44a838",
+              "localSha256": "00745607a7aae4125bc78bc8a986bc8d19b78aca4ee58ab4cee2b60c5dbd4236",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - rust op een stam",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp020-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Middelste-bonte-specht-1_(28031708853).jpg",
+              "author": "Yves Hoebeke",
+              "license": "CC BY-SA 2.0",
+              "visual": "Vogel vrij van ondergrond en takken. Romp, open vleugels en vluchtvorm zichtbaar op 725 × 483 px.",
+              "blobSha": "094d565cd995f5ab0122e55b67e8f9543a397aaa",
+              "sourceSha1": "750efa9ebef51a4d2f4410e6967d9218072095ae",
+              "sourceSha256": "f16e04b8e44312ae9bee6dad3fdda6503a13ead575249f896babf928f7edd3f1",
+              "localSha256": "7ff538ed84362ab704ceabc5475d1722039c5b84c63b5c7cb4e22f87a406f973",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "PARTIALLY TESTED - vergroting beperkt",
+              "roleCheck": "VERIFIED - vrij in de lucht",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/middelste-bonte-specht",
+              "readDate": "2026-11-27",
+              "findings": "Het oog ligt vrij in het lichte gezicht. De rode kruin mist de duidelijke donkere onderrand. Flankstrepen en roze onderstaart ondersteunen de herkenning. Een jonge Grote Bonte Specht heeft ook een rode kruin. Klagende territoriumroep en zeldzame korte roffel hebben eigen beschrijvingen.",
+              "scope": "Herkenning en toepasselijke geluidsbeschrijving, geen uitspraak over alle soortclaims"
+            },
+            "anwb": "NOT TESTED - uitgeverspagina en openbaar ouder fragment tonen de soortpassage niet",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/8830",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina heropend; geen nieuwe teller uit deze ronde"
+            },
+            "independence": "NOT VERIFIED - dossier van deze ronde wacht op onafhankelijke aftekening"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
+            "herkenning": "PARTIALLY TESTED - nieuw eerste beeld en bestaande jeugdwaarschuwing",
+            "voorstel": "B — maak het bestaande zijaanzicht van Frank Vassen de eerste foto en behoud de andere opname; laat het ontbrekende jeugdbeeld expliciet open."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp020 ↔ sp016 Middelste/Grote Bonte Specht",
+              "bothDirections": "VERIFIED - drie tabbladen in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - leeftijdsvergelijking bewust volwassen Middelste versus jonge Grote, verder volwassen en vlucht; bronrechten partnerfoto’s behouden",
+              "diagnosticText": "PARTIALLY TESTED - drie rijen per paneel; lichte kop, flank en onderstaart, rode kruin nooit op zichzelf"
+            },
+            {
+              "pair": "sp020 ↔ sp017 Middelste/Kleine Bonte Specht",
+              "bothDirections": "VERIFIED - rustpaneel in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - rustfoto’s bruikbaar op rug/schouder, onderstaart en kop; oudere bewijsgrenzen bij Kleine Bonte Specht behouden",
+              "diagnosticText": "PARTIALLY TESTED - gelabelde rijen en neutraal volwassen label behouden"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - origineel, rechten, signaal, bronrol en offline decode; menselijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp020-alarm-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Alarmroep_Middelste_bonte_specht.mp3",
+                "author": "Justin Jansen",
+                "license": "CC BY 3.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "1f955b206891989c1c5bd44320461f8c5348651e1c1035bb83332ffc72a3f662",
+                "localSha256": "dfb7280789debe71589d541a4c7f56781bcc4d22e599e601a8c26c1292577990",
+                "correlations": [
+                  0.9758,
+                  0.9861,
+                  0.9799
+                ],
+                "duration": 26.322,
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 4,
+            "audioCount": 1,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Menselijke beluistering van de opgenomen alarmroep ontbreekt",
+            "Juvenielbeeld ontbreekt; een rode kruin alleen onderscheidt de soort niet van een jonge Grote Bonte Specht"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — maak het bestaande zijaanzicht van Frank Vassen de eerste foto en behoud de andere opname; laat het ontbrekende jeugdbeeld expliciet open.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de opgenomen alarmroep ontbreekt",
+              "Juvenielbeeld ontbreekt; een rode kruin alleen onderscheidt de soort niet van een jonge Grote Bonte Specht"
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -4813,7 +4980,7 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "In vlucht",
+            "role": "Overige herkenningsfoto's",
             "path": "/assets/species/plumage/sp021-flight.webp",
             "oldRights": "VERIFIED"
           },
@@ -4942,7 +5109,151 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R05",
+          "date": "2026-11-27",
+          "base": "1cb52274ce39dce19d22b69864063025efe6917d",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp021.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_2022_05_03.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Volledig zijaanzicht met witte buik en schouder, glanzende vleugel en lange staart.",
+              "blobSha": "185282225c44a773208e2d24545e16393b8c4400",
+              "sourceSha1": "b31b18a604fe8e14ccd9a4ebf67261ef999aa93b",
+              "sourceSha256": "08e5254ae770a378853ca49f63a0df0809752ed6412fc41b8bc9c0e1b64bee83",
+              "localSha256": "2bbd2e1fd2a53a5287d23deb6ae4466df97c0474769899894330303178c3d78b",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - rust, neutraal",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/plumage/sp021-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Witte delen van de open handvleugel en de lange staart zichtbaar. Vogel is los van de rots; bron beschrijft vertrek vanaf rots. Afstand tot het afzetmoment is onbekend.",
+              "blobSha": "5f0006f49a11e918ed631106cf071ae176e590ce",
+              "sourceSha1": "55b5f9ec8924c94bef9ad58ea751882fe492b71a",
+              "sourceSha256": "be163e0134abcec7badc7b3e414dda447da3a4168679eff9d6825b72c8a041bb",
+              "localSha256": "1eb063f262e540e9c468709c9d367e32504faf7a0ec8adaeaffeffe7d5b07209",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED - herkenningskenmerken zichtbaar",
+              "roleCheck": "VERIFIED - vertrek vanaf een rots volgens bron, getoond bij overige herkenningsfoto’s",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp021-juv-review.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_juvenile_-_Kharkiv_2024.jpg",
+              "author": "Lystopad",
+              "license": "CC BY-SA 4.0",
+              "visual": "De uitsnede toont het hele juveniel op de rand, korte staart, mondhoek en open snavel. Origineel beschrijft juveniel.",
+              "blobSha": "2b97db7f8ba6132e7b3b093f4510821de849d860",
+              "sourceSha1": "6f67a616588ac4cb047cf0be4089fe4e9be32c45",
+              "sourceSha256": "2c11a660567e32007f904e5f963c925cc1e28499cad26696cb668c6d044de91f",
+              "localSha256": "bc7c0a2e8554e0e847acfe7bdf700fcc66ec631263989faf911318092e869cfe",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - juveniel, herkenbare leeftijdskenmerken en individuele bron",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ekster",
+              "readDate": "2026-11-27",
+              "findings": "Zwart-witte romp, grote witte schoudervlek en lange staart zijn leidend. De donkere veren kunnen groen, paars of blauw glanzen. De open handvleugel toont veel wit.",
+              "scope": "Herkenning en toepasselijke geluidsbeschrijving, geen uitspraak over alle soortclaims"
+            },
+            "anwb": "NOT TESTED - uitgeverspagina en openbaar ouder fragment tonen de soortpassage niet",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/15490",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina heropend; geen nieuwe teller uit deze ronde"
+            },
+            "independence": "NOT VERIFIED - dossier van deze ronde wacht op onafhankelijke aftekening"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
+            "herkenning": "PARTIALLY TESTED - vertrekfoto met herkenningstekst; Lijkt op blijft in beide richtingen",
+            "voorstel": "B — laat de herkenningstekst over witte handvleugel en lange staart zichtbaar; geef de Eksterfoto een duidelijk label voor het vertrek vanaf de rots. Laat het vluchtpaneel alleen staan als gelijkwaardige vluchtbeelden bevestigd zijn."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp021 ↔ sp026 Ekster/Gaai",
+              "bothDirections": "VERIFIED - Lijkt op in beide richtingen",
+              "photoEquivalence": "N/A - tekstvergelijking; gelijkwaardige vluchtfase niet vastgesteld",
+              "diagnosticText": "PARTIALLY TESTED - vergelijk witte vleugelvelden, witte stuit en staartlengte"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - origineel, rechten, signaal, bronrol en offline decode; menselijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp021-call-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_(Pica_pica)_(W1CDR0001537_BD28).ogg",
+                "author": "Aubrey John Williams / The British Library Board",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "0865ea6c517e92fab4405efe3fe65070fa62f833d7c31ec28fb925ed566b9b87",
+                "localSha256": "42e1a2a4d67301c65cd48b07cfb5c086c54a777aaf81833a5f7c1dfbfe71127f",
+                "correlations": [
+                  0.9853,
+                  0.9946,
+                  0.9934
+                ],
+                "duration": 7.6,
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 3,
+            "audioCount": 1,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Menselijke beluistering van de geregistreerde roep ontbreekt",
+            "Gelijkwaardig fotopaar in vrije vlucht voor Ekster en Gaai ontbreekt"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — laat de herkenningstekst over witte handvleugel en lange staart zichtbaar; geef de Eksterfoto een duidelijk label voor het vertrek vanaf de rots. Laat het vluchtpaneel alleen staan als gelijkwaardige vluchtbeelden bevestigd zijn.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de geregistreerde roep ontbreekt",
+              "Gelijkwaardig fotopaar in vrije vlucht voor Ekster en Gaai ontbreekt"
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -5093,7 +5404,163 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R05",
+          "date": "2026-11-27",
+          "base": "1cb52274ce39dce19d22b69864063025efe6917d",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp022.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Carrion_crow_perched_on_a_branch_01.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Vrij zijaanzicht met donkere krachtige snavel, bevederde basis en zwart kleed.",
+              "blobSha": "fa13ed47e9ecad27b88cfc2439b88d78713c4572",
+              "sourceSha1": "d0c3345107b6db8214b03a7849df912f6f00a672",
+              "sourceSha256": "c5cb3e125e8da75c48c449b732f1ca3ba7c05f69e4179ac89c1400de4744a291",
+              "localSha256": "af149654d33328e7d2a09c9a55c77498dfffec5fe3b3b3d376bc337ed2b5e1a3",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - rust, neutraal",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp022-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_in_flight_JdP_20191213_t160752.jpg",
+              "author": "Marie-Lan Taÿ Pamart",
+              "license": "CC BY 4.0",
+              "visual": "Grote donkere snavel, breed geopende vleugels en gespreide staart in vrije lucht.",
+              "blobSha": "02e994e4d32ea05a415363b2aafb62731eae546e",
+              "sourceSha1": "32621aa194eaf55b749b016049429a5fb29f9ea2",
+              "sourceSha256": "45f46b1e87705cad5988d337acc56b13c20d127bd6397b080cbe9561cc5b4e41",
+              "localSha256": "8cf643526ba15460b901c99410216aa9e71dfedb19034498346e6f368938c2a2",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - vrije vlucht",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp022-juv-review.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_juvenile_begging_JdP_20250722_n1.jpg",
+              "author": "Marie-Lan Taÿ Pamart",
+              "license": "CC BY 4.0",
+              "visual": "Bedelende jonge vogel met roze mondbinnenkant; individuele bron bevestigt juveniel.",
+              "blobSha": "5b867268710d20bf1a0529585f6e1c1b616dbb8e",
+              "sourceSha1": "b25c261d3e8defaadda6a4eac4230efb4b5850df",
+              "sourceSha256": "6f2113160046e8543ed41ad142751213aea48db6f53b76043ed04eda4985cd37",
+              "localSha256": "2c3a6a86ce88406ad60893d596454c64d019f7710f6cfa611870de6bf15ab91f",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - juveniel, herkenbare leeftijdscontext",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-kraai",
+              "readDate": "2026-11-27",
+              "findings": "De vogel, poten en krachtige snavel zijn zwart. Een volwassen Roek heeft een bleke, kale snavelbasis; bij een jonge Roek ontbreekt die. Een Raaf toont in geschikte hoek een wigvormige staart; de Zwarte Kraai heeft een hoekiger staart. De roep is laag en krassend.",
+              "scope": "Herkenning en toepasselijke geluidsbeschrijving, geen uitspraak over alle soortclaims"
+            },
+            "anwb": "NOT TESTED - uitgeverspagina en openbaar ouder fragment tonen de soortpassage niet",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/15671",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina heropend; geen nieuwe teller uit deze ronde"
+            },
+            "independence": "NOT VERIFIED - dossier van deze ronde wacht op onafhankelijke aftekening"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
+            "herkenning": "PARTIALLY TESTED - staartvorm van Raaf toegevoegd; snavelbasis en jeugdvoorbehoud Roek behouden",
+            "voorstel": "B — voeg een korte zin over de wigvormige staart van Raaf toe en behoud de waarschuwing voor jonge Roek. Zoek een gelijkwaardig beeldpaar alleen als aparte vervolgstap."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp022 ↔ sp025 Zwarte Kraai/Kauw",
+              "bothDirections": "VERIFIED - rust en vlucht, beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - twee foto’s per houding; partnerfoto’s behouden hun eigen audit",
+              "diagnosticText": "PARTIALLY TESTED - twee rijen per paneel. Snavel, bouw en lichte iris alleen bij volwassen Kauw"
+            },
+            {
+              "pair": "sp022 ↔ sp024 Zwarte Kraai/Roek",
+              "bothDirections": "PARTIALLY TESTED - tekst op kraaikaart, geen fotopaneel",
+              "photoEquivalence": "N/A - geen gelijkwaardig fotopaar getoond",
+              "diagnosticText": "PARTIALLY TESTED - leeftijdsvoorbehoud bij Roek zichtbaar"
+            },
+            {
+              "pair": "sp022 → sp027 Zwarte Kraai/Raaf",
+              "bothDirections": "PARTIALLY TESTED - tekst op de kaart van Zwarte Kraai",
+              "photoEquivalence": "N/A - tekstvergelijking",
+              "diagnosticText": "PARTIALLY TESTED - wigvormige staart Raaf bij goed zicht in vlucht, hoekigere staartrand bij Zwarte Kraai"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - origineel, rechten, signaal, bronrol en offline decode; menselijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp022-call-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Carrion_Crow_(Corvus_corone)_(W1CDR0001425_BD18).ogg",
+                "author": "Lawrence Shove / The British Library Board",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "fbff030012f82aee1fbc02dfdf4cd1bea53abe86f305deaedbb5619bbcaa51ae",
+                "localSha256": "bc144a67ab7738d463ce2139571d0af93eb7a27964f61e0c1465661df4d52d70",
+                "correlations": [
+                  0.9882,
+                  0.9905,
+                  0.9989
+                ],
+                "duration": 4.9,
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 3,
+            "audioCount": 1,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Menselijke beluistering van de geregistreerde roep ontbreekt",
+            "Gelijkwaardig Roek-beeldpaar ontbreekt; de snavelbasis en leeftijdswaarschuwing blijven in tekst beschikbaar"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — voeg een korte zin over de wigvormige staart van Raaf toe en behoud de waarschuwing voor jonge Roek. Zoek een gelijkwaardig beeldpaar alleen als aparte vervolgstap.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de geregistreerde roep ontbreekt",
+              "Gelijkwaardig Roek-beeldpaar ontbreekt; de snavelbasis en leeftijdswaarschuwing blijven in tekst beschikbaar"
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -17891,13 +18358,27 @@
         "pr": 354,
         "baseSHA": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
         "ownerStart": "Eigenaarbesluit 24-11-2026 12:16 CET: start R04 na geslaagd R03d-checkpoint"
+      },
+      {
+        "round": "F3-REV2-R05",
+        "species": [
+          "sp020",
+          "sp021",
+          "sp022"
+        ],
+        "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+        "date": "2026-11-27",
+        "baseSHA": "1cb52274ce39dce19d22b69864063025efe6917d",
+        "ownerStart": "27-11-2026: eigenaar vraagt in Aviandra-gesprek de volgende ronde",
+        "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+        "pr": 381
       }
     ],
     "counts": {
       "total": 140,
-      "reexamined": 12,
+      "reexamined": 15,
       "ownerGateOpen": 0,
-      "ownerDecisions": 12,
+      "ownerDecisions": 15,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -17950,6 +18431,12 @@
         "batch": "F3-REV2-R04",
         "decision": "B voor sp017, sp018 en sp019. Toscane-kandidaat NEE. R05 niet starten.",
         "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/354#issuecomment-7134854859"
+      },
+      {
+        "date": "2026-11-27",
+        "batch": "F3-REV2-R05",
+        "decision": "B voor Middelste Bonte Specht, Ekster en Zwarte Kraai. Akkoord in het Aviandra-gesprek.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381"
       }
     ]
   }
