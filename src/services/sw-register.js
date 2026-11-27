@@ -1,7 +1,9 @@
 /** Controleer automatisch op updates. De gebruiker kiest wanneer de app herlaadt. */
 
-const UPDATE_INTERVAL_MS = 5 * 60_000;
+const UPDATE_INTERVAL_MS = 60_000;
 const UPDATE_COOLDOWN_MS = 30_000;
+const ACTIVATION_TIMEOUT_MS = 15_000;
+const AVAILABLE_MESSAGE = 'Nieuwe versie beschikbaar';
 
 function hasActiveInput() {
   return Boolean(document.querySelector(
@@ -15,51 +17,81 @@ if ('serviceWorker' in navigator) {
   const serviceWorker = navigator.serviceWorker;
   // Relatief (i.p.v. vast "/sw.js") zodat registratie en scope ook onder een
   // subpad kloppen (bv. een GitHub Pages-projectpagina) — zie sw.js SCOPE_PATH.
-  serviceWorker.register('./sw.js').then(reg => {
+  serviceWorker.register('./sw.js', { updateViaCache: 'none' }).then(reg => {
     let controller = serviceWorker.controller;
-    let reloadRequested = false;
+    let activationTimer;
     let reloadAvailable = false;
     let checkingUpdate = false;
     let lastUpdateCheck = -Infinity;
+    const popup = document.createElement('aside');
+    popup.id = 'appUpdatePopup';
+    popup.className = 'toast show app-update';
+    popup.setAttribute('aria-label', 'App-update');
+    popup.hidden = true;
+    const message = document.createElement('strong');
+    message.id = 'appUpdateMessage';
+    message.textContent = AVAILABLE_MESSAGE;
     const button = document.createElement('button');
     button.id = 'appUpdate';
     button.type = 'button';
-    button.className = 'toast show app-update';
-    button.textContent = 'Nieuwe versie · Nu laden';
-    button.hidden = true;
-    document.body.appendChild(button);
+    button.textContent = 'Nu bijwerken';
+    button.setAttribute('aria-describedby', message.id);
+    popup.append(message, button);
+    const announcement = document.createElement('span');
+    announcement.className = 'sr-only';
+    announcement.setAttribute('role', 'status');
+    document.body.append(announcement, popup);
+
+    function showMessage(text) {
+      if (message.textContent !== text) message.textContent = text;
+      if (announcement.textContent !== text) announcement.textContent = text;
+    }
 
     function showAvailableUpdate() {
-      button.hidden = !reg.waiting && !reloadAvailable;
+      const available = Boolean(reloadAvailable || (controller && reg.waiting));
+      if (available && popup.hidden) showMessage(AVAILABLE_MESSAGE);
+      popup.hidden = !available && !activationTimer;
     }
 
     button.addEventListener('click', () => {
       if (hasActiveInput()) {
-        button.textContent = 'Rond je invoer af · Probeer opnieuw';
+        showMessage('Sla je invoer op of sluit het formulier en tik daarna opnieuw.');
         return;
       }
       if (reloadAvailable) {
         location.reload();
       } else if (reg.waiting) {
-        reloadRequested = true;
+        const waiting = reg.waiting;
         button.disabled = true;
-        reg.waiting.postMessage({ type: 'apply-update' });
+        showMessage('Aviandra wordt bijgewerkt…');
+        activationTimer = window.setTimeout(() => {
+          activationTimer = undefined;
+          button.disabled = false;
+          showAvailableUpdate();
+          if (!popup.hidden) showMessage('Bijwerken duurde te lang. Probeer opnieuw.');
+        }, ACTIVATION_TIMEOUT_MS);
+        waiting.postMessage({ type: 'apply-update' });
       }
     });
 
     serviceWorker.addEventListener('controllerchange', () => {
-      if (controller) {
+      const previousController = controller;
+      controller = serviceWorker.controller;
+      if (previousController && controller && previousController !== controller) {
+        const reloadRequested = Boolean(activationTimer);
+        window.clearTimeout(activationTimer);
+        activationTimer = undefined;
         reloadAvailable = true;
         button.disabled = false;
         if (reloadRequested && !hasActiveInput()) {
           location.reload();
           return;
         }
-        button.textContent = 'Nieuwe versie · Nu laden';
         showAvailableUpdate();
+        showMessage(hasActiveInput()
+          ? 'Sla je invoer op of sluit het formulier en tik daarna opnieuw.'
+          : AVAILABLE_MESSAGE);
       }
-      reloadRequested = false;
-      controller = serviceWorker.controller;
     });
 
     function watchInstalling() {
