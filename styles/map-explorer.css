@@ -77,11 +77,11 @@
 
 /* Randknoppen rechtsonder, boven de attributie */
 .map-screen .map-side-controls {
-  position: absolute; z-index: 455; right: 10px; bottom: 84px;
-  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+  position: absolute; z-index: 455; right: max(6px, env(safe-area-inset-right, 0px)); bottom: 26px;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
 }
 .map-screen .map-side-controls .map-locate-btn {
-  position: static; width: 46px; height: 46px; border-radius: 15px;
+  position: static; width: 44px; height: 44px; border-radius: 12px;
   background: var(--map-glass); color: var(--map-ink); border: 1px solid var(--map-line);
 }
 

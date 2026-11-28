@@ -26,6 +26,7 @@ import { openQuickAdd }      from './features/sightings/quickAdd.js';
 import { holdTabPresence, withDataLock } from './data/dataLock.js';
 import { recoverOperations, hasPendingMarker } from './data/opJournal.js';
 import { initPlaces }        from './data/places.js';
+import { startLocation }     from './services/location.js';
 
 // Herstel 2B (import met oude tabbladstand): elk open Aviandra-tabblad meldt zich aan.
 holdTabPresence();
@@ -220,6 +221,7 @@ addEventListener('birdspot-recovery-pending', () => {
 if (hasPendingMarker()) await recovery;
 else await Promise.race([recovery, new Promise(resolve => setTimeout(resolve, 1500))]);
 await Promise.race([initPlaces().catch(error => console.error('[places] init', error)), new Promise(resolve => setTimeout(resolve, 1500))]);
+startLocation();
 navigate(ROUTES[initialRoute] ? initialRoute : 'home',{history:false});
 // Signal that the first route has been initialized.
 window.dispatchEvent(new Event('birdspot:ready'));

@@ -177,17 +177,6 @@
   min-height: 16px;
 }
 
-/* GPS-knop varianten */
-.gps-btn--loading svg {
-  animation: spin .8s linear infinite;
-}
-
-.gps-btn--active {
-  background:   var(--brand-light);
-  border-color: var(--brand-light);
-  color:        var(--brand);
-}
-
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ── Soort-picker knop ─────────────────────────────────── */

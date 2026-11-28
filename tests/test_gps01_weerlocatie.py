@@ -8,13 +8,13 @@ terug op Amsterdam en noemde dat "geen locatietoestemming"; zon en weer vroegen 
 Lokale Chromium. Playwright-geolocatie = echte browser-API met een vaste testpositie; time-out en
 'geen signaal' zijn SIMULATIE via een stub op getCurrentPosition. Geen fysieke GPS: Samsung NOT TESTED.
 G1  toestemming + GPS: weer en zon voor de GPS-positie, één locatieaanvraag, geen hoge nauwkeurigheid/watch
-G2  toestemming geweigerd: geen weer voor een verzonnen stad, eerlijke reden, knoppen, zon wacht
+G2  toestemming geweigerd: geen weer voor een verzonnen stad, wel handmatige keuze, zon wacht
 G3  [simulatie] time-out zonder eerdere positie: 'niet te bepalen', geen weerverzoek
 G4  [simulatie] time-out met laatst bekende positie (< 24 u): gebruikt, gemarkeerd 'niet actueel · GPS van hh:mm'
 G5  laatst bekende positie ouder dan 24 u wordt niet gebruikt
 G6  geweigerd met opgeslagen laatst bekende positie: positie vergeten
 G7  zelf een plek kiezen (kaartkiezer met eigen teksten): weer en zon voor die plek, als 'zelf gekozen' benoemd
-G8  GPS weer beschikbaar na handmatige plek: 'GPS opnieuw proberen' → actuele GPS gaat voor
+G8  GPS weer beschikbaar na handmatige plek: locatieknop op Kaart → actuele GPS gaat voor
 G9  weer-cache: terug naar Home binnen 15 min = geen nieuw weerverzoek; hervatten na ≥ 10 min en verplaatst → nieuwe positie en weer
 G10 weer-API offline: bestaande melding, zon blijft werken
 G11 320/390/430 px: melding en knoppen zonder overloop, knoppen ≥ 44 px
@@ -22,6 +22,8 @@ G15 handmatige locatie blijft voor weer en zon beschikbaar als de opslag vol is
 G16 bij uitval van de weerservice blijven de locatieknoppen werken en herstelt weer na GPS-retry
 G17 locatieknop vraagt ook GPS op zonder kaartbibliotheek, met afzonderlijke kaartmelding
 G18 locatieknop centreert de geladen kaart en toont een eigen locatiemarkering
+G19 eerste start vraagt om toestemming; bij heropenen na wegklikken komt de vraag niet opnieuw
+G20 kaartknoppen blijven rechtsonder, bereikbaar en vrij van Pin waarneming op smalle schermen
 G13 kaart 'mijn locatie' zonder toestemming: melding in plaats van stil falen
 G14 offline: elke vanuit src/app.js geïmporteerde module (statisch en dynamisch) staat in de app-shell van sw.js
 G12 privacy: nergens coördinaten in weer/zon; weerverzoek met afgeronde coördinaten; opslag afgerond op 2 decimalen
@@ -156,6 +158,42 @@ def choose_manual_location(page):
     settle(page)
 
 
+def locate_from_map(page):
+    page.locator('.nav-item[data-route="map"]').click()
+    page.locator('#mapLocateBtn').click()
+    expect(page.locator('.toast.show:not(.app-update)')).to_contain_text('Locatie gevonden')
+    page.locator('.nav-item[data-route="home"]').click()
+    settle(page)
+
+
+def check_startup_permission(browser, url):
+    context = browser.new_context(reduced_motion='reduce', service_workers='block')
+    context.add_init_script(SUN)
+    context.add_init_script("""(() => {
+        const original = navigator.permissions.query.bind(navigator.permissions);
+        navigator.permissions.query = options => options.name === 'geolocation'
+          ? Promise.resolve({state: 'prompt'}) : original(options);
+        navigator.geolocation.getCurrentPosition = (_, denied) => {
+            const key = 'native-location-calls';
+            sessionStorage.setItem(key, Number(sessionStorage.getItem(key) || '0') + 1);
+            denied({code: 1});
+        };
+    })();""")
+    try:
+        page = context.new_page()
+        boot(page, url)
+        settle(page)
+        first = page.evaluate("sessionStorage.getItem('native-location-calls')")
+        page.reload(wait_until='domcontentloaded')
+        settle(page)
+        again = page.evaluate("sessionStorage.getItem('native-location-calls')")
+        reason = page.locator('[data-location-reason]').get_attribute('data-location-reason')
+        check('G19', 'een native vraag bij appstart; bij heropenen na wegklikken geen herhaling',
+              first == again == '1' and reason == 'permission', (first, again, reason))
+    finally:
+        context.close()
+
+
 def check_manual_location_recovery(browser, url):
     context, page = home(browser, url)
     try:
@@ -191,7 +229,7 @@ def check_manual_location_recovery(browser, url):
         usable = (
             failure['error'] == 'Weer niet beschikbaar'
             and failure['sunKind'] == 'manual'
-            and controls == ['retry', 'pick']
+            and controls == ['pick']
         )
         if usable:
             page.locator('[data-location-action="pick"]').click()
@@ -203,8 +241,7 @@ def check_manual_location_recovery(browser, url):
             context.set_geolocation(GPS)
             context.grant_permissions(['geolocation'])
             page.weather_down = False
-            page.locator('[data-location-action="retry"]').click()
-            settle(page)
+            locate_from_map(page)
             current = info(page)
             usable = (
                 current['kind'] == current['sunKind'] == 'gps'
@@ -238,8 +275,6 @@ def check_map_location(browser, url):
 
     context, page = home(browser, url, geo=GPS)
     try:
-        page.locator('.nav-item[data-route="map"]').click()
-        page.wait_for_function('window.__birdspotMapTest.map')
         page.evaluate("""() => {
             const marker = window.L.marker;
             window.L.marker = (position, options) => {
@@ -249,12 +284,31 @@ def check_map_location(browser, url):
                 return marker(position, options);
             };
         }""")
+        page.locator('.nav-item[data-route="map"]').click()
+        page.wait_for_function('window.__gpsMapMarker')
+        position = [GPS['latitude'], GPS['longitude']]
+        initial = page.evaluate('window.__birdspotMapTest.map.getCenter()')
         page.locator('#mapLocateBtn').click()
         expect(page.locator('.toast.show:not(.app-update)')).to_contain_text('Locatie gevonden op de kaart.')
-        position = [GPS['latitude'], GPS['longitude']]
         center = page.evaluate('window.__birdspotMapTest.map.getCenter()')
-        check('G18', 'GPS centreert de geladen kaart en maakt een eigen locatiemarkering',
-              [center['lat'], center['lng']] == position and page.evaluate('window.__gpsMapMarker') == position)
+        check('G18', 'locatiemarkering automatisch, de locatieknop centreert de kaart',
+              [initial['lat'], initial['lng']] != position and [center['lat'], center['lng']] == position
+              and page.evaluate('window.__gpsMapMarker') == position)
+        sizes = {}
+        for width in (320, 360, 390, 430):
+            page.set_viewport_size({'width': width, 'height': 667})
+            sizes[width] = page.locator('#mapScreen').evaluate("""screen => {
+              const rect = id => screen.querySelector('#' + id).getBoundingClientRect();
+              const frame = screen.getBoundingClientRect();
+              const location = rect('mapLocateBtn'), layer = rect('mapLayerBtn'), pin = rect('mapAddPinBtn');
+              return {right: frame.right - location.right, bottom: frame.bottom - location.bottom,
+                target: Math.min(location.width, location.height, layer.width, layer.height),
+                overlap: [location, layer].some(b => b.left < pin.right && b.right > pin.left
+                  && b.top < pin.bottom && b.bottom > pin.top)};
+            }""")
+        check('G20', 'kaart- en locatieknop binnen de hoek, zonder overlap en tikvlak ≥ 44 px',
+              all(0 <= s['right'] <= 8 and 16 <= s['bottom'] <= 32 and s['target'] >= 44
+                  and not s['overlap'] for s in sizes.values()), sizes)
     finally:
         context.close()
 
@@ -299,9 +353,9 @@ def run():
             # G2 geweigerd
             ctx, p = home(b, url, geo=None)
             i = info(p)
-            check('G2', 'geweigerd: geen weer voor een verzonnen stad, eerlijke reden, twee knoppen, zon wacht',
+            check('G2', 'geweigerd: eerlijke reden, handmatige plek en zon wacht',
                   i['reason'] == 'denied' and 'geen toegang tot je locatie' in i['weather'] and not p.weather_requests and no_amsterdam(i)
-                  and [x['a'] for x in i['buttons']] == ['retry', 'pick'] and i['sunNote'] and 'locatie bekend' in i['sunNote'],
+                  and [x['a'] for x in i['buttons']] == ['pick'] and i['sunNote'] and 'locatie bekend' in i['sunNote'],
                   {'weather': i['weather'][:160], 'sun': i['sunNote'], 'requests': p.weather_requests})
 
             # G7 zelf een plek kiezen
@@ -318,16 +372,16 @@ def run():
             check('G7', 'zelf gekozen plek: weer en zon daarvoor, benoemd als zelf gekozen, opgeslagen afgerond',
                   i['kind'] == 'manual' and 'Zelf gekozen plek' in (i['place'] or '') and 'zelf gekozen, geen GPS' in (i['place'] or '')
                   and i['sunKind'] == 'manual' and latlon(p.weather_requests[-1]) == (52.16, 5.39) and manual and manual['lat'] == 52.16
-                  and [x['a'] for x in i['buttons']] == ['retry', 'pick'] and no_amsterdam(i), {'place': i['place'], 'manual': manual})
+                  and [x['a'] for x in i['buttons']] == ['pick'] and no_amsterdam(i), {'place': i['place'], 'manual': manual})
 
             # G8 GPS weer beschikbaar → gaat voor
             ctx.grant_permissions(['geolocation']); ctx.set_geolocation(GPS)
-            p.locator('[data-location-action="retry"]').click()
+            locate_from_map(p)
             p.wait_for_function("() => document.querySelector('#weatherSection .weather-place')?.dataset.locationKind === 'gps'", timeout=15000)
             i = info(p)
-            check('G8', 'GPS na handmatige plek: "GPS opnieuw proberen" → actuele GPS gaat voor, knoppen weg',
-                  'Je huidige omgeving' in (i['place'] or '') and latlon(p.weather_requests[-1]) == (51.92, 4.47) and not i['buttons']
-                  and i['geoCalls'][-1].get('maximumAge') == 0, i['place'])
+            check('G8', 'GPS na handmatige plek: actuele GPS gaat weer voor',
+                  'Je huidige omgeving' in (i['place'] or '') and latlon(p.weather_requests[-1]) == (51.92, 4.47)
+                  and not i['buttons'] and any(call.get('maximumAge') == 0 for call in i['geoCalls']), i['place'])
             g12_errors += p.errors
             ctx.close()
 
@@ -344,7 +398,7 @@ def run():
             i = info(p)
             check('G4', '[simulatie] geen signaal met laatst bekende positie: gebruikt en gemarkeerd "niet actueel · GPS van hh:mm"',
                   i['kind'] == 'last' and 'Laatst bekende locatie' in (i['place'] or '') and re.search(r'niet actueel · GPS van \d\d:\d\d', i['place'] or '')
-                  and latlon(p.weather_requests[0]) == (51.44, 5.47) and 'niet actueel' in (i['sunPlace'] or '') and [x['a'] for x in i['buttons']] == ['retry', 'pick'],
+                  and latlon(p.weather_requests[0]) == (51.44, 5.47) and 'niet actueel' in (i['sunPlace'] or '') and [x['a'] for x in i['buttons']] == ['pick'],
                   (i['place'], i['sunPlace']))
             ctx.close()
 
@@ -395,6 +449,7 @@ def run():
             check('G12', 'privacy: geen coördinaten in weer/zon, weerverzoek en opslag afgerond, geen paginafouten', g12a and not g12_errors, g12_errors)
             check_manual_location_recovery(b, url)
             check_map_location(b, url)
+            check_startup_permission(b, url)
             b.close()
     failed = [c for c, ok in RESULTS if not ok]
     print(f"GPS-01: {len(RESULTS) - len(failed)}/{len(RESULTS)} PASS{' — FAIL ' + str(failed) if failed else ''}")

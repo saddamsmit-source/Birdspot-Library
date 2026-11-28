@@ -168,7 +168,7 @@ def check(page, width):
     if width == 320:
         sheet.get_by_role('checkbox', name='Roodborst', exact=True).uncheck()
     sheet.get_by_text('Details aanpassen', exact=True).click()
-    sheet.get_by_role('button', name='Gebruik mijn locatie').click()
+    expect(sheet.get_by_role('button', name='Gebruik mijn locatie')).to_have_count(0)
     expect(sheet.locator('#soundPosition')).to_contain_text('GPS is niet beschikbaar')
     expect(sheet.locator('#soundSave')).to_be_disabled()
     expect(sheet.locator('#soundSaveHint')).to_contain_text('Kies een kaartpin')

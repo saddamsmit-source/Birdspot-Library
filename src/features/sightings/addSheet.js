@@ -44,6 +44,7 @@ import { openSpeciesPicker }     from './speciesPicker.js';
 import { placeNameKind }         from './sightingQuery.js';
 import { escHtml }               from '../../utils/html.js';
 import { showToast }             from '../../app.js';
+import { requestPosition }      from '../../services/location.js';
 
 // ── Constants ──────────────────────────────────────────────
 const HABITATS  = ['bos', 'water', 'wei', 'stad', 'kust', 'anders'];
@@ -390,7 +391,6 @@ async function _offerDraft(ov, ctx, isEdit, close) {
   // Hervatten: alleen gegevensvelden; een lopende automatische GPS mag de bewaarde plek niet meer wijzigen.
   ctx.locationRevision++;
   ctx.autoGpsStarted = true;
-  _resetGPSButton(ov);
   const fields = draft.fields;
   const list = (value, fallback) => (Array.isArray(value) ? value.filter(id => typeof id === 'string') : fallback);
   _releaseObjectUrls();
@@ -474,14 +474,10 @@ function _renderFormBody() {
         <input type="text" id="sightLocation" class="form-input"
           placeholder="bijv. Nationaal Park De Hoge Veluwe"
           value="${escHtml(_state.locationName)}">
-        <button class="form-btn-secondary gps-btn${validPin(_state.lat,_state.lon) ? ' gps-btn--active' : ''}"
-          id="sightGpsBtn" type="button">
-          ${_svgGps()}GPS
-        </button>
       </div>
       <div class="form-row sighting-pin-actions">
         <button class="form-btn-secondary sighting-pin-btn" id="sightPinBtn" type="button">⌖ Kies pin op kaart</button>
-        ${validPin(_state.lat,_state.lon) ? '<button class="form-btn-secondary" id="sightClearPin" type="button">Verwijder pin</button>' : ''}
+        <button class="form-btn-secondary" id="sightClearPin" type="button" ${validPin(_state.lat,_state.lon) ? '' : 'hidden'}>Verwijder pin</button>
       </div>
       <div class="form-hint" id="coordsHint">
         ${_coordsHintText()}
@@ -775,6 +771,8 @@ function _linkPlace(ov, id) {
 function _renderHint(ov) {
   const hint = ov.querySelector('#coordsHint');
   if (hint) hint.innerHTML = _coordsHintText();
+  const clearPin = ov.querySelector('#sightClearPin');
+  if (clearPin) clearPin.hidden = !validPin(_state.lat, _state.lon);
 }
 
 function _bindPlaceHint(ov) {
@@ -896,7 +894,6 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
   // Pin on map, or enter coordinates offline in the map picker.
   el.querySelector('#sightPinBtn')?.addEventListener('click',()=>{
     ctx.locationRevision++;
-    _resetGPSButton(ov);
     ctx.cancelPinPicker?.();
     ctx.cancelPinPicker=openPinPicker({
       lat:_state.lat,lon:_state.lon,
@@ -913,7 +910,7 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     });
   });
   el.querySelector('#sightReuseClearPlace')?.addEventListener('click',()=>{
-    // UX-01C: overgenomen plek bewust wissen; daarna GPS-knop of pin (geen automatische GPS).
+    // UX-01C: overgenomen plek bewust wissen; daarna kan de gebruiker een pin kiezen.
     ctx.locationRevision++;
     ctx.autoGpsStarted = true;   // gewist = bewust; automatische GPS vult de plek niet stil opnieuw
     _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.pinAccuracyExactM=null;_state.placeId=null;_state.placeOffer=null;
@@ -927,8 +924,6 @@ function _bindFormEvents(ov, fileInput, close, onSaved, { isEdit, editId, ctx })
     _state.lat=null;_state.lon=null;_state.pinAccuracyM=null;_state.pinAccuracyExactM=null;_state.placeId=null;_state.placeOffer=null;
     _clearAutoName(ov);refresh();
   });
-  // GPS
-  el.querySelector('#sightGpsBtn')?.addEventListener('click', () => _requestGPS(ov,ctx));
   // R05 (eigenaarbesluit 17-11): nieuwe waarneming vult GPS automatisch in als locatietoestemming al gegeven is.
   // Geen toestemmingsvraag, geen blokkade; een gekozen pin of 'wis' wint (locationRevision).
   if (!isEdit && !ctx.autoGpsStarted && _state.lat == null) { ctx.autoGpsStarted = true; _autoGPS(ov, ctx); }
@@ -1404,63 +1399,25 @@ function _fmtShortDate(iso) {
 }
 
 // ── GPS ────────────────────────────────────────────────────
-function _resetGPSButton(ov) {
-  const button = ov.querySelector('#sightGpsBtn');
-  if (!button) return;
-  button.classList.remove('gps-btn--loading');
-  button.innerHTML = _svgGps() + ' GPS';
-  return button;
-}
-
 async function _autoGPS(ov, ctx) {
-  // Intent-token: elke handmatige locatiehandeling (pin-picker openen/bevestigen, wissen, GPS-knop)
-  // verhoogt locationRevision; een automatische meting die daarna binnenkomt wordt genegeerd.
+  // Een gekozen of gewiste pin en een lopende opslag gaan voor op een laat GPS-antwoord.
   const intent = ctx.locationRevision;
-  try {
-    const status = await navigator.permissions?.query?.({ name: 'geolocation' });
-    if (status?.state !== 'granted' || ctx.destroyed || ctx.cancelPinPicker || _state.lat != null || ctx.locationRevision !== intent) return;
-    _requestGPS(ov, ctx, { silent: true, intent });
-  } catch (_) { /* geen Permissions API: handmatige GPS-knop blijft werken */ }
-}
-
-function _requestGPS(ov,ctx,{ silent = false, intent = null } = {}) {
-  if (!navigator.geolocation) { if (!silent) showToast('GPS niet beschikbaar', 'warn'); return; }
-  const btn  = ov.querySelector('#sightGpsBtn');
-  if (!btn) return;
-  // Automatisch: blijf op het intent-token (verhoog niet), zodat iedere handmatige handeling wint.
-  const revision = silent ? intent : ++ctx.locationRevision;
-  btn.classList.add('gps-btn--loading');
-  btn.innerHTML = _svgSpinner() + ' GPS';
-
-  navigator.geolocation.getCurrentPosition(
-    pos => {
-      if (ctx.destroyed || ctx.saving || revision !== ctx.locationRevision) return;
-      if (silent && (ctx.cancelPinPicker || _state.lat != null)) { _resetGPSButton(ov); return; }
-      const before = silent ? draftFields(_state) : null;
-      _state.lat = pos.coords.latitude;
-      _state.lon = pos.coords.longitude;
-      _state.pinAccuracyM = Number.isFinite(pos.coords.accuracy) ? Math.round(pos.coords.accuracy) : null;
-      _state.pinAccuracyExactM = Number.isFinite(pos.coords.accuracy) ? pos.coords.accuracy : null;
-      _state.placeId = null;
-      _resetGPSButton(ov)?.classList.add('gps-btn--active');
-      // R05 + ronde 2B: nooit een venster; een bekende plek binnen de straal wordt inline aangeboden.
-      _decidePlace(ov);
-      // UX-01A: een automatisch gevulde locatie is geen wijziging van de gebruiker (geen sluitvraag).
-      // Alleen velden die de gebruiker zelf nog niet had aangepast, schuiven mee in de beginstand.
-      if (before && ctx.initialFields) {
-        for (const key of ['lat', 'lon', 'pinAccuracyM', 'pinAccuracyExactM', 'placeId', 'locationName', 'autoLocationName']) {
-          if (before[key] === ctx.initialFields[key]) ctx.initialFields[key] = _state[key] ?? null;
-        }
-      }
-      ctx.scheduleSave?.();
-    },
-    () => {
-      if (ctx.destroyed || revision !== ctx.locationRevision) return;
-      _resetGPSButton(ov);
-      if (!silent) showToast('GPS niet beschikbaar — vul locatie handmatig in', 'warn');
-    },
-    { timeout: 10000, maximumAge: 60000 }
-  );
+  const { coords } = await requestPosition({ timeout: 10000, maximumAge: 60000 });
+  if (!coords || ctx.destroyed || ctx.saving || intent !== ctx.locationRevision || ctx.cancelPinPicker || _state.lat != null) return;
+  const before = draftFields(_state);
+  _state.lat = coords.latitude;
+  _state.lon = coords.longitude;
+  _state.pinAccuracyM = Number.isFinite(coords.accuracy) ? Math.round(coords.accuracy) : null;
+  _state.pinAccuracyExactM = Number.isFinite(coords.accuracy) ? coords.accuracy : null;
+  _state.placeId = null;
+  _decidePlace(ov);
+  // Automatisch ingevulde velden laten een ongewijzigd formulier zonder sluitvraag sluiten.
+  if (ctx.initialFields) {
+    for (const key of ['lat', 'lon', 'pinAccuracyM', 'pinAccuracyExactM', 'placeId', 'locationName', 'autoLocationName']) {
+      if (before[key] === ctx.initialFields[key]) ctx.initialFields[key] = _state[key] ?? null;
+    }
+  }
+  ctx.scheduleSave?.();
 }
 
 // ── Cleanup ────────────────────────────────────────────────
@@ -1492,17 +1449,6 @@ function _svgChevronRight() {
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     style="width:18px;height:18px;color:var(--muted);flex-shrink:0">
     <polyline points="9 18 15 12 9 6"/>
-  </svg>`;
-}
-function _svgGps() {
-  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    style="width:14px;height:14px">
-    <circle cx="12" cy="12" r="10"/>
-    <circle cx="12" cy="12" r="3"/>
-    <line x1="12" y1="2" x2="12" y2="5"/>
-    <line x1="12" y1="19" x2="12" y2="22"/>
-    <line x1="2" y1="12" x2="5" y2="12"/>
-    <line x1="19" y1="12" x2="22" y2="12"/>
   </svg>`;
 }
 function _svgPlus() {
