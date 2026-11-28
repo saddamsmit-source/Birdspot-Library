@@ -99,8 +99,10 @@ for (const bird of SPECIES) {
     assert.equal(new Set(keys).size, keys.length, `Duplicate guide photo in ${bird.id} / ${group.key}`);
   }
 }
-assert.equal(guideHeroPhoto('sp075').image, '/assets/species/plumage/sp075-hero-male.webp');
-assert.ok(photosFor('sp075', 'adult_m').includes('/assets/species/plumage/sp075-male-review.webp'));
+// Owner-directed 28-11: promote the source-reviewed Morffew portrait, preserve the previous image once in the male gallery.
+assert.equal(guideHeroPhoto('sp075').image, '/assets/species/plumage/sp075-male-review.webp');
+assert.equal(photosFor('sp075', 'adult_m').filter(path => path === '/assets/species/plumage/sp075-hero-male.webp').length, 1);
+assert.ok(!photosFor('sp075', 'adult_m').includes('/assets/species/plumage/sp075-male-review.webp'));
 assert.ok(photosFor('sp050', 'juv').includes('/assets/species/plumage/sp050-juv-review.webp'));
 for (const id of ['sp008', 'sp009']) {
   const s = species.get(id);

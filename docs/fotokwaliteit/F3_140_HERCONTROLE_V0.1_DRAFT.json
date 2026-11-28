@@ -9509,12 +9509,12 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto (Mannetje)",
+            "role": "Verenkleed (Mannetje)",
             "path": "/assets/species/plumage/sp075-hero-male.webp",
             "oldRights": "VERIFIED"
           },
           {
-            "role": "Verenkleed (Mannetje)",
+            "role": "Hoofdfoto (Mannetje)",
             "path": "/assets/species/plumage/sp075-male-review.webp",
             "oldRights": "VERIFIED"
           },

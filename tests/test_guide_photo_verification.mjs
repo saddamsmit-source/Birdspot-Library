@@ -11,6 +11,7 @@
  * Starten: node tests/test_guide_photo_verification.mjs
  */
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync, existsSync } from 'node:fs';
 import { SPECIES } from '../src/data/species.js';
 import { GUIDE_HEROES, GUIDE_PLUMAGE, GUIDE_POSES } from '../src/features/species/guideMedia.js';
@@ -105,9 +106,13 @@ for (const v of verified) {
     // male showcase image is now the hero. Preserve the 09-11 import's historical 'hero'
     // role and source evidence, but show its original binary only as a second male portrait.
     const blackWoodpeckerUpgrade = v.species === 'sp018';
+    // sp075 owner-directed role swap on 28-11: reuse the earlier source-matched male portrait.
+    const kingfisherUpgrade = v.species === 'sp075';
     const currentHero = blackWoodpeckerUpgrade
       ? GUIDE_PHOTOS.sp018
-      : (archived ? all.find(p => p.image === archived.replacedBy) : active);
+      : kingfisherUpgrade
+        ? all.find(p => p.image === '/assets/species/plumage/sp075-male-review.webp')
+        : (archived ? all.find(p => p.image === archived.replacedBy) : active);
     assert.ok(currentHero, `Actuele hoofdfoto ontbreekt: ${v.species}`);
     assert.equal(GUIDE_HEROES[v.species], currentHero.image, `Hoofdfoto niet ingesteld: ${v.species}`);
     assert.equal(guideHeroPhoto(v.species).image, currentHero.image);
@@ -121,6 +126,20 @@ for (const v of verified) {
       assert.ok(currentHero.source.includes('Dryocopus_martius'));
       assert.ok(active && !archived, 'Original imported male portrait must stay in the active registry');
       assert.notEqual(currentHero.source, active.source, 'Two different source photographs required');
+    } else if (kingfisherUpgrade) {
+      assert.equal(v.target, '/assets/species/plumage/sp075-hero-male.webp');
+      assert.equal(currentHero.image, '/assets/species/plumage/sp075-male-review.webp');
+      assert.equal(currentHero.author, 'Andy Morffew');
+      assert.equal(currentHero.license, 'CC BY 2.0');
+      assert.ok(currentHero.source.includes('19636115768'));
+      assert.ok(active && !archived, 'Original male portrait and historical evidence retained');
+      assert.notEqual(currentHero.source, active.source);
+      const currentBytes = readFileSync(new URL(currentHero.image.slice(1), root));
+      assert.equal(currentBytes.subarray(8, 12).toString(), 'WEBP');
+      assert.ok(!currentBytes.includes('EXIF') && !currentBytes.includes('XMP '));
+      // Same exact local photo reviewed against source on 19-11 (R21 visual-review.json).
+      assert.equal(createHash('sha256').update(currentBytes).digest('hex'),
+        'f9b966c7940609df4404086513eddbdfd67bc42c6a83f8462572449ba6ee0cf6');
     } else if (archived) {
       assert.ok(!active && archived.retiredReason, `Vervangen hoofdfoto staat nog actief: ${v.target}`);
       assert.ok(currentHero.source && currentHero.author && currentHero.license);
@@ -129,8 +148,8 @@ for (const v of verified) {
     const male = guidePlumageGroups(byId.get(v.species)).find(g => g.key === 'adult_m');
     assert.ok(male?.photos.length, `Galerij Mannetje leeg na nieuwe hoofdfoto: ${v.species}`);
     assert.ok(male.photos.every(p => p.image !== currentHero.image), 'Hoofdfoto mag niet in de kleedgalerij worden herhaald');
-    if (blackWoodpeckerUpgrade) {
-      assert.ok(male.photos.some(p => p.image === v.target), 'Imported original must remain visible once under Mannetje');
+    if (blackWoodpeckerUpgrade || kingfisherUpgrade) {
+      assert.equal(male.photos.filter(p => p.image === v.target).length, 1, 'Imported original must remain visible once under Mannetje');
     }
     heroes++;
   }

@@ -6462,7 +6462,7 @@
    "assets": [
     {
      "image": "/assets/species/plumage/sp075-hero-male.webp",
-     "role": "Hoofdfoto (Mannetje)",
+     "role": "Verenkleed (Mannetje)",
      "content": "IJsvogel op een schuine tak, met donkere ondersnavel.",
      "sexAge": "Fotograaf benoemt een mannetje.",
      "quality": "Rustige achtergrond en goed zicht op snavel en lichaam.",
@@ -6476,7 +6476,7 @@
     },
     {
      "image": "/assets/species/plumage/sp075-male-review.webp",
-     "role": "Verenkleed (Mannetje)",
+     "role": "Hoofdfoto (Mannetje)",
      "content": "IJsvogel met donkere ondersnavel op een horizontale tak.",
      "sexAge": "De bestandstitel benoemt een mannetje.",
      "quality": "De snavel is in zijaanzicht goed zichtbaar.",
