@@ -461,14 +461,69 @@
 }
 
 .chart-bar {
-  fill: var(--brand-light);
-  opacity: .85;
-  transition: opacity .15s;
+  fill: currentColor;
 }
+
+.chart-method--seen { color: #51d7a2; }
+.chart-method--heard { color: #8cc6ff; }
+.chart-method--both { color: #f3c777; }
+.chart-method--unrecorded { color: #b7bfb7; }
 
 .chart-bar--zero {
   fill: var(--muted);
   opacity: .25;
+}
+
+.chart-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 2px;
+  color: #f5eee2;
+  font-size: .75rem;
+}
+
+.chart-key li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chart-key__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.chart-counts {
+  color: #f5eee2;
+  font-size: .75rem;
+}
+
+.chart-counts summary {
+  cursor: pointer;
+  align-content: center;
+  min-height: 44px;
+}
+
+.chart-counts table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.chart-counts th,
+.chart-counts td {
+  padding: 6px 3px;
+  border-top: 1px solid #638378;
+  overflow-wrap: anywhere;
+}
+
+.chart-counts th:first-child {
+  text-align: start;
 }
 
 .chart-grid {

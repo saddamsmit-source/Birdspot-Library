@@ -162,6 +162,11 @@ def main():
       p.locator('.nav-item[data-route="home"]').click()
       recent = p.locator('#recentList [data-home-sighting]')
       recent.wait_for()
+      chart = p.locator('#monthlySection')
+      chart.locator('.chart-wrap').wait_for()
+      assert chart.locator('svg .chart-bar').count() == 1
+      assert chart.locator('svg .chart-bar.chart-method--heard').count() == 1
+      assert chart.get_by_text('Niet vastgelegd').count() == 0
       check_home_spacing()
       recent.click()
       p.locator('#detailSightingSheet').wait_for()
@@ -175,6 +180,40 @@ def main():
       assert p.locator('#sightMethodGroup input[value="seen"]').is_checked()
       p.locator('#addSheetCancel').click()
 
+      p.evaluate("""async date => {
+        const { addSightings } = await import('/src/data/sightings.js');
+        const [year, month] = date.split('-').map(Number);
+        const previous = new Date(year, month - 2, 15);
+        const previousDate = previous.getFullYear() + '-' +
+          String(previous.getMonth() + 1).padStart(2, '0') + '-15';
+        const observation = (id, method, when) => ({
+          id: 'monthly-fixture-' + id, speciesId: 'sp002', speciesName: 'Houtduif',
+          observationMethod: method, date: when, count: 4,
+        });
+        await addSightings([
+          observation(1, 'seen', date), observation(2, 'both', date),
+          observation(3, 'both', date), observation(4, null, date),
+          observation(5, 'heard', previousDate), observation(6, 'seen', '2000-01-15'),
+        ]);
+      }""", rows[0]['date'])
+      p.locator('.nav-item[data-route="species"]').click()
+      p.locator('.nav-item[data-route="home"]').click()
+      chart.locator('.chart-key').wait_for()
+      stack = chart.locator('svg g[clip-path]').last.locator('rect')
+      assert stack.count() == 4
+      assert len(set(stack.evaluate_all("segments => segments.map(el => getComputedStyle(el).fill)"))) == 4
+      heights = stack.evaluate_all("segments => segments.map(el => Number(el.getAttribute('height')))")
+      assert heights[0] == heights[1] == heights[3] and heights[2] == heights[0] * 2, heights
+      chart.locator('summary').click()
+      assert chart.locator('tbody tr').count() == 12
+      assert chart.locator('tbody tr').nth(0).locator('td').all_text_contents() == ['1', '1', '2', '1']
+      assert chart.locator('tbody tr').nth(1).locator('td').all_text_contents() == ['0', '1', '0', '0']
+      for width in (320, 390):
+        p.set_viewport_size({"width":width,"height":844})
+        assert chart.locator('.chart-wrap').evaluate('el => el.scrollWidth <= el.clientWidth')
+      chart.locator('summary').click()
+      chart.screenshot(path=str(SHOTS/'mobile_monthly_observation_methods_390.png'), animations='disabled')
+
       p.locator('.nav-item[data-route="species"]').click()
 
       # Final page should not be wider than mobile viewport.
@@ -183,7 +222,7 @@ def main():
         assert p.locator('.signature-species-hero').is_visible()
         assert p.evaluate("() => document.documentElement.scrollWidth<=window.innerWidth+2"),width
       assert not errors,errors
-      print("PASS: local photo of the day, informational species guide, mobile form bounds, ambient pause")
+      print("PASS: daily photo, mobile form, ambient pause and stacked monthly methods")
       context.close();browser.close()
     srv.shutdown()
 if __name__=='__main__':main()

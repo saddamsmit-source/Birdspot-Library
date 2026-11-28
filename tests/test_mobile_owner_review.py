@@ -1,5 +1,6 @@
 """Reproduce the Home image and the field guide contrast review in Chromium."""
 import threading
+from datetime import datetime
 
 from playwright.sync_api import expect, sync_playwright
 
@@ -141,20 +142,31 @@ def main():
         assert len({icon for _, icon in catalogue['habitats']}) == 14, catalogue
         print(f"Gidsbrede controle geslaagd: {catalogue['species']} soorten, "
               f"{catalogue['missing']} zonder gidsfoto en 14 verschillende leefgebiediconen.")
-        page.evaluate("""async () => {
-          const { FEATURED_BIRDS, POSITION_KEY } = await import('/src/features/home/specialBirds.js');
-          const index = FEATURED_BIRDS.findIndex(b => b.nl === 'Wielewaal');
-          localStorage.setItem(POSITION_KEY, JSON.stringify({ index, elapsed: 0 }));
+        oriole_day = page.evaluate("""async () => {
+          const { FEATURED_BIRDS, featuredBirdForDate } = await import('/src/features/home/specialBirds.js');
+          const days = FEATURED_BIRDS.map((_, i) => new Date(2026, 10, 1 + i, 12));
+          return days.find(day => featuredBirdForDate(day)?.nl === 'Wielewaal').getTime();
         }""")
+        page.clock.set_fixed_time(datetime.fromtimestamp(oriole_day / 1000).astimezone())
         page.reload(wait_until='domcontentloaded')
         page.locator('#birdspotSplash').wait_for(state='detached', timeout=15000)
         hero = page.locator('#slideshow')
         expect(hero.locator('h2')).to_have_text('Wielewaal')
         hero.locator('img').evaluate('img => img.decode()')
         cta = hero.get_by_role('button', name='Bekijk soortkaart', exact=False)
+        page.evaluate("""() => {
+          const probe = document.createElement('div');
+          probe.id = 'small-viewport-probe';
+          probe.style.cssText = 'position:fixed; visibility:hidden; height:100svh';
+          document.body.append(probe);
+        }""")
 
         for width, height in ((320, 568), (360, 640), (390, 844), (430, 900), (1280, 844)):
             page.set_viewport_size({'width': width, 'height': height})
+            # Chromium can update innerHeight before it recalculates svh during resizing.
+            page.wait_for_function("""({width, height}) => innerWidth === width && innerHeight === height &&
+                document.getElementById('small-viewport-probe').offsetHeight === height""",
+                arg={'width': width, 'height': height})
             page.locator('#main-view').evaluate("el => el.scrollTo({top: 0, behavior: 'instant'})")
             result = hero.evaluate("""async el => {
               await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
@@ -193,6 +205,7 @@ def main():
             assert contrast(hero.locator('h2'), background='.featured-birds__identification') >= 4.5
             if width == 390:
                 hero.screenshot(path=str(SHOTS / 'mobile_owner_hero_390.png'))
+        page.evaluate("() => document.getElementById('small-viewport-probe').remove()")
 
         page.set_viewport_size({'width': 390, 'height': 844})
         info = hero.get_by_text('Veldkenmerken', exact=True)
