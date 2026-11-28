@@ -6266,7 +6266,7 @@ export const GUIDE_HEROES = Object.freeze({
   "sp167": "/assets/species/plumage/sp167-adult.webp",
   "sp253": "/assets/species/plumage/sp253-male-rest.webp",
   "sp288": "/assets/species/plumage/sp288-adult.webp",
-  "sp075": "/assets/species/plumage/sp075-hero-male.webp",
+  "sp075": "/assets/species/plumage/sp075-male-review.webp",
   "sp006": "/assets/species/plumage/sp006-hero-male.webp",
   "sp007": "/assets/species/plumage/sp007-hero-male.webp",
   "sp008": "/assets/species/plumage/sp008-hero-male.webp",

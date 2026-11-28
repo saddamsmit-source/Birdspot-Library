@@ -5,6 +5,14 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.45 · gerichte fotocorrectie IJsvogel (28 november 2026)
+
+Concept-PR [#385](https://github.com/saddamsmit-source/Birdspot-Library/pull/385), basis 1.27.44 op `85d17742d2a478ebc20c68e1dc699628bae6b7d3`. Eigenaar heeft de vorige taak gestopt en overname vrijgegeven. De bestaande IJsvogel (sp075) krijgt het scherpere portret van Andy Morffew (CC BY 2.0) als hoofdfoto, uit het bestaande verenkleed. De oude hoofdfoto van Luiz Lapa blijft eenmaal onder Mannetje beschikbaar. Geen nieuwe foto, geen verwijderde bytes en geen wijziging aan Home, intro, observaties, locatie of opslag. De twee fotoposities zijn in de audit en het actuele F3-assetregister omgewisseld; de eerste F3-bewijzen blijven intact. De nieuwe hoofdfoto is geen nieuwe opname in de gids.
+
+Bronbewijs: [R21 metadata en beeldmatch](docs/media-intake/2026-11-19/origcheck-r21/origcheck.json), [visuele review met lokale SHA-256](docs/media-intake/2026-11-19/origcheck-r21/visual-review.json) en [individuele fotovergelijking](docs/media-intake/2026-11-19/origcheck-r21/sp075-male-review_vs_source.jpg). De bestaande bron en licentie zijn eerder gecontroleerd; deze ronde is het lokale beeld en de bewaarde vergelijking opnieuw bekeken. Nieuwe directe Commons-bestandspagina niet bereikbaar (cache miss), lokaal extern ophalen geblokkeerd (DNS/download). Geen nieuwe bronverificatie of volledige F3-PASS geclaimd.
+
+Velduil sp255: huidige Home-foto met zichtbare pootring afgekeurd door eigenaar; vervanging **BLOCKED** omdat geen nieuwe originele bronbytes veilig konden worden opgehaald en gecontroleerd. De huidige foto is nog ongewijzigd; geen ongetoetste externe URL of AI-beeld toegevoegd. Kandidaten: [Short-eared owl.jpg](https://commons.wikimedia.org/wiki/File:Short-eared_owl.jpg) (Bex Ross, CC BY 2.0) en [Short-eared Owl (Asio flammeus).jpg](https://commons.wikimedia.org/wiki/File:Short-eared_Owl_(Asio_flammeus).jpg), nog individueel beoordelen op ring, soort, compositie en rechten. Geen volledige fotobatch- of release-PASS. Lokale browser/toestel/preview niet getest in deze host; CI op de exacte nieuwe SHA afwachten. R07b blijft op afzonderlijke PR #384; geen samenvoeging van sporen of publicatie.
+
 ## Aviandra 1.27.40 · intro en gidsfoto (27 november 2026)
 
 De korte ijsvogelintro gebruikt een mobiele MP4 en gaat na afspelen of overslaan direct weg. Als de video uitvalt, sluit de intro vanzelf. Bij verminderde beweging toont Aviandra kort de welkomstfoto. Offline opent de app direct. Na de update kan de herstelde clip één keer worden getoond, ook als de vorige intro al was gezien.
