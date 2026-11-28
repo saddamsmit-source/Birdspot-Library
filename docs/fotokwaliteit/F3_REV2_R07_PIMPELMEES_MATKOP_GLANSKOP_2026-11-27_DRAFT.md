@@ -69,3 +69,8 @@ Op eigenaarverzoek verdergegaan vanaf `194276fefa23190b37b4e6a4aad2ce5e7da495a2`
 - **Glanskop/Matkop:** het bestaande wederkerige rustpaneel noemt scherp zijaanzicht en goed licht als voorwaarde voor de bovensnavelbasis. Het onderscheid tussen aanwezige zangopnamen en ontbrekende afzonderlijke contactroepen staat expliciet in de vergelijking.
 
 **Bewijsgrens:** geen nieuwe media, geen gewijzigde broncredits of fotobytes. Bestaande foto’s opnieuw visueel bekeken. Nieuwe regressieasserties toegevoegd voor label, vrije-vluchtrol, alt-tekst en wederkerige vergelijkingsuitleg. CI/browserhertest op de nieuwe SHA nog open bij het schrijven. Eerste F3-ronde en eerdere eigenaarbesluiten behouden. De drie eigenaarspoorten, ANWB-passages, onafhankelijke luistercontrole, twee geblokkeerde Glanskop-originelen en ontbrekende geschikte media blijven open. Geen volgende soortbatch gestart; geen merge of publicatie.
+
+
+## R07c · eigenaarbesluit 28 november 2026
+
+De eigenaar vroeg ‘Ga verder’ direct na het expliciete advies optie C voor de drie resterende lacunes. Vastgelegd als werkvolgordebesluit C voor sp030, sp031 en sp032; geen vrijstelling van bewijsvereisten. R07b op `5c5526c86bbd259bb3ac52ad7a45d77bdcb9f790`: 46/46 GitHub-checks success bij hercontrole. De eerder beschreven bron-, audio- en fysieke toestelgrenzen blijven open. Geen inhoudelijke FULL PASS. Stand: 21/140 herbeoordeeld, 21 besluiten, nul volledige F3-PASS. Volgende batch R08: Kuifmees, Staartmees en Vink.

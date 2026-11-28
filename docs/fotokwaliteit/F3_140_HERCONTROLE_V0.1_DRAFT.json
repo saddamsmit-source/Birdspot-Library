@@ -3040,7 +3040,7 @@
                     1105
                   ],
                   "mode": "full",
-                  "r": 1.0,
+                  "r": 1,
                   "sameShotAutomatic": true,
                   "identity": "zelfde opname automatisch bevestigd"
                 },
@@ -6620,7 +6620,7 @@
                   0.9945,
                   0.9997
                 ],
-                "duration": 4.0,
+                "duration": 4,
                 "listenedBy": null
               }
             ]
@@ -6830,7 +6830,7 @@
           "date": "2026-11-27",
           "base": "84bb18a3b5e3fd87f94ef079d1c05e23e0b20f23",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION C / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md",
           "photos": [
             {
@@ -6941,9 +6941,9 @@
                   0.9854
                 ],
                 "offsetsSeconds": [
-                  0.0,
-                  0.0,
-                  0.0
+                  0,
+                  0,
+                  0
                 ],
                 "duration": 9.004,
                 "roleOnSource": "Zang",
@@ -6994,8 +6994,16 @@
             "Gelijkwaardig vluchtpaar met Koolmees ontbreekt; R06b heeft het fotopaneel in beide richtingen verborgen."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "C — voorlopig verder met de geregistreerde resterende bewijsproblemen; R07b-correcties uitgevoerd, geen inhoudelijke vrijstelling.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "R07b: oorspronkelijke alt-tekst noemde een gele buik; codecorrectie naar zichtbare bovenzijde uitgevoerd, browserhertest open.",
+              "Gelijkwaardig vluchtpaar met Koolmees ontbreekt; R06b heeft het fotopaneel in beide richtingen verborgen."
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -7092,7 +7100,7 @@
           "date": "2026-11-27",
           "base": "84bb18a3b5e3fd87f94ef079d1c05e23e0b20f23",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION C / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md",
           "photos": [
             {
@@ -7210,9 +7218,9 @@
                   0.9999
                 ],
                 "offsetsSeconds": [
-                  0.0,
-                  0.0,
-                  0.0
+                  0,
+                  0,
+                  0
                 ],
                 "duration": 28.588,
                 "roleOnSource": "Zang",
@@ -7241,8 +7249,16 @@
             "R07b: vergelijking onderscheidt de aanwezige zangopnamen van contactroepen. Een afzonderlijke contactroep ontbreekt nog."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "C — voorlopig verder met de geregistreerde resterende bewijsproblemen; R07b-correcties uitgevoerd, geen inhoudelijke vrijstelling.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "R07b: oorspronkelijke houdingslabel koos een onbewezen fase; neutraal label Laag boven sneeuw in code, browserhertest open.",
+              "R07b: vergelijking onderscheidt de aanwezige zangopnamen van contactroepen. Een afzonderlijke contactroep ontbreekt nog."
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -7339,7 +7355,7 @@
           "date": "2026-11-27",
           "base": "84bb18a3b5e3fd87f94ef079d1c05e23e0b20f23",
           "reviewer": "ChatGPT Work Mode / GPT-6",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION C / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md",
           "photos": [
             {
@@ -7451,9 +7467,9 @@
                   0.9999
                 ],
                 "offsetsSeconds": [
-                  0.0,
-                  0.0,
-                  0.0
+                  0,
+                  0,
+                  0
                 ],
                 "duration": 23.58,
                 "roleOnSource": "Zang",
@@ -7482,8 +7498,16 @@
             "R07b: kijkvoorwaarde voor de bovensnavelbasis en het onderscheid zang/contactroep toegevoegd. Bestaande afbeeldingen tonen de snavelbasis beperkt; betere detailfoto en afzonderlijke contactroep blijven open."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "C — voorlopig verder met de geregistreerde resterende bewijsproblemen; R07b-correcties uitgevoerd, geen inhoudelijke vrijstelling.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "Twee originele Commons-fotobestanden gaven HTTP 429. Eerdere F2-bewijzen blijven geregistreerd; originele bytes in R07 niet heropend.",
+              "R07b: kijkvoorwaarde voor de bovensnavelbasis en het onderscheid zang/contactroep toegevoegd. Bestaande afbeeldingen tonen de snavelbasis beperkt; betere detailfoto en afzonderlijke contactroep blijven open."
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -19428,7 +19452,7 @@
           "sp031",
           "sp032"
         ],
-        "status": "REVIEWED / OWNER GATE OPEN",
+        "status": "OWNER DECISION C / OPEN POINTS REMAIN",
         "date": "2026-11-27",
         "baseSHA": "84bb18a3b5e3fd87f94ef079d1c05e23e0b20f23",
         "ownerStart": "27-11-2026: eigenaar vraagt verder te gaan in het Aviandra-gesprek",
@@ -19439,8 +19463,8 @@
     "counts": {
       "total": 140,
       "reexamined": 21,
-      "ownerGateOpen": 3,
-      "ownerDecisions": 18,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 21,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -19505,6 +19529,12 @@
         "batch": "F3-REV2-R06",
         "decision": "B voor Kauw, Gaai en Koolmees. Eigenaar vroeg in het Aviandra-gesprek verder te gaan na het advies B.",
         "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383"
+      },
+      {
+        "date": "2026-11-28",
+        "batch": "F3-REV2-R07",
+        "decision": "C voor Pimpelmees, Matkop en Glanskop. Eigenaar reageerde ‘Ga verder’ direct op het expliciete advies om de resterende bewijsproblemen open te registreren en de volgende drie soorten te controleren.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384"
       }
     ]
   }
