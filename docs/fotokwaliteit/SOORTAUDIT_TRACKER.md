@@ -14,13 +14,13 @@ Beoordeeld volgens `docs/BIRDSPOT_KWALITEITSNORM.md` (biometrie §1, herkenning 
 | 4a | Visueel VERIFIED (beeld per foto) | 98 van 101 |
 | 4b | Inhoud (kennisprofiel) VERIFIED | 68 van 101 — alle profielen hebben nog open punten |
 | 4c | Onafhankelijk beoordeeld (ChatGPT) | 0 — NOT TESTED |
-| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 164; plus collectiebrede vluchtcontrole: 19 uit de vluchtrol, 12 gearchiveerd |
-| 6 | Afgekeurde vluchtfoto's | 31 (tabel hieronder) |
-| 7 | Ontbrekende foto-/kennisonderdelen | 60 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
+| 5 | Correcties doorgevoerd (in gecontroleerde soorten) | 166; plus collectiebrede vluchtcontrole: 20 uit de vluchtrol, 12 gearchiveerd |
+| 6 | Afgekeurde vluchtfoto's | 32 (tabel hieronder) |
+| 7 | Ontbrekende foto-/kennisonderdelen | 61 fotoposities in gecontroleerde soorten; 39 fotosoorten zonder kennisprofiel |
 | 8 | Kritische kenmerken niet doorslaggevend onderbouwd | 135 (tabel hieronder) |
 | 9 | Open bron-/licentieproblemen | 4 in gecontroleerde soorten; collectiebreed blijft het eerder gemelde punt '22 afbeeldingen buiten de bronaudit' open |
 
-Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 87, VERIFIED 14.
+Eindoordeel per gecontroleerde soort: PARTIALLY TESTED 88, VERIFIED 13.
 
 ## Gecontroleerde soorten
 
@@ -1122,9 +1122,9 @@ Batch M7 · 2026-11-14 · SHA `None` · technisch VERIFIED · visueel VERIFIED �
 | `sp033.webp` | Hoofdfoto (Volwassen) | Kuifmees in zijaanzicht tussen dennennaalden. | Volwassen veldkleed met spitse kuif. Geslacht onbekend. | Hele vogel in beeld met duidelijk kopprofiel. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY 4.0 · Alexis Lours |
 | `sp033-juv.webp` | Verenkleed (Juveniel) | Jonge Kuifmees op een tak, met korte kuif en gele snavelhoeken. | Fotograaf en waarnemingsannotatie bevestigen juveniel. Geslacht onbekend. | Kop en wangboog duidelijk zichtbaar. | goedgekeurd | — | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto naast origineel. SHA-256 gelijk aan het eerder ingevoerde oorspronkelijke bestand.), CC BY-SA 4.0 · Micha Baum |
 | `sp033-view.webp` | Overige herkenningsfoto's | Kuif en donkere wangboog op schuine tak. | Geslacht en leeftijd niet gelabeld. | Scherp kopprofiel vanuit een tweede hoek. | goedgekeurd | — | PARTIALLY TESTED: De maker vraagt zichtbare naamsvermelding en website bij het beeld. Aanpassing in PR #212 op e296f8d. |
-| `sp033-flight.webp` | Overige herkenningsfoto's | Kuifmees met geheven vleugels op de sneeuw. | Geslacht en leeftijd niet gelabeld. | Kop en vleugelpennen zichtbaar. Volgens vluchtcontrole staat de vogel op de sneeuw. | uit-rol | grond · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · Sgbeer |
+| `sp033-flight.webp` | Overige herkenningsfoto's | Kuifmees met geheven vleugels bij de sneeuw. | Geslacht en leeftijd niet gelabeld. | Kop en vleugelpennen zichtbaar; precieze positie van de poten bij sneeuw onzeker. | uit-rol | houding-onzeker · uit-rol | VERIFIED: bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · Sgbeer |
 
-- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.; Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212.
+- **Correcties:** Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.; Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212.; R08b 28-11-2026: sneeuwbijschrift neutraal gemaakt; vrije-vluchtpositie blijft open. Kuifmees/Glanskop-rustvergelijking toegevoegd met bestaande beelden; nieuwe browserproef open.
 - **Ontbreekt:** Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten.
 - **Verbeterwensen (eigenaar beoordeelt later):** —
 - **Geslacht:** Mannetje en vrouwtje hebben gelijk veldkleed. Leeftijd is alleen gelabeld als die wordt ondersteund door de bron.
@@ -1771,9 +1771,9 @@ Batch M7 · 2026-11-12 · SHA `b86b1269b01e1de41831290a1ecd8e0113e3a3b0` · tech
 - **Onzeker:** —
 - **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
-### sp035 Vink — VERIFIED
+### sp035 Vink — PARTIALLY TESTED
 
-Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser VERIFIED · onafhankelijk NOT TESTED
+Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · technisch VERIFIED · visueel VERIFIED · rechten VERIFIED · kennis VERIFIED · browser NOT TESTED · onafhankelijk NOT TESTED
 
 | Foto | Rol | Beeldinhoud | Geslacht/leeftijd | Kwaliteit | Uitslag | Vlucht | Rechten |
 |---|---|---|---|---|---|---|---|
@@ -1781,16 +1781,16 @@ Batch M5 · 2026-11-11 · SHA `9ddb3d984262f8e95bae5a056431ef80bbde73bb` · tech
 | `sp035.webp` | Verenkleed (Mannetje) | Tweede opname van een mannetje op een tak met rozerode borst en blauwgrijze kruin. | Mannetje volgens eerder bron- en beeldbewijs. | Onderscheidende opname met meer zicht op de rug en staart. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 3.0 · Martin Kunz |
 | `sp035-adult_f.webp` | Verenkleed (Vrouwtje) | Grijsbruine Vink met witte vleugelstrepen en witte buitenste staartveren. | Fotograaf benoemt een vrouwtje in Drenthe. | Kop en flank in zijaanzicht. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY-SA 4.0 · Charles J. Sharp |
 | `sp035-juv-review.webp` | Verenkleed (Juveniel) | Bruine juveniele Vink met lichte vleugelstrepen en lichte mondhoek. | Fotograaf benoemt een juveniel. Geslacht onbekend. | Goed zichtbaar op korte vegetatie. | goedgekeurd | — | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 4.0 · Marie-Lan Taÿ Pamart |
-| `sp035-flight.webp` | In vlucht (Mannetje) | Mannetje in vrije vlucht. Blauwe kruin, rozerode borst en lichte vleugeltekening zichtbaar. | Roze borst en blauwgrijze kop ondersteunen het mannelijke kleed. | Volledige vogel vrij in de lucht. | goedgekeurd | vlucht · goedgekeurd | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Mark Medcalf |
+| `sp035-flight.webp` | Verenkleed (Mannetje) | Mannetje met geheven vleugels en uitgestoken poten; vrije vlucht niet overtuigend vastgesteld. | Roze borst en blauwgrijze kop ondersteunen het mannelijke kleed. | Volledige vogel los van de ondergrond; houding bij afzetten of neerstrijken niet uit te sluiten. | uit-rol | houding-onzeker · uit-rol | VERIFIED: bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Mark Medcalf |
 
-- **Correcties:** Fotoverdeling bevestigd. Herkenning, maatbanden en vergelijking met Huismus en Keep onderbouwd.
-- **Ontbreekt:** niets
+- **Correcties:** Fotoverdeling bevestigd. Herkenning, maatbanden en vergelijking met Huismus en Keep onderbouwd.; R08b 28-11-2026: bestaande foto met uitgestoken poten buiten de vrije-vluchtrol geplaatst; mannetjeskleed, bestand en herkomst behouden. Vrije-vluchtfoto open.
+- **Ontbreekt:** Scherpe, aantoonbare vrije-vluchtfoto van Vink met bevestigde herkomst en hergebruikrechten.
 - **Verbeterwensen (eigenaar beoordeelt later):** Geverifieerde gidsfoto van Keep bij de vergelijking.
 - **Geslacht:** Volwassen man en vrouw zijn verschillend van kleed. Geslacht van het jong blijft onbekend.
 - **Kennisprofiel:** 1 kritische kenmerken (0 doorslaggevend); niet doorslaggevend: Vleugelstrepen en borsttekening; open: —; resterende dataverschillen: 0
-- **Browser:** 390x844 Chromium 145 (Playwright) · Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels
+- **Browser:** NOT TESTED op R08b; eerdere browserproef bewaard in previousR08b.
 - **Onzeker:** —
-- **Volgende actie:** Onafhankelijke review (ChatGPT)
+- **Volgende actie:** Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen
 
 ### sp177 Bonte Vliegenvanger — PARTIALLY TESTED
 
@@ -2041,7 +2041,8 @@ Batch M6 · 2026-11-12 · SHA `38e3b3c42662dc49be8b769fd9f82a8dde65cad7` · tech
 | sp025 Kauw | `sp025-flight.webp` | uit-rol | landen | Frontale landingsnadering met poten naar voren en gespreide staart. |
 | sp031 Matkop | `sp031-flight.webp` | uit-rol | opvliegen | Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken. |
 | sp032 Glanskop | `sp032-flight.webp` | archief | opvliegen | Zet af van een tak; onscherp, alleen silhouet. Geen bruikbare vervangende rol. |
-| sp033 Kuifmees | `sp033-flight.webp` | uit-rol | grond | Staat met de poten op de sneeuw met geheven vleugels. |
+| sp033 Kuifmees | `sp033-flight.webp` | uit-rol | houding-onzeker | Geheven vleugels bij sneeuw; de exacte positie van de poten en fase zijn niet overtuigend vast te stellen. |
+| sp035 Vink | `sp035-flight.webp` | uit-rol | houding-onzeker | Vogel los van de ondergrond met geheven vleugels en uitgestoken poten; vrije vlucht versus afzetten of neerstrijken is niet overtuigend vastgesteld. |
 | sp034 Staartmees | `sp034-flight.webp` | archief | opvliegen | Duikt van een tak weg; onscherp en ongebruikelijke houding. |
 | sp038 Sijs | `sp038-flight.webp` | uit-rol | landen | Fotograaf beschrijft 'comes in to land'; beeld toont geheven vleugels en naar voren gestrekte poten met gespreide tenen: neerstrijken, geen vrije vlucht. |
 | sp042 Roodmus | `sp042-flight.webp` | archief | opvliegen | Sterk onscherp bij een tak; vermoedelijk afzetten. |

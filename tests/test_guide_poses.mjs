@@ -530,3 +530,26 @@ for (const id of ['sp031', 'sp032']) {
   assert.deepEqual(GUIDE_AUDIO[id].map(clip => clip.label), ['Zang']);
 }
 console.log('F3-REV2-R07b: photo labels, flight boundaries and reciprocal audio/field guidance checked');
+
+
+// F3-REV2-R08b: uncertain flight never presented as free flight; source bytes and sex role retained.
+const r08bKuif = GUIDE_POSES.sp033.find(p => p.image.endsWith('sp033-flight.webp'));
+const r08bVink = GUIDE_POSES.sp035.find(p => p.image.endsWith('sp035-flight.webp'));
+assert.equal(r08bKuif.label, 'Vleugels geheven bij de sneeuw');
+assert.equal(r08bKuif.flight, false);
+assert.equal(r08bVink.flight, false);
+assert.equal(r08bVink.sex, 'male');
+assert.equal(r08bVink.label, 'Mannetje met geheven vleugels');
+assert.ok(photosFor('sp035', 'adult_m').includes(r08bVink.image));
+assert.doesNotMatch(recognitionPanel(species.get('sp035')).match(/aria-label="In vlucht"[\s\S]*?<\/section>/)?.[0] || '', /sp035-flight\.webp/);
+const r08bAudio = GUIDE_AUDIO.sp034[0];
+assert.equal(r08bAudio.label, 'Geluidsvoorbeeld');
+assert.match(r08bAudio.auditoryCheck, /geluidstype \(zang of roep\) is niet bevestigd/);
+const r08bPair = GUIDE_COMPARISONS.find(p => p.label === 'Kuifmees en Glanskop · koptekening');
+assert.deepEqual(r08bPair.birds.map(p=>p.id), ['sp033','sp032']);
+for(const id of ['sp033','sp032']) {
+ const html=recognitionPanel(species.get(id));
+ assert.ok(html.includes('data-compare-species="'+(id==='sp033'?'sp032':'sp033')+'"'));
+ assert.ok(html.split('data-cmp-panel').slice(1).some(panel=>panel.includes('sp033.webp')&&panel.includes('sp032.webp')));
+}
+console.log('F3-REV2-R08b: neutral pose labels, unchanged male role, audio ceiling and reciprocal local portrait pair');
