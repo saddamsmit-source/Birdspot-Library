@@ -22,14 +22,18 @@
   /* ── Neutraal ─────────────────────────────────────── */
   --bg:           #F8F4E8;   /* licht ivoor-groen */
   --surface:      #FFFCF4;
-  --surface-2:    #E9F0E4;
-  --line:         #C8D4C4;
+  --surface-2:    #EEECE0;
+  --line:         #AEBDB1;
   --on-brand:     #FFFFFF;
 
   /* ── Tekst ────────────────────────────────────────── */
   --ink:          #172820;
   --ink-2:        #425D4D;
   --muted:        #425D4D;
+  --method-seen: #246849;
+  --method-heard: #225A93;
+  --method-both: #895516;
+  --method-unrecorded: #556760;
 
   /* ── Status ───────────────────────────────────────── */
   --warn:         #F4A261;
@@ -102,12 +106,16 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg:        #0C1E13;
-    --surface:   #142219;
-    --surface-2: #1C3024;
-    --line:      #2A4535;
-    --ink:       #E6F2E9;
-    --ink-2:     #A8C9AF;
-    --muted:     #A8C9AF;
+    --surface:   #1A2821;
+    --surface-2: #25362E;
+    --line:      #496558;
+    --ink:       #FAF4E7;
+    --ink-2:     #D1E0D4;
+    --muted:     #C4D6C8;
+    --method-seen: #65DCAF;
+    --method-heard: #9BCBFF;
+    --method-both: #F5CC80;
+    --method-unrecorded: #C5CDC5;
     --accent-soft: #1A3560;
     --info-soft: #263F31;
     --info-ink: #E0F0E2;
@@ -125,12 +133,16 @@
 }
 :root[data-theme="dark"] {
   --bg:        #0C1E13;
-  --surface:   #142219;
-  --surface-2: #1C3024;
-  --line:      #2A4535;
-  --ink:       #E6F2E9;
-  --ink-2:     #A8C9AF;
-  --muted:     #A8C9AF;
+  --surface:   #1A2821;
+  --surface-2: #25362E;
+  --line:      #496558;
+  --ink:       #FAF4E7;
+  --ink-2:     #D1E0D4;
+  --muted:     #C4D6C8;
+  --method-seen: #65DCAF;
+  --method-heard: #9BCBFF;
+  --method-both: #F5CC80;
+  --method-unrecorded: #C5CDC5;
   --accent-soft: #1A3560;
   --info-soft: #263F31;
   --info-ink: #E0F0E2;

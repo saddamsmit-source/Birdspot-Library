@@ -9,7 +9,7 @@
  * de jaarlijst in Profiel. Waarnemingen, locaties, media en leefgebieden blijven ruwe registraties.
  * registeredSpeciesCount/uncountedSpeciesCount maken het verschil zichtbaar met een eigen label.
  */
-import { countsForList } from '../sightings/evidence.js';
+import { countsForList, observationMethodKey, validPin, verificationStatus } from '../sightings/evidence.js';
 
 const MONTHS = Object.freeze([
   'jan','feb','mrt','apr','mei','jun',
@@ -51,6 +51,25 @@ function displaySpecies(row) {
     row.speciesName.trim() : 'Onbekende vogelsoort';
 }
 
+const methodCounts = () => ({ seen: 0, heard: 0, both: 0, unrecorded: 0 });
+const hasLinkedFile = ids => Array.isArray(ids) && ids.some(id => typeof id === 'string' && id.trim());
+
+export function summarizeFieldwork(records) {
+  const methods = methodCounts();
+  let mediaCount = 0, audioCount = 0, notesCount = 0, gpsCount = 0, sourceReviewCount = 0;
+  for (const row of records) {
+    methods[observationMethodKey(row)]++;
+    const hasAudio = hasLinkedFile(row.audioIds);
+    if (hasAudio || hasLinkedFile(row.photoIds)) mediaCount++;
+    if (hasAudio) audioCount++;
+    if (typeof row.notes === 'string' && row.notes.trim()) notesCount++;
+    if (validPin(row.lat, row.lon)) gpsCount++;
+    const status = verificationStatus(row).key;
+    if (status === 'merlin-checked' || status === 'birdnet-checked') sourceReviewCount++;
+  }
+  return { methods, mediaCount, audioCount, notesCount, gpsCount, sourceReviewCount };
+}
+
 export function calculateInsights(records, requestedYear) {
   const all = Array.isArray(records) ? records.filter(x=>x && typeof x === 'object') : [];
   const years = availableYears(all);
@@ -60,7 +79,7 @@ export function calculateInsights(records, requestedYear) {
   const dated = all.filter(row=>validDay(row.date));
   const filtered = dated.filter(row=>Number(row.date.slice(0,4)) === selectedYear);
 
-  const months = MONTHS.map((name,index)=>({month:index+1,name,count:0,uniqueSpecies:0}));
+  const months = MONTHS.map((name,index)=>({month:index+1,name,count:0,uniqueSpecies:0,methods:methodCounts()}));
   const monthlySpecies = Array.from({length:12},()=>new Set());
   const species = new Map();
   const habitats = new Map();
@@ -76,6 +95,7 @@ export function calculateInsights(records, requestedYear) {
     const date = validDay(row.date);
     const month = Number(date.slice(5,7))-1;
     months[month].count++;
+    months[month].methods[observationMethodKey(row)]++;
     byDay.set(date,(byDay.get(date)||0)+1);
 
     const key = speciesKey(row);
@@ -122,6 +142,8 @@ export function calculateInsights(records, requestedYear) {
     registeredSpeciesCount:registeredSpecies.size,
     uncountedSpeciesCount:[...registeredSpecies].filter(k=>!uniqueSpecies.has(k)).length,
     locationsCount:locations.size, photographed, videoCount, individuals,
+    fieldwork:summarizeFieldwork(filtered), activeDays:byDay.size,
+    activeMonths:months.filter(month=>month.count).length,
     months, topMonth:topMonth.count?topMonth:null,topSpecies,habitats:habitatData,
     habitatTotal:[...habitats.values()].reduce((a,b)=>a+b,0),
     mostActiveDay:mostActiveDay?{date:mostActiveDay[0],count:mostActiveDay[1]}:null,

@@ -6,6 +6,16 @@
 export const OBSERVATION_METHODS=Object.freeze({
   seen:'Gezien',heard:'Gehoord',both:'Gezien en gehoord',
 });
+export const OBSERVATION_BREAKDOWN = Object.freeze({
+  seen: 'Alleen gezien',
+  heard: 'Alleen gehoord',
+  both: OBSERVATION_METHODS.both,
+  unrecorded: 'Niet vastgelegd',
+});
+export function observationMethodKey(sighting) {
+  const method = sighting?.observationMethod;
+  return Object.hasOwn(OBSERVATION_METHODS, method) ? method : 'unrecorded';
+}
 export const IDENTIFICATION_SOURCES=Object.freeze({
   self:'Eigen herkenning',merlin:'Merlin Sound ID',birdnet:'BirdNET',
 });
