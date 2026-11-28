@@ -1203,7 +1203,7 @@
         "reviewed": "2026-11-06",
         "taxon": "Aegithalos caudatus",
         "verification": "Opname XC114614 uit Cambridge. Soort en maker zijn beschreven; het precieze geluidstype is op Commons niet benoemd.",
-        "auditoryCheck": "Niet onafhankelijk auditief gedetermineerd; soort en zanglabel gecontroleerd in opnamebron. Technisch gedecodeerd met FFmpeg.",
+        "auditoryCheck": "Niet onafhankelijk auditief gedetermineerd. Het soortlabel is eerder geregistreerd; het precieze geluidstype (zang of roep) is niet bevestigd. Technische decodeercontrole volgens eerdere registratie.",
         "duration": 29.184,
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/30/Aegithalos_caudatus_-_Long-tailed_Tit_-_XC114614.ogg",
         "audio": "/assets/species/audio/sp034-sound.mp3"
@@ -6626,8 +6626,8 @@
         "verification": "Commons beschrijft Poecile montanus in vlucht in Kittilä, Finland. Visuele soortcontrole passend; leeftijd en geslacht niet vastgesteld. Illustratie van houding, geen bewijs voor een Nederlands ondersoortkleed.",
         "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/32/Poecile_Montanus_Kittila_20120306.JPG",
         "image": "/assets/species/plumage/sp031-flight.webp",
-        "label": "Opvliegend boven sneeuw",
-        "note": "Toont het lichte vleugelpaneel.",
+        "label": "Laag boven sneeuw",
+        "note": "Vlak boven de sneeuw met gespreide vleugel en uitgestoken poten. Afzetten of neerstrijken is niet vast te stellen.",
         "flight": false,
         "flightReview": "uit-rol 2026-11-10: Poten naar beneden vlak boven de sneeuw: afzetten of neerstrijken."
       }
@@ -6720,9 +6720,9 @@
         "note": "Kijk naar de spitse kuif en de gebogen zwarte lijn achter de wang. Vergroot de foto om de koptekening te bekijken."
       },
       {
-        "label": "Vleugels geheven op de sneeuw",
+        "label": "Vleugels geheven bij de sneeuw",
         "flight": false,
-        "note": "De vogel heeft de vleugels geheven. De kuif en wangtekening zijn zichtbaar.",
+        "note": "De kuif en donkere wangboog zijn zichtbaar. De precieze houding ten opzichte van de sneeuw is onzeker.",
         "file": "Haubenmeise Abflug.JPG",
         "nl": "Kuifmees",
         "latin": "Lophophanes cristatus",
@@ -6739,7 +6739,7 @@
         "width": 960,
         "height": 720,
         "image": "/assets/species/plumage/sp033-flight.webp",
-        "flightReview": "uit-rol 2026-11-10: Staat met de poten op de sneeuw met geheven vleugels."
+        "flightReview": "uit-rol 2026-11-28: Geheven vleugels bij sneeuw; de exacte positie van de poten en fase zijn niet overtuigend vast te stellen."
       }
     ],
     "sp116": [
@@ -7186,9 +7186,9 @@
     ],
     "sp021": [
       {
-        "label": "In vlucht",
-        "flight": true,
-        "note": "Let op de brede witte vleugelvelden en de lange staart.",
+        "label": "Vertrek vanaf een rots",
+        "flight": false,
+        "note": "Let op de witte handvleugel en de lange staart.",
         "file": "Eurasian Magpie 2023-10-16 01.jpg",
         "nl": "Ekster",
         "latin": "Pica pica",
@@ -7197,15 +7197,15 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg",
         "showSourceLink": false,
-        "alt": "Ekster in vlucht met gespreide zwart-witte vleugels en een lange staart.",
+        "alt": "Ekster bij vertrek vanaf een rots, met gespreide zwart-witte vleugels en een lange staart.",
         "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-07",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ekster",
-        "visualCheck": "Ekster in vlucht met gespreide zwart-witte vleugels en een lange staart.",
+        "visualCheck": "Witte handvleugel en lange staart zichtbaar. De fotograaf beschrijft vertrek vanaf een rots.",
         "width": 1400,
         "height": 933,
         "image": "/assets/species/plumage/sp021-flight.webp",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+        "flightReview": "uit-rol 2026-11-27: De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld."
       }
     ],
     "sp022": [
@@ -7245,11 +7245,11 @@
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Jackdaw_(48142024622).jpg",
         "showSourceLink": false,
-        "alt": "Kauw in frontale vlucht met gespreide vleugels, grijze nek en lichte ogen.",
+        "alt": "Kauw nadert een landingsplek tussen takken, frontaal met gespreide vleugels en poten naar voren.",
         "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-07",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kauw",
-        "visualCheck": "Kauw in frontale vlucht met gespreide vleugels, grijze nek en lichte ogen.",
+        "visualCheck": "Frontale landingsnadering tussen takken, met poten naar voren en gespreide staart.",
         "width": 1400,
         "height": 934,
         "image": "/assets/species/plumage/sp025-flight.webp",
@@ -7341,11 +7341,11 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Blue_Tit_in_flight_(8360763555).jpg",
         "showSourceLink": false,
-        "alt": "Pimpelmees in vlucht met blauwe kruin, donkere oogstreep, gespreide staart en gele buik.",
+        "alt": "Pimpelmees van boven in vlucht, met blauwe vleugels, gespreide staart, blauwe kruin en donkere oogstreep.",
         "modifications": "Verkleind en omgezet naar WebP zonder uitsnede",
         "reviewed": "2026-11-07",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/pimpelmees",
-        "visualCheck": "Pimpelmees in vlucht met blauwe kruin, donkere oogstreep, gespreide staart en gele buik.",
+        "visualCheck": "Pimpelmees van boven in vlucht, met blauwe vleugels, gespreide staart, blauwe kruin en donkere oogstreep.",
         "width": 1400,
         "height": 1050,
         "image": "/assets/species/plumage/sp030-flight.webp",
@@ -7354,9 +7354,9 @@
     ],
     "sp035": [
       {
-        "label": "Mannetje in vlucht",
-        "flight": true,
-        "note": "De witte vleugeltekening en de rozerode borst vallen op.",
+        "label": "Mannetje met geheven vleugels",
+        "flight": false,
+        "note": "Rozerode borst en blauwgrijze kruin. De houding is zichtbaar, maar echte vrije vlucht is niet overtuigend vastgesteld.",
         "file": "Fringilla coelebs -Lochwinnoch, Renfrewshire, Scotland -flying-8.jpg",
         "nl": "Vink",
         "latin": "Fringilla coelebs",
@@ -7365,16 +7365,16 @@
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
         "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-Lochwinnoch,_Renfrewshire,_Scotland_-flying-8.jpg",
         "showSourceLink": false,
-        "alt": "Mannetje Vink in vlucht met een rozerode borst, blauwgrijze kruin en witte vlekken op de vleugel.",
+        "alt": "Mannetje Vink met geheven vleugels, uitgestoken poten, rozerode borst en blauwgrijze kruin.",
         "modifications": "Omgezet naar WebP zonder extra uitsnede",
         "reviewed": "2026-11-07",
         "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
-        "visualCheck": "Mannetje Vink in vlucht met een rozerode borst, blauwgrijze kruin en witte vlekken op de vleugel.",
+        "visualCheck": "Mannetje Vink met geheven vleugels, uitgestoken poten, rozerode borst en blauwgrijze kruin.",
         "width": 900,
         "height": 900,
         "image": "/assets/species/plumage/sp035-flight.webp",
         "sex": "male",
-        "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+        "flightReview": "uit-rol 2026-11-28: Vogel los van de ondergrond met geheven vleugels en uitgestoken poten; vrije vlucht versus afzetten of neerstrijken is niet overtuigend vastgesteld."
       },
       {
         "label": "Juveniel",
@@ -10506,7 +10506,6 @@
     "sp005": "/assets/species/sp005.webp",
     "sp009": "/assets/species/plumage/sp009-male-rest.webp",
     "sp016": "/assets/species/plumage/sp016-hero-male.webp",
-    "sp020": "/assets/species/plumage/sp020-male.webp",
     "sp043": "/assets/species/plumage/sp043-hero-male.webp",
     "sp091": "/assets/species/plumage/sp091-hero-male.webp",
     "sp116": "/assets/species/plumage/sp116-flight.webp",

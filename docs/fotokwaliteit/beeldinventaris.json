@@ -5,6 +5,7 @@
   "classes": [
    "bidden",
    "grond",
+   "houding-onzeker",
    "landen",
    "opvliegen",
    "stilstaand",
@@ -622,11 +623,11 @@
     "sp021 GUIDE_POSES[0]"
    ],
    "sha1": "7d5b3ac21495bb81848b0f91a7e41691d22bf584",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "opvliegen",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "De fotograaf beschrijft vertrek vanaf een rots. De precieze fase na afzet is niet vastgesteld."
   },
   "/assets/species/plumage/sp022-flight.webp": {
    "refs": [
@@ -719,11 +720,11 @@
     "sp033 GUIDE_POSES[2]"
    ],
    "sha1": "edc08a3e3792fe39d1c9b77424a3277e16d1d38e",
-   "class": "grond",
+   "class": "houding-onzeker",
    "airborne": false,
    "source": "vluchtcontrole",
    "decision": "uit-rol",
-   "note": "Staat met de poten op de sneeuw met geheven vleugels."
+   "note": "Geheven vleugels bij sneeuw; de exacte positie van de poten en fase zijn niet overtuigend vast te stellen."
   },
   "/assets/species/plumage/sp033-view.webp": {
    "refs": [
@@ -760,11 +761,11 @@
     "sp035 GUIDE_POSES[0]"
    ],
    "sha1": "2cd4f386e24f9420d6974dad5092429455c1cb16",
-   "class": "vlucht",
-   "airborne": true,
+   "class": "houding-onzeker",
+   "airborne": false,
    "source": "vluchtcontrole",
-   "decision": "goedgekeurd",
-   "note": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+   "decision": "uit-rol",
+   "note": "Vogel los van de ondergrond met geheven vleugels en uitgestoken poten; vrije vlucht versus afzetten of neerstrijken is niet overtuigend vastgesteld."
   },
   "/assets/species/plumage/sp035-hero-male.webp": {
    "refs": [

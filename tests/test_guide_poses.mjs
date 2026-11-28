@@ -439,12 +439,15 @@ for (const bird of [kauw, crow]) {
   const pair = html.match(/<div class="sd-cmp-panel" data-cmp-panel data-cmp-flight[^>]*>[\s\S]*?<div class="sd-cmp-foot">/)?.[0];
   assert.ok(pair?.includes('sp025-flight-free.webp') && pair.includes('sp022-flight.webp'));
   assert.doesNotMatch(pair, /sp025-flight\.webp/);
+  assert.match(pair, /Compacter silhouet met een relatief korte snavel/);
+  assert.match(pair, /In tegenlicht zijn de lichte iris en grijze nek van de Kauw moeilijk te zien/);
 }
 const kauwCard = recognitionPanel(kauw);
 const flightSection = kauwCard.match(/<section class="sd-flight"[^>]*>[\s\S]*?<\/section>/)?.[0];
 assert.match(flightSection, /sp025-flight-free\.webp/);
 assert.doesNotMatch(flightSection, /sp025-flight\.webp/);
 assert.ok(kauwCard.includes('Landend tussen takken'));
+assert.match(kauwCard, /alt="Kauw nadert een landingsplek tussen takken/);
 
 // F3-R07: the fledgling comparison must show the two actual juvenile photographs in both directions.
 for (const id of ['sp029','sp030']) {
@@ -453,8 +456,22 @@ for (const id of ['sp029','sp030']) {
  const panels = html.split('data-cmp-panel').slice(1);
  assert.ok(panels.some(panel => panel.includes('sp029-juv.webp') && panel.includes('sp030-juv2.webp')));
  assert.match(html, /data-cmp-tab aria-selected="false">Juveniel<\/button>/);
+ const ownFlight = html.match(/<section class="sd-flight"[^>]*>[\s\S]*?<\/section>/)?.[0];
+ assert.ok(ownFlight?.includes(`${id}-flight.webp`));
+ assert.doesNotMatch(html.split('<section class="sd-similar"')[1], /sp029-flight\.webp|sp030-flight\.webp/);
+ assert.match(html, /in vlucht alleen/);
 }
 
+// F3-REV2-R06b: meaningful text links between Jay, Waxwing and Hoopoe in both directions.
+const jay = recognitionPanel(species.get('sp026'));
+assert.match(jay, /zwart oogmasker en een gele staartpunt/);
+assert.match(jay, /lange, licht neergebogen snavel/);
+assert.doesNotMatch(jay, /Door de bron genoemd/);
+for (const id of ['sp287', 'sp256']) {
+  const text = recognitionPanel(species.get(id));
+  assert.match(text, /Blauw-zwart gebandeerd|blauw-zwart gebandeerd/);
+  assert.match(text, /data-compare-species="sp026"/);
+}
 
 // Birdspot identification QA — Kuifeend and Topper (15-11-2026)
 const tufted = species.get('sp092'), greaterScaup = species.get('sp133');
@@ -489,3 +506,52 @@ console.log('Kuifeend/Topper: species IDs, adult plumage pairs, non-diagnostic c
 assert.match(KNOWLEDGE.sp092.caution.text, /topper/i, 'Kuifeend knowledge panel must show the topper confusion caution');
 assert.ok(!KNOWLEDGE.sp133, 'KB-01 forbids knowledge profiles for unphotographed species');
 assert.match(recognitionPanel(greaterScaup), /lichtgrijze rug/i, 'Topper must remain recognizable via the public species summary');
+
+
+// F3-REV2-R07b: describe only the visible side of the bird and preserve the photo role.
+const r07bBlue = GUIDE_POSES.sp030.find(photo => photo.image.endsWith('sp030-flight.webp'));
+assert.equal(r07bBlue.flight, true);
+assert.match(r07bBlue.alt, /van boven in vlucht/);
+assert.doesNotMatch(r07bBlue.alt, /gele buik/);
+assert.equal(r07bBlue.visualCheck, r07bBlue.alt);
+const r07bSnow = GUIDE_POSES.sp031.find(photo => photo.image.endsWith('sp031-flight.webp'));
+assert.equal(r07bSnow.flight, false);
+assert.equal(r07bSnow.label, 'Laag boven sneeuw');
+assert.match(r07bSnow.note, /Afzetten of neerstrijken is niet vast te stellen/);
+const r07bFlight = JSON.parse(readFileSync(new URL('../docs/fotokwaliteit/vluchtcontrole.json', import.meta.url), 'utf8')).assets[r07bSnow.image];
+assert.equal(r07bFlight.airborne, false);
+assert.equal(r07bFlight.decision, 'uit-rol');
+assert.equal(r07bFlight.newLabel, r07bSnow.label);
+assert.equal(r07bFlight.newNote, r07bSnow.note);
+assert.match(recognitionPanel(species.get('sp031')), /Laag boven sneeuw/);
+assert.doesNotMatch(recognitionPanel(species.get('sp031')), /Opvliegend boven sneeuw/);
+for (const id of ['sp031', 'sp032']) {
+  const html = recognitionPanel(species.get(id));
+  assert.match(html, /De gidsopnamen zijn zangvoorbeelden, geen afzonderlijke contactroepen/);
+  assert.match(html, /scherp zijaanzicht en goed licht/);
+  assert.deepEqual(GUIDE_AUDIO[id].map(clip => clip.label), ['Zang']);
+}
+console.log('F3-REV2-R07b: photo labels, flight boundaries and reciprocal audio/field guidance checked');
+
+
+// F3-REV2-R08b: uncertain flight never presented as free flight; source bytes and sex role retained.
+const r08bKuif = GUIDE_POSES.sp033.find(p => p.image.endsWith('sp033-flight.webp'));
+const r08bVink = GUIDE_POSES.sp035.find(p => p.image.endsWith('sp035-flight.webp'));
+assert.equal(r08bKuif.label, 'Vleugels geheven bij de sneeuw');
+assert.equal(r08bKuif.flight, false);
+assert.equal(r08bVink.flight, false);
+assert.equal(r08bVink.sex, 'male');
+assert.equal(r08bVink.label, 'Mannetje met geheven vleugels');
+assert.ok(photosFor('sp035', 'adult_m').includes(r08bVink.image));
+assert.doesNotMatch(recognitionPanel(species.get('sp035')).match(/aria-label="In vlucht"[\s\S]*?<\/section>/)?.[0] || '', /sp035-flight\.webp/);
+const r08bAudio = GUIDE_AUDIO.sp034[0];
+assert.equal(r08bAudio.label, 'Geluidsvoorbeeld');
+assert.match(r08bAudio.auditoryCheck, /geluidstype \(zang of roep\) is niet bevestigd/);
+const r08bPair = GUIDE_COMPARISONS.find(p => p.label === 'Kuifmees en Glanskop · koptekening');
+assert.deepEqual(r08bPair.birds.map(p=>p.id), ['sp033','sp032']);
+for(const id of ['sp033','sp032']) {
+ const html=recognitionPanel(species.get(id));
+ assert.ok(html.includes('data-compare-species="'+(id==='sp033'?'sp032':'sp033')+'"'));
+ assert.ok(html.split('data-cmp-panel').slice(1).some(panel=>panel.includes('sp033.webp')&&panel.includes('sp032.webp')));
+}
+console.log('F3-REV2-R08b: neutral pose labels, unchanged male role, audio ceiling and reciprocal local portrait pair');

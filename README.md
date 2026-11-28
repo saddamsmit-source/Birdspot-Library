@@ -5,6 +5,17 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.46 · gecombineerde releasekandidaat (28 november 2026)
+
+Concept-PR [#387](https://github.com/saddamsmit-source/Birdspot-Library/pull/387). Combineert Aviandra 1.27.45 op `332b9dcf076b5c97140e37c2a95b8d47b161c2a1` (#385, 53/53 CI) met F3-R08b op `f0a9ca78b431a68bffa83e61056d466dbbffe626` (#386, CI nog niet definitief bij start integratie). Gemeenschappelijke basis `1cb52274ce39dce19d22b69864063025efe6917d`. Alle uitsluitend op een van beide sporen gewijzigde bestanden zijn behouden. Acht overlappende bestanden zijn samengevoegd door de exacte, tegen de gemeenschappelijke basis gereconstrueerde Aviandra-wijzigingen toe te passen op de F3-versies. Bronregister en gegenereerde media zijn inhoudelijk gelijk; F3-bewijspayload ongewijzigd.
+
+- Alle eerdere Aviandra-interfacefuncties, 100 Home-foto's, intro, filters, GPS en updatepop-up behouden. De verbeterde IJsvogel-hoofdfoto blijft actief.
+- F3-REV2-R05–R08b geïntegreerd: 24/140 herbeoordeeld, 24 eigenaarbesluiten, 0 volledige F3-PASS. Open bron- en luisterbewijzen zijn niet afgetekend. Nieuwe R08b-correcties: Kuifmees/Glanskop, Staartmees-geluidslabel, Vink-houdingsrol.
+- Velduil-vervanging blijft BLOCKED; geen onbewezen nieuwe foto. Geen nieuwe mediabytes of persoonlijke gegevens in de integratie. Nieuwe app-cacheversie 1.27.46; productie- of privéalias niet gewijzigd.
+- Eigenaar heeft expliciet 'zet live' gezegd op 28-11. **Release HOLD** tot geïntegreerde CI, beveiligde interactieve preview, fysieke Samsung-kernroute inclusief update/offline/opslag/ZIP-herstel, toepasselijke privacy-/security- en hostinggates en rollbackbewijs op de exacte kandidaat. Geen automatische productiepromotie of uitzondering uit eigenaarbesluit afgeleid.
+
+[Integratiedossier](docs/release/AVIANDRA_1.27.46_INTEGRATIE_2026-11-28_DRAFT.md).
+
 ## Aviandra 1.27.45 · gerichte fotocorrectie IJsvogel (28 november 2026)
 
 Concept-PR [#385](https://github.com/saddamsmit-source/Birdspot-Library/pull/385), basis 1.27.44 op `85d17742d2a478ebc20c68e1dc699628bae6b7d3`. Eigenaar heeft de vorige taak gestopt en overname vrijgegeven. De bestaande IJsvogel (sp075) krijgt het scherpere portret van Andy Morffew (CC BY 2.0) als hoofdfoto, uit het bestaande verenkleed. De oude hoofdfoto van Luiz Lapa blijft eenmaal onder Mannetje beschikbaar. Geen nieuwe foto, geen verwijderde bytes en geen wijziging aan Home, intro, observaties, locatie of opslag. De twee fotoposities zijn in de audit en het actuele F3-assetregister omgewisseld; de eerste F3-bewijzen blijven intact. De nieuwe hoofdfoto is geen nieuwe opname in de gids.

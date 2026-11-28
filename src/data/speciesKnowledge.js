@@ -411,6 +411,28 @@ const DATA = {
    "certainty": "hoog",
    "publisher": "Vogelbescherming Nederland"
   },
+  "VB_PESTVOGEL": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Pestvogel",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Pestvogel",
+   "edition": "online soortpagina, geraadpleegd 27-11-2026",
+   "scope": "Nederland",
+   "confirms": "kuif, zwart oogmasker en gele staartpunt",
+   "checked": "2026-11-27",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
+  "VB_HOP": {
+   "register": "NL07",
+   "label": "Vogelbescherming — Hop",
+   "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/hop",
+   "edition": "online soortpagina, geraadpleegd 27-11-2026",
+   "scope": "Nederland",
+   "confirms": "kuif, lange licht neergebogen snavel en zwart-wit gebandeerde vleugels",
+   "checked": "2026-11-27",
+   "certainty": "hoog",
+   "publisher": "Vogelbescherming Nederland"
+  },
   "VB_KLEVER": {
    "register": "NL07",
    "label": "Vogelbescherming — Boomklever",
@@ -8909,34 +8931,38 @@ const DATA = {
     {
      "feature": "Kleedpatroon",
      "where": "Hele vogel",
-     "this": "Beigebruin met blauw vleugelveld en witte stuit",
-     "other": "Pestvogel en Hop: door de bron genoemd, verschillen niet uitgewerkt",
+     "this": "Beigebruin met een blauw-zwart gebandeerd vleugelveld en een witte stuit.",
+     "other": "Pestvogel: zwart oogmasker en gele staartpunt. Hop: lange, neergebogen snavel en zwart-wit gebandeerde vleugels.",
      "vs": [
       "sp287",
       "sp256"
      ],
      "reliability": "ondersteunend",
-     "conditions": "Bij redelijk zicht",
-     "exceptions": "—",
-     "supporting": "Roep, gedrag",
+     "conditions": "Goed zicht op de kop en vleugel.",
+     "exceptions": "Een kuif kan plat liggen.",
+     "supporting": "Vergelijk ook snavelvorm en staartpunt.",
      "sources": [
-      "VB_GAAI"
+      "VB_GAAI",
+      "VB_PESTVOGEL",
+      "VB_HOP"
      ]
     }
    ],
    "similar": [
     {
      "id": "sp287",
-     "why": "Door de bron genoemd",
+     "why": "Pestvogel heeft een kuif, zwart oogmasker en een gele staartpunt. Kijk bij Gaai naar de donkere baardstreep en het blauw gebandeerde vleugelveld.",
      "sources": [
-      "VB_GAAI"
+      "VB_GAAI",
+      "VB_PESTVOGEL"
      ]
     },
     {
      "id": "sp256",
-     "why": "Door de bron genoemd",
+     "why": "Hop heeft een lange, licht neergebogen snavel, een kuif en zwart-wit gebandeerde vleugels. Gaai heeft een stevigere snavel en een blauw gebandeerd vleugelveld.",
      "sources": [
-      "VB_GAAI"
+      "VB_GAAI",
+      "VB_HOP"
      ]
     },
     {
@@ -10748,6 +10774,13 @@ const DATA = {
      "sources": [
       "VB_KAUW",
       "RSPB_KAUW"
+     ]
+    },
+    {
+     "id": "sp027",
+     "why": "Bij goed zicht op de staart in vlucht toont een Raaf een wigvormige staart. Bij de Zwarte Kraai is de staartrand hoekiger.",
+     "sources": [
+      "VB_ZKR"
      ]
     }
    ],
@@ -12671,7 +12704,7 @@ const DATA = {
       "sp030"
      ],
      "reliability": "ondersteunend",
-     "conditions": "Goed licht en zicht op kop en onderzijde.",
+     "conditions": "Goed licht en zicht op kop en onderzijde. Gebruik de buikstreep in vlucht alleen bij vrij zicht op de buik.",
      "exceptions": "Jonge vogels van beide soorten kunnen gelige wangen hebben. Bij tegenlicht is blauw minder goed te zien.",
      "supporting": "Combineer de koptekening met de donkere buikstreep.",
      "sources": [
@@ -12829,7 +12862,7 @@ const DATA = {
       "sp029"
      ],
      "reliability": "ondersteunend",
-     "conditions": "Goed zicht op het profiel en de borst.",
+     "conditions": "Goed zicht op het profiel en de borst. Vergelijk de onderzijde in vlucht alleen als die vrij zichtbaar is.",
      "exceptions": "Bij juvenielen van beide soorten kunnen de wangen geelachtig zijn. In slecht licht is de kruinkleur minder goed te zien.",
      "supporting": "Bekijk waar het donkere patroon op de kop loopt.",
      "sources": [

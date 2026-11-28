@@ -24,7 +24,8 @@ def main():
     retired = media.setdefault("retired", {})
     changed = {"uit-rol": 0, "archief": 0, "gemarkeerd": 0}
     for image, r in review["assets"].items():
-        tag = f"{r['decision']} {date}: {r['reason']}"
+        review_date = r.get("reviewedOn", date)
+        tag = f"{r['decision']} {review_date}: {r['reason']}"
         hit = None
         for sid, cards in media["plumage"].items():
             for key, p in cards.items():
