@@ -24,9 +24,14 @@ import { windMarkup, weatherPlace, weatherPlaceMarkup, noLocationText } from './
 import { resolveLocation, setManualLocation } from '../../services/location.js';
 import { openPinPicker } from '../sightings/pinPicker.js';
 import { loadPlaces } from '../../data/places.js';
-import { speciesTally } from '../sightings/evidence.js';
+import { OBSERVATION_METHODS, speciesTally } from '../sightings/evidence.js';
 
 // ── Constanten ─────────────────────────────────────────────
+const MONTHLY_METHODS = [
+  ['seen', 'Alleen gezien'],
+  ['heard', 'Alleen gehoord'],
+  ['both', OBSERVATION_METHODS.both],
+];
 // GPS-01: geen standaardstad meer (was Amsterdam). Weer en zon gebruiken één gedeelde locatiebepaling.
 const WEATHER_TTL_MS = 15 * 60 * 1000;     // zelfde ± 1 km-cel binnen 15 min: geen nieuw weerverzoek
 const RELOCATE_AFTER_MS = 10 * 60 * 1000;  // na hervatten van de app: locatie en weer opnieuw controleren
@@ -710,12 +715,14 @@ async function loadMonthlyChart(el, ctx) {
 
     // Bouw bucket: laatste 12 maanden
     const now    = new Date();
-    const months = [];
+    const monthsByKey = new Map();
     for (let i = 11; i >= 0; i--) {
       const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
-      months.push({
-        key:   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`,
+      const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+      monthsByKey.set(key, {
         label: d.toLocaleDateString('nl-NL', { month: 'short' }),
+        name: d.toLocaleDateString('nl-NL', { month: 'long', year: 'numeric' }),
+        methods: { seen: 0, heard: 0, both: 0, unrecorded: 0 },
         count: 0,
       });
     }
@@ -723,10 +730,14 @@ async function loadMonthlyChart(el, ctx) {
     for (const s of sightings) {
       if (!s.date) continue;
       const key = s.date.slice(0, 7); // "YYYY-MM"
-      const bucket = months.find(m => m.key === key);
-      if (bucket) bucket.count++;
+      const bucket = monthsByKey.get(key);
+      if (!bucket) continue;
+      const method = Object.hasOwn(OBSERVATION_METHODS, s.observationMethod) ? s.observationMethod : 'unrecorded';
+      bucket.methods[method]++;
+      bucket.count++;
     }
 
+    const months = [...monthsByKey.values()];
     const maxCount = Math.max(...months.map(m => m.count));
 
     // Lege staat: geen sightings überhaupt, of alle buiten het 12-maands venster
@@ -737,6 +748,10 @@ async function loadMonthlyChart(el, ctx) {
       if (loader) loader.outerHTML = `<div class="chart-empty">${msg}</div>`;
       return;
     }
+
+    const methods = months.some(month => month.methods.unrecorded)
+      ? [...MONTHLY_METHODS, ['unrecorded', 'Niet vastgelegd']]
+      : MONTHLY_METHODS;
 
     // SVG-afmetingen — PAD_T = 14 geeft ruimte voor count-labels boven hoogste balk
     const W = 320, H = 130, PAD_L = 26, PAD_B = 20, PAD_T = 14, PAD_R = 8;
@@ -762,13 +777,25 @@ async function loadMonthlyChart(el, ctx) {
 
     const barsSvg = months.map((m, i) => {
       const x      = PAD_L + i * barW;
+      const barX   = x + barGap / 2;
       const barH   = m.count === 0 ? 2 : Math.max(3, Math.round((m.count / maxCount) * chartH));
       const y      = PAD_T + chartH - barH;
       const isLast = i === months.length - 1;
       const labelX = x + barW / 2;
+      const block = `x="${barX}" y="${y}" width="${barNet}" height="${barH}" rx="2"`;
+      let bottom = PAD_T + chartH;
+      const segments = methods.filter(([method]) => m.methods[method]).map(([method]) => {
+        const height = barH * m.methods[method] / m.count;
+        bottom -= height;
+        return `<rect x="${barX}" y="${bottom}" width="${barNet}" height="${height}"
+                      class="chart-bar chart-method--${method}"/>`;
+      }).join('');
+      const label = methods.map(([method, title]) => `${title}: ${m.methods[method]}`).join(' · ');
       return `
-        <rect x="${x + barGap / 2}" y="${y}" width="${barNet}" height="${barH}"
-              rx="2" class="chart-bar${m.count === 0 ? ' chart-bar--zero' : ''}"/>
+        ${m.count
+          ? `<clipPath id="home-month-bar-${i}"><rect ${block}/></clipPath>
+             <g clip-path="url(#home-month-bar-${i})"><title>${m.name} · ${label}</title>${segments}</g>`
+          : `<rect ${block} class="chart-bar--zero"/>`}
         ${(i % 2 === 0 || isLast) ? `<text x="${labelX}" y="${H - 4}" class="chart-axis-x">${m.label}</text>` : ''}
         ${m.count > 0 ? `<text x="${labelX}" y="${y - 3}" class="chart-value">${m.count}</text>` : ''}
       `;
@@ -784,8 +811,22 @@ async function loadMonthlyChart(el, ctx) {
       </svg>
     `;
 
+    const legend = `<ul class="chart-key" aria-label="Waarnemingswijzen">${methods.map(([method, label]) =>
+      `<li><span class="chart-key__swatch chart-method--${method}" aria-hidden="true"></span>${label}</li>`
+    ).join('')}</ul>`;
+    const counts = `<details class="chart-counts">
+      <summary>Bekijk aantallen per maand</summary>
+      <table aria-label="Aantallen per waarnemingswijze en maand">
+        <thead><tr><th scope="col">Maand</th>${methods.map(([, label]) =>
+          `<th scope="col">${label}</th>`).join('')}</tr></thead>
+        <tbody>${[...months].reverse().map(month =>
+          `<tr><th scope="row">${month.name}</th>${methods.map(([method]) =>
+            `<td>${month.methods[method]}</td>`).join('')}</tr>`).join('')}</tbody>
+      </table>
+    </details>`;
+
     if (ctx.destroyed) return;
-    if (loader) loader.outerHTML = `<div class="chart-wrap">${svg}</div>`;
+    if (loader) loader.outerHTML = `<div class="chart-wrap">${svg}${legend}${counts}</div>`;
 
   } catch (_) {
     if (ctx.destroyed) return;

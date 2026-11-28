@@ -110,7 +110,7 @@ def main():
    ]:
     weather.update(overrides)
     page.reload(wait_until="domcontentloaded")
-    assert page.locator('#birdspotSplash').count()==0
+    page.locator('#birdspotSplashSkip').click()
     weather_tip.get_by_text(expected, exact=False).wait_for()
     assert weather_tip.locator('li').count() <= 2
     if weather['weather_code'] == 95:
@@ -118,7 +118,7 @@ def main():
    page.unroute(weather_url)
    page.route(weather_url, lambda route: route.abort())
    page.reload(wait_until="domcontentloaded")
-   assert page.locator('#birdspotSplash').count()==0
+   page.locator('#birdspotSplashSkip').click()
    page.get_by_text('Weer niet beschikbaar', exact=True).wait_for()
    assert weather_tip.count()==0
    page.locator('.nav-item[data-route="species"]').click()

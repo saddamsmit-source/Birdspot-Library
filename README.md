@@ -5,6 +5,10 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.51 · vogelmerk en maandgrafiek (28 november 2026)
+
+Het logo in Home en het installatie-icoon gebruiken hetzelfde vogelprofiel met kop, snavel, oog en subtiel reliëf. De grafiek op Home stapelt per maand Alleen gezien, Alleen gehoord en Gezien en gehoord. Bij oudere records zonder vastgelegde wijze blijft het aantal zichtbaar in grijs. Onder de legenda staan de exacte aantallen per maand. [Concept-PR #392](https://github.com/saddamsmit-source/Birdspot-Library/pull/392).
+
 ## Aviandra 1.27.50 · foto van de dag en ijsvogelintro (28 november 2026)
 
 Home toont één van de 100 foto's per lokale kalenderdag, ook na opnieuw openen. Als je de foto vergroot of de informatie leest, blijft die open tot je klaar bent.

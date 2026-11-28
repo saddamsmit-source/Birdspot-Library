@@ -1,5 +1,6 @@
 """Reproduce the Home image and the field guide contrast review in Chromium."""
 import threading
+from datetime import datetime
 
 from playwright.sync_api import expect, sync_playwright
 
@@ -141,11 +142,12 @@ def main():
         assert len({icon for _, icon in catalogue['habitats']}) == 14, catalogue
         print(f"Gidsbrede controle geslaagd: {catalogue['species']} soorten, "
               f"{catalogue['missing']} zonder gidsfoto en 14 verschillende leefgebiediconen.")
-        page.evaluate("""async () => {
-          const { FEATURED_BIRDS, POSITION_KEY } = await import('/src/features/home/specialBirds.js');
-          const index = FEATURED_BIRDS.findIndex(b => b.nl === 'Wielewaal');
-          localStorage.setItem(POSITION_KEY, JSON.stringify({ index, elapsed: 0 }));
+        oriole_day = page.evaluate("""async () => {
+          const { FEATURED_BIRDS, featuredBirdForDate } = await import('/src/features/home/specialBirds.js');
+          const days = FEATURED_BIRDS.map((_, i) => new Date(2026, 10, 1 + i, 12));
+          return days.find(day => featuredBirdForDate(day)?.nl === 'Wielewaal').getTime();
         }""")
+        page.clock.set_fixed_time(datetime.fromtimestamp(oriole_day / 1000).astimezone())
         page.reload(wait_until='domcontentloaded')
         page.locator('#birdspotSplash').wait_for(state='detached', timeout=15000)
         hero = page.locator('#slideshow')
