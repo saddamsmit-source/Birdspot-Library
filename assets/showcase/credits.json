@@ -1364,12 +1364,15 @@
   "height": 1600
  },
  "sp255": {
-  "file": "Sumpfohreule (Asio flammeus) auf Spiekeroog - Nationalpark niedersächsisches Wattenmeer.jpg",
-  "author": "Stephan Sprinz",
-  "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Sumpfohreule_(Asio_flammeus)_auf_Spiekeroog_-_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg",
+  "file": "Short eared Owl flying.jpg",
+  "author": "Norberto Esteves",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Short_eared_Owl_flying.jpg",
+  "image": "/assets/showcase/sp255-home.webp",
   "width": 1600,
-  "height": 1067
+  "height": 1067,
+  "modifications": "Uitgesneden, verkleind en omgezet naar WebP · CC BY-SA 4.0"
  },
  "sp256": {
   "file": "Upupa epops 2019.jpg",
