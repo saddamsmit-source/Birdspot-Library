@@ -22,6 +22,7 @@ import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 
 import { BREEDING_BEHAVIORS, methodLabel, sourceLabel, speciesTally } from '../sightings/evidence.js';
+import { validDay } from '../insights/analytics.js';
 function guideSightings() { return getSightingsSnapshot().filter(s=>s && typeof s === 'object' && typeof s.speciesId === 'string'); }
 // UX-03R: 'Waargenomen' en de teller volgen de centrale telregel; een soort met alleen suggesties zonder
 // eigen controle, 'controle onbekend' of 'mogelijk' heet 'Geregistreerd, telt niet mee'.
@@ -188,13 +189,24 @@ function getRecentSpeciesIds(limit = 8) {
 }
 
 // ── Render entrypoint ──────────────────────────────────────────
-export function renderSpecies(el, { speciesId } = {}) {
+export function renderSpecies(el, { speciesId, listYear, listMonth, linkedDetail, rememberTarget } = {}) {
   if (_speciesCtx?.cleanup) _speciesCtx.cleanup();
   const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null, filterEvents:new AbortController() };
   _speciesCtx = ctx;
   const seenIds = getObservedIds();
 
-  const recentIds = getRecentSpeciesIds();
+  const scopedYear=Number.isInteger(listYear)&&listYear>=1900&&listYear<=2100;
+  const month=Number.isInteger(listMonth)&&listMonth>=1&&listMonth<=12?listMonth:null;
+  if (scopedYear) {
+    ctx.yearList=speciesTally(guideSightings().filter(s=>{
+      const day=validDay(s.date);
+      return day?.slice(0,4)===String(listYear)&&(!month||Number(day.slice(5,7))<=month);
+    })).counting;
+    ctx.yearLabel=month
+      ? `Jaarlijst t/m ${new Intl.DateTimeFormat('nl-NL',{month:'long'}).format(new Date(listYear,month-1,1))} ${listYear}`
+      : `Jaarlijst ${listYear}`;
+  }
+  const recentIds = scopedYear ? [] : getRecentSpeciesIds();
 
   el.innerHTML = `
     <header class="species-header signature-species-hero" aria-label="Soortenbibliotheek">
@@ -203,6 +215,8 @@ export function renderSpecies(el, { speciesId } = {}) {
     </header>
 
     <div class="species-toolbar">
+      ${scopedYear ? `<div class="phase3-route-scope" id="speciesYearScope" aria-label="Jaarlijstfilter">
+        <strong>${ctx.yearLabel}</strong><button type="button" id="speciesClearYear">Alle soorten</button></div>` : ''}
       <div class="species-search-wrap">
         <svg class="species-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -272,13 +286,21 @@ export function renderSpecies(el, { speciesId } = {}) {
 
   renderList(el, seenIds, ctx);
   bindEvents(el, ctx);
+  el.querySelector('#speciesClearYear')?.addEventListener('click', () => {
+    ctx.yearList=null;
+    ctx.yearLabel=null;
+    el.querySelector('#speciesYearScope').remove();
+    rememberTarget?.({listYear:null,listMonth:null});
+    renderList(el,seenIds,ctx);
+    el.querySelector('#speciesSearch').focus({preventScroll:true});
+  });
   // K5: vanaf de kaart direct een soort openen
   let open = speciesId;
   try {
     open ||= sessionStorage.getItem('birdspot-open-species');
     sessionStorage.removeItem('birdspot-open-species');
   } catch (_) {}
-  if (open) openDetail(open, el);
+  if (open) openDetail(open, el, document.activeElement, linkedDetail===true);
 
   // Laad async thumbnails voor "Recent bekeken"
   if (recentIds.length > 0) {
@@ -315,6 +337,7 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   const favorites = getCollectionIds("species");
   const period = seasonPeriod(_seasons);
   const results = searchSpecies(_searchQuery, _currentCategory === ALL ? null : _currentCategory, _currentRegion)
+    .filter(species => !ctx?.yearList || ctx.yearList.has(species.id))
     .filter(species => !_onlyFavorites || favorites.has(species.id))
     .filter(species => presentIn(species, period))
     .filter(species => !(period && _hideYearRound && isYearRound(species)));
@@ -326,7 +349,9 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
 
   // Update sub-header teller
   const sub   = el.querySelector('#speciesSub');
-  if (sub) sub.textContent = counterText(seenIds);
+  if (sub) sub.textContent = ctx?.yearList
+    ? `${results.length} ${results.length===1?'soort':'soorten'} · ${ctx.yearLabel}`
+    : counterText(seenIds);
   const hint  = el.querySelector('#seasonHint');
   if (hint) {
     hint.hidden = !period;
@@ -338,7 +363,9 @@ function renderList(el, seenIds, ctx = _speciesCtx) {
   }
 
   if (results.length === 0) {
-    const emptyMsg = _onlyFavorites && !_searchQuery && !_currentRegion
+    const emptyMsg = ctx?.yearList && !_searchQuery
+      ? `Geen soorten gevonden in ${ctx.yearLabel.toLocaleLowerCase('nl')} voor deze filters.`
+      : _onlyFavorites && !_searchQuery && !_currentRegion
       ? 'Nog geen favorieten in deze categorie. Gebruik de ster naast een vogelsoort.'
       : period && !_searchQuery
       ? `Geen soorten in deze categorie in de periode <strong>${escHtml(period.label.toLowerCase())}</strong>. Dwaalgasten zonder vaste periode tellen niet mee.`
@@ -574,7 +601,7 @@ function guideTriggerLabel(el) {
 }
 
 // ── Detail sheet ───────────────────────────────────────────────
-function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
+function openDetail(speciesId, screenEl, returnFocus = document.activeElement, linkedDetail = false) {
   const s = SPECIES.find(x => x.id === speciesId);
   if (!s) return;
   const ctx = _speciesCtx;
@@ -606,6 +633,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
 
   const sheet = document.createElement('div');
   sheet.className = 'sheet-overlay signature-species-detail-overlay';
+  sheet.toggleAttribute('data-route-detail', linkedDetail);
   sheet.innerHTML =
     '<div class="sheet signature-species-detail-sheet" role="dialog" aria-modal="true" aria-label="' + escHtml(s.nameNL) + '">' +
       '<div class="sheet__handle" aria-hidden="true"></div>' +
@@ -688,6 +716,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement) {
     sheet.querySelectorAll('.sd-audio audio').forEach(audio => audio.pause());
     closeViewer?.(false);
     document.removeEventListener('keydown',keyHandler);
+    sheet.removeAttribute('data-route-detail');
     sheet.classList.remove('open');
     const cleanup = () => {
       sheet.remove();

@@ -6,6 +6,7 @@
  */
 import { SEASON_ORDER, monthOf, seasonOf, sightingDateRange, dateInRange } from '../../data/seasons.js';
 import { statusForSighting } from './visualization.js';
+import { validDay } from '../insights/analytics.js';
 
 export const SEASON_COLORS = Object.freeze({
   winter: '#5BC0EB',
@@ -59,6 +60,7 @@ export function cloudRadiusPx(n) {
  * seasons: Set van seizoenen (leeg = alle) · notableOnly · period: 'all' | 'year' | '6m'
  */
 export function applyLegendFilters(rows, { legend = null, seasons = new Set(), notableOnly = false, period = 'all', now = new Date() } = {}, speciesById = new Map()) {
+  const calendarYear=/^\d{4}$/.test(period);
   const range = sightingDateRange(period, now);
   return (rows || []).filter(r => {
     if (legend) {
@@ -67,6 +69,6 @@ export function applyLegendFilters(rows, { legend = null, seasons = new Set(), n
     }
     if (seasons.size && !seasons.has(seasonOf(r.date))) return false;
     if (notableOnly && !isNotable(r, speciesById)) return false;
-    return dateInRange(r.date, range);
+    return calendarYear ? validDay(r.date)?.slice(0,4)===period : dateInRange(r.date, range);
   });
 }

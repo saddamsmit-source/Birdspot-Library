@@ -9,7 +9,7 @@ import { getPhoto } from '../../data/db.js';
 import { openDetailSheet } from '../sightings/detailSheet.js';
 import { getPhotoUrl,revokePhotoUrl } from '../../utils/photoUrl.js';
 import { escHtml } from '../../utils/html.js';
-import { validDay, availableYears, summarizeFieldwork } from '../insights/analytics.js';
+import { validDay, availableYears, summarizeFieldwork, FIELD_FILTERS, habitatLabel } from '../insights/analytics.js';
 import { OBSERVATION_BREAKDOWN, observationMethodKey, speciesTally } from '../sightings/evidence.js';
 
 const safe=x=>escHtml(String(x??''));
@@ -26,9 +26,17 @@ const fmtShort=value=>{
   }):'Onbekend';
 };
 
-export function renderJournal(el) {
+export function renderJournal(el, {
+  year: initialYear, month, date, method, habitat, speciesId, filter, group, onSearchSelect, rememberTarget,
+} = {}) {
   let destroyed=false;
-  let items=[],year='all',search='',order='newest',visible=18,generation=0;
+  let items=[],year=Number.isInteger(initialYear)?String(initialYear):'all',search='',order='newest',visible=18,generation=0;
+  let selectedMonth=Number.isInteger(month)&&month>=1&&month<=12?month:null, selectedDay=validDay(date);
+  let selectedMethod=Object.hasOwn(OBSERVATION_BREAKDOWN,method)?method:null;
+  let selectedHabitat=typeof habitat==='string'&&habitat?habitat:null;
+  let selectedSpecies=typeof speciesId==='string'&&speciesId?speciesId:null;
+  let selectedFilter=Object.hasOwn(FIELD_FILTERS,filter)?filter:null;
+  let groupBy=group==='month'?'month':'day';
   const urls=new Set();
   const BATCH=18;
 
@@ -50,9 +58,13 @@ export function renderJournal(el) {
       '<section class="phase3-journal-search-panel" aria-label="Dagboek filters">' +
         '<div class="signature-section-head"><h2>Mijn waarnemingen</h2>'+
           '<span id="journalResultsCount" class="signature-count"></span></div>' +
+        '<div class="phase3-journal-selection" id="journalSelection" hidden>'+
+          '<p id="journalSelectionLabel"></p>'+
+          '<button type="button" id="journalClearSelection">Wis extra filter</button></div>'+
         '<div class="phase3-journal-filters">' +
           '<label>Zoeken<input id="journalSearch" type="search" placeholder="Vogel, locatie of notitie…" autocomplete="off"></label>' +
           '<label>Jaar<select id="journalYear" aria-label="Filter dagboek op jaar"><option value="all">Alle jaren</option></select></label>' +
+          '<label>Groeperen<select id="journalGrouping"><option value="day">Per dag</option><option value="month">Per maand</option></select></label>'+
           '<label>Volgorde<select id="journalSort" aria-label="Sorteer dagboek">' +
             '<option value="newest">Nieuwste eerst</option><option value="oldest">Oudste eerst</option></select></label>' +
         '</div></section>' +
@@ -67,7 +79,20 @@ export function renderJournal(el) {
   const feature=el.querySelector('#journalFeature');
   const count=el.querySelector('#journalResultsCount');
   const yearSelect=el.querySelector('#journalYear');
+  const groupSelect=el.querySelector('#journalGrouping');
   const more=el.querySelector('#journalMore');
+  const selection=el.querySelector('#journalSelection');
+  groupSelect.value=groupBy;
+
+  function clearDate() {
+    selectedMonth=null;
+    selectedDay=null;
+  }
+
+  function rememberSelection() {
+    rememberTarget?.({year:year==='all'?null:Number(year),month:selectedMonth,date:selectedDay,
+      method:selectedMethod,habitat:selectedHabitat,speciesId:selectedSpecies,filter:selectedFilter,group:groupBy});
+  }
 
   function releaseUrls() {
     urls.forEach(revokePhotoUrl);
@@ -75,8 +100,13 @@ export function renderJournal(el) {
   }
 
   function getFiltered() {
-    let result=items.filter(s=>
-      year==='all'||(validDay(s.date)&&s.date.slice(0,4)===year));
+    let result=items.filter(s=>{
+      const day=validDay(s.date);
+      return (year==='all'||day?.slice(0,4)===year)&&
+        (!selectedMonth||Number(day?.slice(5,7))===selectedMonth)&&(!selectedDay||day===selectedDay)&&
+        (!selectedMethod||observationMethodKey(s)===selectedMethod)&&(!selectedHabitat||habitatLabel(s)===selectedHabitat)&&
+        (!selectedSpecies||s.speciesId===selectedSpecies)&&(!selectedFilter||FIELD_FILTERS[selectedFilter].matches(s));
+    });
     if(search) result=result.filter(s=>
       [s.speciesName,s.locationName,s.notes,s.habitat].map(v=>String(v||''))
         .join(' ').toLocaleLowerCase('nl').includes(search));
@@ -162,6 +192,11 @@ export function renderJournal(el) {
     generation++;
     releaseUrls();
     const filtered=getFiltered();
+    const monthLabel=selectedMonth&&new Intl.DateTimeFormat('nl-NL',{month:'long'}).format(new Date(2026,selectedMonth-1,1));
+    const labels=[selectedDay&&fmtDay(selectedDay),monthLabel,OBSERVATION_BREAKDOWN[selectedMethod],selectedHabitat,
+      selectedSpecies&&items.find(s=>s.speciesId===selectedSpecies)?.speciesName,FIELD_FILTERS[selectedFilter]?.label].filter(Boolean);
+    selection.hidden=!labels.length;
+    selection.querySelector('p').textContent=labels.join(' · ');
     count.textContent=filtered.length+(filtered.length===1?' resultaat':' resultaten');
     updateMilestones(filtered);
     updateFeature(filtered);
@@ -176,12 +211,16 @@ export function renderJournal(el) {
     }
     const byDay=new Map();
     for(const sighting of shown) {
-      const key=validDay(sighting.date)||'onbekend';
+      const day=validDay(sighting.date);
+      const key=(groupBy==='month'?day?.slice(0,7):day)||'onbekend';
       if(!byDay.has(key))byDay.set(key,[]);
       byDay.get(key).push(sighting);
     }
     timeline.innerHTML=[...byDay].map(([date,rows])=>
-      '<section class="signature-journal-day phase3-journal-day"><h3 class="signature-journal-date">'+safe(fmtDay(date))+'</h3>'+
+      '<section class="signature-journal-day phase3-journal-day"><h3 class="signature-journal-date">'+safe(
+        groupBy==='month'&&date!=='onbekend'
+          ? new Date(date+'-01T12:00:00').toLocaleDateString('nl-NL',{month:'long',year:'numeric'})
+          : fmtDay(date))+'</h3>'+
         rows.map(s=>{
           const method=observationMethodKey(s);
           return '<button type="button" class="signature-journal-entry phase3-journal-entry" data-journal-id="'+safe(s.id)+'">'+
@@ -202,12 +241,18 @@ export function renderJournal(el) {
     if(e.target.id==='journalSearch'){search=e.target.value.trim().toLocaleLowerCase('nl');visible=BATCH;draw();}
   };
   const onChange=e=>{
-    if(e.target.id==='journalYear'){year=e.target.value;visible=BATCH;draw();}
+    if(e.target.id==='journalYear'){year=e.target.value;clearDate();rememberSelection();visible=BATCH;draw();}
+    else if(e.target.id==='journalGrouping'){groupBy=e.target.value;rememberSelection();visible=BATCH;draw();}
     else if(e.target.id==='journalSort'){order=e.target.value;visible=BATCH;draw();}
   };
   const onClick=e=>{
     if(e.target.closest('#journalToInsights')){
-      import('../../app.js').then(({navigate})=>navigate('insights'));return;
+      onSearchSelect?.({route:'insights',year:year==='all'?null:Number(year)});return;
+    }
+    if(e.target.closest('#journalClearSelection')){
+      clearDate();
+      selectedMethod=selectedHabitat=selectedSpecies=selectedFilter=null;
+      rememberSelection();visible=BATCH;draw();el.querySelector('#journalSearch').focus();return;
     }
     if(e.target.closest('#journalMore')){visible+=BATCH;draw();return;}
     const target=e.target.closest('[data-journal-id]');
@@ -223,28 +268,30 @@ export function renderJournal(el) {
   el.addEventListener('change',onChange);
   el.addEventListener('click',onClick);
 
-  (async()=>{
+  const ready=(async()=>{
     try{
       const data=await getSightings();
       if(destroyed)return;
       items=Array.isArray(data)?data:[];
       const years=availableYears(items);
+      if(year!=='all'&&!years.includes(Number(year))) years.unshift(Number(year));
       for(const y of years) {
         const opt=document.createElement('option');
         opt.value=String(y);opt.textContent=String(y);
         yearSelect.appendChild(opt);
       }
+      yearSelect.value=year;
       draw();
     }catch(_){
       if(!destroyed)timeline.innerHTML='<div class="signature-empty">Dagboek niet beschikbaar. Je waarnemingen zijn niet gewijzigd.</div>';
     }
   })();
 
-  return()=>{
+  return {ready,cleanup:()=>{
     destroyed=true;generation++;
     el.removeEventListener('input',onInput);
     el.removeEventListener('change',onChange);
     el.removeEventListener('click',onClick);
     releaseUrls();
-  };
+  }};
 }

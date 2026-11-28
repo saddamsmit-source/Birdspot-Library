@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#17382C">
   <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png?v=3">
-  <link rel="apple-touch-icon" href="icons/icon-192.png?v=3">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png?v=4">
+  <link rel="apple-touch-icon" href="icons/icon-192.png?v=4">
   <title>Aviandra</title>
 
   <!-- Tokens -->
@@ -70,18 +70,10 @@
   </div>
 
   <!-- ══ APP ROOT ════════════════════════════════════════ -->
-  <div id="app">
+  <div id="app" data-starting>
 
     <!-- Schermen worden hier ingeladen door de router -->
-    <main id="main-view" role="main" aria-live="polite" tabindex="-1">
-      <!-- placeholder terwijl JS laadt -->
-      <div id="boot-screen">
-        <div class="boot-logo">
-          <img src="icons/icon-192.png" alt="" width="52" height="52">
-          <span>Aviandra</span>
-        </div>
-      </div>
-    </main>
+    <main id="main-view" role="main" aria-live="polite" aria-busy="true" tabindex="-1"></main>
 
     <!-- Onderste navigatie — 5 items met centrale FAB -->
     <nav id="app-nav" class="app-nav" role="navigation" aria-label="Hoofdnavigatie">

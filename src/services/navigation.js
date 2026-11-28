@@ -5,13 +5,13 @@ const STATE = 'birdspotRoute';
 let lastRootBack = 0;
 let sequence = 0;
 const visible = el => el && !el.hidden && el.getClientRects().length > 0;
-function closeTopLayer() {
+function closeTopLayer(leavingEntry) {
   const photoEditor = document.querySelector('.sd-guide-editor[open]');
   if (photoEditor) { photoEditor.querySelector('.sd-guide-close').click(); return true; }
   const search = document.querySelector('#appSearchDialog[open]');
   if (search) { search.querySelector('.app-search-close').click(); return true; }
   // Reverse DOM order breaks equal-z-index ties in the same way as painting.
-  const selectors = '.sheet-overlay.open,.signature-lightbox,.lightbox,.confirm-overlay,.manual-pin-dialog,#mapDetailSheet.open,#mapPinPanel';
+  const selectors = '.sheet-overlay.open,.sheet-overlay[data-route-detail],.signature-lightbox,.lightbox,.confirm-overlay,.manual-pin-dialog,#mapDetailSheet.open,#mapPinPanel';
   const layers = [...document.querySelectorAll(selectors)].filter(visible)
     .map((el,index)=>({el,index,z:Number(getComputedStyle(el).zIndex)||0}))
     .sort((a,b)=>b.z-a.z||b.index-a.index);
@@ -22,7 +22,11 @@ function closeTopLayer() {
     if (envBack && visible(envBack)) { envBack.click(); return true; }
     const button = el.querySelector('#confirmCancel,.confirm-cancel,.signature-lightbox-close,.lightbox__close,#spPickerClose,#pinCancel,#addSheetCancel,#detailClose,.signature-species-detail-close,#mapSheetClose,#mapPinCancel');
     if (button && visible(button)) {
-      if (!el.querySelector('#addSheetSubmit:disabled')) button.click();
+      if (!el.querySelector('#addSheetSubmit:disabled')) {
+        const linkedDetail = el.hasAttribute('data-route-detail');
+        button.click();
+        if (leavingEntry && linkedDetail) return false;
+      }
       return true;
     }
   }
@@ -32,11 +36,11 @@ function closeTopLayer() {
   if (visible(filter)) { filter.click(); filter.focus({preventScroll:true}); return true; }
   return false;
 }
-export function recordRoute(route, replace = false, entry = `${performance.timeOrigin}:${++sequence}`) {
-  history[replace ? 'replaceState' : 'pushState']({ [STATE]: route, birdspotEntry: entry }, '');
+export function recordRoute(route, replace = false, entry = `${performance.timeOrigin}:${++sequence}`, target = {}) {
+  history[replace ? 'replaceState' : 'pushState']({ [STATE]: route, birdspotEntry: entry, birdspotTarget: target }, '');
   return entry;
 }
-export function installNavigation({navigate,current,currentEntry,toast}) {
+export function installNavigation({navigate,current,currentEntry,currentTarget,toast}) {
   // Keep one root entry so the first Back on a freshly opened app can close a dialog.
   if (!history.state?.[STATE] || history.state?.birdspotRoot) {
     history.replaceState({[STATE]:'home',birdspotRoot:true},'');
@@ -46,7 +50,9 @@ export function installNavigation({navigate,current,currentEntry,toast}) {
   }
   window.addEventListener('popstate', event => {
     const route = current() || 'home';
-    if (closeTopLayer()) { recordRoute(route, false, currentEntry()); return; }
+    if (closeTopLayer(event.state?.birdspotEntry!==currentEntry())) {
+      recordRoute(route, false, currentEntry(), currentTarget()); return;
+    }
     if (event.state?.birdspotRoot) {
       if (route === 'home' && Date.now()-lastRootBack < 1800) { history.back(); return; }
       lastRootBack = Date.now();

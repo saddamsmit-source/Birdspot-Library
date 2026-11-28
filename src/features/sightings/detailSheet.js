@@ -26,7 +26,7 @@ const CERTAINTY_NL = {
   possible: 'Mogelijk',
 };
 
-export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceRenamed, isActive = () => true } = {}) {
+export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceRenamed, isActive = () => true, linkedDetail = false } = {}) {
   // Laad media uit IndexedDB
   // Ronde 3: eigen geluidsopnamen apart houden (nooit in de foto-/videogalerij).
   const photos = (await getPhotosBySighting(sighting.id).catch(() => [])).filter(p => !isSightingAudio(p));
@@ -45,6 +45,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
   const ov = document.createElement('div');
   ov.className = 'sheet-overlay';
   ov.id = 'detailSightingSheet';
+  ov.toggleAttribute('data-route-detail', linkedDetail);
 
   ov.innerHTML = `
     <div class="sheet" role="dialog" aria-modal="true"
@@ -85,6 +86,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
     if (closed) return;
     closed = true;
     closePhoto?.(false);
+    ov.removeAttribute('data-route-detail');
     ov.classList.remove('open');
     document.removeEventListener('keydown',onKey);
     setTimeout(() => { ov.remove(); _releaseUrls(); previousFocus?.focus?.(); }, 300);

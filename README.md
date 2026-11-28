@@ -5,6 +5,10 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.54 · doorklikken vanuit Inzichten (28 november 2026)
+
+Jaarcijfers, waarnemingswijzen, veldcijfers, leefgebieden en mijlpalen leiden naar het Dagboek, de soortgids, de kaart of de betreffende waarneming. Het Dagboek kan per dag of maand groeperen en laat actieve filters zien. De webintro gaat direct naar de ijsvogel. Het goudkleurige en smaragdgroene beeldmerk zit ook in de installatie-iconen. [Concept-PR #395](https://github.com/saddamsmit-source/Birdspot-Library/pull/395).
+
 ## Aviandra 1.27.53 · veldstatistieken en contrast (28 november 2026)
 
 Meer ontdekken krijgt een stevige goudkleurige rand en grotere uitklappijl. Inzichten toont per maand de aantallen gezien, gehoord en beide, plus velddagen, actieve maanden, GPS, notities, opnames en zelf gecontroleerde geluidssuggesties. Dagboek toont dezelfde waarnemingswijzen voor de huidige selectie. De kleuren van cijfers, iconen en navigatie helpen de onderdelen onderscheiden. [Concept-PR #394](https://github.com/saddamsmit-source/Birdspot-Library/pull/394).
