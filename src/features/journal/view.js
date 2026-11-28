@@ -3,14 +3,14 @@
  * The user's existing sightings are the one source of truth.
  * All photo links are to IndexedDB media, never stock/AI imagery.
  */
-import { appIcon } from '../../utils/icons.js';
+import { appIcon, observationIcon } from '../../utils/icons.js';
 import { getSightings } from '../../data/sightings.js';
 import { getPhoto } from '../../data/db.js';
 import { openDetailSheet } from '../sightings/detailSheet.js';
 import { getPhotoUrl,revokePhotoUrl } from '../../utils/photoUrl.js';
 import { escHtml } from '../../utils/html.js';
-import { validDay,availableYears } from '../insights/analytics.js';
-import { speciesTally } from '../sightings/evidence.js';
+import { validDay, availableYears, summarizeFieldwork } from '../insights/analytics.js';
+import { OBSERVATION_BREAKDOWN, observationMethodKey, speciesTally } from '../sightings/evidence.js';
 
 const safe=x=>escHtml(String(x??''));
 const fmtDay=value=>{
@@ -40,14 +40,16 @@ export function renderJournal(el) {
     '<div class="signature-orbit" aria-hidden="true"></div>' +
     '<button type="button" class="phase3-hero-link" id="journalToInsights">Ontdek mijn Inzichten ↗</button></header>' +
     '<div class="signature-content phase3-journal-content">' +
-      '<div class="phase3-journal-intro"><span class="signature-eyebrow">YOUR JOURNEY</span>' +
+      '<div class="phase3-journal-intro">' +
         '<h2>Mijn verhaal in de natuur</h2>' +
         '<p>Je eigen waarnemingen, notities en foto’s — als een digitaal veldboek.</p></div>' +
       '<div class="signature-milestones phase3-journal-milestones" id="journalMilestones" aria-label="Mijn mijlpalen"></div>' +
+      '<section class="phase3-journal-methods" id="journalMethods" aria-labelledby="journalMethodsTitle" hidden>'+
+        '<h3 id="journalMethodsTitle">Waarnemingswijze</h3><ul class="phase3-method-list"></ul></section>'+
       '<div class="phase3-journal-feature" id="journalFeature" hidden></div>' +
       '<section class="phase3-journal-search-panel" aria-label="Dagboek filters">' +
-        '<div class="signature-section-head"><div><span class="signature-eyebrow">FIELD NOTES</span>' +
-          '<h2>Mijn waarnemingen</h2></div><span id="journalResultsCount" class="signature-count"></span></div>' +
+        '<div class="signature-section-head"><h2>Mijn waarnemingen</h2>'+
+          '<span id="journalResultsCount" class="signature-count"></span></div>' +
         '<div class="phase3-journal-filters">' +
           '<label>Zoeken<input id="journalSearch" type="search" placeholder="Vogel, locatie of notitie…" autocomplete="off"></label>' +
           '<label>Jaar<select id="journalYear" aria-label="Filter dagboek op jaar"><option value="all">Alle jaren</option></select></label>' +
@@ -61,6 +63,7 @@ export function renderJournal(el) {
 
   const timeline=el.querySelector('#journalTimeline');
   const milestones=el.querySelector('#journalMilestones');
+  const methodPanel=el.querySelector('#journalMethods');
   const feature=el.querySelector('#journalFeature');
   const count=el.querySelector('#journalResultsCount');
   const yearSelect=el.querySelector('#journalYear');
@@ -89,22 +92,30 @@ export function renderJournal(el) {
     const species=speciesTally(filtered).counting;
     const places=new Set(filtered.map(s=>
       typeof s.locationName==='string'?s.locationName.trim().toLocaleLowerCase('nl'):'').filter(Boolean));
-    const media=filtered.filter(s=>Array.isArray(s.photoIds)&&s.photoIds.length).length;
+    const { methods, mediaCount }=summarizeFieldwork(filtered);
     milestones.innerHTML=[
       [species.size,'Soorten op je lijst','bird'],
       [filtered.length,'Waarnemingen','observations'],
       [places.size,'Locaties','pin'],
-      [media,'Met media','media'],
+      [mediaCount,'Met beeld of geluid','media'],
     ].map(([number,label,icon])=>
-      '<div class="signature-milestone phase3-journal-milestone"><span aria-hidden="true">'+appIcon(icon)+'</span>'+
+      '<div class="signature-milestone phase3-journal-milestone phase3-metric--'+icon+'"><span aria-hidden="true">'+appIcon(icon)+'</span>'+
         '<strong>'+number+'</strong><small>'+label+'</small></div>').join('');
+    methodPanel.hidden=!filtered.length;
+    methodPanel.querySelector('ul').innerHTML=Object.entries(OBSERVATION_BREAKDOWN)
+      .filter(([key])=>key!=='unrecorded'||methods.unrecorded)
+      .map(([key,label])=>`<li class="phase3-method phase3-method--${key}">
+        <span aria-hidden="true">${observationIcon(key)}</span><span>${label}</span>
+        <strong>${methods[key]}</strong></li>`).join('');
   }
 
   function updateFeature(filtered) {
-    const latest=filtered.find(s=>validDay(s.date));
+    const latest=order==='oldest'
+      ? filtered.findLast(s=>validDay(s.date))
+      : filtered.find(s=>validDay(s.date));
     feature.hidden=!latest;
     if(!latest){feature.innerHTML='';return;}
-    feature.innerHTML='<span class="signature-eyebrow">RECENT DISCOVERY</span>' +
+    feature.innerHTML='<span class="signature-eyebrow">Meest recente waarneming</span>' +
       '<div class="phase3-journal-feature-body"><div><h3>'+safe(latest.speciesName||'Onbekende soort')+'</h3>' +
       '<p>'+safe(fmtShort(latest.date))+
         (latest.locationName?' · '+safe(latest.locationName):'')+'</p>'+
@@ -171,15 +182,19 @@ export function renderJournal(el) {
     }
     timeline.innerHTML=[...byDay].map(([date,rows])=>
       '<section class="signature-journal-day phase3-journal-day"><h3 class="signature-journal-date">'+safe(fmtDay(date))+'</h3>'+
-        rows.map(s=>
-          '<button type="button" class="signature-journal-entry phase3-journal-entry" data-journal-id="'+safe(s.id)+'">'+
+        rows.map(s=>{
+          const method=observationMethodKey(s);
+          return '<button type="button" class="signature-journal-entry phase3-journal-entry" data-journal-id="'+safe(s.id)+'">'+
             '<span class="phase3-journal-photo" data-journal-photo="'+safe(s.id)+'" aria-hidden="true">✦</span>'+
             '<span class="signature-journal-copy"><strong>'+safe(s.speciesName||'Onbekende soort')+'</strong>'+
               '<small>'+safe(s.locationName||'Locatie niet vastgelegd')+
                 (Number(s.count)>1?' · '+Number(s.count)+' vogels':'')+'</small>'+
+              `<span class="phase3-method-badge phase3-method--${method}">
+                ${observationIcon(method)}${OBSERVATION_BREAKDOWN[method]}</span>`+
               (s.notes?'<em>'+safe(String(s.notes).slice(0,140))+'</em>':'')+
             '</span><span class="signature-journal-arrow" aria-hidden="true">↗</span>'+
-          '</button>').join('')+'</section>').join('');
+          '</button>';
+        }).join('')+'</section>').join('');
     loadThumbnails(shown,generation);
   }
 

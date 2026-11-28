@@ -24,14 +24,10 @@ import { windMarkup, weatherPlace, weatherPlaceMarkup, noLocationText } from './
 import { resolveLocation, setManualLocation } from '../../services/location.js';
 import { openPinPicker } from '../sightings/pinPicker.js';
 import { loadPlaces } from '../../data/places.js';
-import { OBSERVATION_METHODS, speciesTally } from '../sightings/evidence.js';
+import { OBSERVATION_BREAKDOWN, observationMethodKey, speciesTally } from '../sightings/evidence.js';
 
 // ── Constanten ─────────────────────────────────────────────
-const MONTHLY_METHODS = [
-  ['seen', 'Alleen gezien'],
-  ['heard', 'Alleen gehoord'],
-  ['both', OBSERVATION_METHODS.both],
-];
+const MONTHLY_METHODS = Object.entries(OBSERVATION_BREAKDOWN);
 // GPS-01: geen standaardstad meer (was Amsterdam). Weer en zon gebruiken één gedeelde locatiebepaling.
 const WEATHER_TTL_MS = 15 * 60 * 1000;     // zelfde ± 1 km-cel binnen 15 min: geen nieuw weerverzoek
 const RELOCATE_AFTER_MS = 10 * 60 * 1000;  // na hervatten van de app: locatie en weer opnieuw controleren
@@ -732,7 +728,7 @@ async function loadMonthlyChart(el, ctx) {
       const key = s.date.slice(0, 7); // "YYYY-MM"
       const bucket = monthsByKey.get(key);
       if (!bucket) continue;
-      const method = Object.hasOwn(OBSERVATION_METHODS, s.observationMethod) ? s.observationMethod : 'unrecorded';
+      const method = observationMethodKey(s);
       bucket.methods[method]++;
       bucket.count++;
     }
@@ -749,9 +745,8 @@ async function loadMonthlyChart(el, ctx) {
       return;
     }
 
-    const methods = months.some(month => month.methods.unrecorded)
-      ? [...MONTHLY_METHODS, ['unrecorded', 'Niet vastgelegd']]
-      : MONTHLY_METHODS;
+    const hasUnrecorded = months.some(month => month.methods.unrecorded);
+    const methods = MONTHLY_METHODS.filter(([method]) => method !== 'unrecorded' || hasUnrecorded);
 
     // SVG-afmetingen — PAD_T = 14 geeft ruimte voor count-labels boven hoogste balk
     const W = 320, H = 130, PAD_L = 26, PAD_B = 20, PAD_T = 14, PAD_R = 8;
