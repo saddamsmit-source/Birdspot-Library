@@ -1,11 +1,9 @@
 /**
- * Diashow op de startpagina (F): elke 30 s een bijzondere Nederlandse vogel met lokale foto.
- * Geen achtergrondtimer: alleen zichtbare tijd telt. Bij verbergen, sluiten of elke 5 s wordt de positie
- * bewaard; bij openen gaat de diashow verder waar hij was (specialBirds.js).
+ * Dagfoto op Home. De foto wisselt bij lokale middernacht of bij hervatten.
  * Herkenning en aanwezigheid komen uit Birdspot's eigen soortendatabase.
  * Foto's zijn aparte Wikimedia Commons-referenties met maker en licentie.
  */
-import { FEATURED_BIRDS, advance, loadPosition, savePosition } from './specialBirds.js';
+import { featuredBirdForDate } from './specialBirds.js';
 import { SPECIES, CATEGORY_BADGES } from '../../data/species.js';
 import { closePhotoInfo, photoInfoMarkup } from '../../utils/photoInfo.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
@@ -18,8 +16,6 @@ const HABITAT_LABELS = Object.freeze({
   water: 'Water en oevers', moeras: 'Moeras', rietland: 'Rietland',
   rivierengebied: 'Rivieren', struweel: 'Struweel',
 });
-const SAVE_EVERY_MS = 5_000;
-let manuallyPaused = false;
 
 /** Tekst onder de naam: herkenning + wanneer in Nederland. Pure functie (testbaar). */
 export function birdInfo(bird) {
@@ -50,17 +46,15 @@ export function birdInfo(bird) {
   };
 }
 
-export function initFeaturedCarousel(el, ctx) {
+export function initFeaturedBird(el, ctx) {
   const stage = el.querySelector('#slideshow');
-  if (!stage || !FEATURED_BIRDS.length) return () => {};
+  if (!stage || !featuredBirdForDate()) return () => {};
   const photo = stage.querySelector('#featuredBirdImage');
   const zoom = stage.querySelector('#featuredBirdZoom');
   let closeViewer;
   const group = stage.querySelector('#featuredBirdGroup');
   const name = stage.querySelector('#featuredBirdName');
   const latin = stage.querySelector('#featuredBirdLatin');
-  const place = stage.querySelector('#featuredBirdWhere');
-  const presence = stage.querySelector('#featuredBirdPresence');
   const quickRows = [
     ['featuredBirdWhere', 'recognition'],
     ['featuredBirdSexes', 'sexes'],
@@ -69,25 +63,17 @@ export function initFeaturedCarousel(el, ctx) {
     ['featuredBirdPresence', 'presence'],
   ].map(([id, key]) => [stage.querySelector('#' + id), key]);
   const credit = stage.querySelector('#featuredBirdCredit');
-  const toggle = stage.querySelector('#featuredBirdMotion');
-  const progress = [...stage.querySelectorAll('.home-featured-progress span')];
   const speciesButton = stage.querySelector('[data-featured-species]');
-  const motion = matchMedia('(prefers-reduced-motion: reduce)');
-
-  let pos = loadPosition();
-  let shownIndex = -1, timer = null, lastTick = 0, lastSave = 0, destroyed = false;
+  let shownBird, timer, destroyed = false;
 
   const onLoad = () => { if (!destroyed) { stage.classList.remove('has-no-photo'); stage.classList.add('has-photo'); } };
   const onError = () => { if (!destroyed) { stage.classList.add('has-no-photo'); stage.classList.remove('has-photo'); } };
   photo.addEventListener('load', onLoad);
   photo.addEventListener('error', onError);
 
-  function show() {
-    if (pos.index === shownIndex) return;
-    shownIndex = pos.index;
-    const bird = FEATURED_BIRDS[pos.index];
-    const part = Math.floor(pos.index * progress.length / FEATURED_BIRDS.length);
-    progress.forEach((dot, index) => dot.classList.toggle('is-current', index === part));
+  function show(bird) {
+    if (bird.id === shownBird) return;
+    shownBird = bird.id;
     const info = birdInfo(bird);
     stage.dataset.birdId = bird.id;
     const hasSpeciesCard = byId.has(bird.id);
@@ -107,81 +93,44 @@ export function initFeaturedCarousel(el, ctx) {
       element.closest('.field-featured-fact').hidden = !value;
     }
     credit.innerHTML = photoInfoMarkup(bird);
-    // volgende foto alvast laden, zodat de wissel direct is
-    const next = FEATURED_BIRDS[(pos.index + 1) % FEATURED_BIRDS.length];
-    if (!motion.matches && !manuallyPaused && next && next !== bird) { const pre = new Image(); pre.src = assetUrl(next.image); }
   }
 
-  const detailsOpen = () => Boolean(closeViewer || stage.querySelector('details[open]'));
-
-  function tick() {
-    const now = performance.now();
-    pos = advance(pos, now - lastTick);
-    lastTick = now;
-    if (!detailsOpen()) show();
-    if (now - lastSave >= SAVE_EVERY_MS) { savePosition(pos); lastSave = now; }
+  function updatePhoto() {
+    clearTimeout(timer);
+    if (destroyed || ctx.destroyed || document.hidden) return;
+    const now = new Date();
+    if (!closeViewer && !stage.querySelector('details[open]')) show(featuredBirdForDate(now));
+    const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    timer = setTimeout(updatePhoto, midnight - now);
   }
-
-  function start() {
-    if (destroyed || ctx.destroyed || document.hidden || timer || motion.matches || manuallyPaused || detailsOpen()) return;
-    lastTick = lastSave = performance.now();
-    show();
-    timer = setInterval(tick, 1000);
-  }
-  function stop() {
-    if (!timer) return;
-    tick();
-    clearInterval(timer); timer = null;
-    savePosition(pos);
-  }
-
-  const updateMotion = () => {
-    const paused = motion.matches || manuallyPaused;
-    if (toggle) {
-      toggle.hidden = motion.matches;
-      toggle.setAttribute('aria-pressed', String(manuallyPaused));
-      toggle.setAttribute('aria-label', manuallyPaused ? 'Diashow hervatten' : 'Diashow pauzeren');
-    }
-    if (paused || document.hidden || detailsOpen()) stop();
-    else start();
-  };
-  const onToggle = () => {
-    manuallyPaused = !manuallyPaused;
-    updateMotion();
-  };
   const onKey = event => {
     if (event.key === 'Escape' && closePhotoInfo(stage)) event.stopPropagation();
   };
   zoom.addEventListener('click', () => {
     if (closeViewer) return;
-    stop();
     closeViewer = openPhotoViewer({
       url: photo.src, alt: photo.alt, trigger: zoom,
       photoInfo: credit.querySelector('.photo-info'),
-      onClose: () => { closeViewer = undefined; updateMotion(); },
+      onClose: () => { closeViewer = undefined; updatePhoto(); },
     });
   });
-  stage.addEventListener('toggle', updateMotion, true);
+  const suspend = () => clearTimeout(timer);
+  stage.addEventListener('toggle', updatePhoto, true);
   stage.addEventListener('keydown', onKey);
-  toggle?.addEventListener('click', onToggle);
-  motion.addEventListener('change', updateMotion);
-  const onVis = updateMotion;
-  const onHide = () => stop();
-  document.addEventListener('visibilitychange', onVis);
-  window.addEventListener('pagehide', onHide);
-  show();
-  updateMotion();
+  document.addEventListener('visibilitychange', updatePhoto);
+  window.addEventListener('pageshow', updatePhoto);
+  window.addEventListener('pagehide', suspend);
+  updatePhoto();
 
   return () => {
-    stop();
     destroyed = true;
+    suspend();
     closeViewer?.(false);
-    document.removeEventListener('visibilitychange', onVis);
-    stage.removeEventListener('toggle', updateMotion, true);
+    document.removeEventListener('visibilitychange', updatePhoto);
+    stage.removeEventListener('toggle', updatePhoto, true);
     stage.removeEventListener('keydown', onKey);
-    toggle?.removeEventListener('click', onToggle);
-    motion.removeEventListener('change', updateMotion);
-    window.removeEventListener('pagehide', onHide);
+    window.removeEventListener('pageshow', updatePhoto);
+    window.removeEventListener('pagehide', suspend);
     photo.removeEventListener('load', onLoad);
     photo.removeEventListener('error', onError);
   };

@@ -66,14 +66,16 @@ def main():
       assert "Wisselt elke minuut" not in p.locator("#slideshow").inner_text()
       assert p.locator(".featured-birds__caption").is_visible()
 
-      # F: vaste lokale diashow (30 s, hervat waar hij was) — details in tests/test_showcase.py.
+      assert p.locator("#featuredBirdMotion, .home-featured-progress").count()==0
+      assert p.get_by_role("region", name="Foto van de dag").is_visible()
       current=p.evaluate("""async()=>{
         const m=await import('/src/features/home/specialBirds.js');
         return {total:m.FEATURED_BIRDS.length,unique:new Set(m.FEATURED_BIRDS.map(b=>b.latin)).size,
-          local:m.FEATURED_BIRDS.every(b=>b.image.startsWith('/assets/showcase/')),interval:m.SHOWCASE_INTERVAL_MS};
+          local:m.FEATURED_BIRDS.every(b=>b.image.startsWith('/assets/showcase/')),
+          daily:m.featuredBirdForDate().id};
       }""")
-      assert current["total"]>=20 and current["unique"]==current["total"] and current["local"],current
-      assert current["interval"]==30000,current
+      assert current["total"]==100 and current["unique"]==100 and current["local"],current
+      assert p.locator("#slideshow").get_attribute("data-bird-id")==current["daily"],current
       p.wait_for_function("()=>document.querySelector('#featuredBirdImage').naturalWidth>0",timeout=8000)
       capture(p,'mobile_editorial_390.png')
 
@@ -181,7 +183,7 @@ def main():
         assert p.locator('.signature-species-hero').is_visible()
         assert p.evaluate("() => document.documentElement.scrollWidth<=window.innerWidth+2"),width
       assert not errors,errors
-      print("PASS: 30-second local bird showcase, informational species guide, mobile form bounds, ambient pause")
+      print("PASS: local photo of the day, informational species guide, mobile form bounds, ambient pause")
       context.close();browser.close()
     srv.shutdown()
 if __name__=='__main__':main()

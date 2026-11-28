@@ -17,7 +17,7 @@ import { LAYERS } from '../map/centerPin.js';
 import { escHtml } from '../../utils/html.js';
 import { getPhotoUrl, revokePhotoUrl }    from '../../utils/photoUrl.js';
 import { assetUrl } from '../../utils/assetUrl.js';
-import { initFeaturedCarousel } from './featuredCarousel.js';
+import { initFeaturedBird } from './featuredCarousel.js';
 import { bindAppSearch, searchMarkup } from '../search/index.js';
 import { buildAmbientBackdrop,initAmbientBackdrop } from './ambientBackdrop.js';
 import { windMarkup, weatherPlace, weatherPlaceMarkup, noLocationText } from './weatherFormat.js';
@@ -73,7 +73,7 @@ export function renderHome(el, { onSearchSelect } = {}) {
     details.focus({ preventScroll: true });
   });
   const disposeSearch = bindAppSearch(el, onSearchSelect);
-  const disposeFeatured = initFeaturedCarousel(el,ctx);
+  const disposeFeatured = initFeaturedBird(el, ctx);
   const disposeHabitat = initAmbientBackdrop(el,ctx);
   loadStats(el, ctx);
   loadLocationCards(el, ctx);
@@ -144,8 +144,7 @@ function buildSkeleton() {
       </nav>
     </header>
 
-    <!-- Diashow: elke 30 s een bijzondere Nederlandse vogel; hervat waar hij was. -->
-    <section class="slideshow featured-birds" id="slideshow" aria-label="Bijzondere vogel in beeld">
+    <section class="slideshow featured-birds" id="slideshow" aria-label="Foto van de dag">
       <div class="featured-birds__visual">
         <div class="featured-birds__media">
           <div class="featured-birds__fallback" id="featuredBirdFallback" aria-hidden="true"><span>✦</span></div>
@@ -153,18 +152,9 @@ function buildSkeleton() {
         </div>
         <button type="button" id="featuredBirdZoom" aria-label="Vergroot foto"></button>
         <span class="field-photo-label">Gidsfoto</span>
-        <div class="home-featured-progress" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
-        <button type="button" id="featuredBirdMotion" aria-label="Diashow pauzeren" aria-pressed="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path class="featured-motion-pause" d="M6 4h4v16H6z M14 4h4v16h-4z"/>
-            <path class="featured-motion-play" d="M8 4v16l12-8z"/>
-          </svg>
-        </button>
         <div id="featuredBirdCredit" class="featured-photo-info"></div>
         <div class="featured-birds__identification">
-          <p class="field-eyebrow">Vandaag in beeld</p>
+          <p class="field-eyebrow">Foto van de dag</p>
           <span class="featured-birds__group" id="featuredBirdGroup"></span>
           <h2 id="featuredBirdName"></h2>
           <em id="featuredBirdLatin"></em>

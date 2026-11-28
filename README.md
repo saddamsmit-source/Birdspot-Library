@@ -5,6 +5,12 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.50 · foto van de dag en ijsvogelintro (28 november 2026)
+
+Home toont één van de 100 foto's per lokale kalenderdag, ook na opnieuw openen. Als je de foto vergroot of de informatie leest, blijft die open tot je klaar bent.
+
+De ijsvogelintro speelt bij online openen en bij terugkeer naar Home in de geïnstalleerde app na minimaal 30 seconden op de achtergrond. Direct openen is meteen beschikbaar. Bij verminderde beweging of een afspeelfout verschijnt de stilstaande ijsvogel. Offline opent Aviandra direct. De locatievraag kan direct na de intro verschijnen. [Concept-PR #391](https://github.com/saddamsmit-source/Birdspot-Library/pull/391).
+
 ## Aviandra 1.27.49 · locatie bij openen en kaartbediening (28 november 2026)
 
 Bij de eerste opening kan de browser om locatietoestemming vragen. Bij al verleende toestemming gebruikt Aviandra GPS direct tijdens gebruik van de app. Wie de vraag wegklikt, kan locatie later activeren via het locatie-icoon op Kaart. Daar zitten de laagwissel en het locatie-icoon compact rechtsonder. Kaart toont je locatie zodra die beschikbaar is. Tik op het locatie-icoon om daarheen te springen.

@@ -1,4 +1,4 @@
-"""Aviandra one-time kingfisher welcome QA.
+"""Aviandra kingfisher welcome QA.
 
 Checks mobile playback, playback failure, the reduced-motion still, offline
 opening and direct open while the app and welcome video are both loading.
@@ -15,7 +15,6 @@ ROOT=Path(__file__).resolve().parents[1]
 IMAGE=ROOT/"assets"/"birdspot-ijsvogel-splash.avif"
 VIDEO="assets/aviandra-intro.mp4"
 WELCOME_KEY="aviandra-welcome-video-seen"
-WELCOME_REVISION="2"
 SHOTS=ROOT/"tests"/"screenshots"
 SHOTS.mkdir(parents=True,exist_ok=True)
 
@@ -73,36 +72,38 @@ def main():
             assert page.locator("#screen-home").is_visible()
             assert not errors, errors
 
-            # Returning users see Home immediately and keep their saved sightings.
+            # Returning users still see the intro and keep their saved sightings.
             page.evaluate("""() => localStorage.setItem('birdspot-sightings',JSON.stringify({
                 schemaVersion:2,
                 sightings:[{id:'splash-test',speciesName:'Koolmees',
                  speciesId:'sp001',date:'2026-11-04',locationName:'Testbos',photoIds:[]}]
             }))""")
             page.reload(wait_until="domcontentloaded")
+            page.locator("#birdspotSplash").wait_for(state="visible",timeout=4000)
+            page.locator("#birdspotSplash").wait_for(state="detached",timeout=3000)
             page.locator("#screen-home").wait_for(timeout=7000)
             assert page.locator("#birdspotSplash").count()==0
             assert page.evaluate("""() => JSON.parse(
                 localStorage.getItem('birdspot-sightings')).sightings[0].id
             """)=="splash-test"
-            page.evaluate('key => localStorage.removeItem(key)', WELCOME_KEY)
             page.reload(wait_until="domcontentloaded")
             page.get_by_role('button', name='Direct openen').click()
             page.locator("#birdspotSplash").wait_for(state="detached",timeout=2400)
-            assert page.evaluate('key => localStorage.getItem(key)', WELCOME_KEY)==WELCOME_REVISION
             page.locator(".nav-item[data-route='map']").click()
             assert page.locator("#mapScreen").count()==1
             assert page.locator("#birdspotSplash").count()==0
             assert not errors, errors
-            print("PASS: exact image, brief reduced-motion welcome, fast return, skip and data preservation")
+            print("PASS: exact image, brief reduced-motion welcome, restart, skip and data preservation")
             context.close()
 
             motion = browser.new_context(viewport={'width': 412, 'height': 892}, service_workers='block')
             # Een eerdere installatie heeft de oude intro al gezien.
             motion.add_init_script(f"""if (!sessionStorage.getItem('welcome-test-seeded')) {{
-                localStorage.setItem('{WELCOME_KEY}', '1');
+                localStorage.setItem('{WELCOME_KEY}', '2');
                 sessionStorage.setItem('welcome-test-seeded', '1');
-            }}""")
+            }}
+            Object.defineProperty(navigator, 'standalone', {{value: true}});
+            """)
             animated = motion.new_page()
             animated.on('pageerror', lambda error: errors.append(str(error)))
             animated.goto(start, wait_until='domcontentloaded')
@@ -116,15 +117,27 @@ def main():
             assert playback['muted'] and playback['inline'] and not playback['loop'], playback
             animated.screenshot(path=str(SHOTS/'birdspot_startup_splash_video_412.png'))
             animated.locator('#birdspotSplash').wait_for(state='detached', timeout=7000)
-            assert animated.evaluate('key => localStorage.getItem(key)', WELCOME_KEY)==WELCOME_REVISION
-
             animated.reload(wait_until='domcontentloaded')
-            assert animated.locator('#birdspotSplash').count()==0
-            animated.evaluate('key => localStorage.removeItem(key)', WELCOME_KEY)
+            animated.locator('#birdspotSplash.is-video-playing').wait_for(timeout=5000)
+            animated.locator('#birdspotSplashSkip').click()
+            animated.locator('#birdspotSplash').wait_for(state='detached')
+
+            animated.evaluate("""() => {
+                const now = Date.now();
+                Object.defineProperty(document, 'hidden', {configurable:true, value:true});
+                document.dispatchEvent(new Event('visibilitychange'));
+                Date.now = () => now + 31_000;
+                Object.defineProperty(document, 'hidden', {configurable:true, value:false});
+                document.dispatchEvent(new Event('visibilitychange'));
+            }""")
+            animated.locator('#birdspotSplash.is-video-playing').wait_for(timeout=5000)
+            animated.locator('#birdspotSplashSkip').click()
+            animated.locator('#birdspotSplash').wait_for(state='detached')
+
             animated.route('**/' + VIDEO, lambda route: route.abort())
             animated.reload(wait_until='domcontentloaded')
+            animated.locator('#birdspotSplash .birdspot-splash__art').wait_for(state='visible', timeout=1100)
             animated.locator('#birdspotSplash').wait_for(state='detached', timeout=2300)
-            assert animated.evaluate('key => localStorage.getItem(key)', WELCOME_KEY) is None
             animated.unroute('**/' + VIDEO)
 
             pending_video = []
@@ -145,7 +158,7 @@ def main():
             animated.locator('#screen-home').wait_for(timeout=5000)
             animated.unroute_all(behavior='wait')
             assert not errors, errors
-            print(f"PASS: mobile intro {playback}, replay once after update, fallback and escape before app load")
+            print(f"PASS: mobile intro {playback}, replay on reload and installed Home resume, fallback and escape")
             motion.close()
             browser.close()
         server.shutdown()
@@ -209,11 +222,6 @@ def subpath_offline_check():
             assert not missing, (
                 f"Niet gecachet onder subpad {prefix}: {missing}; "
                 f"wel gecacht: {sorted(p for p in cached_paths if 'splash' in p)}")
-            # Dit eerste bezoek heeft de welkomstsplash al gezien en
-            # gesloten; wis die voorkeur zodat de offline herlaadtest
-            # hieronder de splash (en dus de gecachete foto) opnieuw toont,
-            # net als een eerste gebruiker zonder netwerk zou meemaken.
-            page.evaluate('key => localStorage.removeItem(key)', WELCOME_KEY)
             page.close()
 
             # 2) Nieuwe pagina in dezelfde context (deelt SW + caches),

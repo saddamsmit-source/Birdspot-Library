@@ -1,59 +1,22 @@
-/** De welkomstintro is optioneel. De app kan ondertussen zelfstandig starten. */
+/** De app start zelfstandig terwijl de welkomstintro afspeelt. */
 (() => {
   'use strict';
   const splash = document.getElementById('birdspotSplash');
   if (!splash) return;
 
-  const key = 'aviandra-welcome-video-seen';
-  const revision = '2';
-  let seen = false;
-  try { seen = localStorage.getItem(key) === revision; } catch (_) {}
-  if (seen || !navigator.onLine) {
-    splash.remove();
-    return;
-  }
-
   const app = document.getElementById('app');
+  const main = document.getElementById('main-view');
   const skip = splash.querySelector('#birdspotSplashSkip');
   const image = splash.querySelector('.birdspot-splash__art');
   const video = splash.querySelector('.birdspot-splash__video');
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const startedAt = performance.now();
-
-  let deadline = setTimeout(() => finish(reducedMotion), reducedMotion ? 1200 : 1800);
-  app.inert = true;
-  splash.hidden = false;
-  skip.focus({ preventScroll: true });
-  skip.addEventListener('click', () => finish(true));
-  splash.addEventListener('keydown', event => {
-    if (event.key === 'Escape') finish(true);
-  });
-  window.addEventListener('offline', abandon);
-
-  function abandon() {
-    finish(false);
-  }
-
-  function finish(completed) {
-    if (!splash.isConnected) return;
-    clearTimeout(deadline);
-    window.removeEventListener('offline', abandon);
-    if (completed) {
-      try { localStorage.setItem(key, revision); } catch (_) {}
-    }
-    const restoreFocus = splash.contains(document.activeElement);
-    splash.remove();
-    app.inert = false;
-    if (restoreFocus) document.getElementById('main-view').focus({ preventScroll: true });
-    if (video.hasAttribute('src')) {
-      video.pause();
-      video.removeAttribute('src');
-      video.load();
-    }
-    window.dispatchEvent(new CustomEvent('birdspot:splash-hidden', {
-      detail: { elapsedMs: Math.round(performance.now() - startedAt) }
-    }));
-  }
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const standalone = matchMedia('(display-mode: standalone)');
+  const STILL_MS = 1200;
+  const FIRST_FRAME_MS = 3000;
+  const PLAYBACK_LIMIT_MS = 5700;
+  const REOPEN_AFTER_MS = 30_000;
+  let finishIntro;
+  let hiddenAt;
 
   function showStillFallback() {
     splash.classList.add('image-unavailable');
@@ -62,19 +25,94 @@
 
   if (image.complete && !image.naturalWidth) showStillFallback();
   image.addEventListener('error', showStillFallback, { once: true });
-  if (reducedMotion) return;
 
-  function showVideo() {
-    if (!splash.isConnected || video.currentTime <= 0) return;
-    video.removeEventListener('timeupdate', showVideo);
-    splash.classList.add('is-video-playing');
-    clearTimeout(deadline);
-    deadline = setTimeout(abandon, 5600);
+  function playIntro() {
+    if (!navigator.onLine || finishIntro) return;
+    const startedAt = performance.now();
+    const previousFocus = document.activeElement;
+    const listeners = new AbortController();
+    const { signal } = listeners;
+    let deadline;
+
+    function finish() {
+      if (signal.aborted) return;
+      clearTimeout(deadline);
+      listeners.abort();
+      finishIntro = undefined;
+      const restoreFocus = splash.contains(document.activeElement);
+      splash.remove();
+      app.inert = false;
+      if (restoreFocus) {
+        const target = previousFocus?.isConnected && previousFocus !== document.body ? previousFocus : main;
+        target.focus({ preventScroll: true });
+      }
+      splash.classList.remove('is-video-playing');
+      if (video.hasAttribute('src')) {
+        video.pause();
+        video.removeAttribute('src');
+        video.load();
+      }
+      window.dispatchEvent(new CustomEvent('birdspot:splash-hidden', {
+        detail: { elapsedMs: Math.round(performance.now() - startedAt) }
+      }));
+    }
+
+    function useStill() {
+      if (signal.aborted) return;
+      video.removeEventListener('timeupdate', showVideo);
+      splash.classList.remove('is-video-playing');
+      clearTimeout(deadline);
+      deadline = setTimeout(finish, Math.max(0, STILL_MS - (performance.now() - startedAt)));
+    }
+
+    function showVideo() {
+      if (video.currentTime <= 0) return;
+      video.removeEventListener('timeupdate', showVideo);
+      splash.classList.add('is-video-playing');
+      clearTimeout(deadline);
+      deadline = setTimeout(finish, PLAYBACK_LIMIT_MS);
+    }
+
+    finishIntro = finish;
+    if (!splash.isConnected) app.before(splash);
+    app.inert = true;
+    splash.hidden = false;
+    skip.focus({ preventScroll: true });
+    skip.addEventListener('click', finish, { signal });
+    splash.addEventListener('keydown', event => {
+      if (event.key === 'Escape') finish();
+    }, { signal });
+    window.addEventListener('offline', finish, { signal });
+
+    if (reducedMotion.matches) {
+      deadline = setTimeout(finish, STILL_MS);
+      return;
+    }
+
+    deadline = setTimeout(finish, FIRST_FRAME_MS);
+    video.addEventListener('timeupdate', showVideo, { signal });
+    video.addEventListener('ended', finish, { signal });
+    video.addEventListener('error', useStill, { signal });
+    video.src = video.dataset.src;
+    video.play().catch(useStill);
   }
 
-  video.addEventListener('timeupdate', showVideo);
-  video.addEventListener('ended', () => finish(true), { once: true });
-  video.addEventListener('error', abandon, { once: true });
-  video.src = video.dataset.src;
-  video.play().catch(abandon);
+  function onVisibilityChange() {
+    if (document.hidden) {
+      hiddenAt = Date.now();
+      finishIntro?.();
+      return;
+    }
+    const awayFor = hiddenAt === undefined ? 0 : Date.now() - hiddenAt;
+    hiddenAt = undefined;
+    if (!(standalone.matches || navigator.standalone) || awayFor < REOPEN_AFTER_MS) return;
+    if (!document.getElementById('screen-home') || app.inert) return;
+    const dialogs = document.querySelectorAll('[aria-modal="true"]:not([hidden], [inert])');
+    if ([...dialogs].some(dialog => dialog.getClientRects().length)) return;
+    playIntro();
+  }
+
+  document.addEventListener('visibilitychange', onVisibilityChange);
+  if (navigator.onLine && !document.hidden) playIntro();
+  else splash.remove();
 })();
