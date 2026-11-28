@@ -504,3 +504,29 @@ console.log('Kuifeend/Topper: species IDs, adult plumage pairs, non-diagnostic c
 assert.match(KNOWLEDGE.sp092.caution.text, /topper/i, 'Kuifeend knowledge panel must show the topper confusion caution');
 assert.ok(!KNOWLEDGE.sp133, 'KB-01 forbids knowledge profiles for unphotographed species');
 assert.match(recognitionPanel(greaterScaup), /lichtgrijze rug/i, 'Topper must remain recognizable via the public species summary');
+
+
+// F3-REV2-R07b: describe only the visible side of the bird and preserve the photo role.
+const r07bBlue = GUIDE_POSES.sp030.find(photo => photo.image.endsWith('sp030-flight.webp'));
+assert.equal(r07bBlue.flight, true);
+assert.match(r07bBlue.alt, /van boven in vlucht/);
+assert.doesNotMatch(r07bBlue.alt, /gele buik/);
+assert.equal(r07bBlue.visualCheck, r07bBlue.alt);
+const r07bSnow = GUIDE_POSES.sp031.find(photo => photo.image.endsWith('sp031-flight.webp'));
+assert.equal(r07bSnow.flight, false);
+assert.equal(r07bSnow.label, 'Laag boven sneeuw');
+assert.match(r07bSnow.note, /Afzetten of neerstrijken is niet vast te stellen/);
+const r07bFlight = JSON.parse(readFileSync(new URL('../docs/fotokwaliteit/vluchtcontrole.json', import.meta.url), 'utf8')).assets[r07bSnow.image];
+assert.equal(r07bFlight.airborne, false);
+assert.equal(r07bFlight.decision, 'uit-rol');
+assert.equal(r07bFlight.newLabel, r07bSnow.label);
+assert.equal(r07bFlight.newNote, r07bSnow.note);
+assert.match(recognitionPanel(species.get('sp031')), /Laag boven sneeuw/);
+assert.doesNotMatch(recognitionPanel(species.get('sp031')), /Opvliegend boven sneeuw/);
+for (const id of ['sp031', 'sp032']) {
+  const html = recognitionPanel(species.get(id));
+  assert.match(html, /De gidsopnamen zijn zangvoorbeelden, geen afzonderlijke contactroepen/);
+  assert.match(html, /scherp zijaanzicht en goed licht/);
+  assert.deepEqual(GUIDE_AUDIO[id].map(clip => clip.label), ['Zang']);
+}
+console.log('F3-REV2-R07b: photo labels, flight boundaries and reciprocal audio/field guidance checked');
