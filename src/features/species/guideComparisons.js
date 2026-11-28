@@ -51,7 +51,7 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp032",
         "source": "glanskop",
-        "marks": "Lichte vlek aan de bovensnavelbasis; vleugel meestal egaler. Roep explosief pstie-toe; zang korter en metaalachtig tiu-tiu."
+        "marks": "Lichte vlek aan de bovensnavelbasis bij scherp zijaanzicht; vleugel meestal egaler. Roep explosief pstie-toe; zang korter en metaalachtig tiu-tiu."
       }
     ],
     rows: [
@@ -59,7 +59,7 @@ export const GUIDE_COMPARISONS = [
       {label: 'Gevouwen vleugel', values: ['Vaak een licht vleugelveld', 'Meestal vrij egaal']},
       {label: 'Contactroep', values: ['Nasaal en langgerekt', 'Kort, explosief en dalend']},
     ],
-    "tip": "Luister eerst naar een duidelijke roepreeks. Bekijk daarna de bovensnavelbasis van opzij bij egaal licht. Gebruik het vleugelveld als extra aanwijzing."
+    "tip": "Luister buiten naar een duidelijke contactroep. De gidsopnamen zijn zangvoorbeelden, geen afzonderlijke contactroepen. Beoordeel de bovensnavelbasis alleen bij scherp zijaanzicht en goed licht; gebruik het vleugelveld als extra aanwijzing."
   },
   {
     label: 'Matkop en Glanskop · jonge vogels',

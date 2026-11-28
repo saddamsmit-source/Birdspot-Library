@@ -58,3 +58,14 @@ Op Chromium 320, 360 en 390 px zijn drie fotoparen in beide richtingen getest, m
 A = verdiepen of aanvullend zoeken. B = de beschreven veranderingen uitvoeren. C = verdergaan met expliciet geregistreerde open punten.
 
 **Teller** 21/140 herbeoordeeld, 18 besluiten vastgelegd, 3 open en 0 volledige F3-PASS. Concept en release HOLD.
+
+
+## R07b · technische uitvoering 28 november 2026
+
+Op eigenaarverzoek verdergegaan vanaf `194276fefa23190b37b4e6a4aad2ce5e7da495a2`. De drie eerder voorgestelde B-correcties zijn op code-/registerniveau uitgevoerd, zonder het ontbrekende bronbewijs of de eigenaarspoort automatisch af te tekenen.
+
+- **Pimpelmees:** de alt-tekst en visualCheck van de eigen vluchtfoto beschrijven de zichtbare bovenzijde, blauwe vleugels, gespreide staart, kruin en oogstreep. Geen onbewezen zicht op de buik. De rustvergelijkingen en afzonderlijke vluchtfoto blijven.
+- **Matkop:** `Laag boven sneeuw` vervangt het label `Opvliegend boven sneeuw`. De notitie beschrijft uitsluitend zichtbare houding; afzetten of neerstrijken blijft onzeker. De historische technische categorie opvliegen blijft traceerbaar; de foto blijft buiten de vrije-vluchtrol. Actief mediaregister, generatoruitvoer en bijbehorende fotoregisters zijn gelijkgetrokken.
+- **Glanskop/Matkop:** het bestaande wederkerige rustpaneel noemt scherp zijaanzicht en goed licht als voorwaarde voor de bovensnavelbasis. Het onderscheid tussen aanwezige zangopnamen en ontbrekende afzonderlijke contactroepen staat expliciet in de vergelijking.
+
+**Bewijsgrens:** geen nieuwe media, geen gewijzigde broncredits of fotobytes. Bestaande foto’s opnieuw visueel bekeken. Nieuwe regressieasserties toegevoegd voor label, vrije-vluchtrol, alt-tekst en wederkerige vergelijkingsuitleg. CI/browserhertest op de nieuwe SHA nog open bij het schrijven. Eerste F3-ronde en eerdere eigenaarbesluiten behouden. De drie eigenaarspoorten, ANWB-passages, onafhankelijke luistercontrole, twee geblokkeerde Glanskop-originelen en ontbrekende geschikte media blijven open. Geen volgende soortbatch gestart; geen merge of publicatie.

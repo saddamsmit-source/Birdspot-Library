@@ -6907,7 +6907,8 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - getoetst aan gelezen soortpassages",
             "herkenning": "PARTIALLY TESTED - concrete verbeterpunten ter beslissing",
-            "voorstel": "B — beschrijf voor de bestaande vluchtfoto de zichtbare bovenzijde, kop en staart. Behoud de individuele vluchtfoto en beide rustvergelijkingen met Koolmees."
+            "voorstel": "B — beschrijf voor de bestaande vluchtfoto de zichtbare bovenzijde, kop en staart. Behoud de individuele vluchtfoto en beide rustvergelijkingen met Koolmees.",
+            "uitvoeringR07b": "PARTIALLY TESTED - R07b: alt-tekst en visualCheck beschrijven nu de zichtbare bovenzijde, blauwe vleugels, gespreide staart, kruin en oogstreep; eigen vluchtfoto en rustparen blijven. Browserhertest op de nieuwe kandidaat staat open."
           },
           "lookalikes": [
             {
@@ -6989,7 +6990,7 @@
           "materialGaps": [
             "ANWB-soortpassage niet ingezien",
             "Onafhankelijke menselijke beluistering ontbreekt",
-            "Alt-tekst van de losse vluchtfoto noemt een gele buik, terwijl de foto hoofdzakelijk de bovenzijde toont.",
+            "R07b: oorspronkelijke alt-tekst noemde een gele buik; codecorrectie naar zichtbare bovenzijde uitgevoerd, browserhertest open.",
             "Gelijkwaardig vluchtpaar met Koolmees ontbreekt; R06b heeft het fotopaneel in beide richtingen verborgen."
           ],
           "ownerDecision": {
@@ -7169,7 +7170,8 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - getoetst aan gelezen soortpassages",
             "herkenning": "PARTIALLY TESTED - concrete verbeterpunten ter beslissing",
-            "voorstel": "B — maak het sneeuwlabel neutraal en verduidelijk bij de Matkop/Glanskop-vergelijking dat de aanwezige clips zang laten horen. Houd de ontbrekende contactroepen open."
+            "voorstel": "B — maak het sneeuwlabel neutraal en verduidelijk bij de Matkop/Glanskop-vergelijking dat de aanwezige clips zang laten horen. Houd de ontbrekende contactroepen open.",
+            "uitvoeringR07b": "PARTIALLY TESTED - R07b: sneeuwfoto heet Laag boven sneeuw, blijft buiten de vrije-vluchtrol en krijgt een neutrale houdingsnotitie. Vergelijking meldt dat de gidsopnamen zang zijn en afzonderlijke contactroepen ontbreken; browserhertest open."
           },
           "lookalikes": [
             {
@@ -7235,8 +7237,8 @@
           "materialGaps": [
             "ANWB-soortpassage niet ingezien",
             "Onafhankelijke menselijke beluistering ontbreekt",
-            "Houdingslabel Opvliegend boven sneeuw gaat verder dan de foto en eerdere beoordeling staven.",
-            "De gids beschrijft de contactroep. Er is alleen een clip met bronrol zang opgenomen. Een afzonderlijke contactroep ontbreekt."
+            "R07b: oorspronkelijke houdingslabel koos een onbewezen fase; neutraal label Laag boven sneeuw in code, browserhertest open.",
+            "R07b: vergelijking onderscheidt de aanwezige zangopnamen van contactroepen. Een afzonderlijke contactroep ontbreekt nog."
           ],
           "ownerDecision": {
             "status": "OPEN",
@@ -7415,7 +7417,8 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - getoetst aan gelezen soortpassages",
             "herkenning": "PARTIALLY TESTED - concrete verbeterpunten ter beslissing",
-            "voorstel": "B — benoem in het bestaande vergelijkingspaneel dat de snavelvlek alleen helpt bij scherp zicht op de bovensnavelbasis. Houd een betere detailfoto en een afzonderlijke contactroep als open punten."
+            "voorstel": "B — benoem in het bestaande vergelijkingspaneel dat de snavelvlek alleen helpt bij scherp zicht op de bovensnavelbasis. Houd een betere detailfoto en een afzonderlijke contactroep als open punten.",
+            "uitvoeringR07b": "PARTIALLY TESTED - R07b: vergelijkingspaneel benoemt scherp zijaanzicht en goed licht voor de bovensnavelbasis. De bestaande foto's en bronstatus blijven ongewijzigd; betere detailfoto en afzonderlijke contactroep blijven open. Browserhertest open."
           },
           "lookalikes": [
             {
@@ -7476,7 +7479,7 @@
             "ANWB-soortpassage niet ingezien",
             "Onafhankelijke menselijke beluistering ontbreekt",
             "Twee originele Commons-fotobestanden gaven HTTP 429. Eerdere F2-bewijzen blijven geregistreerd; originele bytes in R07 niet heropend.",
-            "De bovensnavelbasis is in de bestaande afbeeldingen lastig af te lezen. Het enige gidsfragment is zang. Een afzonderlijke contactroep ontbreekt."
+            "R07b: kijkvoorwaarde voor de bovensnavelbasis en het onderscheid zang/contactroep toegevoegd. Bestaande afbeeldingen tonen de snavelbasis beperkt; betere detailfoto en afzonderlijke contactroep blijven open."
           ],
           "ownerDecision": {
             "status": "OPEN",
