@@ -189,9 +189,9 @@ function getRecentSpeciesIds(limit = 8) {
 }
 
 // ── Render entrypoint ──────────────────────────────────────────
-export function renderSpecies(el, { speciesId, listYear, listMonth, linkedDetail, rememberTarget } = {}) {
+export function renderSpecies(el, { speciesId, listYear, listMonth, listAll, linkedDetail, detailTab, rememberTarget, onSearchSelect } = {}) {
   if (_speciesCtx?.cleanup) _speciesCtx.cleanup();
-  const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null, filterEvents:new AbortController() };
+  const ctx = { destroyed:false, urls:new Set(), detailCleanup:null, listGeneration:0, cleanup:null, filterEvents:new AbortController(), rememberTarget, onSearchSelect };
   _speciesCtx = ctx;
   const seenIds = getObservedIds();
 
@@ -205,8 +205,11 @@ export function renderSpecies(el, { speciesId, listYear, listMonth, linkedDetail
     ctx.yearLabel=month
       ? `Jaarlijst t/m ${new Intl.DateTimeFormat('nl-NL',{month:'long'}).format(new Date(listYear,month-1,1))} ${listYear}`
       : `Jaarlijst ${listYear}`;
+  } else if (listAll) {
+    ctx.yearList=speciesTally(guideSightings()).counting;
+    ctx.yearLabel='Mijn soortenlijst';
   }
-  const recentIds = scopedYear ? [] : getRecentSpeciesIds();
+  const recentIds = ctx.yearList ? [] : getRecentSpeciesIds();
 
   el.innerHTML = `
     <header class="species-header signature-species-hero" aria-label="Soortenbibliotheek">
@@ -215,7 +218,7 @@ export function renderSpecies(el, { speciesId, listYear, listMonth, linkedDetail
     </header>
 
     <div class="species-toolbar">
-      ${scopedYear ? `<div class="phase3-route-scope" id="speciesYearScope" aria-label="Jaarlijstfilter">
+      ${ctx.yearList ? `<div class="phase3-route-scope" id="speciesYearScope" aria-label="Soortenlijstfilter">
         <strong>${ctx.yearLabel}</strong><button type="button" id="speciesClearYear">Alle soorten</button></div>` : ''}
       <div class="species-search-wrap">
         <svg class="species-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -290,7 +293,7 @@ export function renderSpecies(el, { speciesId, listYear, listMonth, linkedDetail
     ctx.yearList=null;
     ctx.yearLabel=null;
     el.querySelector('#speciesYearScope').remove();
-    rememberTarget?.({listYear:null,listMonth:null});
+    rememberTarget?.({listYear:null,listMonth:null,listAll:false});
     renderList(el,seenIds,ctx);
     el.querySelector('#speciesSearch').focus({preventScroll:true});
   });
@@ -300,7 +303,7 @@ export function renderSpecies(el, { speciesId, listYear, listMonth, linkedDetail
     open ||= sessionStorage.getItem('birdspot-open-species');
     sessionStorage.removeItem('birdspot-open-species');
   } catch (_) {}
-  if (open) openDetail(open, el, document.activeElement, linkedDetail===true);
+  if (open) openDetail(open, el, document.activeElement, linkedDetail===true, detailTab);
 
   // Laad async thumbnails voor "Recent bekeken"
   if (recentIds.length > 0) {
@@ -601,7 +604,7 @@ function guideTriggerLabel(el) {
 }
 
 // ── Detail sheet ───────────────────────────────────────────────
-function openDetail(speciesId, screenEl, returnFocus = document.activeElement, linkedDetail = false) {
+function openDetail(speciesId, screenEl, returnFocus = document.activeElement, linkedDetail = false, detailTab) {
   const s = SPECIES.find(x => x.id === speciesId);
   if (!s) return;
   const ctx = _speciesCtx;
@@ -712,6 +715,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement, l
   function close(animate = true) {
     if (closed) return;
     closed = true;
+    if (animate) ctx?.rememberTarget?.({ speciesId: null, detailTab: null, linkedDetail: false });
     unmountPersonalGuide();
     sheet.querySelectorAll('.sd-audio audio').forEach(audio => audio.pause());
     closeViewer?.(false);
@@ -787,10 +791,13 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement, l
     }
   }, true);
 
-  sheet.querySelector('#speciesDetailMedia').addEventListener('click',() => {
+  function leaveFor(target) {
+    const detailTab = sheet.querySelector('[data-sd-tab][aria-selected="true"]')?.dataset.sdTab;
+    ctx?.rememberTarget?.({ speciesId, detailTab, linkedDetail });
     close(false);
-    import('../../app.js').then(({navigate}) => navigate('media'));
-  });
+    ctx?.onSearchSelect?.(target);
+  }
+  sheet.querySelector('#speciesDetailMedia').addEventListener('click', () => leaveFor({ route: 'media' }));
 
   sheet.querySelector('#speciesOwnAudioList').addEventListener('click', async event => {
     const button = event.target.closest('[data-private-audio-remove]');
@@ -951,14 +958,10 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement, l
       const where=sheet.querySelector('#sdWherePlaces');
       where.innerHTML=wherePlaces(stats.places);
       where.querySelectorAll('[data-place-id]').forEach(btn=>btn.addEventListener('click',()=>{
-        try { sessionStorage.setItem('birdspot-map-place', btn.dataset.placeId); } catch (_) {}
-        close(false);
-        import('../../app.js').then(({navigate})=>navigate('map'));
+        leaveFor({ route: 'map', placeId: btn.dataset.placeId });
       }));
       where.querySelector('#sdShowOnMap')?.addEventListener('click',()=>{
-        try { sessionStorage.setItem('birdspot-map-species', s.nameNL); } catch (_) {}
-        close(false);
-        import('../../app.js').then(({navigate})=>navigate('map'));
+        leaveFor({ route: 'map', speciesSearch: s.nameNL });
       });
       const rows=sheet.querySelector('#speciesDetailSightings');
       if(!matches.length) rows.innerHTML='<div class="signature-species-empty-photo">Nog geen waarnemingen vastgelegd voor deze soort.</div>';
@@ -972,15 +975,13 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement, l
         rows.insertAdjacentHTML('beforeend','<button type="button" class="sd-all-sightings" id="sdAllSightings">'+
           'Bekijk in Mijn waarnemingen ('+matches.length+')</button>');
         rows.querySelector('#sdAllSightings').addEventListener('click',()=>{
-          close(false);
-          import('../../app.js').then(({navigate})=>navigate('sightings',{force:true,target:{speciesId:s.id}}));
+          leaveFor({ route: 'sightings', speciesId: s.id });
         });
         rows.addEventListener('click',e=>{
           const btn=e.target.closest('[data-sighting-id]');
           const record=matches.find(item=>item.id===btn?.dataset.sightingId);
           if (!record) return;
-          close(false);
-          import('../sightings/detailSheet.js').then(({openDetailSheet})=>openDetailSheet(record,{onUpdated:()=>import('../../app.js').then(({navigate})=>navigate('species',{force:true})),onDeleted:()=>import('../../app.js').then(({navigate})=>navigate('species',{force:true}))}));
+          leaveFor({ route: 'sightings', sightingId: record.id, speciesId: s.id });
         });
       }
     } catch (_) {
@@ -991,6 +992,7 @@ function openDetail(speciesId, screenEl, returnFocus = document.activeElement, l
       if(rows) rows.innerHTML='<div class="signature-species-empty-photo">Waarnemingen tijdelijk niet beschikbaar.</div>';
     }
   })();
+  if (detailTab) sheet.querySelector(`[data-sd-tab="${CSS.escape(detailTab)}"]`)?.click();
   sheet.querySelector('.signature-species-detail-close').focus();
 }
 

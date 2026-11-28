@@ -10,7 +10,7 @@
 
 import { deleteSighting, updateSighting }   from '../../data/sightings.js';
 import { getPhotosBySighting, getPhoto, deletePhoto, isSightingAudio } from '../../data/db.js';
-import { methodLabel, verificationStatus, normalizeEvidence, observedBySound, countsForList } from './evidence.js';
+import { methodLabel, verificationStatus, normalizeEvidence, observedBySound, countsForList, validPin } from './evidence.js';
 import { escHtml }                          from '../../utils/html.js';
 import { openPhotoViewer } from '../../utils/photoViewer.js';
 import { showToast }                        from '../../app.js';
@@ -18,6 +18,7 @@ import { openEditSheet }                    from './addSheet.js';
 import { releaseSightingAudio }             from '../../data/sightingAudio.js';
 import { loadPlaces, renamePlace }         from '../../data/places.js';
 import { placeOf }                          from './sightingQuery.js';
+import { SPECIES } from '../../data/species.js';
 import { appIcon }                          from '../../utils/icons.js';
 
 const CERTAINTY_NL = {
@@ -26,7 +27,7 @@ const CERTAINTY_NL = {
   possible: 'Mogelijk',
 };
 
-export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceRenamed, isActive = () => true, linkedDetail = false } = {}) {
+export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceRenamed, isActive = () => true, onClose, onNavigate, linkedDetail = false } = {}) {
   // Laad media uit IndexedDB
   // Ronde 3: eigen geluidsopnamen apart houden (nooit in de foto-/videogalerij).
   const photos = (await getPhotosBySighting(sighting.id).catch(() => [])).filter(p => !isSightingAudio(p));
@@ -41,11 +42,18 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
     if(photo){photos.push(photo);ids.add(id);}
   }
 
-  if (!isActive()) return;
+  if (!isActive() || document.querySelector('#detailSightingSheet:not([data-closing])')) return;
+  document.querySelector('#detailSightingSheet[data-closing]')?.remove();
+  const urls = [];
   const ov = document.createElement('div');
   ov.className = 'sheet-overlay';
   ov.id = 'detailSightingSheet';
   ov.toggleAttribute('data-route-detail', linkedDetail);
+  const species = onNavigate && SPECIES.find(item => item.id === sighting.speciesId);
+  const place = onNavigate && loadPlaces().find(item => item.id === sighting.placeId);
+  const mapTarget = validPin(sighting.lat, sighting.lon)
+    ? { route: 'map', sightingId: sighting.id }
+    : place && validPin(place.lat, place.lon) ? { route: 'map', placeId: place.id } : null;
 
   ov.innerHTML = `
     <div class="sheet" role="dialog" aria-modal="true"
@@ -64,7 +72,11 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
         </div>
       </div>
       <div class="sheet__content" id="detailSheetContent">
-        ${_renderDetailBody(sighting, photos, audio)}
+        ${onNavigate && (species || mapTarget) ? `<nav class="detail-links" aria-label="Verder bij deze waarneming">
+          ${species ? '<button type="button" id="detailOpenSpecies">Bekijk soort in de gids <span aria-hidden="true">›</span></button>' : ''}
+          ${mapTarget ? '<button type="button" id="detailOpenMap">Bekijk op de kaart <span aria-hidden="true">›</span></button>' : ''}
+        </nav>` : ''}
+        ${_renderDetailBody(sighting, photos, audio, urls)}
       </div>
       <div class="sheet__footer detail-footer">
         <button class="btn-danger" id="detailDelete" type="button">
@@ -82,14 +94,23 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
   const onKey = e => {
     if (e.key === 'Escape' && !document.querySelector('.confirm-overlay, .lightbox')) close();
   };
-  const close = () => {
+  const close = (immediate = false) => {
     if (closed) return;
     closed = true;
     closePhoto?.(false);
     ov.removeAttribute('data-route-detail');
+    onClose?.();
     ov.classList.remove('open');
+    ov.dataset.closing = '';
     document.removeEventListener('keydown',onKey);
-    setTimeout(() => { ov.remove(); _releaseUrls(); previousFocus?.focus?.(); }, 300);
+    const finish = () => {
+      const restoreFocus = ov.contains(document.activeElement);
+      ov.remove();
+      urls.splice(0).forEach(url => URL.revokeObjectURL(url));
+      if (restoreFocus && previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
+    };
+    if (immediate === true || linkedDetail) finish();
+    else setTimeout(finish, 300);
   };
   document.addEventListener('keydown',onKey);
   ov.querySelector('#detailClose')?.focus();
@@ -97,6 +118,13 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
   ov.addEventListener('click', e => { if (e.target === ov) close(); });
   ov.querySelector('.sheet__handle').addEventListener('click', close);
   ov.querySelector('#detailClose').addEventListener('click', close);
+
+  const leaveFor = target => {
+    close(true);
+    onNavigate?.(target);
+  };
+  ov.querySelector('#detailOpenSpecies')?.addEventListener('click', () => leaveFor({ route: 'species', speciesId: species.id }));
+  ov.querySelector('#detailOpenMap')?.addEventListener('click', () => leaveFor(mapTarget));
 
   // ── Bewerken ─────────────────────────────────────────────
   ov.querySelector('#detailEdit').addEventListener('click', () => {
@@ -179,7 +207,7 @@ export async function openDetailSheet(sighting, { onDeleted, onUpdated, onPlaceR
 }
 
 // ── Detail body HTML ───────────────────────────────────────
-function _renderDetailBody(s, photos, audio = []) {
+function _renderDetailBody(s, photos, audio, urls) {
   const dateStr = fmtDate(s.date) + (s.time ? ` · ${s.time}` : '');
 
   return `
@@ -245,7 +273,7 @@ function _renderDetailBody(s, photos, audio = []) {
     </div>
     <div class="detail-media-grid">
       ${photos.map(p => {
-        const url = _blobToUrl(p);
+        const url = _blobToUrl(p, urls);
         if (!url) return '';
         const isVideo = p.type?.startsWith('video/');
         return `<button type="button" class="detail-media__item" aria-label="${isVideo ? 'Bekijk video' : 'Vergroot foto'}" data-url="${escHtml(url)}"
@@ -262,7 +290,7 @@ function _renderDetailBody(s, photos, audio = []) {
     <div class="detail-field__label" style="margin-top:var(--space-16)">Geluidsopnamen (${audio.length})</div>
     <div class="detail-audio-list">
       ${audio.map(({ id, record }) => {
-        const url = record && isSightingAudio(record) ? _blobToUrl(record) : null;
+        const url = record && isSightingAudio(record) ? _blobToUrl(record, urls) : null;
         return `<div class="detail-audio" data-audioid="${escHtml(id)}">
           <div class="detail-audio__name">${escHtml(record?.filename || 'Opname')}</div>
           ${url ? `<audio class="detail-audio__player" controls preload="metadata" src="${escHtml(url)}"></audio>`
@@ -440,21 +468,14 @@ function _confirmSelfCheck(s) {
 }
 
 // ── Object URL helpers ─────────────────────────────────────
-const _activeUrls = [];
-function _blobToUrl(photo) {
+function _blobToUrl(photo, urls) {
   if (!photo?.blob) return null;
   const blob = photo.blob instanceof Blob ? photo.blob
              : new Blob([photo.blob], { type: photo.type });
   const url = URL.createObjectURL(blob);
-  _activeUrls.push(url);
+  urls.push(url);
   return url;
 }
-function _releaseUrls() {
-  _activeUrls.splice(0).forEach(u => {
-    try { URL.revokeObjectURL(u); } catch (_) {}
-  });
-}
-
 // ── Helpers ────────────────────────────────────────────────
 function fmtDate(iso) {
   if (!iso) return '';

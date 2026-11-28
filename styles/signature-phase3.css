@@ -247,7 +247,7 @@
   font-variant-numeric:tabular-nums;
 }
 .phase3-month-detail th:first-child {text-align:start;}
-.phase3-month-link {min-height:44px;min-width:36px;color:var(--gold-ink);text-decoration:underline;}
+.phase3-month-link {min-height:44px;min-width:44px;color:var(--gold-ink);text-decoration:underline;}
 .phase3-field-rows {
   display:grid;grid-template-columns:repeat(auto-fit,minmax(min(235px,100%),1fr));gap:8px;
   margin:0;padding:0;list-style:none;
@@ -256,7 +256,7 @@
   display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:9px;
   width:100%;height:100%;min-height:48px;padding:8px 10px;
   border:1px solid var(--line);border-inline-start:3px solid var(--gold-ink);border-radius:10px;
-  background:color-mix(in srgb,var(--surface-2) 94%,var(--gold-ink));
+  background:var(--insights-action-surface);
   color:var(--ink);text-align:start;
 }
 .phase3-field-label {display:flex;align-items:center;gap:8px;font-size:.8125rem;line-height:1.4;}
@@ -294,9 +294,9 @@
 .phase3-top-link {
   display:flex;align-items:center;gap:10px;width:100%;min-height:52px;padding:8px 10px;
   border:1px solid var(--line);border-radius:11px;text-align:start;
-  background:color-mix(in srgb,var(--surface-2) 91%,var(--gold-ink));
+  background:var(--insights-action-surface);
 }
-.phase3-top-rank {font-family:var(--font-display);font-size:23px;color:#c9a46d;line-height:1.1;}
+.phase3-top-rank {font-family:var(--font-display);font-size:23px;color:var(--gold-ink);line-height:1.1;}
 .phase3-top-body {flex:1;min-width:0;}
 .phase3-top-row {display:flex;justify-content:space-between;gap:8px;font-size:12px;margin-bottom:9px;}
 .phase3-top-row strong {font-weight:750;color:var(--ink);}
@@ -307,7 +307,7 @@
 .phase3-achievement {
   display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;
   min-height:58px;padding:9px 11px;border-radius:12px;text-align:start;
-  border:1px solid var(--line);background:color-mix(in srgb,var(--surface-2) 87%,var(--gold-ink));
+  border:1px solid var(--line);background:var(--insights-action-surface);
 }
 .phase3-achievement>span:first-child {color:var(--gold-ink);text-align:center;}
 .phase3-achievement>span:nth-child(2) {display:grid;gap:5px;}

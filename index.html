@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="theme-color" content="#17382C">
   <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
-  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png?v=4">
-  <link rel="apple-touch-icon" href="icons/icon-192.png?v=4">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/aviandra-gold-192.png">
+  <link rel="apple-touch-icon" href="icons/aviandra-gold-192.png">
   <title>Aviandra</title>
 
   <!-- Tokens -->
@@ -63,14 +63,17 @@
              muted playsinline preload="none" aria-hidden="true"></video>
       <span class="birdspot-splash__wordmark" aria-hidden="true">Aviandra</span>
     </div>
-    <div class="birdspot-splash__fallback" hidden aria-hidden="true">
-      <div><strong>Aviandra</strong><span>ONTDEK · REGISTREER · BELEEF</span></div>
+    <div class="birdspot-splash__fallback" aria-hidden="true">
+      <img src="icons/aviandra-gold-mark.svg" alt="" width="88" height="79">
     </div>
     <button type="button" id="birdspotSplashSkip" class="birdspot-splash__skip">Direct openen</button>
   </div>
 
   <!-- ══ APP ROOT ════════════════════════════════════════ -->
   <div id="app" data-starting>
+    <div class="app-backbar" id="appBackBar" hidden>
+      <button type="button" id="appBack"><span aria-hidden="true">‹</span> Terug</button>
+    </div>
 
     <!-- Schermen worden hier ingeladen door de router -->
     <main id="main-view" role="main" aria-live="polite" aria-busy="true" tabindex="-1"></main>

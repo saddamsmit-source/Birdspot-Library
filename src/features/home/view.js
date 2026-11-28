@@ -40,17 +40,25 @@ let weatherCache = null;                   // { key, at, data } — alleen in ge
  *   1. Alle openstaande blob-URL's worden vrijgegeven.
  *   2. Async-callbacks die nog lopen een stale-flag checken en stil stoppen.
  */
-export function renderHome(el, { onSearchSelect } = {}) {
+export function renderHome(el, { onSearchSelect, rememberTarget, moreOpen, monthsOpen } = {}) {
   // Gedeelde destroyed-vlag: alle async functies checken deze vóór DOM-mutaties.
-  const ctx = { destroyed: false };
+  const ctx = { destroyed: false, monthsOpen, rememberTarget };
 
   el.innerHTML = buildSkeleton();
+  const more = el.querySelector('#homeMoreFeatures');
+  more.open = Boolean(moreOpen);
+  more.addEventListener('toggle', () => rememberTarget?.({ moreOpen: more.open }));
   // New signature shortcuts use existing router; no parallel navigation state.
   const onSignatureClick = e => {
-    const button = e.target.closest('[data-signature-route], [data-home-sighting], [data-home-hotspot-sighting], [data-featured-species]');
+    const button = e.target.closest('[data-signature-route], [data-home-sighting], [data-home-hotspot-sighting], [data-featured-species], [data-home-month]');
     if (!button) return;
     if (button.hasAttribute('data-featured-species')) {
       onSearchSelect?.({ route: 'species', speciesId: button.dataset.featuredSpecies || undefined });
+      return;
+    }
+    if (button.dataset.homeMonth) {
+      const [year, month] = button.dataset.homeMonth.split('-').map(Number);
+      onSearchSelect?.({ route: 'journal', year, month });
       return;
     }
     const hotspotId = button.dataset.homeHotspotSighting;
@@ -126,7 +134,7 @@ function buildSkeleton() {
     <!-- App-header: logo + zoekbalk + avatar -->
     <header class="app-header">
       <div class="app-header__logo">
-        <img class="app-header__logo-icon" src="${assetUrl('/icons/aviandra-mark.svg')}" alt="" width="32" height="32">
+        <img class="app-header__logo-icon" src="${assetUrl('/icons/aviandra-gold-mark.svg')}" alt="" width="32" height="32">
         <span class="app-header__title">Aviandra</span>
       </div>
 
@@ -716,6 +724,7 @@ async function loadMonthlyChart(el, ctx) {
       const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
       const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
       monthsByKey.set(key, {
+        key,
         label: d.toLocaleDateString('nl-NL', { month: 'short' }),
         name: d.toLocaleDateString('nl-NL', { month: 'long', year: 'numeric' }),
         methods: { seen: 0, heard: 0, both: 0, unrecorded: 0 },
@@ -815,13 +824,20 @@ async function loadMonthlyChart(el, ctx) {
         <thead><tr><th scope="col">Maand</th>${methods.map(([, label]) =>
           `<th scope="col">${label}</th>`).join('')}</tr></thead>
         <tbody>${[...months].reverse().map(month =>
-          `<tr><th scope="row">${month.name}</th>${methods.map(([method]) =>
+          `<tr><th scope="row">${month.count
+            ? `<button type="button" data-home-month="${month.key}" aria-label="Bekijk waarnemingen van ${month.name}">${month.name} <span aria-hidden="true">›</span></button>`
+            : month.name}</th>${methods.map(([method]) =>
             `<td>${month.methods[method]}</td>`).join('')}</tr>`).join('')}</tbody>
       </table>
     </details>`;
 
     if (ctx.destroyed) return;
     if (loader) loader.outerHTML = `<div class="chart-wrap">${svg}${legend}${counts}</div>`;
+    const details = section.querySelector('.chart-counts');
+    if (details) {
+      details.open = Boolean(ctx.monthsOpen);
+      details.addEventListener('toggle', () => ctx.rememberTarget?.({ monthsOpen: details.open }));
+    }
 
   } catch (_) {
     if (ctx.destroyed) return;

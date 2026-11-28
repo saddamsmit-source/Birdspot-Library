@@ -56,7 +56,7 @@ function saveView(view) {
 }
 
 // ── Entry point ────────────────────────────────────────────
-export async function renderSightings(el, { sightingId, speciesId, linkedDetail } = {}) {
+export async function renderSightings(el, { sightingId, speciesId, linkedDetail, rememberTarget, onSearchSelect } = {}) {
   const view = loadView();
   // UX-02C: vanaf een soortkaart opent de lijst met alleen die soort (andere filters leeg, niets verborgen).
   if (typeof speciesId === 'string' && SPECIES_BY_ID.has(speciesId)) {
@@ -64,7 +64,7 @@ export async function renderSightings(el, { sightingId, speciesId, linkedDetail 
     saveView(view);
   }
   const sightings = await getSightings();
-  const ctx = { el, view, sightings, generation: 0, timer: 0 };
+  const ctx = { el, view, sightings, rememberTarget, onSearchSelect, generation: 0, timer: 0 };
 
   el.innerHTML = `
     <div class="page-header">
@@ -122,7 +122,11 @@ function bindTools(ctx) {
   const input = el.querySelector('#sightingsSearch');
   const panel = el.querySelector('#sightingsFilterPanel');
   const toggle = el.querySelector('#sightingsFilterBtn');
-  const apply = () => { saveView(view); renderList(ctx, { keepScroll: false }); };
+  const apply = () => {
+    saveView(view);
+    ctx.rememberTarget?.({ speciesId: view.speciesId || null });
+    renderList(ctx, { keepScroll: false });
+  };
 
   el.querySelector('#sightingsSearchForm').addEventListener('submit', e => { e.preventDefault(); input.blur(); });
   input.addEventListener('input', () => {
@@ -307,6 +311,11 @@ function openSighting(ctx, sighting, linkedDetail = false) {
     onPlaceRenamed: refresh,
     isActive: () => ctx.el.isConnected,
     linkedDetail,
+    onClose: () => ctx.rememberTarget?.({ sightingId: null, linkedDetail: false }),
+    onNavigate: target => {
+      ctx.rememberTarget?.({ sightingId: sighting.id, linkedDetail });
+      ctx.onSearchSelect?.(target);
+    },
   });
 }
 

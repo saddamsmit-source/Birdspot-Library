@@ -3,6 +3,7 @@ Local synthetic fixtures only. No real records touched.
 """
 from __future__ import annotations
 import http.server
+import re
 import socketserver
 import threading
 from pathlib import Path
@@ -53,7 +54,10 @@ def check_insights_links(page):
         page.locator(f'[data-insights-action="{key}"]').click()
 
     def back():
-        page.evaluate("history.back()")
+        if page.locator('.sheet-overlay[data-route-detail], #mapDetailSheet.open').count():
+            page.evaluate("history.back()")
+        else:
+            page.locator("#appBack").click()
         expect(page.locator("#insightsYear")).to_have_value("2026")
         expect(page.locator(".phase3-kpi-grid")).to_be_visible()
 
@@ -111,8 +115,20 @@ def check_insights_links(page):
     expect(page.locator("#mapCount")).to_have_text("1 pin · 2026")
     page.locator("#explorerSightingsBtn").click()
     journal("1 resultaat","Met GPS")
-    page.evaluate("history.back()")
+    page.locator("#appBack").click()
     expect(page.locator("#mapPeriodSelect")).to_have_value("2026", timeout=12000)
+    back()
+
+    tap("moment-first")
+    detail = page.locator("#detailSightingSheet")
+    detail.locator("#detailOpenMap").click()
+    expect(page.locator("#mapDetailSheet")).to_have_class(re.compile(r'.*open.*'))
+    page.locator('#mapSheetBody [data-sighting="p3-a"]').click()
+    expect(detail.locator(".sheet__title")).to_have_text("Stadsduif")
+    page.evaluate("history.back()")
+    expect(page.locator('#mapSheetBody [data-sighting="p3-a"]')).to_be_visible()
+    page.evaluate("history.back()")
+    expect(detail.locator(".sheet__title")).to_have_text("Stadsduif")
     back()
     page.unroute("https://**/*")
 
@@ -289,6 +305,16 @@ def main():
             zoom.wait_for(state="detached")
             assert detail.is_visible()
             page.locator("#detailClose").click()
+            page.locator("#journalSearch").fill("Stadsduif")
+            page.locator("#journalSort").select_option("oldest")
+            page.locator("#journalTimeline [data-journal-id='p3-a']").click()
+            page.locator("#detailOpenSpecies").click()
+            expect(page.locator(".signature-species-detail-sheet")).to_be_visible()
+            page.evaluate("history.back()")
+            expect(page.locator("#detailSightingSheet .sheet__title")).to_have_text("Stadsduif")
+            page.locator("#detailClose").click()
+            expect(page.locator("#journalSearch")).to_have_value("Stadsduif")
+            expect(page.locator("#journalSort")).to_have_value("oldest")
 
             # Viewports: no hidden controls and no new JS exceptions.
             page.locator("#journalSearch").fill("")

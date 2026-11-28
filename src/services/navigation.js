@@ -36,22 +36,24 @@ function closeTopLayer(leavingEntry) {
   if (visible(filter)) { filter.click(); filter.focus({preventScroll:true}); return true; }
   return false;
 }
-export function recordRoute(route, replace = false, entry = `${performance.timeOrigin}:${++sequence}`, target = {}) {
-  history[replace ? 'replaceState' : 'pushState']({ [STATE]: route, birdspotEntry: entry, birdspotTarget: target }, '');
+export function recordRoute(route, replace = false, entry = `${performance.timeOrigin}:${++sequence}`, target = {},
+  depth = (history.state?.birdspotDepth ?? -1) + (replace ? 0 : 1)) {
+  history[replace ? 'replaceState' : 'pushState']({ [STATE]: route, birdspotEntry: entry, birdspotTarget: target, birdspotDepth: depth }, '');
   return entry;
 }
-export function installNavigation({navigate,current,currentEntry,currentTarget,toast}) {
+export function installNavigation({navigate,current,currentEntry,currentTarget,currentDepth,toast}) {
   // Keep one root entry so the first Back on a freshly opened app can close a dialog.
   if (!history.state?.[STATE] || history.state?.birdspotRoot) {
     history.replaceState({[STATE]:'home',birdspotRoot:true},'');
     recordRoute('home');
-  } else if (!history.state.birdspotEntry) {
-    recordRoute(history.state[STATE], true);
+  } else if (!history.state.birdspotEntry || !Number.isInteger(history.state.birdspotDepth)) {
+    const { birdspotEntry, birdspotTarget } = history.state;
+    recordRoute(history.state[STATE], true, birdspotEntry, birdspotTarget, history.state[STATE]==='home'?0:1);
   }
   window.addEventListener('popstate', event => {
     const route = current() || 'home';
     if (closeTopLayer(event.state?.birdspotEntry!==currentEntry())) {
-      recordRoute(route, false, currentEntry(), currentTarget()); return;
+      recordRoute(route, false, currentEntry(), currentTarget(), currentDepth()); return;
     }
     if (event.state?.birdspotRoot) {
       if (route === 'home' && Date.now()-lastRootBack < 1800) { history.back(); return; }

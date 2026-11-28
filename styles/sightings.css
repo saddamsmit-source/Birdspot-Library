@@ -1077,6 +1077,8 @@
 }
 .detail-close-btn svg { width: 18px; height: 18px; }
 .detail-close-btn:focus-visible, .detail-edit-btn:focus-visible { outline: 3px solid var(--brand-light); outline-offset: 2px; }
+.detail-links { display:flex; flex-wrap:wrap; gap:4px 12px; margin-block-end:10px; }
+.detail-links button { min-height:44px; color:var(--gold-ink); text-decoration:underline; }
 .detail-summary {
   display: grid; gap: 8px; margin: var(--space-12) 0 var(--space-16); padding: var(--space-12);
   border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface);
