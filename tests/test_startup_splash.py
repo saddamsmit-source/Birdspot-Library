@@ -147,6 +147,8 @@ def main():
             animated.reload(wait_until='commit')
             skip = animated.get_by_role('button', name='Direct openen')
             assert skip.evaluate("el => document.activeElement === el && document.getElementById('app').inert")
+            assert animated.locator('#boot-screen').count() == 0
+            assert not animated.locator('#app-nav').is_visible()
             skip.press('Escape')
             animated.locator('#birdspotSplash').wait_for(state='detached', timeout=1500)
             assert animated.locator('#screen-home').count()==0

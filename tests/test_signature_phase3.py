@@ -6,7 +6,7 @@ import http.server
 import socketserver
 import threading
 from pathlib import Path
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 ROOT=Path(__file__).resolve().parents[1]
 SHOTS=ROOT/"tests"/"screenshots"
@@ -21,6 +21,20 @@ def shot(page,name):
     page.locator("#main-view").evaluate("(el) => el.scrollTop=0")
     page.screenshot(path=str(SHOTS/name),full_page=True,animations="disabled")
 
+def use_theme(page, theme):
+    page.emulate_media(color_scheme=theme, reduced_motion="reduce")
+    # Chromium can keep the previous native-control background for a few frames.
+    page.wait_for_function("""() => {
+        const input = document.querySelector('#journalSearch');
+        const surface = input || document.querySelector('.phase3-month-panel');
+        const probe = document.createElement('span');
+        probe.style.color = input ? 'var(--bg)' : 'var(--surface)';
+        document.body.append(probe);
+        const painted = getComputedStyle(surface).backgroundColor === getComputedStyle(probe).color;
+        probe.remove();
+        return painted;
+    }""")
+
 def contrast(page, text, surface, pseudo=None):
     return page.evaluate(r"""([text, surface, pseudo]) => {
         const tone = (node, property, state=null) => getComputedStyle(document.querySelector(node), state)[property];
@@ -33,6 +47,88 @@ def contrast(page, text, surface, pseudo=None):
         const b = luminance(tone(surface, 'backgroundColor'));
         return (Math.max(a,b) + .05) / (Math.min(a,b) + .05);
     }""", [text, surface, pseudo])
+
+def check_insights_links(page):
+    def tap(key):
+        page.locator(f'[data-insights-action="{key}"]').click()
+
+    def back():
+        page.evaluate("history.back()")
+        expect(page.locator("#insightsYear")).to_have_value("2026")
+        expect(page.locator(".phase3-kpi-grid")).to_be_visible()
+
+    def journal(expected, extra=None):
+        expect(page.locator("#journalResultsCount")).to_have_text(expected)
+        expect(page.locator("#journalYear")).to_have_value("2026")
+        if extra:
+            expect(page.locator("#journalSelectionLabel")).to_contain_text(extra)
+
+    tap("overview-bird")
+    expect(page.locator("#speciesYearScope")).to_contain_text("Jaarlijst 2026")
+    expect(page.locator("#speciesList .species-row")).to_have_count(3)
+    back()
+    tap("overview-observations")
+    journal("4 resultaten")
+    back()
+    tap("overview-pin")
+    journal("3 resultaten", "Met locatie")
+    back()
+    tap("overview-media")
+    journal("2 resultaten", "Met beeld of geluid")
+    page.locator("#journalClearSelection").click()
+    journal("4 resultaten")
+    back()
+
+    tap("field-calendar")
+    journal("4 resultaten")
+    expect(page.locator("#journalGrouping")).to_have_value("day")
+    expect(page.locator("#journalTimeline h3")).to_have_count(3)
+    back()
+    position = page.locator("#main-view").evaluate("el => el.scrollTop")
+    assert position > 0, position
+    expect(page.locator('[data-insights-action="field-calendar"]')).to_be_focused()
+    tap("field-year")
+    journal("4 resultaten")
+    expect(page.locator("#journalGrouping")).to_have_value("month")
+    expect(page.locator("#journalTimeline h3").first).to_contain_text("maart 2026")
+    expect(page.locator("#journalTimeline h3")).to_have_count(2)
+    back()
+    for key, count, label in (
+        ("field-book", "2 resultaten", "Met notities"),
+        ("field-soundwave", "1 resultaat", "Met eigen geluidsopname"),
+        ("field-shield", "1 resultaat", "Zelf gecontroleerd geluid"),
+        ("method-seen", "1 resultaat", "Alleen gezien"),
+        ("moment-year", "2 resultaten", "januari"),
+        ("moment-calendar", "2 resultaten", "1 maart 2026"),
+    ):
+        tap(key)
+        journal(count,label)
+        back()
+
+    page.route("https://**/*", lambda route: route.abort())
+    tap("field-pin")
+    expect(page.locator("#mapPeriodSelect")).to_have_value("2026", timeout=12000)
+    expect(page.locator("#mapCount")).to_have_text("1 pin · 2026")
+    page.locator("#explorerSightingsBtn").click()
+    journal("1 resultaat","Met GPS")
+    page.evaluate("history.back()")
+    expect(page.locator("#mapPeriodSelect")).to_have_value("2026", timeout=12000)
+    back()
+    page.unroute("https://**/*")
+
+    tap("top-0")
+    expect(page.locator(".signature-species-detail-sheet")).to_be_visible()
+    back()
+    tap("moment-first")
+    expect(page.locator("#detailSightingSheet .sheet__title")).to_have_text("Stadsduif")
+    back()
+    page.locator(".phase3-month-detail summary").click()
+    tap("month-3")
+    journal("2 resultaten","maart")
+    back()
+    expect(page.locator(".phase3-month-detail")).to_have_attribute("open","")
+    page.locator(".phase3-month-detail summary").click()
+    print("PASS: doorklikken naar jaarlijst, dagboekfilters, GPS, soortdetail en mijlpalen met terugkeer")
 
 def main():
     with Server(("127.0.0.1",0),Handler) as server:
@@ -76,7 +172,7 @@ def main():
                   {id:'p3-d',speciesId:'sp003',speciesName:'Holenduif',date:'2026-03-01',time:'11:30',
                     locationName:'',habitat:'wei',count:1,photoIds:[],notes:''},
                   {id:'p3-old',speciesId:'sp004',speciesName:'Buizerd',date:'2025-12-31',time:'12:30',
-                    locationName:'Vorig jaar',habitat:'stad',count:1,photoIds:[],notes:''},
+                    locationName:'Vorig jaar',habitat:'stad',count:1,photoIds:[],notes:'',lat:52.2,lon:4.7},
                   {id:'p3-invalid',speciesId:'sp005',speciesName:'Uil',date:'2026-02-30',
                     locationName:'Ongeldige datum',habitat:'stad',count:1,photoIds:[],notes:''}
                 ]}));
@@ -128,7 +224,7 @@ def main():
             assert page.locator(".phase3-bar-group").count()==12
             assert page.locator(".phase3-chart-bar[data-method]").count()==4
             assert page.locator(".phase3-kpi").nth(3).locator("strong").inner_text()=="2"
-            assert page.locator(".phase3-fieldwork dd").all_text_contents()==["3","2","1","2","1","1"]
+            assert page.locator(".phase3-field-link strong").all_text_contents()==["3","2","1","2","1","1"]
             page.get_by_text("Bekijk aantallen per maand", exact=True).click()
             assert page.locator(".phase3-month-detail tbody tr").first.locator("td").all_text_contents()==["2","1","1","0","0"]
             assert page.locator(".phase3-month-detail tbody tr").nth(2).locator("td").all_text_contents()==["2","0","0","1","1"]
@@ -140,6 +236,7 @@ def main():
             page.screenshot(path=str(SHOTS/"phase3_insights_chart_390.png"),animations="disabled")
             page.locator("#main-view").evaluate("(el) => el.scrollTop=1160")
             page.screenshot(path=str(SHOTS/"phase3_insights_habitat_390.png"),animations="disabled")
+            check_insights_links(page)
             page.locator('[data-chart-mode="species"]').click()
             assert page.locator('[data-chart-mode="species"]').get_attribute("aria-pressed")=="true"
             assert "Cumulatief" in page.locator(".phase3-panel-sub").first.inner_text()
@@ -151,6 +248,9 @@ def main():
 
             page.locator("#insightsToJournal").click()
             page.locator(".phase3-journal-hero").wait_for(timeout=9000)
+            expect(page.locator("#journalYear")).to_have_value("2025")
+            expect(page.locator("#journalResultsCount")).to_have_text("1 resultaat")
+            page.locator("#journalYear").select_option("all")
             assert page.locator("#journalResultsCount").inner_text()=="6 resultaten"
             assert page.locator(".phase3-journal-milestone").count()==4
             assert page.locator("#journalMethods .phase3-method--unrecorded strong").inner_text()=="3"
@@ -199,7 +299,7 @@ def main():
                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
                 shot(page,"phase3_journal_"+str(width)+".png")
             for theme in ('light', 'dark'):
-                page.emulate_media(color_scheme=theme)
+                use_theme(page,theme)
                 for surface in ['.phase3-metric--bird', '.phase3-metric--observations', '.phase3-metric--pin', '.phase3-metric--media']:
                     assert contrast(page, f"{surface} strong", surface) >= 4.5, (theme, surface, "number")
                     assert contrast(page, f"{surface} small", surface) >= 4.5, (theme, surface, "label")
@@ -216,7 +316,7 @@ def main():
                 assert page.locator(".phase3-month-panel").evaluate("(el) => el.scrollWidth <= el.clientWidth")
                 shot(page,"phase3_insights_"+str(width)+".png")
             for theme in ('light', 'dark'):
-                page.emulate_media(color_scheme=theme)
+                use_theme(page,theme)
                 assert contrast(page, ".phase3-month-panel .phase3-method--heard svg", ".phase3-month-panel") >= 3, theme
                 assert contrast(page, ".phase3-month-detail summary", ".phase3-month-panel") >= 4.5, theme
 

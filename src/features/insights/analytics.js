@@ -53,19 +53,31 @@ function displaySpecies(row) {
 
 const methodCounts = () => ({ seen: 0, heard: 0, both: 0, unrecorded: 0 });
 const hasLinkedFile = ids => Array.isArray(ids) && ids.some(id => typeof id === 'string' && id.trim());
+const namedLocation = row => typeof row.locationName === 'string' ? row.locationName.trim() : '';
+export const FIELD_FILTERS = Object.freeze({
+  location: { label: 'Met locatie', matches: row => Boolean(namedLocation(row)) },
+  media: { label: 'Met beeld of geluid', matches: row => hasLinkedFile(row.photoIds) || hasLinkedFile(row.audioIds) },
+  audio: { label: 'Met eigen geluidsopname', matches: row => hasLinkedFile(row.audioIds) },
+  notes: { label: 'Met notities', matches: row => typeof row.notes === 'string' && row.notes.trim().length > 0 },
+  gps: { label: 'Met GPS', matches: row => validPin(row.lat, row.lon) },
+  reviewed: { label: 'Zelf gecontroleerd geluid', matches: row => ['merlin-checked','birdnet-checked'].includes(verificationStatus(row).key) },
+});
+
+export function habitatLabel(row) {
+  const habitat = typeof row.habitat === 'string' ? row.habitat.trim() : '';
+  return Object.hasOwn(HABITATS, habitat) ? HABITATS[habitat] : habitat.slice(0,30);
+}
 
 export function summarizeFieldwork(records) {
   const methods = methodCounts();
   let mediaCount = 0, audioCount = 0, notesCount = 0, gpsCount = 0, sourceReviewCount = 0;
   for (const row of records) {
     methods[observationMethodKey(row)]++;
-    const hasAudio = hasLinkedFile(row.audioIds);
-    if (hasAudio || hasLinkedFile(row.photoIds)) mediaCount++;
-    if (hasAudio) audioCount++;
-    if (typeof row.notes === 'string' && row.notes.trim()) notesCount++;
-    if (validPin(row.lat, row.lon)) gpsCount++;
-    const status = verificationStatus(row).key;
-    if (status === 'merlin-checked' || status === 'birdnet-checked') sourceReviewCount++;
+    if (FIELD_FILTERS.media.matches(row)) mediaCount++;
+    if (FIELD_FILTERS.audio.matches(row)) audioCount++;
+    if (FIELD_FILTERS.notes.matches(row)) notesCount++;
+    if (FIELD_FILTERS.gps.matches(row)) gpsCount++;
+    if (FIELD_FILTERS.reviewed.matches(row)) sourceReviewCount++;
   }
   return { methods, mediaCount, audioCount, notesCount, gpsCount, sourceReviewCount };
 }
@@ -108,14 +120,11 @@ export function calculateInsights(records, requestedYear) {
       else species.set(key,{key,name:displaySpecies(row),count:1});
     }
 
-    const location = typeof row.locationName === 'string' ? row.locationName.trim() : '';
+    const location = namedLocation(row);
     if (location) locations.add(location.toLocaleLowerCase('nl'));
 
-    const habitat = typeof row.habitat === 'string' ? row.habitat.trim() : '';
-    if (habitat) {
-      const label = HABITATS[habitat] || habitat.slice(0,30);
-      habitats.set(label,(habitats.get(label)||0)+1);
-    }
+    const habitat = habitatLabel(row);
+    if (habitat) habitats.set(habitat,(habitats.get(habitat)||0)+1);
     if (Array.isArray(row.photoIds) && row.photoIds.length) photographed++;
     if (typeof row.count === 'number' && Number.isFinite(row.count) && row.count > 0)
       individuals += Math.floor(row.count);

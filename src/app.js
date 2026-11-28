@@ -46,26 +46,30 @@ const ROUTES = {
 
 let currentRoute  = null;
 let currentEntry;
+let currentTarget = {};
 const routeViews = new Map();
 let currentCleanup = null; // cleanup-functie van het huidige scherm (bijv. renderHome)
 
 // ── Navigeer naar een route (force=true herlaadt ook het huidige scherm) ──────
-export function navigate(route, { force = false, history: addHistory = true, target = {} } = {}) {
+export function navigate(route, { force = false, history: addHistory = true, target } = {}) {
   if (!ROUTES[route]) return;
-  if (route === currentRoute && !force) return;
+  const direct = Boolean(target && Object.keys(target).length);
+  if (route === currentRoute && !force && !direct) return;
   const main = document.getElementById('main-view');
   const previousRoute = currentRoute;
   if (currentEntry) {
     routeViews.set(currentEntry, {
       scrollTop: main.scrollTop,
       mapView: previousRoute === 'map' ? getMapView(main) : undefined,
+      insightAction: previousRoute === 'insights' ? document.activeElement?.dataset.insightsAction : undefined,
     });
   }
-  if (addHistory && previousRoute && route !== previousRoute) recordRoute(route);
+  if (addHistory && previousRoute && (route !== previousRoute || direct)) recordRoute(route, false, undefined, target);
   currentEntry = history.state?.birdspotEntry;
+  currentTarget = target ?? history.state?.birdspotTarget ?? {};
+  target = currentTarget;
   const saved = routeViews.get(currentEntry);
-  const direct = Object.keys(target).length > 0;
-  if (saved?.mapView && route === 'map' && !direct) target = { mapView: saved.mapView };
+  if (saved?.mapView && route === 'map' && !direct) target = { ...target, mapView: saved.mapView };
   currentRoute = route;
 
   // Roep cleanup van het vorige scherm aan vóór we de DOM wissen.
@@ -83,7 +87,12 @@ export function navigate(route, { force = false, history: addHistory = true, tar
   screen.id = `screen-${route}`;
   main.appendChild(screen);
   let result;
-  try { result = ROUTES[route].render(screen, { ...target, onSearchSelect: selectSearchResult }); }
+  const rememberTarget = next => {
+    if (!screen.isConnected || history.state?.birdspotEntry !== currentEntry) return;
+    currentTarget = { ...currentTarget, ...next };
+    recordRoute(route, true, currentEntry, currentTarget);
+  };
+  try { result = ROUTES[route].render(screen, { ...target, rememberTarget, onSearchSelect: selectSearchResult }); }
   catch (error) {
     console.error('[Aviandra] Scherm openen mislukt:', route, error);
     screen.innerHTML = '<section class="route-recovery"><h1>Dit scherm kon niet worden geopend</h1><p>Je gegevens zijn niet verwijderd. Probeer het scherm opnieuw te openen.</p><button type="button">Opnieuw proberen</button></section>';
@@ -91,6 +100,7 @@ export function navigate(route, { force = false, history: addHistory = true, tar
   }
   // Sla cleanup-functie op als de render er één retourneert (bijv. renderHome)
   if (typeof result === 'function') currentCleanup = result;
+  else if (typeof result?.cleanup === 'function') currentCleanup = result.cleanup;
 
   // Navigatie-state
   document.querySelectorAll('.nav-item').forEach(btn => {
@@ -105,18 +115,26 @@ export function navigate(route, { force = false, history: addHistory = true, tar
 
   // Scroll naar top
   const restoreTop = direct || route === 'species' ? 0 : saved?.scrollTop || 0;
+  const ready = result?.ready ?? result;
   main.scrollTo({ top: restoreTop, behavior: 'instant' });
   // UX-02B: schermen die asynchroon opbouwen (Mijn waarnemingen) krijgen de bewaarde scrollpositie
   // pas terug als de inhoud er staat; anders zou de browser hem op 0 afkappen.
-  if (restoreTop > 0 && result && typeof result.then === 'function') {
-    result.then(() => {
+  if (restoreTop > 0 && ready && typeof ready.then === 'function') {
+    ready.then(() => {
       if (screen.isConnected && currentRoute === route && main.scrollTop < restoreTop) main.scrollTo({ top: restoreTop, behavior: 'instant' });
     }).catch(() => {});
   }
-  if (target.section && route !== 'map') {
-    Promise.resolve(result).then(() => {
+  if (target.section && route !== 'map' && (direct || !saved)) {
+    Promise.resolve(ready).then(() => {
       if (screen.isConnected) focusSection(screen, target.section);
     }).catch(() => showToast('Dit onderdeel kon niet worden geopend.', 'error'));
+  }
+  if (!addHistory && saved?.insightAction && route === 'insights') {
+    Promise.resolve(ready).then(() => {
+      if (screen.isConnected) {
+        screen.querySelector(`[data-insights-action="${CSS.escape(saved.insightAction)}"]`)?.focus({ preventScroll: true });
+      }
+    }).catch(() => {});
   }
 }
 
@@ -200,7 +218,7 @@ export function showToast(msg, opt, maybeDuration) {
 window.__birdspot = Object.assign(window.__birdspot || {}, { toast: showToast });
 
 // ── Start ─────────────────────────────────────────────────
-const initialRoute = installNavigation({navigate,current:()=>currentRoute,currentEntry:()=>currentEntry,toast:showToast});
+const initialRoute = installNavigation({navigate,current:()=>currentRoute,currentEntry:()=>currentEntry,currentTarget:()=>currentTarget,toast:showToast});
 // Ronde 2B-afronding: plekken uit IndexedDB laden (en migreren) vóór de eerste weergave.
 // Hangt de database (bijv. een oudere versie in een ander tabblad blokkeert de upgrade), dan na
 // 1,5 s toch starten; schrijven wacht dan op IndexedDB en verliest niets.
@@ -223,6 +241,8 @@ else await Promise.race([recovery, new Promise(resolve => setTimeout(resolve, 15
 await Promise.race([initPlaces().catch(error => console.error('[places] init', error)), new Promise(resolve => setTimeout(resolve, 1500))]);
 startLocation();
 navigate(ROUTES[initialRoute] ? initialRoute : 'home',{history:false});
+document.getElementById('app').removeAttribute('data-starting');
+document.getElementById('main-view').removeAttribute('aria-busy');
 // Signal that the first route has been initialized.
 window.dispatchEvent(new Event('birdspot:ready'));
 

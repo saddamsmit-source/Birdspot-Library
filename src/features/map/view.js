@@ -42,6 +42,8 @@ let _clusterLayer = null;   // MarkerCluster laag
 
 // ── Entry point ────────────────────────────────────────────────
 export function renderMap(el, target = {}) {
+  const year=Number.isInteger(target.calendarYear)&&target.calendarYear>=1900&&target.calendarYear<=2100
+    ? String(target.calendarYear) : '';
   el.innerHTML = `
     <div class="map-screen signature-map-loading" id="mapScreen">
       <div id="leafletMap"></div>
@@ -65,7 +67,7 @@ export function renderMap(el, target = {}) {
         </button>
       </header>
       <div class="map-meta">
-        <span class="map-toolbar__count" id="mapCount">laden…</span>
+          <span class="map-toolbar__count" id="mapCount">laden…</span>
         <div class="map-legend" role="group" aria-label="Legenda en filter: kleur per waarneming">
           <button type="button" data-legend="seen" aria-pressed="false"><i class="map-legend__dot map-legend__dot--seen"></i>Gezien</button>
           <button type="button" data-legend="heard" aria-pressed="false"><i class="map-legend__dot map-legend__dot--heard"></i>Gehoord</button>
@@ -97,7 +99,8 @@ export function renderMap(el, target = {}) {
           <div class="map-period">
             <label for="mapPeriodSelect">Periode</label>
             <select id="mapPeriodSelect">${SIGHTING_PERIODS.map(([value, label]) =>
-              `<option value="${value}">${label}</option>`).join('')}</select>
+              `<option value="${value}">${label}</option>`).join('')}
+              ${year?`<option value="${year}">${year}</option>`:''}</select>
           </div>
           <fieldset class="map-season-filter">
             <legend>Seizoen</legend>
@@ -155,7 +158,9 @@ export function renderMap(el, target = {}) {
     </div>`;
 
   el.querySelector("#explorerSightingsBtn")?.addEventListener("click", () => {
-    import("../../app.js").then(({ navigate }) => navigate("sightings"));
+    const period=el.querySelector('#mapPeriodSelect')?.value;
+    if (/^\d{4}$/.test(period)) target.onSearchSelect?.({route:'journal',year:Number(period),filter:'gps'});
+    else import("../../app.js").then(({ navigate }) => navigate("sightings"));
   });
 
   const locateButton = el.querySelector('#mapLocateBtn');
@@ -204,7 +209,7 @@ export function renderMap(el, target = {}) {
       try { await ensurePlaces(); } catch (_) { /* opslag vol: kaart werkt per waarneming */ }
       const sightings = await getSightings();
       if (destroyed || !el.isConnected) return;
-      initMap(el, sightings, leafletOk, target);
+      initMap(el, sightings, leafletOk, {...target, year});
       const map = _mapInstance;
       if (map && !userMarker) requestPosition({ timeout: 15000, maximumAge: 60000 }).then(({ coords }) => {
         if (!destroyed && el.isConnected && _mapInstance === map && !userMarker && coords) {
@@ -299,12 +304,13 @@ export function getMapView(screen) {
   return {
     search: screen.querySelector('#mapSpeciesSearch')?.value,
     status: screen.querySelector('#mapStatusSelect')?.value,
+    period: screen.querySelector('#mapPeriodSelect')?.value,
     center: center ? [center.lat, center.lng] : undefined,
     zoom: _mapInstance?.getZoom?.(),
   };
 }
 
-function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section, placeMediaId, mapView }) {
+function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section, placeMediaId, mapView, year }) {
   const mapEl = screenEl.querySelector('#leafletMap');
   if (!mapEl) return;
 
@@ -322,7 +328,8 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   const countEl = screenEl.querySelector('#mapCount');
   const seasonButtons = screenEl.querySelectorAll('[data-season], [data-season-filter]');
   const seasonKey = button => button.dataset.season || button.dataset.seasonFilter;
-  const filterState = {speciesSearch: mapView?.search || '', status: mapView?.status || 'all', legend:null,seasons:new Set(),notableOnly:false,period:'all',clouds:true};
+  const filterState = {speciesSearch: mapView?.search || '', status: mapView?.status || 'all', legend:null,seasons:new Set(),notableOnly:false,period:mapView?.period||year||'all',clouds:true};
+  screenEl.querySelector('#mapPeriodSelect').value=filterState.period;
   speciesSearch.value = filterState.speciesSearch;
   const speciesById=new Map(SPECIES.map(x=>[x.id,x]));
   const extraActive=()=>!!filterState.legend||filterState.seasons.size>0||filterState.notableOnly||filterState.period!=='all';
@@ -367,7 +374,9 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
       if(option)option.textContent=optionSymbols[key]+' '+MAP_STATUS[key].label+' ('+counts[key]+')';
     }
     const number=matches.length,total=geoSightings.length;
-    if(countEl)countEl.textContent=filtered
+    if(countEl)countEl.textContent=/^\d{4}$/.test(filterState.period)
+      ? number+' '+(number===1?'pin':'pins')+' · '+filterState.period
+      : filtered
       ? number+' van '+total+' pins'
       : (total===sightings.length?total+' '+(total===1?'pin':'pins'):total+' van '+sightings.length+' pins');
     feedback.textContent=filtered
@@ -506,10 +515,11 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   }
 
   // Bepaal beginpositie: gemiddelde van waarnemingen met GPS, anders NL centrum
-  const center = mapView?.center || (geoSightings.length
-    ? averageCenter(geoSightings)
+  const initialPins=year?applyLegendFilters(geoSightings,{period:filterState.period}):geoSightings;
+  const center = mapView?.center || (initialPins.length
+    ? averageCenter(initialPins)
     : [52.15, 5.30]);
-  const zoom = mapView?.zoom ?? (geoSightings.length > 0 ? 8 : 7);
+  const zoom = mapView?.zoom ?? (initialPins.length > 0 ? 8 : 7);
 
   map = window.L.map(mapEl, {
     center,

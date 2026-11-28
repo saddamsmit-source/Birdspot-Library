@@ -56,7 +56,7 @@ function saveView(view) {
 }
 
 // ── Entry point ────────────────────────────────────────────
-export async function renderSightings(el, { sightingId, speciesId } = {}) {
+export async function renderSightings(el, { sightingId, speciesId, linkedDetail } = {}) {
   const view = loadView();
   // UX-02C: vanaf een soortkaart opent de lijst met alleen die soort (andere filters leeg, niets verborgen).
   if (typeof speciesId === 'string' && SPECIES_BY_ID.has(speciesId)) {
@@ -113,7 +113,7 @@ export async function renderSightings(el, { sightingId, speciesId } = {}) {
   bindTools(ctx);
   await renderList(ctx);
   const selected = sightings.find(sighting => sighting?.id === sightingId);
-  if (selected && el.isConnected) await openSighting(ctx, selected);
+  if (selected && el.isConnected) await openSighting(ctx, selected, linkedDetail===true);
 }
 
 // ── Zoekbalk, filterknop en chips ──────────────────────────
@@ -291,7 +291,7 @@ async function renderList(ctx, { keepScroll = true } = {}) {
   });
 }
 
-function openSighting(ctx, sighting) {
+function openSighting(ctx, sighting, linkedDetail = false) {
   const refresh = async () => {
     if (!ctx.el.isConnected) return;
     ctx.sightings = await getSightings();
@@ -306,6 +306,7 @@ function openSighting(ctx, sighting) {
     },
     onPlaceRenamed: refresh,
     isActive: () => ctx.el.isConnected,
+    linkedDetail,
   });
 }
 
