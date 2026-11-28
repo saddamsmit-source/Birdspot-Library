@@ -11,6 +11,7 @@ import { loadSoundDraft, saveSoundDraft, deleteSoundDraft } from './soundDraft.j
 import { createSoundMonitor, drawSoundTimeline, elapsedLabel } from './soundTimeline.js';
 import { startSoundRecognition } from './soundRecognition.js';
 import { canShareFile, clipToWav, MERLIN_WAV_NAME } from './soundShare.js';
+import { requestPosition } from '../../services/location.js';
 
 const speciesById = new Map(SPECIES.map(species => [species.id, species]));
 const normalize = text => text.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase('nl');
@@ -90,7 +91,6 @@ export function mountSoundSession(root, onSaved) {
             <label>Tijd <input type="time" id="soundTime" required></label>
           </div>
           <div class="sound-row">
-            <button type="button" id="soundGps">Gebruik mijn locatie</button>
             <button type="button" id="soundPin">Kies plek op kaart</button>
           </div>
           <label id="soundPlaceNameField">Pleknaam <input id="soundPlace" maxlength="120"></label>
@@ -125,7 +125,7 @@ export function mountSoundSession(root, onSaved) {
   const search = find('soundSpeciesSearch'), matches = find('soundMatches'), selection = find('soundSelection');
   const date = find('soundDate'), time = find('soundTime'), pinStatus = find('soundPosition');
   const placeOptions = find('soundPlaceOptions'), locationName = find('soundPlace');
-  const gps = find('soundGps'), pin = find('soundPin'), save = find('soundSave');
+  const pin = find('soundPin'), save = find('soundSave');
   const placeFix = find('soundPlaceFix'), saveHint = find('soundSaveHint');
   const candidates = new Map();
   const levels = [];
@@ -415,31 +415,20 @@ export function mountSoundSession(root, onSaved) {
     return true;
   }
 
-  function locate() {
-    if (!navigator.geolocation) {
-      pinStatus.textContent = 'GPS is niet beschikbaar. Kies een plek via Details aanpassen.';
-      return;
-    }
+  async function locate() {
     const request = ++gpsRequest;
-    gps.disabled = true;
     locationPending = true;
     pinStatus.textContent = 'GPS-locatie wordt opgehaald…';
     updateSelection();
-    const unavailable = () => {
-      if (closed || request !== gpsRequest) return;
-      gps.disabled = false;
-      locationPending = false;
+    const { coords } = await requestPosition({ enableHighAccuracy: true, maximumAge: 0, timeout: 12000 });
+    if (closed || request !== gpsRequest) return;
+    locationPending = false;
+    if (!coords || !setPosition(coords.latitude, coords.longitude, coords.accuracy, 'GPS')) {
       pinStatus.textContent = coordinates
         ? 'GPS bijwerken lukt niet. De eerder gevonden plek blijft staan.'
         : 'GPS is niet beschikbaar. Kies een plek via Details aanpassen.';
       updateSelection();
-    };
-    navigator.geolocation.getCurrentPosition(({ coords }) => {
-      if (closed || request !== gpsRequest) return;
-      gps.disabled = false;
-      locationPending = false;
-      if (!setPosition(coords.latitude, coords.longitude, coords.accuracy, 'GPS')) unavailable();
-    }, unavailable, { enableHighAccuracy: true, maximumAge: 0, timeout: 12000 });
+    }
   }
 
   record.addEventListener('click', async () => {
@@ -665,7 +654,6 @@ export function mountSoundSession(root, onSaved) {
     if (event.key === 'Enter' && !matches.hidden && first) { event.preventDefault(); first.click(); }
   });
 
-  gps.addEventListener('click', locate);
   placeOptions.addEventListener('click', event => {
     const button = event.target.closest('button');
     if (!button) return;
@@ -685,7 +673,6 @@ export function mountSoundSession(root, onSaved) {
   });
   pin.addEventListener('click', () => {
     gpsRequest++;
-    gps.disabled = false;
     locationPending = false;
     updateSelection();
     if (!coordinates) pinStatus.textContent = 'Kies de plek voor deze waarnemingen.';
@@ -800,7 +787,6 @@ export function mountSoundSession(root, onSaved) {
       await persistWork;
       if (draftStored) await deleteSoundDraft(sessionId);
       gpsRequest++;
-      gps.disabled = false;
       locationPending = needsPlaceChoice = false;
       matchedPlace = placeChoice = positionOrigin = null;
       placeOptions.replaceChildren();

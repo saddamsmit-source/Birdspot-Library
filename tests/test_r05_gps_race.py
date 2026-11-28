@@ -163,6 +163,7 @@ def main():
         scenario('G4 wissen', 'granted', 0, 2500, g4)
 
         def g5(page):
+            page.wait_for_function("localStorage.getItem('birdspot-last-location')", timeout=8000)
             page.evaluate('window.__gpsOnDemand = true')
             open_sheet(page)
             page.wait_for_function('window.__releaseGps !== null', timeout=5000)  # auto-GPS wacht op antwoord
@@ -206,6 +207,7 @@ def main():
 
         def g8(page):
             # Opslagrace (#293 QA): Opslaan zonder pin, changePhotos blijft open, dán antwoordt auto-GPS.
+            page.wait_for_function("localStorage.getItem('birdspot-last-location')", timeout=8000)
             page.evaluate('window.__gpsOnDemand = true')
             places_before = page.evaluate("(JSON.parse(localStorage.getItem('birdspot-places') || 'null')?.places || []).map(p => p.id)")
             n = len(rows(page))

@@ -64,8 +64,9 @@ export function weatherPlace({state, source, lat, lon, at = null, places = [], t
 /** Melding zonder bruikbare positie (GPS-01): eerlijke reden, geen standaardstad. */
 export function noLocationText(reason) {
   if (reason === 'denied') return 'Aviandra heeft geen toegang tot je locatie. Sta locatie toe in je browser of kies zelf een plek.';
+  if (reason === 'permission') return 'Gebruik het locatie-icoon op Kaart om locatie toe te staan, of kies zelf een plek.';
   if (reason === 'unsupported') return 'Deze browser geeft geen locatie door. Kies zelf een plek.';
-  return 'Je locatie is nu niet te bepalen (geen GPS-signaal). Probeer het opnieuw of kies zelf een plek.';
+  return 'Je locatie is nu niet te bepalen (geen GPS-signaal). Gebruik het locatie-icoon op Kaart of kies zelf een plek.';
 }
 
 export function weatherPlaceMarkup(place) {

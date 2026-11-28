@@ -25,6 +25,7 @@ import { changePhotos, savePhoto, getMediaByPlace } from '../../data/db.js';
 import { openMediaPreview } from '../../utils/validateMedia.js';
 import { addEnvPhotos, getEnvPhotos, updateEnvCaption, deleteEnvPhoto, ensureEnvThumb, ENV_CAPTION_MAX } from '../../data/placeEnv.js';
 import { showToast } from '../../app.js';
+import { requestPosition } from '../../services/location.js';
 import { SEASON_COLORS, SEASON_ORDER, seasonCounts, monthHistogram, bestMonths, monthLabel, isNotable, cloudRadiusPx, applyLegendFilters } from './insights.js';
 import { centerPinMarkup, attachBaseLayers, pinAccuracyM, accuracyLabel, coordLabel, MAX_PIN_ACCURACY_M, LAYERS } from './centerPin.js';
 
@@ -159,6 +160,15 @@ export function renderMap(el, target = {}) {
 
   const locateButton = el.querySelector('#mapLocateBtn');
   let userMarker = null;
+  const drawUserMarker = (map, position) => {
+    userMarker?.remove();
+    userMarker = window.L.marker(position, {
+      icon: window.L.divIcon({ className: 'map-current-location', iconSize: [18, 18] }),
+      interactive: false,
+      keyboard: false,
+      title: 'Je huidige locatie',
+    }).addTo(map);
+  };
   locateButton.addEventListener('click', () => {
     findUserPosition(locateButton, ({ latitude, longitude }) => {
       const map = _mapInstance;
@@ -167,13 +177,7 @@ export function renderMap(el, target = {}) {
         return;
       }
       const position = [latitude, longitude];
-      userMarker?.remove();
-      userMarker = window.L.marker(position, {
-        icon: window.L.divIcon({ className: 'map-current-location', iconSize: [18, 18] }),
-        interactive: false,
-        keyboard: false,
-        title: 'Je huidige locatie',
-      }).addTo(map);
+      drawUserMarker(map, position);
       el.querySelector('.map-no-gps')?.remove();
       map.flyTo(position, 17, { duration: 1 });
       showToast('Locatie gevonden op de kaart.');
@@ -201,6 +205,12 @@ export function renderMap(el, target = {}) {
       const sightings = await getSightings();
       if (destroyed || !el.isConnected) return;
       initMap(el, sightings, leafletOk, target);
+      const map = _mapInstance;
+      if (map && !userMarker) requestPosition({ timeout: 15000, maximumAge: 60000 }).then(({ coords }) => {
+        if (!destroyed && el.isConnected && _mapInstance === map && !userMarker && coords) {
+          drawUserMarker(map, [coords.latitude, coords.longitude]);
+        }
+      });
     } finally {
       if (!destroyed && el.isConnected) {
         el.querySelector('#mapScreen')?.classList.remove('signature-map-loading');
@@ -960,37 +970,21 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
 }
 
 // ── Locatie ────────────────────────────────────────────────────
-function findUserPosition(btn, onLocated) {
+async function findUserPosition(btn, onLocated) {
   if (btn.getAttribute('aria-busy') === 'true') return;
-  if (!navigator.geolocation?.getCurrentPosition) {
-    showToast('Deze browser geeft geen locatie door.', 'warn');
-    return;
-  }
   btn.classList.add('map-locate-btn--loading');
   btn.setAttribute('aria-busy', 'true');
-  const finish = () => {
-    btn.classList.remove('map-locate-btn--loading');
-    btn.removeAttribute('aria-busy');
-    return btn.isConnected;
+  const { coords, reason } = await requestPosition({ timeout: 15000, maximumAge: 0 }, { ask: true });
+  btn.classList.remove('map-locate-btn--loading');
+  btn.removeAttribute('aria-busy');
+  if (!btn.isConnected) return;
+  if (coords) { onLocated(coords); return; }
+  const messages = {
+    denied: 'Geen toegang tot je locatie. Zet Locatie aan op je telefoon en sta locatie toe in je browser.',
+    unsupported: 'Deze browser geeft geen locatie door.',
+    timeout: 'Locatie bepalen duurt te lang. Probeer het opnieuw.',
   };
-  const failed = error => {
-    if (!finish()) return;
-    const message = error?.code === 1 ? 'Geen toegang tot je locatie. Zet Locatie aan op je telefoon en sta locatie toe in je browser.'
-      : error?.code === 3 ? 'Locatie bepalen duurt te lang. Probeer het opnieuw.'
-        : 'Je locatie is nu niet beschikbaar. Controleer of Locatie aanstaat en probeer het opnieuw.';
-    showToast(message, 'warn');
-  };
-  try {
-    navigator.geolocation.getCurrentPosition(
-      ({ coords }) => {
-        if (finish()) onLocated(coords);
-      },
-      failed,
-      { timeout: 15000, maximumAge: 60000 },
-    );
-  } catch (error) {
-    failed(error);
-  }
+  showToast(messages[reason] || 'Je locatie is nu niet beschikbaar. Controleer of Locatie aanstaat en probeer het opnieuw.', 'warn');
 }
 
 // ── Lege state (geen GPS) ──────────────────────────────────────

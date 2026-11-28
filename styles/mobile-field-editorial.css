@@ -217,7 +217,6 @@
   font-size:clamp(10px,2.8vw,12px);
   overflow-wrap:anywhere;
 }
-#addSightingSheet #sightGpsBtn {min-width:67px;justify-content:center;}
 #addSightingSheet #sightDate {flex:1 1 175px;}
 #addSightingSheet .sighting-pin-actions {align-items:center;}
 #addSightingSheet .media-attach-row {max-width:100%;}

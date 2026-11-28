@@ -349,7 +349,7 @@
 .media-thumb__placeholder { display: grid; place-items: center; height: 100%; padding: 4px; font-size: .75rem; color: var(--ink); }
 #sightingMediaStatus:empty { display: none; }
 #sightingMediaStatus { overflow-wrap: anywhere; }
-#addSheetCancel, #sightDateToday, #sightPinBtn, #sightClearPin, #sightGpsBtn,
+#addSheetCancel, #sightDateToday, #sightPinBtn, #sightClearPin,
 #mapSheetClose, .place-action, .signature-filter { min-height: var(--hit-field); }
 #screen-media .signature-filterbar { flex-wrap: wrap; overflow: visible; }
 #screen-media .signature-filter[aria-pressed="true"]::before { content: '✓ '; }

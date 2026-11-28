@@ -87,7 +87,6 @@ export function renderHome(el, { onSearchSelect } = {}) {
   const onLocationAction = event => {
     const action = event.target.closest('[data-location-action]')?.dataset.locationAction;
     if (!action || ctx.destroyed) return;
-    if (action === 'retry') { refreshLocationCards(el, ctx, { fresh: true }); return; }
     openPinPicker({
       lat: ctx.location?.lat ?? null, lon: ctx.location?.lon ?? null,
       title: 'Kies een plek voor weer en zon', ariaLabel: 'Kies een plek voor weer en zon',
@@ -465,7 +464,6 @@ const WMO_ICON = {
 };
 
 const LOCATION_ACTIONS = `<div class="location-actions">
-  <button type="button" class="location-action" data-location-action="retry">GPS opnieuw proberen</button>
   <button type="button" class="location-action" data-location-action="pick">Kies zelf een plek</button></div>`;
 
 async function loadWeather(el, ctx, located) {

@@ -5,6 +5,12 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.49 · locatie bij openen en kaartbediening (28 november 2026)
+
+Bij de eerste opening kan de browser om locatietoestemming vragen. Bij al verleende toestemming gebruikt Aviandra GPS direct tijdens gebruik van de app. Wie de vraag wegklikt, kan locatie later activeren via het locatie-icoon op Kaart. Daar zitten de laagwissel en het locatie-icoon compact rechtsonder. Kaart toont je locatie zodra die beschikbaar is. Tik op het locatie-icoon om daarheen te springen.
+
+Weer en zon delen één locatieaanvraag. Waarnemen en Geluid herkennen vullen de plek automatisch in met toestemming. Zelf een plek of pin kiezen blijft mogelijk en een gekozen of gewiste pin heeft voorrang. De app vraagt geen doorlopende achtergrondpositie op. Open-Meteo ontvangt afgeronde coördinaten zoals voorheen. [Concept-PR #390](https://github.com/saddamsmit-source/Birdspot-Library/pull/390) geeft testbewijs en releasevoorwaarden.
+
 ## Aviandra 1.27.47 · Velduil op Home en mobiele QA (28 november 2026)
 
 Concept-PR [#388](https://github.com/saddamsmit-source/Birdspot-Library/pull/388), boven 1.27.46 op `50168e0bee9396723b44e54792ecc3757301d858`. De Velduil op Home krijgt een afzonderlijke vluchtfoto uit Ria Formosa van Norberto Esteves. Bij vergroting van het origineel is geen pootring zichtbaar. Het origineel van 3952 × 2635 px komt van [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Short_eared_Owl_flying.jpg). De gedownloade SHA-1 `e6a20fb4100230aa52505f8e0be79442071a3832` komt overeen met de bronregistratie. De uitsnede in WebP valt onder [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) en heeft een nieuw pad voor bestaande PWA-mediacaches. De IJsvogel-hoofdfoto in Soorten is die van Andy Morffew.
