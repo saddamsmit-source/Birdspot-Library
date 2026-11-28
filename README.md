@@ -5,6 +5,12 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.47 · Velduil op Home en mobiele QA (28 november 2026)
+
+Concept-PR [#388](https://github.com/saddamsmit-source/Birdspot-Library/pull/388), boven 1.27.46 op `50168e0bee9396723b44e54792ecc3757301d858`. De Velduil op Home krijgt een afzonderlijke vluchtfoto uit Ria Formosa van Norberto Esteves. Bij vergroting van het origineel is geen pootring zichtbaar. Het origineel van 3952 × 2635 px komt van [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Short_eared_Owl_flying.jpg). De gedownloade SHA-1 `e6a20fb4100230aa52505f8e0be79442071a3832` komt overeen met de bronregistratie. De uitsnede in WebP valt onder [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) en heeft een nieuw pad voor bestaande PWA-mediacaches. De IJsvogel-hoofdfoto in Soorten is die van Andy Morffew.
+
+De mobiele formulier- en lay-outtest wacht op het automatische sluiten van de intro bij verminderde beweging. De aparte introtest controleert de knop Direct openen. Release HOLD, zie #388 voor het bewijs op de kandidaat en de resterende toestel- en previewcontroles.
+
 ## Aviandra 1.27.46 · gecombineerde releasekandidaat (28 november 2026)
 
 Concept-PR [#387](https://github.com/saddamsmit-source/Birdspot-Library/pull/387). Combineert Aviandra 1.27.45 op `332b9dcf076b5c97140e37c2a95b8d47b161c2a1` (#385, 53/53 CI) met F3-R08b op `f0a9ca78b431a68bffa83e61056d466dbbffe626` (#386, CI nog niet definitief bij start integratie). Gemeenschappelijke basis `1cb52274ce39dce19d22b69864063025efe6917d`. Alle uitsluitend op een van beide sporen gewijzigde bestanden zijn behouden. Acht overlappende bestanden zijn samengevoegd door de exacte, tegen de gemeenschappelijke basis gereconstrueerde Aviandra-wijzigingen toe te passen op de F3-versies. Bronregister en gegenereerde media zijn inhoudelijk gelijk; F3-bewijspayload ongewijzigd.

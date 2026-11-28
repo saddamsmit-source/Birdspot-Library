@@ -164,14 +164,15 @@ export const SHOWCASE_BIRDS = Object.freeze([
   "nl": "Velduil",
   "latin": "Asio flammeus",
   "pose": "vlucht",
-  "image": "/assets/showcase/sp255.webp",
+  "image": "/assets/showcase/sp255-home.webp",
   "width": 1600,
   "height": 1067,
-  "author": "Stephan Sprinz",
-  "license": "CC BY 4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Sumpfohreule_(Asio_flammeus)_auf_Spiekeroog_-_Nationalpark_nieders%C3%A4chsisches_Wattenmeer.jpg",
-  "file": "Sumpfohreule (Asio flammeus) auf Spiekeroog - Nationalpark niedersächsisches Wattenmeer.jpg",
-  "modifications": "Verkleind waar nodig en omgezet naar WebP"
+  "author": "Norberto Esteves",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Short_eared_Owl_flying.jpg",
+  "file": "Short eared Owl flying.jpg",
+  "modifications": "Uitgesneden, verkleind en omgezet naar WebP · CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
  },
  {
   "id": "sp018",

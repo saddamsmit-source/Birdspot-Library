@@ -29,7 +29,9 @@ def main():
       errors=[]
       p.on("pageerror",lambda e:errors.append(str(e)))
       p.goto("http://127.0.0.1:"+str(srv.server_address[1])+"/",wait_until="domcontentloaded")
-      p.locator('#birdspotSplashSkip').click()
+      # Reduced motion closes the welcome automatically. The dedicated
+      # startup suite exercises the deliberate skip interaction.
+      p.locator('#birdspotSplash').wait_for(state='detached', timeout=5000)
       p.locator('#featuredBirdName').wait_for(timeout=14000)
       assert p.locator("#featuredBirdName").inner_text().strip()
       assert p.locator("#featuredBirdLatin").inner_text().strip()
