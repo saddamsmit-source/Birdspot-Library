@@ -176,6 +176,7 @@ def check_startup_permission(browser, url):
         navigator.geolocation.getCurrentPosition = (_, denied) => {
             const key = 'native-location-calls';
             sessionStorage.setItem(key, Number(sessionStorage.getItem(key) || '0') + 1);
+            sessionStorage.setItem('location-during-intro', Boolean(document.querySelector('#birdspotSplash:not([hidden])')));
             denied({code: 1});
         };
     })();""")
@@ -184,12 +185,14 @@ def check_startup_permission(browser, url):
         boot(page, url)
         settle(page)
         first = page.evaluate("sessionStorage.getItem('native-location-calls')")
+        during_intro = page.evaluate("sessionStorage.getItem('location-during-intro')")
         page.reload(wait_until='domcontentloaded')
         settle(page)
         again = page.evaluate("sessionStorage.getItem('native-location-calls')")
         reason = page.locator('[data-location-reason]').get_attribute('data-location-reason')
-        check('G19', 'een native vraag bij appstart; bij heropenen na wegklikken geen herhaling',
-              first == again == '1' and reason == 'permission', (first, again, reason))
+        check('G19', 'een native vraag na de intro; bij heropenen na wegklikken geen herhaling',
+              first == again == '1' and during_intro == 'false' and reason == 'permission',
+              (first, again, during_intro, reason))
     finally:
         context.close()
 

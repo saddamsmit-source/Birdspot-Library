@@ -118,7 +118,11 @@ export function startLocation() {
       }
       document.addEventListener('visibilitychange', onVisible);
     });
-  startupPosition = visible.then(() => locate(WEATHER_OPTIONS, 'startup'));
+  const splash = document.getElementById('birdspotSplash');
+  const intro = splash && !splash.hidden
+    ? new Promise(resolve => window.addEventListener('birdspot:splash-hidden', resolve, { once: true }))
+    : Promise.resolve();
+  startupPosition = Promise.all([visible, intro]).then(() => locate(WEATHER_OPTIONS, 'startup'));
   // Home kan bij de eerste weergave dezelfde fix gebruiken. De app wacht er niet op.
   resolveLocation();
   startupPosition.then(() => { startupPosition = null; });

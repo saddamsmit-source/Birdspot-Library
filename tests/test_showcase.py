@@ -1,10 +1,9 @@
 """
-Birdspot Library — F: diashow op de startpagina
+Birdspot Library — F: foto van de dag op de startpagina
   F-01  100 vogels in 15 groepen; eigen lokale opnamen voor Home met maker, licentie en Commons-bron
   F-02  opeenvolgende vogels komen uit een andere groep
-  F-03  advance(): na 30 s de volgende vogel, rest-tijd blijft staan, loopt rond aan het eind
-  F-04  hervatten: opgeslagen positie (vogel 6, 20 s) → na 10 s zichtbare tijd vogel 7;
-        verborgen app telt niet door; na opnieuw openen verder waar hij was
+  F-03  alle foto's komen één keer langs per 100 kalenderdagen
+  F-04  dezelfde foto gedurende de dag, ook na heropenen; wissel om lokale middernacht
   F-05  bijschrift: groep, Nederlandse en Latijnse naam, herkenning, aanwezigheid, maker en licentie; foto geladen
   F-06  geen verzoeken naar Wikimedia, geen paginafouten; screenshot 390 px
 
@@ -15,6 +14,7 @@ import hashlib
 import json
 import re
 import threading
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -51,15 +51,16 @@ def main():
         url = f"http://127.0.0.1:{server.server_address[1]}/"
         with sync_playwright() as pw:
             browser = pw.chromium.launch(headless=True)
-            ctx = browser.new_context(viewport={"width": 390, "height": 844}, reduced_motion="no-preference", service_workers="block")
+            ctx = browser.new_context(viewport={"width": 390, "height": 844}, timezone_id="Europe/Amsterdam",
+                                      reduced_motion="reduce", service_workers="block")
             p = ctx.new_page()
             errors, external = [], []
             p.on("pageerror", lambda e: errors.append(str(e)))
             p.on("request", lambda r: external.append(r.url) if "wikimedia" in r.url else None)
-            # opgeslagen positie vóór de app start (eenmalig per tabblad)
+            # Oude installaties kunnen nog een opgeslagen diashowpositie hebben.
             ctx.add_init_script("if (!sessionStorage.getItem('seeded')) { sessionStorage.setItem('seeded', '1');"
                                 " localStorage.setItem('birdspot-showcase-position', JSON.stringify({index: 5, elapsed: 20000})); }")
-            p.clock.install()
+            p.clock.install(time=datetime(2026, 11, 28, 18, tzinfo=timezone.utc))
             p.goto(url, wait_until="domcontentloaded")
             p.clock.run_for(6000)
             p.locator("#birdspotSplash").wait_for(state="detached", timeout=15000)
@@ -102,46 +103,28 @@ def main():
             assert all(birds[i]["group"] != birds[(i + 1) % len(birds)]["group"] for i in range(len(birds))), "F-02"
             print("F-02 OK — afwisselende groepen")
 
-            adv = p.evaluate("""async () => { const m = await import('/src/features/home/specialBirds.js');
-              return [m.advance({index:0,elapsed:0}, 29999), m.advance({index:0,elapsed:0}, 30000),
-                      m.advance({index:3,elapsed:25000}, 10000), m.advance({index:99,elapsed:0}, 30000)]; }""")
-            assert adv == [{"index": 0, "elapsed": 29999}, {"index": 1, "elapsed": 0},
-                           {"index": 4, "elapsed": 5000}, {"index": 0, "elapsed": 0}], adv
-            print("F-03 OK — advance()")
+            cycle = p.evaluate("""async () => {
+              const { featuredBirdForDate } = await import('/src/features/home/specialBirds.js');
+              return Array.from({length:101}, (_, i) => featuredBirdForDate(new Date(2026, 9, 20 + i)).id);
+            }""")
+            assert len(set(cycle[:100])) == 100 and cycle[0] == cycle[-1], cycle
+            print("F-03 OK — 100 kalenderdagen, ook over de overgang naar wintertijd")
 
             shown = lambda: p.locator("#slideshow").get_attribute("data-bird-id")  # noqa: E731
             p.locator("#slideshow[data-bird-id]").wait_for(timeout=8000)
-            # 20 s + ~6 s opstart; vogel 5 tot 30 s, dan vogel 6
             start_id = shown()
-            assert start_id in (birds[5]["id"], birds[6]["id"]), (start_id, birds[5]["id"])
-            p.clock.run_for(12000)
-            assert shown() == birds[6]["id"], ("F-04 na 30 s", shown())
-            p.evaluate("() => { Object.defineProperty(document, 'hidden', {configurable:true, get:()=>true});"
-                       " document.dispatchEvent(new Event('visibilitychange')); }")
-            saved = p.evaluate("() => JSON.parse(localStorage.getItem('birdspot-showcase-position'))")
-            assert saved["index"] == 6, saved
-            p.clock.run_for(10 * 60 * 1000)
-            p.evaluate("() => { Object.defineProperty(document, 'hidden', {configurable:true, get:()=>false});"
-                       " document.dispatchEvent(new Event('visibilitychange')); }")
-            p.clock.run_for(1000)
-            assert shown() == birds[6]["id"], ("F-04 telde op de achtergrond door", shown())
+            expected = p.evaluate("""async () => {
+              const {featuredBirdForDate} = await import('/src/features/home/specialBirds.js');
+              return [featuredBirdForDate(new Date(2026, 10, 28)).id, featuredBirdForDate(new Date(2026, 10, 29)).id];
+            }""")
+            assert start_id == expected[0], (start_id, expected)
+            p.clock.fast_forward(10 * 60 * 1000)
+            assert shown() == start_id, ("F-04 dezelfde dag", shown())
             p.reload(wait_until="domcontentloaded")
             p.clock.run_for(6000)
             p.locator("#slideshow[data-bird-id]").wait_for(timeout=8000)
-            assert shown() == birds[6]["id"], ("F-04 hervat niet", shown())
-            print("F-04 OK — hervat waar hij was, telt niet op de achtergrond")
-
-            before_pause = shown()
-            toggle = p.locator("#featuredBirdMotion")
-            toggle.click()
-            assert toggle.get_attribute("aria-pressed") == "true"
-            p.clock.run_for(32000)
-            assert shown() == before_pause, "F-04 handmatig pauzeren"
-            toggle.click()
-            p.emulate_media(reduced_motion="reduce")
-            toggle.wait_for(state="hidden")
-            p.clock.run_for(32000)
-            assert shown() == before_pause, "F-04 respecteer minder beweging"
+            assert shown() == start_id, ("F-04 heropenen op dezelfde dag", shown())
+            assert p.locator("#featuredBirdMotion, .home-featured-progress").count() == 0
 
             cur = next(b for b in birds if b["id"] == shown())
             cap = p.locator("#slideshow .featured-birds__caption")
@@ -155,8 +138,6 @@ def main():
             credit_info = credit.get_by_text("Maker:", exact=False)
             assert not credit_info.is_visible()
             cap.locator("summary").click()
-            p.emulate_media(reduced_motion="no-preference")
-            toggle.click()  # Resume the manually paused slideshow.
             info_trigger = credit.get_by_label("Foto-informatie", exact=True)
             info_trigger.click()
             assert credit_info.is_visible() and cur["author"] in credit_info.inner_text()
@@ -174,11 +155,16 @@ def main():
             viewer = p.get_by_role("dialog", name="Vogelfoto bekijken")
             viewer.get_by_role("button", name="Inzoomen").click()
             assert viewer.get_by_role("button", name="Zoom herstellen").inner_text() == "2×"
-            p.clock.run_for(32000)
-            assert shown() == cur["id"], "De diashow blijft stilstaan zolang de zoomviewer open is"
+            local_midnight = datetime(2026, 11, 28, 22, 59, 55, tzinfo=timezone.utc)
+            p.clock.set_system_time(local_midnight)
+            p.evaluate("() => document.dispatchEvent(new Event('visibilitychange'))")
+            p.clock.run_for(6000)
+            assert shown() == cur["id"], "De foto blijft staan zolang de zoomviewer open is"
             p.keyboard.press("Escape")
             viewer.wait_for(state="detached")
             assert zoom_trigger.evaluate("(el) => document.activeElement === el")
+            assert shown() == expected[1], ("F-04 wissel na middernacht", shown(), expected)
+            print("F-04 OK — heropenen op dezelfde dag en wisselen rond lokale middernacht")
             p.screenshot(path=str(SHOTS / "showcase_f_390.png"))
             vg = p.evaluate("async () => { const m = await import('/src/features/home/featuredCarousel.js');"
                             " const b = (await import('/src/features/home/specialBirds.js')).FEATURED_BIRDS.find(x => x.id === 'sp463');"

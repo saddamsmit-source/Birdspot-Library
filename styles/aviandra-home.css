@@ -126,43 +126,6 @@
 #screen-home .field-featured-notes[open] { border-radius: var(--r-card); }
 #screen-home .field-featured-notes summary { font-size: .75rem; padding-inline: 8px; }
 
-.home-featured-progress {
-  position: absolute;
-  z-index: 2;
-  top: 18px;
-  right: 48px;
-  display: flex;
-  gap: 5px;
-  pointer-events: none;
-}
-.home-featured-progress span {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: rgb(255 255 255 / .52);
-  box-shadow: 0 0 2px #17382c;
-}
-.home-featured-progress span.is-current { background: #fff; }
-
-#screen-home #featuredBirdMotion {
-  top: 42px;
-  right: 3px;
-  display: grid;
-  place-items: center;
-  border: 0;
-  background: transparent;
-}
-#screen-home #featuredBirdMotion svg {
-  box-sizing: content-box;
-  width: 16px;
-  height: 16px;
-  padding: 4px;
-  border: 1px solid #b6cebf;
-  border-radius: 50%;
-  background: #102d23;
-}
-#screen-home #featuredBirdMotion[aria-pressed="true"] svg { background: var(--selected-gold); }
-
 #screen-home #statsRow {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(7px, 2.4vw, 12px);
