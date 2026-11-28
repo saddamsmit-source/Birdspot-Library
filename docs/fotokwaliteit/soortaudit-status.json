@@ -2718,9 +2718,9 @@
     {
      "image": "/assets/species/plumage/sp033-flight.webp",
      "role": "Overige herkenningsfoto's",
-     "content": "Kuifmees met geheven vleugels op de sneeuw.",
+     "content": "Kuifmees met geheven vleugels bij de sneeuw.",
      "sexAge": "Geslacht en leeftijd niet gelabeld.",
-     "quality": "Kop en vleugelpennen zichtbaar. Volgens vluchtcontrole staat de vogel op de sneeuw.",
+     "quality": "Kop en vleugelpennen zichtbaar; precieze positie van de poten bij sneeuw onzeker.",
      "verdict": "uit-rol",
      "rights": {
       "status": "VERIFIED",
@@ -2733,22 +2733,71 @@
       "nameNL": "Kuifmees",
       "registry": "GUIDE_POSES[2]",
       "sexLabel": null,
-      "class": "grond",
+      "class": "houding-onzeker",
       "quality": "goed",
       "decision": "uit-rol",
       "target": "overig",
-      "newLabel": "Vleugels geheven op de sneeuw",
-      "newNote": "De vogel heeft de vleugels geheven. De kuif en wangtekening zijn zichtbaar.",
-      "reason": "Staat met de poten op de sneeuw met geheven vleugels.",
+      "newLabel": "Vleugels geheven bij de sneeuw",
+      "newNote": "De kuif en donkere wangboog zijn zichtbaar. De precieze houding ten opzichte van de sneeuw is onzeker.",
+      "reason": "Geheven vleugels bij sneeuw; de exacte positie van de poten en fase zijn niet overtuigend vast te stellen.",
       "airborne": false,
       "rights": "VERIFIED",
-      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0"
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0",
+      "reviewedOn": "2026-11-28",
+      "previousReview": {
+       "n": 74,
+       "id": "sp033",
+       "nameNL": "Kuifmees",
+       "registry": "GUIDE_POSES[2]",
+       "sexLabel": null,
+       "class": "grond",
+       "quality": "goed",
+       "decision": "uit-rol",
+       "target": "overig",
+       "newLabel": "Vleugels geheven op de sneeuw",
+       "newNote": "De vogel heeft de vleugels geheven. De kuif en wangtekening zijn zichtbaar.",
+       "reason": "Staat met de poten op de sneeuw met geheven vleugels.",
+       "airborne": false,
+       "rights": "VERIFIED",
+       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0"
+      }
+     },
+     "previousR08b": {
+      "image": "/assets/species/plumage/sp033-flight.webp",
+      "role": "Overige herkenningsfoto's",
+      "content": "Kuifmees met geheven vleugels op de sneeuw.",
+      "sexAge": "Geslacht en leeftijd niet gelabeld.",
+      "quality": "Kop en vleugelpennen zichtbaar. Volgens vluchtcontrole staat de vogel op de sneeuw.",
+      "verdict": "uit-rol",
+      "rights": {
+       "status": "VERIFIED",
+       "note": "bronaudit 14-11-2026: zelfde opname (Appfoto visueel naast oorspronkelijk bronbestand vergeleken), CC BY-SA 3.0 · Sgbeer",
+       "annotations": []
+      },
+      "flight": {
+       "n": 74,
+       "id": "sp033",
+       "nameNL": "Kuifmees",
+       "registry": "GUIDE_POSES[2]",
+       "sexLabel": null,
+       "class": "grond",
+       "quality": "goed",
+       "decision": "uit-rol",
+       "target": "overig",
+       "newLabel": "Vleugels geheven op de sneeuw",
+       "newNote": "De vogel heeft de vleugels geheven. De kuif en wangtekening zijn zichtbaar.",
+       "reason": "Staat met de poten op de sneeuw met geheven vleugels.",
+       "airborne": false,
+       "rights": "VERIFIED",
+       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY-SA 3.0"
+      }
      }
     }
    ],
    "corrections": [
     "Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.",
-    "Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212."
+    "Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212.",
+    "R08b 28-11-2026: sneeuwbijschrift neutraal gemaakt; vrije-vluchtpositie blijft open. Kuifmees/Glanskop-rustvergelijking toegevoegd met bestaande beelden; nieuwe browserproef open."
    ],
    "missing": [
     "Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten."
@@ -2781,7 +2830,19 @@
    "browser": null,
    "errors": [],
    "verdict": "PARTIALLY TESTED",
-   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen"
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen",
+   "previousR08b": {
+    "verdict": "PARTIALLY TESTED",
+    "status": {
+     "technical": "VERIFIED",
+     "visual": "VERIFIED",
+     "rights": "PARTIALLY TESTED",
+     "knowledge": "PARTIALLY TESTED",
+     "browser": "NOT TESTED",
+     "independent": "NOT TESTED"
+    },
+    "browser": null
+   }
   },
   {
    "id": "sp034",
@@ -2925,11 +2986,11 @@
     },
     {
      "image": "/assets/species/plumage/sp035-flight.webp",
-     "role": "In vlucht (Mannetje)",
-     "content": "Mannetje in vrije vlucht. Blauwe kruin, rozerode borst en lichte vleugeltekening zichtbaar.",
+     "role": "Verenkleed (Mannetje)",
+     "content": "Mannetje met geheven vleugels en uitgestoken poten; vrije vlucht niet overtuigend vastgesteld.",
      "sexAge": "Roze borst en blauwgrijze kop ondersteunen het mannelijke kleed.",
-     "quality": "Volledige vogel vrij in de lucht.",
-     "verdict": "goedgekeurd",
+     "quality": "Volledige vogel los van de ondergrond; houding bij afzetten of neerstrijken niet uit te sluiten.",
+     "verdict": "uit-rol",
      "rights": {
       "status": "VERIFIED",
       "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Mark Medcalf",
@@ -2941,23 +3002,74 @@
       "nameNL": "Vink",
       "registry": "GUIDE_POSES[0]",
       "sexLabel": "male",
-      "class": "vlucht",
+      "class": "houding-onzeker",
       "quality": "goed",
-      "decision": "goedgekeurd",
-      "target": null,
-      "newLabel": null,
-      "newNote": null,
-      "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
-      "airborne": true,
+      "decision": "uit-rol",
+      "target": "kleed",
+      "newLabel": "Mannetje met geheven vleugels",
+      "newNote": "Rozerode borst en blauwgrijze kruin. De houding is zichtbaar, maar echte vrije vlucht is niet overtuigend vastgesteld.",
+      "reason": "Vogel los van de ondergrond met geheven vleugels en uitgestoken poten; vrije vlucht versus afzetten of neerstrijken is niet overtuigend vastgesteld.",
+      "airborne": false,
       "rights": "VERIFIED",
-      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+      "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0",
+      "reviewedOn": "2026-11-28",
+      "previousReview": {
+       "n": 132,
+       "id": "sp035",
+       "nameNL": "Vink",
+       "registry": "GUIDE_POSES[0]",
+       "sexLabel": "male",
+       "class": "vlucht",
+       "quality": "goed",
+       "decision": "goedgekeurd",
+       "target": null,
+       "newLabel": null,
+       "newNote": null,
+       "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+       "airborne": true,
+       "rights": "VERIFIED",
+       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+      }
+     },
+     "previousR08b": {
+      "image": "/assets/species/plumage/sp035-flight.webp",
+      "role": "In vlucht (Mannetje)",
+      "content": "Mannetje in vrije vlucht. Blauwe kruin, rozerode borst en lichte vleugeltekening zichtbaar.",
+      "sexAge": "Roze borst en blauwgrijze kop ondersteunen het mannelijke kleed.",
+      "quality": "Volledige vogel vrij in de lucht.",
+      "verdict": "goedgekeurd",
+      "rights": {
+       "status": "VERIFIED",
+       "note": "bronaudit 09-11: zelfde opname (ORB+RANSAC tegen bronbeeld), CC BY 2.0 · Mark Medcalf",
+       "annotations": []
+      },
+      "flight": {
+       "n": 132,
+       "id": "sp035",
+       "nameNL": "Vink",
+       "registry": "GUIDE_POSES[0]",
+       "sexLabel": "male",
+       "class": "vlucht",
+       "quality": "goed",
+       "decision": "goedgekeurd",
+       "target": null,
+       "newLabel": null,
+       "newNote": null,
+       "reason": "Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar.",
+       "airborne": true,
+       "rights": "VERIFIED",
+       "rightsNote": "zelfde opname in bronaudit 09-11 (ORB+RANSAC tegen bronbeeld), CC BY 2.0"
+      }
      }
     }
    ],
    "corrections": [
-    "Fotoverdeling bevestigd. Herkenning, maatbanden en vergelijking met Huismus en Keep onderbouwd."
+    "Fotoverdeling bevestigd. Herkenning, maatbanden en vergelijking met Huismus en Keep onderbouwd.",
+    "R08b 28-11-2026: bestaande foto met uitgestoken poten buiten de vrije-vluchtrol geplaatst; mannetjeskleed, bestand en herkomst behouden. Vrije-vluchtfoto open."
    ],
-   "missing": [],
+   "missing": [
+    "Scherpe, aantoonbare vrije-vluchtfoto van Vink met bevestigde herkomst en hergebruikrechten."
+   ],
    "wishes": [
     "Geverifieerde gidsfoto van Keep bij de vergelijking."
    ],
@@ -2969,10 +3081,10 @@
     "visual": "VERIFIED",
     "rights": "VERIFIED",
     "knowledge": "VERIFIED",
-    "browser": "VERIFIED",
+    "browser": "NOT TESTED",
     "independent": "NOT TESTED"
    },
-   "photoComplete": true,
+   "photoComplete": false,
    "knowledge": {
     "profile": true,
     "critical": 1,
@@ -2983,30 +3095,45 @@
     "open": [],
     "discrepancies": 0
    },
-   "browser": {
-    "ok": true,
-    "viewport": "390x844 Chromium 145 (Playwright)",
-    "photos": 5,
-    "sections": [
-     "Hoofdfoto",
-     "Verenkleed",
-     "In vlucht"
-    ],
-    "flight": [
-     "/assets/species/plumage/sp035-flight.webp"
-    ],
-    "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels",
-    "lijktOp": "SAB-09 OK (390 px)",
-    "offline": {
-     "status": "VERIFIED",
-     "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
-    },
-    "testedOn": "181688362b2b385e47939e8761586d0288259ede",
-    "date": "2026-11-11"
-   },
+   "browser": null,
    "errors": [],
-   "verdict": "VERIFIED",
-   "next": "Onafhankelijke review (ChatGPT)"
+   "verdict": "PARTIALLY TESTED",
+   "next": "Onafhankelijke review; ontbrekende/zwakke foto-posities later gecontroleerd aanvullen",
+   "previousR08b": {
+    "verdict": "VERIFIED",
+    "photoComplete": true,
+    "status": {
+     "technical": "VERIFIED",
+     "visual": "VERIFIED",
+     "rights": "VERIFIED",
+     "knowledge": "VERIFIED",
+     "browser": "VERIFIED",
+     "independent": "NOT TESTED"
+    },
+    "browser": {
+     "ok": true,
+     "viewport": "390x844 Chromium 145 (Playwright)",
+     "photos": 5,
+     "sections": [
+      "Hoofdfoto",
+      "Verenkleed",
+      "In vlucht"
+     ],
+     "flight": [
+      "/assets/species/plumage/sp035-flight.webp"
+     ],
+     "checks": "Foto decode, exacte auditset, fotovolgorde, geen duplicaten, vluchtrol, zoom, doorklik en geslachts- en leeftijdslabels",
+     "lijktOp": "SAB-09 OK (390 px)",
+     "offline": {
+      "status": "VERIFIED",
+      "method": "Na precache herladen en de kaart heropend met HTTP-server uit. Alle eigen beelden gedecodeerd."
+     },
+     "testedOn": "181688362b2b385e47939e8761586d0288259ede",
+     "date": "2026-11-11"
+    },
+    "missing": [],
+    "next": "Onafhankelijke review (ChatGPT)"
+   }
   },
   {
    "id": "sp036",
@@ -13024,6 +13151,12 @@
    "scope": "F2 · sp063 sp066 sp067",
    "basis": "ff721fbddc37cd5e03fdfe9892716ffc37dddf98",
    "evidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_14.json"
+  },
+  {
+   "date": "2026-11-28",
+   "scope": "F3-REV2-R08b · sp033 sp034 sp035; historical role and old verdict preserved in previousR08b",
+   "basis": "0bd768d849c10cf8c2b42f52926abb77978caa14",
+   "evidence": "docs/fotokwaliteit/F3_REV2_R08_KUIFMEES_STAARTMEES_VINK_2026-11-28_DRAFT.md"
   }
  ]
 }

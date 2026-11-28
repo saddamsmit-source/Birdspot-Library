@@ -89,7 +89,8 @@
     "sp016",
     "sp017",
     "sp018",
-    "sp019"
+    "sp019",
+    "sp033"
   ],
   "policy": {
     "pairRequiredWhenSimilar": true,
@@ -5001,6 +5002,49 @@
       "sources": [
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-specht",
         "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/groene-specht"
+      ]
+    },
+    {
+      "id": "LK-112",
+      "focus": [
+        "sp033",
+        "sp032"
+      ],
+      "birds": [
+        "sp033",
+        "sp032"
+      ],
+      "risk": "Mezen in rust; bij platte kuif of beperkt zicht kan de koptekening helpen.",
+      "matchingPlumages": [
+        null,
+        null
+      ],
+      "photoState": "REGISTERED_PAIR_PENDING_F3_ORIGINAL",
+      "mediaOpen": [
+        "Bestaande lokale rustbeelden sp033.webp en sp032.webp op eerdere checkpoints visueel geopend; geen nieuwe fotobytes.",
+        "R08b: oorspronkelijke bronbestanden en onafhankelijke biologische review open; nieuwe browser-/creditproef open."
+      ],
+      "textState": "PARTIALLY TESTED",
+      "criticalMarks": [
+        {
+          "label": "Kruin",
+          "values": [
+            "Spitse zwart-wit getekende kuif",
+            "Egale donkere kap zonder spitse kuif"
+          ]
+        },
+        {
+          "label": "Wang",
+          "values": [
+            "Donkere boog achter de lichte wang",
+            "Lichte wang zonder die donkere boog"
+          ]
+        }
+      ],
+      "caution": "Bekijk de kuifveren en wangtekening samen bij goed zicht. De kuif kan worden plat gehouden; let ook op de koptekening.",
+      "sources": [
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifmees",
+        "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/glanskop"
       ]
     }
   ],

@@ -879,6 +879,18 @@ export const GUIDE_COMPARISONS = [
     tip: 'Bij een juveniele Kuifmees kan de kuif kort zijn. Bekijk de wangboog en kuifveren samen.',
   },
   {
+    label: 'Kuifmees en Glanskop · koptekening',
+    birds: [
+      {id: 'sp033', source: 'kuifmees', photo: '/assets/species/sp033.webp', marks: 'Spitse zwart-witte kuif en donkere wangboog.'},
+      {id: 'sp032', source: 'glanskop', photo: '/assets/species/sp032.webp', marks: 'Egale donkere kap en lichte wang, zonder spitse kuif.'},
+    ],
+    rows: [
+      {label: 'Kruin', values: ['Spitse zwart-wit getekende kuif', 'Egale donkere kap zonder spitse kuif']},
+      {label: 'Wang', values: ['Donkere boog achter de lichte wang', 'Lichte wang zonder die donkere boog']},
+    ],
+    tip: 'Bekijk de kuifveren en wangtekening samen bij goed zicht. De kuif kan worden plat gehouden; let ook op de koptekening.',
+  },
+  {
     "label": "Goudhaantje en Vuurgoudhaan · koptekening",
     "birds": [
       {

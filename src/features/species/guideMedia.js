@@ -1203,7 +1203,7 @@ export const GUIDE_AUDIO = Object.freeze({
       "reviewed": "2026-11-06",
       "taxon": "Aegithalos caudatus",
       "verification": "Opname XC114614 uit Cambridge. Soort en maker zijn beschreven; het precieze geluidstype is op Commons niet benoemd.",
-      "auditoryCheck": "Niet onafhankelijk auditief gedetermineerd; soort en zanglabel gecontroleerd in opnamebron. Technisch gedecodeerd met FFmpeg.",
+      "auditoryCheck": "Niet onafhankelijk auditief gedetermineerd. Het soortlabel is eerder geregistreerd; het precieze geluidstype (zang of roep) is niet bevestigd. Technische decodeercontrole volgens eerdere registratie.",
       "duration": 29.184,
       "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/30/Aegithalos_caudatus_-_Long-tailed_Tit_-_XC114614.ogg",
       "audio": "/assets/species/audio/sp034-sound.mp3"
@@ -6764,9 +6764,9 @@ export const GUIDE_POSES = Object.freeze({
       "note": "Kijk naar de spitse kuif en de gebogen zwarte lijn achter de wang. Vergroot de foto om de koptekening te bekijken."
     },
     {
-      "label": "Vleugels geheven op de sneeuw",
+      "label": "Vleugels geheven bij de sneeuw",
       "flight": false,
-      "note": "De vogel heeft de vleugels geheven. De kuif en wangtekening zijn zichtbaar.",
+      "note": "De kuif en donkere wangboog zijn zichtbaar. De precieze houding ten opzichte van de sneeuw is onzeker.",
       "file": "Haubenmeise Abflug.JPG",
       "nl": "Kuifmees",
       "latin": "Lophophanes cristatus",
@@ -6783,7 +6783,7 @@ export const GUIDE_POSES = Object.freeze({
       "width": 960,
       "height": 720,
       "image": "/assets/species/plumage/sp033-flight.webp",
-      "flightReview": "uit-rol 2026-11-10: Staat met de poten op de sneeuw met geheven vleugels."
+      "flightReview": "uit-rol 2026-11-28: Geheven vleugels bij sneeuw; de exacte positie van de poten en fase zijn niet overtuigend vast te stellen."
     }
   ],
   "sp116": [
@@ -7408,9 +7408,9 @@ export const GUIDE_POSES = Object.freeze({
   ],
   "sp035": [
     {
-      "label": "Mannetje in vlucht",
-      "flight": true,
-      "note": "De witte vleugeltekening en de rozerode borst vallen op.",
+      "label": "Mannetje met geheven vleugels",
+      "flight": false,
+      "note": "Rozerode borst en blauwgrijze kruin. De houding is zichtbaar, maar echte vrije vlucht is niet overtuigend vastgesteld.",
       "file": "Fringilla coelebs -Lochwinnoch, Renfrewshire, Scotland -flying-8.jpg",
       "nl": "Vink",
       "latin": "Fringilla coelebs",
@@ -7419,16 +7419,16 @@ export const GUIDE_POSES = Object.freeze({
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-Lochwinnoch,_Renfrewshire,_Scotland_-flying-8.jpg",
       "showSourceLink": false,
-      "alt": "Mannetje Vink in vlucht met een rozerode borst, blauwgrijze kruin en witte vlekken op de vleugel.",
+      "alt": "Mannetje Vink met geheven vleugels, uitgestoken poten, rozerode borst en blauwgrijze kruin.",
       "modifications": "Omgezet naar WebP zonder extra uitsnede",
       "reviewed": "2026-11-07",
       "verificationSource": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
-      "visualCheck": "Mannetje Vink in vlucht met een rozerode borst, blauwgrijze kruin en witte vlekken op de vleugel.",
+      "visualCheck": "Mannetje Vink met geheven vleugels, uitgestoken poten, rozerode borst en blauwgrijze kruin.",
       "width": 900,
       "height": 900,
       "image": "/assets/species/plumage/sp035-flight.webp",
       "sex": "male",
-      "flightReview": "goedgekeurd 2026-11-10: Vrij in de lucht, herkenbare vlieghouding, vleugels/staart/silhouet bruikbaar."
+      "flightReview": "uit-rol 2026-11-28: Vogel los van de ondergrond met geheven vleugels en uitgestoken poten; vrije vlucht versus afzetten of neerstrijken is niet overtuigend vastgesteld."
     },
     {
       "label": "Juveniel",

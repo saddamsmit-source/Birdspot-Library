@@ -82,3 +82,16 @@
 ## Bewijsgrens en volgende beslissing
 
 [Keep — Vogelbescherming](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/keep) eveneens gelezen voor de Vink-vergelijking. De oorspronkelijke individuele bestanden zijn deze ronde niet opnieuw met de appbytes vergeleken. Drie directe bronpagina's (XC114614/Commons-audio, Kuifmees-sneeuwfoto, Vink-vluchtfoto) gaven cache miss; oudere bronbewijzen blijven intact. ANWB, actuele Sovon-cijfers, menselijke luistercontrole, volledige bronrechtencontrole, werkelijke browser-/offline-/toestelproeven en onafhankelijke soortreview blijven open. Nieuwe CI op de exacte SHA moet nog worden gelezen. Geen automatische sluiting van de eigenaarspoort. A = verdiepen/zoeken; B = gerichte correcties uitvoeren; C = voorlopig verder met geregistreerde open punten. De Velduil-vervanging blijft buiten deze soortbatch BLOCKED. Geen merge of publicatie.
+
+
+## R08b — gerichte uitvoering 28 november 2026
+
+Eigenaar vroeg ‘Ga verder en zet live’ na advies B. R08-basis `0bd768d849c10cf8c2b42f52926abb77978caa14`: 5/5 CI geslaagd. R07c-basis `142634b2badec14cbf69fe9f57eb8fdc29e54bce`: 46/46 CI geslaagd; Aviandra 1.27.45 op 332b9dcf076b5c97140e37c2a95b8d47b161c2a1: 53/53 CI geslaagd. Dit zijn afzonderlijke SHA's.
+
+- sp033: Neutraal sneeuwlabel en beschrijving; fotobestand en overige-fotorol behouden. LK-112 Kuifmees/Glanskop met bestaande rustportretten en twee kopkenmerken toegevoegd; browser-/creditproef open.
+- sp034: In auditoryCheck staat nu expliciet dat het geluidstype (zang of roep) niet bevestigd is. Publiekslabel Geluidsvoorbeeld en bronregistratie behouden.
+- sp035: Mannetjesfoto met geheven vleugels uit vrije-vluchtrol gehaald en in Mannetje-galerij geplaatst. Geen fotobestand verwijderd; historische vluchtbeoordeling bewaard, actuele rol PARTIALLY TESTED.
+
+De eerdere vluchtbeoordelingen blijven in previousReview (vluchtcontrole); oude auditrol en Vink-VERIFIED blijven in previousR08b. De huidige Vink-fotoset is onvolledig en daarom PARTIALLY TESTED. De eerste F3-bewijspayload en eerdere 21 tweede-rondebesluiten zijn ongewijzigd. Geen nieuwe foto- of audiobestanden. Voor LK-112 de [Kuifmees](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifmees) en [Glanskop](https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/glanskop) herkenningspassages opnieuw gelezen. Beide bestaande portretten zijn eerder visueel geopend; bronbestand- en onafhankelijke biologische controle open. Geen nieuw zelfstandig rechtenbewijs.
+
+Stand: 24/140 herbeoordeeld, 24 besluiten, 0 volledige F3-PASS. Nieuwe CI en fysieke proeven nog niet bewezen. De opdracht tot livegang is vastgelegd, maar de gecombineerde kandidaat, exacte CI/preview, fysieke toestelroute en herstelbewijs ontbreken. Geen merge/deploy. Release HOLD.

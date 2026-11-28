@@ -29,7 +29,15 @@ for(let i=0;i<rows.length;i++){
  assert.equal(x.nameNL,s.nameNL,x.id+' wrong Dutch species name');
  assert.equal(x.seq,i+1);
  assert.equal(x.historic.audited,o.audited);
- assert.equal(x.historic.oldVerdict,o.verdict);
+ // R08b: the earlier M5 verdict stays historical when a current photo role is corrected.
+ if (x.id === 'sp035' && o.previousR08b) {
+  assert.equal(o.previousR08b.verdict,'VERIFIED');
+  assert.equal(o.previousR08b.photoComplete,true);
+  assert.equal(o.verdict,'PARTIALLY TESTED');
+  assert.equal(o.photoComplete,false);
+  assert.equal(o.assets.find(a=>a.image.endsWith('sp035-flight.webp')).previousR08b.role,'In vlucht (Mannetje)');
+  assert.equal(x.historic.oldVerdict,o.previousR08b.verdict);
+ } else assert.equal(x.historic.oldVerdict,o.verdict);
  assert.equal(x.historic.oldAssetCount,(o.assets||[]).filter(asset=>!asset.addedIn?.startsWith('F3-')).length);
  assert.equal(x.historic.oldF2Visited,f2Set.has(x.id),x.id+' previous F2 evidence drift');
  assert.equal(x.currentAssets.existingAudioCount,registered.length);

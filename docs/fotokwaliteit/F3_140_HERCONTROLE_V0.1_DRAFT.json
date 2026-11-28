@@ -7609,7 +7609,7 @@
           "date": "2026-11-28",
           "base": "142634b2badec14cbf69fe9f57eb8fdc29e54bce",
           "reviewer": "ChatGPT GPT-6.2",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R08_KUIFMEES_STAARTMEES_VINK_2026-11-28_DRAFT.md",
           "photos": [
             {
@@ -7691,7 +7691,8 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - herkenningsinformatie vergeleken met gelezen soortpagina en bestaande lokale beelden",
             "herkenning": "PARTIALLY TESTED - gerichte verbeterpunten ter beslissing",
-            "voorstel": "B — neutraliseer het sneeuwlabel naar ‘Vleugels geheven bij de sneeuw’, behoud overige-fotorol en voeg een gerichte wederkerige Glanskop-vergelijking toe als bestaande beelden passend blijken. Controleer zichtbare Viatour-credit; geen nieuwe media zonder bronbewijs."
+            "voorstel": "B — neutraliseer het sneeuwlabel naar ‘Vleugels geheven bij de sneeuw’, behoud overige-fotorol en voeg een gerichte wederkerige Glanskop-vergelijking toe als bestaande beelden passend blijken. Controleer zichtbare Viatour-credit; geen nieuwe media zonder bronbewijs.",
+            "uitvoeringR08b": "PARTIALLY TESTED - Neutraal sneeuwlabel en beschrijving; fotobestand en overige-fotorol behouden. LK-112 Kuifmees/Glanskop met bestaande rustportretten en twee kopkenmerken toegevoegd; browser-/creditproef open."
           },
           "lookalikes": [
             {
@@ -7735,11 +7736,20 @@
             "Originele fotobytes niet opnieuw gematcht; eerdere F2-evidence behouden. Commons-bestandspagina sneeuwbeeld: cache miss.",
             "Exacte positie van de poten bij sneeuw niet met zekerheid te bepalen; geen vrije vlucht.",
             "Afzonderlijke roep ontbreekt; originele zang niet gematcht of onafhankelijk beluisterd.",
-            "Directe Glanskop-vergelijking en zichtbare Viatour-credit nog niet interactief getoetst."
+            "LK-112 Kuifmees/Glanskop toegevoegd met bestaande foto's; nieuwe interactie-, originele bron- en zichtbare Viatour-creditcontrole open."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — gerichte correcties uitvoeren; geen vrijstelling van ontbrekende bron- en runtimebewijzen.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/386",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien.",
+              "Originele fotobytes niet opnieuw gematcht; eerdere F2-evidence behouden. Commons-bestandspagina sneeuwbeeld: cache miss.",
+              "Exacte positie van de poten bij sneeuw niet met zekerheid te bepalen; geen vrije vlucht.",
+              "Afzonderlijke roep ontbreekt; originele zang niet gematcht of onafhankelijk beluisterd.",
+              "LK-112 Kuifmees/Glanskop toegevoegd met bestaande foto's; nieuwe interactie-, originele bron- en zichtbare Viatour-creditcontrole open."
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -7838,7 +7848,7 @@
           "date": "2026-11-28",
           "base": "142634b2badec14cbf69fe9f57eb8fdc29e54bce",
           "reviewer": "ChatGPT GPT-6.2",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R08_KUIFMEES_STAARTMEES_VINK_2026-11-28_DRAFT.md",
           "photos": [
             {
@@ -7890,7 +7900,8 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - herkenningsinformatie vergeleken met gelezen soortpagina en bestaande lokale beelden",
             "herkenning": "PARTIALLY TESTED - gerichte verbeterpunten ter beslissing",
-            "voorstel": "B — corrigeer de interne audio-controlezin die ten onrechte een gecontroleerd zanglabel noemt. Behoud publiekslabel ‘Geluidsvoorbeeld’ zolang de individuele bron en het geluidstype niet zijn bevestigd. Geen nieuwe ondersoortclaim of onbewezen vluchtfoto."
+            "voorstel": "B — corrigeer de interne audio-controlezin die ten onrechte een gecontroleerd zanglabel noemt. Behoud publiekslabel ‘Geluidsvoorbeeld’ zolang de individuele bron en het geluidstype niet zijn bevestigd. Geen nieuwe ondersoortclaim of onbewezen vluchtfoto.",
+            "uitvoeringR08b": "PARTIALLY TESTED - In auditoryCheck staat nu expliciet dat het geluidstype (zang of roep) niet bevestigd is. Publiekslabel Geluidsvoorbeeld en bronregistratie behouden."
           },
           "lookalikes": [
             {
@@ -7927,12 +7938,21 @@
             "ANWB-soortpassage niet ingezien.",
             "Originele fotobytes niet opnieuw gematcht; eerdere F2-evidence behouden.",
             "Individuele XC114614- en Commons-opnamepagina niet bereikbaar (cache miss); originele opname niet gematcht of beluisterd.",
-            "Audio-interne auditoryCheck noemt ‘zanglabel’, terwijl geregistreerde bron het type niet vastlegt; niet als zang publiceren.",
+            "R08b: tegenstrijdige interne zangcontrolezin gecorrigeerd. Individuele opnamebron en geluidstype blijven open.",
             "Vluchtfoto voor West-Europese vorm en andere vergelijkingsroutes blijven open."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — gerichte correcties uitvoeren; geen vrijstelling van ontbrekende bron- en runtimebewijzen.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/386",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien.",
+              "Originele fotobytes niet opnieuw gematcht; eerdere F2-evidence behouden.",
+              "Individuele XC114614- en Commons-opnamepagina niet bereikbaar (cache miss); originele opname niet gematcht of beluisterd.",
+              "R08b: tegenstrijdige interne zangcontrolezin gecorrigeerd. Individuele opnamebron en geluidstype blijven open.",
+              "Vluchtfoto voor West-Europese vorm en andere vergelijkingsroutes blijven open."
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -7974,7 +7994,7 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "In vlucht (Mannetje)",
+            "role": "Verenkleed (Mannetje)",
             "path": "/assets/species/plumage/sp035-flight.webp",
             "oldRights": "VERIFIED"
           }
@@ -8056,7 +8076,7 @@
           "date": "2026-11-28",
           "base": "142634b2badec14cbf69fe9f57eb8fdc29e54bce",
           "reviewer": "ChatGPT GPT-6.2",
-          "status": "REVIEWED / OWNER GATE OPEN",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
           "dossier": "docs/fotokwaliteit/F3_REV2_R08_KUIFMEES_STAARTMEES_VINK_2026-11-28_DRAFT.md",
           "photos": [
             {
@@ -8120,7 +8140,7 @@
               "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json"
             },
             {
-              "role": "In vlucht (Mannetje)",
+              "role": "Verenkleed (Mannetje)",
               "path": "/assets/species/plumage/sp035-flight.webp",
               "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-Lochwinnoch,_Renfrewshire,_Scotland_-flying-8.jpg",
               "author": "Mark Medcalf",
@@ -8130,9 +8150,10 @@
               "sourceSha1": null,
               "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
               "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
-              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "roleCheck": "PARTIALLY TESTED - mannetjeskleed behouden; vrije vlucht niet bewezen en niet meer als vrije vlucht weergegeven.",
               "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
-              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json"
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+              "previousRoleR08b": "In vlucht (Mannetje)"
             }
           ],
           "sources": {
@@ -8155,7 +8176,8 @@
           "text": {
             "snelHerkennen": "PARTIALLY TESTED - herkenningsinformatie vergeleken met gelezen soortpagina en bestaande lokale beelden",
             "herkenning": "PARTIALLY TESTED - gerichte verbeterpunten ter beslissing",
-            "voorstel": "B — zet de bestaande foto met uitgestoken poten voorlopig in een neutrale overige-fotorol, of houd de huidige rol alleen na aanvullende broncontext voor echte vrije vlucht. Behoud alle rust- en kleedfoto's en de bronregistratie; geen nieuw beeld zonder verificatie."
+            "voorstel": "B — zet de bestaande foto met uitgestoken poten voorlopig in een neutrale overige-fotorol, of houd de huidige rol alleen na aanvullende broncontext voor echte vrije vlucht. Behoud alle rust- en kleedfoto's en de bronregistratie; geen nieuw beeld zonder verificatie.",
+            "uitvoeringR08b": "PARTIALLY TESTED - Mannetjesfoto met geheven vleugels uit vrije-vluchtrol gehaald en in Mannetje-galerij geplaatst. Geen fotobestand verwijderd; historische vluchtbeoordeling bewaard, actuele rol PARTIALLY TESTED."
           },
           "lookalikes": [
             {
@@ -8213,13 +8235,22 @@
           "materialGaps": [
             "ANWB-soortpassage niet ingezien.",
             "Originele fotobytes niet opnieuw gematcht; oudere 09-11-evidence behouden.",
-            "Vluchtbeeld toont uitgestoken poten; vrije vlucht niet overtuigend bewezen. Directe Commons-pagina cache miss.",
+            "R08b: bestaande foto met uitgestoken poten buiten vrije-vluchtrol geplaatst; passende echte vrije-vluchtfoto en aanvullende broncontext blijven open.",
             "Zang en roep geregistreerd maar oorspronkelijke audio niet gematcht of onafhankelijk beluisterd.",
             "Gelijkwaardig Vink/Keep-fotopaar en interactieve vergelijkingstests ontbreken."
           ],
           "ownerDecision": {
-            "status": "OPEN",
-            "decision": null
+            "status": "DECIDED",
+            "decision": "B — gerichte correcties uitvoeren; geen vrijstelling van ontbrekende bron- en runtimebewijzen.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/386",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien.",
+              "Originele fotobytes niet opnieuw gematcht; oudere 09-11-evidence behouden.",
+              "R08b: bestaande foto met uitgestoken poten buiten vrije-vluchtrol geplaatst; passende echte vrije-vluchtfoto en aanvullende broncontext blijven open.",
+              "Zang en roep geregistreerd maar oorspronkelijke audio niet gematcht of onafhankelijk beluisterd.",
+              "Gelijkwaardig Vink/Keep-fotopaar en interactieve vergelijkingstests ontbreken."
+            ]
           },
           "fullPass": false,
           "closed": false
@@ -19883,7 +19914,7 @@
           "sp034",
           "sp035"
         ],
-        "status": "REVIEWED / OWNER GATE OPEN",
+        "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
         "date": "2026-11-28",
         "baseSHA": "142634b2badec14cbf69fe9f57eb8fdc29e54bce",
         "ownerStart": "28-11-2026: eigenaar vroeg verder na voorstel C voor R07",
@@ -19894,8 +19925,8 @@
     "counts": {
       "total": 140,
       "reexamined": 24,
-      "ownerGateOpen": 3,
-      "ownerDecisions": 21,
+      "ownerGateOpen": 0,
+      "ownerDecisions": 24,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -19966,6 +19997,12 @@
         "batch": "F3-REV2-R07",
         "decision": "C voor Pimpelmees, Matkop en Glanskop. Eigenaar reageerde ‘Ga verder’ direct op het expliciete advies om de resterende bewijsproblemen open te registreren en de volgende drie soorten te controleren.",
         "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384"
+      },
+      {
+        "date": "2026-11-28",
+        "batch": "F3-REV2-R08",
+        "decision": "B voor Kuifmees, Staartmees, Vink: eigenaar vroeg ‘Ga verder en zet live’ direct na advies B. Releaseautorisatie ontvangen, pre-releasegates niet opgeheven.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/386"
       }
     ]
   }
