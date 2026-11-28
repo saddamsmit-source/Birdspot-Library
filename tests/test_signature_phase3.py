@@ -23,8 +23,17 @@ def shot(page,name):
 
 def use_theme(page, theme):
     page.emulate_media(color_scheme=theme, reduced_motion="reduce")
-    # Chromium applies the control background on the next paint after changing the scheme.
-    page.evaluate("() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))")
+    # Chromium can keep the previous native-control background for a few frames.
+    page.wait_for_function("""() => {
+        const input = document.querySelector('#journalSearch');
+        const surface = input || document.querySelector('.phase3-month-panel');
+        const probe = document.createElement('span');
+        probe.style.color = input ? 'var(--bg)' : 'var(--surface)';
+        document.body.append(probe);
+        const painted = getComputedStyle(surface).backgroundColor === getComputedStyle(probe).color;
+        probe.remove();
+        return painted;
+    }""")
 
 def contrast(page, text, surface, pseudo=None):
     return page.evaluate(r"""([text, surface, pseudo]) => {
