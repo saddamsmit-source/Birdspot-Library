@@ -13,7 +13,6 @@ import { appIcon, observationIcon } from '../../utils/icons.js';
 import { getSightings }    from '../../data/sightings.js';
 import { SPECIES }         from '../../data/species.js';
 import { SEASONS, SIGHTING_PERIODS } from '../../data/seasons.js';
-import { openDetailSheet } from '../sightings/detailSheet.js';
 import { openAddSheet } from '../sightings/addSheet.js';
 import { openPinPicker } from '../sightings/pinPicker.js';
 import { methodLabel, verificationStatus, validPin } from '../sightings/evidence.js';
@@ -310,7 +309,7 @@ export function getMapView(screen) {
   };
 }
 
-function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section, placeMediaId, mapView, year }) {
+function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section, placeMediaId, mapView, year, speciesSearch: targetSearch, linkedDetail, onSearchSelect, rememberTarget }) {
   const mapEl = screenEl.querySelector('#leafletMap');
   if (!mapEl) return;
 
@@ -328,7 +327,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   const countEl = screenEl.querySelector('#mapCount');
   const seasonButtons = screenEl.querySelectorAll('[data-season], [data-season-filter]');
   const seasonKey = button => button.dataset.season || button.dataset.seasonFilter;
-  const filterState = {speciesSearch: mapView?.search || '', status: mapView?.status || 'all', legend:null,seasons:new Set(),notableOnly:false,period:mapView?.period||year||'all',clouds:true};
+  const filterState = {speciesSearch: mapView?.search ?? targetSearch ?? '', status: mapView?.status || 'all', legend:null,seasons:new Set(),notableOnly:false,period:mapView?.period||year||'all',clouds:true};
   screenEl.querySelector('#mapPeriodSelect').value=filterState.period;
   speciesSearch.value = filterState.speciesSearch;
   const speciesById=new Map(SPECIES.map(x=>[x.id,x]));
@@ -452,9 +451,11 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   let restoringView = Boolean(mapView);
   // K5: bij zoeken komen alle plekken met die vogel (of met die naam) naar voren
   const resultsEl=screenEl.querySelector('#mapSearchResults');
-  const focusPlace=(place,records,mediaId)=>{
+  const sheetActions = { onSearchSelect, rememberTarget };
+  const linkedSheetActions = { ...sheetActions, linkedDetail };
+  const focusPlace=(place,records,mediaId,options=sheetActions)=>{
     map?.setView([Number(place.lat),Number(place.lon)],Math.max(map.getZoom(),16));
-    openPlaceSheet(screenEl,place,records,map,mediaId);
+    openPlaceSheet(screenEl,place,records,map,mediaId,options);
   };
   showSearchResults=(matches)=>{
     if(!filterState.speciesSearch){resultsEl.hidden=true;resultsEl.innerHTML='';return;}
@@ -510,7 +511,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
         onSaved:()=>import('../../app.js').then(({navigate})=>navigate('map',{force:true}))})});
     });
     applyFilters();
-    if (selectedPlace) openPlaceSheet(screenEl, selectedPlace.place, selectedPlace.records, null, placeMediaId);
+    if (selectedPlace) openPlaceSheet(screenEl, selectedPlace.place, selectedPlace.records, null, placeMediaId, linkedSheetActions);
     return;
   }
 
@@ -561,7 +562,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
       autoPanOnFocus: false,
     });
     marker.birdspotRecords=records;marker.birdspotRecord=records[0];marker.birdspotPlace=place;
-    marker.on('click',()=>openPlaceSheet(screenEl,place,records,map,undefined,marker.getElement?.()));
+    marker.on('click',()=>openPlaceSheet(screenEl,place,records,map,undefined,{...sheetActions,trigger:marker.getElement?.()}));
     return marker;
   }
 
@@ -592,7 +593,7 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
   restoringView = false;
 
   // K5: van een soort of lijst direct naar een plek
-  if (selectedPlace) focusPlace(selectedPlace.place, selectedPlace.records, placeMediaId);
+  if (selectedPlace) focusPlace(selectedPlace.place, selectedPlace.records, placeMediaId, linkedSheetActions);
   else try{
     const wanted=sessionStorage.getItem('birdspot-map-place');
     if(wanted){
@@ -649,12 +650,13 @@ function initMap(screenEl, sightings, leafletOk, { placeId, sightingId, section,
 
 // ── K4: plekkaartje ───────────────────────────────────────────
 const MEDIA_ACCEPT='image/*,video/*,audio/*';
-function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger = document.activeElement) {
+function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, { trigger = document.activeElement, linkedDetail = false, onSearchSelect, rememberTarget }) {
   const sheet    = screenEl.querySelector('#mapDetailSheet');
   const overlay  = screenEl.querySelector('#mapOverlay');
   const closeBtn = screenEl.querySelector('#mapSheetClose');
   const body     = screenEl.querySelector('#mapSheetBody');
   closeBtn.onclick?.();
+  sheet.toggleAttribute('data-route-detail', Boolean(linkedDetail));
   let closed = false;
   let closePhoto;
   const urls=[];
@@ -714,17 +716,16 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
         '</div>'+
         '<h4 class="place-h">Media bij deze plek</h4><div class="place-media" id="placeMedia"><p class="place-empty">Nog geen foto\'s, video\'s of geluid.</p></div>');
 
-    body.querySelectorAll('[data-species]').forEach(btn=>btn.addEventListener('click',()=>{
-      if(!btn.dataset.species)return;
-      try{sessionStorage.setItem('birdspot-open-species',btn.dataset.species);}catch(_){}
+    const leaveFor = target => {
       closeSheet();
-      import('../../app.js').then(({navigate})=>navigate('species'));
+      rememberTarget?.({ placeId: place.id, sightingId: null, placeMediaId: null, linkedDetail });
+      onSearchSelect?.(target);
+    };
+    body.querySelectorAll('[data-species]').forEach(btn=>btn.addEventListener('click',()=>{
+      if (btn.dataset.species) leaveFor({ route: 'species', speciesId: btn.dataset.species });
     }));
     body.querySelectorAll('[data-sighting]').forEach(btn=>btn.addEventListener('click',()=>{
-      const s=rows.find(x=>x.id===btn.dataset.sighting);
-      if(!s)return;
-      closeSheet();
-      openDetailSheet(s,{onDeleted:reload,onUpdated:reload});
+      leaveFor({ route: 'sightings', sightingId: btn.dataset.sighting });
     }));
     if(place.loose)return;
     body.querySelector('#placeAddSighting').addEventListener('click',()=>{
@@ -968,6 +969,8 @@ function openPlaceSheet(screenEl, place, visibleRecords, map, mediaId, trigger =
     closePhoto?.(false);
     sheet.inert = true;
     sheet.classList.remove('open');
+    sheet.removeAttribute('data-route-detail');
+    rememberTarget?.({ placeId: null, sightingId: null, placeMediaId: null, linkedDetail: false });
     overlay.classList.remove('visible');
     urls.splice(0).forEach(u=>URL.revokeObjectURL(u));
     envUrls.splice(0).forEach(u=>URL.revokeObjectURL(u));

@@ -40,6 +40,24 @@ button {
 }
 #app[data-starting] { background: #0c2820; }
 #app[data-starting] #app-nav { visibility: hidden; }
+.app-backbar:not([hidden]) {
+  flex:none;
+  display:flex;
+  padding:env(safe-area-inset-top,0px) 12px 0;
+  background:var(--brand);
+  color:var(--focus-light);
+}
+.app-backbar button {
+  display:inline-flex;align-items:center;gap:7px;
+  min-width:44px;min-height:44px;padding:0 10px;
+  color:inherit;font-weight:750;font-size:.875rem;
+}
+.app-backbar button span {color:var(--selected-gold);font-size:1.45rem;line-height:1;}
+.app-backbar button:focus-visible {outline:2px solid var(--selected-gold);outline-offset:-3px;}
+.app-backbar:not([hidden]) + #main-view {padding-top:0;}
+.app-backbar:not([hidden]) + #main-view .map-screen {
+  height:calc(100dvh - var(--nav-h) - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 44px);
+}
 
 /* ── Safe-area top band (under status bar) ────────────── */
 body::before {

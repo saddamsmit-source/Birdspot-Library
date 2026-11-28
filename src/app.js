@@ -46,9 +46,16 @@ const ROUTES = {
 
 let currentRoute  = null;
 let currentEntry;
+let currentDepth = 0;
 let currentTarget = {};
 const routeViews = new Map();
 let currentCleanup = null; // cleanup-functie van het huidige scherm (bijv. renderHome)
+const refreshTargets = {
+  species: ['speciesId'],
+  sightings: ['sightingId', 'speciesId'],
+  map: ['placeId', 'sightingId', 'placeMediaId'],
+  media: ['mediaId'],
+};
 
 // ── Navigeer naar een route (force=true herlaadt ook het huidige scherm) ──────
 export function navigate(route, { force = false, history: addHistory = true, target } = {}) {
@@ -64,10 +71,18 @@ export function navigate(route, { force = false, history: addHistory = true, tar
       insightAction: previousRoute === 'insights' ? document.activeElement?.dataset.insightsAction : undefined,
     });
   }
+  // Een hertekening na bewerken leest de lijstfilters opnieuw en opent geen oude detailvensters.
+  if (previousRoute===route && addHistory && force && !direct && refreshTargets[route]) {
+    target={...currentTarget};
+    for (const key of [...refreshTargets[route], 'linkedDetail', 'section']) delete target[key];
+    recordRoute(route,true,currentEntry,target,currentDepth);
+  }
   if (addHistory && previousRoute && (route !== previousRoute || direct)) recordRoute(route, false, undefined, target);
   currentEntry = history.state?.birdspotEntry;
+  currentDepth = history.state?.birdspotDepth ?? 0;
   currentTarget = target ?? history.state?.birdspotTarget ?? {};
   target = currentTarget;
+  document.getElementById('appBackBar').hidden = currentDepth<=0 || route==='home';
   const saved = routeViews.get(currentEntry);
   if (saved?.mapView && route === 'map' && !direct) target = { ...target, mapView: saved.mapView };
   currentRoute = route;
@@ -87,8 +102,9 @@ export function navigate(route, { force = false, history: addHistory = true, tar
   screen.id = `screen-${route}`;
   main.appendChild(screen);
   let result;
+  const screenEntry = currentEntry;
   const rememberTarget = next => {
-    if (!screen.isConnected || history.state?.birdspotEntry !== currentEntry) return;
+    if (!screen.isConnected || currentEntry !== screenEntry || history.state?.birdspotEntry !== screenEntry) return;
     currentTarget = { ...currentTarget, ...next };
     recordRoute(route, true, currentEntry, currentTarget);
   };
@@ -114,7 +130,7 @@ export function navigate(route, { force = false, history: addHistory = true, tar
   if (fab) fab.hidden = !ROUTES[route].fab;
 
   // Scroll naar top
-  const restoreTop = direct || route === 'species' ? 0 : saved?.scrollTop || 0;
+  const restoreTop = direct ? 0 : saved?.scrollTop || 0;
   const ready = result?.ready ?? result;
   main.scrollTo({ top: restoreTop, behavior: 'instant' });
   // UX-02B: schermen die asynchroon opbouwen (Mijn waarnemingen) krijgen de bewaarde scrollpositie
@@ -152,10 +168,14 @@ function selectSearchResult({ route, ...target }) {
     openObservationForm();
     return;
   }
-  navigate(route, { force: Object.keys(target).some(key => target[key] !== undefined), target });
+  const scope=Object.fromEntries(Object.entries(target).filter(([,value])=>value!==undefined&&value!==null));
+  if ((route==='species'&&scope.speciesId)||(route==='sightings'&&scope.sightingId)||
+      (route==='map'&&(scope.placeId||scope.sightingId||scope.placeMediaId))) scope.linkedDetail=true;
+  navigate(route, { target: scope });
 }
 
 // ── Navigatie-klikken ─────────────────────────────────────
+document.getElementById('appBack').addEventListener('click', () => history.back());
 document.getElementById('app-nav').addEventListener('click', e => {
   const btn = e.target.closest('.nav-item');
   if (!btn) return;
@@ -218,7 +238,7 @@ export function showToast(msg, opt, maybeDuration) {
 window.__birdspot = Object.assign(window.__birdspot || {}, { toast: showToast });
 
 // ── Start ─────────────────────────────────────────────────
-const initialRoute = installNavigation({navigate,current:()=>currentRoute,currentEntry:()=>currentEntry,currentTarget:()=>currentTarget,toast:showToast});
+const initialRoute = installNavigation({navigate,current:()=>currentRoute,currentEntry:()=>currentEntry,currentTarget:()=>currentTarget,currentDepth:()=>currentDepth,toast:showToast});
 // Ronde 2B-afronding: plekken uit IndexedDB laden (en migreren) vóór de eerste weergave.
 // Hangt de database (bijv. een oudere versie in een ander tabblad blokkeert de upgrade), dan na
 // 1,5 s toch starten; schrijven wacht dan op IndexedDB en verliest niets.

@@ -509,6 +509,7 @@
   min-height: 44px;
 }
 
+.chart-counts button { min-height:44px; padding-inline:3px; text-align:start; text-decoration:underline; color:var(--gold-ink); }
 .chart-counts table {
   width: 100%;
   border-collapse: collapse;

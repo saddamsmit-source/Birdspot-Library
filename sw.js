@@ -12,7 +12,7 @@
  *   birdspot-media           — foto's/IDB-exports (permanent)
  */
 
-const APP_VERSION = '1.27.54';
+const APP_VERSION = '1.27.55';
 const APP_CACHE   = `birdspot-app-v${APP_VERSION}`;
 const MEDIA_CACHE = 'birdspot-media';
 
@@ -32,10 +32,10 @@ const PRECACHE_PATHS = [
   '',
   'index.html',
   'manifest.webmanifest',
-  'icons/icon-192.png',
-  'icons/icon-512.png',
-  'icons/icon-512-maskable.png',
-  'icons/aviandra-mark.svg',
+  'icons/aviandra-gold-192.png',
+  'icons/aviandra-gold-512.png',
+  'icons/aviandra-gold-maskable.png',
+  'icons/aviandra-gold-mark.svg',
   'assets/species/field-guide-media.json',
   'assets/species/credits.json',
   'assets/showcase/credits.json',

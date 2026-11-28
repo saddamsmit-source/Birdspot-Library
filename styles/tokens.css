@@ -25,6 +25,7 @@
   --surface-2:    #EEECE0;
   --line:         #AEBDB1;
   --on-brand:     #FFFFFF;
+  --insights-action-surface: #EEE7D8;
 
   /* ── Tekst ────────────────────────────────────────── */
   --ink:          #172820;
@@ -108,6 +109,7 @@
     --bg:        #0C1E13;
     --surface:   #1A2821;
     --surface-2: #25362E;
+    --insights-action-surface: #33372E;
     --line:      #496558;
     --ink:       #FAF4E7;
     --ink-2:     #D1E0D4;
@@ -135,6 +137,7 @@
   --bg:        #0C1E13;
   --surface:   #1A2821;
   --surface-2: #25362E;
+  --insights-action-surface: #33372E;
   --line:      #496558;
   --ink:       #FAF4E7;
   --ink-2:     #D1E0D4;

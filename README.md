@@ -5,6 +5,10 @@ Handbook. Kickoff-baseline per App Kickoff Gate (Handbook §1.3); vastgelegd
 retroactief, na reeds afgeronde en nog openstaande featurewerk, zodat de
 baseline alsnog klopt met de werkelijke stand van de app.
 
+## Aviandra 1.27.55 · opstarten en terugnavigeren (28 november 2026)
+
+De online intro toont de video vanaf het eerste afspeelbare beeld. Bij uitval of verminderde beweging verschijnt de stilstaande versie. Het goedgekeurde logo heeft nieuwe bestandsadressen voor de geïnstalleerde app. Gelinkte schermen hebben een terugknop. De app herstelt onder meer de plek, het soorttabblad en de Dagboekselectie waar je vandaan kwam. Maanden op Home en jaarlijsten in Profiel zijn aanklikbaar. [Concept-PR #396](https://github.com/saddamsmit-source/Birdspot-Library/pull/396).
+
 ## Aviandra 1.27.54 · doorklikken vanuit Inzichten (28 november 2026)
 
 Jaarcijfers, waarnemingswijzen, veldcijfers, leefgebieden en mijlpalen leiden naar het Dagboek, de soortgids, de kaart of de betreffende waarneming. Het Dagboek kan per dag of maand groeperen en laat actieve filters zien. De webintro gaat direct naar de ijsvogel. Het goudkleurige en smaragdgroene beeldmerk zit ook in de installatie-iconen. [Concept-PR #395](https://github.com/saddamsmit-source/Birdspot-Library/pull/395).

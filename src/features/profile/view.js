@@ -34,7 +34,7 @@ const dayLabel = d => {
   return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])).toLocaleDateString('nl-NL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }) : '';
 };
 
-export async function renderProfile(el) {
+export async function renderProfile(el, { onSearchSelect, rememberTarget, allSpeciesOpen } = {}) {
   const sightings   = (await getSightings()).filter(Boolean);
   const backupStatus = getBackupStatus();
   const safetyCopy  = hasSafetyCopy();
@@ -186,7 +186,7 @@ export async function renderProfile(el) {
     </div>
   `;
 
-  attachEvents(el, sightings, places, lists);
+  attachEvents(el, sightings, places, lists, { onSearchSelect, rememberTarget, allSpeciesOpen });
 
   // Versie ophalen bij de service worker (enige versiebron, L-027)
   const versionEl = el.querySelector('#appVersion');
@@ -212,7 +212,7 @@ export async function renderProfile(el) {
 
 // ── Event handlers ─────────────────────────────────────────────────────────
 
-function attachEvents(el, sightings = [], places = [], lists = null) {
+function attachEvents(el, sightings, places, lists, { onSearchSelect, rememberTarget, allSpeciesOpen }) {
   // Export
   el.querySelector('#btnExport').addEventListener('click', () => handleExport(el));
 
@@ -257,7 +257,7 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
   }));
 
   el.querySelector('[data-insights]')?.addEventListener('click', () =>
-    import('../../app.js').then(({ navigate }) => navigate('insights')));
+    onSearchSelect?.({ route: 'insights' }));
 
   el.querySelectorAll('[data-profile-jump]').forEach(btn => btn.addEventListener('click', () => {
     const target = el.querySelector('#' + btn.dataset.profileJump);
@@ -269,23 +269,25 @@ function attachEvents(el, sightings = [], places = [], lists = null) {
 
   // UX-02C: duidelijke ingang naar Mijn waarnemingen
   el.querySelector('#profileOpenSightings')?.addEventListener('click', () =>
-    import('../../app.js').then(({ navigate }) => navigate('sightings')));
+    onSearchSelect?.({ route: 'sightings' }));
 
   // K7: van lijst naar soort of plek
   el.addEventListener('click', e => {
     const sp = e.target.closest('[data-open-species]');
     const pl = e.target.closest('[data-open-place]');
-    if (!sp && !pl) return;
-    try {
-      if (sp) sessionStorage.setItem('birdspot-open-species', sp.dataset.openSpecies);
-      if (pl) sessionStorage.setItem('birdspot-map-place', pl.dataset.openPlace);
-    } catch (_) { /* zonder sessionStorage opent alleen het scherm */ }
-    import('../../app.js').then(({ navigate }) => navigate(sp ? 'species' : 'map', { force: true }));
+    const year = e.target.closest('[data-open-year]');
+    const allSpecies = e.target.closest('[data-profile-all-species]');
+    if (sp) onSearchSelect?.({ route: 'species', speciesId: sp.dataset.openSpecies });
+    else if (pl) onSearchSelect?.({ route: 'map', placeId: pl.dataset.openPlace });
+    else if (year) onSearchSelect?.({ route: 'species', listYear: Number(year.dataset.openYear) });
+    else if (allSpecies) onSearchSelect?.({ route: 'species', listAll: true });
   });
 
   // K7: volledige soortenlijst pas opbouwen bij openen (L-053)
   const all = el.querySelector('#profileAllSpecies');
+  if (all) all.open = Boolean(allSpeciesOpen);
   all?.addEventListener('toggle', () => {
+    rememberTarget?.({ allSpeciesOpen: all.open });
     if (!all.open || all.dataset.built) return;
     all.dataset.built = '1';
     all.querySelector('.profile-list').innerHTML = speciesRowsGrouped(lists?.list || [], SPECIES_BY_ID);
@@ -511,8 +513,8 @@ function renderLists(l) {
   return `<section class="profile-section" aria-labelledby="listsHeading">
     <h2 class="profile-section__title" id="listsHeading">Mijn lijsten</h2>
     <div class="profile-stats profile-stats--lists">
-      ${tile(l.list.length, l.list.length === 1 ? 'soort op je lijst' : 'soorten op je lijst')}
-      ${l.yearSpecies ? tile(l.yearSpecies, `jaarlijst ${l.year}`) : ''}
+      <button type="button" class="profile-stat profile-stat--link" data-profile-all-species><strong>${l.list.length}</strong><span>${l.list.length === 1 ? 'soort op je lijst' : 'soorten op je lijst'}</span></button>
+      ${l.yearSpecies ? `<button type="button" class="profile-stat profile-stat--link" data-open-year="${l.year}"><strong>${l.yearSpecies}</strong><span>jaarlijst ${l.year}</span></button>` : ''}
       ${l.newThisYear.length ? tile(l.newThisYear.length, `nieuw in ${l.year}`) : ''}
     </div>
     ${newRows.length ? `<h3 class="profile-subtitle">Nieuwe soorten in ${l.year}</h3>
@@ -526,7 +528,7 @@ function renderLists(l) {
       }).join('')}</ol>` : ''}
     ${l.years.length > 1 ? `<h3 class="profile-subtitle">Jaarlijsten</h3>
       <table class="profile-years"><thead><tr><th scope="col">Jaar</th><th scope="col">Soorten</th></tr></thead>
-        <tbody>${l.years.map(y => `<tr><td>${y.year}</td><td>${y.species}</td></tr>`).join('')}</tbody></table>` : ''}
+        <tbody>${l.years.map(y => `<tr><td><button class="profile-year-link" type="button" data-open-year="${y.year}" aria-label="Open jaarlijst ${y.year}">${y.year} <span aria-hidden="true">›</span></button></td><td>${y.species}</td></tr>`).join('')}</tbody></table>` : ''}
     <details class="profile-all" id="profileAllSpecies">
       <summary>Alle soorten <span>(${l.list.length})</span></summary>
       <ul class="profile-list"></ul>

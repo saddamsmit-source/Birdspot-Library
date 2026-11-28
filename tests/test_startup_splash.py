@@ -149,6 +149,8 @@ def main():
             assert skip.evaluate("el => document.activeElement === el && document.getElementById('app').inert")
             assert animated.locator('#boot-screen').count() == 0
             assert not animated.locator('#app-nav').is_visible()
+            for selector in ('.birdspot-splash__art', '.birdspot-splash__wordmark', '.birdspot-splash__fallback'):
+                assert not animated.locator('#birdspotSplash ' + selector).is_visible(), selector
             skip.press('Escape')
             animated.locator('#birdspotSplash').wait_for(state='detached', timeout=1500)
             assert animated.locator('#screen-home').count()==0

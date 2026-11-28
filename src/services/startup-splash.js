@@ -20,7 +20,6 @@
 
   function showStillFallback() {
     splash.classList.add('image-unavailable');
-    splash.querySelector('.birdspot-splash__fallback').hidden = false;
   }
 
   if (image.complete && !image.naturalWidth) showStillFallback();
@@ -47,6 +46,7 @@
         target.focus({ preventScroll: true });
       }
       splash.classList.remove('is-video-playing');
+      splash.classList.remove('is-still');
       if (video.hasAttribute('src')) {
         video.pause();
         video.removeAttribute('src');
@@ -61,8 +61,9 @@
       if (signal.aborted) return;
       video.removeEventListener('timeupdate', showVideo);
       splash.classList.remove('is-video-playing');
+      splash.classList.add('is-still');
       clearTimeout(deadline);
-      deadline = setTimeout(finish, Math.max(0, STILL_MS - (performance.now() - startedAt)));
+      deadline = setTimeout(finish, STILL_MS);
     }
 
     function showVideo() {
@@ -85,11 +86,11 @@
     window.addEventListener('offline', finish, { signal });
 
     if (reducedMotion.matches) {
-      deadline = setTimeout(finish, STILL_MS);
+      useStill();
       return;
     }
 
-    deadline = setTimeout(finish, FIRST_FRAME_MS);
+    deadline = setTimeout(useStill, FIRST_FRAME_MS);
     video.addEventListener('timeupdate', showVideo, { signal });
     video.addEventListener('ended', finish, { signal });
     video.addEventListener('error', useStill, { signal });

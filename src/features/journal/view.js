@@ -27,10 +27,10 @@ const fmtShort=value=>{
 };
 
 export function renderJournal(el, {
-  year: initialYear, month, date, method, habitat, speciesId, filter, group, onSearchSelect, rememberTarget,
+  year: initialYear, month, date, method, habitat, speciesId, filter, group, search: initialSearch = '', order: initialOrder, journalSightingId, onSearchSelect, rememberTarget,
 } = {}) {
   let destroyed=false;
-  let items=[],year=Number.isInteger(initialYear)?String(initialYear):'all',search='',order='newest',visible=18,generation=0;
+  let items=[],year=Number.isInteger(initialYear)?String(initialYear):'all',search=initialSearch,order=initialOrder==='oldest'?'oldest':'newest',visible=18,generation=0;
   let selectedMonth=Number.isInteger(month)&&month>=1&&month<=12?month:null, selectedDay=validDay(date);
   let selectedMethod=Object.hasOwn(OBSERVATION_BREAKDOWN,method)?method:null;
   let selectedHabitat=typeof habitat==='string'&&habitat?habitat:null;
@@ -83,6 +83,8 @@ export function renderJournal(el, {
   const more=el.querySelector('#journalMore');
   const selection=el.querySelector('#journalSelection');
   groupSelect.value=groupBy;
+  el.querySelector('#journalSearch').value=search;
+  el.querySelector('#journalSort').value=order;
 
   function clearDate() {
     selectedMonth=null;
@@ -91,7 +93,7 @@ export function renderJournal(el, {
 
   function rememberSelection() {
     rememberTarget?.({year:year==='all'?null:Number(year),month:selectedMonth,date:selectedDay,
-      method:selectedMethod,habitat:selectedHabitat,speciesId:selectedSpecies,filter:selectedFilter,group:groupBy});
+      method:selectedMethod,habitat:selectedHabitat,speciesId:selectedSpecies,filter:selectedFilter,group:groupBy,search,order});
   }
 
   function releaseUrls() {
@@ -107,9 +109,10 @@ export function renderJournal(el, {
         (!selectedMethod||observationMethodKey(s)===selectedMethod)&&(!selectedHabitat||habitatLabel(s)===selectedHabitat)&&
         (!selectedSpecies||s.speciesId===selectedSpecies)&&(!selectedFilter||FIELD_FILTERS[selectedFilter].matches(s));
     });
-    if(search) result=result.filter(s=>
+    const query=search.trim().toLocaleLowerCase('nl');
+    if(query) result=result.filter(s=>
       [s.speciesName,s.locationName,s.notes,s.habitat].map(v=>String(v||''))
-        .join(' ').toLocaleLowerCase('nl').includes(search));
+        .join(' ').toLocaleLowerCase('nl').includes(query));
     return [...result].sort((a,b)=>{
       const cmp=(validDay(a.date)||'').localeCompare(validDay(b.date)||'');
       if(cmp) return order==='newest'?-cmp:cmp;
@@ -238,12 +241,12 @@ export function renderJournal(el, {
   }
 
   const onInput=e=>{
-    if(e.target.id==='journalSearch'){search=e.target.value.trim().toLocaleLowerCase('nl');visible=BATCH;draw();}
+    if(e.target.id==='journalSearch'){search=e.target.value;rememberSelection();visible=BATCH;draw();}
   };
   const onChange=e=>{
     if(e.target.id==='journalYear'){year=e.target.value;clearDate();rememberSelection();visible=BATCH;draw();}
     else if(e.target.id==='journalGrouping'){groupBy=e.target.value;rememberSelection();visible=BATCH;draw();}
-    else if(e.target.id==='journalSort'){order=e.target.value;visible=BATCH;draw();}
+    else if(e.target.id==='journalSort'){order=e.target.value;rememberSelection();visible=BATCH;draw();}
   };
   const onClick=e=>{
     if(e.target.closest('#journalToInsights')){
@@ -258,12 +261,21 @@ export function renderJournal(el, {
     const target=e.target.closest('[data-journal-id]');
     if(!target)return;
     const record=items.find(s=>s.id===target.dataset.journalId);
-    if(!record)return;
-    openDetailSheet(record,{
+    if(record) openSighting(record);
+  };
+
+  function openSighting(record) {
+    return openDetailSheet(record,{
+      isActive:()=>!destroyed,
+      onClose:()=>rememberTarget?.({journalSightingId:null}),
+      onNavigate:target=>{
+        rememberTarget?.({journalSightingId:record.id});
+        onSearchSelect?.(target);
+      },
       onUpdated:()=>import('../../app.js').then(({navigate})=>navigate('journal',{force:true})),
       onDeleted:()=>import('../../app.js').then(({navigate})=>navigate('journal',{force:true})),
     });
-  };
+  }
   el.addEventListener('input',onInput);
   el.addEventListener('change',onChange);
   el.addEventListener('click',onClick);
@@ -282,6 +294,8 @@ export function renderJournal(el, {
       }
       yearSelect.value=year;
       draw();
+      const selected=journalSightingId && items.find(item=>item?.id===journalSightingId);
+      if(selected) await openSighting(selected);
     }catch(_){
       if(!destroyed)timeline.innerHTML='<div class="signature-empty">Dagboek niet beschikbaar. Je waarnemingen zijn niet gewijzigd.</div>';
     }

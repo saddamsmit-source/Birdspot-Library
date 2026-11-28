@@ -13,7 +13,7 @@
   isolation:isolate;
 }
 .birdspot-splash[hidden] {display:none;}
-.birdspot-splash::before {
+.birdspot-splash.is-still:not(.image-unavailable)::before {
   content:"";position:absolute;inset:-28px;
   background:url("../assets/birdspot-ijsvogel-splash.avif") center center / cover no-repeat;
   filter:blur(24px) brightness(.52);transform:scale(1.08);
@@ -43,7 +43,6 @@
 .birdspot-splash.is-video-playing .birdspot-splash__video {
   opacity:1;
 }
-.birdspot-splash.is-video-playing .birdspot-splash__art {opacity:0;}
 .birdspot-splash__art {
   position:relative;z-index:1;
   display:block;width:100%;height:100%;
@@ -51,7 +50,9 @@
   object-position:center center;
   user-select:none;-webkit-user-select:none;
   -webkit-user-drag:none;
+  visibility:hidden;
 }
+.birdspot-splash.is-still .birdspot-splash__art {visibility:visible;}
 .birdspot-splash__wordmark {
   position:absolute;z-index:3;
   inset:16.5% 17.5% 68%;
@@ -59,7 +60,10 @@
   color:#f5ebd7;
   font:700 clamp(20px,12cqw,58px)/1 Georgia,serif;
   isolation:isolate;
+  visibility:hidden;
 }
+.birdspot-splash.is-still .birdspot-splash__wordmark,
+.birdspot-splash.is-video-playing .birdspot-splash__wordmark {visibility:visible;}
 .birdspot-splash__wordmark::before {
   content:"";position:absolute;z-index:-1;inset:0;
   background:linear-gradient(110deg,#092719,#153b28);
@@ -71,8 +75,7 @@
   text-shadow:0 2px 14px #071f18,0 1px 3px #071f18;
 }
 .birdspot-splash.is-video-playing .birdspot-splash__wordmark::before {display:none;}
-.birdspot-splash.image-unavailable:not(.is-video-playing) .birdspot-splash__frame {visibility:hidden;}
-.birdspot-splash.is-video-playing .birdspot-splash__fallback {display:none;}
+.birdspot-splash.is-still.image-unavailable .birdspot-splash__frame {display:none;}
 .birdspot-splash__skip {
   position:absolute;z-index:4;
   top:max(17px,env(safe-area-inset-top,0px));
@@ -93,15 +96,9 @@
   outline:2px solid #f1d297;outline-offset:4px;
 }
 .birdspot-splash__fallback {
-  position:absolute;inset:0;display:grid;place-items:center;
+  position:absolute;inset:0;display:none;place-items:center;
   padding:15%;text-align:center;
   background:linear-gradient(140deg,#0b3127,#051a18);
   color:#f5ebd7;
 }
-.birdspot-splash__fallback[hidden] {display:none;}
-.birdspot-splash__fallback strong {
-  font-family:Georgia,serif;font-size:clamp(30px,9vw,52px);
-  line-height:1.1;font-weight:700;
-}
-.birdspot-splash__fallback span {display:block;margin-top:25px;color:#e6c88d;
-  font-size:11px;letter-spacing:.23em;}
+.birdspot-splash.is-still.image-unavailable .birdspot-splash__fallback {display:grid;}
