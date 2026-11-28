@@ -51,7 +51,7 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp032",
         "source": "glanskop",
-        "marks": "Lichte vlek aan de bovensnavelbasis; vleugel meestal egaler. Roep explosief pstie-toe; zang korter en metaalachtig tiu-tiu."
+        "marks": "Lichte vlek aan de bovensnavelbasis bij scherp zijaanzicht; vleugel meestal egaler. Roep explosief pstie-toe; zang korter en metaalachtig tiu-tiu."
       }
     ],
     rows: [
@@ -59,7 +59,7 @@ export const GUIDE_COMPARISONS = [
       {label: 'Gevouwen vleugel', values: ['Vaak een licht vleugelveld', 'Meestal vrij egaal']},
       {label: 'Contactroep', values: ['Nasaal en langgerekt', 'Kort, explosief en dalend']},
     ],
-    "tip": "Luister eerst naar een duidelijke roepreeks. Bekijk daarna de bovensnavelbasis van opzij bij egaal licht. Gebruik het vleugelveld als extra aanwijzing."
+    "tip": "Luister buiten naar een duidelijke contactroep. De gidsopnamen zijn zangvoorbeelden, geen afzonderlijke contactroepen. Beoordeel de bovensnavelbasis alleen bij scherp zijaanzicht en goed licht; gebruik het vleugelveld als extra aanwijzing."
   },
   {
     label: 'Matkop en Glanskop · jonge vogels',
@@ -809,6 +809,7 @@ export const GUIDE_COMPARISONS = [
       {
         "id": "sp020",
         "source": "middelste-bonte-specht",
+        "plumage": "adult_m",
         "marks": "Middelste: witte schoudervlekken, roze onderstaart en licht gezicht."
       }
     ],
@@ -876,6 +877,18 @@ export const GUIDE_COMPARISONS = [
       {label: 'Wang', values: ['Donkere boog achter de wang', 'Lichte wang zonder donkere boog']},
     ],
     tip: 'Bij een juveniele Kuifmees kan de kuif kort zijn. Bekijk de wangboog en kuifveren samen.',
+  },
+  {
+    label: 'Kuifmees en Glanskop · koptekening',
+    birds: [
+      {id: 'sp033', source: 'kuifmees', photo: '/assets/species/sp033.webp', marks: 'Spitse zwart-witte kuif en donkere wangboog.'},
+      {id: 'sp032', source: 'glanskop', photo: '/assets/species/sp032.webp', marks: 'Egale donkere kap en lichte wang, zonder spitse kuif.'},
+    ],
+    rows: [
+      {label: 'Kruin', values: ['Spitse zwart-wit getekende kuif', 'Egale donkere kap zonder spitse kuif']},
+      {label: 'Wang', values: ['Donkere boog achter de lichte wang', 'Lichte wang zonder die donkere boog']},
+    ],
+    tip: 'Bekijk de kuifveren en wangtekening samen bij goed zicht. De kuif kan worden plat gehouden; let ook op de koptekening.',
   },
   {
     "label": "Goudhaantje en Vuurgoudhaan · koptekening",
@@ -1609,17 +1622,18 @@ export const GUIDE_COMPARISONS = [
     label: 'Zwarte Kraai en Kauw · in vlucht',
     flight: true,
     birds: [
-      {id: 'sp022', source: 'zwarte-kraai', marks: 'Geheel zwart, met een stevige snavel en brede vleugels met gespreide punten.'},
-      {id: 'sp025', source: 'kauw', marks: 'Compactere bouw, kortere snavel en grijze nek. Van dichtbij valt het lichte oog op.'},
+      {id: 'sp022', source: 'zwarte-kraai', marks: 'Fors silhouet met een stevige snavel en brede vleugels.'},
+      {id: 'sp025', source: 'kauw', marks: 'Compacter silhouet met een relatief korte snavel.'},
     ],
-    tip: 'Vergelijk kop en snavel. Tegen fel tegenlicht kan de grijze nek van de Kauw donker lijken.',
+    tip: 'Vergelijk bouw en snavel bij een goede kijkhoek. In tegenlicht zijn de lichte iris en grijze nek van de Kauw moeilijk te zien.',
   },
   {
     label: 'Gaai en Ekster · in vlucht',
+    pairHidden: 'F3-REV2-R05b 27-11-2026 (eigenaarbesluit B): foto van Ekster toont vertrek vanaf een rots; gelijkwaardige vluchtfase niet bevestigd',
     flight: true,
     birds: [
       {id: 'sp026', source: 'gaai', marks: 'Rozegrijs lichaam en blauw-zwart gebandeerd vleugelveld. Van achteren valt de witte stuit op.'},
-      {id: 'sp021', source: 'ekster', marks: 'Zwart-wit met brede witte vleugelvelden en een lange, smalle staart.'},
+      {id: 'sp021', source: 'ekster', photoMissing: 'vluchtcontrole 2026-11-27: vertrekfoto, geen geschikte vrije vluchtfoto', marks: 'Zwart-wit met brede witte vleugelvelden en een lange, smalle staart.'},
     ],
     rows: [
       {label: 'Vleugel', values: ['Klein blauw veld met donkere dwarsbandjes.', 'Breed wit veld in de handvleugel.']},
@@ -1628,7 +1642,26 @@ export const GUIDE_COMPARISONS = [
     tip: 'Kijk eerst naar staartlengte en vleugeltekening. De witte stuit van de Gaai is het best van achteren te zien.',
   },
   {
+    label: 'Gaai en Pestvogel · kop en vleugel',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp026', source: 'gaai', textOnly: true, marks: 'Blauw-zwart gebandeerd vleugelveld en een donkere baardstreep.'},
+      {id: 'sp287', source: 'pestvogel', textOnly: true, marks: 'Kuif, zwart oogmasker en gele staartpunt.'},
+    ],
+    tip: 'Kijk naar het oogmasker, het vleugelveld en de staartpunt bij goed licht.',
+  },
+  {
+    label: 'Gaai en Hop · snavel en vleugel',
+    reciprocalText: true,
+    birds: [
+      {id: 'sp026', source: 'gaai', textOnly: true, marks: 'Stevige snavel en een blauw-zwart gebandeerd vleugelveld.'},
+      {id: 'sp256', source: 'hop', textOnly: true, marks: 'Lange, licht neergebogen snavel, opvallende kuif en zwart-wit gebandeerde vleugels.'},
+    ],
+    tip: 'Vergelijk de snavel en vleugeltekening. De kuif van de Hop kan plat liggen.',
+  },
+  {
     label: 'Koolmees en Pimpelmees · in vlucht',
+    pairHidden: 'F3-REV2-R06b 27-11-2026 (eigenaarbesluit B): Koolmees van onderen, Pimpelmees vooral van boven; buikstreep niet vergelijkbaar',
     flight: true,
     birds: [
       {id: 'sp029', source: 'koolmees', marks: 'Zwarte kop met witte wangen. Op de gele onderzijde loopt een donkere middenstreep.'},

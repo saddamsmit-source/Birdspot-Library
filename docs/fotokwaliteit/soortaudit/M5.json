@@ -51,17 +51,27 @@
           "verdict": "goedgekeurd"
         },
         "/assets/species/plumage/sp035-flight.webp": {
-          "role": "In vlucht (Mannetje)",
-          "content": "Mannetje in vrije vlucht. Blauwe kruin, rozerode borst en lichte vleugeltekening zichtbaar.",
+          "role": "Verenkleed (Mannetje)",
+          "content": "Mannetje met geheven vleugels en uitgestoken poten; vrije vlucht niet overtuigend vastgesteld.",
           "sexAge": "Roze borst en blauwgrijze kop ondersteunen het mannelijke kleed.",
-          "quality": "Volledige vogel vrij in de lucht.",
-          "verdict": "goedgekeurd"
+          "quality": "Volledige vogel los van de ondergrond; houding bij afzetten of neerstrijken niet uit te sluiten.",
+          "verdict": "uit-rol",
+          "previousR08b": {
+            "role": "In vlucht (Mannetje)",
+            "content": "Mannetje in vrije vlucht. Blauwe kruin, rozerode borst en lichte vleugeltekening zichtbaar.",
+            "sexAge": "Roze borst en blauwgrijze kop ondersteunen het mannelijke kleed.",
+            "quality": "Volledige vogel vrij in de lucht.",
+            "verdict": "goedgekeurd"
+          }
         }
       },
       "corrections": [
-        "Fotoverdeling bevestigd. Herkenning, maatbanden en vergelijking met Huismus en Keep onderbouwd."
+        "Fotoverdeling bevestigd. Herkenning, maatbanden en vergelijking met Huismus en Keep onderbouwd.",
+        "R08b 28-11-2026: bestaande foto met uitgestoken poten buiten de vrije-vluchtrol geplaatst; mannetjeskleed, bestand en herkomst behouden. Vrije-vluchtfoto open."
       ],
-      "missing": [],
+      "missing": [
+        "Scherpe, aantoonbare vrije-vluchtfoto van Vink met bevestigde herkomst en hergebruikrechten."
+      ],
       "wishes": [
         "Geverifieerde gidsfoto van Keep bij de vergelijking."
       ],

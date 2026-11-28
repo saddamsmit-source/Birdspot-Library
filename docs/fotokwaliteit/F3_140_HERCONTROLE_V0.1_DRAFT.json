@@ -3040,7 +3040,7 @@
                     1105
                   ],
                   "mode": "full",
-                  "r": 1.0,
+                  "r": 1,
                   "sameShotAutomatic": true,
                   "identity": "zelfde opname automatisch bevestigd"
                 },
@@ -4636,12 +4636,12 @@
       "currentAssets": {
         "imageSlots": [
           {
-            "role": "Hoofdfoto",
+            "role": "Verenkleed (Volwassen)",
             "path": "/assets/species/plumage/sp020-male.webp",
             "oldRights": "VERIFIED"
           },
           {
-            "role": "Overige herkenningsfoto's",
+            "role": "Hoofdfoto",
             "path": "/assets/species/sp020.webp",
             "oldRights": "VERIFIED"
           },
@@ -4790,7 +4790,174 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R05",
+          "date": "2026-11-27",
+          "base": "1cb52274ce39dce19d22b69864063025efe6917d",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Verenkleed (Volwassen)",
+              "path": "/assets/species/plumage/sp020-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Middle_spotted_woodpecker_(Dendrocoptes_medius_medius)_male.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Rugzijaanzicht op stam met wit gezicht en roze onderstaart. De kruin valt op deze hoek weinig op. Scherpe vergroting is beperkt tot de gebruikte afgeleide van 500 × 750 px.",
+              "blobSha": "5b97492bdb2cbcb2f0db5d3d82fff2b211b49560",
+              "sourceSha1": "fd8845f994f2b0acd1777dba001feb715aa7dadd",
+              "sourceSha256": "d29ac5c7da77c78177cd4bd2caeef1a19af3f5625c7a2fad0c95ce4d35f74627",
+              "localSha256": "a49d4f9a758cc4ad0fb739af1e5841ed43a5766875bf9bb703f9fb7c7f95ab33",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "PARTIALLY TESTED",
+              "roleCheck": "VERIFIED - aanvullende foto van een volwassen vogel, zonder geslachtslabel",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp020.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Middle-spotted_woodpecker_(Dendrocopos_medius),_Parc_du_Rouge-Clo%C3%AEtre,_Brussels_(49179578882)_(cropped).jpg",
+              "author": "Frank Vassen from Brussels, Belgium",
+              "license": "CC BY 2.0",
+              "visual": "Rode kruin, wit gezicht en fijne flankstrepen direct zichtbaar. 1585 × 1600 px. Alternatief eerste beeld voor de eigenaar.",
+              "blobSha": "5e70acf4b18a5902e6ca1771416c227106a76085",
+              "sourceSha1": "6acceb41c178626702be2f3afba4b05de4dc2f1f",
+              "sourceSha256": "34cad784f244e46deaefd3bd568cde395773a75cb110d79060dfe5d4595fed50",
+              "localSha256": "94b688a4100f1f6a5be3a904953faa2dd00a0f2b463fc85bb41ed7cd6bdca510",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - hoofdfoto met zichtbare kruin, lichte kop en flankstrepen",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/plumage/sp020-pose.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Mittelspecht_bei_der_Nahrungssuche.jpg",
+              "author": "Mikes Makro",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vogel foerageert op een stam. Flankstrepen en roze onderstaart zijn zichtbaar. Kop deels gedraaid.",
+              "blobSha": "04a0bdaf9a5d90f87378bfa36e7d78c19f1fa53f",
+              "sourceSha1": "92db5f376d0e49c5370809ca4d21de764118278b",
+              "sourceSha256": "944fe3ad5e464e1d5bbe91a80c3d7dabdd21a38de15b5212389e4b10ae44a838",
+              "localSha256": "00745607a7aae4125bc78bc8a986bc8d19b78aca4ee58ab4cee2b60c5dbd4236",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - rust op een stam",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp020-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Middelste-bonte-specht-1_(28031708853).jpg",
+              "author": "Yves Hoebeke",
+              "license": "CC BY-SA 2.0",
+              "visual": "Vogel vrij van ondergrond en takken. Romp, open vleugels en vluchtvorm zichtbaar op 725 × 483 px.",
+              "blobSha": "094d565cd995f5ab0122e55b67e8f9543a397aaa",
+              "sourceSha1": "750efa9ebef51a4d2f4410e6967d9218072095ae",
+              "sourceSha256": "f16e04b8e44312ae9bee6dad3fdda6503a13ead575249f896babf928f7edd3f1",
+              "localSha256": "7ff538ed84362ab704ceabc5475d1722039c5b84c63b5c7cb4e22f87a406f973",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "PARTIALLY TESTED - vergroting beperkt",
+              "roleCheck": "VERIFIED - vrij in de lucht",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/middelste-bonte-specht",
+              "readDate": "2026-11-27",
+              "findings": "Het oog ligt vrij in het lichte gezicht. De rode kruin mist de duidelijke donkere onderrand. Flankstrepen en roze onderstaart ondersteunen de herkenning. Een jonge Grote Bonte Specht heeft ook een rode kruin. Klagende territoriumroep en zeldzame korte roffel hebben eigen beschrijvingen.",
+              "scope": "Herkenning en toepasselijke geluidsbeschrijving, geen uitspraak over alle soortclaims"
+            },
+            "anwb": "NOT TESTED - uitgeverspagina en openbaar ouder fragment tonen de soortpassage niet",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/8830",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina heropend; geen nieuwe teller uit deze ronde"
+            },
+            "independence": "NOT VERIFIED - dossier van deze ronde wacht op onafhankelijke aftekening"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
+            "herkenning": "PARTIALLY TESTED - nieuw eerste beeld en bestaande jeugdwaarschuwing",
+            "voorstel": "B — maak het bestaande zijaanzicht van Frank Vassen de eerste foto en behoud de andere opname; laat het ontbrekende jeugdbeeld expliciet open."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp020 ↔ sp016 Middelste/Grote Bonte Specht",
+              "bothDirections": "VERIFIED - drie tabbladen in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - leeftijdsvergelijking bewust volwassen Middelste versus jonge Grote, verder volwassen en vlucht; bronrechten partnerfoto’s behouden",
+              "diagnosticText": "PARTIALLY TESTED - drie rijen per paneel; lichte kop, flank en onderstaart, rode kruin nooit op zichzelf"
+            },
+            {
+              "pair": "sp020 ↔ sp017 Middelste/Kleine Bonte Specht",
+              "bothDirections": "VERIFIED - rustpaneel in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - rustfoto’s bruikbaar op rug/schouder, onderstaart en kop; oudere bewijsgrenzen bij Kleine Bonte Specht behouden",
+              "diagnosticText": "PARTIALLY TESTED - gelabelde rijen en neutraal volwassen label behouden"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - origineel, rechten, signaal, bronrol en offline decode; menselijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp020-alarm-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Alarmroep_Middelste_bonte_specht.mp3",
+                "author": "Justin Jansen",
+                "license": "CC BY 3.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "1f955b206891989c1c5bd44320461f8c5348651e1c1035bb83332ffc72a3f662",
+                "localSha256": "dfb7280789debe71589d541a4c7f56781bcc4d22e599e601a8c26c1292577990",
+                "correlations": [
+                  0.9758,
+                  0.9861,
+                  0.9799
+                ],
+                "duration": 26.322,
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 4,
+            "audioCount": 1,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Menselijke beluistering van de opgenomen alarmroep ontbreekt",
+            "Juvenielbeeld ontbreekt; een rode kruin alleen onderscheidt de soort niet van een jonge Grote Bonte Specht"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — maak het bestaande zijaanzicht van Frank Vassen de eerste foto en behoud de andere opname; laat het ontbrekende jeugdbeeld expliciet open.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de opgenomen alarmroep ontbreekt",
+              "Juvenielbeeld ontbreekt; een rode kruin alleen onderscheidt de soort niet van een jonge Grote Bonte Specht"
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -4813,7 +4980,7 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "In vlucht",
+            "role": "Overige herkenningsfoto's",
             "path": "/assets/species/plumage/sp021-flight.webp",
             "oldRights": "VERIFIED"
           },
@@ -4942,7 +5109,151 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R05",
+          "date": "2026-11-27",
+          "base": "1cb52274ce39dce19d22b69864063025efe6917d",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp021.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_2022_05_03.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Volledig zijaanzicht met witte buik en schouder, glanzende vleugel en lange staart.",
+              "blobSha": "185282225c44a773208e2d24545e16393b8c4400",
+              "sourceSha1": "b31b18a604fe8e14ccd9a4ebf67261ef999aa93b",
+              "sourceSha256": "08e5254ae770a378853ca49f63a0df0809752ed6412fc41b8bc9c0e1b64bee83",
+              "localSha256": "2bbd2e1fd2a53a5287d23deb6ae4466df97c0474769899894330303178c3d78b",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - rust, neutraal",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/plumage/sp021-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Witte delen van de open handvleugel en de lange staart zichtbaar. Vogel is los van de rots; bron beschrijft vertrek vanaf rots. Afstand tot het afzetmoment is onbekend.",
+              "blobSha": "5f0006f49a11e918ed631106cf071ae176e590ce",
+              "sourceSha1": "55b5f9ec8924c94bef9ad58ea751882fe492b71a",
+              "sourceSha256": "be163e0134abcec7badc7b3e414dda447da3a4168679eff9d6825b72c8a041bb",
+              "localSha256": "1eb063f262e540e9c468709c9d367e32504faf7a0ec8adaeaffeffe7d5b07209",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED - herkenningskenmerken zichtbaar",
+              "roleCheck": "VERIFIED - vertrek vanaf een rots volgens bron, getoond bij overige herkenningsfoto’s",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp021-juv-review.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_juvenile_-_Kharkiv_2024.jpg",
+              "author": "Lystopad",
+              "license": "CC BY-SA 4.0",
+              "visual": "De uitsnede toont het hele juveniel op de rand, korte staart, mondhoek en open snavel. Origineel beschrijft juveniel.",
+              "blobSha": "2b97db7f8ba6132e7b3b093f4510821de849d860",
+              "sourceSha1": "6f67a616588ac4cb047cf0be4089fe4e9be32c45",
+              "sourceSha256": "2c11a660567e32007f904e5f963c925cc1e28499cad26696cb668c6d044de91f",
+              "localSha256": "bc7c0a2e8554e0e847acfe7bdf700fcc66ec631263989faf911318092e869cfe",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - juveniel, herkenbare leeftijdskenmerken en individuele bron",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/ekster",
+              "readDate": "2026-11-27",
+              "findings": "Zwart-witte romp, grote witte schoudervlek en lange staart zijn leidend. De donkere veren kunnen groen, paars of blauw glanzen. De open handvleugel toont veel wit.",
+              "scope": "Herkenning en toepasselijke geluidsbeschrijving, geen uitspraak over alle soortclaims"
+            },
+            "anwb": "NOT TESTED - uitgeverspagina en openbaar ouder fragment tonen de soortpassage niet",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/15490",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina heropend; geen nieuwe teller uit deze ronde"
+            },
+            "independence": "NOT VERIFIED - dossier van deze ronde wacht op onafhankelijke aftekening"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
+            "herkenning": "PARTIALLY TESTED - vertrekfoto met herkenningstekst; Lijkt op blijft in beide richtingen",
+            "voorstel": "B — laat de herkenningstekst over witte handvleugel en lange staart zichtbaar; geef de Eksterfoto een duidelijk label voor het vertrek vanaf de rots. Laat het vluchtpaneel alleen staan als gelijkwaardige vluchtbeelden bevestigd zijn."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp021 ↔ sp026 Ekster/Gaai",
+              "bothDirections": "VERIFIED - Lijkt op in beide richtingen",
+              "photoEquivalence": "N/A - tekstvergelijking; gelijkwaardige vluchtfase niet vastgesteld",
+              "diagnosticText": "PARTIALLY TESTED - vergelijk witte vleugelvelden, witte stuit en staartlengte"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - origineel, rechten, signaal, bronrol en offline decode; menselijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp021-call-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_(Pica_pica)_(W1CDR0001537_BD28).ogg",
+                "author": "Aubrey John Williams / The British Library Board",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "0865ea6c517e92fab4405efe3fe65070fa62f833d7c31ec28fb925ed566b9b87",
+                "localSha256": "42e1a2a4d67301c65cd48b07cfb5c086c54a777aaf81833a5f7c1dfbfe71127f",
+                "correlations": [
+                  0.9853,
+                  0.9946,
+                  0.9934
+                ],
+                "duration": 7.6,
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 3,
+            "audioCount": 1,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Menselijke beluistering van de geregistreerde roep ontbreekt",
+            "Gelijkwaardig fotopaar in vrije vlucht voor Ekster en Gaai ontbreekt"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — laat de herkenningstekst over witte handvleugel en lange staart zichtbaar; geef de Eksterfoto een duidelijk label voor het vertrek vanaf de rots. Laat het vluchtpaneel alleen staan als gelijkwaardige vluchtbeelden bevestigd zijn.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de geregistreerde roep ontbreekt",
+              "Gelijkwaardig fotopaar in vrije vlucht voor Ekster en Gaai ontbreekt"
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -5093,7 +5404,163 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R05",
+          "date": "2026-11-27",
+          "base": "1cb52274ce39dce19d22b69864063025efe6917d",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp022.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Carrion_crow_perched_on_a_branch_01.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Vrij zijaanzicht met donkere krachtige snavel, bevederde basis en zwart kleed.",
+              "blobSha": "fa13ed47e9ecad27b88cfc2439b88d78713c4572",
+              "sourceSha1": "d0c3345107b6db8214b03a7849df912f6f00a672",
+              "sourceSha256": "c5cb3e125e8da75c48c449b732f1ca3ba7c05f69e4179ac89c1400de4744a291",
+              "localSha256": "af149654d33328e7d2a09c9a55c77498dfffec5fe3b3b3d376bc337ed2b5e1a3",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - rust, neutraal",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp022-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_in_flight_JdP_20191213_t160752.jpg",
+              "author": "Marie-Lan Taÿ Pamart",
+              "license": "CC BY 4.0",
+              "visual": "Grote donkere snavel, breed geopende vleugels en gespreide staart in vrije lucht.",
+              "blobSha": "02e994e4d32ea05a415363b2aafb62731eae546e",
+              "sourceSha1": "32621aa194eaf55b749b016049429a5fb29f9ea2",
+              "sourceSha256": "45f46b1e87705cad5988d337acc56b13c20d127bd6397b080cbe9561cc5b4e41",
+              "localSha256": "8cf643526ba15460b901c99410216aa9e71dfedb19034498346e6f368938c2a2",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - vrije vlucht",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp022-juv-review.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Corvus_corone_juvenile_begging_JdP_20250722_n1.jpg",
+              "author": "Marie-Lan Taÿ Pamart",
+              "license": "CC BY 4.0",
+              "visual": "Bedelende jonge vogel met roze mondbinnenkant; individuele bron bevestigt juveniel.",
+              "blobSha": "5b867268710d20bf1a0529585f6e1c1b616dbb8e",
+              "sourceSha1": "b25c261d3e8defaadda6a4eac4230efb4b5850df",
+              "sourceSha256": "6f2113160046e8543ed41ad142751213aea48db6f53b76043ed04eda4985cd37",
+              "localSha256": "2c3a6a86ce88406ad60893d596454c64d019f7710f6cfa611870de6bf15ab91f",
+              "identity": "VERIFIED - originele bestandshash en visuele bronmatch",
+              "quality": "VERIFIED",
+              "roleCheck": "VERIFIED - juveniel, herkenbare leeftijdscontext",
+              "rightsREV2": "VERIFIED - individuele bron, maker, open licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-kraai",
+              "readDate": "2026-11-27",
+              "findings": "De vogel, poten en krachtige snavel zijn zwart. Een volwassen Roek heeft een bleke, kale snavelbasis; bij een jonge Roek ontbreekt die. Een Raaf toont in geschikte hoek een wigvormige staart; de Zwarte Kraai heeft een hoekiger staart. De roep is laag en krassend.",
+              "scope": "Herkenning en toepasselijke geluidsbeschrijving, geen uitspraak over alle soortclaims"
+            },
+            "anwb": "NOT TESTED - uitgeverspagina en openbaar ouder fragment tonen de soortpassage niet",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/15671",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina heropend; geen nieuwe teller uit deze ronde"
+            },
+            "independence": "NOT VERIFIED - dossier van deze ronde wacht op onafhankelijke aftekening"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - huidige kenmerken getoetst aan de gelezen herkenningsbron",
+            "herkenning": "PARTIALLY TESTED - staartvorm van Raaf toegevoegd; snavelbasis en jeugdvoorbehoud Roek behouden",
+            "voorstel": "B — voeg een korte zin over de wigvormige staart van Raaf toe en behoud de waarschuwing voor jonge Roek. Zoek een gelijkwaardig beeldpaar alleen als aparte vervolgstap."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp022 ↔ sp025 Zwarte Kraai/Kauw",
+              "bothDirections": "VERIFIED - rust en vlucht, beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - twee foto’s per houding; partnerfoto’s behouden hun eigen audit",
+              "diagnosticText": "PARTIALLY TESTED - twee rijen per paneel. Snavel, bouw en lichte iris alleen bij volwassen Kauw"
+            },
+            {
+              "pair": "sp022 ↔ sp024 Zwarte Kraai/Roek",
+              "bothDirections": "PARTIALLY TESTED - tekst op kraaikaart, geen fotopaneel",
+              "photoEquivalence": "N/A - geen gelijkwaardig fotopaar getoond",
+              "diagnosticText": "PARTIALLY TESTED - leeftijdsvoorbehoud bij Roek zichtbaar"
+            },
+            {
+              "pair": "sp022 → sp027 Zwarte Kraai/Raaf",
+              "bothDirections": "PARTIALLY TESTED - tekst op de kaart van Zwarte Kraai",
+              "photoEquivalence": "N/A - tekstvergelijking",
+              "diagnosticText": "PARTIALLY TESTED - wigvormige staart Raaf bij goed zicht in vlucht, hoekigere staartrand bij Zwarte Kraai"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - origineel, rechten, signaal, bronrol en offline decode; menselijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp022-call-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Carrion_Crow_(Corvus_corone)_(W1CDR0001425_BD18).ogg",
+                "author": "Lawrence Shove / The British Library Board",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "fbff030012f82aee1fbc02dfdf4cd1bea53abe86f305deaedbb5619bbcaa51ae",
+                "localSha256": "bc144a67ab7738d463ce2139571d0af93eb7a27964f61e0c1465661df4d52d70",
+                "correlations": [
+                  0.9882,
+                  0.9905,
+                  0.9989
+                ],
+                "duration": 4.9,
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 3,
+            "audioCount": 1,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium: aangepaste gidsrol en vergelijkingen in de kaart"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Menselijke beluistering van de geregistreerde roep ontbreekt",
+            "Gelijkwaardig Roek-beeldpaar ontbreekt; de snavelbasis en leeftijdswaarschuwing blijven in tekst beschikbaar"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — voeg een korte zin over de wigvormige staart van Raaf toe en behoud de waarschuwing voor jonge Roek. Zoek een gelijkwaardig beeldpaar alleen als aparte vervolgstap.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Menselijke beluistering van de geregistreerde roep ontbreekt",
+              "Gelijkwaardig Roek-beeldpaar ontbreekt; de snavelbasis en leeftijdswaarschuwing blijven in tekst beschikbaar"
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -5268,7 +5735,175 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R06",
+          "date": "2026-11-27",
+          "base": "e7092409e9bebc8f907533171971c37881d03422",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp025.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Western_Jackdaw_2025_05_23_03.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Open zijaanzicht op stam; grijs achterhoofd, korte snavel en lichte iris zichtbaar.",
+              "blobSha": "680a332cdd3298307e30e33bdd421f55532b4ee4",
+              "sourceSha1": "f900e6386211dcb6b9e4718c546a972ab46f5e7a",
+              "sourceSha256": "8f3b07e83b4173df6ac4f1be94c45c48fc3c09905df3cfc5e81afff889fc744c",
+              "localSha256": "ecdc8c1d279aa8327b08a0ffb0f3f7e66ab4708526a0f0c981f509009cd30f6b",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "VERIFIED - scherp zijaanzicht",
+              "roleCheck": "VERIFIED - soortportret in rust",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Overige herkenningsfoto’s (landingshouding)",
+              "path": "/assets/species/plumage/sp025-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Jackdaw_(48142024622).jpg",
+              "author": "hedera.baltica",
+              "license": "CC BY-SA 2.0",
+              "visual": "Frontale landingsnadering met gespreide staart tussen takken. De alt-tekst benoemt de landing.",
+              "blobSha": "672651f3100780942e5bd536908d5a3bc78a69da",
+              "sourceSha1": "b09866162bf84dd40ae936a4745ee566f5511c67",
+              "sourceSha256": "a66aaf8bd2ae58a85ae77efd8ffe126fb86872ff0bceb720d80ae7d787ca7f5e",
+              "localSha256": "5cce535c6af01a4b53af760625487c75c6c28e4b5557ee073f5a3aed57c92715",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "VERIFIED - beeldkenmerken zichtbaar",
+              "roleCheck": "VERIFIED - landingsnadering met overeenkomend galerijlabel en alt-tekst",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp025-juv-review.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Juvenile_Jackdaw_-_geograph.org.uk_-_4065316.jpg",
+              "author": "Anne Burgess",
+              "license": "CC BY-SA 2.0",
+              "visual": "Jonge Kauw volgens de fotograaf; donkere iris en zacht ogend kleed. 640 × 589 px beperkt diep inzoomen.",
+              "blobSha": "7c36aa005b2a5dd3e66d6c7b401871c436817b0e",
+              "sourceSha1": "c6b6692a4af9c29e91573bf1a6f24b15c6f8baec",
+              "sourceSha256": "88b44631fa7331173045f76ceeac8d363f1dcc1bee87efa14c644122041034cc",
+              "localSha256": "fc1da4f61dc43b5a1edb767f672f3651186ed01ddd90424c0b81a89035177446",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "PARTIALLY TESTED - zoom beperkt bij 640 × 589 px",
+              "roleCheck": "VERIFIED - juveniel, individuele bron en herkenningskenmerken",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp025-flight-free.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:2013_Fliegende_Dohle.JPG",
+              "author": "J. Patrick Fischer",
+              "license": "CC BY-SA 3.0",
+              "visual": "Vogel geheel vrij tegen de lucht, vleugels gespreid. Goed silhouet; iris en grijze nek nauwelijks leesbaar in tegenlicht.",
+              "blobSha": "3abb4da73bf9aa9923ae68f6a7eab079fecf24d6",
+              "sourceSha1": "872e47eb50d69645436f2af237f7124aa320af7e",
+              "sourceSha256": "8dfacd5cf3df9e7f987c922f80aba66c04473a5fd443f06f0845e7e2ba195c2a",
+              "localSha256": "296c710448adef4030a060352ca69b6cc10992bbbcd5e5d03bdd1ae9c6c9cb3b",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "PARTIALLY TESTED - helder silhouet, beperkt detail van oog en nek",
+              "roleCheck": "VERIFIED - vrije vlucht",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kauw",
+              "readDate": "2026-11-27",
+              "findings": "Gedrongen met korte donkere snavel, grijzige nek en achterhoofd. De lichte iris helpt bij volwassen vogels; bij juvenielen kan de iris donker zijn. Bij slecht licht is de bouw nuttiger dan de oogkleur.",
+              "scope": "Herkenning en bijbehorende geluidsbeschrijving"
+            },
+            "anwb": "NOT TESTED - soortpassage buiten het toegankelijke uitgeversfragment",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/15600",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina geraadpleegd; geen populatiecijfers gewijzigd"
+            },
+            "supplementary": [
+              "https://www.rspb.org.uk/birds-and-wildlife/jackdaw"
+            ],
+            "independence": "NOT VERIFIED - ronde nog niet onafhankelijk afgetekend"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - kernmerken getoetst aan gelezen passage",
+            "herkenning": "PARTIALLY TESTED - vluchttekst legt nadruk op silhouet en snavel; oogkleur en grijze nek beperkt in tegenlicht",
+            "voorstel": "B — maak de alt-tekst van de landingsfoto eenduidig. Leg bij het bestaande vluchtpaar de nadruk op silhouet en snavel, met een waarschuwing voor oogkleur en nek in tegenlicht."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp025 ↔ sp022 Kauw/Zwarte Kraai · rust",
+              "bothDirections": "VERIFIED - volledige beelden in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - beide vogels zitten van opzij; onderscheid aan snavel en grijs achterhoofd bruikbaar",
+              "diagnosticText": "PARTIALLY TESTED - het leeftijdsvoorbehoud voor donkere iris van jonge Kauwen staat bij het rustpaneel"
+            },
+            {
+              "pair": "sp025 ↔ sp022 Kauw/Zwarte Kraai · vlucht",
+              "bothDirections": "VERIFIED - twee beelden en vluchtlabel in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - beide in vrije vlucht; verschillende hoek en vleugelstand, tegenlicht bij Kauw",
+              "diagnosticText": "PARTIALLY TESTED - silhouet en snavel vergeleken in beide richtingen, tegenlichtadvies zichtbaar"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - oorspronkelijke bronnen, rechten, correlatie en offline decode; menselijke luistercontrole open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp025-contact-call-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Corvus_monedula_calls.ogg",
+                "author": "Veljo Runnel",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "6f3f4297abe17548cc1b06889a65e3af36fdb011c78e8da38a35509bfb2f322f",
+                "localSha256": "14e01e163237eaa377c246046e864aff9fc051cae92388289d07fdd07337a759",
+                "correlations": [
+                  0.9943,
+                  0.9869,
+                  0.9965
+                ],
+                "duration": 13.087,
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 4,
+            "audioCount": 1,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium 320/360/390 px en 390 px offline: wijzigingen en vergelijkingen in beide richtingen gecontroleerd"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Onafhankelijke menselijke beluistering ontbreekt"
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — maak de alt-tekst van de landingsfoto eenduidig. Leg bij het bestaande vluchtpaar de nadruk op silhouet en snavel, met een waarschuwing voor oogkleur en nek in tegenlicht.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt"
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -5427,7 +6062,168 @@
         ],
         "unmatchedAudio": [],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R06",
+          "date": "2026-11-27",
+          "base": "e7092409e9bebc8f907533171971c37881d03422",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp026.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eichelh%C3%A4her_mit_Eichel_im_Schnabel_im_Geo-Naturpark_Bergstra%C3%9Fe-Odenwald.jpg",
+              "author": "Hwbund",
+              "license": "CC BY-SA 4.0",
+              "visual": "Zij-/driekwartaanzicht op tak met eikel. Blauw gestreept vleugelveld en bruine romp zichtbaar.",
+              "blobSha": "6851a2ebbd35f8d02aa7552d7a9cd0cc4d253c59",
+              "sourceSha1": "0e2bd64321dc15a007fb22c97e1ec41d27b90f78",
+              "sourceSha256": "598c6e81b1011786ce0bb2d426ef8ea2a76b6b3b73da9cf60c79b344b47ef406",
+              "localSha256": "84a2c30ab61c595c964760c3798fe4ea146b36edbc719a463a890db7ddb50eb9",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "VERIFIED - bruikbaar in de gids",
+              "roleCheck": "VERIFIED - neutraal soortportret",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp026-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:075_Wild_Eurasian_jay_in_flight_at_the_Parc_naturel_r%C3%A9gional_Jura_vaudois_Photo_by_Giles_Laurent.jpg",
+              "author": "Giles Laurent (gileslaurent.com)",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vrije lage vlucht met uitgestrekte vleugel en donkere staart. Het vleugelpatroon is zichtbaar; de stuit is niet het sterkst afleesbare kenmerk in deze hoek.",
+              "blobSha": "71f6e92481749ea364b04fc1e09e4c789832a265",
+              "sourceSha1": "192cfec163630f42a74ee75f363924b175105dfb",
+              "sourceSha256": "09f9253153fdbeef120b6bc40238a541e3bb9f813785f5f116fda1b73e5d3283",
+              "localSha256": "da99c7efee176a304c4faa8f94953a005cdc6364a663fa39c1cb8286285ea408",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "VERIFIED - scherp en bruikbaar als vluchtbeeld",
+              "roleCheck": "VERIFIED - vrije vlucht",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp026-juv-review.webp",
+              "source": "https://www.inaturalist.org/photos/290699043",
+              "author": "Tim",
+              "license": "CC BY 4.0",
+              "visual": "Individuele iNaturalist-foto en originele JPEG gecontroleerd. De bronwaarneming heeft de leeftijdsannotatie juveniel. Zacht kleed en beperkt gestreepte kruin zichtbaar.",
+              "blobSha": "53e9d1b58f069e774488f8ef4b6c27d0c162c7ad",
+              "sourceSha1": "5e0834b0a88c18d10beefdf84f0dc3124322a039",
+              "sourceSha256": "f08ad30bda3268dab456ff578ce06848aaf93200364ff1153798e3d3371ecb46",
+              "localSha256": "3bfdf11f17ddf39d8389b7375980d3ca62bd01871a86133a1f884efe627c736d",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "VERIFIED - kop en vleugel zijn goed zichtbaar",
+              "roleCheck": "VERIFIED - juveniel, leeftijdsannotatie en beeld ondersteunen de rol",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/gaai",
+              "readDate": "2026-11-27",
+              "findings": "Beigebruin met blauw-zwart gebandeerd vleugelveld, zwarte baardstreep en witte stuit. In vlucht kunnen vooral de witte stuit en donkere staart opvallen. Jonge vogels hebben minder sterke kruinstrepen en zachter kleed.",
+              "scope": "Herkenning en bijbehorende geluidsbeschrijving"
+            },
+            "anwb": "NOT TESTED - soortpassage buiten het toegankelijke uitgeversfragment",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/15390",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina geraadpleegd; geen populatiecijfers gewijzigd"
+            },
+            "supplementary": [
+              "https://www.blascozumeta.com/specie_files/15390_Garrulus_glandarius_E.pdf",
+              "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/hop",
+              "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/Pestvogel"
+            ],
+            "independence": "NOT VERIFIED - ronde nog niet onafhankelijk afgetekend"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - kernmerken getoetst aan gelezen passage",
+            "herkenning": "PARTIALLY TESTED - herkenningsverschillen Hop en Pestvogel in bestaande tekst, wederzijdse links en tekst getest",
+            "voorstel": "B — vervang de algemene links bij Hop en Pestvogel door concrete tekst over kuif, oogmasker, gele staartpunt, snavel en vleugelpatroon. Behoud de tekstvergelijking met Ekster."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp026 ↔ sp021 Gaai/Ekster",
+              "bothDirections": "VERIFIED - tekst onder Lijkt op in beide richtingen",
+              "photoEquivalence": "N/A - R05b houdt het fotopaneel verborgen, Eksterfoto toont vertrek vanaf een rots",
+              "diagnosticText": "PARTIALLY TESTED - blauw vleugelveld, staartlengte en witte delen zijn in de wederzijdse tekst te vergelijken"
+            },
+            {
+              "pair": "sp026 ↔ sp256 Gaai/Hop en sp026 ↔ sp287 Gaai/Pestvogel",
+              "bothDirections": "VERIFIED - tekst en soortlinks in beide richtingen",
+              "photoEquivalence": "N/A - tekstvergelijkingen",
+              "diagnosticText": "PARTIALLY TESTED - snavel, kuif, vleugeltekening, oogmasker en staartpunt getoetst aan VBN"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - oorspronkelijke bronnen, rechten, correlatie en offline decode; menselijke luistercontrole open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp026-call-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:DM550GarrulusGlandariusCallSlovakia.ogg",
+                "author": "Alexander Kürthy",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "0b272eb44e886d9b9f01d3db31bb4168c115d09c03bc1cca0981d5691b37e234",
+                "localSha256": "8ccd0bbef92ed6c8ef94de512c57cd1c499a309788eaad4e092cfe95da19e672",
+                "correlations": [
+                  0.9703,
+                  0.9644,
+                  0.9728
+                ],
+                "duration": 8.15,
+                "listenedBy": null,
+                "originalRecordingRoute": "https://xeno-canto.org/334851/download",
+                "originalRecordingCorrelations": [
+                  0.9712,
+                  0.9649,
+                  0.9738
+                ]
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 3,
+            "audioCount": 1,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium 320/360/390 px en 390 px offline: wijzigingen en vergelijkingen in beide richtingen gecontroleerd"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Onafhankelijke menselijke beluistering ontbreekt",
+            "De gelijkwaardige vrije-vluchtfoto van Ekster voor het paar Gaai/Ekster ontbreekt. Het tekstpaar is toegankelijk onder Lijkt op."
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — vervang de algemene links bij Hop en Pestvogel door concrete tekst over kuif, oogmasker, gele staartpunt, snavel en vleugelpatroon. Behoud de tekstvergelijking met Ekster.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "De gelijkwaardige vrije-vluchtfoto van Ekster voor het paar Gaai/Ekster ontbreekt. Het tekstpaar is toegankelijk onder Lijkt op."
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -5646,7 +6442,223 @@
         ],
         "unmatchedAudio": [],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R06",
+          "date": "2026-11-27",
+          "base": "e7092409e9bebc8f907533171971c37881d03422",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Mannetje)",
+              "path": "/assets/species/plumage/sp029-adult_m.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Great_tit_%28Parus_major%29_male.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Mannetje in rust op tak. Zwarte kap en witte wang zichtbaar; vogel neemt een beperkt deel van het beeld in.",
+              "blobSha": "8f379d5405c2570b4853e79d236ca42511909330",
+              "sourceSha1": "b603440554bab414f37fb67fe854c18cf309b92d",
+              "sourceSha256": "10974c373893c70a12e6c03683d0276d5c5b65dacb38086209bdcb82e4dd0548",
+              "localSha256": "70204257d8e7187c5f6280da2edfa3a881cc11d13aca7dd8e9db98015dae3771",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "PARTIALLY TESTED - scherp portret met relatief kleine vogel in het kaartkader",
+              "roleCheck": "VERIFIED - mannetje volgens individuele bron",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Verenkleed (Vrouwtje)",
+              "path": "/assets/species/plumage/sp029-adult_f.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Female_Great_tit.jpg",
+              "author": "Evas-naturfotografie",
+              "license": "CC BY-SA 4.0",
+              "visual": "Volwassen vrouwtje volgens bron. Frontaler beeld laat witte wang, gele borst en smallere onderstreep zien.",
+              "blobSha": "9669dbaaa08669942aeee5953a69c4936b4091a5",
+              "sourceSha1": "f4667362593c83edde0ff5af3a1f737537685709",
+              "sourceSha256": "f4d76659fb63a425477dc18445d4f78434c2b599f18907fa5ddca0f5badf31a9",
+              "localSha256": "d4393f15bceee091bff723dd831fcdf50501206eac3cdcfd7f07fe52bd96297c",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "VERIFIED - goed licht op kop en borst",
+              "roleCheck": "VERIFIED - vrouwtje volgens individuele bron en beeld",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp029-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Great_tit_-_Juvenile_-_Parus_major_%2853034153829%29.jpg",
+              "author": "caroline legg",
+              "license": "CC BY 2.0",
+              "visual": "Jonge vogel met dof kleed, lichtgele wang en open snavel. Het beeld ondersteunt de geregistreerde juvenielrol.",
+              "blobSha": "a05486e347dec11b836077aa6d3299008bce091a",
+              "sourceSha1": "34e8776d18391a6e8d38d8f46820ce2b8c075a99",
+              "sourceSha256": "d67c8ce760d0736136d97c4d4ab2e9ec9c2fbcfb0ab382c9084fb3f372759f1a",
+              "localSha256": "71b051ff1303ecaacb804f30556f02f540e359d894d67c1960ae57ba52fb72ef",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "VERIFIED - scherp kopzijaanzicht",
+              "roleCheck": "VERIFIED - juveniel, beeld en bron ondersteund",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp029-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:13_bis_15_Zentimeter_wird_eine_Kohlmeise_lang._01.jpg",
+              "author": "Holger Uwe Schmitt",
+              "license": "CC BY-SA 4.0",
+              "visual": "Vrij in de lucht. Licht op onderzijde, spreidvleugel, deel van de wang. Kruin en volledige buikstreep zijn niet in deze hoek af te lezen.",
+              "blobSha": "3642093ce9543362e208c99acb5aa57126075a96",
+              "sourceSha1": "d18d4fe5a63ecac51e610c638e92a2c055eb05a7",
+              "sourceSha256": "a4b641f6f9d81be956c97036fb52fc55f8dd7a942e555a76476976e30132b04e",
+              "localSha256": "4ba6a2d41ef163f1e3506b37f30dd778d39271f5c142342e34301b28d76a9cd3",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "VERIFIED - bruikbaar individueel vluchtbeeld",
+              "roleCheck": "VERIFIED - vrije vlucht",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/sp029.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Great_tit_on_Djurgarden_(52306).jpg",
+              "author": "Rhododendrites",
+              "license": "CC BY-SA 4.0",
+              "visual": "Voedselzoekende vogel tussen blad. Zwarte kap, lichte wang en gevouwen vleugel zichtbaar, blad beperkt het zicht.",
+              "blobSha": "bc6b77f7da86e0d12626971ddae94afc5a0d4702",
+              "sourceSha1": "e640954b05fa0055bea16dfe1af3b4a02f50407b",
+              "sourceSha256": "073e9fb3dfadbae0f5bbe1b0c45dfbb0a90eda1c8ef620aebd45fac17f14a477",
+              "localSha256": "d9b802b6504c089a98d04ed323318ba75735bf44fa80338f2819dbeb7eb56ce3",
+              "identity": "VERIFIED - individuele oorspronkelijke bestandshash, appblob en visuele match",
+              "quality": "PARTIALLY TESTED - drukke achtergrond",
+              "roleCheck": "VERIFIED - aanvullende herkenningsfoto in rust",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel-SHA-1 gecontroleerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md#individuele-fotos-en-bronrechten"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koolmees",
+              "readDate": "2026-11-27",
+              "findings": "Zwarte kap, helder wangveld en donkere middenstreep op de gele onderzijde. De streep is vaak breder bij mannetjes. Juveniele Koolmees en Pimpelmees kunnen beide gelige wangen hebben. Zwarte Mees heeft een lichte nekvlek en twee lichte vleugelbandjes.",
+              "scope": "Herkenning en bijbehorende geluidsbeschrijving"
+            },
+            "anwb": "NOT TESTED - soortpassage buiten het toegankelijke uitgeversfragment",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/14640",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina geraadpleegd; geen populatiecijfers gewijzigd"
+            },
+            "supplementary": [
+              "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/pimpelmees",
+              "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/zwarte-mees"
+            ],
+            "independence": "NOT VERIFIED - ronde nog niet onafhankelijk afgetekend"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - kernmerken getoetst aan gelezen passage",
+            "herkenning": "PARTIALLY TESTED - bestaande kenmerken op beide kaarten zichtbaar; buikstreep in vlucht alleen bij vrij zicht",
+            "voorstel": "B — toon het vluchtpaneel met Pimpelmees pas weer zodra er foto’s zijn met vergelijkbaar zicht op kop en onderzijde. Behoud de afzonderlijke vluchtfoto’s, de herkenningstekst en beide rustvergelijkingen."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp029 ↔ sp030 Koolmees/Pimpelmees · volwassen en juveniel",
+              "bothDirections": "VERIFIED - beide tabbladen in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - rustfoto’s in vergelijkbare houding, bij juvenielen streng letten op kophoek en de overlappende gelige wang",
+              "diagnosticText": "PARTIALLY TESTED - kap, oogstreep en buik als combinatie; gelige wangen komen bij beide juvenielen voor"
+            },
+            {
+              "pair": "sp029 ↔ sp030 Koolmees/Pimpelmees · vlucht",
+              "bothDirections": "VERIFIED - vluchtpaneel uit zicht in beide richtingen; rustparen en eigen vluchtfoto’s bereikbaar",
+              "photoEquivalence": "N/A - verschillende kijkhoeken; gelijkwaardige onderzijde nog open",
+              "diagnosticText": "PARTIALLY TESTED - koptekening en buikstreep blijven beschikbaar in bestaande herkenningstekst"
+            },
+            {
+              "pair": "sp029 ↔ sp174 Koolmees/Zwarte Mees",
+              "bothDirections": "VERIFIED - rustpaneel in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - vogel in rust, niet beide exact van schuin achteren",
+              "diagnosticText": "PARTIALLY TESTED - lichte nekvlek, vleugelbandjes en buikstreep helpen bij vrij zicht"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - oorspronkelijke bronnen, rechten, correlatie en offline decode; menselijke luistercontrole open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp029-song-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Parus_major_-_Great_Tit_XC402093.mp3",
+                "author": "Vincent Ollivier",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "b4b352a94d70ce962c2910e5666be081a454c46803e8faad8d4a217d5103f2b3",
+                "localSha256": "4cf147825d037bf8d37fdfcc7c280339fe1133253e4fc9fd4a214a86aa410ab3",
+                "correlations": [
+                  0.9989,
+                  0.9993,
+                  0.998
+                ],
+                "duration": 11.454,
+                "listenedBy": null,
+                "originalRecordingRoute": "https://xeno-canto.org/402093/download",
+                "originalRecordingCorrelations": [
+                  0.9989,
+                  0.9993,
+                  0.998
+                ]
+              },
+              {
+                "path": "/assets/species/audio/sp029-call-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Great_Tit_(Parus_major)_territorial_calls_-_B%C3%A6rum%2C_Norway_2021-03-15.mp3",
+                "author": "Ryan Hodnett",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "1c7229c329cf22c4bb05d0ad52002005438e021ef3c2b35c6c69ae02e8cda6ea",
+                "localSha256": "cee91537fa7638251b946984caeab4f7041d734e2737aad0943022eae215eecd",
+                "correlations": [
+                  0.9944,
+                  0.9945,
+                  0.9997
+                ],
+                "duration": 4,
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 5,
+            "audioCount": 2,
+            "device": "NOT TESTED",
+            "afterOwnerDecision": "Chromium 320/360/390 px en 390 px offline: wijzigingen en vergelijkingen in beide richtingen gecontroleerd"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Onafhankelijke menselijke beluistering ontbreekt",
+            "Gelijkwaardig vluchtpaar Koolmees/Pimpelmees met zichtbaar profiel en onderzijde ontbreekt."
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — toon het vluchtpaneel met Pimpelmees pas weer zodra er foto’s zijn met vergelijkbaar zicht op kop en onderzijde. Behoud de afzonderlijke vluchtfoto’s, de herkenningstekst en beide rustvergelijkingen.",
+            "date": "2026-11-27",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "Gelijkwaardig vluchtpaar Koolmees/Pimpelmees met zichtbaar profiel en onderzijde ontbreekt."
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -5812,7 +6824,190 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (photos, Dutch status, paired mobile UI, recordings and selected primary sources reviewed)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. Targeted guide and player regressions executed.",
+        "secondReview": {
+          "round": "F3-REV2-R07",
+          "date": "2026-11-27",
+          "base": "84bb18a3b5e3fd87f94ef079d1c05e23e0b20f23",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION C / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto",
+              "path": "/assets/species/sp030.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Eurasian_Blue_Tit_2025_04_07.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Scherp zijaanzicht op riet. Blauwe kruin, donkere oogstreep en gele onderzijde duidelijk.",
+              "blobSha": "cdcac30c4d8ac5310f1a91610ed3155436323cff",
+              "sourceSha1": "2161ee0ecc4e39056d10053eb0ab38036dbdac34",
+              "sourceSha256": "9fa5af0fdf5ea4fe6d9a7a467093e027acd3e9044103e24a32b678dec187930b",
+              "localSha256": "3bcfbab4c44a97804e43a589195a023b478f68341c74ee2069e32af980c8bd3d",
+              "identity": "VERIFIED - originele bytes matchen eerdere bronhash en beeld",
+              "quality": "VERIFIED - scherp profiel",
+              "roleCheck": "VERIFIED - soortportret in rust",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel geregistreerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md#individuele-fotos"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp030-juv2.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Blue_tit_-_Juvenile_-_Cyanistes_caeruleus_%2853079786093%29.jpg",
+              "author": "caroline legg",
+              "license": "CC BY 2.0",
+              "visual": "Jonge vogel op stengel. Lichte gelige wang en doffe kruin zichtbaar. De fotograaf noemt juvenielen.",
+              "blobSha": "efcce9f251d0f5e23edbcc3fededb517b195349c",
+              "sourceSha1": "ddc3d6ca897088ac9614c68cf0320b4daa532ec4",
+              "sourceSha256": "f8f31f41aed4cf9c77ee4e9301221dcd2c8146680e5f3941a81c0eb4d0ed3dc7",
+              "localSha256": "25af52b5db9c0159e11f8401e1d9d03fdb34526cb46e5e6eb8ca7d74f20bcd9b",
+              "identity": "VERIFIED - originele bytes matchen eerdere bronhash en beeld",
+              "quality": "VERIFIED - bruikbaar profiel",
+              "roleCheck": "VERIFIED - juveniel volgens beeld en individuele bron",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel geregistreerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md#individuele-fotos"
+            },
+            {
+              "role": "In vlucht",
+              "path": "/assets/species/plumage/sp030-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Blue_Tit_in_flight_(8360763555).jpg",
+              "author": "Joe Dyer",
+              "license": "CC BY 2.0",
+              "visual": "Bovenaanzicht in vlucht, met blauwe vleugel, gespreide staart en zichtbare kop. De alt-tekst noemt een gele buik, terwijl de onderzijde niet beoordeelbaar is.",
+              "blobSha": "416f116f147b61514a7f30232254e8b98818ba08",
+              "sourceSha1": "381f73a78d315430b062c5a8d3df45754d300042",
+              "sourceSha256": "4483490ac0e00b4cf20cee269cd9a307fcaa5c568637c2e917671089a2d8956d",
+              "localSha256": "bf2dc00e4317ecacc343a0e3f057a7ae92ebe51843ec9e8931c3d38668e038f9",
+              "identity": "VERIFIED - originele bytes matchen eerdere bronhash en beeld",
+              "quality": "VERIFIED - scherp bovenaanzicht",
+              "roleCheck": "PARTIALLY TESTED - vluchtrol klopt; alt-tekst noemt een niet goed zichtbare onderzijde",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel geregistreerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md#individuele-fotos"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/pimpelmees",
+              "readDate": "2026-11-27",
+              "findings": "Blauwe kruin, smalle donkere oogstreep en lichte wang. Juvenielen hebben doffere kleuren en kunnen een gelige wang hebben. Koolmees heeft een doorlopende donkere middenstreep op borst en buik.",
+              "scope": "Soortbeschrijving en herkenningspassages"
+            },
+            "anwb": "NOT TESTED - soortpassage ontbreekt in openbaar uitgeversfragment",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/14620",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina raadplegen; geen cijfers gewijzigd"
+            },
+            "supplementary": [
+              "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/koolmees"
+            ],
+            "independence": "NOT VERIFIED - onafhankelijke aftekening staat open"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - getoetst aan gelezen soortpassages",
+            "herkenning": "PARTIALLY TESTED - concrete verbeterpunten ter beslissing",
+            "voorstel": "B — beschrijf voor de bestaande vluchtfoto de zichtbare bovenzijde, kop en staart. Behoud de individuele vluchtfoto en beide rustvergelijkingen met Koolmees.",
+            "uitvoeringR07b": "PARTIALLY TESTED - R07b: alt-tekst en visualCheck beschrijven nu de zichtbare bovenzijde, blauwe vleugels, gespreide staart, kruin en oogstreep; eigen vluchtfoto en rustparen blijven. Browserhertest op de nieuwe kandidaat staat open."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp030 ↔ sp029 Pimpelmees/Koolmees · volwassen en juveniel",
+              "bothDirections": "VERIFIED - twee rustpanelen en soortlinks in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - zijaanzichten bieden bruikbare koptekening; verhouding beeldvulling bij juvenielen verschilt",
+              "diagnosticText": "PARTIALLY TESTED - leeftijdsvoorbehoud over gelige wangen is zichtbaar; kijk naar de plaats van donkere kopstrepen"
+            },
+            {
+              "pair": "sp030 ↔ sp029 Pimpelmees/Koolmees · vlucht",
+              "bothDirections": "VERIFIED - fotopaneel afwezig in beide richtingen; eigen vluchtfoto’s aanwezig",
+              "photoEquivalence": "N/A - verschillende zichtkanten, vastgelegd in R06b",
+              "diagnosticText": "PARTIALLY TESTED - het onderscheid in onderzijde blijft in de bestaande tekst"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - bronrol, technische match en offline decode; menselijke luistercontrole open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp030-song.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Cyanistes_caeruleus.ogg",
+                "author": "Vladimir Yu. Arkhipov (Arkhivov)",
+                "license": "CC BY-SA 3.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "704869ac93857c9d72eb0f2027644c7f6cfbf3f8df4fdf55e36e0dd22516f512",
+                "localSha256": "746485cbf00ec3d4bb85b1154061a71f1ca5fe90fad69062404d9653daa17682",
+                "correlations": [
+                  0.9759,
+                  0.9749,
+                  0.9854
+                ],
+                "offsetsSeconds": [
+                  0,
+                  0,
+                  0
+                ],
+                "duration": 9.004,
+                "roleOnSource": "Zang",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp030-call-app.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Blue_Tit_(Cyanistes_caeruleus)_(W1CDR0001535_BD30).ogg",
+                "author": "Aubrey John Williams / The British Library Board",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "3be7bfd42de52b0a2d1df121a65e769b0bf1c9eb86cea4ce32942a31416340b4",
+                "localSha256": "b37cd77c424033f53c4fe8af4c6abe139faaf9005ee9a4b8192daca2f8c9892a",
+                "correlations": [
+                  0.9942,
+                  0.9912,
+                  0.9772
+                ],
+                "offsetsSeconds": [
+                  34.5,
+                  34.5,
+                  34.5
+                ],
+                "duration": 7.3,
+                "roleOnSource": "Roep",
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 3,
+            "audioCount": 2,
+            "device": "NOT TESTED"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Onafhankelijke menselijke beluistering ontbreekt",
+            "R07b: oorspronkelijke alt-tekst noemde een gele buik; codecorrectie naar zichtbare bovenzijde uitgevoerd, browserhertest open.",
+            "Gelijkwaardig vluchtpaar met Koolmees ontbreekt; R06b heeft het fotopaneel in beide richtingen verborgen."
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "C — voorlopig verder met de geregistreerde resterende bewijsproblemen; R07b-correcties uitgevoerd, geen inhoudelijke vrijstelling.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "R07b: oorspronkelijke alt-tekst noemde een gele buik; codecorrectie naar zichtbare bovenzijde uitgevoerd, browserhertest open.",
+              "Gelijkwaardig vluchtpaar met Koolmees ontbreekt; R06b heeft het fotopaneel in beide richtingen verborgen."
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -5899,7 +7094,175 @@
         "unmatchedAudio": [],
         "scientificName": "Poecile montanus",
         "contentStatus": "PARTIALLY REVIEWED (all 3 local WebPs opened; original photographer files, audio and device not fully inspected)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED.",
+        "secondReview": {
+          "round": "F3-REV2-R07",
+          "date": "2026-11-27",
+          "base": "84bb18a3b5e3fd87f94ef079d1c05e23e0b20f23",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION C / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Volwassen)",
+              "path": "/assets/species/sp031.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Willow_Tit_Lancashire.jpg",
+              "author": "Francis Franklin",
+              "license": "CC BY-SA 3.0",
+              "visual": "Volwassen ogende Matkop op tak in zijaanzicht. Lichtere vleugelbaan en wang zichtbaar. Herkomst Lancashire; de opname wordt niet als Nederlandse ondersoort uitgelegd.",
+              "blobSha": "4ee9d5a298394a5aa53e213b7c123a3d1c01fb63",
+              "sourceSha1": "4530478344674f028fce98d1f169cdd9c40007ce",
+              "sourceSha256": "d4712ee978a465cfe93b9d4bcd77c4c795b08465fa9a406b1dfdb55438ce65cb",
+              "localSha256": "f38ef00bbb2955e4265e000a37a0c9569586e7b711bd7092e64ec5a29d061272",
+              "identity": "VERIFIED - originele bytes matchen eerdere bronhash en beeld",
+              "quality": "VERIFIED - scherp profiel en licht vleugelveld",
+              "roleCheck": "VERIFIED - soortportret in rust",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel geregistreerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md#individuele-fotos"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp031-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Poecile_montanus%2C_Willow_Tit%2C_Weidenmeise.JPG",
+              "author": "Wald1siedel",
+              "license": "CC BY-SA 4.0",
+              "visual": "Jonge Matkop volgens bron, buiten het nesthol. Zichtbare lichte snavelhoeken en doffe kap.",
+              "blobSha": "7a92625623299e8524e7cdd4ffababb887c74eaa",
+              "sourceSha1": "de996317b954a54cb596185efd5175b0314ea31e",
+              "sourceSha256": "d81ec493f5bca49aae833e00c6f52e7e05685f7b47eb988fa58ac09f42f26c2a",
+              "localSha256": "8b06f04063af74f1d903d0a92d1d110cf62b6350d7cad8f1a676fdd3245aa29b",
+              "identity": "VERIFIED - originele bytes matchen eerdere bronhash en beeld",
+              "quality": "VERIFIED - goed licht op kop",
+              "roleCheck": "VERIFIED - juveniel door individuele bron en beeld",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel geregistreerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md#individuele-fotos"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/plumage/sp031-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Poecile_Montanus_Kittila_20120306.JPG",
+              "author": "Estormiz",
+              "license": "CC0 1.0",
+              "visual": "Vogel laag boven sneeuw met gespreide vleugel en uitgestoken poten. De precieze fase tussen afzetten en landen is niet uit het stilstaande beeld af te leiden.",
+              "blobSha": "b6918a8c322e4bd127a739eaf5c38f019bd063df",
+              "sourceSha1": "d168f2462a66f8ee411bf9aa54503743cc7d531c",
+              "sourceSha256": "452d150e6a1f1f260c7ecf7b2512457b582796949a961eef0210a17c785b86f8",
+              "localSha256": "647f57f127d74bcc5fc33744e0228a0001b8ac97fd059147dedc132ad984b4c2",
+              "identity": "VERIFIED - originele bytes matchen eerdere bronhash en beeld",
+              "quality": "VERIFIED - scherp beeld van houding",
+              "roleCheck": "PARTIALLY TESTED - Overige herkenningsfoto’s klopt; het label Opvliegend kiest een fase zonder bewijs",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel geregistreerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md#individuele-fotos"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/matkop",
+              "readDate": "2026-11-27",
+              "findings": "Een vaak lichtere baan op de gevouwen armpennen en doorgaans donkere bovensnavelbasis ondersteunen Matkop. De contactroep is meestal langgerekt en nasaal. Doffe kap en licht aan de snavelhoek kunnen ook bij jonge Glanskop voorkomen.",
+              "scope": "Soortbeschrijving en herkenningspassages"
+            },
+            "anwb": "NOT TESTED - soortpassage ontbreekt in openbaar uitgeversfragment",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/14420",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina raadplegen; geen cijfers gewijzigd"
+            },
+            "supplementary": [
+              "https://www.vogelbescherming.nl/actueel/bericht/matkop-vs-glanskop-en-vv",
+              "https://www.bto.org/sites/default/files/u17/downloads/about/resources/separating.pdf"
+            ],
+            "independence": "NOT VERIFIED - onafhankelijke aftekening staat open"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - getoetst aan gelezen soortpassages",
+            "herkenning": "PARTIALLY TESTED - concrete verbeterpunten ter beslissing",
+            "voorstel": "B — maak het sneeuwlabel neutraal en verduidelijk bij de Matkop/Glanskop-vergelijking dat de aanwezige clips zang laten horen. Houd de ontbrekende contactroepen open.",
+            "uitvoeringR07b": "PARTIALLY TESTED - R07b: sneeuwfoto heet Laag boven sneeuw, blijft buiten de vrije-vluchtrol en krijgt een neutrale houdingsnotitie. Vergelijking meldt dat de gidsopnamen zang zijn en afzonderlijke contactroepen ontbreken; browserhertest open."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp031 ↔ sp032 Matkop/Glanskop · volwassen en juveniel",
+              "bothDirections": "VERIFIED - twee rustpanelen, zoom en soortlinks in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - beide rustend en zijdelings; jonge Glanskop veel donkerder belicht en volwassen Glanskop-origineel geeft 429",
+              "diagnosticText": "PARTIALLY TESTED - snavelbasis en vleugelveld zijn aanvullend; vergelijkende tekst benoemt verschillen in roep"
+            },
+            {
+              "pair": "sp031 ↔ sp032 Matkop/Glanskop · vlucht",
+              "bothDirections": "VERIFIED - afwezig in beide richtingen",
+              "photoEquivalence": "N/A - geen gelijkwaardig vrij vluchtpaar",
+              "diagnosticText": "PARTIALLY TESTED - rust- en herkenningsinformatie blijft zichtbaar"
+            },
+            {
+              "pair": "sp031 ↔ sp033 Matkop/Kuifmees",
+              "bothDirections": "VERIFIED - twee beelden en soortlinks in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - kopfoto’s in rust; partnersoort Kuifmees volgt eigen audit",
+              "diagnosticText": "PARTIALLY TESTED - kuif en wangboog als samenhangende kenmerken"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - bronrol, technische match en offline decode; menselijke luistercontrole open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp031-song.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Poecile_montanus_%28Germany%29.ogg",
+                "author": "Rabe19",
+                "license": "CC BY-SA 3.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "cb21d7b4810387930550966a02ed73fa0bcd451cb7ba3b8234fc56fc4698cb13",
+                "localSha256": "bbdaf5dc1c3709e40c5ef53958c328dd49379c40adb0c2452433fb3e383a4959",
+                "correlations": [
+                  0.9904,
+                  0.9897,
+                  0.9999
+                ],
+                "offsetsSeconds": [
+                  0,
+                  0,
+                  0
+                ],
+                "duration": 28.588,
+                "roleOnSource": "Zang",
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 3,
+            "audioCount": 1,
+            "device": "NOT TESTED"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Onafhankelijke menselijke beluistering ontbreekt",
+            "R07b: oorspronkelijke houdingslabel koos een onbewezen fase; neutraal label Laag boven sneeuw in code, browserhertest open.",
+            "R07b: vergelijking onderscheidt de aanwezige zangopnamen van contactroepen. Een afzonderlijke contactroep ontbreekt nog."
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "C — voorlopig verder met de geregistreerde resterende bewijsproblemen; R07b-correcties uitgevoerd, geen inhoudelijke vrijstelling.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "R07b: oorspronkelijke houdingslabel koos een onbewezen fase; neutraal label Laag boven sneeuw in code, browserhertest open.",
+              "R07b: vergelijking onderscheidt de aanwezige zangopnamen van contactroepen. Een afzonderlijke contactroep ontbreekt nog."
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -5986,7 +7349,169 @@
         "unmatchedAudio": [],
         "scientificName": "Poecile palustris",
         "contentStatus": "PARTIALLY REVIEWED (all 3 local WebPs opened; original photographer files, audio and device not fully inspected)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED.",
+        "secondReview": {
+          "round": "F3-REV2-R07",
+          "date": "2026-11-27",
+          "base": "84bb18a3b5e3fd87f94ef079d1c05e23e0b20f23",
+          "reviewer": "ChatGPT Work Mode / GPT-6",
+          "status": "OWNER DECISION C / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Volwassen)",
+              "path": "/assets/species/sp032.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Sumpfmeise_13ib.jpg",
+              "author": "PeterRohrbeck",
+              "license": "CC BY-SA 4.0",
+              "visual": "Bestaand zijaanzicht op takstomp. De vleugel oogt egaal. De snavelbasis vraagt een goed profiel, voldoende licht en beeldruimte.",
+              "blobSha": "3699926c371cd48e789472307993b570517fa04c",
+              "sourceSha1": "d066d8981a3a432b82af8a8ddfe4cd9cd1b26b03",
+              "sourceSha256": null,
+              "localSha256": "9f80e1380dc95ca26527b9afa09feb5bd540a2aa3895da94a80363af5d61b262",
+              "identity": "PARTIALLY TESTED - lokaal beeld en eerdere F2-hash; origineel HTTP 429",
+              "quality": "PARTIALLY TESTED - bruikbaar overzicht, beperkt snaveldetail",
+              "roleCheck": "PARTIALLY TESTED - lokaal rustportret, bronbestand gaf HTTP 429",
+              "rightsREV2": "PARTIALLY TESTED - Commons-credits opnieuw gelezen, originele foto gaf HTTP 429; eerder F2-bewijs",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_12.json"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp032-juv.webp",
+              "source": "https://www.inaturalist.org/photos/18594803",
+              "author": "Dr. Nasser Halaweh",
+              "license": "CC BY 4.0",
+              "visual": "Juveniel volgens de iNaturalist-waarneming. De kopdetails liggen grotendeels in schaduw; de uitsnede en kleuren zijn herleidbaar tot de bron.",
+              "blobSha": "48820287b28b166d4d511a6efab6560ae867df18",
+              "sourceSha1": "df5016f241a04b2a5f857689cf3f1d4d5e32dfbe",
+              "sourceSha256": "655edbb03afe6ef0a6bba8c83224b75b360e4794382aa54f7846c7ceae4ee814",
+              "localSha256": "30c38c56abd6b7de6471e3e666170d6a04b5f9ffc3e68579634b8f28540e44fd",
+              "identity": "VERIFIED - originele bytes matchen eerdere bronhash en beeld",
+              "quality": "PARTIALLY TESTED - weinig snaveldetail bij deze belichting",
+              "roleCheck": "VERIFIED - juveniel op individuele bron en in hetzelfde beeld",
+              "rightsREV2": "VERIFIED - individuele bron, maker, licentie en origineel geregistreerd",
+              "rightsEvidence": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md#individuele-fotos"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/plumage/sp032-view.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Poecile_palustris_1_Luc_Viatour.jpg",
+              "author": "Luc Viatour / https://Lucnix.be",
+              "license": "CC BY-SA 3.0",
+              "visual": "Klein beeld van voren met gedraaide kop. Lichte borst en keelvlek zichtbaar; geen overtuigende blik op de bovensnavelbasis.",
+              "blobSha": "be7f8232d01e60fed986f67f36c83abd10833c5f",
+              "sourceSha1": "bc76ddabe6c817e039531664543651dd4a70b4ed",
+              "sourceSha256": null,
+              "localSha256": "3e2c4eea8e6a81bb085892d41d724487c1beb166dd707d3ad9db2adc3c7139b1",
+              "identity": "PARTIALLY TESTED - lokaal beeld en eerdere F2-hash; origineel HTTP 429",
+              "quality": "PARTIALLY TESTED - vogel klein in kader",
+              "roleCheck": "PARTIALLY TESTED - lokale overig-fotorol zichtbaar, bronbestand gaf HTTP 429",
+              "rightsREV2": "PARTIALLY TESTED - Commons-credits opnieuw gelezen, originele foto gaf HTTP 429; eerder F2-bewijs",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_12.json"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/glanskop",
+              "readDate": "2026-11-27",
+              "findings": "De lichte vlek aan de basis van de bovensnavel en een vaak egalere vleugel ondersteunen Glanskop. De contactroep is meestal kort en dalend. Controleer het profiel bij goed licht en gebruik kapglans of een lichte juveniele snavelhoek niet op zichzelf.",
+              "scope": "Soortbeschrijving en herkenningspassages"
+            },
+            "anwb": "NOT TESTED - soortpassage ontbreekt in openbaar uitgeversfragment",
+            "sovon": {
+              "url": "https://stats.sovon.nl/stats/soort/14400",
+              "readDate": "2026-11-27",
+              "scope": "Soortpagina raadplegen; geen cijfers gewijzigd"
+            },
+            "supplementary": [
+              "https://www.vogelbescherming.nl/actueel/bericht/matkop-vs-glanskop-en-vv",
+              "https://www.bto.org/sites/default/files/u17/downloads/about/resources/separating.pdf"
+            ],
+            "independence": "NOT VERIFIED - onafhankelijke aftekening staat open"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - getoetst aan gelezen soortpassages",
+            "herkenning": "PARTIALLY TESTED - concrete verbeterpunten ter beslissing",
+            "voorstel": "B — benoem in het bestaande vergelijkingspaneel dat de snavelvlek alleen helpt bij scherp zicht op de bovensnavelbasis. Houd een betere detailfoto en een afzonderlijke contactroep als open punten.",
+            "uitvoeringR07b": "PARTIALLY TESTED - R07b: vergelijkingspaneel benoemt scherp zijaanzicht en goed licht voor de bovensnavelbasis. De bestaande foto's en bronstatus blijven ongewijzigd; betere detailfoto en afzonderlijke contactroep blijven open. Browserhertest open."
+          },
+          "lookalikes": [
+            {
+              "pair": "sp032 ↔ sp031 Glanskop/Matkop · volwassen en juveniel",
+              "bothDirections": "VERIFIED - twee rustpanelen, zoom en soortlinks in beide richtingen",
+              "photoEquivalence": "PARTIALLY TESTED - volwassen origineel Glanskop niet heropend; uiteenlopende belichting van juvenielen",
+              "diagnosticText": "PARTIALLY TESTED - doffe kap en lichte snavelhoeken overlappen; bij de huidige foto’s is de snavelbasis soms moeilijk afleesbaar"
+            },
+            {
+              "pair": "sp032 ↔ sp031 Glanskop/Matkop · vlucht",
+              "bothDirections": "VERIFIED - afwezig in beide richtingen",
+              "photoEquivalence": "N/A - geen gelijkwaardig vrij vluchtpaar",
+              "diagnosticText": "PARTIALLY TESTED - hoofdherkenning en rustpanelen bereikbaar"
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - bronrol, technische match en offline decode; menselijke luistercontrole open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp032-song.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Poecile_palustris.ogg",
+                "author": "Vladimir Yu. Arkhipov (Arkhivov)",
+                "license": "CC BY-SA 3.0",
+                "status": "PARTIALLY TESTED",
+                "sourceSha256": "75d5d30bfb0f07e2db8b2f1b9fd35ecc45e584a3d20fbc6dc17b28dd89b5ddec",
+                "localSha256": "467c03c44ba4e9cda3f60f7fa37f16b3e11d15a0134c29a3c7bb4710342f4983",
+                "correlations": [
+                  0.9848,
+                  0.9973,
+                  0.9999
+                ],
+                "offsetsSeconds": [
+                  0,
+                  0,
+                  0
+                ],
+                "duration": 23.58,
+                "roleOnSource": "Zang",
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "VERIFIED - Chromium",
+            "onlineWidths": [
+              320,
+              360,
+              390
+            ],
+            "offlineWidths": [
+              390
+            ],
+            "photoCount": 3,
+            "audioCount": 1,
+            "device": "NOT TESTED"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien",
+            "Onafhankelijke menselijke beluistering ontbreekt",
+            "Twee originele Commons-fotobestanden gaven HTTP 429. Eerdere F2-bewijzen blijven geregistreerd; originele bytes in R07 niet heropend.",
+            "R07b: kijkvoorwaarde voor de bovensnavelbasis en het onderscheid zang/contactroep toegevoegd. Bestaande afbeeldingen tonen de snavelbasis beperkt; betere detailfoto en afzonderlijke contactroep blijven open."
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "C — voorlopig verder met de geregistreerde resterende bewijsproblemen; R07b-correcties uitgevoerd, geen inhoudelijke vrijstelling.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien",
+              "Onafhankelijke menselijke beluistering ontbreekt",
+              "Twee originele Commons-fotobestanden gaven HTTP 429. Eerdere F2-bewijzen blijven geregistreerd; originele bytes in R07 niet heropend.",
+              "R07b: kijkvoorwaarde voor de bovensnavelbasis en het onderscheid zang/contactroep toegevoegd. Bestaande afbeeldingen tonen de snavelbasis beperkt; betere detailfoto en afzonderlijke contactroep blijven open."
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -6078,7 +7603,157 @@
         "unmatchedAudio": [],
         "scientificName": "Lophophanes cristatus",
         "contentStatus": "PARTIALLY REVIEWED (all 4 local WebPs opened; original photographer files, audio and device not fully inspected)",
-        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED."
+        "functionTests": "DEFERRED BY OWNER for integrated physical device, offline, restore and release QA. F3-R08 targeted guide browser test NOT TESTED.",
+        "secondReview": {
+          "round": "F3-REV2-R08",
+          "date": "2026-11-28",
+          "base": "142634b2badec14cbf69fe9f57eb8fdc29e54bce",
+          "reviewer": "ChatGPT GPT-6.2",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R08_KUIFMEES_STAARTMEES_VINK_2026-11-28_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Volwassen)",
+              "path": "/assets/species/sp033.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Crested_tit_2026_01_04_01.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Scherp zijprofiel met spitse getekende kuif, donkere wangboog en keel; hele vogel zichtbaar.",
+              "blobSha": "ab4608d7632748abddc6311c3141bd5a56abc648",
+              "sourceSha1": "5849ef79b0239388ec01c80378b6f8612c623b0e",
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp033-juv.webp",
+              "source": "https://www.inaturalist.org/photos/384784000",
+              "author": "Micha Baum",
+              "license": "CC BY-SA 4.0",
+              "visual": "Kortere kuif, gele snavelhoeken en donkere wangboog; tak bedekt deel van de romp. Eerdere bronannotatie ondersteunt juveniel.",
+              "blobSha": "ffbd9ce4c4a682cf6eb5df12e6e16beffc7dfa71",
+              "sourceSha1": "f141c9cbcf893d769744b6e3db37743cc4903923",
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/plumage/sp033-view.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Lophophanes_cristatus_Luc_Viatour_1.jpg",
+              "author": "Luc Viatour / https://Lucnix.be",
+              "license": "CC BY-SA 3.0",
+              "visual": "Zeer duidelijke kuif en donkere gebogen wanglijn; zijaanzicht op schuine tak. Zichtbare makercredit en website nog in browser controleren.",
+              "blobSha": "f363ccc88957b411d52e2b8e7258295dcee71f53",
+              "sourceSha1": "ac255937d2508bce5496913a650b4189ed9a31eb",
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json"
+            },
+            {
+              "role": "Overige herkenningsfoto's",
+              "path": "/assets/species/plumage/sp033-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Haubenmeise_Abflug.JPG",
+              "author": "Sgbeer",
+              "license": "CC BY-SA 3.0",
+              "visual": "Vleugels geheven, poten vlak bij sneeuw. Vrije vlucht niet bewezen. Bestaande overige-fotorol handhaven; label ‘op de sneeuw’ is stelliger dan het zichtbare beeld.",
+              "blobSha": "bbda1b1651f2711c112624c4c03cb4d172292003",
+              "sourceSha1": "d0797726f5df96962f00b23b45a21e77d7f69ae7",
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/kuifmees",
+              "readDate": "2026-11-28",
+              "findings": "Zwart-witte koptekening en spitse kuif, beide geslachten gelijkend; kuifmees kan lijken op Matkop of Glanskop. Bron beschrijft ratelende geluiden en een zang met roepjes.",
+              "scope": "Herkennings- en geluidspassage daadwerkelijk gelezen"
+            },
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijke individuele soortpassage ingezien",
+            "sovon": {
+              "status": "NOT TESTED - individuele statistiek niet opnieuw gecontroleerd"
+            },
+            "supplementary": [],
+            "independence": "NOT VERIFIED - onafhankelijke aftekening open"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - herkenningsinformatie vergeleken met gelezen soortpagina en bestaande lokale beelden",
+            "herkenning": "PARTIALLY TESTED - gerichte verbeterpunten ter beslissing",
+            "voorstel": "B — neutraliseer het sneeuwlabel naar ‘Vleugels geheven bij de sneeuw’, behoud overige-fotorol en voeg een gerichte wederkerige Glanskop-vergelijking toe als bestaande beelden passend blijken. Controleer zichtbare Viatour-credit; geen nieuwe media zonder bronbewijs.",
+            "uitvoeringR08b": "PARTIALLY TESTED - Neutraal sneeuwlabel en beschrijving; fotobestand en overige-fotorol behouden. LK-112 Kuifmees/Glanskop met bestaande rustportretten en twee kopkenmerken toegevoegd; browser-/creditproef open."
+          },
+          "lookalikes": [
+            {
+              "pair": "Kuifmees ↔ Matkop",
+              "bothDirections": "NOT TESTED - actuele browserroute niet uitgevoerd",
+              "photoEquivalence": "PARTIALLY TESTED - eigen lokale beelden geopend; volledige partnerbeeldcontrole open",
+              "diagnosticText": "PARTIALLY TESTED - Rustpaneel aanwezig in guideComparisons.js; bestaande kop-/wangvergelijking behouden."
+            },
+            {
+              "pair": "Kuifmees ↔ Glanskop",
+              "bothDirections": "NOT TESTED - actuele browserroute niet uitgevoerd",
+              "photoEquivalence": "PARTIALLY TESTED - eigen lokale beelden geopend; volledige partnerbeeldcontrole open",
+              "diagnosticText": "PARTIALLY TESTED - Bron noemt dit paar; direct passend paneel niet aangetroffen in de gelezen vergelijkingsdefinities."
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - vier bestaande registraties in deze batch; bronbytes en onafhankelijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp033-song.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Lophophanes_cristatus_-_European_Crested_Tit_XC108346.mp3",
+                "author": "Alexander Kurthy",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED - bestaand bestand en metadata gecontroleerd; originele audio niet gematcht of beluisterd",
+                "blobSha": "ec136a0b30d6ee7c715c52aa14fa98d8be771ab7",
+                "roleOnSource": "Zang (bestaande registratie)",
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "NOT TESTED - nieuwe ronde niet interactief getoetst",
+            "onlineWidths": [],
+            "offlineWidths": [],
+            "photoCount": 4,
+            "audioCount": 1,
+            "device": "NOT TESTED"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien.",
+            "Originele fotobytes niet opnieuw gematcht; eerdere F2-evidence behouden. Commons-bestandspagina sneeuwbeeld: cache miss.",
+            "Exacte positie van de poten bij sneeuw niet met zekerheid te bepalen; geen vrije vlucht.",
+            "Afzonderlijke roep ontbreekt; originele zang niet gematcht of onafhankelijk beluisterd.",
+            "LK-112 Kuifmees/Glanskop toegevoegd met bestaande foto's; nieuwe interactie-, originele bron- en zichtbare Viatour-creditcontrole open."
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — gerichte correcties uitvoeren; geen vrijstelling van ontbrekende bron- en runtimebewijzen.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/386",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien.",
+              "Originele fotobytes niet opnieuw gematcht; eerdere F2-evidence behouden. Commons-bestandspagina sneeuwbeeld: cache miss.",
+              "Exacte positie van de poten bij sneeuw niet met zekerheid te bepalen; geen vrije vlucht.",
+              "Afzonderlijke roep ontbreekt; originele zang niet gematcht of onafhankelijk beluisterd.",
+              "LK-112 Kuifmees/Glanskop toegevoegd met bestaande foto's; nieuwe interactie-, originele bron- en zichtbare Viatour-creditcontrole open."
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -6167,7 +7842,121 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (2 current local images and critical lookalikes inspected; no media FULL PASS)",
-        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R09 node/browser tests scheduled independently."
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R09 node/browser tests scheduled independently.",
+        "secondReview": {
+          "round": "F3-REV2-R08",
+          "date": "2026-11-28",
+          "base": "142634b2badec14cbf69fe9f57eb8fdc29e54bce",
+          "reviewer": "ChatGPT GPT-6.2",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R08_KUIFMEES_STAARTMEES_VINK_2026-11-28_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Volwassen)",
+              "path": "/assets/species/sp034.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Long-tailed_Tit_2025_03_20_02.jpg",
+              "author": "Alexis Lours",
+              "license": "CC BY 4.0",
+              "visual": "Hele zeer lange staart, korte snavel, lichte kop met donkere zijstrepen, roze flank. Geen ondersoortclaim.",
+              "blobSha": "b2738f50d11b8e9b2526cae3ece5910fda5cdae2",
+              "sourceSha1": "42dc42280574e63029d5452386c9215c937d5377",
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp034-juv.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Long-tailed_tit_%28Aegithalos_caudatus%29_juvenile_2.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Bruine kopzijden, lange staart, lichte onderzijde en rode oogrand; eerdere bron noemt juveniel. Geen geslachts- of ondersoortclaim.",
+              "blobSha": "99a34bd7f3e67fefd47cc6e622545362209ff15a",
+              "sourceSha1": "6b86b73b22a569f221a6423e3c3652c76f142755",
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-14_F2_13.json"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/staartmees",
+              "readDate": "2026-11-28",
+              "findings": "Lange staart (langer dan lichaam), lichte kop met variabele donkere zijkruinstrepen. Witkoppige vogels bewijzen op zichzelf geen noordelijke ondersoort. Korte scherpe contactgeluiden.",
+              "scope": "Herkennings- en geluidspassage daadwerkelijk gelezen"
+            },
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijke individuele soortpassage ingezien",
+            "sovon": {
+              "status": "NOT TESTED - individuele statistiek niet opnieuw gecontroleerd"
+            },
+            "supplementary": [],
+            "independence": "NOT VERIFIED - onafhankelijke aftekening open"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - herkenningsinformatie vergeleken met gelezen soortpagina en bestaande lokale beelden",
+            "herkenning": "PARTIALLY TESTED - gerichte verbeterpunten ter beslissing",
+            "voorstel": "B — corrigeer de interne audio-controlezin die ten onrechte een gecontroleerd zanglabel noemt. Behoud publiekslabel ‘Geluidsvoorbeeld’ zolang de individuele bron en het geluidstype niet zijn bevestigd. Geen nieuwe ondersoortclaim of onbewezen vluchtfoto.",
+            "uitvoeringR08b": "PARTIALLY TESTED - In auditoryCheck staat nu expliciet dat het geluidstype (zang of roep) niet bevestigd is. Publiekslabel Geluidsvoorbeeld en bronregistratie behouden."
+          },
+          "lookalikes": [
+            {
+              "pair": "Staartmees ↔ Zwarte Mees",
+              "bothDirections": "NOT TESTED - actuele browserroute niet uitgevoerd",
+              "photoEquivalence": "PARTIALLY TESTED - eigen lokale beelden geopend; volledige partnerbeeldcontrole open",
+              "diagnosticText": "PARTIALLY TESTED - Rustpaneel aanwezig met staartlengte en kop; zijaanzicht vereist."
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - vier bestaande registraties in deze batch; bronbytes en onafhankelijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp034-sound.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Aegithalos_caudatus_-_Long-tailed_Tit_-_XC114614.ogg",
+                "author": "Jonathon Jongsma",
+                "license": "CC BY-SA 3.0",
+                "status": "PARTIALLY TESTED - bestaand bestand en metadata gecontroleerd; originele audio niet gematcht of beluisterd",
+                "blobSha": "f76295fc2e6b59f76d8baa5c36545d1f36582adf",
+                "roleOnSource": "NOT TESTED - type onbekend",
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "NOT TESTED - nieuwe ronde niet interactief getoetst",
+            "onlineWidths": [],
+            "offlineWidths": [],
+            "photoCount": 2,
+            "audioCount": 1,
+            "device": "NOT TESTED"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien.",
+            "Originele fotobytes niet opnieuw gematcht; eerdere F2-evidence behouden.",
+            "Individuele XC114614- en Commons-opnamepagina niet bereikbaar (cache miss); originele opname niet gematcht of beluisterd.",
+            "R08b: tegenstrijdige interne zangcontrolezin gecorrigeerd. Individuele opnamebron en geluidstype blijven open.",
+            "Vluchtfoto voor West-Europese vorm en andere vergelijkingsroutes blijven open."
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — gerichte correcties uitvoeren; geen vrijstelling van ontbrekende bron- en runtimebewijzen.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/386",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien.",
+              "Originele fotobytes niet opnieuw gematcht; eerdere F2-evidence behouden.",
+              "Individuele XC114614- en Commons-opnamepagina niet bereikbaar (cache miss); originele opname niet gematcht of beluisterd.",
+              "R08b: tegenstrijdige interne zangcontrolezin gecorrigeerd. Individuele opnamebron en geluidstype blijven open.",
+              "Vluchtfoto voor West-Europese vorm en andere vergelijkingsroutes blijven open."
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -6205,7 +7994,7 @@
             "oldRights": "VERIFIED"
           },
           {
-            "role": "In vlucht (Mannetje)",
+            "role": "Verenkleed (Mannetje)",
             "path": "/assets/species/plumage/sp035-flight.webp",
             "oldRights": "VERIFIED"
           }
@@ -6281,7 +8070,191 @@
           }
         ],
         "contentStatus": "PARTIALLY REVIEWED (5 current local images and critical lookalikes inspected; no media FULL PASS)",
-        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R09 node/browser tests scheduled independently."
+        "functionTests": "DEFERRED BY OWNER for physical device, offline, import and release QA. Targeted F3-R09 node/browser tests scheduled independently.",
+        "secondReview": {
+          "round": "F3-REV2-R08",
+          "date": "2026-11-28",
+          "base": "142634b2badec14cbf69fe9f57eb8fdc29e54bce",
+          "reviewer": "ChatGPT GPT-6.2",
+          "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+          "dossier": "docs/fotokwaliteit/F3_REV2_R08_KUIFMEES_STAARTMEES_VINK_2026-11-28_DRAFT.md",
+          "photos": [
+            {
+              "role": "Hoofdfoto (Mannetje)",
+              "path": "/assets/species/plumage/sp035-hero-male.webp",
+              "source": "https://commons.wikimedia.org/wiki/File%3ACommon_chaffinch_%28Fringilla_coelebs%29_breeding_male_Drenthe.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Blauwgrijze kruin, warmroze borst, lichte vleugelstrepen; herkenbaar mannetje in rust.",
+              "blobSha": "946e15364a9d21128994c95b98285bb870231926",
+              "sourceSha1": "04c9fd7979ee5a62b6975b56e3c995baa7cf7ccd",
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "tools/species/verified_heroes_2026-11-09.json"
+            },
+            {
+              "role": "Verenkleed (Mannetje)",
+              "path": "/assets/species/sp035.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_on_branch.jpg",
+              "author": "Martin Kunz",
+              "license": "CC BY 3.0",
+              "visual": "Tweede, andere opname van mannetje in rust, met uitgesproken witte vleugelstrepen.",
+              "blobSha": "1a54fdc6dbb4b00ab6de29494511d0d37355c86a",
+              "sourceSha1": null,
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json"
+            },
+            {
+              "role": "Verenkleed (Vrouwtje)",
+              "path": "/assets/species/plumage/sp035-adult_f.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Common_chaffinch_(Fringilla_coelebs)_female_Drenthe.jpg",
+              "author": "Charles J. Sharp",
+              "license": "CC BY-SA 4.0",
+              "visual": "Grijsbruine vogel, lichte vleugelstrepen; bruikbaar voor vrouwtjesvergelijking. Leeftijd en sekse mede op bestaande bronregistratie.",
+              "blobSha": "f88932b91936f4dd3d1f28a4e59e301e9441364d",
+              "sourceSha1": null,
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json"
+            },
+            {
+              "role": "Verenkleed (Juveniel)",
+              "path": "/assets/species/plumage/sp035-juv-review.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_juvenile_Sigy_20180510_t170526.jpg",
+              "author": "Marie-Lan Taÿ Pamart",
+              "license": "CC BY 4.0",
+              "visual": "Jonge vogel met lichte snavelhoek, donsrestjes en lichte vleugelstrepen; gras bedekt deel van onderzijde. Geen geslacht aangenomen.",
+              "blobSha": "9b30450bf6864f2180b2e538f26a06eb6577fb88",
+              "sourceSha1": null,
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - zichtbare kenmerken en eerdere rol beoordeeld; onafhankelijke rolcontrole open",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json"
+            },
+            {
+              "role": "Verenkleed (Mannetje)",
+              "path": "/assets/species/plumage/sp035-flight.webp",
+              "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-Lochwinnoch,_Renfrewshire,_Scotland_-flying-8.jpg",
+              "author": "Mark Medcalf",
+              "license": "CC BY 2.0",
+              "visual": "Roze borst, blauwgrijze kruin, vleugels geheven en poten uitgestoken. Vogel los van ondergrond, maar vrije vlucht versus afzetten/landen uit dit beeld niet overtuigend vast te stellen.",
+              "blobSha": "e418aef12e71893a1a914dc87ddeb465fb4a7b32",
+              "sourceSha1": null,
+              "identity": "PARTIALLY TESTED - lokale foto geopend; blob gelijk aan eerste ronde; oorspronkelijke bytes niet opnieuw gematcht",
+              "quality": "PARTIALLY TESTED - huidige lokale weergave visueel beoordeeld",
+              "roleCheck": "PARTIALLY TESTED - mannetjeskleed behouden; vrije vlucht niet bewezen en niet meer als vrije vlucht weergegeven.",
+              "rightsREV2": "PARTIALLY TESTED - geregistreerde bron, maker, licentie en historisch bewijs gecontroleerd; originele rechten niet opnieuw bevestigd",
+              "rightsEvidence": "docs/evidence/GUIDE_SOURCE_AUDIT_2026-11-09.json",
+              "previousRoleR08b": "In vlucht (Mannetje)"
+            }
+          ],
+          "sources": {
+            "vogelbescherming": {
+              "status": "PARTIALLY TESTED",
+              "url": "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/vink",
+              "readDate": "2026-11-28",
+              "findings": "Mannetje in broedkleed blauwgrijze kruin en warme borst; twee lichte vleugelstrepen helpen ook bij vrouwtje. Keep heeft in passende houding witte stuit en oranje borst/vleugeldekveren.",
+              "scope": "Herkennings- en geluidspassage daadwerkelijk gelezen"
+            },
+            "anwb": "NOT TESTED - geen rechtmatig toegankelijke individuele soortpassage ingezien",
+            "sovon": {
+              "status": "NOT TESTED - individuele statistiek niet opnieuw gecontroleerd"
+            },
+            "supplementary": [
+              "https://www.vogelbescherming.nl/ontdek-vogels/kennis-over-vogels/vogelgids/vogel/keep"
+            ],
+            "independence": "NOT VERIFIED - onafhankelijke aftekening open"
+          },
+          "text": {
+            "snelHerkennen": "PARTIALLY TESTED - herkenningsinformatie vergeleken met gelezen soortpagina en bestaande lokale beelden",
+            "herkenning": "PARTIALLY TESTED - gerichte verbeterpunten ter beslissing",
+            "voorstel": "B — zet de bestaande foto met uitgestoken poten voorlopig in een neutrale overige-fotorol, of houd de huidige rol alleen na aanvullende broncontext voor echte vrije vlucht. Behoud alle rust- en kleedfoto's en de bronregistratie; geen nieuw beeld zonder verificatie.",
+            "uitvoeringR08b": "PARTIALLY TESTED - Mannetjesfoto met geheven vleugels uit vrije-vluchtrol gehaald en in Mannetje-galerij geplaatst. Geen fotobestand verwijderd; historische vluchtbeoordeling bewaard, actuele rol PARTIALLY TESTED."
+          },
+          "lookalikes": [
+            {
+              "pair": "Vink ↔ Huismus",
+              "bothDirections": "NOT TESTED - actuele browserroute niet uitgevoerd",
+              "photoEquivalence": "PARTIALLY TESTED - eigen lokale beelden geopend; volledige partnerbeeldcontrole open",
+              "diagnosticText": "PARTIALLY TESTED - Vrouwtjes-rustpaneel gedefinieerd met vleugelstrepen, kop en rug/staart."
+            },
+            {
+              "pair": "Vink ↔ Keep",
+              "bothDirections": "NOT TESTED - actuele browserroute niet uitgevoerd",
+              "photoEquivalence": "PARTIALLY TESTED - eigen lokale beelden geopend; volledige partnerbeeldcontrole open",
+              "diagnosticText": "PARTIALLY TESTED - Vogelbescherming bevestigt verwarring; geen passend fotopaar aangetroffen. Eerdere tekstwaarschuwing behouden."
+            },
+            {
+              "pair": "Vink ↔ Groenling/Goudvink/Appelvink",
+              "bothDirections": "NOT TESTED - actuele browserroute niet uitgevoerd",
+              "photoEquivalence": "PARTIALLY TESTED - eigen lokale beelden geopend; volledige partnerbeeldcontrole open",
+              "diagnosticText": "PARTIALLY TESTED - Rustvergelijkingen gedefinieerd voor de relevante kleden; volledige browser- en partnerfotohercontrole open."
+            }
+          ],
+          "audio": {
+            "status": "PARTIALLY TESTED - vier bestaande registraties in deze batch; bronbytes en onafhankelijke beluistering open",
+            "files": [
+              {
+                "path": "/assets/species/audio/sp035-song.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_short.ogg",
+                "author": "Mysid",
+                "license": "Public domain",
+                "status": "PARTIALLY TESTED - bestaand bestand en metadata gecontroleerd; originele audio niet gematcht of beluisterd",
+                "blobSha": "38c8a6f4cb19a88dbcf3b233af97a3435f2f201f",
+                "roleOnSource": "Zang (bestaande registratie)",
+                "listenedBy": null
+              },
+              {
+                "path": "/assets/species/audio/sp035-call.mp3",
+                "source": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-_Common_Chaffinch_XC465725.mp3",
+                "author": "Marie-Lan Taÿ Pamart",
+                "license": "CC BY-SA 4.0",
+                "status": "PARTIALLY TESTED - bestaand bestand en metadata gecontroleerd; originele audio niet gematcht of beluisterd",
+                "blobSha": "91e56276c029ff5e043e222004dd609ec1eb61e0",
+                "roleOnSource": "Roep (bestaande registratie)",
+                "listenedBy": null
+              }
+            ]
+          },
+          "browser": {
+            "status": "NOT TESTED - nieuwe ronde niet interactief getoetst",
+            "onlineWidths": [],
+            "offlineWidths": [],
+            "photoCount": 5,
+            "audioCount": 2,
+            "device": "NOT TESTED"
+          },
+          "materialGaps": [
+            "ANWB-soortpassage niet ingezien.",
+            "Originele fotobytes niet opnieuw gematcht; oudere 09-11-evidence behouden.",
+            "R08b: bestaande foto met uitgestoken poten buiten vrije-vluchtrol geplaatst; passende echte vrije-vluchtfoto en aanvullende broncontext blijven open.",
+            "Zang en roep geregistreerd maar oorspronkelijke audio niet gematcht of onafhankelijk beluisterd.",
+            "Gelijkwaardig Vink/Keep-fotopaar en interactieve vergelijkingstests ontbreken."
+          ],
+          "ownerDecision": {
+            "status": "DECIDED",
+            "decision": "B — gerichte correcties uitvoeren; geen vrijstelling van ontbrekende bron- en runtimebewijzen.",
+            "date": "2026-11-28",
+            "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/386",
+            "remainingOpen": [
+              "ANWB-soortpassage niet ingezien.",
+              "Originele fotobytes niet opnieuw gematcht; oudere 09-11-evidence behouden.",
+              "R08b: bestaande foto met uitgestoken poten buiten vrije-vluchtrol geplaatst; passende echte vrije-vluchtfoto en aanvullende broncontext blijven open.",
+              "Zang en roep geregistreerd maar oorspronkelijke audio niet gematcht of onafhankelijk beluisterd.",
+              "Gelijkwaardig Vink/Keep-fotopaar en interactieve vergelijkingstests ontbreken."
+            ]
+          },
+          "fullPass": false,
+          "closed": false
+        }
       }
     },
     {
@@ -17891,13 +19864,69 @@
         "pr": 354,
         "baseSHA": "4a430e60daf49f002ccb74b460e27a5b6ae112c1",
         "ownerStart": "Eigenaarbesluit 24-11-2026 12:16 CET: start R04 na geslaagd R03d-checkpoint"
+      },
+      {
+        "round": "F3-REV2-R05",
+        "species": [
+          "sp020",
+          "sp021",
+          "sp022"
+        ],
+        "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+        "date": "2026-11-27",
+        "baseSHA": "1cb52274ce39dce19d22b69864063025efe6917d",
+        "ownerStart": "27-11-2026: eigenaar vraagt in Aviandra-gesprek de volgende ronde",
+        "dossier": "docs/fotokwaliteit/F3_REV2_R05_SPECHT_EKSTER_KRAAI_2026-11-27_DRAFT.md",
+        "pr": 381
+      },
+      {
+        "round": "F3-REV2-R06",
+        "species": [
+          "sp025",
+          "sp026",
+          "sp029"
+        ],
+        "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+        "date": "2026-11-27",
+        "baseSHA": "e7092409e9bebc8f907533171971c37881d03422",
+        "ownerStart": "27-11-2026: eigenaar vraagt Volgende in het Aviandra-gesprek",
+        "dossier": "docs/fotokwaliteit/F3_REV2_R06_KAUW_GAAI_KOOLMEES_2026-11-27_DRAFT.md",
+        "pr": 383
+      },
+      {
+        "round": "F3-REV2-R07",
+        "species": [
+          "sp030",
+          "sp031",
+          "sp032"
+        ],
+        "status": "OWNER DECISION C / OPEN POINTS REMAIN",
+        "date": "2026-11-27",
+        "baseSHA": "84bb18a3b5e3fd87f94ef079d1c05e23e0b20f23",
+        "ownerStart": "27-11-2026: eigenaar vraagt verder te gaan in het Aviandra-gesprek",
+        "dossier": "docs/fotokwaliteit/F3_REV2_R07_PIMPELMEES_MATKOP_GLANSKOP_2026-11-27_DRAFT.md",
+        "pr": 384
+      },
+      {
+        "round": "F3-REV2-R08",
+        "species": [
+          "sp033",
+          "sp034",
+          "sp035"
+        ],
+        "status": "OWNER DECISION B EXECUTED / OPEN POINTS REMAIN",
+        "date": "2026-11-28",
+        "baseSHA": "142634b2badec14cbf69fe9f57eb8fdc29e54bce",
+        "ownerStart": "28-11-2026: eigenaar vroeg verder na voorstel C voor R07",
+        "dossier": "docs/fotokwaliteit/F3_REV2_R08_KUIFMEES_STAARTMEES_VINK_2026-11-28_DRAFT.md",
+        "pr": 386
       }
     ],
     "counts": {
       "total": 140,
-      "reexamined": 12,
+      "reexamined": 24,
       "ownerGateOpen": 0,
-      "ownerDecisions": 12,
+      "ownerDecisions": 24,
       "secondReviewClosed": 0,
       "fullF3Pass": 0
     },
@@ -17950,6 +19979,30 @@
         "batch": "F3-REV2-R04",
         "decision": "B voor sp017, sp018 en sp019. Toscane-kandidaat NEE. R05 niet starten.",
         "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/354#issuecomment-7134854859"
+      },
+      {
+        "date": "2026-11-27",
+        "batch": "F3-REV2-R05",
+        "decision": "B voor Middelste Bonte Specht, Ekster en Zwarte Kraai. Akkoord in het Aviandra-gesprek.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/381"
+      },
+      {
+        "date": "2026-11-27",
+        "batch": "F3-REV2-R06",
+        "decision": "B voor Kauw, Gaai en Koolmees. Eigenaar vroeg in het Aviandra-gesprek verder te gaan na het advies B.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/383"
+      },
+      {
+        "date": "2026-11-28",
+        "batch": "F3-REV2-R07",
+        "decision": "C voor Pimpelmees, Matkop en Glanskop. Eigenaar reageerde ‘Ga verder’ direct op het expliciete advies om de resterende bewijsproblemen open te registreren en de volgende drie soorten te controleren.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/384"
+      },
+      {
+        "date": "2026-11-28",
+        "batch": "F3-REV2-R08",
+        "decision": "B voor Kuifmees, Staartmees, Vink: eigenaar vroeg ‘Ga verder en zet live’ direct na advies B. Releaseautorisatie ontvangen, pre-releasegates niet opgeheven.",
+        "reference": "https://github.com/saddamsmit-source/Birdspot-Library/pull/386"
       }
     ]
   }

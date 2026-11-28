@@ -108,14 +108,14 @@
     "sp020": {
       "assets": {
         "/assets/species/plumage/sp020-male.webp": {
-          "role": "Hoofdfoto",
+          "role": "Verenkleed (Volwassen)",
           "content": "Volwassen vogel tegen stam met lichte kop en roze onderstaart.",
           "sexAge": "Fotograaf noemt een mannetje. Neutraal weergegeven vanwege overlap in verenkleed.",
           "quality": "Bruikbaar, bronminiatuur van 500 px beperkt zoom.",
           "verdict": "goedgekeurd"
         },
         "/assets/species/sp020.webp": {
-          "role": "Overige herkenningsfoto's",
+          "role": "Hoofdfoto",
           "content": "Zijaanzicht op stronk met rode kruin, wit gezicht en gestreepte flanken.",
           "sexAge": "Leeftijd en geslacht open.",
           "quality": "Goede uitsnede van volledige vogel.",

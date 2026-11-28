@@ -44,15 +44,23 @@
         },
         "/assets/species/plumage/sp033-flight.webp": {
           "role": "Overige herkenningsfoto's",
-          "content": "Kuifmees met geheven vleugels op de sneeuw.",
+          "content": "Kuifmees met geheven vleugels bij de sneeuw.",
           "sexAge": "Geslacht en leeftijd niet gelabeld.",
-          "quality": "Kop en vleugelpennen zichtbaar. Volgens vluchtcontrole staat de vogel op de sneeuw.",
-          "verdict": "uit-rol"
+          "quality": "Kop en vleugelpennen zichtbaar; precieze positie van de poten bij sneeuw onzeker.",
+          "verdict": "uit-rol",
+          "previousR08b": {
+            "role": "Overige herkenningsfoto's",
+            "content": "Kuifmees met geheven vleugels op de sneeuw.",
+            "sexAge": "Geslacht en leeftijd niet gelabeld.",
+            "quality": "Kop en vleugelpennen zichtbaar. Volgens vluchtcontrole staat de vogel op de sneeuw.",
+            "verdict": "uit-rol"
+          }
         }
       },
       "corrections": [
         "Juvenielenfoto en kennisprofiel toegevoegd. De vergelijking met Matkop en het bijschrift van de sneeuwfoto gecontroleerd.",
-        "Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212."
+        "Vier originele foto’s gematcht. Waarneming en juvenielenannotatie herbevestigd. De sneeuwfoto blijft bij de overige foto’s. De zichtbare makercredit staat in PR #212.",
+        "R08b 28-11-2026: sneeuwbijschrift neutraal gemaakt; vrije-vluchtpositie blijft open. Kuifmees/Glanskop-rustvergelijking toegevoegd met bestaande beelden; nieuwe browserproef open."
       ],
       "missing": [
         "Scherpe foto van één Kuifmees in vrije vlucht met bevestigde hergebruikrechten."
@@ -254,7 +262,7 @@
           "role": "Overige herkenningsfoto's",
           "content": "Matkop vlak boven de sneeuw, met geopende vleugels.",
           "sexAge": "Geslacht en leeftijd niet gelabeld.",
-          "quality": "Opvliegbeeld. Alleen als aanvullend beeld bruikbaar.",
+          "quality": "Houdingsbeeld vlak boven sneeuw; afzetten of neerstrijken onzeker. Alleen als aanvullend beeld bruikbaar.",
           "verdict": "uit-rol"
         }
       },
