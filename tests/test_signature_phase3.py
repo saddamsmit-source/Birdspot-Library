@@ -21,6 +21,11 @@ def shot(page,name):
     page.locator("#main-view").evaluate("(el) => el.scrollTop=0")
     page.screenshot(path=str(SHOTS/name),full_page=True,animations="disabled")
 
+def use_theme(page, theme):
+    page.emulate_media(color_scheme=theme, reduced_motion="reduce")
+    # Chromium applies the control background on the next paint after changing the scheme.
+    page.evaluate("() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))")
+
 def contrast(page, text, surface, pseudo=None):
     return page.evaluate(r"""([text, surface, pseudo]) => {
         const tone = (node, property, state=null) => getComputedStyle(document.querySelector(node), state)[property];
@@ -285,7 +290,7 @@ def main():
                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
                 shot(page,"phase3_journal_"+str(width)+".png")
             for theme in ('light', 'dark'):
-                page.emulate_media(color_scheme=theme)
+                use_theme(page,theme)
                 for surface in ['.phase3-metric--bird', '.phase3-metric--observations', '.phase3-metric--pin', '.phase3-metric--media']:
                     assert contrast(page, f"{surface} strong", surface) >= 4.5, (theme, surface, "number")
                     assert contrast(page, f"{surface} small", surface) >= 4.5, (theme, surface, "label")
@@ -302,7 +307,7 @@ def main():
                 assert page.locator(".phase3-month-panel").evaluate("(el) => el.scrollWidth <= el.clientWidth")
                 shot(page,"phase3_insights_"+str(width)+".png")
             for theme in ('light', 'dark'):
-                page.emulate_media(color_scheme=theme)
+                use_theme(page,theme)
                 assert contrast(page, ".phase3-month-panel .phase3-method--heard svg", ".phase3-month-panel") >= 3, theme
                 assert contrast(page, ".phase3-month-detail summary", ".phase3-month-panel") >= 4.5, theme
 
