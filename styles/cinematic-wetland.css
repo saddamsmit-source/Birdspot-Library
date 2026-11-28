@@ -264,21 +264,60 @@
   margin:-4px 0 12px;font-size:12px;color:#efe4d2;font-weight:600;
 }
 .signature-quick-access {
-  background:linear-gradient(120deg,#10352c,#103a32);
+  background:linear-gradient(120deg,#143b30,#164438);
+  box-shadow:inset 0 1px 0 rgba(229,191,120,.38);
   color:#f7edda;box-sizing:border-box;
   padding:0!important;
   border-bottom:1px solid rgba(218,178,114,.22);
 }
 .signature-quick-access .signature-quick-access__summary {
-  min-height:44px;display:flex;align-items:center;gap:10px;
-  padding:10px 17px;
-  font-size:12px;font-weight:750;cursor:pointer;
-  color:#f3d7a0;
+  min-height:47px;display:flex;align-items:center;gap:10px;
+  padding:7px 17px;
+  color:#f7edda;
+  cursor:pointer;
   list-style:none;
 }
 .signature-quick-access .signature-quick-access__summary::-webkit-details-marker{display:none;}
-.signature-quick-access__icon {font-size:18px;color:#e5bf78;}
-.signature-quick-access__chevron {margin-left:auto;font-size:21px;transition:transform .18s;}
+.signature-quick-access__icon,
+.signature-quick-access__chevron {
+  display:grid;
+  place-items:center;
+  flex:none;
+  color:#f3d7a0;
+  background:rgba(229,191,120,.12);
+}
+.signature-quick-access__icon {
+  width:28px;height:28px;
+  border:1px solid rgba(229,191,120,.32);
+  border-radius:8px;
+}
+.signature-quick-access__icon .ui-icon {width:17px;height:17px;}
+.signature-quick-access__label {
+  display:grid;
+  gap:1px;
+  min-width:0;
+  font-size:.875rem;
+  line-height:1.2;
+  font-weight:750;
+}
+#homeMoreFeaturesHint {
+  color:#ccded3;
+  font-size:.6875rem;
+  font-weight:550;
+}
+.signature-quick-access__chevron {
+  width:24px;height:24px;
+  margin-inline-start:auto;
+  border-radius:50%;
+  transition:transform .18s;
+}
+.signature-quick-access__chevron::before {
+  content:"";
+  width:7px;height:7px;
+  border:solid currentColor;
+  border-width:0 1.5px 1.5px 0;
+  transform:translateY(-1px) rotate(45deg);
+}
 .signature-quick-access[open] .signature-quick-access__chevron {transform:rotate(180deg);}
 .signature-quick-access .signature-quick-access__links {
   display:grid;grid-template-columns:repeat(2,minmax(0,1fr));

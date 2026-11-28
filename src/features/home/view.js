@@ -261,10 +261,13 @@ function buildSkeleton() {
 
     <!-- Accessible secondary features: stays collapsed beneath recent sightings. -->
     <details class="signature-home-intro signature-quick-access" id="homeMoreFeatures">
-      <summary class="signature-quick-access__summary">
-        <span class="signature-quick-access__icon" aria-hidden="true">✦</span>
-        <span>Meer ontdekken</span>
-        <span class="signature-quick-access__chevron" aria-hidden="true">⌄</span>
+      <summary class="signature-quick-access__summary" aria-labelledby="homeMoreFeaturesTitle" aria-describedby="homeMoreFeaturesHint">
+        <span class="signature-quick-access__icon" aria-hidden="true">${appIcon('binoculars')}</span>
+        <span class="signature-quick-access__label">
+          <span id="homeMoreFeaturesTitle">Meer ontdekken</span>
+          <span id="homeMoreFeaturesHint">Dagboek · Inzichten · Filmstudio · Kaart</span>
+        </span>
+        <span class="signature-quick-access__chevron" aria-hidden="true"></span>
       </summary>
       <div class="signature-home-links signature-quick-access__links">
         <button data-signature-route="journal" class="signature-home-link" type="button">${appIcon('book')} Birding Journal <span aria-hidden="true">↗</span></button>
